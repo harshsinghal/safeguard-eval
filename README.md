@@ -1,6 +1,6 @@
 # OSS-Safeguard Policy Tester
 
-A web app for evaluating content against moderation policies. Write a policy as a plain text file, paste in any prompt, and the safeguard model (`gpt-oss-safeguard-20b`) tells you whether it passes or fails — with a reason. Ships with a set of example policies to get you started.
+A web app for evaluating content against moderation policies. Write a policy as a plain text file, paste in any prompt, and the safeguard model ([`gpt-oss-safeguard-20b`](https://openai.com/index/introducing-gpt-oss-safeguard/)) tells you whether it passes or fails — with a reason. Ships with a set of example policies to get you started.
 
 ## Demo
 
