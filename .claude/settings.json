@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(kill:*)",
+      "Bash(source:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(chmod:*)",
+      "WebSearch",
+      "WebFetch(domain:fal.ai)",
+      "WebFetch(domain:docs.fal.ai)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:console.groq.com)",
+      "WebFetch(domain:huggingface.co)"
+    ]
+  }
+}

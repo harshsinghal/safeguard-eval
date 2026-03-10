@@ -1,0 +1,10 @@
+groq
+python-dotenv
+pandas
+tqdm
+pyarrow
+libsql-client
+sentence-transformers
+numpy
+flask
+fal-client

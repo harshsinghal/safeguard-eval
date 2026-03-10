@@ -1,0 +1,49 @@
+# Environment
+.env
+venv/
+env/
+*.pyc
+__pycache__/
+
+# Claude Code local settings (user-specific)
+.claude/settings.local.json
+
+# Metadata files
+metadata.parquet
+metadata-large.parquet
+
+# Data
+diffusiondb_*.json
+diffusiondb_*.csv
+mixed_samples.json
+mixed_samples.csv
+
+# Clustering outputs
+clustering_output/
+enriched_diffusiondb.parquet
+enriched_diffusiondb_sample.csv
+*.npy
+synthetic_*.json
+synthetic_*.csv
+*_test.json
+*_test.csv
+
+# Results
+results/
+*.png
+*.html
+
+# Database (populated locally from DiffusionDB)
+prompts.db
+*.db
+
+# Generated images
+generated_images/
+
+# Clustering logs
+clustering_log*.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
