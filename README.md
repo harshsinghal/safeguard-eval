@@ -2,16 +2,14 @@
 
 A web app for testing content moderation policies against image generation prompts. Search the [DiffusionDB](https://huggingface.co/datasets/poloclub/diffusiondb) dataset of 2 million Stable Diffusion prompts, evaluate them against custom policies using `gpt-oss-safeguard-20b`, and generate images via Fal.ai — all in one UI.
 
-## Screenshots
+## Demo
 
-![Main UI](docs/01-main.png)
-*The main interface — search panel on the left, policy selector on the right*
+![Demo: testing a copyright character prompt](demo.gif)
 
-![Policy selected](docs/02-policy-selected.png)
-*Selecting the deity_nuanced policy shows its full definition*
-
-![Evaluation result](docs/04-evaluation-result.png)
-*A prompt evaluated as SAFE with reasoning from gpt-oss-safeguard-20b*
+The animation shows the full evaluation workflow:
+1. **Select a policy** — `copyright_characters` is chosen, which blocks named copyrighted characters and celebrities
+2. **Enter a prompt** — a Spider-Man image generation request is typed into the content box
+3. **Evaluate** — the safeguard model (`gpt-oss-safeguard-20b` via Groq) is called and returns **UNSAFE**, correctly identifying the Marvel character reference as a copyright violation
 
 ## How It Works
 
