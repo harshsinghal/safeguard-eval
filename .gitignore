@@ -30,7 +30,6 @@ synthetic_*.csv
 
 # Results
 results/
-*.png
 *.html
 
 # Database (populated locally from DiffusionDB)
@@ -42,6 +41,10 @@ generated_images/
 
 # Clustering logs
 clustering_log*.txt
+
+# Node (screenshot tooling)
+node_modules/
+package-lock.json
 
 # IDE
 .vscode/

@@ -2,6 +2,17 @@
 
 A web app for testing content moderation policies against image generation prompts. Search the [DiffusionDB](https://huggingface.co/datasets/poloclub/diffusiondb) dataset of 2 million Stable Diffusion prompts, evaluate them against custom policies using `gpt-oss-safeguard-20b`, and generate images via Fal.ai — all in one UI.
 
+## Screenshots
+
+![Main UI](docs/01-main.png)
+*The main interface — search panel on the left, policy selector on the right*
+
+![Policy selected](docs/02-policy-selected.png)
+*Selecting the deity_nuanced policy shows its full definition*
+
+![Evaluation result](docs/04-evaluation-result.png)
+*A prompt evaluated as SAFE with reasoning from gpt-oss-safeguard-20b*
+
 ## How It Works
 
 1. **Search** the DiffusionDB dataset with natural language (hybrid keyword + vector search)
