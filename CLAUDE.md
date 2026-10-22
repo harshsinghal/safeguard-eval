@@ -94,3 +94,7 @@ Plain `.txt` files in `policies/`. Each is a system prompt for the safeguard mod
 **Change Fal.ai model:** Update the default in `api_generate_image()` in `app.py`, or users can edit it in the UI.
 
 **Use a remote database:** Set `TURSO_AUTH_TOKEN` and update `DB_URL` in `app.py` to a `libsql+wss://` URL.
+
+## Batch policy evaluation
+
+The independent CLI in `evals/` evaluates a fictional religious-iconography policy with ALLOW/BLOCK/REVIEW outcomes. See `evals/README.md` for annotation limitations, adapters, calibration, and result publication. Run `python3 -m evals.run --validate` and `python3 -m unittest discover -s tests -v` before changing the runner or dataset. Preserve group separation between development and test cases. Never describe fixture tests or dry runs as live model evaluations.
