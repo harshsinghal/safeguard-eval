@@ -1,0 +1,13 @@
+{
+  "provider": "GPU.ai",
+  "gpu": "RTX PRO 6000 Blackwell Server Edition 96GB",
+  "price_per_hour_usd": 1.69,
+  "budget_usd_exclusive": 10,
+  "server_auto_terminate_hours": 2,
+  "instance_status": "terminated",
+  "ready_at_utc": "2026-10-22T01:25:49.921073Z",
+  "termination_completed_at_utc": "2026-10-22T01:37:31.231927Z",
+  "metered_gpu_seconds": 701,
+  "metered_cost_cents": 33,
+  "scope": "Only the instance created for this evaluation; unrelated account usage excluded."
+}

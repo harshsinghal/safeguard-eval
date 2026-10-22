@@ -71,14 +71,14 @@ def build_payload(adapter, model, policy, prompt, max_tokens=2048):
     # not a third class these models were trained to output.
     if adapter == 'shieldstral':
         messages = [
-            {'role': 'system', 'content': 'Judge the Document using the Query and Instruction. Answer only yes or no.'},
+            {'role': 'system', 'content': 'Judge whether the Document meets the requirements based on the Query and the Instruction provided. Note that the answer can only be "yes" or "no".'},
             {'role': 'user', 'content': '<Instruct>: ' + text +
              '\n\n<Query>: Does the requested image clearly meet the BLOCK criterion?'
              '\n\n<Document>: ' + json.dumps(prompt, ensure_ascii=False)},
         ]
     elif adapter == 'cope':
         messages = [{'role': 'user', 'content':
-            'Classify CONTENT under POLICY. Return 1 when the BLOCK label applies, otherwise 0.'
+            'Examine the given POLICY and determine if the given CONTENT meets the criteria for ANY of the LABELS. Answer "1" if yes, and "0" if no.'
             '\n\nPOLICY\n======\n' + text + '\n\nLABELS: BLOCK'
             '\n\nCONTENT\n=======\n' + json.dumps(prompt, ensure_ascii=False)}]
     else:
@@ -204,6 +204,7 @@ def main(argv=None):
     parser.add_argument('--allow-below', type=float)
     parser.add_argument('--block-at', type=float)
     parser.add_argument('--limit', type=int)
+    parser.add_argument('--score-token-ids', type=int, nargs='+', help='vLLM: explicitly return logprobs for these binary label token IDs')
     parser.add_argument('--timeout', type=float, default=120)
     parser.add_argument('--max-tokens', type=int, default=2048)
     parser.add_argument('--deployment-note', default='unrecorded', help='Hardware, revision, quantization, server version')
@@ -252,7 +253,7 @@ def main(argv=None):
         deployment_note=args.deployment_note, allow_below=args.allow_below, block_at=args.block_at,
         temperature=0, max_tokens=args.max_tokens if args.adapter=='safeguard' else 1,
         reasoning_effort='medium' if args.adapter=='safeguard' else None,
-        timeout_seconds=args.timeout, retries=0, annotation_status='agent_draft_unadjudicated')
+        timeout_seconds=args.timeout, retries=0, score_token_ids=args.score_token_ids, annotation_status='agent_draft_unadjudicated')
     (out/'manifest.json').write_text(json.dumps(manifest, indent=2)+'\n')
     (out/'policy.json').write_text(json.dumps(policy, ensure_ascii=False, indent=2)+'\n')
     classify = load_policylm(model, policy) if args.adapter == 'policylm' and not args.dry_run else None
@@ -261,6 +262,8 @@ def main(argv=None):
         for case in cases:
             payload = (dict(model=model, prompt=case['prompt'], policy=policy)
                 if args.adapter == 'policylm' else build_payload(args.adapter, model, policy, case['prompt'], args.max_tokens))
+            if args.score_token_ids and args.adapter in ('shieldstral', 'cope'):
+                payload['logprob_token_ids'] = args.score_token_ids
             requests.write(json.dumps(dict(id=case['id'], payload=payload), ensure_ascii=False)+'\n')
             requests.flush()
             if args.dry_run:

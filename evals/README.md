@@ -58,11 +58,11 @@ The adapter requests JSON with a decision and short explanation, at temperature 
 
 ## Other model adapters
 
-These adapters are implemented and locally tested with fixtures; **live model compatibility and results are not yet verified**. Their model cards use different inference contracts. A shared chat prompt is not enough to make all models interchangeable.
+Live runs and their limitations are documented in [the first comparison](../published_runs/2026-10-21/README.md). Adapter behavior depends on the serving runtime and checkpoint revision. Their model cards use different inference contracts. A shared chat prompt is not enough to make all models interchangeable.
 
 ### Shieldstral and CoPE-B: binary scores with abstention
 
-Serve the chosen checkpoint using the instructions in its model card: [Shieldstral](https://huggingface.co/mistralai/Shieldstral-1.0-3B), [CoPE-B](https://huggingface.co/zentropi-ai/cope-b-a4b). The runner calls an OpenAI-compatible `/v1/chat/completions` endpoint and requests first-token log probabilities. It uses each model's structured policy/content framing, with repository-specific wording.
+Serve the chosen checkpoint using the instructions in its model card: [Shieldstral](https://huggingface.co/mistralai/Shieldstral-1.0-3B), [CoPE-B](https://huggingface.co/zentropi-ai/cope-b-a4b). The runner calls an OpenAI-compatible `/v1/chat/completions` endpoint and requests first-token log probabilities. It uses the model-card system/task framing with this repository's policy. On vLLM, `--score-token-ids` can request both label alternatives explicitly, avoiding their omission from a top-k log-probability list. Resolve IDs using the served model's `/tokenize` endpoint with `add_special_tokens=false`; do not reuse IDs across tokenizers.
 
 For a remote GPU, tunnel the endpoint to localhost or use authenticated HTTPS. The following commands assume an already running endpoint. **0.2 and 0.8 are illustrative thresholds, not calibrated recommendations.**
 
@@ -82,7 +82,7 @@ python3 -m evals.run --adapter cope \
 
 Shieldstral uses yes/no alternatives; CoPE uses 1/0. The runner renormalizes the two token probabilities and requires both alternatives to be present. Missing log probabilities produce an error rather than an invented score. These scores are **not calibrated probabilities of correctness**.
 
-Scores below the lower threshold route to ALLOW, scores at or above the upper threshold to BLOCK, and the middle band to REVIEW. This measures a **model plus routing policy**. It does not establish that a binary model understands semantic ambiguity or can explain a review decision. Report this separately from Safeguard's explicit three-class prediction. Select thresholds independently per model on development data, accounting for review workload, and freeze them before test scoring. The runner saves scores so that development thresholds can be analyzed offline.
+Scores below the lower threshold route to ALLOW, scores at or above the upper threshold to BLOCK, and the middle band to REVIEW. This measures a **model plus routing policy**. It does not establish that a binary model understands semantic ambiguity or can explain a review decision. Report this separately from Safeguard's explicit three-class prediction. Select thresholds independently per model on development data, accounting for review workload, and freeze them before test scoring. The runner saves scores so that development thresholds can be analyzed offline. Run `python3 -m evals.calibrate results/shieldstral-dev` to select a band on a development run. It searches a fixed 0.05–0.95 grid and maximizes development macro-F1, breaking ties by automatic coverage, narrower band, then lower bounds. Freeze the selected values before running the test split. Calibration rejects test runs and development runs containing scoring errors.
 
 ### PolicyLM: native classifier helper
 
@@ -113,6 +113,8 @@ A timeout, malformed response, or missing score is `prediction=ERROR`, `route=RE
 
 ## GPU runs and publication status
 
-No paid GPU was provisioned and no results on this new dataset are claimed. Provider, budget, checkpoint revisions, and runtime configuration must be selected for the first live comparison. As initial sizing references, the Shieldstral card describes BF16 serving in 16 GB VRAM; CoPE-B describes an 80 GB GPU and about 52 GB of BF16 weights. Verify the runtime and context-length needs before renting. PolicyLM can also run on CPU or Apple silicon through its upstream helper.
+The [first live comparison](../published_runs/2026-10-21/README.md) ran all four models on one GPU.ai RTX PRO 6000 for **$0.33**; termination was confirmed. It includes 24 development and 48 test cases per model, selected thresholds, model revisions, dependency snapshots, and per-case outputs. The results remain exploratory because labels are unadjudicated.
 
-Publish a comparison only with its per-case records and manifest, annotation status, frozen thresholds, error rates, review workload, and deployment details. Put reviewed artifacts in a dedicated tracked directory such as `published_runs/`; `results/` remains ignored for local experiments. Do not publish credentials or private endpoint details. Until live runs are available, the model list is a set of candidates, not a leaderboard.
+For additional runs, select provider, budget, revisions, and runtime configuration explicitly. As sizing references, the Shieldstral card describes BF16 serving in 16 GB VRAM; CoPE-B describes an 80 GB GPU and about 52 GB of BF16 weights. Verify runtime/context needs before renting. PolicyLM can also run on CPU or Apple silicon through its upstream helper.
+
+Publish a comparison only with its per-case records and manifest, annotation status, frozen thresholds, error rates, review workload, and deployment details. Put reviewed artifacts in a dedicated tracked directory such as `published_runs/`; `results/` remains ignored for local experiments. Do not publish credentials or private endpoint details. The live results are observations for one policy and small synthetic set, not a general model leaderboard.

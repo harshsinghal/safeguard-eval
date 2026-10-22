@@ -73,6 +73,15 @@ class EvaluationTests(unittest.TestCase):
             self.assertNotIn('annotation_status', request)
             self.assertNotIn('expected', request)
 
+    def test_calibration_rejects_test_split(self):
+        from evals.calibrate import calibrate
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp)
+            (path/'manifest.json').write_text(json.dumps(dict(mode='inference', split='test')))
+            (path/'predictions.jsonl').write_text(json.dumps(dict(split='test', score=.7))+'\n')
+            with self.assertRaises(ValueError):
+                calibrate(path)
+
     def test_http_runner_artifacts_and_failure_route(self):
         received = []
         class Handler(BaseHTTPRequestHandler):

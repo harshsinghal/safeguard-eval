@@ -10,10 +10,10 @@ The [ROOST Model Community](https://github.com/roostorg/model-community) collect
 
 | Model | Role | Status in this repository |
 |---|---|---|
-| [OpenAI GPT OSS Safeguard](https://developers.openai.com/cookbook/articles/gpt-oss-safeguard-guide) | Reasons over a supplied text policy and can return a decision with an explanation | 20B via Groq used in the original web demo; new three-way evaluation adapter available |
-| [Zentropi CoPE-B-A4B](https://huggingface.co/zentropi-ai/cope-b-a4b) | Custom-policy text classifier with binary output | Experimental score adapter; live comparison pending |
-| [Musubi PolicyLM-1.7B](https://huggingface.co/musubilabs/policylm-1.7b) | Scores custom policy categories through a native classifier helper | Experimental native adapter; live comparison pending |
-| [Mistral Shieldstral-1.0-3B](https://huggingface.co/mistralai/Shieldstral-1.0-3B) | Policy-adaptive text/image classifier with a binary score | Experimental text-prompt score adapter; live comparison pending |
+| [OpenAI GPT OSS Safeguard](https://developers.openai.com/cookbook/articles/gpt-oss-safeguard-guide) | Reasons over a supplied text policy and can return a decision with an explanation | 20B via Groq used in the original web demo; self-hosted three-way evaluation completed on GPU.ai |
+| [Zentropi CoPE-B-A4B](https://huggingface.co/zentropi-ai/cope-b-a4b) | Custom-policy text classifier with binary output | Binary-score adapter evaluated on GPU.ai; see draft-label results below |
+| [Musubi PolicyLM-1.7B](https://huggingface.co/musubilabs/policylm-1.7b) | Scores custom policy categories through a native classifier helper | Native adapter evaluated on GPU.ai; see draft-label results below |
+| [Mistral Shieldstral-1.0-3B](https://huggingface.co/mistralai/Shieldstral-1.0-3B) | Policy-adaptive text/image classifier with a binary score | Text-prompt score adapter evaluated on GPU.ai; see draft-label results below |
 
 ROOST also includes [Roblox PII Classifier](https://github.com/roostorg/model-community/tree/main/roblox-pii-classifier), [Roblox Sentinel](https://github.com/roostorg/model-community/tree/main/roblox-sentinel), and [Roblox Voice Safety Classifier](https://github.com/roostorg/model-community/tree/main/roblox-voice-safety-classifier). These address personal-information sharing, rare conversation risks, and voice moderation respectively. They are useful safety components, but are not interchangeable custom-policy evaluators for this text-prompt task. ROOST's [Mila guardrail](https://github.com/roostorg/model-community/tree/main/mila) is also specialized, addressing suicide-assistance prevention.
 
@@ -27,7 +27,7 @@ Imagine an image-generation platform whose product policy excludes religious ico
 | A modern street musician playing a flute beside a peacock mural, with no divine attributes | ALLOW: shared visual motifs alone do not establish religious iconography |
 | Recreate the sanctuary from a reference photo that has not been provided | REVIEW: the requested visual content cannot be resolved |
 
-The [evaluation guide](evals/README.md) includes a versioned policy, **72 synthetic cases**, group-separated development/test splits, runnable adapters, and per-case reports. Labels are AI-drafted and await independent human adjudication. The set is a transparent demonstration, not a validated benchmark or a claim of cultural coverage. There are **no live model results on this new set yet**.
+The [evaluation guide](evals/README.md) includes a versioned policy, **72 synthetic cases**, group-separated development/test splits, runnable adapters, and per-case reports. Labels are AI-drafted and await independent human adjudication. The set is a transparent demonstration, not a validated benchmark or a claim of cultural coverage. The [first live comparison](published_runs/2026-10-21/README.md) is now available, including raw predictions, thresholds, and reproducibility details.
 
 ```bash
 # No API key, GPU, or third-party packages needed:
@@ -39,6 +39,14 @@ python3 -m unittest discover -s tests -v
 Safeguard is prompted for an explicit ALLOW/BLOCK/REVIEW decision. Binary classifiers use a separately configured score band to route uncertain cases to review. Failures are held but counted as errors, so an outage cannot earn review credit. See the guide for [running models and publishing comparisons](evals/README.md#gpu-runs-and-publication-status), including DiffusionDB expansion and GPU deployment considerations.
 
 The original web app below remains a SAFE/UNSAFE interactive demo; the three-way, multi-model evaluation runs through the CLI.
+
+## First live comparison
+
+All four models ran on one GPU.ai RTX PRO 6000. Against **48 AI-drafted test labels**, Safeguard matched **40/48**, PolicyLM **36/48**, CoPE-B **32/48**, and Shieldstral **19/48**. These figures evaluate this specific policy and adapter setup; they are not general safety benchmarks.
+
+CoPE-B matched every clear ALLOW/BLOCK case but sent no ambiguous case to REVIEW. Safeguard also matched all clear cases and identified 8 of 16 expected-REVIEW cases. This demonstrates why platforms must measure review behavior alongside binary classification.
+
+The run cost **$0.33**, and the GPU instance was terminated. See the [full report and artifacts](published_runs/2026-10-21/README.md) for review workload, confusion matrices, frozen development thresholds, pinned revisions, and limitations.
 
 ## Demo
 
