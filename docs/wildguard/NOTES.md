@@ -119,3 +119,19 @@ Safeguard shared p1 slightly improves fitting accuracy to 91.699% and reduces ou
 ## 2026-10-24 — disclosed training exposure
 
 PolicyLM's official card explicitly says its PolyGuardMix training source includes WildGuardMix. Exact overlap with source splits is unverified, and we have not established test contamination. This strengthens the need to frame results as no additional weight updates in our experiment, not as untrained policy models versus a trained baseline. Shieldstral's public report uses heterogeneous safety data and reports this benchmark, but does not establish source-row exclusion in the sections reviewed. CoPE describes disjoint internal data; that is not proof of disjointness from WildGuard. The model-exposure note records the sources and limits before official-test access.
+
+## 2026-10-24 — final evaluation scope before policy selection
+
+The shared search is complete. Model-specific candidates are running, with no further edits permitted. Main results retain the fixed 0.5 score threshold. Before opening official test, separately choose validation-accuracy thresholds on a fixed 0.01–0.99 grid for each selected score-based policy, including p0. Ties prefer proximity to 0.5, then the lower threshold. Freeze those values with the policy selection. This permits both threshold-only (p0 calibrated) and policy-plus-threshold secondary controls; neither changes the primary model or primary fixed-threshold comparison. WildGuard and Safeguard do not expose comparable scores in these adapters.
+
+Register the final fitting estimate on the existing 8,192-row fitting sample for every unique final configuration and WildGuard, subject to the original budget. This is not full-training accuracy (the fitting partition has 69,366 rows). Evaluate the full official task-specific test population and the 512-row internal audit sample first, then the expanded fitting sample. The study will report omissions if the hard deadline prevents completion. Final fitting scores cannot change selected policies. A shared and individual role using the same policy reuses one inference run, rather than presenting it as two independent repetitions.
+
+The full original maximum search (three rounds) was not attempted: this is a bounded one-round shared plus one-round model-specific study. The 11 retained policy files and all unsuccessful trials are part of the evidence.
+
+## 2026-10-24 21:13 UTC — policy and threshold freeze, before official test download
+
+All 20 policy-model search configurations and the WildGuard baseline completed matched fitting/validation runs. The shared winner is p2 (boundary checklist). Individual winners: PolicyLM p4 compact (91.797% validation), Shieldstral p4 taxonomy priority (98.633%), CoPE p3 social/deception (95.313%), Safeguard p2 checklist (92.578%). Safeguard p1 ties p2 in validation accuracy; p2 wins the predeclared shorter-policy tie-break. Its specific p4 improves fitting accuracy but loses validation, so it is not selected.
+
+The primary comparison is Shieldstral p4 versus official WildGuard, selected without test access. There are 12 unique final configurations: one WildGuard, three each for PolicyLM/Shieldstral/CoPE, and two for Safeguard (shared and individual roles coincide). The selection, nine validation-only threshold controls, full candidate scores and immutable source/model/policy/data freeze are saved under published_runs/2026-10-24-wildguard. Freeze creation time is recorded in freeze.json; it will be committed and pushed before test download. All policy editing is closed.
+
+The primary threshold remains 0.5. Secondary selected thresholds are PolicyLM p0/p2/p4: 0.54/0.32/0.44; Shieldstral p0/p2/p4: 0.14/0.46/0.50; CoPE p0/p2/p3: 0.50/0.06/0.08. These sometimes large shifts make the calibration control informative, but they may overfit 512 validation rows. No threshold is selected on test results.

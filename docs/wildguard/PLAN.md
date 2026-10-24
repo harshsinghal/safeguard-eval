@@ -57,8 +57,8 @@ Future outputs: tutorial on policy design; technical article on failure modes an
 - [x] Implement binary adapters, bounded batched runner, search records, scoring and freeze checks.
 - [x] Test leakage barriers, scoring, adapters and reproducibility locally.
 - [x] Run training-only pilot on all five models; record cost/throughput and feasible scope.
-- [ ] Evaluate initial and candidate policies; record training errors and edits.
-- [ ] Select shared and per-model policies using validation; freeze settings.
+- [x] Evaluate initial and candidate policies; record training errors and edits.
+- [x] Select shared and per-model policies using validation; freeze settings.
 - [ ] Run frozen internal audit and official WildGuardTest comparisons.
 - [ ] Review errors, intervals, overlap and calibration controls.
 - [ ] Collect artifacts, terminate compute, reconcile billing and publish evidence.

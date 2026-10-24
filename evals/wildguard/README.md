@@ -38,13 +38,33 @@ Register each candidate and its fitting/validation run paths in a JSON registry.
 
 ```sh
 python -m evals.wildguard.study select --registry /private/registry.json --runs /private/runs --out /private/selection.json
+python -m evals.wildguard.study calibrate --selection /private/selection.json \
+  --registry /private/registry.json --runs /private/runs --out /private/calibration.json
 python -m evals.wildguard.study freeze --selection /private/selection.json \
   --registry /private/registry.json --revisions evals/wildguard/revisions.json \
   --audit /private/wildguard-data/audit-budget.jsonl \
-  --data-manifest /private/wildguard-data/manifest.json --out /private/freeze.json
+  --data-manifest /private/wildguard-data/manifest.json \
+  --calibration /private/calibration.json --final-fit /private/wildguard-data/fit-expanded.jsonl \
+  --out /private/freeze.json
 python -m evals.wildguard.prepare_test --freeze /private/freeze.json --out /private/test
 ```
 
 Set `HF_TOKEN` securely for the final command. Audit/test runs require `--freeze`; policy, model, source, settings and dataset provenance must match. Threshold calibration is a separate validation-only control, never part of the primary policy-only comparison.
 
 The paper-ready evidence package will distinguish full datasets from budget samples, source-label ambiguity from model errors, and within-model tuning gains from cross-model comparisons. No article should claim a general advantage for policy tuning from a single public benchmark.
+
+Create the expanded fitting sample with `sample(fit_rows, 8192)` and `write_jsonl` from `evals.wildguard.data`; use the already assigned fitting partition. The registered run uses the same deterministic seed and stratification as the smaller samples. Save its SHA256 in the freeze.
+
+## Analysis and publication
+
+After frozen inference, `overlap` audits lexical train/test overlap without filtering the primary score. `analyze` verifies all frozen test configurations are present and computes paired group-bootstrap intervals, deduplicated and overlap sensitivities, and the validation-selected threshold controls. `export` publishes gzip-compressed predictions through an explicit field allowlist, omitting source prompts, generated reasons, and private request/response traces.
+
+```sh
+python -m evals.wildguard.overlap --train /private/wildguard-data/train.jsonl \
+  --test /private/test/test.jsonl --freeze /private/freeze.json --out /private/overlap.json
+python -m evals.wildguard.analyze --runs /private/runs --freeze /private/freeze.json \
+  --overlap /private/overlap.json --out /private/analysis.json
+python -m evals.wildguard.export --runs /private/runs --out /public/evidence
+```
+
+Policy search is agent-authored and directed by fitting-error inspection; it is not an exhaustive or globally optimal search. Aggregate validation scores were visible during the search, but validation prompt/error inspection was prohibited. The final official test was kept unopened until selection and threshold freeze. Independent repetition of the search is future work.

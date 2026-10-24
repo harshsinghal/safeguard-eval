@@ -1,4 +1,5 @@
 import json
+import gzip
 from pathlib import Path
 import tempfile
 import unittest
@@ -9,6 +10,7 @@ from evals.wildguard.data import sample, split_groups, normalized
 from evals.wildguard.metrics import metrics, calibrate, paired_interval
 from evals.wildguard.study import select, POLICY_MODELS
 from evals.wildguard.run import payload, parse, validate_freeze, read_rows, run, digest
+from evals.wildguard.export import export
 
 class WildGuardTests(unittest.TestCase):
     def test_payload_prompt_only_and_binary(self):
@@ -112,5 +114,18 @@ class WildGuardTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d)/'freeze.json';p.write_text('{"status":"draft"}')
             with self.assertRaises(ValueError):validate_freeze(p,'wildguard',None,'revision')
+
+    def test_public_export_removes_reasons_and_rejects_unknown_fields(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);folder=root/'private'/'run';folder.mkdir(parents=True)
+            row=dict(id='1',expected='BLOCK',prediction='BLOCK',reason='source quotation')
+            (folder/'predictions.jsonl').write_text(json.dumps(row)+'\n')
+            (folder/'manifest.json').write_text(json.dumps(dict(ids=['1'],adapter='safeguard',policy_id='p0',stage='test')))
+            (folder/'summary.json').write_text(json.dumps(dict(complete=True,n=1,accuracy=1.,errors=0)))
+            index=export(root/'private',root/'public')
+            public=gzip.decompress((root/'public'/index[0]['public_predictions']).read_bytes()).decode()
+            self.assertNotIn('reason',public);self.assertNotIn('source quotation',public)
+            row['prompt']='private source';(folder/'predictions.jsonl').write_text(json.dumps(row)+'\n')
+            with self.assertRaises(ValueError):export(root/'private',root/'rejected')
 
 if __name__=='__main__':unittest.main()

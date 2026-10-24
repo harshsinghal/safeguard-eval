@@ -35,3 +35,16 @@ Document provider choice, checkpoint/runtime compatibility, batching, model-spec
 - Every exclusion or deviation: reason, timing relative to test access and effect on coverage.
 - Every public example: verify upstream redistribution conditions and quote minimally; prefer paraphrased error categories.
 - A stronger causal claim needs additional datasets, repeated search seeds, matched base models, independent label review, and ideally equal-compute fine-tuning baselines. These are future studies, not implied by this run.
+
+## Study questions to answer from the frozen results
+
+| Question | Required comparison | Claim boundary |
+|---|---|---|
+| Does changing the policy help? | Each model's validation-selected policy versus its p0, fixed threshold, paired test rows | Deployment-specific policy effect; retain non-improvements |
+| Does the chosen policy model beat WildGuard? | Preselected primary configuration versus official WildGuard on the full labeled test population | One public benchmark, heterogeneous models and uncertain training exposure |
+| Is one shared policy portable? | p0/shared/individual roles within each model, including identical-role aliases | Shared selection used all four validation results; no unseen-model transfer claim |
+| Is the gain simply a different blocking threshold? | p0 at 0.5, p0 calibrated, tuned at 0.5, tuned calibrated | Thresholds selected on validation; keep the policy-only primary separate |
+| Do fitting gains transfer? | Search fit, expanded fit, validation, internal audit and official test | Different label provenance and repeated source rows can affect comparisons |
+| What did operational reliability change? | Failure counts and official-compatible F1, with full failures retained | Runtime-specific observations; unresolved Safeguard degeneration needs a separate ablation |
+
+Before a research-paper submission, add an independent held-out dataset and repeated policy-search seeds. A general claim about policy tuning versus fine-tuning also requires matched base models and a newly run fine-tuning baseline with a stated data/compute budget. Those are follow-up studies, not missing rows to conceal in the current report.
