@@ -37,7 +37,7 @@ def digest(path):
 
 
 def read_rows(path):
-    rows=[json.loads(x) for x in Path(path).read_text().splitlines() if x.strip()]
+    rows=[json.loads(x) for x in Path(path).read_text().split('\n') if x.strip()]
     if not rows or len({r['id'] for r in rows})!=len(rows):
         raise ValueError('Empty dataset or duplicate IDs')
     for r in rows:
@@ -46,7 +46,7 @@ def read_rows(path):
     return rows
 
 
-def payload(adapter,model,policy,prompt,max_tokens=4096):
+def payload(adapter,model,policy,prompt,max_tokens=8192):
     if adapter=='wildguard':
         return dict(model=model,prompt=WILDGUARD_FORMAT.format(prompt=prompt),temperature=0,top_p=1,max_tokens=128,add_special_tokens=True)
     p=build_payload(adapter,model,policy,prompt,max_tokens)
@@ -133,12 +133,17 @@ def run(args):
         max_tokens=args.max_tokens if args.adapter=='safeguard' else 128 if args.adapter=='wildguard' else 1,
         concurrency=args.concurrency,temperature=0,threshold=.5,retries=0,
         freeze_sha256=digest(args.freeze) if freeze else None,
-        input_fields=['prompt'],native_cleaning=True if args.adapter=='policylm' else None,
+        input_fields=['prompt'],wildguard_tokenizer='transformers 4.57.6 slow, client token IDs, exactly one BOS' if args.adapter=='wildguard' else None,native_cleaning=True if args.adapter=='policylm' else None,
         native_windowing='upstream 2000-character windows; no character limit; max_batch_rows=1' if args.adapter=='policylm' else None)
     (args.out/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     if policy:(args.out/'policy.json').write_text(json.dumps(policy,indent=2)+'\n')
     ids=score_ids(args.base,args.model,args.adapter) if args.adapter in ('shieldstral','cope') else None
     classify=None
+    tokenizer=None
+    if args.adapter=='wildguard':
+        from transformers import AutoTokenizer
+        tokenizer=AutoTokenizer.from_pretrained(args.model,revision=args.revision,use_fast=False,local_files_only=True)
+        if tokenizer.is_fast:raise ValueError('Official WildGuard requires slow tokenizer')
     if args.adapter=='policylm':
         sys.path.insert(0,str(Path(args.model)/'inference'))
         from policylm_infer import PolicyLM,Policy,Category
@@ -150,6 +155,9 @@ def run(args):
         row={k:v for k,v in case.items() if k!='prompt'}
         start=time.monotonic()
         request=dict(prompt=case['prompt'],policy=policy) if classify else payload(args.adapter,args.model,policy,case['prompt'],args.max_tokens)
+        if tokenizer is not None:
+            request['prompt']=tokenizer.encode(request['prompt'],add_special_tokens=True)
+            request['add_special_tokens']=False
         if ids:request['logprob_token_ids']=ids
         row['request_sha256']=hashlib.sha256(json.dumps(request,sort_keys=True).encode()).hexdigest()
         response=None
@@ -189,7 +197,7 @@ def main():
     p.add_argument('--adapter',required=True,choices=ADAPTERS);p.add_argument('--model',required=True)
     p.add_argument('--revision',required=True);p.add_argument('--policy',type=Path)
     p.add_argument('--base',default='http://127.0.0.1:8000');p.add_argument('--concurrency',type=int,default=32)
-    p.add_argument('--max-tokens',type=int,default=4096);p.add_argument('--freeze',type=Path)
+    p.add_argument('--max-tokens',type=int,default=8192);p.add_argument('--freeze',type=Path)
     p.add_argument('--stage',choices=('pilot','search','validation','audit','test','fit-final'),required=True)
     a=p.parse_args()
     if a.concurrency<1 or a.max_tokens<1:p.error('Positive limits required')

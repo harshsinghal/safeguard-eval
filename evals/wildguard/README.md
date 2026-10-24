@@ -19,7 +19,7 @@ The importer preserves every labeled source row, groups repeated and near-duplic
 
 ## Inference
 
-Use an SSH tunnel to a localhost vLLM server. The WildGuard model requires the slow tokenizer and uses the official completion template, empty assistant response, 128 output tokens and greedy decoding. The other generative adapters use their documented custom-policy formats. PolicyLM uses its audited, pinned native inference helper with transformers 4.57.6. The first runner release uses vLLM 0.31.0 and will record exact runtime dependencies per execution.
+Use an SSH tunnel to a localhost vLLM server. WildGuard uses client-side token IDs from the original slow tokenizer, the official completion template, an empty assistant response, 128 output tokens and greedy decoding. With vLLM 0.31.0, serve a local checkpoint and use a converted fast tokenizer for output decoding after verifying vocabulary identity; the old server option `tokenizer_mode=slow` is no longer available. The other generative adapters use their documented custom-policy formats. PolicyLM uses its audited, pinned native inference helper with transformers 4.57.6. The first runner release uses vLLM 0.31.0 and will record exact runtime dependencies per execution.
 
 ```sh
 python -m evals.wildguard.run --adapter wildguard --model allenai/wildguard \

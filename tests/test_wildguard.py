@@ -2,10 +2,13 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from types import SimpleNamespace
+from unittest.mock import patch
 
 from evals.wildguard.data import sample, split_groups, normalized
 from evals.wildguard.metrics import metrics, calibrate, paired_interval
-from evals.wildguard.run import payload, parse, validate_freeze
+from evals.wildguard.study import select, POLICY_MODELS
+from evals.wildguard.run import payload, parse, validate_freeze, read_rows, run, digest
 
 class WildGuardTests(unittest.TestCase):
     def test_payload_prompt_only_and_binary(self):
@@ -54,6 +57,55 @@ class WildGuardTests(unittest.TestCase):
         b=[dict(id='1',group='g',expected='BLOCK',prediction='ALLOW')]
         self.assertEqual(paired_interval(a,b,reps=100)['ci95'],[1.,1.])
         with self.assertRaises(ValueError):paired_interval(a,[dict(b[0],id='2')])
+
+    def test_jsonl_preserves_unicode_line_separators(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/'data.jsonl'
+            row=dict(id='x',expected='ALLOW',split='fit',prompt='first\u2028second\u0085third')
+            p.write_text(json.dumps(row,ensure_ascii=False)+'\n')
+            self.assertEqual(read_rows(p)[0]['prompt'],row['prompt'])
+
+    def test_runner_retains_failures_and_excludes_prompts_from_predictions(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);data=root/'data.jsonl'
+            rows=[dict(id=str(i),group=str(i),prompt='private source '+str(i),expected='BLOCK',split='fit',adversarial=False,subcategory='x') for i in range(2)]
+            data.write_text(''.join(json.dumps(r)+'\n' for r in rows))
+            args=SimpleNamespace(data=data,stage='pilot',policy=Path('evals/wildguard/policies/p0.json'),adapter='safeguard',revision='r',freeze=None,max_tokens=4096,concurrency=1,base='http://127.0.0.1:8000',out=root/'out',model='model')
+            calls=[]
+            def fake_post(base,path,body):
+                calls.append(body)
+                return {'choices':[dict(finish_reason='stop' if len(calls)==1 else 'length',message={'content':'{"decision":"BLOCK","reason":"rule applies"}'})]}
+            with patch('evals.wildguard.run.post',fake_post):result=run(args)
+            self.assertEqual(result['n'],2);self.assertEqual(result['accuracy'],.5);self.assertEqual(result['errors'],1)
+            self.assertNotIn('private source',(args.out/'predictions.jsonl').read_text())
+            self.assertIn('private source',(args.out/'private-raw.jsonl').read_text())
+            self.assertNotIn('expected',json.dumps(calls))
+            with self.assertRaises(FileExistsError):run(args)
+
+    def test_selection_requires_matched_data_and_immutable_policies(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);candidates=[]
+            for version in ('p0','p1'):
+                policy=root/(version+'.json');policy.write_text(json.dumps(dict(id=version,block='harm')))
+                c=dict(path=policy.name,sha256=digest(policy),scope='initial' if version=='p0' else 'shared',runs={})
+                for adapter in POLICY_MODELS:
+                    c['runs'][adapter]={}
+                    for split in ('fit','validation'):
+                        name=f'{adapter}-{version}-{split}';folder=root/name;folder.mkdir()
+                        c['runs'][adapter][split]=name
+                        rows=[dict(id=split+str(i),group=str(i),expected=label,prediction=label if version=='p1' else 'ALLOW',split=split) for i,label in enumerate(('ALLOW','BLOCK'))]
+                        (folder/'manifest.json').write_text(json.dumps(dict(split=split,adapter=adapter,policy_sha256=digest(policy),ids=[r['id'] for r in rows],dataset_sha256=split)))
+                        (folder/'predictions.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in rows))
+                candidates.append(c)
+            registry=root/'registry.json';registry.write_text(json.dumps(dict(candidates=candidates)))
+            result=select(registry,root)
+            self.assertEqual(result['shared'],'p1')
+            self.assertEqual(set(result['individual'].values()),{'p1'})
+            bad=root/'policylm-p1-validation'/'manifest.json';m=json.loads(bad.read_text());m['dataset_sha256']='changed';bad.write_text(json.dumps(m))
+            with self.assertRaises(ValueError):select(registry,root)
+            m['dataset_sha256']='validation';bad.write_text(json.dumps(m))
+            (root/'p1.json').write_text('{"id":"changed"}')
+            with self.assertRaises(ValueError):select(registry,root)
 
     def test_holdout_requires_freeze(self):
         with self.assertRaises(ValueError):validate_freeze(None,'wildguard',None,'revision')

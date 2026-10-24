@@ -52,11 +52,11 @@ Future outputs: tutorial on policy design; technical article on failure modes an
 ## Progress checklist
 
 - [x] Save protocol and research documentation structure.
-- [ ] Verify dataset/model access; pin revisions and fetch training data.
-- [ ] Build grouped partitions, audit duplicates/conflicts and save provenance.
-- [ ] Implement binary adapters, bounded batched runner, search records, scoring and freeze checks.
-- [ ] Test leakage barriers, scoring, adapters and reproducibility locally.
-- [ ] Run training-only pilot on all five models; record cost/throughput and feasible scope.
+- [x] Verify dataset/model access; pin revisions and fetch training data.
+- [x] Build grouped partitions, audit duplicates/conflicts and save provenance.
+- [x] Implement binary adapters, bounded batched runner, search records, scoring and freeze checks.
+- [x] Test leakage barriers, scoring, adapters and reproducibility locally.
+- [x] Run training-only pilot on all five models; record cost/throughput and feasible scope.
 - [ ] Evaluate initial and candidate policies; record training errors and edits.
 - [ ] Select shared and per-model policies using validation; freeze settings.
 - [ ] Run frozen internal audit and official WildGuardTest comparisons.

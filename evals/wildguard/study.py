@@ -16,7 +16,7 @@ def verified_run(path,split,adapter,policy_hash):
     m=json.loads((path/'manifest.json').read_text())
     if m['split']!=split or m['adapter']!=adapter or m['policy_sha256']!=policy_hash:
         raise ValueError('Run identity or partition mismatch: '+str(path))
-    rows=[json.loads(x) for x in (path/'predictions.jsonl').read_text().splitlines()]
+    rows=[json.loads(x) for x in (path/'predictions.jsonl').read_text().split('\n') if x.strip()]
     if len(rows)!=len(m['ids']) or {r['id'] for r in rows}!=set(m['ids']) or {r['split'] for r in rows}!={split}:
         raise ValueError('Incomplete or wrong-partition predictions: '+str(path))
     return m,metrics(rows)
@@ -25,7 +25,7 @@ def verified_run(path,split,adapter,policy_hash):
 def select(registry,run_root):
     """Registry candidates must have fitting + validation evidence before selection."""
     registry=Path(registry);reg=json.loads(registry.read_text());records=[]
-    fitting_ids={};validation_ids={}
+    fitting_ids={};validation_ids={};settings={};data_hashes={}
     for c in reg['candidates']:
         policy_path=registry.parent/c['path'];policy=json.loads(policy_path.read_text())
         if digest(policy_path)!=c['sha256']:raise ValueError('Candidate changed after registration')
@@ -34,6 +34,14 @@ def select(registry,run_root):
             pair={}
             for split in ('fit','validation'):
                 m,result=verified_run(Path(run_root)/runs[split],split,adapter,c['sha256'])
+                keys=('revision','runner_sha256','legacy_adapter_sha256','max_tokens','concurrency','temperature','threshold','native_cleaning','native_windowing')
+                fingerprint={k:m.get(k) for k in keys}
+                if adapter in settings and settings[adapter]!=fingerprint:
+                    raise ValueError('Adapter/settings changed between candidates')
+                settings[adapter]=fingerprint
+                if split in data_hashes and data_hashes[split]!=m['dataset_sha256']:
+                    raise ValueError('Dataset changed between candidates/models')
+                data_hashes[split]=m['dataset_sha256']
                 reference=fitting_ids if split=='fit' else validation_ids
                 if adapter in reference and reference[adapter]!=m['ids']:
                     raise ValueError('Candidate evaluated on different examples')
@@ -77,7 +85,7 @@ def freeze(selection,registry,revisions,audit,data_manifest,out):
         registry_sha256=digest(registry),models=models,primary=s['primary'],
         dataset=rev['dataset'],audit_sha256=digest(audit),data_manifest_sha256=digest(data_manifest),
         runner_sha256=digest(base/'run.py'),metrics_sha256=digest(base/'metrics.py'),legacy_adapter_sha256=digest(base.parent/'run.py'),
-        settings=dict(max_tokens=4096,concurrency=32,threshold=.5,temperature=0,reasoning_effort='medium'),
+        settings=dict(max_tokens=8192,concurrency=32,threshold=.5,temperature=0,reasoning_effort='medium'),
         test_opened=False,policy_editing_closed=True)
     Path(out).write_text(json.dumps(f,indent=2)+'\n');return f
 

@@ -1,7 +1,7 @@
 {
   "study": "wildguard-policy-v1",
   "protocol_version": 1,
-  "status": "implementation",
+  "status": "policy_search",
   "prior_cost_usd": 1.57,
   "total_budget_usd": 10.0,
   "new_compute_budget_usd": 8.42,
@@ -10,11 +10,21 @@
     "access": "complete",
     "data": "complete",
     "runner": "complete",
-    "pilot": "in_progress",
-    "tuning": "pending",
+    "pilot": "complete",
+    "tuning": "in_progress",
     "freeze": "pending",
     "test": "pending",
     "report": "pending",
     "cleanup": "pending"
-  }
+  },
+  "scope": {
+    "fit_search_rows": 1024,
+    "validation_search_rows": 512,
+    "shared_rounds": 1,
+    "shared_new_candidates": 2,
+    "model_specific_rounds": 1,
+    "max_specific_candidates_per_model": 2,
+    "safeguard_max_tokens": 8192
+  },
+  "latest_observation": "Shared p2 improves Shieldstral fitting and validation; PolicyLM/CoPE fitting gains have not improved validation. Safeguard shared search continues."
 }

@@ -1,0 +1,195 @@
+{
+  "study": "wildguard-policy-v1",
+  "candidates": [
+    {
+      "path": "policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "scope": "initial",
+      "parent": null,
+      "registered_utc": "2026-10-24T20:29:23.951905+00:00",
+      "rationale": "Initial taxonomy and benign exceptions, written before fitting errors.",
+      "runs": {
+        "policylm": {
+          "fit": "policylm-search-p0",
+          "validation": "policylm-validation-p0"
+        },
+        "shieldstral": {
+          "fit": "shieldstral-search-p0",
+          "validation": "shieldstral-validation-p0"
+        },
+        "cope": {
+          "fit": "cope-search-p0",
+          "validation": "cope-validation-p0"
+        },
+        "safeguard": {
+          "fit": "safeguard-search-p0",
+          "validation": "safeguard-validation-p0"
+        }
+      }
+    },
+    {
+      "path": "policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "scope": "shared",
+      "parent": "wg-p0-taxonomy",
+      "registered_utc": "2026-10-24T20:29:23.952205+00:00",
+      "rationale": "Distinguish concrete harm from suspicious framing; expand harmless fiction/placeholder/game exceptions and cover facilitation beyond procedural steps.",
+      "runs": {
+        "policylm": {
+          "fit": "policylm-search-p1",
+          "validation": "policylm-validation-p1"
+        },
+        "shieldstral": {
+          "fit": "shieldstral-search-p1",
+          "validation": "shieldstral-validation-p1"
+        },
+        "cope": {
+          "fit": "cope-search-p1",
+          "validation": "cope-validation-p1"
+        },
+        "safeguard": {
+          "fit": "safeguard-search-p1",
+          "validation": "safeguard-validation-p1"
+        }
+      }
+    },
+    {
+      "path": "policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "scope": "shared",
+      "parent": "wg-p0-taxonomy",
+      "registered_utc": "2026-10-24T20:29:23.952370+00:00",
+      "rationale": "Use a shorter outcome checklist with explicit substance-over-framing precedence.",
+      "runs": {
+        "policylm": {
+          "fit": "policylm-search-p2",
+          "validation": "policylm-validation-p2"
+        },
+        "shieldstral": {
+          "fit": "shieldstral-search-p2",
+          "validation": "shieldstral-validation-p2"
+        },
+        "cope": {
+          "fit": "cope-search-p2",
+          "validation": "cope-validation-p2"
+        },
+        "safeguard": {
+          "fit": "safeguard-search-p2",
+          "validation": "safeguard-validation-p2"
+        }
+      }
+    },
+    {
+      "path": "policies/p3-policylm.json",
+      "sha256": "a9040c292f44ad61fc2ea006472447fb48178ebc8ddcee45529d25141392b612",
+      "scope": "policylm",
+      "parent": "wg-p2-boundary-checklist",
+      "registered_utc": "2026-10-24T20:43:26.610761+00:00",
+      "rationale": "Refine reproduction/private-data boundaries or compress the policy, based on fitting false positives and missed harms.",
+      "runs": {
+        "policylm": {
+          "fit": "policylm-search-p3",
+          "validation": "policylm-validation-p3"
+        }
+      }
+    },
+    {
+      "path": "policies/p4-policylm.json",
+      "sha256": "ad0ceb520f16254b6f8e444be008349d04d26baf70492e770cb1daf59f4da0f2",
+      "scope": "policylm",
+      "parent": "wg-p2-boundary-checklist",
+      "registered_utc": "2026-10-24T20:43:26.611045+00:00",
+      "rationale": "Refine reproduction/private-data boundaries or compress the policy, based on fitting false positives and missed harms.",
+      "runs": {
+        "policylm": {
+          "fit": "policylm-search-p4",
+          "validation": "policylm-validation-p4"
+        }
+      }
+    },
+    {
+      "path": "policies/p3-shieldstral.json",
+      "sha256": "012ae24f0d285694644de533ead9ea1250f2ad37898cacc1cb18250de39227e2",
+      "scope": "shieldstral",
+      "parent": "wg-p2-boundary-checklist",
+      "registered_utc": "2026-10-24T20:43:26.611222+00:00",
+      "rationale": "Clarify disguised harmful deliverables and taxonomy precedence from the remaining fitting errors.",
+      "runs": {
+        "shieldstral": {
+          "fit": "shieldstral-search-p3",
+          "validation": "shieldstral-validation-p3"
+        }
+      }
+    },
+    {
+      "path": "policies/p4-shieldstral.json",
+      "sha256": "c52970c306ee4b66901c0ba9b1e057b0cfeca7d300771a652fe79a3bdbddeaca",
+      "scope": "shieldstral",
+      "parent": "wg-p2-boundary-checklist",
+      "registered_utc": "2026-10-24T20:43:26.611372+00:00",
+      "rationale": "Clarify disguised harmful deliverables and taxonomy precedence from the remaining fitting errors.",
+      "runs": {
+        "shieldstral": {
+          "fit": "shieldstral-search-p4",
+          "validation": "shieldstral-validation-p4"
+        }
+      }
+    },
+    {
+      "path": "policies/p3-cope.json",
+      "sha256": "8af17e18ab7f9888c54e53c06d44346f888869ac780643fc335518af896261cb",
+      "scope": "cope",
+      "parent": "wg-p2-boundary-checklist",
+      "registered_utc": "2026-10-24T20:43:26.612099+00:00",
+      "rationale": "Broaden social-group/deception definitions or include harmful statements already present in content, based on fitting misses.",
+      "runs": {
+        "cope": {
+          "fit": "cope-search-p3",
+          "validation": "cope-validation-p3"
+        }
+      }
+    },
+    {
+      "path": "policies/p4-cope.json",
+      "sha256": "23c572497fcb5f5d14352d30775a571dd1be2a19887f0131de604bc67df83784",
+      "scope": "cope",
+      "parent": "wg-p2-boundary-checklist",
+      "registered_utc": "2026-10-24T20:43:26.612293+00:00",
+      "rationale": "Broaden social-group/deception definitions or include harmful statements already present in content, based on fitting misses.",
+      "runs": {
+        "cope": {
+          "fit": "cope-search-p4",
+          "validation": "cope-validation-p4"
+        }
+      }
+    },
+    {
+      "path": "policies/p3-safeguard.json",
+      "sha256": "4b94e65db5ea53f8ff7bccf2f7421932a06784bba2ffdfa1ef19528e2dc17602",
+      "scope": "safeguard",
+      "parent": "wg-p1-concrete-harm",
+      "registered_utc": "2026-10-24T20:51:40.572409+00:00",
+      "rationale": "Resolve concrete harmful-output versus benign-fiction boundaries and avoid inferring unstated harms; test a concise alternative. Based on fitting p0/p1 errors and earlier fitting pilot, before p2 results.",
+      "runs": {
+        "safeguard": {
+          "fit": "safeguard-search-p3",
+          "validation": "safeguard-validation-p3"
+        }
+      }
+    },
+    {
+      "path": "policies/p4-safeguard.json",
+      "sha256": "c0fbe9001898d878c2699d8b58020bce278c90a9d5d7d2d5e9d41a667ee2fa99",
+      "scope": "safeguard",
+      "parent": "wg-p2-boundary-checklist",
+      "registered_utc": "2026-10-24T20:51:40.572565+00:00",
+      "rationale": "Resolve concrete harmful-output versus benign-fiction boundaries and avoid inferring unstated harms; test a concise alternative. Based on fitting p0/p1 errors and earlier fitting pilot, before p2 results.",
+      "runs": {
+        "safeguard": {
+          "fit": "safeguard-search-p4",
+          "validation": "safeguard-validation-p4"
+        }
+      }
+    }
+  ]
+}

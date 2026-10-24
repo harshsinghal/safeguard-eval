@@ -1,0 +1,15 @@
+{
+  "repository": "allenai/safety-eval",
+  "observed_main_revision": "060cc903d64703214c549b5c3a30ea8ceef2e588",
+  "retrieved_utc": "2026-10-24",
+  "files": {
+    "evaluation/tasks/classification/wildguardtest_prompt/__init__.py": {
+      "sha256": "3d959b4f66f5742768225f4853fd4f2c8010d7488d52c6a7ddd3d8fd70962005",
+      "url": "https://raw.githubusercontent.com/allenai/safety-eval/060cc903d64703214c549b5c3a30ea8ceef2e588/evaluation/tasks/classification/wildguardtest_prompt/__init__.py"
+    },
+    "src/classifier_models/wildguard.py": {
+      "sha256": "b20b52c16ab56abd8a2d0349c2241951bd8e8b8d576294991103278f752401f6",
+      "url": "https://raw.githubusercontent.com/allenai/safety-eval/060cc903d64703214c549b5c3a30ea8ceef2e588/src/classifier_models/wildguard.py"
+    }
+  }
+}

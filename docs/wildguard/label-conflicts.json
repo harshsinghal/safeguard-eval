@@ -1,0 +1,6 @@
+{
+  "exact_conflicting_prompt_groups": 16,
+  "rows_in_conflicting_groups": 45,
+  "minimum_errors_for_deterministic_identical_prompt_classifier": 16,
+  "note": "Same normalized text can have conflicting labels; no relabeling performed. This bound assumes normalization-equivalent prompts get the same prediction."
+}
