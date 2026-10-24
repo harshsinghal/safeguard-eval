@@ -1,0 +1,149 @@
+{
+  "entries": [
+    {
+      "adapter": "cope",
+      "policy_id": "wg-p0-taxonomy",
+      "expanded_run": "cope-fit-final-p0",
+      "search_run": "cope-search-p0",
+      "shared_rows": 1024,
+      "changed_predictions": 2,
+      "corrected": 1,
+      "regressed": 1,
+      "repeated_exact_prompt_groups": 606,
+      "repeated_prompt_groups_with_different_predictions": 0
+    },
+    {
+      "adapter": "cope",
+      "policy_id": "wg-p2-boundary-checklist",
+      "expanded_run": "cope-fit-final-p2",
+      "search_run": "cope-search-p2",
+      "shared_rows": 1024,
+      "changed_predictions": 6,
+      "corrected": 3,
+      "regressed": 3,
+      "repeated_exact_prompt_groups": 606,
+      "repeated_prompt_groups_with_different_predictions": 0
+    },
+    {
+      "adapter": "cope",
+      "policy_id": "wg-p3-cope-social-and-deception",
+      "expanded_run": "cope-fit-final-p3",
+      "search_run": "cope-search-p3",
+      "shared_rows": 1024,
+      "changed_predictions": 3,
+      "corrected": 1,
+      "regressed": 2,
+      "repeated_exact_prompt_groups": 606,
+      "repeated_prompt_groups_with_different_predictions": 1
+    },
+    {
+      "adapter": "policylm",
+      "policy_id": "wg-p0-taxonomy",
+      "expanded_run": "policylm-fit-final-p0",
+      "search_run": "policylm-search-p0",
+      "shared_rows": 1024,
+      "changed_predictions": 0,
+      "corrected": 0,
+      "regressed": 0,
+      "repeated_exact_prompt_groups": 606,
+      "repeated_prompt_groups_with_different_predictions": 0
+    },
+    {
+      "adapter": "policylm",
+      "policy_id": "wg-p2-boundary-checklist",
+      "expanded_run": "policylm-fit-final-p2",
+      "search_run": "policylm-search-p2",
+      "shared_rows": 1024,
+      "changed_predictions": 0,
+      "corrected": 0,
+      "regressed": 0,
+      "repeated_exact_prompt_groups": 606,
+      "repeated_prompt_groups_with_different_predictions": 0
+    },
+    {
+      "adapter": "policylm",
+      "policy_id": "wg-p4-policylm-compact",
+      "expanded_run": "policylm-fit-final-p4",
+      "search_run": "policylm-search-p4",
+      "shared_rows": 1024,
+      "changed_predictions": 0,
+      "corrected": 0,
+      "regressed": 0,
+      "repeated_exact_prompt_groups": 606,
+      "repeated_prompt_groups_with_different_predictions": 0
+    },
+    {
+      "adapter": "safeguard",
+      "policy_id": "wg-p0-taxonomy",
+      "expanded_run": "safeguard-fit-final-p0",
+      "search_run": "safeguard-search-p0",
+      "shared_rows": 1024,
+      "changed_predictions": 37,
+      "corrected": 11,
+      "regressed": 16,
+      "repeated_exact_prompt_groups": 606,
+      "repeated_prompt_groups_with_different_predictions": 19
+    },
+    {
+      "adapter": "safeguard",
+      "policy_id": "wg-p2-boundary-checklist",
+      "expanded_run": "safeguard-fit-final-p2",
+      "search_run": "safeguard-search-p2",
+      "shared_rows": 1024,
+      "changed_predictions": 36,
+      "corrected": 17,
+      "regressed": 15,
+      "repeated_exact_prompt_groups": 606,
+      "repeated_prompt_groups_with_different_predictions": 14
+    },
+    {
+      "adapter": "shieldstral",
+      "policy_id": "wg-p0-taxonomy",
+      "expanded_run": "shieldstral-fit-final-p0",
+      "search_run": "shieldstral-search-p0",
+      "shared_rows": 1024,
+      "changed_predictions": 2,
+      "corrected": 0,
+      "regressed": 2,
+      "repeated_exact_prompt_groups": 606,
+      "repeated_prompt_groups_with_different_predictions": 0
+    },
+    {
+      "adapter": "shieldstral",
+      "policy_id": "wg-p2-boundary-checklist",
+      "expanded_run": "shieldstral-fit-final-p2",
+      "search_run": "shieldstral-search-p2",
+      "shared_rows": 1024,
+      "changed_predictions": 0,
+      "corrected": 0,
+      "regressed": 0,
+      "repeated_exact_prompt_groups": 606,
+      "repeated_prompt_groups_with_different_predictions": 0
+    },
+    {
+      "adapter": "shieldstral",
+      "policy_id": "wg-p4-shieldstral-taxonomy-priority",
+      "expanded_run": "shieldstral-fit-final-p4",
+      "search_run": "shieldstral-search-p4",
+      "shared_rows": 1024,
+      "changed_predictions": 0,
+      "corrected": 0,
+      "regressed": 0,
+      "repeated_exact_prompt_groups": 606,
+      "repeated_prompt_groups_with_different_predictions": 0
+    },
+    {
+      "adapter": "wildguard",
+      "policy_id": "wildguard-official",
+      "expanded_run": "wildguard-fit-final-p0",
+      "search_run": "wildguard-search-p0",
+      "shared_rows": 1024,
+      "changed_predictions": 0,
+      "corrected": 0,
+      "regressed": 0,
+      "repeated_exact_prompt_groups": 606,
+      "repeated_prompt_groups_with_different_predictions": 0
+    }
+  ],
+  "caveat": "Exploratory consistency check, not a controlled repeatability experiment. Search and expanded fitting use different batch contexts. Temperature zero does not guarantee identical outputs."
+}

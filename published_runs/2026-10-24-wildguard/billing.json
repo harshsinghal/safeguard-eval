@@ -1,0 +1,20 @@
+{
+  "provider": "GPU.ai",
+  "instance_id": "gpu-2b927402",
+  "status": "terminated",
+  "cost_cents": 430,
+  "cumulative_cost_cents": 587,
+  "prior_cost_cents": 157,
+  "gpu_seconds": 7785,
+  "price_per_hour_usd": 1.99,
+  "server_auto_terminate_hours": 4,
+  "usage": [
+    {
+      "bucket_start": "2026-10-24T00:00:00Z",
+      "instance_id": "gpu-2b927402",
+      "gpu_seconds": 7785,
+      "cost_cents": 430
+    }
+  ],
+  "scope": "Only this WildGuard instance, plus separately documented $1.57 prior studies; no Runpod resources used"
+}

@@ -1,0 +1,160 @@
+{
+  "dataset": "allenai/wildguardmix",
+  "revision": "d29c47f41c8b51348b5c8e8c81c039b3132b66d1",
+  "config": "wildguardtrain",
+  "seed": 20261024,
+  "source_sha256": "02ecea8a724a9146a1e473a95a7cdf262adfe9c7d5408953ca86d2fcfbdc8953",
+  "source_rows": 86759,
+  "included_rows": 86759,
+  "excluded_null_labels": 0,
+  "grouping": {
+    "unique_normalized_prompts": 47804,
+    "groups": 47617,
+    "near_duplicate_pairs": 751,
+    "conflicting_label_groups": 16,
+    "grouping": "NFKC/casefold/whitespace exact; 64-permutation 5-word MinHash LSH candidates at 0.65, verified Jaccard >=0.85; connected components",
+    "limitation": "Approximate candidate retrieval may miss some near duplicates; no semantic paraphrase detector."
+  },
+  "splits": {
+    "fit": {
+      "n": 69366,
+      "labels": {
+        "ALLOW": 32431,
+        "BLOCK": 36935
+      },
+      "strata": {
+        "ALLOW|True|benign": 16311,
+        "BLOCK|True|others": 5680,
+        "ALLOW|False|benign": 16120,
+        "BLOCK|False|others": 2900,
+        "BLOCK|False|copyright_violations": 1205,
+        "BLOCK|False|cyberattack": 915,
+        "BLOCK|False|violence_and_physical_harm": 1693,
+        "BLOCK|False|toxic_language_hate_speech": 1569,
+        "BLOCK|False|causing_material_harm_by_disseminating_misinformation": 705,
+        "BLOCK|False|sensitive_information_organization_government": 1442,
+        "BLOCK|False|sexual_content": 1369,
+        "BLOCK|False|mental_health_over-reliance_crisis": 985,
+        "BLOCK|False|private_information_individual": 805,
+        "BLOCK|False|defamation_encouraging_unethical_or_unsafe_actions": 1323,
+        "BLOCK|False|social_stereotypes_and_unfair_discrimination": 2542,
+        "BLOCK|False|disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 2117,
+        "BLOCK|False|fraud_assisting_illegal_activities": 930,
+        "BLOCK|True|cyberattack": 360,
+        "BLOCK|True|social_stereotypes_and_unfair_discrimination": 2529,
+        "BLOCK|True|mental_health_over-reliance_crisis": 462,
+        "BLOCK|True|fraud_assisting_illegal_activities": 891,
+        "BLOCK|True|private_information_individual": 1221,
+        "BLOCK|True|sensitive_information_organization_government": 1026,
+        "BLOCK|True|disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 1149,
+        "BLOCK|True|toxic_language_hate_speech": 843,
+        "BLOCK|True|causing_material_harm_by_disseminating_misinformation": 480,
+        "BLOCK|True|violence_and_physical_harm": 624,
+        "BLOCK|True|copyright_violations": 210,
+        "BLOCK|True|sexual_content": 354,
+        "BLOCK|True|defamation_encouraging_unethical_or_unsafe_actions": 606
+      }
+    },
+    "validation": {
+      "n": 8700,
+      "labels": {
+        "ALLOW": 4054,
+        "BLOCK": 4646
+      },
+      "strata": {
+        "ALLOW|True|benign": 2039,
+        "BLOCK|True|others": 710,
+        "ALLOW|False|benign": 2015,
+        "BLOCK|False|others": 364,
+        "BLOCK|False|private_information_individual": 101,
+        "BLOCK|False|cyberattack": 117,
+        "BLOCK|False|toxic_language_hate_speech": 199,
+        "BLOCK|False|copyright_violations": 151,
+        "BLOCK|False|mental_health_over-reliance_crisis": 123,
+        "BLOCK|False|sexual_content": 171,
+        "BLOCK|False|defamation_encouraging_unethical_or_unsafe_actions": 168,
+        "BLOCK|False|sensitive_information_organization_government": 180,
+        "BLOCK|False|violence_and_physical_harm": 214,
+        "BLOCK|False|social_stereotypes_and_unfair_discrimination": 319,
+        "BLOCK|False|disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 265,
+        "BLOCK|False|causing_material_harm_by_disseminating_misinformation": 88,
+        "BLOCK|False|fraud_assisting_illegal_activities": 117,
+        "BLOCK|True|cyberattack": 45,
+        "BLOCK|True|disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 144,
+        "BLOCK|True|private_information_individual": 153,
+        "BLOCK|True|toxic_language_hate_speech": 108,
+        "BLOCK|True|defamation_encouraging_unethical_or_unsafe_actions": 78,
+        "BLOCK|True|social_stereotypes_and_unfair_discrimination": 318,
+        "BLOCK|True|causing_material_harm_by_disseminating_misinformation": 60,
+        "BLOCK|True|violence_and_physical_harm": 78,
+        "BLOCK|True|fraud_assisting_illegal_activities": 114,
+        "BLOCK|True|sensitive_information_organization_government": 129,
+        "BLOCK|True|sexual_content": 45,
+        "BLOCK|True|mental_health_over-reliance_crisis": 60,
+        "BLOCK|True|copyright_violations": 27
+      }
+    },
+    "audit": {
+      "n": 8693,
+      "labels": {
+        "ALLOW": 4058,
+        "BLOCK": 4635
+      },
+      "strata": {
+        "ALLOW|True|benign": 2039,
+        "BLOCK|True|others": 710,
+        "ALLOW|False|benign": 2019,
+        "BLOCK|False|others": 363,
+        "BLOCK|False|copyright_violations": 151,
+        "BLOCK|False|sexual_content": 172,
+        "BLOCK|False|violence_and_physical_harm": 214,
+        "BLOCK|False|mental_health_over-reliance_crisis": 123,
+        "BLOCK|False|cyberattack": 117,
+        "BLOCK|False|toxic_language_hate_speech": 196,
+        "BLOCK|False|disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 265,
+        "BLOCK|False|private_information_individual": 102,
+        "BLOCK|False|defamation_encouraging_unethical_or_unsafe_actions": 167,
+        "BLOCK|False|causing_material_harm_by_disseminating_misinformation": 89,
+        "BLOCK|False|sensitive_information_organization_government": 179,
+        "BLOCK|False|social_stereotypes_and_unfair_discrimination": 317,
+        "BLOCK|False|fraud_assisting_illegal_activities": 117,
+        "BLOCK|True|cyberattack": 45,
+        "BLOCK|True|violence_and_physical_harm": 78,
+        "BLOCK|True|social_stereotypes_and_unfair_discrimination": 318,
+        "BLOCK|True|disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 144,
+        "BLOCK|True|causing_material_harm_by_disseminating_misinformation": 60,
+        "BLOCK|True|fraud_assisting_illegal_activities": 111,
+        "BLOCK|True|sensitive_information_organization_government": 129,
+        "BLOCK|True|private_information_individual": 153,
+        "BLOCK|True|copyright_violations": 27,
+        "BLOCK|True|mental_health_over-reliance_crisis": 60,
+        "BLOCK|True|sexual_content": 45,
+        "BLOCK|True|defamation_encouraging_unethical_or_unsafe_actions": 78,
+        "BLOCK|True|toxic_language_hate_speech": 105
+      }
+    }
+  },
+  "samples": {
+    "pilot": {
+      "n": 256,
+      "split": "fit",
+      "ids_sha256": "49eade73b9a6bd5c82c7cdb6fe2cfa7f3e65f584e1103d565fbc8458110717f6"
+    },
+    "fit-search": {
+      "n": 1024,
+      "split": "fit",
+      "ids_sha256": "154135d5a4df7eec09d6b103bc8a89d4a9f8211484e1e38906f5bbdb84047b80"
+    },
+    "validation-search": {
+      "n": 512,
+      "split": "validation",
+      "ids_sha256": "3a09e1912a69c2f7e4c8469af900fa59e77e7b742ec71a31cbe5f060d0f2f211"
+    },
+    "audit-budget": {
+      "n": 512,
+      "split": "audit",
+      "ids_sha256": "de4d15353bb2c4221b3b229198ad6fddf07209159d97afeb4dda3ca8c715c20a"
+    }
+  },
+  "test_accessed": false
+}

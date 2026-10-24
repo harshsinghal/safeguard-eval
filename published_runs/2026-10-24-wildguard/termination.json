@@ -1,0 +1,8 @@
+{
+  "operation_id": "be59ebd5-2a1e-411a-9ef2-97efb7b8c63e",
+  "kind": "instance.delete",
+  "state": "pending",
+  "resource_id": "gpu-2b927402",
+  "created_at": "2026-10-24T22:27:43.857344Z",
+  "updated_at": "2026-10-24T22:27:43.857344Z"
+}

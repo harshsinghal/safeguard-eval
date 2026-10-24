@@ -1,0 +1,428 @@
+{
+  "verified_runs": 84,
+  "predictions": 158628,
+  "metrics_match": true,
+  "intervals_reproduced": true,
+  "runs": [
+    {
+      "run": "cope-audit-p0",
+      "n": 512,
+      "accuracy": 0.9375
+    },
+    {
+      "run": "cope-audit-p2",
+      "n": 512,
+      "accuracy": 0.93359375
+    },
+    {
+      "run": "cope-audit-p3",
+      "n": 512,
+      "accuracy": 0.93359375
+    },
+    {
+      "run": "cope-fit-final-p0",
+      "n": 8192,
+      "accuracy": 0.9320068359375
+    },
+    {
+      "run": "cope-fit-final-p2",
+      "n": 8192,
+      "accuracy": 0.935546875
+    },
+    {
+      "run": "cope-fit-final-p3",
+      "n": 8192,
+      "accuracy": 0.943359375
+    },
+    {
+      "run": "cope-pilot-p0",
+      "n": 256,
+      "accuracy": 0.9375
+    },
+    {
+      "run": "cope-search-p0",
+      "n": 1024,
+      "accuracy": 0.9326171875
+    },
+    {
+      "run": "cope-search-p1",
+      "n": 1024,
+      "accuracy": 0.9365234375
+    },
+    {
+      "run": "cope-search-p2",
+      "n": 1024,
+      "accuracy": 0.9384765625
+    },
+    {
+      "run": "cope-search-p3",
+      "n": 1024,
+      "accuracy": 0.9462890625
+    },
+    {
+      "run": "cope-search-p4",
+      "n": 1024,
+      "accuracy": 0.94140625
+    },
+    {
+      "run": "cope-test-p0",
+      "n": 1699,
+      "accuracy": 0.9046497939964685
+    },
+    {
+      "run": "cope-test-p2",
+      "n": 1699,
+      "accuracy": 0.9040612124779281
+    },
+    {
+      "run": "cope-test-p3",
+      "n": 1699,
+      "accuracy": 0.90759270158917
+    },
+    {
+      "run": "cope-validation-p0",
+      "n": 512,
+      "accuracy": 0.943359375
+    },
+    {
+      "run": "cope-validation-p1",
+      "n": 512,
+      "accuracy": 0.931640625
+    },
+    {
+      "run": "cope-validation-p2",
+      "n": 512,
+      "accuracy": 0.939453125
+    },
+    {
+      "run": "cope-validation-p3",
+      "n": 512,
+      "accuracy": 0.953125
+    },
+    {
+      "run": "cope-validation-p4",
+      "n": 512,
+      "accuracy": 0.94140625
+    },
+    {
+      "run": "policylm-audit-p0",
+      "n": 512,
+      "accuracy": 0.888671875
+    },
+    {
+      "run": "policylm-audit-p2",
+      "n": 512,
+      "accuracy": 0.89453125
+    },
+    {
+      "run": "policylm-audit-p4",
+      "n": 512,
+      "accuracy": 0.91015625
+    },
+    {
+      "run": "policylm-fit-final-p0",
+      "n": 8192,
+      "accuracy": 0.893798828125
+    },
+    {
+      "run": "policylm-fit-final-p2",
+      "n": 8192,
+      "accuracy": 0.913818359375
+    },
+    {
+      "run": "policylm-fit-final-p4",
+      "n": 8192,
+      "accuracy": 0.9154052734375
+    },
+    {
+      "run": "policylm-pilot-p0",
+      "n": 256,
+      "accuracy": 0.890625
+    },
+    {
+      "run": "policylm-search-p0",
+      "n": 1024,
+      "accuracy": 0.8837890625
+    },
+    {
+      "run": "policylm-search-p1",
+      "n": 1024,
+      "accuracy": 0.84375
+    },
+    {
+      "run": "policylm-search-p2",
+      "n": 1024,
+      "accuracy": 0.919921875
+    },
+    {
+      "run": "policylm-search-p3",
+      "n": 1024,
+      "accuracy": 0.8759765625
+    },
+    {
+      "run": "policylm-search-p4",
+      "n": 1024,
+      "accuracy": 0.9169921875
+    },
+    {
+      "run": "policylm-test-p0",
+      "n": 1699,
+      "accuracy": 0.8505002942907592
+    },
+    {
+      "run": "policylm-test-p2",
+      "n": 1699,
+      "accuracy": 0.8716892289582107
+    },
+    {
+      "run": "policylm-test-p4",
+      "n": 1699,
+      "accuracy": 0.8681577398469688
+    },
+    {
+      "run": "policylm-validation-p0",
+      "n": 512,
+      "accuracy": 0.90234375
+    },
+    {
+      "run": "policylm-validation-p1",
+      "n": 512,
+      "accuracy": 0.869140625
+    },
+    {
+      "run": "policylm-validation-p2",
+      "n": 512,
+      "accuracy": 0.900390625
+    },
+    {
+      "run": "policylm-validation-p3",
+      "n": 512,
+      "accuracy": 0.896484375
+    },
+    {
+      "run": "policylm-validation-p4",
+      "n": 512,
+      "accuracy": 0.91796875
+    },
+    {
+      "run": "safeguard-audit-p0",
+      "n": 512,
+      "accuracy": 0.9140625
+    },
+    {
+      "run": "safeguard-audit-p2",
+      "n": 512,
+      "accuracy": 0.90625
+    },
+    {
+      "run": "safeguard-fit-final-p0",
+      "n": 8192,
+      "accuracy": 0.90869140625
+    },
+    {
+      "run": "safeguard-fit-final-p2",
+      "n": 8192,
+      "accuracy": 0.9107666015625
+    },
+    {
+      "run": "safeguard-pilot-8192-p0",
+      "n": 256,
+      "accuracy": 0.92578125
+    },
+    {
+      "run": "safeguard-pilot-p0",
+      "n": 256,
+      "accuracy": 0.9140625
+    },
+    {
+      "run": "safeguard-search-p0",
+      "n": 1024,
+      "accuracy": 0.9111328125
+    },
+    {
+      "run": "safeguard-search-p1",
+      "n": 1024,
+      "accuracy": 0.9169921875
+    },
+    {
+      "run": "safeguard-search-p2",
+      "n": 1024,
+      "accuracy": 0.9140625
+    },
+    {
+      "run": "safeguard-search-p3",
+      "n": 1024,
+      "accuracy": 0.9150390625
+    },
+    {
+      "run": "safeguard-search-p4",
+      "n": 1024,
+      "accuracy": 0.9189453125
+    },
+    {
+      "run": "safeguard-test-p0",
+      "n": 1699,
+      "accuracy": 0.898175397292525
+    },
+    {
+      "run": "safeguard-test-p2",
+      "n": 1699,
+      "accuracy": 0.8964096527369041
+    },
+    {
+      "run": "safeguard-validation-p0",
+      "n": 512,
+      "accuracy": 0.919921875
+    },
+    {
+      "run": "safeguard-validation-p1",
+      "n": 512,
+      "accuracy": 0.92578125
+    },
+    {
+      "run": "safeguard-validation-p2",
+      "n": 512,
+      "accuracy": 0.92578125
+    },
+    {
+      "run": "safeguard-validation-p3",
+      "n": 512,
+      "accuracy": 0.923828125
+    },
+    {
+      "run": "safeguard-validation-p4",
+      "n": 512,
+      "accuracy": 0.91796875
+    },
+    {
+      "run": "shieldstral-audit-p0",
+      "n": 512,
+      "accuracy": 0.943359375
+    },
+    {
+      "run": "shieldstral-audit-p2",
+      "n": 512,
+      "accuracy": 0.9765625
+    },
+    {
+      "run": "shieldstral-audit-p4",
+      "n": 512,
+      "accuracy": 0.978515625
+    },
+    {
+      "run": "shieldstral-fit-final-p0",
+      "n": 8192,
+      "accuracy": 0.9599609375
+    },
+    {
+      "run": "shieldstral-fit-final-p2",
+      "n": 8192,
+      "accuracy": 0.98583984375
+    },
+    {
+      "run": "shieldstral-fit-final-p4",
+      "n": 8192,
+      "accuracy": 0.9857177734375
+    },
+    {
+      "run": "shieldstral-pilot-p0",
+      "n": 256,
+      "accuracy": 0.953125
+    },
+    {
+      "run": "shieldstral-search-p0",
+      "n": 1024,
+      "accuracy": 0.9560546875
+    },
+    {
+      "run": "shieldstral-search-p1",
+      "n": 1024,
+      "accuracy": 0.96484375
+    },
+    {
+      "run": "shieldstral-search-p2",
+      "n": 1024,
+      "accuracy": 0.984375
+    },
+    {
+      "run": "shieldstral-search-p3",
+      "n": 1024,
+      "accuracy": 0.982421875
+    },
+    {
+      "run": "shieldstral-search-p4",
+      "n": 1024,
+      "accuracy": 0.9853515625
+    },
+    {
+      "run": "shieldstral-test-p0",
+      "n": 1699,
+      "accuracy": 0.8793407886992348
+    },
+    {
+      "run": "shieldstral-test-p2",
+      "n": 1699,
+      "accuracy": 0.9081812831077104
+    },
+    {
+      "run": "shieldstral-test-p4",
+      "n": 1699,
+      "accuracy": 0.9081812831077104
+    },
+    {
+      "run": "shieldstral-validation-p0",
+      "n": 512,
+      "accuracy": 0.955078125
+    },
+    {
+      "run": "shieldstral-validation-p1",
+      "n": 512,
+      "accuracy": 0.96484375
+    },
+    {
+      "run": "shieldstral-validation-p2",
+      "n": 512,
+      "accuracy": 0.984375
+    },
+    {
+      "run": "shieldstral-validation-p3",
+      "n": 512,
+      "accuracy": 0.984375
+    },
+    {
+      "run": "shieldstral-validation-p4",
+      "n": 512,
+      "accuracy": 0.986328125
+    },
+    {
+      "run": "wildguard-audit-p0",
+      "n": 512,
+      "accuracy": 0.998046875
+    },
+    {
+      "run": "wildguard-fit-final-p0",
+      "n": 8192,
+      "accuracy": 0.9991455078125
+    },
+    {
+      "run": "wildguard-pilot-p0",
+      "n": 256,
+      "accuracy": 0.99609375
+    },
+    {
+      "run": "wildguard-search-p0",
+      "n": 1024,
+      "accuracy": 0.9970703125
+    },
+    {
+      "run": "wildguard-test-p0",
+      "n": 1699,
+      "accuracy": 0.9034726309593879
+    },
+    {
+      "run": "wildguard-validation-p0",
+      "n": 512,
+      "accuracy": 1.0
+    }
+  ]
+}

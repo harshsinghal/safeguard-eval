@@ -1,0 +1,39 @@
+{
+  "optimizer_fitting_rows": 1024,
+  "optimizer_validation_rows": 512,
+  "test_rows_matching_fitting": 0,
+  "test_rows_matching_validation": 0,
+  "rows": [
+    {
+      "id": "wgtest-000488",
+      "overlap": "near",
+      "train_partitions": [
+        "fit"
+      ],
+      "train_ids": [
+        "wgtrain-000750",
+        "wgtrain-000751",
+        "wgtrain-000927",
+        "wgtrain-001530",
+        "wgtrain-001531",
+        "wgtrain-001707"
+      ],
+      "optimizer_fitting_overlap": [],
+      "optimizer_validation_overlap": []
+    },
+    {
+      "id": "wgtest-000675",
+      "overlap": "exact",
+      "train_partitions": [
+        "fit"
+      ],
+      "train_ids": [
+        "wgtrain-003193",
+        "wgtrain-003194",
+        "wgtrain-003367"
+      ],
+      "optimizer_fitting_overlap": [],
+      "optimizer_validation_overlap": []
+    }
+  ]
+}

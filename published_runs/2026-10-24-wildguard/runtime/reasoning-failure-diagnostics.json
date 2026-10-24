@@ -1,0 +1,38 @@
+[
+  {
+    "id": "wgtrain-000451",
+    "words": 8149,
+    "unique_5gram_fraction": 0.014610190300798036,
+    "maximum_repeated_5gram": 4003
+  },
+  {
+    "id": "wgtrain-013930",
+    "words": 8084,
+    "unique_5gram_fraction": 0.04641089108910891,
+    "maximum_repeated_5gram": 3807
+  },
+  {
+    "id": "wgtrain-017522",
+    "words": 8092,
+    "unique_5gram_fraction": 0.03449554896142433,
+    "maximum_repeated_5gram": 3837
+  },
+  {
+    "id": "wgtrain-026888",
+    "words": 8140,
+    "unique_5gram_fraction": 0.03343166175024582,
+    "maximum_repeated_5gram": 3904
+  },
+  {
+    "id": "wgtrain-047575",
+    "words": 8145,
+    "unique_5gram_fraction": 0.025672521803218277,
+    "maximum_repeated_5gram": 3953
+  },
+  {
+    "id": "wgtrain-061120",
+    "words": 8143,
+    "unique_5gram_fraction": 0.027153212925420812,
+    "maximum_repeated_5gram": 3933
+  }
+]

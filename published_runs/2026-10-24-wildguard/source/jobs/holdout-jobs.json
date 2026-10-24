@@ -1,0 +1,192 @@
+[
+  {
+    "id": "wildguard-test-p0",
+    "adapter": "wildguard",
+    "stage": "test",
+    "data": "/root/data/test/test.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json"
+  },
+  {
+    "id": "wildguard-audit-p0",
+    "adapter": "wildguard",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json"
+  },
+  {
+    "id": "policylm-test-p0",
+    "adapter": "policylm",
+    "stage": "test",
+    "data": "/root/data/test/test.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "policylm-test-p2",
+    "adapter": "policylm",
+    "stage": "test",
+    "data": "/root/data/test/test.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "policylm-test-p4",
+    "adapter": "policylm",
+    "stage": "test",
+    "data": "/root/data/test/test.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p4-policylm.json"
+  },
+  {
+    "id": "policylm-audit-p0",
+    "adapter": "policylm",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "policylm-audit-p2",
+    "adapter": "policylm",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "policylm-audit-p4",
+    "adapter": "policylm",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p4-policylm.json"
+  },
+  {
+    "id": "shieldstral-test-p0",
+    "adapter": "shieldstral",
+    "stage": "test",
+    "data": "/root/data/test/test.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "shieldstral-test-p2",
+    "adapter": "shieldstral",
+    "stage": "test",
+    "data": "/root/data/test/test.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "shieldstral-test-p4",
+    "adapter": "shieldstral",
+    "stage": "test",
+    "data": "/root/data/test/test.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p4-shieldstral.json"
+  },
+  {
+    "id": "shieldstral-audit-p0",
+    "adapter": "shieldstral",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "shieldstral-audit-p2",
+    "adapter": "shieldstral",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "shieldstral-audit-p4",
+    "adapter": "shieldstral",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p4-shieldstral.json"
+  },
+  {
+    "id": "cope-test-p0",
+    "adapter": "cope",
+    "stage": "test",
+    "data": "/root/data/test/test.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "cope-test-p2",
+    "adapter": "cope",
+    "stage": "test",
+    "data": "/root/data/test/test.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "cope-test-p3",
+    "adapter": "cope",
+    "stage": "test",
+    "data": "/root/data/test/test.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p3-cope.json"
+  },
+  {
+    "id": "cope-audit-p0",
+    "adapter": "cope",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "cope-audit-p2",
+    "adapter": "cope",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "cope-audit-p3",
+    "adapter": "cope",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p3-cope.json"
+  },
+  {
+    "id": "safeguard-test-p0",
+    "adapter": "safeguard",
+    "stage": "test",
+    "data": "/root/data/test/test.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "safeguard-test-p2",
+    "adapter": "safeguard",
+    "stage": "test",
+    "data": "/root/data/test/test.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "safeguard-audit-p0",
+    "adapter": "safeguard",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "safeguard-audit-p2",
+    "adapter": "safeguard",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  }
+]

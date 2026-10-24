@@ -1,0 +1,21 @@
+{
+  "dataset": {
+    "repo": "allenai/wildguardmix",
+    "revision": "d29c47f41c8b51348b5c8e8c81c039b3132b66d1"
+  },
+  "freeze_sha256": "10fd5227e1d869da3b8bfd9d365863443e130ae7f5c0c2e50368e4e6333fab08",
+  "source_sha256": "6ccc2909c1ae6d41424fac69f1fc32535b1de39cb8f80407d81e8bc64a0bebca",
+  "data_sha256": "a5fe285c83b24f31bbbc7f75d6deaaab6091224418d11efa39de2ddd5d1fe395",
+  "source_rows": 1725,
+  "included_rows": 1699,
+  "excluded_null_labels": 26,
+  "grouping": {
+    "unique_normalized_prompts": 1699,
+    "groups": 1699,
+    "near_duplicate_pairs": 0,
+    "conflicting_label_groups": 0,
+    "grouping": "NFKC/casefold/whitespace exact; 64-permutation 5-word MinHash LSH candidates at 0.65, verified Jaccard >=0.85; connected components",
+    "limitation": "Approximate candidate retrieval may miss some near duplicates; no semantic paraphrase detector."
+  },
+  "includes_response": false
+}

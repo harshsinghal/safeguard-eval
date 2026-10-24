@@ -1,0 +1,11 @@
+{
+  "rows": 86759,
+  "fields": [
+    "group",
+    "id",
+    "prompt_sha256",
+    "source_index",
+    "split"
+  ],
+  "note": "Full-population assignments omit source text, source labels, category and adversarial metadata; evaluated-row gold labels remain in prediction records for metric reproduction."
+}

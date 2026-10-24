@@ -135,3 +135,75 @@ All 20 policy-model search configurations and the WildGuard baseline completed m
 The primary comparison is Shieldstral p4 versus official WildGuard, selected without test access. There are 12 unique final configurations: one WildGuard, three each for PolicyLM/Shieldstral/CoPE, and two for Safeguard (shared and individual roles coincide). The selection, nine validation-only threshold controls, full candidate scores and immutable source/model/policy/data freeze are saved under published_runs/2026-10-24-wildguard. Freeze creation time is recorded in freeze.json; it will be committed and pushed before test download. All policy editing is closed.
 
 The primary threshold remains 0.5. Secondary selected thresholds are PolicyLM p0/p2/p4: 0.54/0.32/0.44; Shieldstral p0/p2/p4: 0.14/0.46/0.50; CoPE p0/p2/p3: 0.50/0.06/0.08. These sometimes large shifts make the calibration control informative, but they may overfit 512 validation rows. No threshold is selected on test results.
+
+## 2026-10-24 21:14 UTC — official test opened after freeze commit
+
+Freeze commit e190b01 was pushed to GitHub before the authenticated test download. The pinned source contains 1,725 rows; 1,699 have prompt-harmfulness labels and 26 are excluded solely for null labels, matching the official task filter. All 1,699 are unique under the registered exact/near grouping procedure. The full labeled population is used for every frozen configuration. Source/data hashes and task population counts are recorded in the evidence package. Test and internal-audit inference have started; policy and threshold files remain unchanged. Post-freeze train/test lexical-overlap analysis runs separately and cannot filter the main evaluation.
+
+## 2026-10-24 — chronology clarification and overlap audit
+
+Clarify the protocol's public-registration wording: the local plan preceded inference, but its first public commit (3040156, 20:18 UTC) already included training-data preparation findings. It is therefore a pre-inference protocol with documented pilot amendments, not an externally timestamped registration before all dataset inspection. The stronger test barrier is independently visible: e190b01 freezes all policies and thresholds before official-test download.
+
+Post-freeze lexical audit finds one exact and one near test/training match, involving two of 1,699 test rows. Neither matched training group appears in the 1,024 optimizer-fitting or 512 optimizer-validation samples. This does not establish absence of semantic overlap or absence of model pretraining exposure. The main test keeps both rows; a 1,697-row sensitivity score is reported separately.
+
+## 2026-10-24 — primary official-test comparison
+
+On all 1,699 labeled test rows, the preselected Shieldstral p4 scores 1,543/1,699 (90.818%) versus WildGuard's 1,535/1,699 (90.347%). The paired difference is +0.471 percentage points, bootstrap 95% interval [-0.235, +1.236]. There are 25 rows correct only for Shieldstral and 17 correct only for WildGuard. The point estimate is higher, but the interval includes zero; this study does not establish superiority over WildGuard.
+
+Within Shieldstral, p0 scores 1,494/1,699 (87.934%). Tuning adds 49 net correct predictions (+2.884 points, paired interval [+2.001, +3.826]), with 57 corrected cases and eight regressions. Harmful recall rises from 79.841% to 86.870%; benign false-block rate rises slightly from 5.608% to 6.032%. Relative to WildGuard, tuned Shieldstral catches 14 additional harmful rows but incorrectly blocks six additional benign rows. Accuracy alone hides this operational trade-off.
+
+PolicyLM p4, chosen on validation, scores 86.816%, versus p0 85.050%. Its shared p2 scores 87.169% on test, but we do not change the winner after test access. This difference illustrates selection uncertainty. Remaining test/audit runs and expanded fitting estimates are still in progress; no policies or thresholds are being changed.
+
+## 2026-10-24 — complete official-test coverage and negative Safeguard result
+
+All 12 unique frozen configurations completed all 1,699 labeled official-test rows (20,388 test predictions). Safeguard p0 scores 89.818% with 11 failures; selected p2 scores 89.641% with nine failures. Fewer operational failures did not produce a higher overall score. CoPE p3 scores 90.759%, versus p0 90.465%; its calibrated p3 secondary control scores 90.936%. These secondary results do not replace the preselected primary.
+
+Shieldstral p0 at the validation-selected threshold 0.14 reaches 90.112%, versus 87.934% at 0.5. Policy tuning at the fixed threshold reaches 90.818%. Thus calibration alone accounts for much of the observed initial-to-tuned gain, and the report includes the remaining paired difference against calibrated p0. PolicyLM's validation-selected thresholds mostly reduce test accuracy, illustrating calibration overfit or distribution shift. No test-based threshold replacements are made.
+
+Analysis now adds annotator-agreement slices and a descriptive failure-contribution breakdown. These are post-freeze exploratory analyses, not new primary outcomes. The official test is now observed: further policy development would need a fresh confirmatory holdout, or results must be labeled exploratory. The current study's policy selection remains closed.
+
+## 2026-10-24 — secondary controls and error slices
+
+The selected-policy minus calibrated-initial-policy differences are: PolicyLM +1.707 points (paired 95% interval [+0.412, +3.061]); Shieldstral +0.706 points ([-0.059, +1.530]); CoPE +0.294 points ([-0.530, +1.118]). Thus Shieldstral's residual advantage beyond simple calibration is uncertain in this sample. These controls were fixed before test; intervals are exploratory and unadjusted for multiple comparisons.
+
+Shieldstral's gain over p0 includes nine net additional correct cyberattack cases and nine fraud/illegal-activity cases, with smaller gains across other harmful categories. It loses four net benign cases and one social-stereotype case. Because several clauses changed together, these counts cannot identify which clause caused a gain. The full category table is preserved.
+
+The selected Shieldstral policy scores 93.80% on 903 vanilla examples and 87.44% on 796 adversarial examples; WildGuard scores 92.69% and 87.69%. The small overall advantage therefore does not imply an adversarial-subset advantage. On source labels with two-of-three annotator agreement, Shieldstral scores 81.39% (591 rows); on three-of-three agreement, 95.85% (1,108 rows). These slices describe agreement with the chosen source label, not independent adjudication of model correctness.
+
+Safeguard's selected policy corrects six initial output failures but turns six formerly correct cases into new output failures. The reduction from 11 total failures to nine is not equivalent to a net six-case accuracy gain. A separate deployment/repeatability study is needed to isolate runtime effects.
+
+## 2026-10-24 — expanded fitting pass and collection repair
+
+All 24 held-out runs (12 official test and 12 internal audit) completed before the 12 expanded-fitting jobs began. WildGuard scores 99.915% on 8,192 fitting rows, with one parsing failure; that near-perfect score is on its original weight-training distribution, not new test evidence.
+
+A live artifact sync reported that an in-progress prediction file changed while tar was reading it. The sync aborted rather than using a potentially inconsistent snapshot. Collection now archives only runs whose completed summary parses successfully; no inference was repeated or changed. The final private archive will be collected only after the entire phase completes.
+
+Added a post-freeze descriptive consistency check between search and expanded fitting predictions for their overlapping source IDs. It will verify identical requests and report changed decisions and failure transitions. Different batch contexts mean this is a diagnostic, not a controlled repeatability experiment.
+
+## 2026-10-24 — consistency checks on the completed non-reasoning fitting runs
+
+For the 1,024 repeated search examples, all three PolicyLM policies, WildGuard, and Shieldstral p2/p4 reproduce identical decisions. Shieldstral p0 changes two decisions; CoPE p0/p2/p3 change two/six/three decisions. The request hashes are identical, and model/policy/source identities match. One repeated exact-prompt group within CoPE p3's expanded run also has differing decisions. These observations show inference variation under changed batching; they do not isolate its numerical cause. The bootstrap intervals resample examples and do not include this runtime variation. Safeguard's expanded runs are still in progress.
+
+Provider dollar figures cover GPU rental only, including installation, downloads and failed setup time. They exclude local CPU/storage and assistant or human effort. Policy candidates were authored by the Codex assistant during this session; the assistant model build/token usage was not independently pinned. Exact policy texts and rationales are retained, so the evaluations can be reproduced even though identical search regeneration is not guaranteed.
+
+## 2026-10-24 — Safeguard expanded initial-policy reliability
+
+Safeguard p0 completes 8,192 fitting rows at 90.869% accuracy with 116 errors. Among the 1,024 requests also evaluated during search, 37 decisions change despite identical request hashes: 11 become correct, 16 become incorrect, and other changes remain incorrect. Nineteen of 606 repeated exact-prompt groups within the expanded run have differing predictions. This is a material deployment-repeatability limitation; small Safeguard policy differences must not be interpreted as stable intrinsic model differences. The selected-policy expanded run is still in progress. No unplanned decoding changes or favorable-case retries are introduced.
+
+## 2026-10-24 22:28 UTC — all inference complete, archive validated, GPU terminated
+
+All 84 planned runs completed: six pilots, 21 fitting-search runs, 21 validation runs, 12 internal-audit runs, 12 official-test runs, and 12 expanded-fitting runs. There are 158,628 row-level predictions, including 20,388 official-test predictions across 12 unique frozen configurations. All final populations, policies, revisions, decoding settings and inference-source hashes pass verification. There are no omitted final configurations.
+
+Safeguard's selected p2 reaches 91.077% on 8,192 fitting rows, with 54 failures, versus initial p0 90.869% with 116 failures. On the 1,024 repeated inputs p2 changes 36 decisions (17 corrected, 15 regressed); 14 repeated exact-prompt groups have differing decisions within the expanded run. These reinforce the deployment-repeatability limitation rather than establish a reliable improvement over WildGuard.
+
+The private raw archive contains 512 files, is 68,701,621 bytes, and passed full member hashing and archive validation (SHA256 0ffa9883d776fcc8d9a4a093973179b08c2f15229ae3211961c26ff15c4308ef). Raw inputs/responses and full logs remain private. GPU.ai instance gpu-2b927402 is confirmed terminated; the provider and local temporary SSH keys were removed. Provider-reported runtime is 7,785 GPU-seconds and cost is $4.30. Including the earlier $1.57 experiments, cumulative GPU spend is $5.87. No Runpod resources were used. The staged Hugging Face credential had already been removed after model downloads.
+
+Final public export, score reproduction and credential/link checks follow before the results commit. GPU billing has stopped.
+
+## 2026-10-24 — final public reproduction and release checks
+
+The public package contains all 84 completed runs and 158,628 prompt-free prediction records. Using only the archived source snapshot and public records, the reproduction command verified every prediction archive hash, every summary metric, all paired bootstrap intervals, and all frozen threshold controls. The complete recomputed analysis matches the published analysis exactly. No GPU or dataset access was needed for this check.
+
+Failure metadata confirms that all 20 Safeguard test output failures across initial and selected policies ended at the 8,192-token cap. Across earlier stages one Safeguard search failure instead stopped without a valid parse; the remaining recorded failures exhausted their configured cap. WildGuard has one length-cap failure in each of the search and expanded fitting runs and none on official test. These failures remain incorrect; their cause is not established.
+
+The public-export allowlist removes generated reasons and excludes source prompts and raw traces. Publication checks found no used API/Hugging Face credentials or private-key markers and verified relative Markdown links. The frozen inference files, metric implementation, policies, registry, selection, calibration and freeze remain unchanged from the pre-test freeze commit. Final artifact checksums accompany the release. The research archive preserves all negative candidates and operational failures, and CLAIMS.md separates supported conclusions from claims requiring new studies.

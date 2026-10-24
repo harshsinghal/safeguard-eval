@@ -1,0 +1,191 @@
+[
+  {
+    "id": "policylm-search-p0",
+    "adapter": "policylm",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "policylm-validation-p0",
+    "adapter": "policylm",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "policylm-search-p1",
+    "adapter": "policylm",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "policylm-validation-p1",
+    "adapter": "policylm",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "policylm-search-p2",
+    "adapter": "policylm",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "policylm-validation-p2",
+    "adapter": "policylm",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "wildguard-search-p0",
+    "adapter": "wildguard",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "wildguard-validation-p0",
+    "adapter": "wildguard",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "shieldstral-search-p0",
+    "adapter": "shieldstral",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "shieldstral-validation-p0",
+    "adapter": "shieldstral",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "shieldstral-search-p1",
+    "adapter": "shieldstral",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "shieldstral-validation-p1",
+    "adapter": "shieldstral",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "shieldstral-search-p2",
+    "adapter": "shieldstral",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "shieldstral-validation-p2",
+    "adapter": "shieldstral",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "cope-search-p0",
+    "adapter": "cope",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "cope-validation-p0",
+    "adapter": "cope",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "cope-search-p1",
+    "adapter": "cope",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "cope-validation-p1",
+    "adapter": "cope",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "cope-search-p2",
+    "adapter": "cope",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "cope-validation-p2",
+    "adapter": "cope",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "safeguard-pilot-8192-p0",
+    "adapter": "safeguard",
+    "stage": "pilot",
+    "data": "/root/data/pilot.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "safeguard-search-p0",
+    "adapter": "safeguard",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "safeguard-validation-p0",
+    "adapter": "safeguard",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "safeguard-search-p1",
+    "adapter": "safeguard",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "safeguard-validation-p1",
+    "adapter": "safeguard",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "safeguard-search-p2",
+    "adapter": "safeguard",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "safeguard-validation-p2",
+    "adapter": "safeguard",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p2.json"
+  }
+]

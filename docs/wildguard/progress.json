@@ -1,7 +1,7 @@
 {
   "study": "wildguard-policy-v1",
   "protocol_version": 1,
-  "status": "frozen_before_test",
+  "status": "complete",
   "prior_cost_usd": 1.57,
   "total_budget_usd": 10.0,
   "new_compute_budget_usd": 8.42,
@@ -13,9 +13,9 @@
     "pilot": "complete",
     "tuning": "complete",
     "freeze": "complete",
-    "test": "pending",
-    "report": "pending",
-    "cleanup": "pending"
+    "test": "complete",
+    "report": "complete",
+    "cleanup": "complete"
   },
   "scope": {
     "fit_search_rows": 1024,
@@ -27,7 +27,19 @@
     "safeguard_max_tokens": 8192,
     "final_fit_rows": 8192,
     "internal_audit_rows": 512,
-    "official_test": "all rows with non-null prompt harmfulness label"
+    "official_test": "all rows with non-null prompt harmfulness label",
+    "official_test_rows": 1699,
+    "unique_final_configurations": 12
   },
-  "latest_observation": "Twelve unique configurations frozen; primary Shieldstral p4; official test still unopened."
+  "latest_observation": "All 84 runs complete; published prediction records reproduce all metrics and paired intervals. Shieldstral improves over its initial policy, but superiority over WildGuard is not established. GPU terminated; final cumulative cost $5.87.",
+  "actual_cost_usd": 4.3,
+  "cumulative_cost_usd": 5.87,
+  "completed_runs": 84,
+  "predictions": 158628,
+  "verification": {
+    "all_metrics_reproduced": true,
+    "paired_intervals_reproduced": true,
+    "known_credentials_absent": true,
+    "public_prompts_and_raw_traces_absent": true
+  }
 }

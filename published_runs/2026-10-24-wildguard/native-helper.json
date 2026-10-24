@@ -1,0 +1,7 @@
+{
+  "repository": "musubilabs/policylm-1.7b",
+  "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+  "path": "inference/policylm_infer.py",
+  "sha256": "f984ecddd9068fc83545fc6a361ea8c2d4cc41123699135d24f9371511a99677",
+  "url": "https://huggingface.co/musubilabs/policylm-1.7b/resolve/b3b2cd408a08a68ab6a30c1fc1e440204e44d57e/inference/policylm_infer.py"
+}

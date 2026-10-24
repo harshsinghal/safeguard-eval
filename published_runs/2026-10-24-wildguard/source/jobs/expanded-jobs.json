@@ -1,0 +1,97 @@
+[
+  {
+    "id": "wildguard-fit-final-p0",
+    "adapter": "wildguard",
+    "stage": "fit-final",
+    "data": "/root/data/fit-expanded.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json"
+  },
+  {
+    "id": "policylm-fit-final-p0",
+    "adapter": "policylm",
+    "stage": "fit-final",
+    "data": "/root/data/fit-expanded.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "policylm-fit-final-p2",
+    "adapter": "policylm",
+    "stage": "fit-final",
+    "data": "/root/data/fit-expanded.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "policylm-fit-final-p4",
+    "adapter": "policylm",
+    "stage": "fit-final",
+    "data": "/root/data/fit-expanded.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p4-policylm.json"
+  },
+  {
+    "id": "shieldstral-fit-final-p0",
+    "adapter": "shieldstral",
+    "stage": "fit-final",
+    "data": "/root/data/fit-expanded.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "shieldstral-fit-final-p2",
+    "adapter": "shieldstral",
+    "stage": "fit-final",
+    "data": "/root/data/fit-expanded.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "shieldstral-fit-final-p4",
+    "adapter": "shieldstral",
+    "stage": "fit-final",
+    "data": "/root/data/fit-expanded.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p4-shieldstral.json"
+  },
+  {
+    "id": "cope-fit-final-p0",
+    "adapter": "cope",
+    "stage": "fit-final",
+    "data": "/root/data/fit-expanded.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "cope-fit-final-p2",
+    "adapter": "cope",
+    "stage": "fit-final",
+    "data": "/root/data/fit-expanded.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "cope-fit-final-p3",
+    "adapter": "cope",
+    "stage": "fit-final",
+    "data": "/root/data/fit-expanded.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p3-cope.json"
+  },
+  {
+    "id": "safeguard-fit-final-p0",
+    "adapter": "safeguard",
+    "stage": "fit-final",
+    "data": "/root/data/fit-expanded.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "safeguard-fit-final-p2",
+    "adapter": "safeguard",
+    "stage": "fit-final",
+    "data": "/root/data/fit-expanded.jsonl",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-24-wildguard/freeze.json",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  }
+]

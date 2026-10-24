@@ -1,6 +1,6 @@
 # WildGuard policy optimization study
 
-Protocol v1, registered 2026-10-24 before dataset inspection or inference. Status: implementation and access checks. This is a reproducible experiment, not a promise of a favorable result.
+Protocol v1, recorded 2026-10-24. Public commit `3040156` at 20:18 UTC followed data preparation and preceded inference. Final policy/settings freeze `e190b01` was pushed before official-test download. This is a reproducible experiment, not a promise of a favorable result; amendments and current progress are recorded below and in the notebook.
 
 ## Question and scope
 
@@ -59,9 +59,9 @@ Future outputs: tutorial on policy design; technical article on failure modes an
 - [x] Run training-only pilot on all five models; record cost/throughput and feasible scope.
 - [x] Evaluate initial and candidate policies; record training errors and edits.
 - [x] Select shared and per-model policies using validation; freeze settings.
-- [ ] Run frozen internal audit and official WildGuardTest comparisons.
-- [ ] Review errors, intervals, overlap and calibration controls.
-- [ ] Collect artifacts, terminate compute, reconcile billing and publish evidence.
+- [x] Run frozen internal audit and official WildGuardTest comparisons.
+- [x] Review errors, intervals, overlap and calibration controls.
+- [x] Collect artifacts, terminate compute, reconcile billing and publish evidence.
 
 ## Primary sources
 

@@ -48,3 +48,14 @@ Document provider choice, checkpoint/runtime compatibility, batching, model-spec
 | What did operational reliability change? | Failure counts and official-compatible F1, with full failures retained | Runtime-specific observations; unresolved Safeguard degeneration needs a separate ablation |
 
 Before a research-paper submission, add an independent held-out dataset and repeated policy-search seeds. A general claim about policy tuning versus fine-tuning also requires matched base models and a newly run fine-tuning baseline with a stated data/compute budget. Those are follow-up studies, not missing rows to conceal in the current report.
+
+## Findings ready for a first article draft
+
+- Policy wording is useful but not uniformly beneficial: selected Shieldstral improves by 2.88 test-accuracy points and PolicyLM by 1.77; CoPE's small gain and Safeguard's small decline have intervals spanning zero.
+- The primary Shieldstral/WildGuard comparison is +0.47 points with an interval spanning zero. A headline claiming demonstrated superiority would overstate the result.
+- Calibration is a necessary comparator: Shieldstral's initial policy rises from 87.93% to 90.11% with a validation-selected threshold, versus 90.82% for its tuned policy. The remaining difference is uncertain.
+- The validation winner need not be the test winner: PolicyLM selected its compact policy, but its shared checklist scored higher on test. Keep the original selection.
+- Benchmark labels matter: two-of-three versus unanimous annotation slices differ substantially, and training uses a different labeling process. Describe agreement with labels, not universal moderation correctness.
+- Operational reliability is part of the measurement: Safeguard's repetitive generation failures stay in the denominator, and fewer failures do not necessarily mean more correct predictions.
+
+The detailed scores, paired counts and uncertainty belong to the frozen evidence report, not rounded claims copied between drafts. Link each article figure to its CSV, SVG, analysis JSON and exact policy files. Do not use these results to claim downstream prompt-injection protection or performance on the earlier image-prompt task.

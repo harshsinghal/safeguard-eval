@@ -1,6 +1,6 @@
 # WildGuard policy optimization
 
-This study tests whether optimizing a written policy improves frozen policy classifiers on WildGuard prompt harmfulness. It compares four custom-policy models with the released WildGuard checkpoint. Results are pending; improvement over WildGuard is a hypothesis.
+This completed study tests whether optimizing a written policy improves frozen policy classifiers on WildGuard prompt harmfulness. It compares four custom-policy models with the released WildGuard checkpoint. The [results and reproducible evidence](../../published_runs/2026-10-24-wildguard/README.md) show within-model improvements for Shieldstral and PolicyLM, without establishing superiority over WildGuard.
 
 The versioned [experiment plan](../../docs/wildguard/PLAN.md), [lab notebook](../../docs/wildguard/NOTES.md), [evidence ledger](../../docs/wildguard/RESULTS.md), and [progress file](../../docs/wildguard/progress.json) form the research record.
 
@@ -51,7 +51,7 @@ python -m evals.wildguard.prepare_test --freeze /private/freeze.json --out /priv
 
 Set `HF_TOKEN` securely for the final command. Audit/test runs require `--freeze`; policy, model, source, settings and dataset provenance must match. Threshold calibration is a separate validation-only control, never part of the primary policy-only comparison.
 
-The paper-ready evidence package will distinguish full datasets from budget samples, source-label ambiguity from model errors, and within-model tuning gains from cross-model comparisons. No article should claim a general advantage for policy tuning from a single public benchmark.
+The evidence package distinguishes full datasets from budget samples, source-label ambiguity from model errors, and within-model tuning gains from cross-model comparisons. No article should claim a general advantage for policy tuning from a single public benchmark.
 
 Create the expanded fitting sample with `sample(fit_rows, 8192)` and `write_jsonl` from `evals.wildguard.data`; use the already assigned fitting partition. The registered run uses the same deterministic seed and stratification as the smaller samples. Save its SHA256 in the freeze.
 
@@ -68,3 +68,5 @@ python -m evals.wildguard.export --runs /private/runs --out /public/evidence
 ```
 
 Policy search is agent-authored and directed by fitting-error inspection; it is not an exhaustive or globally optimal search. Aggregate validation scores were visible during the search, but validation prompt/error inspection was prohibited. The final official test was kept unopened until selection and threshold freeze. Independent repetition of the search is future work.
+
+The [reproduction instructions](../../published_runs/2026-10-24-wildguard/REPRODUCING.md) explain how to recompute all published scores and paired intervals without a GPU or API key, using either the current tools or the archived source snapshot.

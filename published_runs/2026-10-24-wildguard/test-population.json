@@ -1,0 +1,31 @@
+{
+  "expected": {
+    "ALLOW": 945,
+    "BLOCK": 754
+  },
+  "adversarial": {
+    "False": 903,
+    "True": 796
+  },
+  "subcategory": {
+    "benign": 945,
+    "private_information_individual": 81,
+    "others": 98,
+    "cyberattack": 48,
+    "sexual_content": 47,
+    "social_stereotypes_and_unfair_discrimination": 76,
+    "toxic_language_hate_speech": 41,
+    "violence_and_physical_harm": 40,
+    "defamation_encouraging_unethical_or_unsafe_actions": 46,
+    "fraud_assisting_illegal_activities": 60,
+    "mental_health_over-reliance_crisis": 47,
+    "causing_material_harm_by_disseminating_misinformation": 45,
+    "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 44,
+    "copyright_violations": 31,
+    "sensitive_information_organization_government": 50
+  },
+  "agreement": {
+    "2.0": 591,
+    "3.0": 1108
+  }
+}

@@ -1,10 +1,26 @@
 # Policy Model Evaluation
 
-**WildGuard study in progress:** We are testing whether tuning written policies improves frozen policy models against the released WildGuard classifier. See the [experiment plan](docs/wildguard/PLAN.md), [lab notes](docs/wildguard/NOTES.md), and [results ledger](docs/wildguard/RESULTS.md). No WildGuard test results are claimed yet.
+Compare how policy models apply written rules to text. The repository contains a controlled WildGuard policy-tuning study, earlier image-prompt and prompt-injection demonstrations, and the original GPT-OSS Safeguard 20B interactive demo powered by Groq.
 
-Compare how policy models apply written rules to text: image-generation prompts, prompt-injection attempts, and cases that need human review. This repository includes reproducible multi-model evaluations, a public leaderboard, and the original GPT-OSS Safeguard 20B interactive demo powered by Groq.
+## WildGuard: tuning policies with frozen model weights
 
-## Policy Model Arena: prompt-injection leaderboard
+We evaluated four custom-policy models against the released WildGuard model on **all 1,699 labeled WildGuardTest prompt-harmfulness examples**. Eleven policy texts were explored on training/validation samples, and policies, thresholds and the primary comparison were frozen before test download. No model weights were updated in this experiment.
+
+| Model | Initial policy accuracy | Validation-selected policy accuracy |
+|---|---:|---:|
+| Shieldstral-1.0-3B — preselected primary | 87.93% | 90.82% |
+| CoPE-B-A4B | 90.46% | 90.76% |
+| GPT-OSS Safeguard-20B | 89.82% | 89.64% |
+| PolicyLM-1.7B | 85.05% | 86.82% |
+| WildGuard official baseline | 90.35% | — |
+
+**Policy tuning helped, but superiority over WildGuard is not established.** Shieldstral gained 2.88 percentage points over its initial policy. Its 0.47-point advantage over WildGuard has a paired 95% interval of **−0.24 to +1.24 points**. Calibrating the initial policy alone reaches 90.11%, explaining much of the gain. Failures count as wrong; unsuccessful candidates and negative results are retained.
+
+All five models ran on GPU.ai. The study completed 84 runs for **$4.30**, bringing cumulative experiment spend to **$5.87**. The GPU is terminated. Public prediction records and archived code reproduce the reported scores without paid inference; gated prompts and raw model traces remain private.
+
+Read the [full results and reproducible evidence](published_runs/2026-10-24-wildguard/README.md), [result figure](published_runs/2026-10-24-wildguard/figures/policy-tuning.png), [experiment plan](docs/wildguard/PLAN.md), [methods](docs/wildguard/METHODS.md), [lab notebook](docs/wildguard/NOTES.md), and [claim-to-evidence map](docs/wildguard/CLAIMS.md). The [writing map](docs/wildguard/WRITING.md) organizes findings for future articles and a research report. The study is a bounded, one-benchmark experiment; original training exposure is not fully known.
+
+## Earlier demonstration: prompt-injection arena
 
 The repository now includes a second policy task: detecting instruction-boundary attacks while allowing legitimate task changes and discussion of attacks. The [interactive leaderboard](https://harshsinghal.github.io/safeguard-eval/) compares the four models on **116 held-out Deepset examples** and a separate **80-example synthetic challenge test** with ALLOW/BLOCK/REVIEW labels.
 

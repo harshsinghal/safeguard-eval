@@ -1,0 +1,8 @@
+{
+  "slow_class": "LlamaTokenizer",
+  "fast_class": "LlamaTokenizerFast",
+  "vocabulary_identical": true,
+  "bos_token_id": 1,
+  "input_tokenization": "original slow tokenizer",
+  "output_decoding": "converted fast tokenizer, same vocabulary"
+}

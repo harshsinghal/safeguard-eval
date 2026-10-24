@@ -1,0 +1,30 @@
+[
+  {
+    "id": "wildguard-pilot-p0",
+    "adapter": "wildguard",
+    "stage": "pilot",
+    "data": "/root/data/pilot.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "shieldstral-pilot-p0",
+    "adapter": "shieldstral",
+    "stage": "pilot",
+    "data": "/root/data/pilot.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "cope-pilot-p0",
+    "adapter": "cope",
+    "stage": "pilot",
+    "data": "/root/data/pilot.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "safeguard-pilot-p0",
+    "adapter": "safeguard",
+    "stage": "pilot",
+    "data": "/root/data/pilot.jsonl",
+    "policy": "evals/wildguard/policies/p0.json"
+  }
+]

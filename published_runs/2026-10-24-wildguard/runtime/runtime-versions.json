@@ -1,0 +1,32 @@
+{
+  "policyenv": {
+    "python": "3.10.12",
+    "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.35",
+    "packages": {
+      "torch": "2.11.0+cu128",
+      "transformers": "4.57.6",
+      "huggingface-hub": "0.36.2",
+      "tokenizers": "0.22.2",
+      "sentencepiece": "0.2.2",
+      "protobuf": "7.36.2"
+    },
+    "torch_cuda_build": "12.8"
+  },
+  "vllmenv": {
+    "python": "3.10.12",
+    "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.35",
+    "packages": {
+      "torch": "2.13.0",
+      "transformers": "5.17.0",
+      "vllm": "0.31.0",
+      "huggingface-hub": "1.33.0",
+      "tokenizers": "0.23.3",
+      "sentencepiece": "0.2.2",
+      "protobuf": "7.36.2"
+    },
+    "torch_cuda_build": "13.0"
+  },
+  "native_policylm_actual_workers": 1,
+  "http_concurrency": 32,
+  "credential_staging_file_removed": true
+}

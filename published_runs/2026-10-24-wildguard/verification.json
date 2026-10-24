@@ -1,0 +1,25 @@
+{
+  "complete": true,
+  "freeze_sha256": "10fd5227e1d869da3b8bfd9d365863443e130ae7f5c0c2e50368e4e6333fab08",
+  "runs_by_stage": {
+    "audit": 12,
+    "fit-final": 12,
+    "pilot": 6,
+    "search": 21,
+    "test": 12,
+    "validation": 21
+  },
+  "predictions_by_stage": {
+    "audit": 6144,
+    "fit-final": 98304,
+    "pilot": 1536,
+    "search": 21504,
+    "test": 20388,
+    "validation": 10752
+  },
+  "total_runs": 84,
+  "total_predictions": 158628,
+  "unique_final_configurations": 12,
+  "matched_final_populations": true,
+  "inference_sources_unchanged": true
+}

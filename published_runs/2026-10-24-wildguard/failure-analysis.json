@@ -1,0 +1,207 @@
+{
+  "entries": [
+    {
+      "run": "safeguard-fit-final-p2",
+      "errors": 54,
+      "finish_reason_counts": {
+        "length": 54
+      },
+      "completion_token_counts": {
+        "8192": 54
+      }
+    },
+    {
+      "run": "safeguard-validation-p0",
+      "errors": 5,
+      "finish_reason_counts": {
+        "length": 5
+      },
+      "completion_token_counts": {
+        "8192": 5
+      }
+    },
+    {
+      "run": "wildguard-search-p0",
+      "errors": 1,
+      "finish_reason_counts": {
+        "length": 1
+      },
+      "completion_token_counts": {
+        "128": 1
+      }
+    },
+    {
+      "run": "safeguard-validation-p1",
+      "errors": 4,
+      "finish_reason_counts": {
+        "length": 4
+      },
+      "completion_token_counts": {
+        "8192": 4
+      }
+    },
+    {
+      "run": "safeguard-audit-p2",
+      "errors": 6,
+      "finish_reason_counts": {
+        "length": 6
+      },
+      "completion_token_counts": {
+        "8192": 6
+      }
+    },
+    {
+      "run": "safeguard-search-p1",
+      "errors": 4,
+      "finish_reason_counts": {
+        "length": 4
+      },
+      "completion_token_counts": {
+        "8192": 4
+      }
+    },
+    {
+      "run": "wildguard-fit-final-p0",
+      "errors": 1,
+      "finish_reason_counts": {
+        "length": 1
+      },
+      "completion_token_counts": {
+        "128": 1
+      }
+    },
+    {
+      "run": "safeguard-search-p0",
+      "errors": 12,
+      "finish_reason_counts": {
+        "length": 12
+      },
+      "completion_token_counts": {
+        "8192": 12
+      }
+    },
+    {
+      "run": "safeguard-test-p0",
+      "errors": 11,
+      "finish_reason_counts": {
+        "length": 11
+      },
+      "completion_token_counts": {
+        "8192": 11
+      }
+    },
+    {
+      "run": "safeguard-validation-p4",
+      "errors": 3,
+      "finish_reason_counts": {
+        "length": 3
+      },
+      "completion_token_counts": {
+        "8192": 3
+      }
+    },
+    {
+      "run": "safeguard-validation-p3",
+      "errors": 3,
+      "finish_reason_counts": {
+        "length": 3
+      },
+      "completion_token_counts": {
+        "8192": 3
+      }
+    },
+    {
+      "run": "safeguard-fit-final-p0",
+      "errors": 116,
+      "finish_reason_counts": {
+        "length": 116
+      },
+      "completion_token_counts": {
+        "8192": 116
+      }
+    },
+    {
+      "run": "safeguard-validation-p2",
+      "errors": 3,
+      "finish_reason_counts": {
+        "length": 3
+      },
+      "completion_token_counts": {
+        "8192": 3
+      }
+    },
+    {
+      "run": "safeguard-pilot-p0",
+      "errors": 5,
+      "finish_reason_counts": {
+        "length": 5
+      },
+      "completion_token_counts": {
+        "4096": 5
+      }
+    },
+    {
+      "run": "safeguard-test-p2",
+      "errors": 9,
+      "finish_reason_counts": {
+        "length": 9
+      },
+      "completion_token_counts": {
+        "8192": 9
+      }
+    },
+    {
+      "run": "safeguard-search-p2",
+      "errors": 7,
+      "finish_reason_counts": {
+        "length": 7
+      },
+      "completion_token_counts": {
+        "8192": 7
+      }
+    },
+    {
+      "run": "safeguard-search-p4",
+      "errors": 6,
+      "finish_reason_counts": {
+        "length": 6
+      },
+      "completion_token_counts": {
+        "8192": 6
+      }
+    },
+    {
+      "run": "safeguard-search-p3",
+      "errors": 10,
+      "finish_reason_counts": {
+        "stop": 1,
+        "length": 9
+      },
+      "completion_token_counts": {
+        "6482": 1,
+        "8192": 9
+      }
+    },
+    {
+      "run": "safeguard-audit-p0",
+      "errors": 7,
+      "finish_reason_counts": {
+        "length": 7
+      },
+      "completion_token_counts": {
+        "8192": 7
+      }
+    },
+    {
+      "run": "safeguard-pilot-8192-p0",
+      "errors": 6,
+      "finish_reason_counts": {
+        "length": 6
+      },
+      "completion_token_counts": {
+        "8192": 6
+      }
+    }
+  ],
+  "note": "Aggregate metadata from preserved failed outputs. No source prompts, generated text or reasons are published. Length-cap failures remain incorrect; the underlying cause is not established."
+}

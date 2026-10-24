@@ -1,0 +1,114 @@
+[
+  {
+    "id": "policylm-search-p3",
+    "adapter": "policylm",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p3-policylm.json"
+  },
+  {
+    "id": "policylm-validation-p3",
+    "adapter": "policylm",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p3-policylm.json"
+  },
+  {
+    "id": "policylm-search-p4",
+    "adapter": "policylm",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p4-policylm.json"
+  },
+  {
+    "id": "policylm-validation-p4",
+    "adapter": "policylm",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p4-policylm.json"
+  },
+  {
+    "id": "shieldstral-search-p3",
+    "adapter": "shieldstral",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p3-shieldstral.json"
+  },
+  {
+    "id": "shieldstral-validation-p3",
+    "adapter": "shieldstral",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p3-shieldstral.json"
+  },
+  {
+    "id": "shieldstral-search-p4",
+    "adapter": "shieldstral",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p4-shieldstral.json"
+  },
+  {
+    "id": "shieldstral-validation-p4",
+    "adapter": "shieldstral",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p4-shieldstral.json"
+  },
+  {
+    "id": "cope-search-p3",
+    "adapter": "cope",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p3-cope.json"
+  },
+  {
+    "id": "cope-validation-p3",
+    "adapter": "cope",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p3-cope.json"
+  },
+  {
+    "id": "cope-search-p4",
+    "adapter": "cope",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p4-cope.json"
+  },
+  {
+    "id": "cope-validation-p4",
+    "adapter": "cope",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p4-cope.json"
+  },
+  {
+    "id": "safeguard-search-p3",
+    "adapter": "safeguard",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p3-safeguard.json"
+  },
+  {
+    "id": "safeguard-validation-p3",
+    "adapter": "safeguard",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p3-safeguard.json"
+  },
+  {
+    "id": "safeguard-search-p4",
+    "adapter": "safeguard",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "evals/wildguard/policies/p4-safeguard.json"
+  },
+  {
+    "id": "safeguard-validation-p4",
+    "adapter": "safeguard",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "evals/wildguard/policies/p4-safeguard.json"
+  }
+]
