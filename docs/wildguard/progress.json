@@ -1,0 +1,20 @@
+{
+  "study": "wildguard-policy-v1",
+  "protocol_version": 1,
+  "status": "implementation",
+  "prior_cost_usd": 1.57,
+  "total_budget_usd": 10.0,
+  "new_compute_budget_usd": 8.42,
+  "steps": {
+    "protocol": "complete",
+    "access": "complete",
+    "data": "complete",
+    "runner": "complete",
+    "pilot": "in_progress",
+    "tuning": "pending",
+    "freeze": "pending",
+    "test": "pending",
+    "report": "pending",
+    "cleanup": "pending"
+  }
+}

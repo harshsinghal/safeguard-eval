@@ -1,0 +1,21 @@
+{
+  "allenai/wildguard": {
+    "revision": "cbba4823f3e8020e5a74a5e29bf85072def6f2ff"
+  },
+  "openai/gpt-oss-safeguard-20b": {
+    "revision": "8a11e17b25c973a24099d4016bf2e17dd7ec1574"
+  },
+  "musubilabs/policylm-1.7b": {
+    "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e"
+  },
+  "zentropi-ai/cope-b-a4b": {
+    "revision": "b28a1c734eff80d82e5df7964c7dfd0de8509900"
+  },
+  "mistralai/Shieldstral-1.0-3B": {
+    "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5"
+  },
+  "dataset": {
+    "repo": "allenai/wildguardmix",
+    "revision": "d29c47f41c8b51348b5c8e8c81c039b3132b66d1"
+  }
+}

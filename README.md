@@ -1,5 +1,7 @@
 # Policy Model Evaluation
 
+**WildGuard study in progress:** We are testing whether tuning written policies improves frozen policy models against the released WildGuard classifier. See the [experiment plan](docs/wildguard/PLAN.md), [lab notes](docs/wildguard/NOTES.md), and [results ledger](docs/wildguard/RESULTS.md). No WildGuard test results are claimed yet.
+
 Compare how policy models apply written rules to text: image-generation prompts, prompt-injection attempts, and cases that need human review. This repository includes reproducible multi-model evaluations, a public leaderboard, and the original GPT-OSS Safeguard 20B interactive demo powered by Groq.
 
 ## Policy Model Arena: prompt-injection leaderboard
