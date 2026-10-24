@@ -1,0 +1,166 @@
+{
+  "n": 541,
+  "confusion": {
+    "ALLOW": {
+      "ALLOW": 338,
+      "BLOCK": 0,
+      "REVIEW": 0,
+      "ERROR": 0
+    },
+    "BLOCK": {
+      "ALLOW": 131,
+      "BLOCK": 72,
+      "REVIEW": 0,
+      "ERROR": 0
+    },
+    "REVIEW": {
+      "ALLOW": 0,
+      "BLOCK": 0,
+      "REVIEW": 0,
+      "ERROR": 0
+    }
+  },
+  "per_class": {
+    "ALLOW": {
+      "support": 338,
+      "precision": 0.720682302771855,
+      "recall": 1.0,
+      "f1": 0.8376703841387856
+    },
+    "BLOCK": {
+      "support": 203,
+      "precision": 1.0,
+      "recall": 0.35467980295566504,
+      "f1": 0.5236363636363637
+    },
+    "REVIEW": {
+      "support": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    }
+  },
+  "accuracy": 0.7578558225508318,
+  "macro_f1": 0.45376891592504975,
+  "error_rate": 0.0,
+  "review_rate": 0.0,
+  "hold_rate": 0.0,
+  "automatic_coverage": 1.0,
+  "selective_accuracy": 0.7578558225508318,
+  "block_escape_rate": 0.645320197044335,
+  "false_block_rate": 0.0,
+  "slices": {
+    "tradition": {
+      "not_applicable": {
+        "n": 541,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 338,
+            "BLOCK": 0,
+            "REVIEW": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 131,
+            "BLOCK": 72,
+            "REVIEW": 0,
+            "ERROR": 0
+          },
+          "REVIEW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "REVIEW": 0,
+            "ERROR": 0
+          }
+        },
+        "per_class": {
+          "ALLOW": {
+            "support": 338,
+            "precision": 0.720682302771855,
+            "recall": 1.0,
+            "f1": 0.8376703841387856
+          },
+          "BLOCK": {
+            "support": 203,
+            "precision": 1.0,
+            "recall": 0.35467980295566504,
+            "f1": 0.5236363636363637
+          },
+          "REVIEW": {
+            "support": 0,
+            "precision": 0,
+            "recall": 0,
+            "f1": 0
+          }
+        },
+        "accuracy": 0.7578558225508318,
+        "macro_f1": 0.45376891592504975,
+        "error_rate": 0.0,
+        "review_rate": 0.0,
+        "hold_rate": 0.0,
+        "automatic_coverage": 1.0,
+        "selective_accuracy": 0.7578558225508318,
+        "block_escape_rate": 0.645320197044335,
+        "false_block_rate": 0.0
+      }
+    },
+    "challenge": {
+      "upstream_binary": {
+        "n": 541,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 338,
+            "BLOCK": 0,
+            "REVIEW": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 131,
+            "BLOCK": 72,
+            "REVIEW": 0,
+            "ERROR": 0
+          },
+          "REVIEW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "REVIEW": 0,
+            "ERROR": 0
+          }
+        },
+        "per_class": {
+          "ALLOW": {
+            "support": 338,
+            "precision": 0.720682302771855,
+            "recall": 1.0,
+            "f1": 0.8376703841387856
+          },
+          "BLOCK": {
+            "support": 203,
+            "precision": 1.0,
+            "recall": 0.35467980295566504,
+            "f1": 0.5236363636363637
+          },
+          "REVIEW": {
+            "support": 0,
+            "precision": 0,
+            "recall": 0,
+            "f1": 0
+          }
+        },
+        "accuracy": 0.7578558225508318,
+        "macro_f1": 0.45376891592504975,
+        "error_rate": 0.0,
+        "review_rate": 0.0,
+        "hold_rate": 0.0,
+        "automatic_coverage": 1.0,
+        "selective_accuracy": 0.7578558225508318,
+        "block_escape_rate": 0.645320197044335,
+        "false_block_rate": 0.0
+      }
+    }
+  },
+  "latency_seconds": {
+    "median": 0.02957865500002299,
+    "p95": 0.03562471300000425
+  }
+}

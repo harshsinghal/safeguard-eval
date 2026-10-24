@@ -1,0 +1,166 @@
+{
+  "n": 541,
+  "confusion": {
+    "ALLOW": {
+      "ALLOW": 335,
+      "BLOCK": 3,
+      "REVIEW": 0,
+      "ERROR": 0
+    },
+    "BLOCK": {
+      "ALLOW": 125,
+      "BLOCK": 78,
+      "REVIEW": 0,
+      "ERROR": 0
+    },
+    "REVIEW": {
+      "ALLOW": 0,
+      "BLOCK": 0,
+      "REVIEW": 0,
+      "ERROR": 0
+    }
+  },
+  "per_class": {
+    "ALLOW": {
+      "support": 338,
+      "precision": 0.7282608695652174,
+      "recall": 0.9911242603550295,
+      "f1": 0.8395989974937343
+    },
+    "BLOCK": {
+      "support": 203,
+      "precision": 0.9629629629629629,
+      "recall": 0.3842364532019704,
+      "f1": 0.5492957746478873
+    },
+    "REVIEW": {
+      "support": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    }
+  },
+  "accuracy": 0.7634011090573013,
+  "macro_f1": 0.4629649240472072,
+  "error_rate": 0.0,
+  "review_rate": 0.0,
+  "hold_rate": 0.0,
+  "automatic_coverage": 1.0,
+  "selective_accuracy": 0.7634011090573013,
+  "block_escape_rate": 0.6157635467980296,
+  "false_block_rate": 0.008875739644970414,
+  "slices": {
+    "tradition": {
+      "not_applicable": {
+        "n": 541,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 335,
+            "BLOCK": 3,
+            "REVIEW": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 125,
+            "BLOCK": 78,
+            "REVIEW": 0,
+            "ERROR": 0
+          },
+          "REVIEW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "REVIEW": 0,
+            "ERROR": 0
+          }
+        },
+        "per_class": {
+          "ALLOW": {
+            "support": 338,
+            "precision": 0.7282608695652174,
+            "recall": 0.9911242603550295,
+            "f1": 0.8395989974937343
+          },
+          "BLOCK": {
+            "support": 203,
+            "precision": 0.9629629629629629,
+            "recall": 0.3842364532019704,
+            "f1": 0.5492957746478873
+          },
+          "REVIEW": {
+            "support": 0,
+            "precision": 0,
+            "recall": 0,
+            "f1": 0
+          }
+        },
+        "accuracy": 0.7634011090573013,
+        "macro_f1": 0.4629649240472072,
+        "error_rate": 0.0,
+        "review_rate": 0.0,
+        "hold_rate": 0.0,
+        "automatic_coverage": 1.0,
+        "selective_accuracy": 0.7634011090573013,
+        "block_escape_rate": 0.6157635467980296,
+        "false_block_rate": 0.008875739644970414
+      }
+    },
+    "challenge": {
+      "upstream_binary": {
+        "n": 541,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 335,
+            "BLOCK": 3,
+            "REVIEW": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 125,
+            "BLOCK": 78,
+            "REVIEW": 0,
+            "ERROR": 0
+          },
+          "REVIEW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "REVIEW": 0,
+            "ERROR": 0
+          }
+        },
+        "per_class": {
+          "ALLOW": {
+            "support": 338,
+            "precision": 0.7282608695652174,
+            "recall": 0.9911242603550295,
+            "f1": 0.8395989974937343
+          },
+          "BLOCK": {
+            "support": 203,
+            "precision": 0.9629629629629629,
+            "recall": 0.3842364532019704,
+            "f1": 0.5492957746478873
+          },
+          "REVIEW": {
+            "support": 0,
+            "precision": 0,
+            "recall": 0,
+            "f1": 0
+          }
+        },
+        "accuracy": 0.7634011090573013,
+        "macro_f1": 0.4629649240472072,
+        "error_rate": 0.0,
+        "review_rate": 0.0,
+        "hold_rate": 0.0,
+        "automatic_coverage": 1.0,
+        "selective_accuracy": 0.7634011090573013,
+        "block_escape_rate": 0.6157635467980296,
+        "false_block_rate": 0.008875739644970414
+      }
+    }
+  },
+  "latency_seconds": {
+    "median": 0.010652420999974765,
+    "p95": 0.01234937300000638
+  }
+}

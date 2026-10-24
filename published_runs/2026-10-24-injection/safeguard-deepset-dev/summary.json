@@ -1,0 +1,166 @@
+{
+  "n": 541,
+  "confusion": {
+    "ALLOW": {
+      "ALLOW": 338,
+      "BLOCK": 0,
+      "REVIEW": 0,
+      "ERROR": 0
+    },
+    "BLOCK": {
+      "ALLOW": 164,
+      "BLOCK": 38,
+      "REVIEW": 0,
+      "ERROR": 1
+    },
+    "REVIEW": {
+      "ALLOW": 0,
+      "BLOCK": 0,
+      "REVIEW": 0,
+      "ERROR": 0
+    }
+  },
+  "per_class": {
+    "ALLOW": {
+      "support": 338,
+      "precision": 0.6733067729083665,
+      "recall": 1.0,
+      "f1": 0.8047619047619048
+    },
+    "BLOCK": {
+      "support": 203,
+      "precision": 1.0,
+      "recall": 0.18719211822660098,
+      "f1": 0.3153526970954357
+    },
+    "REVIEW": {
+      "support": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    }
+  },
+  "accuracy": 0.6950092421441775,
+  "macro_f1": 0.3733715339524468,
+  "error_rate": 0.0018484288354898336,
+  "review_rate": 0.0,
+  "hold_rate": 0.0018484288354898336,
+  "automatic_coverage": 0.9981515711645101,
+  "selective_accuracy": 0.6962962962962963,
+  "block_escape_rate": 0.8078817733990148,
+  "false_block_rate": 0.0,
+  "slices": {
+    "tradition": {
+      "not_applicable": {
+        "n": 541,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 338,
+            "BLOCK": 0,
+            "REVIEW": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 164,
+            "BLOCK": 38,
+            "REVIEW": 0,
+            "ERROR": 1
+          },
+          "REVIEW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "REVIEW": 0,
+            "ERROR": 0
+          }
+        },
+        "per_class": {
+          "ALLOW": {
+            "support": 338,
+            "precision": 0.6733067729083665,
+            "recall": 1.0,
+            "f1": 0.8047619047619048
+          },
+          "BLOCK": {
+            "support": 203,
+            "precision": 1.0,
+            "recall": 0.18719211822660098,
+            "f1": 0.3153526970954357
+          },
+          "REVIEW": {
+            "support": 0,
+            "precision": 0,
+            "recall": 0,
+            "f1": 0
+          }
+        },
+        "accuracy": 0.6950092421441775,
+        "macro_f1": 0.3733715339524468,
+        "error_rate": 0.0018484288354898336,
+        "review_rate": 0.0,
+        "hold_rate": 0.0018484288354898336,
+        "automatic_coverage": 0.9981515711645101,
+        "selective_accuracy": 0.6962962962962963,
+        "block_escape_rate": 0.8078817733990148,
+        "false_block_rate": 0.0
+      }
+    },
+    "challenge": {
+      "upstream_binary": {
+        "n": 541,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 338,
+            "BLOCK": 0,
+            "REVIEW": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 164,
+            "BLOCK": 38,
+            "REVIEW": 0,
+            "ERROR": 1
+          },
+          "REVIEW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "REVIEW": 0,
+            "ERROR": 0
+          }
+        },
+        "per_class": {
+          "ALLOW": {
+            "support": 338,
+            "precision": 0.6733067729083665,
+            "recall": 1.0,
+            "f1": 0.8047619047619048
+          },
+          "BLOCK": {
+            "support": 203,
+            "precision": 1.0,
+            "recall": 0.18719211822660098,
+            "f1": 0.3153526970954357
+          },
+          "REVIEW": {
+            "support": 0,
+            "precision": 0,
+            "recall": 0,
+            "f1": 0
+          }
+        },
+        "accuracy": 0.6950092421441775,
+        "macro_f1": 0.3733715339524468,
+        "error_rate": 0.0018484288354898336,
+        "review_rate": 0.0,
+        "hold_rate": 0.0018484288354898336,
+        "automatic_coverage": 0.9981515711645101,
+        "selective_accuracy": 0.6962962962962963,
+        "block_escape_rate": 0.8078817733990148,
+        "false_block_rate": 0.0
+      }
+    }
+  },
+  "latency_seconds": {
+    "median": 1.3266877379999187,
+    "p95": 4.504305938000016
+  }
+}

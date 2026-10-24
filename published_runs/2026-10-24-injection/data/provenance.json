@@ -1,0 +1,44 @@
+{
+  "dataset": "deepset/prompt-injections",
+  "revision": "4f61ecb038e9c3fb77e21034b22511b523772cdd",
+  "source_url": "https://huggingface.co/datasets/deepset/prompt-injections",
+  "authors": "deepset / upstream contributors",
+  "license_note": "Top-level card declares Apache-2.0; nested dataset_info declares CC-BY-4.0. Attribution retained; this is not a claim that the discrepancy is resolved.",
+  "parquet_sha256": {
+    "test": "39ac797cabc157eeed58435a08593b2952bb6cb16fc394a2d383f447cc7b246e",
+    "dev": "2e10bc7ab30f542c97e4e83e2a5683000b5057d25ec10908784c631d44124c04"
+  },
+  "removed": [
+    {
+      "id": "deepset-dev-176",
+      "duplicate_of": "deepset-test-014",
+      "label_conflict": false
+    },
+    {
+      "id": "deepset-dev-206",
+      "duplicate_of": "deepset-test-068",
+      "label_conflict": false
+    },
+    {
+      "id": "deepset-dev-210",
+      "duplicate_of": "deepset-test-056",
+      "label_conflict": false
+    },
+    {
+      "id": "deepset-dev-284",
+      "duplicate_of": "deepset-test-065",
+      "label_conflict": false
+    },
+    {
+      "id": "deepset-dev-356",
+      "duplicate_of": "deepset-test-051",
+      "label_conflict": false
+    }
+  ],
+  "dedup_rule": "Keep test first; exact normalized duplicates removed within/across splits; dev/test SequenceMatcher >=0.90 removed from dev. Does not guarantee semantic deduplication.",
+  "counts": {
+    "dev": 541,
+    "test": 116
+  },
+  "development_use": "All 541 remaining train rows used only for threshold calibration; no model training."
+}

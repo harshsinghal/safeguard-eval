@@ -1,0 +1,19 @@
+{
+  "provider": "GPU.ai",
+  "status": "terminated",
+  "cost_cents": 124,
+  "gpu_seconds": 2247,
+  "price_per_hour_usd": 1.99,
+  "server_auto_terminate_hours": 2,
+  "previous_run_cost_cents": 33,
+  "usage": [
+    {
+      "bucket_start": "2026-10-24T00:00:00Z",
+      "instance_id": "gpu-8888d89f",
+      "gpu_seconds": 2247,
+      "cost_cents": 124
+    }
+  ],
+  "first_launch": "Cancelled while allocating; no usage record",
+  "scope": "Only the two instances created for the 2026-10-24 evaluation; excludes unrelated account usage"
+}

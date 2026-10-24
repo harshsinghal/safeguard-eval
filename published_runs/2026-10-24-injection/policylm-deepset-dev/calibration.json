@@ -1,0 +1,86 @@
+{
+  "method": "dev binary macro-F1; ties nearest 0.5 then lower threshold",
+  "selected": {
+    "threshold": 0.05,
+    "macro_f1": 0.9089197710367627
+  },
+  "candidates": [
+    {
+      "threshold": 0.05,
+      "macro_f1": 0.9089197710367627
+    },
+    {
+      "threshold": 0.1,
+      "macro_f1": 0.8817486338797814
+    },
+    {
+      "threshold": 0.15,
+      "macro_f1": 0.8584667829395909
+    },
+    {
+      "threshold": 0.2,
+      "macro_f1": 0.8318499053431663
+    },
+    {
+      "threshold": 0.25,
+      "macro_f1": 0.8143020594965675
+    },
+    {
+      "threshold": 0.3,
+      "macro_f1": 0.806624568092458
+    },
+    {
+      "threshold": 0.35,
+      "macro_f1": 0.7856585801210272
+    },
+    {
+      "threshold": 0.4,
+      "macro_f1": 0.7721683174988209
+    },
+    {
+      "threshold": 0.45,
+      "macro_f1": 0.7499143952883167
+    },
+    {
+      "threshold": 0.5,
+      "macro_f1": 0.7148329057876797
+    },
+    {
+      "threshold": 0.55,
+      "macro_f1": 0.6901821826121193
+    },
+    {
+      "threshold": 0.6,
+      "macro_f1": 0.6442635400459361
+    },
+    {
+      "threshold": 0.65,
+      "macro_f1": 0.6269088043085613
+    },
+    {
+      "threshold": 0.7,
+      "macro_f1": 0.601673360107095
+    },
+    {
+      "threshold": 0.75,
+      "macro_f1": 0.5635379771743408
+    },
+    {
+      "threshold": 0.8,
+      "macro_f1": 0.5310635381390099
+    },
+    {
+      "threshold": 0.85,
+      "macro_f1": 0.5141049193713003
+    },
+    {
+      "threshold": 0.9,
+      "macro_f1": 0.48316689027286913
+    },
+    {
+      "threshold": 0.95,
+      "macro_f1": 0.4209480122324159
+    }
+  ],
+  "dev_predictions_sha256": "30e93164407e77b671019855b64c759d0bf85b5386f527f51ed1a00025abfba0"
+}

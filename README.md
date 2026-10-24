@@ -1,6 +1,14 @@
-# Image Prompt Policy Evaluation
+# Policy Model Evaluation
 
-A web app for evaluating content against moderation policies. Write a policy as a plain text file, paste in any prompt, and the safeguard model ([`gpt-oss-safeguard-20b`](https://openai.com/index/introducing-gpt-oss-safeguard/)) tells you whether it passes or fails — with a reason. Ships with a set of example policies to get you started.
+Compare how policy models apply written rules to text: image-generation prompts, prompt-injection attempts, and cases that need human review. This repository includes reproducible multi-model evaluations, a public leaderboard, and the original GPT-OSS Safeguard 20B interactive demo powered by Groq.
+
+## Policy Model Arena: prompt-injection leaderboard
+
+The repository now includes a second policy task: detecting instruction-boundary attacks while allowing legitimate task changes and discussion of attacks. The [interactive leaderboard](https://harshsinghal.github.io/safeguard-eval/) compares the four models on **116 held-out Deepset examples** and a separate **80-example synthetic challenge test** with ALLOW/BLOCK/REVIEW labels.
+
+Browse model disagreements, false blocks, attack escapes, review workload, and confidence intervals. The challenge labels are agent-reviewed and await independent human adjudication. Public dataset labels are preserved even when their missing context creates disagreement with the written policy. These are detection results, not proof of downstream protection.
+
+See the [benchmark methods](evals/injection/README.md) and [full results and review](published_runs/2026-10-24-injection/README.md). Model and dataset revisions, exact requests, raw responses, development-selected thresholds, and costs are published with the run.
 
 ## Policy models beyond the original demo
 

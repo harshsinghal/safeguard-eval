@@ -1,0 +1,6 @@
+Prompt-injection benchmark additions and original challenge examples: Copyright 2026 Harsh Singhal and contributors. Licensed under Apache-2.0.
+
+Deepset source data: https://huggingface.co/datasets/deepset/prompt-injections
+Revision: 4f61ecb038e9c3fb77e21034b22511b523772cdd
+Attribution: deepset and upstream dataset contributors. Original text and binary labels preserved. Metadata fields added; five near-duplicate development rows excluded.
+Upstream license metadata conflicts: top-level Apache-2.0, nested CC-BY-4.0. See https://creativecommons.org/licenses/by/4.0/ and LICENSE-APACHE-2.0.txt. No resolved-license claim is made.
