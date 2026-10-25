@@ -1,0 +1,515 @@
+{"event": "init", "cap_microusd": 10000000, "created_utc": "2026-10-25T14:28:14.911436+00:00"}
+{"event": "reserve", "request_id": "e4c654e7da7e4af2aa9f5ebf341303c4ca7e4d8c3b6a85d8bf4fc423e19fe229", "microusd": 685850, "created_utc": "2026-10-25T14:28:14.911527+00:00"}
+{"event": "settle", "request_id": "e4c654e7da7e4af2aa9f5ebf341303c4ca7e4d8c3b6a85d8bf4fc423e19fe229", "microusd": 4440, "created_utc": "2026-10-25T14:28:16.912687+00:00"}
+{"event": "reserve", "request_id": "637db85eacd4df330cc9504a3e62686619d1156e4a596256c77cab5b35b478d1", "microusd": 685850, "created_utc": "2026-10-25T14:28:16.931060+00:00"}
+{"event": "settle", "request_id": "637db85eacd4df330cc9504a3e62686619d1156e4a596256c77cab5b35b478d1", "microusd": 5390, "created_utc": "2026-10-25T14:28:19.146578+00:00"}
+{"event": "reserve", "request_id": "15a9ecb38248166e8b16e4ce5b73a78754877d448fa054a52fb2d1f547559bc9", "microusd": 186704, "created_utc": "2026-10-25T14:28:19.164097+00:00"}
+{"event": "settle", "request_id": "15a9ecb38248166e8b16e4ce5b73a78754877d448fa054a52fb2d1f547559bc9", "microusd": 2984, "created_utc": "2026-10-25T14:28:21.070624+00:00"}
+{"event": "reserve", "request_id": "11251e8a2a17057ad300584c04ffa8397180382eea955bfc14fd76cf9ec194b9", "microusd": 186704, "created_utc": "2026-10-25T14:28:21.089840+00:00"}
+{"event": "settle", "request_id": "11251e8a2a17057ad300584c04ffa8397180382eea955bfc14fd76cf9ec194b9", "microusd": 2984, "created_utc": "2026-10-25T14:28:23.103222+00:00"}
+{"event": "reserve", "request_id": "6bab10ee1efc9e3a282ffae0af07f98e35e573e50572837fa718aa9859d92ef8", "microusd": 10688, "created_utc": "2026-10-25T14:28:23.121091+00:00"}
+{"event": "settle", "request_id": "6bab10ee1efc9e3a282ffae0af07f98e35e573e50572837fa718aa9859d92ef8", "microusd": 10688, "created_utc": "2026-10-25T14:30:54.099471+00:00"}
+{"event": "reserve", "request_id": "a9d9e54887934ca63e1a319cbf9fb290c1c3dad6948124ddc3a2882ce01f538a", "microusd": 2689, "created_utc": "2026-10-25T14:31:08.082879+00:00"}
+{"event": "settle", "request_id": "a9d9e54887934ca63e1a319cbf9fb290c1c3dad6948124ddc3a2882ce01f538a", "microusd": 43, "created_utc": "2026-10-25T14:31:08.569434+00:00"}
+{"event": "reserve", "request_id": "fe704f4eb0be0f7bbf5f862cd142705e2038dd35cbff9c913c9f38723568dc16", "microusd": 2689, "created_utc": "2026-10-25T14:31:08.589599+00:00"}
+{"event": "settle", "request_id": "fe704f4eb0be0f7bbf5f862cd142705e2038dd35cbff9c913c9f38723568dc16", "microusd": 55, "created_utc": "2026-10-25T14:31:09.396904+00:00"}
+{"event": "reserve", "request_id": "3690b0920b3a254dee60ecb0e9a7b475af64336abf323aa7a810e3ad958ba95f", "microusd": 87636, "created_utc": "2026-10-25T14:31:09.418791+00:00"}
+{"event": "settle", "request_id": "3690b0920b3a254dee60ecb0e9a7b475af64336abf323aa7a810e3ad958ba95f", "microusd": 992, "created_utc": "2026-10-25T14:31:11.051978+00:00"}
+{"event": "reserve", "request_id": "6d7659c699ca97111458c856252d314ab3fff041b4ec7706aae6a7e6d0dcda8b", "microusd": 87636, "created_utc": "2026-10-25T14:31:11.067192+00:00"}
+{"event": "settle", "request_id": "6d7659c699ca97111458c856252d314ab3fff041b4ec7706aae6a7e6d0dcda8b", "microusd": 1548, "created_utc": "2026-10-25T14:31:13.613087+00:00"}
+{"event": "reserve", "request_id": "ffe9f74a2cab11dadda6d75a1a6a1f1a4edb0165313bb92ba6e856813d29a783", "microusd": 686550, "created_utc": "2026-10-25T14:31:13.630398+00:00"}
+{"event": "settle", "request_id": "ffe9f74a2cab11dadda6d75a1a6a1f1a4edb0165313bb92ba6e856813d29a783", "microusd": 5310, "created_utc": "2026-10-25T14:31:15.352398+00:00"}
+{"event": "reserve", "request_id": "0e7c7e2fdb61a0aa44e0027031397070e37fbababc3f965e0a15506d47438b21", "microusd": 186928, "created_utc": "2026-10-25T14:31:15.369821+00:00"}
+{"event": "settle", "request_id": "0e7c7e2fdb61a0aa44e0027031397070e37fbababc3f965e0a15506d47438b21", "microusd": 186928, "cost_status": "conservative_content_filter_ceiling", "created_utc": "2026-10-25T14:33:45.148436+00:00"}
+{"event": "reserve", "request_id": "914ec957795ceecdc28f644be0ff1b0c446529ae8b52396e036ac46d919b021c", "microusd": 186928, "created_utc": "2026-10-25T14:34:00.343313+00:00"}
+{"event": "settle", "request_id": "914ec957795ceecdc28f644be0ff1b0c446529ae8b52396e036ac46d919b021c", "microusd": 186928, "cost_status": "conservative_content_filter_ceiling", "created_utc": "2026-10-25T14:34:01.583592+00:00"}
+{"event": "reserve", "request_id": "2730d85f774c4b34e6b48b8494b02f4151274d6cfa5158d657045cfee2fe1c75", "microusd": 2692, "created_utc": "2026-10-25T14:34:01.593428+00:00"}
+{"event": "settle", "request_id": "2730d85f774c4b34e6b48b8494b02f4151274d6cfa5158d657045cfee2fe1c75", "microusd": 6, "cost_status": "reported", "created_utc": "2026-10-25T14:34:01.975898+00:00"}
+{"event": "reserve", "request_id": "2e5280c6526991573260520773cfd2740b64caccccedc34e1b2741cb556fbe05", "microusd": 2692, "created_utc": "2026-10-25T14:34:01.982071+00:00"}
+{"event": "settle", "request_id": "2e5280c6526991573260520773cfd2740b64caccccedc34e1b2741cb556fbe05", "microusd": 21, "cost_status": "reported", "created_utc": "2026-10-25T14:34:02.972472+00:00"}
+{"event": "reserve", "request_id": "5933ef0eacc252ad8e668461344d4aeebb7f7ec0724a00c2a582cab5e3846a5f", "microusd": 87692, "created_utc": "2026-10-25T14:34:02.978698+00:00"}
+{"event": "settle", "request_id": "5933ef0eacc252ad8e668461344d4aeebb7f7ec0724a00c2a582cab5e3846a5f", "microusd": 536, "cost_status": "reported", "created_utc": "2026-10-25T14:34:04.712314+00:00"}
+{"event": "reserve", "request_id": "4d8d051ff745fb4a7e570295a2765a5db2c85f7a3c13dedbcbdf617c4d7fbae2", "microusd": 87692, "created_utc": "2026-10-25T14:34:04.731640+00:00"}
+{"event": "settle", "request_id": "4d8d051ff745fb4a7e570295a2765a5db2c85f7a3c13dedbcbdf617c4d7fbae2", "microusd": 952, "cost_status": "reported", "created_utc": "2026-10-25T14:34:09.023195+00:00"}
+{"event": "reserve", "request_id": "e92bd6cf2d9fded33ed688d61bf68c200840b85dd1e7a6185f88985d2e1823bc", "microusd": 686550, "created_utc": "2026-10-25T14:34:09.039886+00:00"}
+{"event": "settle", "request_id": "e92bd6cf2d9fded33ed688d61bf68c200840b85dd1e7a6185f88985d2e1823bc", "microusd": 4460, "cost_status": "reported", "created_utc": "2026-10-25T14:34:10.456846+00:00"}
+{"event": "reserve", "request_id": "882fffc2c6f4b6c760d4406906ce1c4b8e4878ca7fe21e83f9814bd26106fdfb", "microusd": 187073, "created_utc": "2026-10-25T14:34:10.475962+00:00"}
+{"event": "settle", "request_id": "882fffc2c6f4b6c760d4406906ce1c4b8e4878ca7fe21e83f9814bd26106fdfb", "microusd": 3080, "cost_status": "reported", "created_utc": "2026-10-25T14:34:11.686651+00:00"}
+{"event": "reserve", "request_id": "4a9ab36a865bacc4a9f412a9864f03759cccdfd3adae0e13f7b145bc04f1224b", "microusd": 187073, "created_utc": "2026-10-25T14:34:11.700626+00:00"}
+{"event": "settle", "request_id": "4a9ab36a865bacc4a9f412a9864f03759cccdfd3adae0e13f7b145bc04f1224b", "microusd": 3080, "cost_status": "reported", "created_utc": "2026-10-25T14:34:14.676050+00:00"}
+{"event": "reserve", "request_id": "452e214d7971bb82e071d0a31e6822d5a1d28971c8513ce2c852102edb10f086", "microusd": 2694, "created_utc": "2026-10-25T14:34:14.695503+00:00"}
+{"event": "settle", "request_id": "452e214d7971bb82e071d0a31e6822d5a1d28971c8513ce2c852102edb10f086", "microusd": 7, "cost_status": "reported", "created_utc": "2026-10-25T14:34:15.781901+00:00"}
+{"event": "reserve", "request_id": "a7fd076c6876fd3f79641711ee56ad4b902fbca2fda4b38629a63ed376cab46d", "microusd": 2694, "created_utc": "2026-10-25T14:34:15.800558+00:00"}
+{"event": "settle", "request_id": "a7fd076c6876fd3f79641711ee56ad4b902fbca2fda4b38629a63ed376cab46d", "microusd": 14, "cost_status": "reported", "created_utc": "2026-10-25T14:34:16.643516+00:00"}
+{"event": "reserve", "request_id": "ec4654e3f331fc78e15e9419753a35e7deb197b4136dabea32f31c5d8c143c57", "microusd": 87728, "created_utc": "2026-10-25T14:34:16.662950+00:00"}
+{"event": "settle", "request_id": "ec4654e3f331fc78e15e9419753a35e7deb197b4136dabea32f31c5d8c143c57", "microusd": 562, "cost_status": "reported", "created_utc": "2026-10-25T14:34:19.572349+00:00"}
+{"event": "reserve", "request_id": "af7dbbc99a73f51e5783d9b17471dcdeab458120fe80a5fa8b9458e694f8fec8", "microusd": 87728, "created_utc": "2026-10-25T14:34:19.591429+00:00"}
+{"event": "settle", "request_id": "af7dbbc99a73f51e5783d9b17471dcdeab458120fe80a5fa8b9458e694f8fec8", "microusd": 948, "cost_status": "reported", "created_utc": "2026-10-25T14:34:23.027513+00:00"}
+{"event": "reserve", "request_id": "85454871867ae8c9fd0b314fd562b9ca1dda2d327677dbc0638b209130d8c20c", "microusd": 687000, "created_utc": "2026-10-25T14:34:23.047181+00:00"}
+{"event": "settle", "request_id": "85454871867ae8c9fd0b314fd562b9ca1dda2d327677dbc0638b209130d8c20c", "microusd": 4590, "cost_status": "reported", "created_utc": "2026-10-25T14:34:24.998150+00:00"}
+{"event": "reserve", "request_id": "80a1f09939d0979e0de2fa84850e0b69993eeeada4371db28fb1b1002fbf943c", "microusd": 687000, "created_utc": "2026-10-25T14:34:25.017286+00:00"}
+{"event": "settle", "request_id": "80a1f09939d0979e0de2fa84850e0b69993eeeada4371db28fb1b1002fbf943c", "microusd": 5690, "cost_status": "reported", "created_utc": "2026-10-25T14:34:26.732877+00:00"}
+{"event": "reserve", "request_id": "ad59ec661c3eda55d34dec7d9dd539bf5c154d80b02e5bce2ff3da604341d634", "microusd": 186704, "created_utc": "2026-10-25T14:34:26.750578+00:00"}
+{"event": "settle", "request_id": "ad59ec661c3eda55d34dec7d9dd539bf5c154d80b02e5bce2ff3da604341d634", "microusd": 2984, "cost_status": "reported", "created_utc": "2026-10-25T14:34:28.274340+00:00"}
+{"event": "reserve", "request_id": "efecd374d37b1062041b453e9bc146d2ca41fbeb8c5adb0306176ebeaed39dd6", "microusd": 2689, "created_utc": "2026-10-25T14:34:28.292789+00:00"}
+{"event": "settle", "request_id": "efecd374d37b1062041b453e9bc146d2ca41fbeb8c5adb0306176ebeaed39dd6", "microusd": 6, "cost_status": "reported", "created_utc": "2026-10-25T14:34:28.785795+00:00"}
+{"event": "reserve", "request_id": "643be7b94a23571e064e175c1176a8159d57dd2f57d17cf76987ed54cc2508e6", "microusd": 2689, "created_utc": "2026-10-25T14:34:28.804752+00:00"}
+{"event": "settle", "request_id": "643be7b94a23571e064e175c1176a8159d57dd2f57d17cf76987ed54cc2508e6", "microusd": 17, "cost_status": "reported", "created_utc": "2026-10-25T14:34:29.742342+00:00"}
+{"event": "reserve", "request_id": "d92af9dc2552426dcb871d0f6d3082926675e718879ff230c5b0e0444d3fc076", "microusd": 87636, "created_utc": "2026-10-25T14:34:29.758868+00:00"}
+{"event": "settle", "request_id": "d92af9dc2552426dcb871d0f6d3082926675e718879ff230c5b0e0444d3fc076", "microusd": 532, "cost_status": "reported", "created_utc": "2026-10-25T14:34:32.575302+00:00"}
+{"event": "reserve", "request_id": "f2ed18722a9f23110f3bd2d066dd9b65b52d9c5de74038e601b6760b47eba8d8", "microusd": 87636, "created_utc": "2026-10-25T14:34:32.593343+00:00"}
+{"event": "settle", "request_id": "f2ed18722a9f23110f3bd2d066dd9b65b52d9c5de74038e601b6760b47eba8d8", "microusd": 632, "cost_status": "reported", "created_utc": "2026-10-25T14:34:36.553599+00:00"}
+{"event": "reserve", "request_id": "bb9b14ef0e593fb3cc1dc56e9074bb8bf1a68b7ed7ff7c9b9183a97b5ee0fa93", "microusd": 685850, "created_utc": "2026-10-25T14:34:36.572876+00:00"}
+{"event": "settle", "request_id": "bb9b14ef0e593fb3cc1dc56e9074bb8bf1a68b7ed7ff7c9b9183a97b5ee0fa93", "microusd": 4440, "cost_status": "reported", "created_utc": "2026-10-25T14:34:38.002820+00:00"}
+{"event": "reserve", "request_id": "7af370dc5673cda062c49d24443eee95dc673c98517989c1757495f0a70adcbd", "microusd": 685850, "created_utc": "2026-10-25T14:34:38.022369+00:00"}
+{"event": "settle", "request_id": "7af370dc5673cda062c49d24443eee95dc673c98517989c1757495f0a70adcbd", "microusd": 5490, "cost_status": "reported", "created_utc": "2026-10-25T14:34:39.544398+00:00"}
+{"event": "reserve", "request_id": "edb1312f568c5500ab1206aa28639d9799bb73360a5544895c83c4e0e9e14456", "microusd": 186704, "created_utc": "2026-10-25T14:34:39.563827+00:00"}
+{"event": "settle", "request_id": "edb1312f568c5500ab1206aa28639d9799bb73360a5544895c83c4e0e9e14456", "microusd": 2984, "cost_status": "reported", "created_utc": "2026-10-25T14:34:41.074907+00:00"}
+{"event": "reserve", "request_id": "b4ad79916e0956e92d4de87e3064161737e86041202565a8ba6956b277c177d4", "microusd": 2687, "created_utc": "2026-10-25T14:34:41.094240+00:00"}
+{"event": "settle", "request_id": "b4ad79916e0956e92d4de87e3064161737e86041202565a8ba6956b277c177d4", "microusd": 6, "cost_status": "reported", "created_utc": "2026-10-25T14:34:43.132630+00:00"}
+{"event": "reserve", "request_id": "d6b1fee2880dad04c75fa24dab5de31fcddf15084501d7c1fe291a7772621611", "microusd": 2687, "created_utc": "2026-10-25T14:34:43.151402+00:00"}
+{"event": "settle", "request_id": "d6b1fee2880dad04c75fa24dab5de31fcddf15084501d7c1fe291a7772621611", "microusd": 16, "cost_status": "reported", "created_utc": "2026-10-25T14:34:44.052091+00:00"}
+{"event": "reserve", "request_id": "b26f7488d5715058edcf8f1059497ed93857789c50e5e97f4767f35cc6694e01", "microusd": 87597, "created_utc": "2026-10-25T14:34:44.071020+00:00"}
+{"event": "settle", "request_id": "b26f7488d5715058edcf8f1059497ed93857789c50e5e97f4767f35cc6694e01", "microusd": 530, "cost_status": "reported", "created_utc": "2026-10-25T14:34:47.353902+00:00"}
+{"event": "reserve", "request_id": "87456571a0b3305d8b26c67df8a7f7659205449d7134e7fe0739c1e96ad9d65f", "microusd": 87597, "created_utc": "2026-10-25T14:34:47.372452+00:00"}
+{"event": "settle", "request_id": "87456571a0b3305d8b26c67df8a7f7659205449d7134e7fe0739c1e96ad9d65f", "microusd": 1086, "cost_status": "reported", "created_utc": "2026-10-25T14:34:51.089259+00:00"}
+{"event": "reserve", "request_id": "f9572bb19afe8646b54fd5083c38fbe72a0fb9b92c110d5c5a6a9e4aec84444d", "microusd": 685350, "created_utc": "2026-10-25T14:34:51.109390+00:00"}
+{"event": "settle", "request_id": "f9572bb19afe8646b54fd5083c38fbe72a0fb9b92c110d5c5a6a9e4aec84444d", "microusd": 4430, "cost_status": "reported", "created_utc": "2026-10-25T14:34:52.546688+00:00"}
+{"event": "reserve", "request_id": "bebf4e0e8fef49645f2934eb461149fa7862979c8c227b401b8757ba41951a03", "microusd": 685350, "created_utc": "2026-10-25T14:34:52.565720+00:00"}
+{"event": "settle", "request_id": "bebf4e0e8fef49645f2934eb461149fa7862979c8c227b401b8757ba41951a03", "microusd": 5380, "cost_status": "reported", "created_utc": "2026-10-25T14:34:54.183876+00:00"}
+{"event": "reserve", "request_id": "cc440716d59bcc0c6bb8002c48d4df1daabdd635c40ac9c451db74cc97536ec3", "microusd": 186545, "created_utc": "2026-10-25T14:34:54.202938+00:00"}
+{"event": "settle", "request_id": "cc440716d59bcc0c6bb8002c48d4df1daabdd635c40ac9c451db74cc97536ec3", "microusd": 2976, "cost_status": "reported", "created_utc": "2026-10-25T14:34:55.512444+00:00"}
+{"event": "reserve", "request_id": "46bdacb623234567fe35dc62181e56613d5f071adede206319edf10639591b4a", "microusd": 186545, "created_utc": "2026-10-25T14:34:55.531192+00:00"}
+{"event": "settle", "request_id": "46bdacb623234567fe35dc62181e56613d5f071adede206319edf10639591b4a", "microusd": 2976, "cost_status": "reported", "created_utc": "2026-10-25T14:35:00.531943+00:00"}
+{"event": "reserve", "request_id": "85cf0cd38eddcb023457f1335bbfdb57e97cc4b4c17b136a00d337da8d839d6a", "microusd": 2693, "created_utc": "2026-10-25T14:35:00.547811+00:00"}
+{"event": "settle", "request_id": "85cf0cd38eddcb023457f1335bbfdb57e97cc4b4c17b136a00d337da8d839d6a", "microusd": 23, "cost_status": "reported", "created_utc": "2026-10-25T14:35:01.862733+00:00"}
+{"event": "reserve", "request_id": "d9c2afdbe72b4ebe0de1c9a38938dd04e22b234618fa2d9059089400d9f8e3f5", "microusd": 87714, "created_utc": "2026-10-25T14:35:01.878857+00:00"}
+{"event": "settle", "request_id": "d9c2afdbe72b4ebe0de1c9a38938dd04e22b234618fa2d9059089400d9f8e3f5", "microusd": 574, "cost_status": "reported", "created_utc": "2026-10-25T14:35:04.692827+00:00"}
+{"event": "reserve", "request_id": "44d442c1bb57b5c1b43414a75e5bf3e65caa696c6ce20e1154dc677d1725a81c", "microusd": 87714, "created_utc": "2026-10-25T14:35:04.709881+00:00"}
+{"event": "settle", "request_id": "44d442c1bb57b5c1b43414a75e5bf3e65caa696c6ce20e1154dc677d1725a81c", "microusd": 970, "cost_status": "reported", "created_utc": "2026-10-25T14:35:09.743091+00:00"}
+{"event": "reserve", "request_id": "43b9bc49339c80470131872372a4a44bb58c137adb4dc12cf7a8a3471dfd04ee", "microusd": 686825, "created_utc": "2026-10-25T14:35:09.761481+00:00"}
+{"event": "settle", "request_id": "43b9bc49339c80470131872372a4a44bb58c137adb4dc12cf7a8a3471dfd04ee", "microusd": 4640, "cost_status": "reported", "created_utc": "2026-10-25T14:35:12.297675+00:00"}
+{"event": "reserve", "request_id": "22dac6573bd46917d2c421867e76924b8f725a76cf964a4fbe9defbcfee5c893", "microusd": 686825, "created_utc": "2026-10-25T14:35:12.313676+00:00"}
+{"event": "settle", "request_id": "22dac6573bd46917d2c421867e76924b8f725a76cf964a4fbe9defbcfee5c893", "microusd": 5790, "cost_status": "reported", "created_utc": "2026-10-25T14:35:14.566406+00:00"}
+{"event": "reserve", "request_id": "e544fecc9a0494fecdbdb36482179ecf852ca935f6b7eb81a6dde22b6048ef80", "microusd": 187017, "created_utc": "2026-10-25T14:35:14.582633+00:00"}
+{"event": "settle", "request_id": "e544fecc9a0494fecdbdb36482179ecf852ca935f6b7eb81a6dde22b6048ef80", "microusd": 3100, "cost_status": "reported", "created_utc": "2026-10-25T14:35:16.057662+00:00"}
+{"event": "reserve", "request_id": "aafc0cc33a0bf47a3df913ef535c7f4f0d9e6efe7b3dc78017b2f2467ea145be", "microusd": 187017, "created_utc": "2026-10-25T14:35:16.074866+00:00"}
+{"event": "settle", "request_id": "aafc0cc33a0bf47a3df913ef535c7f4f0d9e6efe7b3dc78017b2f2467ea145be", "microusd": 3100, "cost_status": "reported", "created_utc": "2026-10-25T14:35:19.897275+00:00"}
+{"event": "reserve", "request_id": "bf4002f7b4f632c1fc4e7727c79a3d242831f01ad117be74b0dea635b48943c9", "microusd": 2693, "created_utc": "2026-10-25T14:35:19.915534+00:00"}
+{"event": "settle", "request_id": "bf4002f7b4f632c1fc4e7727c79a3d242831f01ad117be74b0dea635b48943c9", "microusd": 8, "cost_status": "reported", "created_utc": "2026-10-25T14:35:20.604496+00:00"}
+{"event": "reserve", "request_id": "015da3b54b86789e8d08dc8e7f1f2bbd7e66726e9a6fbf876add964a553007b9", "microusd": 87751, "created_utc": "2026-10-25T14:35:20.620552+00:00"}
+{"event": "settle", "request_id": "015da3b54b86789e8d08dc8e7f1f2bbd7e66726e9a6fbf876add964a553007b9", "microusd": 562, "cost_status": "reported", "created_utc": "2026-10-25T14:35:23.923555+00:00"}
+{"event": "reserve", "request_id": "e47e2642c58cbe538004bc4bde5310c4dd5bd4897f2001f7fe5f79c3db3aa921", "microusd": 87751, "created_utc": "2026-10-25T14:35:23.940578+00:00"}
+{"event": "settle", "request_id": "e47e2642c58cbe538004bc4bde5310c4dd5bd4897f2001f7fe5f79c3db3aa921", "microusd": 1138, "cost_status": "reported", "created_utc": "2026-10-25T14:35:34.529657+00:00"}
+{"event": "reserve", "request_id": "6c315e0c2373c31a494009c8109796fe074c926614e43e008ed43db2cff7d443", "microusd": 687275, "created_utc": "2026-10-25T14:35:34.547354+00:00"}
+{"event": "settle", "request_id": "6c315e0c2373c31a494009c8109796fe074c926614e43e008ed43db2cff7d443", "microusd": 4590, "cost_status": "reported", "created_utc": "2026-10-25T14:35:37.060525+00:00"}
+{"event": "reserve", "request_id": "48b660ec016ab1b41237f8fc03d74f9a3b085a630c63185396627d03117b50e6", "microusd": 687275, "created_utc": "2026-10-25T14:35:37.079252+00:00"}
+{"event": "settle", "request_id": "48b660ec016ab1b41237f8fc03d74f9a3b085a630c63185396627d03117b50e6", "microusd": 5490, "cost_status": "reported", "created_utc": "2026-10-25T14:35:38.489842+00:00"}
+{"event": "reserve", "request_id": "90bca3bd3ddac1c0c1fb8a87b1befaf70154538e81851241e5bcb889d711208c", "microusd": 187161, "created_utc": "2026-10-25T14:35:38.508587+00:00"}
+{"event": "settle", "request_id": "90bca3bd3ddac1c0c1fb8a87b1befaf70154538e81851241e5bcb889d711208c", "microusd": 3072, "cost_status": "reported", "created_utc": "2026-10-25T14:35:39.978868+00:00"}
+{"event": "reserve", "request_id": "4a435e1a816abf66136b3851817d03b7b022049b9e2aa00d4d7b8ec5bf6445fb", "microusd": 187161, "created_utc": "2026-10-25T14:35:39.997114+00:00"}
+{"event": "settle", "request_id": "4a435e1a816abf66136b3851817d03b7b022049b9e2aa00d4d7b8ec5bf6445fb", "microusd": 3072, "cost_status": "reported", "created_utc": "2026-10-25T14:35:41.230926+00:00"}
+{"event": "reserve", "request_id": "92bef8a6280944bbefc5b25884efe20e4a831026903dc8a6ef20b11ac091167d", "microusd": 2695, "created_utc": "2026-10-25T14:35:41.247921+00:00"}
+{"event": "settle", "request_id": "92bef8a6280944bbefc5b25884efe20e4a831026903dc8a6ef20b11ac091167d", "microusd": 8, "cost_status": "reported", "created_utc": "2026-10-25T14:35:42.152318+00:00"}
+{"event": "reserve", "request_id": "49f2888091ecf596edc69a90f3ae7fda6b5b4fe41da24991518921359971cf78", "microusd": 2695, "created_utc": "2026-10-25T14:35:42.168469+00:00"}
+{"event": "settle", "request_id": "49f2888091ecf596edc69a90f3ae7fda6b5b4fe41da24991518921359971cf78", "microusd": 18, "cost_status": "reported", "created_utc": "2026-10-25T14:35:43.048586+00:00"}
+{"event": "reserve", "request_id": "c4eee5bd50198262d91e641ada6cfd2519eda1eab9a3f1e72092eced515c5c1c", "microusd": 87692, "created_utc": "2026-10-25T14:35:43.066071+00:00"}
+{"event": "settle", "request_id": "c4eee5bd50198262d91e641ada6cfd2519eda1eab9a3f1e72092eced515c5c1c", "microusd": 523, "cost_status": "reported", "created_utc": "2026-10-25T14:35:46.547891+00:00"}
+{"event": "reserve", "request_id": "25988c06200ecbd3497109d0b845a94a5b78f038d54fd78448bf9ef3213d9cef", "microusd": 686550, "created_utc": "2026-10-25T14:35:46.563406+00:00"}
+{"event": "settle", "request_id": "25988c06200ecbd3497109d0b845a94a5b78f038d54fd78448bf9ef3213d9cef", "microusd": 4460, "cost_status": "reported", "created_utc": "2026-10-25T14:35:48.413149+00:00"}
+{"event": "reserve", "request_id": "2d35d4226e519028f45bc50de81f006c746ee0c7f700e6ed2dd190d0543859e7", "microusd": 686550, "created_utc": "2026-10-25T14:35:48.427505+00:00"}
+{"event": "settle", "request_id": "2d35d4226e519028f45bc50de81f006c746ee0c7f700e6ed2dd190d0543859e7", "microusd": 5410, "cost_status": "reported", "created_utc": "2026-10-25T14:35:50.119559+00:00"}
+{"event": "reserve", "request_id": "68bfb4b4c16e96dfabde7ff8625810aed01e1dc3c809f435b8c5ce24faf32ddb", "microusd": 186928, "created_utc": "2026-10-25T14:35:50.137115+00:00"}
+{"event": "settle", "request_id": "68bfb4b4c16e96dfabde7ff8625810aed01e1dc3c809f435b8c5ce24faf32ddb", "microusd": 186928, "cost_status": "conservative_content_filter_ceiling", "created_utc": "2026-10-25T14:35:51.276010+00:00"}
+{"event": "reserve", "request_id": "20fd7a9770e9248b233c503b4e596294022d8535a94ec27b13392689358b339e", "microusd": 186928, "created_utc": "2026-10-25T14:35:51.291402+00:00"}
+{"event": "settle", "request_id": "20fd7a9770e9248b233c503b4e596294022d8535a94ec27b13392689358b339e", "microusd": 186928, "cost_status": "conservative_content_filter_ceiling", "created_utc": "2026-10-25T14:35:52.363627+00:00"}
+{"event": "reserve", "request_id": "2de39de9d1938fe447f2bc6be9257fdfba4835c44bffaf8e2ed1a6e8c6705e9c", "microusd": 2692, "created_utc": "2026-10-25T14:35:52.381146+00:00"}
+{"event": "settle", "request_id": "2de39de9d1938fe447f2bc6be9257fdfba4835c44bffaf8e2ed1a6e8c6705e9c", "microusd": 6, "cost_status": "reported", "created_utc": "2026-10-25T14:35:52.864408+00:00"}
+{"event": "reserve", "request_id": "b35c20623e275812bdc9c9aa60772e1e9cedc29a3d4518541aecca29763f1aba", "microusd": 2692, "created_utc": "2026-10-25T14:35:52.881581+00:00"}
+{"event": "settle", "request_id": "b35c20623e275812bdc9c9aa60772e1e9cedc29a3d4518541aecca29763f1aba", "microusd": 18, "cost_status": "reported", "created_utc": "2026-10-25T14:35:54.129743+00:00"}
+{"event": "reserve", "request_id": "2183457648e1da279a2435707a7f750aec8eb54ce38a019a3b70190da14918fd", "microusd": 87692, "created_utc": "2026-10-25T14:35:54.145183+00:00"}
+{"event": "settle", "request_id": "2183457648e1da279a2435707a7f750aec8eb54ce38a019a3b70190da14918fd", "microusd": 536, "cost_status": "reported", "created_utc": "2026-10-25T14:35:58.535024+00:00"}
+{"event": "reserve", "request_id": "80955e8c831f710e06ead3bfc1317cbd7b210c1a694a64fc3313239a45f9e1b2", "microusd": 686900, "created_utc": "2026-10-25T14:35:58.553185+00:00"}
+{"event": "settle", "request_id": "80955e8c831f710e06ead3bfc1317cbd7b210c1a694a64fc3313239a45f9e1b2", "microusd": 5660, "cost_status": "reported", "created_utc": "2026-10-25T14:36:00.186563+00:00"}
+{"event": "reserve", "request_id": "6abb9cda30743781e82e46a7ffef46e43c3e3470150a71b61049969c1180277d", "microusd": 686900, "created_utc": "2026-10-25T14:36:00.200082+00:00"}
+{"event": "settle", "request_id": "6abb9cda30743781e82e46a7ffef46e43c3e3470150a71b61049969c1180277d", "microusd": 6360, "cost_status": "reported", "created_utc": "2026-10-25T14:36:07.808739+00:00"}
+{"event": "reserve", "request_id": "79d2e936ad60434edb54856af0a093139ec80df46f66b489e28d283552b30cfd", "microusd": 187040, "created_utc": "2026-10-25T14:36:07.826446+00:00"}
+{"event": "settle", "request_id": "79d2e936ad60434edb54856af0a093139ec80df46f66b489e28d283552b30cfd", "microusd": 3792, "cost_status": "reported", "created_utc": "2026-10-25T14:36:11.062723+00:00"}
+{"event": "reserve", "request_id": "11494afd9d29c5d36e0a727ca77f54a2e0248274e18d174f9a5ad38734a8fdd8", "microusd": 187040, "created_utc": "2026-10-25T14:36:11.081147+00:00"}
+{"event": "settle", "request_id": "11494afd9d29c5d36e0a727ca77f54a2e0248274e18d174f9a5ad38734a8fdd8", "microusd": 4052, "cost_status": "reported", "created_utc": "2026-10-25T14:36:14.574247+00:00"}
+{"event": "reserve", "request_id": "769022b79d922a27a917e083fd49c55be0efceb4f1884f196ea5dd181aff9ab4", "microusd": 2693, "created_utc": "2026-10-25T14:36:14.588063+00:00"}
+{"event": "settle", "request_id": "769022b79d922a27a917e083fd49c55be0efceb4f1884f196ea5dd181aff9ab4", "microusd": 8, "cost_status": "reported", "created_utc": "2026-10-25T14:36:15.704432+00:00"}
+{"event": "reserve", "request_id": "702e8b89126378d5a74e5ed7068b764915b9639a55730014b852ff74c93d03e7", "microusd": 2693, "created_utc": "2026-10-25T14:36:15.725991+00:00"}
+{"event": "settle", "request_id": "702e8b89126378d5a74e5ed7068b764915b9639a55730014b852ff74c93d03e7", "microusd": 86, "cost_status": "reported", "created_utc": "2026-10-25T14:36:20.816248+00:00"}
+{"event": "reserve", "request_id": "15511de67ded53d12384c05e3efbe8200ddd4f24ef3f5949654f4190f87dc38d", "microusd": 87720, "created_utc": "2026-10-25T14:36:20.836176+00:00"}
+{"event": "settle", "request_id": "15511de67ded53d12384c05e3efbe8200ddd4f24ef3f5949654f4190f87dc38d", "microusd": 576, "cost_status": "reported", "created_utc": "2026-10-25T14:36:28.471885+00:00"}
+{"event": "reserve", "request_id": "7ec08fa25433ff3a5d243e1d216ca0af67bb614b6ba90ddd59d3d5e6c39a269b", "microusd": 87720, "created_utc": "2026-10-25T14:36:28.492198+00:00"}
+{"event": "settle", "request_id": "7ec08fa25433ff3a5d243e1d216ca0af67bb614b6ba90ddd59d3d5e6c39a269b", "microusd": 1622, "cost_status": "reported", "created_utc": "2026-10-25T14:36:33.509657+00:00"}
+{"event": "reserve", "request_id": "8f66987081337de70b8988b64a335244ffeaccfed960913e86247557540969d5", "microusd": 682975, "created_utc": "2026-10-25T14:36:33.529492+00:00"}
+{"event": "settle", "request_id": "8f66987081337de70b8988b64a335244ffeaccfed960913e86247557540969d5", "microusd": 5020, "cost_status": "reported", "created_utc": "2026-10-25T14:36:35.149277+00:00"}
+{"event": "reserve", "request_id": "c673bf07183a29d941ca505abbb058588624dc41ea13d0aa1ebcf7a9a73ead8c", "microusd": 185784, "created_utc": "2026-10-25T14:36:35.167847+00:00"}
+{"event": "settle", "request_id": "c673bf07183a29d941ca505abbb058588624dc41ea13d0aa1ebcf7a9a73ead8c", "microusd": 2840, "cost_status": "reported", "created_utc": "2026-10-25T14:36:36.631255+00:00"}
+{"event": "reserve", "request_id": "4cb0bd56d125e0218c8e3ba5af3221bbafdcf1a64377a9475517849176f877ef", "microusd": 185784, "created_utc": "2026-10-25T14:36:36.649878+00:00"}
+{"event": "settle", "request_id": "4cb0bd56d125e0218c8e3ba5af3221bbafdcf1a64377a9475517849176f877ef", "microusd": 2840, "cost_status": "reported", "created_utc": "2026-10-25T14:36:38.019896+00:00"}
+{"event": "reserve", "request_id": "7da14b459eba7c422acdb93daff9a4882eb52782c6aec67397973858f31754d5", "microusd": 2678, "created_utc": "2026-10-25T14:36:38.039080+00:00"}
+{"event": "settle", "request_id": "7da14b459eba7c422acdb93daff9a4882eb52782c6aec67397973858f31754d5", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:36:38.452826+00:00"}
+{"event": "reserve", "request_id": "5b8909c693e484efd90f302ba4f700e3c02c01d3f9dfbb0129b72a23fbae5c1f", "microusd": 2678, "created_utc": "2026-10-25T14:36:38.469104+00:00"}
+{"event": "settle", "request_id": "5b8909c693e484efd90f302ba4f700e3c02c01d3f9dfbb0129b72a23fbae5c1f", "microusd": 10, "cost_status": "reported", "created_utc": "2026-10-25T14:36:39.294625+00:00"}
+{"event": "reserve", "request_id": "c4ed330c352cc05fd57aaa632b6df847dfe0ce7b95addb564b843368d0c6ab38", "microusd": 87407, "created_utc": "2026-10-25T14:36:39.311228+00:00"}
+{"event": "settle", "request_id": "c4ed330c352cc05fd57aaa632b6df847dfe0ce7b95addb564b843368d0c6ab38", "microusd": 488, "cost_status": "reported", "created_utc": "2026-10-25T14:36:42.366854+00:00"}
+{"event": "reserve", "request_id": "c45761604dba2969fd63e5c30d22e56dc9f657a65d981597733995a6069b1a2a", "microusd": 87407, "created_utc": "2026-10-25T14:36:42.385837+00:00"}
+{"event": "settle", "request_id": "c45761604dba2969fd63e5c30d22e56dc9f657a65d981597733995a6069b1a2a", "microusd": 1034, "cost_status": "reported", "created_utc": "2026-10-25T14:36:47.665733+00:00"}
+{"event": "reserve", "request_id": "ac9f5c5b56a38cc849cd66b4d0546665140249f2f7679ce7dbb1042cdf2827d1", "microusd": 682975, "created_utc": "2026-10-25T14:36:47.684807+00:00"}
+{"event": "settle", "request_id": "ac9f5c5b56a38cc849cd66b4d0546665140249f2f7679ce7dbb1042cdf2827d1", "microusd": 4220, "cost_status": "reported", "created_utc": "2026-10-25T14:36:50.202582+00:00"}
+{"event": "reserve", "request_id": "4a0bdb097da8587038e54570ed026dad98fee336dc895f039c823642e4b5671e", "microusd": 185832, "created_utc": "2026-10-25T14:36:50.221893+00:00"}
+{"event": "settle", "request_id": "4a0bdb097da8587038e54570ed026dad98fee336dc895f039c823642e4b5671e", "microusd": 2852, "cost_status": "reported", "created_utc": "2026-10-25T14:36:51.748647+00:00"}
+{"event": "reserve", "request_id": "0bb3cef21a554d8dd6dfca04468c13ca14b53c13ad399368f6b6c754393c2c00", "microusd": 185832, "created_utc": "2026-10-25T14:36:51.768194+00:00"}
+{"event": "settle", "request_id": "0bb3cef21a554d8dd6dfca04468c13ca14b53c13ad399368f6b6c754393c2c00", "microusd": 2852, "cost_status": "reported", "created_utc": "2026-10-25T14:36:53.274297+00:00"}
+{"event": "reserve", "request_id": "82f3d5bdad69fd97b941e8af0b3fb68b63dc9822f4ead7f0ed4e3e56861d77c5", "microusd": 2678, "created_utc": "2026-10-25T14:36:53.292778+00:00"}
+{"event": "settle", "request_id": "82f3d5bdad69fd97b941e8af0b3fb68b63dc9822f4ead7f0ed4e3e56861d77c5", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:36:54.353125+00:00"}
+{"event": "reserve", "request_id": "0313d04242a28292fff77c503e958cdceb7b12efdf359c47bcfda76387b52d2f", "microusd": 2678, "created_utc": "2026-10-25T14:36:54.372330+00:00"}
+{"event": "settle", "request_id": "0313d04242a28292fff77c503e958cdceb7b12efdf359c47bcfda76387b52d2f", "microusd": 17, "cost_status": "reported", "created_utc": "2026-10-25T14:36:55.730905+00:00"}
+{"event": "reserve", "request_id": "c50da9902fc9b6a13c35d88d4077ae41b1ce09375ee09d543ef86fc0904d1648", "microusd": 87419, "created_utc": "2026-10-25T14:36:55.748842+00:00"}
+{"event": "settle", "request_id": "c50da9902fc9b6a13c35d88d4077ae41b1ce09375ee09d543ef86fc0904d1648", "microusd": 488, "cost_status": "reported", "created_utc": "2026-10-25T14:36:57.290204+00:00"}
+{"event": "reserve", "request_id": "95a139b638f0c7b044d79b4ff1e2c513317969c22e9eceb3df01802355017e29", "microusd": 87419, "created_utc": "2026-10-25T14:36:57.308388+00:00"}
+{"event": "settle", "request_id": "95a139b638f0c7b044d79b4ff1e2c513317969c22e9eceb3df01802355017e29", "microusd": 824, "cost_status": "reported", "created_utc": "2026-10-25T14:37:00.442370+00:00"}
+{"event": "reserve", "request_id": "dda4672ad21a49a262a24a901e11189e51db68575cfec5ca4f9d9ad257a71b44", "microusd": 683125, "created_utc": "2026-10-25T14:37:00.462454+00:00"}
+{"event": "settle", "request_id": "dda4672ad21a49a262a24a901e11189e51db68575cfec5ca4f9d9ad257a71b44", "microusd": 4220, "cost_status": "reported", "created_utc": "2026-10-25T14:37:02.393783+00:00"}
+{"event": "reserve", "request_id": "443011c923670f44f08e9ed33af43106bfd0ced29f21500b3940ac2c548afdf7", "microusd": 683125, "created_utc": "2026-10-25T14:37:02.412810+00:00"}
+{"event": "settle", "request_id": "443011c923670f44f08e9ed33af43106bfd0ced29f21500b3940ac2c548afdf7", "microusd": 5070, "cost_status": "reported", "created_utc": "2026-10-25T14:37:04.026908+00:00"}
+{"event": "reserve", "request_id": "ec2725ad131bfe338623b16262acca9d58689134d984aa942e067a3d647e7693", "microusd": 185961, "created_utc": "2026-10-25T14:37:04.045994+00:00"}
+{"event": "settle", "request_id": "ec2725ad131bfe338623b16262acca9d58689134d984aa942e067a3d647e7693", "microusd": 2868, "cost_status": "reported", "created_utc": "2026-10-25T14:37:05.412741+00:00"}
+{"event": "reserve", "request_id": "e7d1e2385f38077865e9a6b75f11e3ad02beed7b0be68e4ef032e88fbc0fef06", "microusd": 2680, "created_utc": "2026-10-25T14:37:05.430735+00:00"}
+{"event": "settle", "request_id": "e7d1e2385f38077865e9a6b75f11e3ad02beed7b0be68e4ef032e88fbc0fef06", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:37:05.857106+00:00"}
+{"event": "reserve", "request_id": "118b23b724b04a3bc844b9ff009de43a5aca8624cf0457c7c81742fe574dc31f", "microusd": 2680, "created_utc": "2026-10-25T14:37:05.875446+00:00"}
+{"event": "settle", "request_id": "118b23b724b04a3bc844b9ff009de43a5aca8624cf0457c7c81742fe574dc31f", "microusd": 16, "cost_status": "reported", "created_utc": "2026-10-25T14:37:06.963982+00:00"}
+{"event": "reserve", "request_id": "ead15b3299f9ad0a4561ac44f8b0a7ef077da669b54e54414d00001b1dd67d17", "microusd": 87450, "created_utc": "2026-10-25T14:37:06.981861+00:00"}
+{"event": "settle", "request_id": "ead15b3299f9ad0a4561ac44f8b0a7ef077da669b54e54414d00001b1dd67d17", "microusd": 494, "cost_status": "reported", "created_utc": "2026-10-25T14:37:09.740038+00:00"}
+{"event": "reserve", "request_id": "ddb6df3f055c52128fafbb0d25377061dbdf353e70be4a69d34b93a231c7c584", "microusd": 87450, "created_utc": "2026-10-25T14:37:09.752755+00:00"}
+{"event": "settle", "request_id": "ddb6df3f055c52128fafbb0d25377061dbdf353e70be4a69d34b93a231c7c584", "microusd": 1240, "cost_status": "reported", "created_utc": "2026-10-25T14:37:14.487646+00:00"}
+{"event": "reserve", "request_id": "4ee6e5e8d767df32d363d5fbbcf7d41d7e2b6c111c24fbe28e6be07d909b370d", "microusd": 683525, "created_utc": "2026-10-25T14:37:14.507200+00:00"}
+{"event": "settle", "request_id": "4ee6e5e8d767df32d363d5fbbcf7d41d7e2b6c111c24fbe28e6be07d909b370d", "microusd": 4250, "cost_status": "reported", "created_utc": "2026-10-25T14:37:17.030696+00:00"}
+{"event": "reserve", "request_id": "a8381cc472f8ff30e0d883320841299ad01189d907d1d7af7b461442c6b5a514", "microusd": 683525, "created_utc": "2026-10-25T14:37:17.050310+00:00"}
+{"event": "settle", "request_id": "a8381cc472f8ff30e0d883320841299ad01189d907d1d7af7b461442c6b5a514", "microusd": 5000, "cost_status": "reported", "created_utc": "2026-10-25T14:37:18.333459+00:00"}
+{"event": "reserve", "request_id": "dfc33b80df6e59848b6a31e3dffb2c4f04a1a8e3fca9c2eba9decfd7259e1467", "microusd": 185961, "created_utc": "2026-10-25T14:37:18.349813+00:00"}
+{"event": "settle", "request_id": "dfc33b80df6e59848b6a31e3dffb2c4f04a1a8e3fca9c2eba9decfd7259e1467", "microusd": 2868, "cost_status": "reported", "created_utc": "2026-10-25T14:37:23.512523+00:00"}
+{"event": "reserve", "request_id": "347dba639d8e81e3ea7de188307fe46b710f7ae0ba9704d5e86f4a040a4c529c", "microusd": 2681, "created_utc": "2026-10-25T14:37:23.530985+00:00"}
+{"event": "settle", "request_id": "347dba639d8e81e3ea7de188307fe46b710f7ae0ba9704d5e86f4a040a4c529c", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:37:24.028241+00:00"}
+{"event": "reserve", "request_id": "1fc563f1e4ac6f5ddcad642cae81fbdd6fca1f21d042849dc0968548e2f937a6", "microusd": 2681, "created_utc": "2026-10-25T14:37:24.045791+00:00"}
+{"event": "settle", "request_id": "1fc563f1e4ac6f5ddcad642cae81fbdd6fca1f21d042849dc0968548e2f937a6", "microusd": 17, "cost_status": "reported", "created_utc": "2026-10-25T14:37:26.156336+00:00"}
+{"event": "reserve", "request_id": "64b44d790dd21e736f124ceedc2b12d59dc8a6a4b455f29029da957f481e47f3", "microusd": 87475, "created_utc": "2026-10-25T14:37:26.173382+00:00"}
+{"event": "settle", "request_id": "64b44d790dd21e736f124ceedc2b12d59dc8a6a4b455f29029da957f481e47f3", "microusd": 498, "cost_status": "reported", "created_utc": "2026-10-25T14:37:28.106017+00:00"}
+{"event": "reserve", "request_id": "9e506bf0afed521fdd1cf5d7f2bbee44ec5e9aeed7adbd599bb7c4ad8a2c1a59", "microusd": 87475, "created_utc": "2026-10-25T14:37:28.124188+00:00"}
+{"event": "settle", "request_id": "9e506bf0afed521fdd1cf5d7f2bbee44ec5e9aeed7adbd599bb7c4ad8a2c1a59", "microusd": 1154, "cost_status": "reported", "created_utc": "2026-10-25T14:37:33.985148+00:00"}
+{"event": "reserve", "request_id": "5f5149715fcfe4714d6682634a9a83e732a2e1d346b284957ee37cc6d4aa9f7b", "microusd": 683825, "created_utc": "2026-10-25T14:37:34.004126+00:00"}
+{"event": "settle", "request_id": "5f5149715fcfe4714d6682634a9a83e732a2e1d346b284957ee37cc6d4aa9f7b", "microusd": 4270, "cost_status": "reported", "created_utc": "2026-10-25T14:37:36.078680+00:00"}
+{"event": "reserve", "request_id": "c125bef2c4b4427e111cfd79514fbde1fe510995d3708d2491926aa5ce08b3ea", "microusd": 683825, "created_utc": "2026-10-25T14:37:36.097803+00:00"}
+{"event": "settle", "request_id": "c125bef2c4b4427e111cfd79514fbde1fe510995d3708d2491926aa5ce08b3ea", "microusd": 5070, "cost_status": "reported", "created_utc": "2026-10-25T14:37:37.401010+00:00"}
+{"event": "reserve", "request_id": "d4834279b91a1c0b7156d539847b9c1883b819c95928e85f52743c49d03961ea", "microusd": 186056, "created_utc": "2026-10-25T14:37:37.411295+00:00"}
+{"event": "settle", "request_id": "d4834279b91a1c0b7156d539847b9c1883b819c95928e85f52743c49d03961ea", "microusd": 2896, "cost_status": "reported", "created_utc": "2026-10-25T14:37:38.740926+00:00"}
+{"event": "reserve", "request_id": "cab210cbbdd016a194f32d30a11289cd729fb30ca9f2cf4654cd1cc31d923b54", "microusd": 186056, "created_utc": "2026-10-25T14:37:38.758163+00:00"}
+{"event": "settle", "request_id": "cab210cbbdd016a194f32d30a11289cd729fb30ca9f2cf4654cd1cc31d923b54", "microusd": 2896, "cost_status": "reported", "created_utc": "2026-10-25T14:37:43.488238+00:00"}
+{"event": "reserve", "request_id": "133f5c87197ec2e803cbb8c96472402154df23d38b2f3f134554802231f2a187", "microusd": 2682, "created_utc": "2026-10-25T14:37:43.507092+00:00"}
+{"event": "settle", "request_id": "133f5c87197ec2e803cbb8c96472402154df23d38b2f3f134554802231f2a187", "microusd": 16, "cost_status": "reported", "created_utc": "2026-10-25T14:37:44.474730+00:00"}
+{"event": "reserve", "request_id": "a3da1eeda07b7f3553c85e39290b0cee2e7e8f1250d7a5c921b844bcd85a094f", "microusd": 87484, "created_utc": "2026-10-25T14:37:44.494090+00:00"}
+{"event": "settle", "request_id": "a3da1eeda07b7f3553c85e39290b0cee2e7e8f1250d7a5c921b844bcd85a094f", "microusd": 500, "cost_status": "reported", "created_utc": "2026-10-25T14:37:47.387365+00:00"}
+{"event": "reserve", "request_id": "3c95506bee6c2b372edbce0d8e7d593b4651d118b4a4d0ef3be34905c756a33c", "microusd": 87484, "created_utc": "2026-10-25T14:37:47.408439+00:00"}
+{"event": "settle", "request_id": "3c95506bee6c2b372edbce0d8e7d593b4651d118b4a4d0ef3be34905c756a33c", "microusd": 1116, "cost_status": "reported", "created_utc": "2026-10-25T14:37:52.179155+00:00"}
+{"event": "reserve", "request_id": "3a2afcc74c1e33eeccf4ea5fc621ea3ff406640e744173c2702c01960dc064b2", "microusd": 683950, "created_utc": "2026-10-25T14:37:52.195576+00:00"}
+{"event": "settle", "request_id": "3a2afcc74c1e33eeccf4ea5fc621ea3ff406640e744173c2702c01960dc064b2", "microusd": 4290, "cost_status": "reported", "created_utc": "2026-10-25T14:37:53.371380+00:00"}
+{"event": "reserve", "request_id": "a9934cd667772cf21721060f297d8647d74e64c386290933ae7ac6f6739c7720", "microusd": 683950, "created_utc": "2026-10-25T14:37:53.391883+00:00"}
+{"event": "settle", "request_id": "a9934cd667772cf21721060f297d8647d74e64c386290933ae7ac6f6739c7720", "microusd": 5240, "cost_status": "reported", "created_utc": "2026-10-25T14:37:55.124376+00:00"}
+{"event": "reserve", "request_id": "5749f0f819b3fff25cb06be75576f4de0db0cc0c96b0b20fc5a8c12b027b50f9", "microusd": 186096, "created_utc": "2026-10-25T14:37:55.143005+00:00"}
+{"event": "settle", "request_id": "5749f0f819b3fff25cb06be75576f4de0db0cc0c96b0b20fc5a8c12b027b50f9", "microusd": 2912, "cost_status": "reported", "created_utc": "2026-10-25T14:37:56.867903+00:00"}
+{"event": "reserve", "request_id": "2510960c8a4f336c100b39eccfef77ae598ecc38a5a541b13840fb46148aadea", "microusd": 186096, "created_utc": "2026-10-25T14:37:56.885808+00:00"}
+{"event": "settle", "request_id": "2510960c8a4f336c100b39eccfef77ae598ecc38a5a541b13840fb46148aadea", "microusd": 2912, "cost_status": "reported", "created_utc": "2026-10-25T14:37:58.399811+00:00"}
+{"event": "reserve", "request_id": "8ca9fc04a7cef0ba83499c6ed4892035e485436cf3e34f9eb19f02d3450608c5", "microusd": 2682, "created_utc": "2026-10-25T14:37:58.419286+00:00"}
+{"event": "settle", "request_id": "8ca9fc04a7cef0ba83499c6ed4892035e485436cf3e34f9eb19f02d3450608c5", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:37:58.803404+00:00"}
+{"event": "reserve", "request_id": "02e7d37c9ce6fe28dcbb8f1fab950db9a39932b3b0aae2af2bb4cb83127f5892", "microusd": 87424, "created_utc": "2026-10-25T14:37:58.823108+00:00"}
+{"event": "settle", "request_id": "02e7d37c9ce6fe28dcbb8f1fab950db9a39932b3b0aae2af2bb4cb83127f5892", "microusd": 490, "cost_status": "reported", "created_utc": "2026-10-25T14:38:01.886341+00:00"}
+{"event": "reserve", "request_id": "847844120f7a76f3364ba0074ac1a28f904e854d670350ee892892118e9559b5", "microusd": 87424, "created_utc": "2026-10-25T14:38:01.904507+00:00"}
+{"event": "settle", "request_id": "847844120f7a76f3364ba0074ac1a28f904e854d670350ee892892118e9559b5", "microusd": 1076, "cost_status": "reported", "created_utc": "2026-10-25T14:38:06.083029+00:00"}
+{"event": "reserve", "request_id": "4bbe9407f67122198b5c10e59934567fcc8deaedc9bc7921b663f9d3052a57ee", "microusd": 683200, "created_utc": "2026-10-25T14:38:06.102041+00:00"}
+{"event": "settle", "request_id": "4bbe9407f67122198b5c10e59934567fcc8deaedc9bc7921b663f9d3052a57ee", "microusd": 4230, "cost_status": "reported", "created_utc": "2026-10-25T14:38:07.270637+00:00"}
+{"event": "reserve", "request_id": "54aab0e59b171e84bd1793ba15175ee85a347d62b5d9145610f9c058fe59b4d2", "microusd": 683200, "created_utc": "2026-10-25T14:38:07.289466+00:00"}
+{"event": "settle", "request_id": "54aab0e59b171e84bd1793ba15175ee85a347d62b5d9145610f9c058fe59b4d2", "microusd": 5530, "cost_status": "reported", "created_utc": "2026-10-25T14:38:09.050607+00:00"}
+{"event": "reserve", "request_id": "73eed74accbbb45697f89aa807e010ef315248698200c2c6feb6e2c7f5263e96", "microusd": 185857, "created_utc": "2026-10-25T14:38:09.069638+00:00"}
+{"event": "settle", "request_id": "73eed74accbbb45697f89aa807e010ef315248698200c2c6feb6e2c7f5263e96", "microusd": 2856, "cost_status": "reported", "created_utc": "2026-10-25T14:38:10.293277+00:00"}
+{"event": "reserve", "request_id": "032cf4fdfc573c564840a92ff3aa140362a0ba4aa5d867c77a09fa1d004942cd", "microusd": 185857, "created_utc": "2026-10-25T14:38:10.313294+00:00"}
+{"event": "settle", "request_id": "032cf4fdfc573c564840a92ff3aa140362a0ba4aa5d867c77a09fa1d004942cd", "microusd": 2856, "cost_status": "reported", "created_utc": "2026-10-25T14:38:13.309409+00:00"}
+{"event": "reserve", "request_id": "311500cd8677d2015736dad50bf3ce5823b6db313e1b8855d3b82e05485d938d", "microusd": 2679, "created_utc": "2026-10-25T14:38:13.330069+00:00"}
+{"event": "settle", "request_id": "311500cd8677d2015736dad50bf3ce5823b6db313e1b8855d3b82e05485d938d", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:38:13.894749+00:00"}
+{"event": "reserve", "request_id": "e367137ddb9930a12cdae8bf12c4fbc01cb837ccafa14bace6670cec6d01b966", "microusd": 2679, "created_utc": "2026-10-25T14:38:13.913781+00:00"}
+{"event": "settle", "request_id": "e367137ddb9930a12cdae8bf12c4fbc01cb837ccafa14bace6670cec6d01b966", "microusd": 11, "cost_status": "reported", "created_utc": "2026-10-25T14:38:14.494634+00:00"}
+{"event": "reserve", "request_id": "a93515982c1a1592b089729065219c18743fd7078edfca412aabb225a51a76dd", "microusd": 87473, "created_utc": "2026-10-25T14:38:14.513992+00:00"}
+{"event": "settle", "request_id": "a93515982c1a1592b089729065219c18743fd7078edfca412aabb225a51a76dd", "microusd": 884, "cost_status": "reported", "created_utc": "2026-10-25T14:38:17.757363+00:00"}
+{"event": "reserve", "request_id": "ff41762ee918f82b997ef2918ca837a41ae38239b258c0adbf46af497770465d", "microusd": 683800, "created_utc": "2026-10-25T14:38:17.773808+00:00"}
+{"event": "settle", "request_id": "ff41762ee918f82b997ef2918ca837a41ae38239b258c0adbf46af497770465d", "microusd": 4270, "cost_status": "reported", "created_utc": "2026-10-25T14:38:19.290565+00:00"}
+{"event": "reserve", "request_id": "7570da6f8605a6acfab481f60a2a4d0f9ddc564be79467724997be1d3a0f3ad0", "microusd": 683800, "created_utc": "2026-10-25T14:38:19.309859+00:00"}
+{"event": "settle", "request_id": "7570da6f8605a6acfab481f60a2a4d0f9ddc564be79467724997be1d3a0f3ad0", "microusd": 4970, "cost_status": "reported", "created_utc": "2026-10-25T14:38:21.443139+00:00"}
+{"event": "reserve", "request_id": "ce7081f4bc6dfc289e49a74faaefb893f0e427f15cdb3dadd6d9211de56b1983", "microusd": 186049, "created_utc": "2026-10-25T14:38:21.462850+00:00"}
+{"event": "settle", "request_id": "ce7081f4bc6dfc289e49a74faaefb893f0e427f15cdb3dadd6d9211de56b1983", "microusd": 2900, "cost_status": "reported", "created_utc": "2026-10-25T14:38:23.021892+00:00"}
+{"event": "reserve", "request_id": "c05d6a5384877e8fd8c40b8763c45abe4991378d3897be32a2c4959900341610", "microusd": 186049, "created_utc": "2026-10-25T14:38:23.040856+00:00"}
+{"event": "settle", "request_id": "c05d6a5384877e8fd8c40b8763c45abe4991378d3897be32a2c4959900341610", "microusd": 2900, "cost_status": "reported", "created_utc": "2026-10-25T14:38:24.642315+00:00"}
+{"event": "reserve", "request_id": "87b0a22ad3f90a07437779b644bfec897e83151f49c13408d8dfa4d12d34539e", "microusd": 2681, "created_utc": "2026-10-25T14:38:24.660548+00:00"}
+{"event": "settle", "request_id": "87b0a22ad3f90a07437779b644bfec897e83151f49c13408d8dfa4d12d34539e", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:38:25.473618+00:00"}
+{"event": "reserve", "request_id": "520c0fcd5fe996b6ca09f437907a8861438a13611168354d81fbc934eaa19feb", "microusd": 2681, "created_utc": "2026-10-25T14:38:25.493005+00:00"}
+{"event": "settle", "request_id": "520c0fcd5fe996b6ca09f437907a8861438a13611168354d81fbc934eaa19feb", "microusd": 14, "cost_status": "reported", "created_utc": "2026-10-25T14:38:28.199738+00:00"}
+{"event": "reserve", "request_id": "b026e135619ffad7e622db35b9d8e0730849aa5abe5c4cbfe1eda8ec036f1842", "microusd": 87473, "created_utc": "2026-10-25T14:38:28.219741+00:00"}
+{"event": "settle", "request_id": "b026e135619ffad7e622db35b9d8e0730849aa5abe5c4cbfe1eda8ec036f1842", "microusd": 498, "cost_status": "reported", "created_utc": "2026-10-25T14:38:31.056564+00:00"}
+{"event": "reserve", "request_id": "16fcb8db506a63ad9b9713bb9681aece5b48f0d8b8195a62aa5c16ab2d9d86fe", "microusd": 683275, "created_utc": "2026-10-25T14:38:31.076847+00:00"}
+{"event": "settle", "request_id": "16fcb8db506a63ad9b9713bb9681aece5b48f0d8b8195a62aa5c16ab2d9d86fe", "microusd": 4250, "cost_status": "reported", "created_utc": "2026-10-25T14:38:32.552113+00:00"}
+{"event": "reserve", "request_id": "acbf2cf10ae94e19c02c26d6b15943487dff70754d7f875ae347634f30f0db1f", "microusd": 683275, "created_utc": "2026-10-25T14:38:32.571936+00:00"}
+{"event": "settle", "request_id": "acbf2cf10ae94e19c02c26d6b15943487dff70754d7f875ae347634f30f0db1f", "microusd": 4950, "cost_status": "reported", "created_utc": "2026-10-25T14:38:36.200333+00:00"}
+{"event": "reserve", "request_id": "73982ffa75bc83489471d2033ab61a4f8ebe20656a8c3877e65dd7efebb6a62e", "microusd": 185881, "created_utc": "2026-10-25T14:38:36.221315+00:00"}
+{"event": "settle", "request_id": "73982ffa75bc83489471d2033ab61a4f8ebe20656a8c3877e65dd7efebb6a62e", "microusd": 2884, "cost_status": "reported", "created_utc": "2026-10-25T14:38:37.518413+00:00"}
+{"event": "reserve", "request_id": "b4659ecc9163b1d6ae2d4d142c837b1dc46709f06feec57e9905b92c755a857f", "microusd": 185881, "created_utc": "2026-10-25T14:38:37.537273+00:00"}
+{"event": "settle", "request_id": "b4659ecc9163b1d6ae2d4d142c837b1dc46709f06feec57e9905b92c755a857f", "microusd": 2884, "cost_status": "reported", "created_utc": "2026-10-25T14:38:42.329411+00:00"}
+{"event": "reserve", "request_id": "7ef8cde5ef1ccad0a6f027960bb519723d6054b03354643176a56afff04fde98", "microusd": 2679, "created_utc": "2026-10-25T14:38:42.342473+00:00"}
+{"event": "settle", "request_id": "7ef8cde5ef1ccad0a6f027960bb519723d6054b03354643176a56afff04fde98", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:38:42.841056+00:00"}
+{"event": "reserve", "request_id": "ffc5c52c8404c095190156abe20814b3fe0bc4662c0e94326fce79803aef826e", "microusd": 2679, "created_utc": "2026-10-25T14:38:42.861010+00:00"}
+{"event": "settle", "request_id": "ffc5c52c8404c095190156abe20814b3fe0bc4662c0e94326fce79803aef826e", "microusd": 16, "cost_status": "reported", "created_utc": "2026-10-25T14:38:44.226375+00:00"}
+{"event": "reserve", "request_id": "01d69f88ff585bfe012576682983e2b5bd3fe96be70ba82444984376d20fb56f", "microusd": 87431, "created_utc": "2026-10-25T14:38:44.243780+00:00"}
+{"event": "settle", "request_id": "01d69f88ff585bfe012576682983e2b5bd3fe96be70ba82444984376d20fb56f", "microusd": 492, "cost_status": "reported", "created_utc": "2026-10-25T14:38:47.504374+00:00"}
+{"event": "reserve", "request_id": "07a6cec00cd3c1df3eb9985c4b00e5342049a75aaffc3348f93f61ef811ac617", "microusd": 87431, "created_utc": "2026-10-25T14:38:47.523768+00:00"}
+{"event": "settle", "request_id": "07a6cec00cd3c1df3eb9985c4b00e5342049a75aaffc3348f93f61ef811ac617", "microusd": 838, "cost_status": "reported", "created_utc": "2026-10-25T14:38:50.534909+00:00"}
+{"event": "reserve", "request_id": "c2c5a67b90a87b7122d01d183d055218fe23b2eba465b60ea5259388b9ac375d", "microusd": 682900, "created_utc": "2026-10-25T14:38:50.553074+00:00"}
+{"event": "settle", "request_id": "c2c5a67b90a87b7122d01d183d055218fe23b2eba465b60ea5259388b9ac375d", "microusd": 4190, "cost_status": "reported", "created_utc": "2026-10-25T14:38:52.261440+00:00"}
+{"event": "reserve", "request_id": "8b06835e67e28a870f9f0d0f89992a5b36f5f6065187eea90a602fcc9fed95ea", "microusd": 185760, "created_utc": "2026-10-25T14:38:52.278895+00:00"}
+{"event": "settle", "request_id": "8b06835e67e28a870f9f0d0f89992a5b36f5f6065187eea90a602fcc9fed95ea", "microusd": 2848, "cost_status": "reported", "created_utc": "2026-10-25T14:38:53.821279+00:00"}
+{"event": "reserve", "request_id": "19305a89cd9087938ce867d42b3613ab075f038e96adf37cdeec1e3bf916d2f5", "microusd": 185760, "created_utc": "2026-10-25T14:38:53.840442+00:00"}
+{"event": "settle", "request_id": "19305a89cd9087938ce867d42b3613ab075f038e96adf37cdeec1e3bf916d2f5", "microusd": 2848, "cost_status": "reported", "created_utc": "2026-10-25T14:38:55.294919+00:00"}
+{"event": "reserve", "request_id": "4b500a362183e1fc6b42cf62f88c6f56673f4e3a81155b4dbccd53baa1ee89b5", "microusd": 2677, "created_utc": "2026-10-25T14:38:55.313721+00:00"}
+{"event": "settle", "request_id": "4b500a362183e1fc6b42cf62f88c6f56673f4e3a81155b4dbccd53baa1ee89b5", "microusd": 3, "cost_status": "reported", "created_utc": "2026-10-25T14:38:55.986230+00:00"}
+{"event": "reserve", "request_id": "c557a789b2faa9bda725af6b9b16e9ce5c6d5b9180aced4a8f37eb63841264c6", "microusd": 2677, "created_utc": "2026-10-25T14:38:56.004666+00:00"}
+{"event": "settle", "request_id": "c557a789b2faa9bda725af6b9b16e9ce5c6d5b9180aced4a8f37eb63841264c6", "microusd": 15, "cost_status": "reported", "created_utc": "2026-10-25T14:38:57.176275+00:00"}
+{"event": "reserve", "request_id": "0eb2270c9144f6054e10c8a6f3eea23cf880845a1481e1d57597b0e110b24e19", "microusd": 87400, "created_utc": "2026-10-25T14:38:57.193915+00:00"}
+{"event": "settle", "request_id": "0eb2270c9144f6054e10c8a6f3eea23cf880845a1481e1d57597b0e110b24e19", "microusd": 482, "cost_status": "reported", "created_utc": "2026-10-25T14:39:02.010161+00:00"}
+{"event": "reserve", "request_id": "e3f3c775d7dfec2d802da6c51cf684d6b8b66963119ab45cf121584254f24c01", "microusd": 87400, "created_utc": "2026-10-25T14:39:02.028632+00:00"}
+{"event": "settle", "request_id": "e3f3c775d7dfec2d802da6c51cf684d6b8b66963119ab45cf121584254f24c01", "microusd": 1228, "cost_status": "reported", "created_utc": "2026-10-25T14:39:06.597980+00:00"}
+{"event": "reserve", "request_id": "79f47fd684165de416994bf9473d46270959e8177761ce96fda3e5482bfc64ad", "microusd": 682900, "created_utc": "2026-10-25T14:39:06.617963+00:00"}
+{"event": "settle", "request_id": "79f47fd684165de416994bf9473d46270959e8177761ce96fda3e5482bfc64ad", "microusd": 4190, "cost_status": "reported", "created_utc": "2026-10-25T14:39:08.278942+00:00"}
+{"event": "reserve", "request_id": "d1797e780f184a851a1d8c231bca90df37fd1c345e2dcc2f85412c2805d61382", "microusd": 185848, "created_utc": "2026-10-25T14:39:08.297724+00:00"}
+{"event": "settle", "request_id": "d1797e780f184a851a1d8c231bca90df37fd1c345e2dcc2f85412c2805d61382", "microusd": 2868, "cost_status": "reported", "created_utc": "2026-10-25T14:39:09.773319+00:00"}
+{"event": "reserve", "request_id": "e289f0440841250053282be194a9c2c22a283194c8d95821f819e5a6109b5e2f", "microusd": 185848, "created_utc": "2026-10-25T14:39:09.791714+00:00"}
+{"event": "settle", "request_id": "e289f0440841250053282be194a9c2c22a283194c8d95821f819e5a6109b5e2f", "microusd": 2868, "cost_status": "reported", "created_utc": "2026-10-25T14:39:12.140803+00:00"}
+{"event": "reserve", "request_id": "e740752c6a5faa92ca768f337ee2d0bb13693dc23978b84ef39ee60eb9e6f7e1", "microusd": 2679, "created_utc": "2026-10-25T14:39:12.160925+00:00"}
+{"event": "settle", "request_id": "e740752c6a5faa92ca768f337ee2d0bb13693dc23978b84ef39ee60eb9e6f7e1", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:39:16.453226+00:00"}
+{"event": "reserve", "request_id": "702d7e28d36da03fc4e33d034efb1c27417719270483ad58394eea983093fab9", "microusd": 2679, "created_utc": "2026-10-25T14:39:16.471684+00:00"}
+{"event": "settle", "request_id": "702d7e28d36da03fc4e33d034efb1c27417719270483ad58394eea983093fab9", "microusd": 2679, "cost_status": "conservative_rate_limit_ceiling", "created_utc": "2026-10-25T14:41:03.434811+00:00"}
+{"event": "reserve", "request_id": "46624665300f88879380361f96ef8ac0f5e8860beeaef74f67a0cde6d2c8658f", "microusd": 87422, "created_utc": "2026-10-25T14:41:03.613994+00:00"}
+{"event": "settle", "request_id": "46624665300f88879380361f96ef8ac0f5e8860beeaef74f67a0cde6d2c8658f", "microusd": 486, "cost_status": "reported", "created_utc": "2026-10-25T14:41:06.309497+00:00"}
+{"event": "reserve", "request_id": "42d4fa0b0fe0e6b65ea22861fcb95be3ac7117cd64e240e5686e1e5d1a552fc2", "microusd": 87422, "created_utc": "2026-10-25T14:41:06.334840+00:00"}
+{"event": "settle", "request_id": "42d4fa0b0fe0e6b65ea22861fcb95be3ac7117cd64e240e5686e1e5d1a552fc2", "microusd": 1002, "cost_status": "reported", "created_utc": "2026-10-25T14:41:09.480257+00:00"}
+{"event": "reserve", "request_id": "6955140e26e11e80357d49023ca7b9dce4422b818c3874e995942376cbd36e7f", "microusd": 683175, "created_utc": "2026-10-25T14:41:09.499159+00:00"}
+{"event": "settle", "request_id": "6955140e26e11e80357d49023ca7b9dce4422b818c3874e995942376cbd36e7f", "microusd": 4210, "cost_status": "reported", "created_utc": "2026-10-25T14:41:10.708382+00:00"}
+{"event": "reserve", "request_id": "17e4ee87ec66f00e19b023f336843b26146c3fc081315927f09d9194fbc797df", "microusd": 683175, "created_utc": "2026-10-25T14:41:10.727519+00:00"}
+{"event": "settle", "request_id": "17e4ee87ec66f00e19b023f336843b26146c3fc081315927f09d9194fbc797df", "microusd": 5110, "cost_status": "reported", "created_utc": "2026-10-25T14:41:12.452021+00:00"}
+{"event": "reserve", "request_id": "352239aa6c9d1ac7689fb0cee8e61934682e607e4c759279dfe4a64b446f1baf", "microusd": 185896, "created_utc": "2026-10-25T14:41:12.470795+00:00"}
+{"event": "settle", "request_id": "352239aa6c9d1ac7689fb0cee8e61934682e607e4c759279dfe4a64b446f1baf", "microusd": 2876, "cost_status": "reported", "created_utc": "2026-10-25T14:41:13.946788+00:00"}
+{"event": "reserve", "request_id": "2307cd285cd736e86e18dbcf6b79534089f49b92420d6a1dbfedfc9ad225fa35", "microusd": 2679, "created_utc": "2026-10-25T14:41:13.965980+00:00"}
+{"event": "settle", "request_id": "2307cd285cd736e86e18dbcf6b79534089f49b92420d6a1dbfedfc9ad225fa35", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:41:14.715898+00:00"}
+{"event": "reserve", "request_id": "010cfc149ab186b9709f18e30400a0ff82960300a6e342297bb9b55ebc1ea09a", "microusd": 2679, "created_utc": "2026-10-25T14:41:14.733724+00:00"}
+{"event": "settle", "request_id": "010cfc149ab186b9709f18e30400a0ff82960300a6e342297bb9b55ebc1ea09a", "microusd": 31, "cost_status": "reported", "created_utc": "2026-10-25T14:41:16.239299+00:00"}
+{"event": "reserve", "request_id": "0daa6218b7262c582d983d4315e5886df1d5f5008633d7bda3bc0c777c0d2f4b", "microusd": 87435, "created_utc": "2026-10-25T14:41:16.256610+00:00"}
+{"event": "settle", "request_id": "0daa6218b7262c582d983d4315e5886df1d5f5008633d7bda3bc0c777c0d2f4b", "microusd": 1082, "cost_status": "reported", "created_utc": "2026-10-25T14:41:20.847936+00:00"}
+{"event": "reserve", "request_id": "cb06cf5060cdfff10282131edfb018b382c76560e8ff68c87b3dc2345c5f64ab", "microusd": 87435, "created_utc": "2026-10-25T14:41:20.866620+00:00"}
+{"event": "settle", "request_id": "cb06cf5060cdfff10282131edfb018b382c76560e8ff68c87b3dc2345c5f64ab", "microusd": 1088, "cost_status": "reported", "created_utc": "2026-10-25T14:41:26.479949+00:00"}
+{"event": "reserve", "request_id": "0f57690e6aa42b2e39a7281d847ec96254f3a3d03b8596d9a798a67ceeb392c0", "microusd": 683325, "created_utc": "2026-10-25T14:41:26.499064+00:00"}
+{"event": "settle", "request_id": "0f57690e6aa42b2e39a7281d847ec96254f3a3d03b8596d9a798a67ceeb392c0", "microusd": 4230, "cost_status": "reported", "created_utc": "2026-10-25T14:41:28.588321+00:00"}
+{"event": "reserve", "request_id": "1e2512b89ff0bd6b55caea0dd41b3d66919361e5a416d1c8770a4de62efa40d9", "microusd": 683325, "created_utc": "2026-10-25T14:41:28.607039+00:00"}
+{"event": "settle", "request_id": "1e2512b89ff0bd6b55caea0dd41b3d66919361e5a416d1c8770a4de62efa40d9", "microusd": 5630, "cost_status": "reported", "created_utc": "2026-10-25T14:41:30.782095+00:00"}
+{"event": "reserve", "request_id": "9b73f44382fe8f154753a0315d022463476ec05a2891fd616aac0296ac7a31b1", "microusd": 185896, "created_utc": "2026-10-25T14:41:30.796565+00:00"}
+{"event": "settle", "request_id": "9b73f44382fe8f154753a0315d022463476ec05a2891fd616aac0296ac7a31b1", "microusd": 2876, "cost_status": "reported", "created_utc": "2026-10-25T14:41:32.420534+00:00"}
+{"event": "reserve", "request_id": "c13000264741a9acf8eba75f9e0516c030c47d4b060a2bd828525e2787da136f", "microusd": 2678, "created_utc": "2026-10-25T14:41:32.434472+00:00"}
+{"event": "settle", "request_id": "c13000264741a9acf8eba75f9e0516c030c47d4b060a2bd828525e2787da136f", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:41:33.081792+00:00"}
+{"event": "reserve", "request_id": "f8a9b8492b519fb47f65ef68ea4b715edf4b782a4b010f164afa205eddc75a03", "microusd": 2678, "created_utc": "2026-10-25T14:41:33.101188+00:00"}
+{"event": "settle", "request_id": "f8a9b8492b519fb47f65ef68ea4b715edf4b782a4b010f164afa205eddc75a03", "microusd": 16, "cost_status": "reported", "created_utc": "2026-10-25T14:41:34.095629+00:00"}
+{"event": "reserve", "request_id": "1ac6878c53bbf99b36aea7a93acf8cf1c899b837e5235dd016a6a1f3fd24a839", "microusd": 87405, "created_utc": "2026-10-25T14:41:34.110814+00:00"}
+{"event": "settle", "request_id": "1ac6878c53bbf99b36aea7a93acf8cf1c899b837e5235dd016a6a1f3fd24a839", "microusd": 486, "cost_status": "reported", "created_utc": "2026-10-25T14:41:39.077119+00:00"}
+{"event": "reserve", "request_id": "d704131dda44790e8a91e4faae29e9df7ac19f8f6a26265353848360e20dfc25", "microusd": 87405, "created_utc": "2026-10-25T14:41:39.096038+00:00"}
+{"event": "settle", "request_id": "d704131dda44790e8a91e4faae29e9df7ac19f8f6a26265353848360e20dfc25", "microusd": 882, "cost_status": "reported", "created_utc": "2026-10-25T14:41:42.835157+00:00"}
+{"event": "reserve", "request_id": "efc1217f3f2380fec4de7aa33fa8b60616be375676c29cc4462471d491352f8e", "microusd": 682950, "created_utc": "2026-10-25T14:41:42.849946+00:00"}
+{"event": "settle", "request_id": "efc1217f3f2380fec4de7aa33fa8b60616be375676c29cc4462471d491352f8e", "microusd": 4210, "cost_status": "reported", "created_utc": "2026-10-25T14:41:47.045025+00:00"}
+{"event": "reserve", "request_id": "871752ae4b7ed5a499cfdceeca960a94ca726cf5dad173a4869fba287466fc42", "microusd": 682950, "created_utc": "2026-10-25T14:41:47.064484+00:00"}
+{"event": "settle", "request_id": "871752ae4b7ed5a499cfdceeca960a94ca726cf5dad173a4869fba287466fc42", "microusd": 5210, "cost_status": "reported", "created_utc": "2026-10-25T14:41:49.520016+00:00"}
+{"event": "reserve", "request_id": "99607bc8e7340a37fec1066078ae995cb36f27cefabe2fe9d726b27a16d8f453", "microusd": 185777, "created_utc": "2026-10-25T14:41:49.536905+00:00"}
+{"event": "settle", "request_id": "99607bc8e7340a37fec1066078ae995cb36f27cefabe2fe9d726b27a16d8f453", "microusd": 2848, "cost_status": "reported", "created_utc": "2026-10-25T14:41:50.660947+00:00"}
+{"event": "reserve", "request_id": "bf7816b0800627c0bcff96f4ce2ccd72c06658a34df70cc0c2ae7a4b87880aeb", "microusd": 185777, "created_utc": "2026-10-25T14:41:50.673963+00:00"}
+{"event": "settle", "request_id": "bf7816b0800627c0bcff96f4ce2ccd72c06658a34df70cc0c2ae7a4b87880aeb", "microusd": 2848, "cost_status": "reported", "created_utc": "2026-10-25T14:41:55.355759+00:00"}
+{"event": "reserve", "request_id": "9942fcb8339809d8f6ccb3f07b89f7605bc36bf3f8a4a34ddbb3ebcbaa0cd66f", "microusd": 2679, "created_utc": "2026-10-25T14:41:55.374363+00:00"}
+{"event": "settle", "request_id": "9942fcb8339809d8f6ccb3f07b89f7605bc36bf3f8a4a34ddbb3ebcbaa0cd66f", "microusd": 15, "cost_status": "reported", "created_utc": "2026-10-25T14:41:56.484999+00:00"}
+{"event": "reserve", "request_id": "2670abc708d4bfdd9f07f7960d04ab7d3fbf85095cf562b091f2e9ae9507a059", "microusd": 87433, "created_utc": "2026-10-25T14:41:56.504168+00:00"}
+{"event": "settle", "request_id": "2670abc708d4bfdd9f07f7960d04ab7d3fbf85095cf562b091f2e9ae9507a059", "microusd": 492, "cost_status": "reported", "created_utc": "2026-10-25T14:41:59.051887+00:00"}
+{"event": "reserve", "request_id": "fca5eb1959050d5fdd5d33d6d8e42cf1aea86a59ba014637a8b554f7ae437cab", "microusd": 87433, "created_utc": "2026-10-25T14:41:59.070715+00:00"}
+{"event": "settle", "request_id": "fca5eb1959050d5fdd5d33d6d8e42cf1aea86a59ba014637a8b554f7ae437cab", "microusd": 938, "cost_status": "reported", "created_utc": "2026-10-25T14:42:02.901375+00:00"}
+{"event": "reserve", "request_id": "daf96173feacd9da9c93c33c114d48c7f4f0317b68bdca07720b182018d93614", "microusd": 683300, "created_utc": "2026-10-25T14:42:02.920205+00:00"}
+{"event": "settle", "request_id": "daf96173feacd9da9c93c33c114d48c7f4f0317b68bdca07720b182018d93614", "microusd": 4240, "cost_status": "reported", "created_utc": "2026-10-25T14:42:04.710697+00:00"}
+{"event": "reserve", "request_id": "da2e2472af198a831b1a92fa42aad5b2864831e1f245bc1b6aacec5c86f29bbf", "microusd": 683300, "created_utc": "2026-10-25T14:42:04.729673+00:00"}
+{"event": "settle", "request_id": "da2e2472af198a831b1a92fa42aad5b2864831e1f245bc1b6aacec5c86f29bbf", "microusd": 5090, "cost_status": "reported", "created_utc": "2026-10-25T14:42:10.203642+00:00"}
+{"event": "reserve", "request_id": "dcc5cc45a204ae3f3fee678cb12b170a9b30e9b2d90af1a6b4e61c9dcfa4b545", "microusd": 185888, "created_utc": "2026-10-25T14:42:10.222395+00:00"}
+{"event": "settle", "request_id": "dcc5cc45a204ae3f3fee678cb12b170a9b30e9b2d90af1a6b4e61c9dcfa4b545", "microusd": 2864, "cost_status": "reported", "created_utc": "2026-10-25T14:42:12.048185+00:00"}
+{"event": "reserve", "request_id": "814bfa6a536ed9f83f54f864ec7bca53f9615ea69b1af72aa6bcb8188fb993bf", "microusd": 185888, "created_utc": "2026-10-25T14:42:12.063348+00:00"}
+{"event": "settle", "request_id": "814bfa6a536ed9f83f54f864ec7bca53f9615ea69b1af72aa6bcb8188fb993bf", "microusd": 2864, "cost_status": "reported", "created_utc": "2026-10-25T14:42:16.144906+00:00"}
+{"event": "reserve", "request_id": "c86e15e4c503ab1190090bfd58aa79db37762237934d46fc37c6f9da58377050", "microusd": 2679, "created_utc": "2026-10-25T14:42:16.164219+00:00"}
+{"event": "settle", "request_id": "c86e15e4c503ab1190090bfd58aa79db37762237934d46fc37c6f9da58377050", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:42:16.859346+00:00"}
+{"event": "reserve", "request_id": "97aa2938fbd80c209d46b623e2f1322f50a219bcf3f3463472d65ca6a27e346a", "microusd": 87419, "created_utc": "2026-10-25T14:42:16.878561+00:00"}
+{"event": "settle", "request_id": "97aa2938fbd80c209d46b623e2f1322f50a219bcf3f3463472d65ca6a27e346a", "microusd": 486, "cost_status": "reported", "created_utc": "2026-10-25T14:42:20.037404+00:00"}
+{"event": "reserve", "request_id": "52b968af2b3ff064c5852e0af0b1d6f8ee17db671a495af032ccbf54a85b7f49", "microusd": 87419, "created_utc": "2026-10-25T14:42:20.052682+00:00"}
+{"event": "settle", "request_id": "52b968af2b3ff064c5852e0af0b1d6f8ee17db671a495af032ccbf54a85b7f49", "microusd": 892, "cost_status": "reported", "created_utc": "2026-10-25T14:42:23.949927+00:00"}
+{"event": "reserve", "request_id": "1448cc6dcf26d6fd5204370ca796e4a1a880c07c38674c0332fdb4b743fdc221", "microusd": 683125, "created_utc": "2026-10-25T14:42:23.966480+00:00"}
+{"event": "settle", "request_id": "1448cc6dcf26d6fd5204370ca796e4a1a880c07c38674c0332fdb4b743fdc221", "microusd": 4210, "cost_status": "reported", "created_utc": "2026-10-25T14:42:25.359886+00:00"}
+{"event": "reserve", "request_id": "8c7976691f38266321d89c7f8364705925f00f1e19acc9abd0de633c1e58efd1", "microusd": 683125, "created_utc": "2026-10-25T14:42:25.378465+00:00"}
+{"event": "settle", "request_id": "8c7976691f38266321d89c7f8364705925f00f1e19acc9abd0de633c1e58efd1", "microusd": 5060, "cost_status": "reported", "created_utc": "2026-10-25T14:42:29.921069+00:00"}
+{"event": "reserve", "request_id": "deb554f7479351b83a43bdf52ae2f1de2aee28e19f1244c638baf728c2bcc785", "microusd": 185832, "created_utc": "2026-10-25T14:42:29.940781+00:00"}
+{"event": "settle", "request_id": "deb554f7479351b83a43bdf52ae2f1de2aee28e19f1244c638baf728c2bcc785", "microusd": 2848, "cost_status": "reported", "created_utc": "2026-10-25T14:42:31.197065+00:00"}
+{"event": "reserve", "request_id": "61ed89cab324d305d084b0c6383650a50798c432265cd0787b9456561a443e82", "microusd": 185832, "created_utc": "2026-10-25T14:42:31.215883+00:00"}
+{"event": "settle", "request_id": "61ed89cab324d305d084b0c6383650a50798c432265cd0787b9456561a443e82", "microusd": 3188, "cost_status": "reported", "created_utc": "2026-10-25T14:42:34.207857+00:00"}
+{"event": "reserve", "request_id": "e258e41b61b76d827d5804fb9c886e0b28e0e8c0d0c6c6ae12f16f20f487e58c", "microusd": 2678, "created_utc": "2026-10-25T14:42:34.223342+00:00"}
+{"event": "settle", "request_id": "e258e41b61b76d827d5804fb9c886e0b28e0e8c0d0c6c6ae12f16f20f487e58c", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:42:35.515760+00:00"}
+{"event": "reserve", "request_id": "ca98c6ac904e4cfc5e8399487f747f7c64e0c7917c55b4b2510ee7e1390167fa", "microusd": 2678, "created_utc": "2026-10-25T14:42:35.531911+00:00"}
+{"event": "settle", "request_id": "ca98c6ac904e4cfc5e8399487f747f7c64e0c7917c55b4b2510ee7e1390167fa", "microusd": 11, "cost_status": "reported", "created_utc": "2026-10-25T14:42:36.452849+00:00"}
+{"event": "reserve", "request_id": "c98d4975ab86c347d19dfc3c05bd8169341fac95cbf3846952d8bd2fedcee458", "microusd": 87426, "created_utc": "2026-10-25T14:42:36.474796+00:00"}
+{"event": "settle", "request_id": "c98d4975ab86c347d19dfc3c05bd8169341fac95cbf3846952d8bd2fedcee458", "microusd": 954, "cost_status": "reported", "created_utc": "2026-10-25T14:42:41.083568+00:00"}
+{"event": "reserve", "request_id": "b527101aec039de6b5f7d430102bdef6c53e7d82b690618747b92c92b477ed34", "microusd": 683225, "created_utc": "2026-10-25T14:42:41.103482+00:00"}
+{"event": "settle", "request_id": "b527101aec039de6b5f7d430102bdef6c53e7d82b690618747b92c92b477ed34", "microusd": 4220, "cost_status": "reported", "created_utc": "2026-10-25T14:42:42.778108+00:00"}
+{"event": "reserve", "request_id": "a53328911cc77cdba3eec46a8dadd28123c311c67977dc4a170bd5596e8aa908", "microusd": 683225, "created_utc": "2026-10-25T14:42:42.797929+00:00"}
+{"event": "settle", "request_id": "a53328911cc77cdba3eec46a8dadd28123c311c67977dc4a170bd5596e8aa908", "microusd": 5370, "cost_status": "reported", "created_utc": "2026-10-25T14:42:46.463928+00:00"}
+{"event": "reserve", "request_id": "38917c985ca91f8b80119404d497a4ddf1ba1186ca89724788f21879a15d162b", "microusd": 185864, "created_utc": "2026-10-25T14:42:46.480181+00:00"}
+{"event": "settle", "request_id": "38917c985ca91f8b80119404d497a4ddf1ba1186ca89724788f21879a15d162b", "microusd": 2864, "cost_status": "reported", "created_utc": "2026-10-25T14:42:48.001834+00:00"}
+{"event": "reserve", "request_id": "7dc083250ff735e66507eeabf792d55cd3ab7c14fb6f7b2836df95c6478e4972", "microusd": 185864, "created_utc": "2026-10-25T14:42:48.021051+00:00"}
+{"event": "settle", "request_id": "7dc083250ff735e66507eeabf792d55cd3ab7c14fb6f7b2836df95c6478e4972", "microusd": 2864, "cost_status": "reported", "created_utc": "2026-10-25T14:42:49.489781+00:00"}
+{"event": "reserve", "request_id": "64c3089dd2c14a52885acac5ea054d0ec1fbbc3fa00f48a3373d9c140939efc0", "microusd": 2679, "created_utc": "2026-10-25T14:42:49.508199+00:00"}
+{"event": "settle", "request_id": "64c3089dd2c14a52885acac5ea054d0ec1fbbc3fa00f48a3373d9c140939efc0", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:42:50.097493+00:00"}
+{"event": "reserve", "request_id": "8860478b652b773c4dcde24a6549d62b5beea2100d9a24e61669e8840d922d24", "microusd": 2679, "created_utc": "2026-10-25T14:42:50.115592+00:00"}
+{"event": "settle", "request_id": "8860478b652b773c4dcde24a6549d62b5beea2100d9a24e61669e8840d922d24", "microusd": 15, "cost_status": "reported", "created_utc": "2026-10-25T14:42:52.211738+00:00"}
+{"event": "reserve", "request_id": "3392756195a21166ac7b9485e68b4d4ff16d5367340e91ec0e4374ee0de4da0a", "microusd": 87426, "created_utc": "2026-10-25T14:42:52.230916+00:00"}
+{"event": "settle", "request_id": "3392756195a21166ac7b9485e68b4d4ff16d5367340e91ec0e4374ee0de4da0a", "microusd": 488, "cost_status": "reported", "created_utc": "2026-10-25T14:42:54.858298+00:00"}
+{"event": "reserve", "request_id": "8c3a8c06446061d8bd6bb7eb2629738d07e3469e958d822b983606bc4fec981e", "microusd": 683150, "created_utc": "2026-10-25T14:42:54.877424+00:00"}
+{"event": "settle", "request_id": "8c3a8c06446061d8bd6bb7eb2629738d07e3469e958d822b983606bc4fec981e", "microusd": 4230, "cost_status": "reported", "created_utc": "2026-10-25T14:42:56.694569+00:00"}
+{"event": "reserve", "request_id": "96a4978149bacf51742eb2326b8cee2fed8aa8f0c9bedd18add27554e8819345", "microusd": 683150, "created_utc": "2026-10-25T14:42:56.713401+00:00"}
+{"event": "settle", "request_id": "96a4978149bacf51742eb2326b8cee2fed8aa8f0c9bedd18add27554e8819345", "microusd": 5230, "cost_status": "reported", "created_utc": "2026-10-25T14:42:58.308593+00:00"}
+{"event": "reserve", "request_id": "1d905ac4b5cd4cf5316f122017367b44f46cb9442ea7b315b8b2ebce459e0115", "microusd": 185840, "created_utc": "2026-10-25T14:42:58.321188+00:00"}
+{"event": "settle", "request_id": "1d905ac4b5cd4cf5316f122017367b44f46cb9442ea7b315b8b2ebce459e0115", "microusd": 2852, "cost_status": "reported", "created_utc": "2026-10-25T14:42:59.724633+00:00"}
+{"event": "reserve", "request_id": "b39a1c6d55688267863ff59d8d5ac8cb3e6594670a89ee9c54abb88888eb748f", "microusd": 185840, "created_utc": "2026-10-25T14:42:59.743025+00:00"}
+{"event": "settle", "request_id": "b39a1c6d55688267863ff59d8d5ac8cb3e6594670a89ee9c54abb88888eb748f", "microusd": 2852, "cost_status": "reported", "created_utc": "2026-10-25T14:43:02.239579+00:00"}
+{"event": "reserve", "request_id": "e9976beaf3d4852aeecf1afd5eaa524a725374326b3c46017707f54faa4c0da0", "microusd": 2678, "created_utc": "2026-10-25T14:43:02.259419+00:00"}
+{"event": "settle", "request_id": "e9976beaf3d4852aeecf1afd5eaa524a725374326b3c46017707f54faa4c0da0", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:43:02.933383+00:00"}
+{"event": "reserve", "request_id": "67ab5ffaac1985d9e505b6b57f18b66d171db5a625bda8988767032a676ba6a5", "microusd": 2678, "created_utc": "2026-10-25T14:43:02.950904+00:00"}
+{"event": "settle", "request_id": "67ab5ffaac1985d9e505b6b57f18b66d171db5a625bda8988767032a676ba6a5", "microusd": 15, "cost_status": "reported", "created_utc": "2026-10-25T14:43:04.272123+00:00"}
+{"event": "reserve", "request_id": "77aae8543bafca822a361fe07dc8f9c470cc0436c36f158eb95448b4908c00eb", "microusd": 87421, "created_utc": "2026-10-25T14:43:04.292039+00:00"}
+{"event": "settle", "request_id": "77aae8543bafca822a361fe07dc8f9c470cc0436c36f158eb95448b4908c00eb", "microusd": 490, "cost_status": "reported", "created_utc": "2026-10-25T14:43:06.219823+00:00"}
+{"event": "reserve", "request_id": "fb72b387406767300aa80d021744491302b90591d72d3b67cedcf54882693323", "microusd": 87421, "created_utc": "2026-10-25T14:43:06.236685+00:00"}
+{"event": "settle", "request_id": "fb72b387406767300aa80d021744491302b90591d72d3b67cedcf54882693323", "microusd": 1196, "cost_status": "reported", "created_utc": "2026-10-25T14:43:10.723399+00:00"}
+{"event": "reserve", "request_id": "526846ef73d379bb4576bc141aa923493f83613baaa9b1b4ff06d1272141846b", "microusd": 683300, "created_utc": "2026-10-25T14:43:10.741774+00:00"}
+{"event": "settle", "request_id": "526846ef73d379bb4576bc141aa923493f83613baaa9b1b4ff06d1272141846b", "microusd": 5090, "cost_status": "reported", "created_utc": "2026-10-25T14:43:12.464051+00:00"}
+{"event": "reserve", "request_id": "c678954677a24dccd0417e766b0eb3e2877c45178b97e40b19dbf4deb9220006", "microusd": 185888, "created_utc": "2026-10-25T14:43:12.483746+00:00"}
+{"event": "settle", "request_id": "c678954677a24dccd0417e766b0eb3e2877c45178b97e40b19dbf4deb9220006", "microusd": 2856, "cost_status": "reported", "created_utc": "2026-10-25T14:43:17.909615+00:00"}
+{"event": "reserve", "request_id": "bc192d70c9bf13e437a7d37b02f64ada68b630ebfa3b422834f1c174a3d633c9", "microusd": 185888, "created_utc": "2026-10-25T14:43:17.929666+00:00"}
+{"event": "settle", "request_id": "bc192d70c9bf13e437a7d37b02f64ada68b630ebfa3b422834f1c174a3d633c9", "microusd": 2856, "cost_status": "reported", "created_utc": "2026-10-25T14:43:20.969376+00:00"}
+{"event": "reserve", "request_id": "cb9718c348bfa41eceb504532a5457c8a3a379b0fffd7f39e41ec04c3c7167c0", "microusd": 2679, "created_utc": "2026-10-25T14:43:20.987435+00:00"}
+{"event": "settle", "request_id": "cb9718c348bfa41eceb504532a5457c8a3a379b0fffd7f39e41ec04c3c7167c0", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:43:21.411933+00:00"}
+{"event": "reserve", "request_id": "3efdbf62984aa74e0f3da2cf0f04fa0a5ac435160ef667434cf6f4d808e938df", "microusd": 2679, "created_utc": "2026-10-25T14:43:21.430853+00:00"}
+{"event": "settle", "request_id": "3efdbf62984aa74e0f3da2cf0f04fa0a5ac435160ef667434cf6f4d808e938df", "microusd": 11, "cost_status": "reported", "created_utc": "2026-10-25T14:43:22.954005+00:00"}
+{"event": "reserve", "request_id": "a1615a5b6b15578f12ac56ea9a4feef2e0653b4b4fe14c8a0058743c98e4a642", "microusd": 87433, "created_utc": "2026-10-25T14:43:22.972666+00:00"}
+{"event": "settle", "request_id": "a1615a5b6b15578f12ac56ea9a4feef2e0653b4b4fe14c8a0058743c98e4a642", "microusd": 492, "cost_status": "reported", "created_utc": "2026-10-25T14:43:25.879181+00:00"}
+{"event": "reserve", "request_id": "9cd4276c43e3d6252bfe8925dfbddbf97327d62357776e117a1b46f275d60f32", "microusd": 87433, "created_utc": "2026-10-25T14:43:25.896806+00:00"}
+{"event": "settle", "request_id": "9cd4276c43e3d6252bfe8925dfbddbf97327d62357776e117a1b46f275d60f32", "microusd": 858, "cost_status": "reported", "created_utc": "2026-10-25T14:43:29.503961+00:00"}
+{"event": "reserve", "request_id": "ad6721327cad2f1761bf5204ae83774f27122b1889097ef512315a6002cf9249", "microusd": 683300, "created_utc": "2026-10-25T14:43:29.522840+00:00"}
+{"event": "settle", "request_id": "ad6721327cad2f1761bf5204ae83774f27122b1889097ef512315a6002cf9249", "microusd": 4240, "cost_status": "reported", "created_utc": "2026-10-25T14:43:30.795211+00:00"}
+{"event": "reserve", "request_id": "286c91f204c868d70685df0d97367808a1486f64df0bee8339a50e7760f1d3fc", "microusd": 185969, "created_utc": "2026-10-25T14:43:30.809784+00:00"}
+{"event": "settle", "request_id": "286c91f204c868d70685df0d97367808a1486f64df0bee8339a50e7760f1d3fc", "microusd": 2896, "cost_status": "reported", "created_utc": "2026-10-25T14:43:35.256167+00:00"}
+{"event": "reserve", "request_id": "4dd3cd35c7a5c6666b216883d0624424330979454e97d6a16295a8228d51ac86", "microusd": 185969, "created_utc": "2026-10-25T14:43:35.274726+00:00"}
+{"event": "settle", "request_id": "4dd3cd35c7a5c6666b216883d0624424330979454e97d6a16295a8228d51ac86", "microusd": 2896, "cost_status": "reported", "created_utc": "2026-10-25T14:43:37.862527+00:00"}
+{"event": "reserve", "request_id": "80db8b8b0d4294d762bfc51290d3e9b0d7eb896cc1bc11730c777662f81741e9", "microusd": 2680, "created_utc": "2026-10-25T14:43:37.881891+00:00"}
+{"event": "settle", "request_id": "80db8b8b0d4294d762bfc51290d3e9b0d7eb896cc1bc11730c777662f81741e9", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:43:38.681726+00:00"}
+{"event": "reserve", "request_id": "0b3378324536d27eb147a6e68a3fcb80ad914d06d4e75a4c5b75ed5ba8dc97f0", "microusd": 2680, "created_utc": "2026-10-25T14:43:38.699124+00:00"}
+{"event": "settle", "request_id": "0b3378324536d27eb147a6e68a3fcb80ad914d06d4e75a4c5b75ed5ba8dc97f0", "microusd": 16, "cost_status": "reported", "created_utc": "2026-10-25T14:43:39.520835+00:00"}
+{"event": "reserve", "request_id": "c61f340cb760f743f88e569eb267e43eef2186be73b996e3cf1f4cd79c2b7189", "microusd": 87452, "created_utc": "2026-10-25T14:43:39.536801+00:00"}
+{"event": "settle", "request_id": "c61f340cb760f743f88e569eb267e43eef2186be73b996e3cf1f4cd79c2b7189", "microusd": 492, "cost_status": "reported", "created_utc": "2026-10-25T14:43:42.160766+00:00"}
+{"event": "reserve", "request_id": "2632274704719b680a15f45183921d59d0706e7ebe41bff7c217bcbf2d480587", "microusd": 87452, "created_utc": "2026-10-25T14:43:42.178068+00:00"}
+{"event": "settle", "request_id": "2632274704719b680a15f45183921d59d0706e7ebe41bff7c217bcbf2d480587", "microusd": 1058, "cost_status": "reported", "created_utc": "2026-10-25T14:43:45.232558+00:00"}
+{"event": "reserve", "request_id": "8b56e7015153c03bcbda4db61af6a0c91aeb8c18a126dc2488fda1cce660d112", "microusd": 683550, "created_utc": "2026-10-25T14:43:45.249810+00:00"}
+{"event": "settle", "request_id": "8b56e7015153c03bcbda4db61af6a0c91aeb8c18a126dc2488fda1cce660d112", "microusd": 4250, "cost_status": "reported", "created_utc": "2026-10-25T14:43:46.456328+00:00"}
+{"event": "reserve", "request_id": "f2e360bdd7fc28d4e5985dbb14c73caf6a9b2900bb109536d618000892aabc14", "microusd": 683550, "created_utc": "2026-10-25T14:43:46.463115+00:00"}
+{"event": "settle", "request_id": "f2e360bdd7fc28d4e5985dbb14c73caf6a9b2900bb109536d618000892aabc14", "microusd": 5150, "cost_status": "reported", "created_utc": "2026-10-25T14:43:48.208887+00:00"}
+{"event": "reserve", "request_id": "9665729011974174812ab9091748783678cd5447b0ff0abd78170df7967e8230", "microusd": 185937, "created_utc": "2026-10-25T14:43:48.228626+00:00"}
+{"event": "settle", "request_id": "9665729011974174812ab9091748783678cd5447b0ff0abd78170df7967e8230", "microusd": 2864, "cost_status": "reported", "created_utc": "2026-10-25T14:43:53.116642+00:00"}
+{"event": "reserve", "request_id": "1246cb0189297acf62f33e5d86c262bd54ec034064a9674ea393c5c95f99c379", "microusd": 2680, "created_utc": "2026-10-25T14:43:53.131694+00:00"}
+{"event": "settle", "request_id": "1246cb0189297acf62f33e5d86c262bd54ec034064a9674ea393c5c95f99c379", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:43:53.531430+00:00"}
+{"event": "reserve", "request_id": "065446543a45fc4eeb9c74c853bac4f4cd11226106dcb80bae86277bf50721f2", "microusd": 2680, "created_utc": "2026-10-25T14:43:53.551650+00:00"}
+{"event": "settle", "request_id": "065446543a45fc4eeb9c74c853bac4f4cd11226106dcb80bae86277bf50721f2", "microusd": 16, "cost_status": "reported", "created_utc": "2026-10-25T14:43:54.311329+00:00"}
+{"event": "reserve", "request_id": "08928cb13bc786e0622508cf9b20466d46a5d2b7493cf692127d6407db1e7fa9", "microusd": 87445, "created_utc": "2026-10-25T14:43:54.330521+00:00"}
+{"event": "settle", "request_id": "08928cb13bc786e0622508cf9b20466d46a5d2b7493cf692127d6407db1e7fa9", "microusd": 494, "cost_status": "reported", "created_utc": "2026-10-25T14:43:57.007397+00:00"}
+{"event": "reserve", "request_id": "8b96e8b487e723ab7ae1e55a1dda824ecebc49d85b968a48eb7574f27c60eb1b", "microusd": 87445, "created_utc": "2026-10-25T14:43:57.028919+00:00"}
+{"event": "settle", "request_id": "8b96e8b487e723ab7ae1e55a1dda824ecebc49d85b968a48eb7574f27c60eb1b", "microusd": 1120, "cost_status": "reported", "created_utc": "2026-10-25T14:44:01.087554+00:00"}
+{"event": "reserve", "request_id": "76b248e5dd6c36cd83bac7c393f6b7f41ed0bb2852592351bd0336736d6f3e32", "microusd": 683450, "created_utc": "2026-10-25T14:44:01.106751+00:00"}
+{"event": "settle", "request_id": "76b248e5dd6c36cd83bac7c393f6b7f41ed0bb2852592351bd0336736d6f3e32", "microusd": 4250, "cost_status": "reported", "created_utc": "2026-10-25T14:44:02.446508+00:00"}
+{"event": "reserve", "request_id": "4efd3b7f2c4f9edccd46defd6a81b960f58a713e04168c5b1f492d312406aaba", "microusd": 683450, "created_utc": "2026-10-25T14:44:02.465910+00:00"}
+{"event": "settle", "request_id": "4efd3b7f2c4f9edccd46defd6a81b960f58a713e04168c5b1f492d312406aaba", "microusd": 5450, "cost_status": "reported", "created_utc": "2026-10-25T14:44:04.503580+00:00"}
+{"event": "reserve", "request_id": "344a1a0419f799685bbd233e8049075ae2fd78d807a0326e7d16731a0d2caabb", "microusd": 185937, "created_utc": "2026-10-25T14:44:04.523474+00:00"}
+{"event": "settle", "request_id": "344a1a0419f799685bbd233e8049075ae2fd78d807a0326e7d16731a0d2caabb", "microusd": 2864, "cost_status": "reported", "created_utc": "2026-10-25T14:44:09.363673+00:00"}
+{"event": "reserve", "request_id": "3bbd8dd2e48994740f72a9326d9eab4d9105f2f6d2c69f55ded5c8f407232817", "microusd": 2680, "created_utc": "2026-10-25T14:44:09.380285+00:00"}
+{"event": "settle", "request_id": "3bbd8dd2e48994740f72a9326d9eab4d9105f2f6d2c69f55ded5c8f407232817", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:44:09.848847+00:00"}
+{"event": "reserve", "request_id": "e68b39d254f8fcf79c49b6b20843d7920cc49838348a27338ae556b8d60a8d96", "microusd": 2680, "created_utc": "2026-10-25T14:44:09.868085+00:00"}
+{"event": "settle", "request_id": "e68b39d254f8fcf79c49b6b20843d7920cc49838348a27338ae556b8d60a8d96", "microusd": 15, "cost_status": "reported", "created_utc": "2026-10-25T14:44:10.638642+00:00"}
+{"event": "reserve", "request_id": "d52d626c44d70704ed05072b09825db4e91aea8b02f1e042e84dbedd0404b7a3", "microusd": 87452, "created_utc": "2026-10-25T14:44:10.658312+00:00"}
+{"event": "settle", "request_id": "d52d626c44d70704ed05072b09825db4e91aea8b02f1e042e84dbedd0404b7a3", "microusd": 496, "cost_status": "reported", "created_utc": "2026-10-25T14:44:13.315980+00:00"}
+{"event": "reserve", "request_id": "778d56457c28f1cf5c2f59be8692a95f4789aaeb30616bcaf63d19eeedbd9591", "microusd": 87452, "created_utc": "2026-10-25T14:44:13.337059+00:00"}
+{"event": "settle", "request_id": "778d56457c28f1cf5c2f59be8692a95f4789aaeb30616bcaf63d19eeedbd9591", "microusd": 962, "cost_status": "reported", "created_utc": "2026-10-25T14:44:19.896920+00:00"}
+{"event": "reserve", "request_id": "7b4e47958c991115bfce88bc706ae2da38d332104ec68d868f26a90727fa3c69", "microusd": 683550, "created_utc": "2026-10-25T14:44:19.917038+00:00"}
+{"event": "settle", "request_id": "7b4e47958c991115bfce88bc706ae2da38d332104ec68d868f26a90727fa3c69", "microusd": 4260, "cost_status": "reported", "created_utc": "2026-10-25T14:44:21.483339+00:00"}
+{"event": "reserve", "request_id": "558250c6cc5bb8b22953fdda692eb619c71e73721f187f002af3e233fc361949", "microusd": 683550, "created_utc": "2026-10-25T14:44:21.502403+00:00"}
+{"event": "settle", "request_id": "558250c6cc5bb8b22953fdda692eb619c71e73721f187f002af3e233fc361949", "microusd": 5110, "cost_status": "reported", "created_utc": "2026-10-25T14:44:23.119966+00:00"}
+{"event": "reserve", "request_id": "46a9e7728a3c64e91ee4017d29420f7bcfef75b431b9d34a52a64ac9d62ff3ce", "microusd": 185969, "created_utc": "2026-10-25T14:44:23.139075+00:00"}
+{"event": "settle", "request_id": "46a9e7728a3c64e91ee4017d29420f7bcfef75b431b9d34a52a64ac9d62ff3ce", "microusd": 2880, "cost_status": "reported", "created_utc": "2026-10-25T14:44:24.678461+00:00"}
+{"event": "reserve", "request_id": "bfebf6a436813c7bae4ec141b61721f18d2a308648a96e8e4b31c1d71ca67c7d", "microusd": 185969, "created_utc": "2026-10-25T14:44:24.696893+00:00"}
+{"event": "settle", "request_id": "bfebf6a436813c7bae4ec141b61721f18d2a308648a96e8e4b31c1d71ca67c7d", "microusd": 2880, "cost_status": "reported", "created_utc": "2026-10-25T14:44:27.316900+00:00"}
+{"event": "reserve", "request_id": "7f6583d6509bc99f12eda4664c7163b6a320119cd640625380997c576f395ee8", "microusd": 2680, "created_utc": "2026-10-25T14:44:27.336323+00:00"}
+{"event": "settle", "request_id": "7f6583d6509bc99f12eda4664c7163b6a320119cd640625380997c576f395ee8", "microusd": 14, "cost_status": "reported", "created_utc": "2026-10-25T14:44:28.085470+00:00"}
+{"event": "reserve", "request_id": "3d3c8dee0a6a2f2b9a03bf6f3ca847c07dece807e1b52c838e83ba6876f3c732", "microusd": 87442, "created_utc": "2026-10-25T14:44:28.104997+00:00"}
+{"event": "settle", "request_id": "3d3c8dee0a6a2f2b9a03bf6f3ca847c07dece807e1b52c838e83ba6876f3c732", "microusd": 490, "cost_status": "reported", "created_utc": "2026-10-25T14:44:31.310426+00:00"}
+{"event": "reserve", "request_id": "ecf9b3288e5041abc49591b2c475a295d2cbf526f9aed3106124c6c0989ae67f", "microusd": 87442, "created_utc": "2026-10-25T14:44:31.331083+00:00"}
+{"event": "settle", "request_id": "ecf9b3288e5041abc49591b2c475a295d2cbf526f9aed3106124c6c0989ae67f", "microusd": 926, "cost_status": "reported", "created_utc": "2026-10-25T14:44:34.527108+00:00"}
+{"event": "reserve", "request_id": "c479a053d389904e9745216742f38b3909c1dcc3ba01d1b03e8325bc7f386107", "microusd": 683425, "created_utc": "2026-10-25T14:44:34.546114+00:00"}
+{"event": "settle", "request_id": "c479a053d389904e9745216742f38b3909c1dcc3ba01d1b03e8325bc7f386107", "microusd": 4230, "cost_status": "reported", "created_utc": "2026-10-25T14:44:36.329939+00:00"}
+{"event": "reserve", "request_id": "719d65e27fd1d305559e0ebc99c8c114811154a649c3dfffee4edcf2f0391029", "microusd": 683425, "created_utc": "2026-10-25T14:44:36.349175+00:00"}
+{"event": "settle", "request_id": "719d65e27fd1d305559e0ebc99c8c114811154a649c3dfffee4edcf2f0391029", "microusd": 5130, "cost_status": "reported", "created_utc": "2026-10-25T14:44:39.544597+00:00"}
+{"event": "reserve", "request_id": "3f45654dcef302c30c3248e4dbabb46762430421213671e88dc87cd3b8f60b5e", "microusd": 185928, "created_utc": "2026-10-25T14:44:39.563666+00:00"}
+{"event": "settle", "request_id": "3f45654dcef302c30c3248e4dbabb46762430421213671e88dc87cd3b8f60b5e", "microusd": 2864, "cost_status": "reported", "created_utc": "2026-10-25T14:44:42.268251+00:00"}
+{"event": "reserve", "request_id": "3c301908fc0e60291a10deb0b8cdf202b1144e41dbd6dd62b4c3d94851b6bcef", "microusd": 185928, "created_utc": "2026-10-25T14:44:42.286989+00:00"}
+{"event": "settle", "request_id": "3c301908fc0e60291a10deb0b8cdf202b1144e41dbd6dd62b4c3d94851b6bcef", "microusd": 2864, "cost_status": "reported", "created_utc": "2026-10-25T14:44:45.195925+00:00"}
+{"event": "reserve", "request_id": "83370f8161e7e1940d1714b7382199859e94ea598e5719f4ddea7bdebf1d30d6", "microusd": 2680, "created_utc": "2026-10-25T14:44:45.215900+00:00"}
+{"event": "settle", "request_id": "83370f8161e7e1940d1714b7382199859e94ea598e5719f4ddea7bdebf1d30d6", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:44:45.607808+00:00"}
+{"event": "reserve", "request_id": "7af93d3eb6e0083c4a77963941f2a086f7ada741f6127a4bbe22dc0caf59312a", "microusd": 87482, "created_utc": "2026-10-25T14:44:45.626987+00:00"}
+{"event": "settle", "request_id": "7af93d3eb6e0083c4a77963941f2a086f7ada741f6127a4bbe22dc0caf59312a", "microusd": 2084, "cost_status": "reported", "created_utc": "2026-10-25T14:44:52.816241+00:00"}
+{"event": "reserve", "request_id": "a009c3f417b70addb18197f9f22c66e3fb6e76821147a5d8b0004a3ca6d53b62", "microusd": 87482, "created_utc": "2026-10-25T14:44:52.837332+00:00"}
+{"event": "settle", "request_id": "a009c3f417b70addb18197f9f22c66e3fb6e76821147a5d8b0004a3ca6d53b62", "microusd": 1800, "cost_status": "reported", "created_utc": "2026-10-25T14:44:58.989140+00:00"}
+{"event": "reserve", "request_id": "167d86af880ba49c66346fec745c98b6698d59625bd2badd39b75acdefd32d4f", "microusd": 683925, "created_utc": "2026-10-25T14:44:59.009053+00:00"}
+{"event": "settle", "request_id": "167d86af880ba49c66346fec745c98b6698d59625bd2badd39b75acdefd32d4f", "microusd": 5800, "cost_status": "reported", "created_utc": "2026-10-25T14:45:01.389011+00:00"}
+{"event": "reserve", "request_id": "8c226c73998c33317bc66d1192456410444250ad888f3e716bda2a3e535ee53b", "microusd": 683925, "created_utc": "2026-10-25T14:45:01.408182+00:00"}
+{"event": "settle", "request_id": "8c226c73998c33317bc66d1192456410444250ad888f3e716bda2a3e535ee53b", "microusd": 9700, "cost_status": "reported", "created_utc": "2026-10-25T14:45:05.207408+00:00"}
+{"event": "reserve", "request_id": "6a1cc0f5c04bcf4c18d5af3d3b548bbc50d61557e609d3bc010f67f81e189e00", "microusd": 186088, "created_utc": "2026-10-25T14:45:05.225752+00:00"}
+{"event": "settle", "request_id": "6a1cc0f5c04bcf4c18d5af3d3b548bbc50d61557e609d3bc010f67f81e189e00", "microusd": 3812, "cost_status": "reported", "created_utc": "2026-10-25T14:45:08.300810+00:00"}
+{"event": "reserve", "request_id": "273cd4cbcd5af838a74ec8c947354f764f5c5cee5f037dc6afb81217a0269ec9", "microusd": 186088, "created_utc": "2026-10-25T14:45:08.320959+00:00"}
+{"event": "settle", "request_id": "273cd4cbcd5af838a74ec8c947354f764f5c5cee5f037dc6afb81217a0269ec9", "microusd": 4192, "cost_status": "reported", "created_utc": "2026-10-25T14:45:15.345785+00:00"}
+{"event": "reserve", "request_id": "e5870f9fcdac05f785eaa5597147c004eeb43fe0fb4c93dca1754908a237f1f1", "microusd": 2681, "created_utc": "2026-10-25T14:45:15.365794+00:00"}
+{"event": "settle", "request_id": "e5870f9fcdac05f785eaa5597147c004eeb43fe0fb4c93dca1754908a237f1f1", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:45:16.679242+00:00"}
+{"event": "reserve", "request_id": "ad7f0d16658df46786b67d8f94b2ac0131a86a212716d85ee2465780afe02e97", "microusd": 2681, "created_utc": "2026-10-25T14:45:16.700680+00:00"}
+{"event": "settle", "request_id": "ad7f0d16658df46786b67d8f94b2ac0131a86a212716d85ee2465780afe02e97", "microusd": 79, "cost_status": "reported", "created_utc": "2026-10-25T14:45:21.797783+00:00"}
+{"event": "reserve", "request_id": "298fa7987ccd33e4d10c37b9e990689fe303203bfde90e8668d0dab07c21c665", "microusd": 87452, "created_utc": "2026-10-25T14:45:21.812552+00:00"}
+{"event": "settle", "request_id": "298fa7987ccd33e4d10c37b9e990689fe303203bfde90e8668d0dab07c21c665", "microusd": 1488, "cost_status": "reported", "created_utc": "2026-10-25T14:45:26.925132+00:00"}
+{"event": "reserve", "request_id": "0d79468e10a98d9d6a9a8b1e8a88af59a97dc9c61a3f240b338a8d65e9c99ba4", "microusd": 683550, "created_utc": "2026-10-25T14:45:26.944603+00:00"}
+{"event": "settle", "request_id": "0d79468e10a98d9d6a9a8b1e8a88af59a97dc9c61a3f240b338a8d65e9c99ba4", "microusd": 5480, "cost_status": "reported", "created_utc": "2026-10-25T14:45:28.760948+00:00"}
+{"event": "reserve", "request_id": "fbcb5ac427b78068db8f146717c34f629050003756d46657e56e64ba0af5963c", "microusd": 683550, "created_utc": "2026-10-25T14:45:28.780671+00:00"}
+{"event": "settle", "request_id": "fbcb5ac427b78068db8f146717c34f629050003756d46657e56e64ba0af5963c", "microusd": 7280, "cost_status": "reported", "created_utc": "2026-10-25T14:45:32.040354+00:00"}
+{"event": "reserve", "request_id": "aff7b3fb7dd4379676ef0a903d60cd298e8f9fa9368f5bbb2c6576849012cb00", "microusd": 185969, "created_utc": "2026-10-25T14:45:32.057038+00:00"}
+{"event": "settle", "request_id": "aff7b3fb7dd4379676ef0a903d60cd298e8f9fa9368f5bbb2c6576849012cb00", "microusd": 3964, "cost_status": "reported", "created_utc": "2026-10-25T14:45:35.899935+00:00"}
+{"event": "reserve", "request_id": "0b8700d4dfc2b950e041d45254e12c336a7bdf34099f5d6e6ff5fd177a732fbe", "microusd": 185969, "created_utc": "2026-10-25T14:45:35.916394+00:00"}
+{"event": "settle", "request_id": "0b8700d4dfc2b950e041d45254e12c336a7bdf34099f5d6e6ff5fd177a732fbe", "microusd": 3604, "cost_status": "reported", "created_utc": "2026-10-25T14:45:38.591550+00:00"}
+{"event": "reserve", "request_id": "f02a9dd819803b50394e6d894c0768567d4e4aafbef58e7b654275af15a65212", "microusd": 2680, "created_utc": "2026-10-25T14:45:38.605809+00:00"}
+{"event": "settle", "request_id": "f02a9dd819803b50394e6d894c0768567d4e4aafbef58e7b654275af15a65212", "microusd": 4, "cost_status": "reported", "created_utc": "2026-10-25T14:45:39.266093+00:00"}
+{"event": "reserve", "request_id": "a5351913c971cdeb90540b3669f8bf8c154027d54cbc4e0037d3f5b0cdf71ed5", "microusd": 2680, "created_utc": "2026-10-25T14:45:39.283458+00:00"}
+{"event": "settle", "request_id": "a5351913c971cdeb90540b3669f8bf8c154027d54cbc4e0037d3f5b0cdf71ed5", "microusd": 37, "cost_status": "reported", "created_utc": "2026-10-25T14:45:42.558494+00:00"}
+{"event": "reserve", "request_id": "0c78be4a9e40c43726df0f194bde95f352bce1012332b302daed19e78e6b6293", "microusd": 87452, "created_utc": "2026-10-25T14:45:42.576238+00:00"}
+{"event": "settle", "request_id": "0c78be4a9e40c43726df0f194bde95f352bce1012332b302daed19e78e6b6293", "microusd": 492, "cost_status": "reported", "created_utc": "2026-10-25T14:45:45.247559+00:00"}

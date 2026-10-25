@@ -1,0 +1,7 @@
+{
+  "status": "conservative_ceiling",
+  "amount_usd": 0.002679,
+  "classification_retried": false,
+  "prediction": "ERROR",
+  "reason": "HTTP 429 from upstream shared pool; retain as failure and deduct entire reservation, then resume subsequent cases."
+}

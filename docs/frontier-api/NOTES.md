@@ -29,3 +29,15 @@ The initial OpenAI and Anthropic calls succeeded. The direct DeepSeek endpoint r
 ## Pilot content-filter accounting amendment
 
 Anthropic returned a content-filter response for one fitting prompt without usage or cost. Its generation lookup returned 404. Preserve the failed classification as ERROR and do not retry or reword it. Charge the entire reserved request ceiling to the local budget until billing can be reconciled. Amend the runner to continue after this specifically identified scored failure while retaining conservative cost accounting; generic unknown-cost/transport/routing errors still stop. The original pre-reconciliation predictions/summary are retained alongside the corrected billing metadata. No valid label was inferred from the filter.
+
+## Pilot rate-limit interruption
+
+At fitting index 18, DeepInfra returned HTTP 429 (upstream shared-pool rate limit) for the higher-reasoning condition. Retain this observation as ERROR, deduct its entire request reservation, and do not retry that prompt. Resume subsequent planned cases after the interruption. Preserve the original predictions/summary and a billing-reconciliation sidecar. The pilot thus measures endpoint reliability as well as strict-label parsing.
+
+## Completed pilot and billing reconciliation
+
+Completed all 256 planned observations (32 fitting prompts, four models, two reasoning conditions) with 257 total requests including the initial routing rejection. Reported charges total $0.55119753456. The account usage increase of $0.551197476 matches within $0.000001; release the six conservative failure-cost holds while preserving both ledger versions. Cumulative project spend is $8.46119753456. No API inference remains active and no GPUs were rented.
+
+Astra produced 32/32 valid labels in both settings; Opus 30/32 in both (two filters each); DeepSeek 32/32 off and 31/32 high (one rate limit); Kimi 30/32 off and 32/32 high (two invalid outputs off). Reported higher reasoning increased latency for all four. No policy was tuned or selected, and no official-test inference occurred. The approximately $251 full-matrix projection at observed mean costs exceeds the remaining $11.54, so full search/test remain unstarted.
+
+Public metrics and cost projections reproduce exactly from archived prompt-free evidence. All runtime source hashes match archived versions. Preserve a private archive of raw requests/responses and account snapshots, with only its hash and size published. See READOUT.md for narrative findings and the public bundle for descriptive fitting metrics; these are not leaderboard claims.

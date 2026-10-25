@@ -1,0 +1,12 @@
+{
+  "pilot_completed": true,
+  "planned_observations": 256,
+  "attempt_manifests": 257,
+  "public_metrics_reproduce_exactly": true,
+  "all_runtime_source_hashes_archived": true,
+  "public_prediction_records_exclude_private_text": true,
+  "credential_or_account_id_scan_findings": 0,
+  "broken_local_links": 0,
+  "repository_tests_passed": 35,
+  "full_search_or_official_test_run": false
+}

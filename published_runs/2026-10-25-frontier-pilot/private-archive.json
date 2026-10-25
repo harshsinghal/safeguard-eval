@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-10-25T14:52:03.410322+00:00",
+  "filename": "private-pilot-archive.tar.gz",
+  "bytes": 362867,
+  "sha256": "ddefc16e9307c2af6baf5342bc146b6409a8605e35c61a456e1e36408a4c8cb7",
+  "contents": "Private gated prompts, raw API requests/responses, account snapshots, billing reconciliation and operation scripts. Not distributed.",
+  "api_credentials_included": false
+}

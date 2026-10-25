@@ -1,0 +1,113 @@
+{
+  "created_utc": "2026-10-25T14:43:45.246631+00:00",
+  "arm": "astra-lower",
+  "identity": {
+    "arm": {
+      "model_key": "astra",
+      "effort": "low",
+      "description": "low reasoning; not off"
+    },
+    "model": {
+      "id": "openai/gpt-6-astra",
+      "weights": "closed",
+      "provider_tag": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_name": "OpenAI | openai/gpt-6-astra-20260903",
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "medium"
+      },
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "seed",
+        "max_tokens",
+        "response_format",
+        "structured_outputs",
+        "tools",
+        "tool_choice",
+        "verbosity",
+        "reasoning_effort"
+      ],
+      "price_ceiling_per_token": {
+        "prompt": 2e-05,
+        "completion": 7.5e-05,
+        "request": 0.0,
+        "input_cache_write": 2.5e-05,
+        "input_cache_write_1h": 0.0
+      },
+      "max_tokens": 8192,
+      "context_length": 1050000,
+      "allowed_response_models": [
+        "openai/gpt-6-astra",
+        "openai/gpt-6-astra-20260903"
+      ],
+      "availability": "catalog verified; inference pilot pending",
+      "source": "https://openrouter.ai/openai/gpt-6-astra",
+      "price_per_token": {
+        "prompt": 1e-05,
+        "completion": 5e-05,
+        "request": 0.0
+      },
+      "excluded_provider_tags": [
+        "openai/flex",
+        "openai/fast",
+        "openai/ultrafast"
+      ],
+      "quantization": "unknown"
+    },
+    "settings": {
+      "concurrency": 1,
+      "retries": 0,
+      "max_tokens": 8192,
+      "temperature": "omitted",
+      "primary": "strict free-generated A=ALLOW/B=BLOCK",
+      "reasoning_text": "excluded",
+      "provider_fallbacks": false,
+      "structured_output": false
+    }
+  },
+  "policy_id": "wg-p0-taxonomy",
+  "policy_sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+  "dataset_sha256": "cc03cd46be158fbe6bf2d9a60b2aca4e07dfd38107f078dc3cbe9508812a8661",
+  "split": "fit",
+  "stage": "pilot",
+  "ids": [
+    "wgtrain-001767"
+  ],
+  "sources": {
+    "frontier_api/run.py": "4b2d2af22be383ae28216945b189ea47e083bb56df8e69620c04ee53abb51855",
+    "frontier_api/study.py": "1fa86e2d40394bdc5624f84e106d391d3cb20cd6bb9ad2011c18f297ae43339b",
+    "frontier_api/pilot.py": "23d0fc7c2f836d0ff1f05c1dc3ff997727bd7a170548cfab82ab8081b7669932",
+    "qwen_policy/run.py": "837baa4f70eb150062d647e90779f23f13363d90ba71fbf181205ebde59dea16",
+    "wildguard/run.py": "a2e35b7a878a729c2f8dfc0340be0b1fd3224c593746deb2f0cecf57658bac1b",
+    "wildguard/metrics.py": "8fd93378cb6bbbcbca2e6ed47e3f3ae198da663709d3fa7dbf44b1be41c69da7",
+    "run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986"
+  },
+  "registry_sha256": "758b9ad9e7818304d38692a7dd87561c3b1bb9c4b1cdb0c4aa24c9fcee2e939c",
+  "freeze_sha256": null,
+  "input_fields": [
+    "prompt"
+  ],
+  "budget": {
+    "status": "approved",
+    "authorization_note": "User authorized a $20 spending limit on 2026-10-25 in response to the proposed $10 pilot. Interpret as a cumulative project cap; retain $10 pilot-only cap.",
+    "authorized_utc": "2026-10-25T14:27:43.681693+00:00",
+    "prior_cumulative_usd": 7.91,
+    "cumulative_cap_usd": 20,
+    "approved_new_cap_usd": 10,
+    "allowed_stages": [
+      "pilot"
+    ],
+    "remaining_project_headroom_after_full_pilot_usd": 2.09
+  },
+  "pilot_index": 26
+}

@@ -125,8 +125,8 @@ class FrontierTests(unittest.TestCase):
         return registry, runs
 
     def test_billed_inference_and_missing_bill_stop_are_preserved(self):
-        for missing_bill in (False, True):
-            with self.subTest(missing_bill=missing_bill), tempfile.TemporaryDirectory() as td:
+        for missing_bill, filtered in ((False, False), (True, False), (True, True)):
+            with self.subTest(missing_bill=missing_bill, filtered=filtered), tempfile.TemporaryDirectory() as td:
                 td = Path(td)
                 data = td/'fit.jsonl'
                 data.write_text(json.dumps(dict(id='a', group='g', prompt='private input', expected='ALLOW', split='fit'))+'\n')
@@ -141,16 +141,20 @@ class FrontierTests(unittest.TestCase):
                     key_file=key, ledger=td/'ledger.jsonl')
                 response = dict(id='generation-test', model='openai/gpt-6-astra', provider='OpenAI',
                     usage={} if missing_bill else {'cost': .001, 'completion_tokens': 1},
-                    choices=[dict(finish_reason='stop', message={'content': 'A'})])
+                    choices=[dict(finish_reason='content_filter' if filtered else 'stop', message={'content': 'A'})])
                 with patch('evals.frontier_api.run.post', return_value=response) as api:
                     result = run(args)
                     api.assert_called_once()
-                self.assertEqual(result['complete'], not missing_bill)
+                self.assertEqual(result['complete'], not missing_bill or filtered)
                 public = (args.out/'predictions.jsonl').read_text()
                 self.assertNotIn('private input', public)
                 self.assertNotIn('sk-or', public)
-                if missing_bill:
+                if missing_bill and not filtered:
                     with self.assertRaises(ValueError): Ledger(args.ledger, 1).reserve('next', .01)
+                elif filtered:
+                    self.assertEqual(result['accuracy'], 0)
+                    self.assertGreater(json.loads(public)['cost_upper_bound_usd'], 0)
+                    Ledger(args.ledger, 1).reserve('next', .01)
                 else:
                     self.assertEqual(result['accuracy'], 1)
 

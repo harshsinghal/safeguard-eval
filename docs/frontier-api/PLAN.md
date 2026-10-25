@@ -1,6 +1,6 @@
 # Frontier models as policy classifiers
 
-**Status: pilot authorized on October 25, 2026.** The user raised the cumulative cap to $20; retain the proposed $10 pilot-only limit within it. The budget estimates and original proposal below are preserved as the preregistration. No frontier inference results yet. This is the third study, after the specialized-policy and nearby-size Qwen comparisons.
+**Status: pilot completed on October 25, 2026 for $0.55; full study unstarted.** The user raised the cumulative cap to $20; the pilot used a $10 phase limit within it. Cumulative spend is now $8.46. The budget estimates and original proposal below are preserved as the preregistration. Read the [pilot findings](READOUT.md). This is the third study, after the specialized-policy and nearby-size Qwen comparisons.
 
 ## Questions
 
@@ -14,12 +14,14 @@ Here “foundation model” means a general-purpose, post-trained model exposed 
 |---|---|---|
 | `openai/gpt-6-astra` | Low versus high; off unsupported | OpenAI, standard endpoint |
 | `anthropic/claude-opus-5.5` | Low versus high; off unsupported | Anthropic, standard endpoint |
-| `deepseek/deepseek-v4.1-flash-1017` | Off versus high | DeepSeek |
+| `deepseek/deepseek-v4.1-flash-1017` | Off versus high | DeepInfra FP8 (documented pilot amendment) |
 | `moonshotai/kimi-k3.1-pro` | Off versus high | Moonshot AI, MXFP4 endpoint |
 
 These are a preregistered selection of current flagship contenders, not a claim that they already top this classification benchmark. OpenAI identifies Astra as its highest-intelligence model; Anthropic describes Opus 5.5 as its new leading general-release model. OpenRouter lists Kimi K3.1 Pro as a flagship open-weight model and the October 17 DeepSeek snapshot as a newer generation that surpasses its earlier Pro tier on reported general capabilities. Those claims motivate selection, not the experiment's conclusions.
 
 The [catalog and endpoint snapshot](catalog-snapshot.json) preserves the evidence available at selection. Kimi's catalog entry describes open weights but has no Hugging Face ID; availability of a downloadable checkpoint has not been independently verified. Models with only mandatory reasoning are not relabeled “thinking off.” Hiding reasoning text with `exclude: true` does not disable or stop billing for reasoning.
+
+Pilot amendment: the direct DeepSeek route was rejected by the account's paid-input training restrictions. Keep those settings unchanged and use the same checkpoint on DeepInfra FP8 instead; preserve the original rejected attempt and [routing amendment](routing-amendment.json). This changes the provider and recorded precision, not the chosen model family or prompt. Later Anthropic content-filter responses without usage are retained as errors, with the entire reserved request ceiling deducted from the local budget pending reconciliation. Filtered prompts are never retried or reworded.
 
 Qwen3.8-2.4T-A95B, GLM-5.3, and MiniMax-M3.1-Flash were also found in the catalog. They are possible later extensions, outside this core budget. Astra Pro is a separate compute setting of the same underlying model and is outside the core comparison. “Frontier” here identifies the model, not an unlimited-compute or maximum-effort deployment.
 
@@ -73,7 +75,7 @@ No GPUs are needed for this API study. Existing GPU.ai/Runpod preferences remain
 - [x] Implement runner, cost estimator, selection/freeze validation, and paired analysis.
 - [x] Check local parsing, billing, leakage boundaries, and freeze integrity with offline tests.
 - [x] Obtain a new pilot budget ($10 phase cap within the approved $20 cumulative cap).
-- [ ] Run and document the fitting-only pilot.
+- [x] Run and document the fitting-only pilot (256 planned observations, 257 attempted requests).
 - [ ] Use measured costs to finalize and approve full-study scope/budget.
 - [ ] Evaluate shared policies; write fitting-derived candidates and log every change.
 - [ ] Select on validation; freeze all final configurations.

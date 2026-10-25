@@ -1,0 +1,21 @@
+{
+  "checked_utc": "2026-10-25T14:47:31.563582+00:00",
+  "reported_generation_cost_usd": 0.5511975345599996,
+  "account_usage_delta_usd": 0.5511974759999996,
+  "local_charged_ceiling_usd": 1.312356,
+  "account_matches_reported": true,
+  "missing_generation_cost_count": 6,
+  "prior_project_cost_usd": 7.91,
+  "cumulative_reported_cost_usd": 8.46119753456,
+  "cumulative_conservative_ceiling_usd": 8.461277,
+  "approved_cumulative_cap_usd": 20,
+  "pilot_cap_usd": 10,
+  "status": "reconciled",
+  "account_reconciliation_tolerance_usd": 1e-06,
+  "previous_conservative_ceiling_usd": 1.312356,
+  "released_ceiling_usd": 0.761079,
+  "final_rounded_ledger_usd": 0.551277,
+  "unresolved_cost_reserve_usd": 0,
+  "explanation": "Six rejected/filtered/rate-limited responses lacked itemized usage. Account usage increase matches all reported generation charges within $0.000001; no additional aggregate charge is observed. Release conservative holds, preserve their history. Per-call billing remains unavailable for those failures.",
+  "previous_cumulative_conservative_ceiling_usd": 9.222356
+}

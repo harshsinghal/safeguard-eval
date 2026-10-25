@@ -4,7 +4,7 @@ Compare how specialized policy models and general-purpose instruction models app
 
 Experiments use GPU.ai first, with Runpod available when credits or GPU capacity are insufficient. See the [compute and budget notes](docs/COMPUTE.md).
 
-The [third study: frontier API models](docs/frontier-api/PLAN.md) is prepared for OpenRouter, comparing policy tuning and reasoning settings on the same WildGuard splits. Its runner is locally tested; the paid pilot awaits a new budget, and no frontier accuracy results are available yet.
+The [third study: frontier API models](docs/frontier-api/PLAN.md) completed a 256-observation fitting-only pilot through OpenRouter for **$0.55**, bringing cumulative spend to **$8.46** within the $20 cap. Read the [pilot findings](docs/frontier-api/READOUT.md) and [reproducible evidence](published_runs/2026-10-25-frontier-pilot/README.md). The full policy search and held-out evaluation have not run; projected API costs exceed the remaining budget.
 
 ## General-purpose Qwen versus policy models
 

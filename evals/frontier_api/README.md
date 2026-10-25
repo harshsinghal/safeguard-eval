@@ -1,6 +1,8 @@
 # Frontier API study tools
 
-Read the [registered plan](../../docs/frontier-api/PLAN.md), [notebook](../../docs/frontier-api/NOTES.md), and [progress](../../docs/frontier-api/progress.json). **No paid inference has run.** The registry deliberately blocks paid calls until a new budget is authorized. An OpenRouter balance or a CLI invocation is not a substitute for that authorization.
+Read the [registered plan](../../docs/frontier-api/PLAN.md), [notebook](../../docs/frontier-api/NOTES.md), and [progress](../../docs/frontier-api/progress.json). **Only the fitting pilot is currently authorized**, with a $10 phase limit inside the $20 cumulative cap. The registry blocks other phases. An OpenRouter balance or a CLI invocation is not a substitute for authorization.
+
+The pilot is now complete: [findings and archived evidence](../../published_runs/2026-10-25-frontier-pilot/README.md). Use the read-only reproduction command in that bundle to inspect it; the inference examples below describe how the completed run was launched.
 
 ## Local verification
 
@@ -35,6 +37,8 @@ python3 -m evals.frontier_api.pilot \
 ```
 
 This rotates through all eight conditions, one request at a time, over the same first 32 fitting rows. It records every attempted call and stops if the ledger cannot reserve the next request or if routing/billing/transport fails. Inspect validity, truncation, reported reasoning tokens, and measured cost before approving the search. A pilot summary with missing costs is not a final bill; reconcile the outstanding reservation against OpenRouter generation/billing records. No automatic classification retry is made.
+
+Use `--resume` only after a documented infrastructure reconciliation. It retains successful observations and completed invalid classifications, and preserves failed attempts. A content-filter response without usage remains ERROR and deducts its full request ceiling; it is not retried. Generic unknown billing still stops the run. Keep original manifests and any before-reconciliation files so accounting changes remain auditable.
 
 The `run` command also supports `fit`, `validation`, `audit`, `test`, and `repeat`. Each main run checks exact source-population hashes/counts. `repeat` uses the first 256 official-test IDs and requires the same freeze as final inference. Provider aliases are not immutable weight revisions; preserve all returned deployment metadata.
 

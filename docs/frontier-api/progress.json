@@ -1,11 +1,11 @@
 {
   "study": "frontier-api-v1",
-  "status": "pilot_authorized",
+  "status": "pilot_complete_full_study_outside_budget",
   "models": 4,
   "reasoning_conditions": 8,
   "local_tests_passed": 35,
-  "paid_inference_calls": 0,
-  "new_cost_usd": 0,
+  "paid_inference_calls": 257,
+  "new_cost_usd": 0.5511975345599996,
   "prior_cumulative_cost_usd": 7.91,
   "existing_cumulative_cap_exclusive_usd": 10,
   "proposed_pilot_cap_usd": 10,
@@ -15,13 +15,19 @@
     "catalog": "complete",
     "protocol": "complete",
     "runner": "locally_tested",
-    "pilot": "authorized",
+    "pilot": "complete",
     "search": "not_started",
     "freeze": "not_started",
     "test": "not_started",
-    "report": "not_started"
+    "report": "pilot_published_full_study_not_started"
   },
   "current_cumulative_cap_usd": 20,
   "approved_pilot_cap_usd": 10,
-  "authorization_utc": "2026-10-25T14:27:43.681693+00:00"
+  "authorization_utc": "2026-10-25T14:27:43.681693+00:00",
+  "planned_pilot_observations": 256,
+  "cumulative_cost_usd": 8.46119753456,
+  "remaining_cumulative_budget_usd": 11.53880246544,
+  "billing_status": "aggregate_reconciled",
+  "unresolved_cost_reserve_usd": 0,
+  "full_study_cost_projection_usd": 251.501100065955
 }

@@ -1,0 +1,8 @@
+{
+  "status": "conservative_ceiling",
+  "amount_usd": 0.186928,
+  "generation_metadata_lookup": "404; no usage record available",
+  "classification_retried": false,
+  "prediction": "ERROR",
+  "reason": "Upstream content_filter; reserve entire request ceiling and retain failure in pilot."
+}

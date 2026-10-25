@@ -1,0 +1,893 @@
+{
+  "retrieved_utc": "2026-10-25T13:22:59.851570+00:00",
+  "models_url": "https://openrouter.ai/api/v1/models",
+  "entries": [
+    {
+      "model": {
+        "id": "openai/gpt-6-astra",
+        "canonical_slug": "openai/gpt-6-astra-20260903",
+        "hugging_face_id": null,
+        "name": "OpenAI: GPT-6 Astra",
+        "created": 1788552838,
+        "description": "GPT-6 Astra is OpenAI's flagship model for demanding end-to-end work. It is suited for advanced analysis, software engineering, deep research, scientific work, and document creation, with particular strengths in long-horizon...",
+        "context_length": 1050000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "file",
+            "image",
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "GPT",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.00001",
+          "completion": "0.00005",
+          "web_search": "0.01",
+          "input_cache_read": "0.000001",
+          "input_cache_write": "0.0000125",
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00002",
+              "completion": "0.000075",
+              "input_cache_read": "0.000002",
+              "input_cache_write": "0.000025"
+            }
+          ]
+        },
+        "top_provider": {
+          "context_length": 1050000,
+          "max_completion_tokens": 128000,
+          "is_moderated": false
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools",
+          "verbosity"
+        ],
+        "default_parameters": {},
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/openai/gpt-6-astra-20260903/endpoints"
+        },
+        "benchmarks": {
+          "design_arena": [],
+          "artificial_analysis": {
+            "intelligence_index": 52.7,
+            "coding_index": 76.9,
+            "agentic_index": 51
+          }
+        },
+        "reasoning": {
+          "mandatory": true,
+          "default_enabled": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low"
+          ],
+          "default_effort": "medium"
+        }
+      },
+      "selected_endpoint": {
+        "name": "OpenAI | openai/gpt-6-astra-20260903",
+        "model_id": "openai/gpt-6-astra",
+        "model_name": "OpenAI: GPT-6 Astra",
+        "context_length": 1050000,
+        "pricing": {
+          "prompt": "0.00001",
+          "completion": "0.00005",
+          "web_search": "0.01",
+          "input_cache_read": "0.000001",
+          "input_cache_write": "0.0000125",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00002",
+              "completion": "0.000075",
+              "input_cache_read": "0.000002",
+              "input_cache_write": "0.000025"
+            }
+          ]
+        },
+        "provider_name": "OpenAI",
+        "tag": "openai",
+        "service_tier": null,
+        "quantization": "unknown",
+        "max_completion_tokens": 128000,
+        "max_prompt_tokens": 922000,
+        "supported_parameters": [
+          "reasoning",
+          "include_reasoning",
+          "seed",
+          "max_tokens",
+          "response_format",
+          "structured_outputs",
+          "tools",
+          "tool_choice",
+          "verbosity",
+          "reasoning_effort"
+        ],
+        "supports_tool_choice": {
+          "none": true,
+          "auto": true,
+          "required": true,
+          "function": true
+        },
+        "status": 0,
+        "uptime_last_30m": 100,
+        "uptime_last_5m": 100,
+        "uptime_last_1d": 100,
+        "supports_implicit_caching": false,
+        "native_tools": {
+          "openrouter:web_search": {
+            "type": "web_search"
+          },
+          "openrouter:apply_patch": {
+            "type": "apply_patch"
+          }
+        },
+        "supports_voice_cloning": false,
+        "supports_multiple_audio_references": false,
+        "supports_image_reference": false,
+        "supports_diarization": false,
+        "latency_last_30m": null,
+        "throughput_last_30m": null
+      }
+    },
+    {
+      "model": {
+        "id": "anthropic/claude-opus-5.5",
+        "canonical_slug": "anthropic/claude-opus-5.5-20260921",
+        "hugging_face_id": null,
+        "name": "Anthropic: Claude Opus 5.5",
+        "created": 1790094732,
+        "description": "Claude Opus 5.5 is Anthropic's flagship model for demanding reasoning, coding, and long-horizon agentic work, succeeding Claude Opus 5. It is particularly strong at multi-step changes in large codebases, code...",
+        "context_length": 1000000,
+        "architecture": {
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "text",
+            "image",
+            "file"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "Claude",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.000004",
+          "completion": "0.00002",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.000005",
+          "input_cache_write_1h": "0.000008"
+        },
+        "top_provider": {
+          "context_length": 1000000,
+          "max_completion_tokens": 128000,
+          "is_moderated": true
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "tool_choice",
+          "tools",
+          "verbosity"
+        ],
+        "default_parameters": {},
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/anthropic/claude-opus-5.5-20260921/endpoints"
+        },
+        "benchmarks": {
+          "design_arena": [
+            {
+              "arena": "agents",
+              "category": "blender3d",
+              "elo": 1276,
+              "win_rate": 59,
+              "rank": 4
+            },
+            {
+              "arena": "agents",
+              "category": "mobileapps",
+              "elo": 1308,
+              "win_rate": 62.4,
+              "rank": 2
+            },
+            {
+              "arena": "agents",
+              "category": "spreadsheet",
+              "elo": 1401,
+              "win_rate": 69.3,
+              "rank": 2
+            },
+            {
+              "arena": "agents",
+              "category": "webapps",
+              "elo": 1319,
+              "win_rate": 60.9,
+              "rank": 1
+            },
+            {
+              "arena": "models",
+              "category": "3d",
+              "elo": 1463,
+              "win_rate": 64.1,
+              "rank": 1
+            },
+            {
+              "arena": "models",
+              "category": "codecategories",
+              "elo": 1389,
+              "win_rate": 62,
+              "rank": 1
+            },
+            {
+              "arena": "models",
+              "category": "dataviz",
+              "elo": 1396,
+              "win_rate": 64.7,
+              "rank": 1
+            },
+            {
+              "arena": "models",
+              "category": "gamedev",
+              "elo": 1445,
+              "win_rate": 65.8,
+              "rank": 1
+            },
+            {
+              "arena": "models",
+              "category": "svg",
+              "elo": 1327,
+              "win_rate": 52.2,
+              "rank": 1
+            },
+            {
+              "arena": "models",
+              "category": "uicomponent",
+              "elo": 1377,
+              "win_rate": 63.4,
+              "rank": 3
+            },
+            {
+              "arena": "models",
+              "category": "website",
+              "elo": 1330,
+              "win_rate": 57.1,
+              "rank": 4
+            }
+          ],
+          "artificial_analysis": {
+            "intelligence_index": 57.6,
+            "coding_index": null,
+            "agentic_index": null
+          }
+        },
+        "reasoning": {
+          "mandatory": true,
+          "supported_efforts": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low"
+          ],
+          "default_effort": "high"
+        }
+      },
+      "selected_endpoint": {
+        "name": "Anthropic | anthropic/claude-opus-5.5-20260921",
+        "model_id": "anthropic/claude-opus-5.5",
+        "model_name": "Anthropic: Claude Opus 5.5",
+        "context_length": 1000000,
+        "pricing": {
+          "prompt": "0.000004",
+          "completion": "0.00002",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.000005",
+          "input_cache_write_1h": "0.000008",
+          "discount": 0
+        },
+        "provider_name": "Anthropic",
+        "tag": "anthropic",
+        "service_tier": null,
+        "quantization": "unknown",
+        "max_completion_tokens": 128000,
+        "max_prompt_tokens": null,
+        "supported_parameters": [
+          "reasoning",
+          "include_reasoning",
+          "max_tokens",
+          "stop",
+          "tool_choice",
+          "tools",
+          "structured_outputs",
+          "response_format",
+          "verbosity",
+          "reasoning_effort"
+        ],
+        "supports_tool_choice": {
+          "none": true,
+          "auto": true,
+          "required": false,
+          "function": false
+        },
+        "status": 0,
+        "uptime_last_30m": 100,
+        "uptime_last_5m": 100,
+        "uptime_last_1d": 100,
+        "supports_implicit_caching": false,
+        "native_tools": {
+          "openrouter:web_search": {
+            "type": "web_search_20260209"
+          },
+          "openrouter:web_fetch": {
+            "type": "web_fetch_20260209"
+          },
+          "openrouter:bash": {
+            "type": "bash_20250124"
+          },
+          "openrouter:advisor": {
+            "type": "advisor_20260301"
+          }
+        },
+        "supports_voice_cloning": false,
+        "supports_multiple_audio_references": false,
+        "supports_image_reference": false,
+        "supports_diarization": false,
+        "latency_last_30m": null,
+        "throughput_last_30m": null
+      }
+    },
+    {
+      "model": {
+        "id": "deepseek/deepseek-v4.1-flash-1017",
+        "canonical_slug": "deepseek/deepseek-v4.1-flash-20261017",
+        "hugging_face_id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "name": "DeepSeek: DeepSeek V4.1 Flash 1017",
+        "created": 1792225624,
+        "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
+        "context_length": 1048576,
+        "architecture": {
+          "modality": "text+image->text",
+          "input_modalities": [
+            "text",
+            "image"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "DeepSeek",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003",
+          "overrides": [
+            {
+              "utc_days": [
+                "saturday",
+                "sunday"
+              ],
+              "prompt": "0.00000015",
+              "completion": "0.0000006",
+              "input_cache_read": "0.000000003"
+            },
+            {
+              "utc_days": [
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday"
+              ],
+              "utc_start": 0,
+              "utc_end": 100,
+              "prompt": "0.00000015",
+              "completion": "0.0000006",
+              "input_cache_read": "0.000000003"
+            },
+            {
+              "utc_days": [
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday"
+              ],
+              "utc_start": 100,
+              "utc_end": 400,
+              "prompt": "0.0000003",
+              "completion": "0.0000012",
+              "input_cache_read": "0.000000006"
+            },
+            {
+              "utc_days": [
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday"
+              ],
+              "utc_start": 400,
+              "utc_end": 600,
+              "prompt": "0.00000015",
+              "completion": "0.0000006",
+              "input_cache_read": "0.000000003"
+            },
+            {
+              "utc_days": [
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday"
+              ],
+              "utc_start": 600,
+              "utc_end": 1000,
+              "prompt": "0.0000003",
+              "completion": "0.0000012",
+              "input_cache_read": "0.000000006"
+            },
+            {
+              "utc_days": [
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday"
+              ],
+              "utc_start": 1000,
+              "utc_end": 0,
+              "prompt": "0.00000015",
+              "completion": "0.0000006",
+              "input_cache_read": "0.000000003"
+            }
+          ]
+        },
+        "top_provider": {
+          "context_length": 1048576,
+          "max_completion_tokens": 393216,
+          "is_moderated": false
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_completion_tokens",
+          "max_tokens",
+          "min_p",
+          "parallel_tool_calls",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ],
+        "default_parameters": {},
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/deepseek/deepseek-v4.1-flash-20261017/endpoints"
+        },
+        "benchmarks": {
+          "design_arena": [
+            {
+              "arena": "agents",
+              "category": "spreadsheet",
+              "elo": 1283,
+              "win_rate": 51.2,
+              "rank": 6
+            },
+            {
+              "arena": "models",
+              "category": "3d",
+              "elo": 1347,
+              "win_rate": 42.7,
+              "rank": 9
+            },
+            {
+              "arena": "models",
+              "category": "asciiart",
+              "elo": 1223,
+              "win_rate": 50.8,
+              "rank": 19
+            },
+            {
+              "arena": "models",
+              "category": "codecategories",
+              "elo": 1293,
+              "win_rate": 48.5,
+              "rank": 17
+            },
+            {
+              "arena": "models",
+              "category": "dataviz",
+              "elo": 1287,
+              "win_rate": 52.5,
+              "rank": 17
+            },
+            {
+              "arena": "models",
+              "category": "gamedev",
+              "elo": 1288,
+              "win_rate": 46,
+              "rank": 22
+            },
+            {
+              "arena": "models",
+              "category": "svg",
+              "elo": 1238,
+              "win_rate": 51.2,
+              "rank": 14
+            },
+            {
+              "arena": "models",
+              "category": "uicomponent",
+              "elo": 1305,
+              "win_rate": 53.9,
+              "rank": 17
+            },
+            {
+              "arena": "models",
+              "category": "website",
+              "elo": 1307,
+              "win_rate": 55.8,
+              "rank": 12
+            }
+          ],
+          "artificial_analysis": {
+            "intelligence_index": 39.5,
+            "coding_index": null,
+            "agentic_index": null
+          }
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true,
+          "supported_efforts": [
+            "max",
+            "high",
+            "low",
+            "none"
+          ],
+          "default_effort": "high"
+        }
+      },
+      "selected_endpoint": {
+        "name": "DeepSeek | deepseek/deepseek-v4.1-flash-20261017",
+        "model_id": "deepseek/deepseek-v4.1-flash-1017",
+        "model_name": "DeepSeek: DeepSeek V4.1 Flash 1017",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003",
+          "discount": 0,
+          "overrides": [
+            {
+              "utc_days": [
+                "saturday",
+                "sunday"
+              ],
+              "prompt": "0.00000015",
+              "completion": "0.0000006",
+              "input_cache_read": "0.000000003"
+            },
+            {
+              "utc_start": 0,
+              "utc_end": 100,
+              "utc_days": [
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday"
+              ],
+              "prompt": "0.00000015",
+              "completion": "0.0000006",
+              "input_cache_read": "0.000000003"
+            },
+            {
+              "utc_start": 100,
+              "utc_end": 400,
+              "utc_days": [
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday"
+              ],
+              "prompt": "0.0000003",
+              "completion": "0.0000012",
+              "input_cache_read": "0.000000006"
+            },
+            {
+              "utc_start": 400,
+              "utc_end": 600,
+              "utc_days": [
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday"
+              ],
+              "prompt": "0.00000015",
+              "completion": "0.0000006",
+              "input_cache_read": "0.000000003"
+            },
+            {
+              "utc_start": 600,
+              "utc_end": 1000,
+              "utc_days": [
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday"
+              ],
+              "prompt": "0.0000003",
+              "completion": "0.0000012",
+              "input_cache_read": "0.000000006"
+            },
+            {
+              "utc_start": 1000,
+              "utc_end": 0,
+              "utc_days": [
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday"
+              ],
+              "prompt": "0.00000015",
+              "completion": "0.0000006",
+              "input_cache_read": "0.000000003"
+            }
+          ]
+        },
+        "provider_name": "DeepSeek",
+        "tag": "deepseek",
+        "service_tier": null,
+        "quantization": "unknown",
+        "max_completion_tokens": 393216,
+        "max_prompt_tokens": null,
+        "supported_parameters": [
+          "reasoning",
+          "include_reasoning",
+          "max_tokens",
+          "temperature",
+          "top_p",
+          "stop",
+          "frequency_penalty",
+          "presence_penalty",
+          "logprobs",
+          "top_logprobs",
+          "tools",
+          "tool_choice",
+          "response_format",
+          "reasoning_effort"
+        ],
+        "supports_tool_choice": {
+          "none": true,
+          "auto": true,
+          "required": false,
+          "function": false
+        },
+        "status": 0,
+        "uptime_last_30m": 100,
+        "uptime_last_5m": 100,
+        "uptime_last_1d": 100,
+        "supports_implicit_caching": true,
+        "native_tools": {},
+        "supports_voice_cloning": false,
+        "supports_multiple_audio_references": false,
+        "supports_image_reference": false,
+        "supports_diarization": false,
+        "latency_last_30m": null,
+        "throughput_last_30m": null
+      }
+    },
+    {
+      "model": {
+        "id": "moonshotai/kimi-k3.1-pro",
+        "canonical_slug": "moonshotai/kimi-k3.1-pro-20261023",
+        "hugging_face_id": null,
+        "name": "MoonshotAI: Kimi K3.1 Pro",
+        "created": 1792778188,
+        "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
+        "context_length": 1048576,
+        "architecture": {
+          "modality": "text+image+video->text",
+          "input_modalities": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output_modalities": [
+            "text"
+          ],
+          "tokenizer": "Other",
+          "instruct_type": null
+        },
+        "pricing": {
+          "prompt": "0.000002",
+          "completion": "0.00001",
+          "input_cache_read": "0.0000002"
+        },
+        "top_provider": {
+          "context_length": 1048576,
+          "max_completion_tokens": 943718,
+          "is_moderated": false
+        },
+        "per_request_limits": null,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ],
+        "default_parameters": {
+          "top_p": 0.95
+        },
+        "supported_voices": null,
+        "knowledge_cutoff": null,
+        "expiration_date": null,
+        "links": {
+          "details": "/api/v1/models/moonshotai/kimi-k3.1-pro-20261023/endpoints"
+        },
+        "benchmarks": {
+          "design_arena": [
+            {
+              "arena": "models",
+              "category": "codecategories",
+              "elo": 1349,
+              "win_rate": 60.1,
+              "rank": 7
+            },
+            {
+              "arena": "models",
+              "category": "gamedev",
+              "elo": 1391,
+              "win_rate": 64.6,
+              "rank": 5
+            },
+            {
+              "arena": "models",
+              "category": "uicomponent",
+              "elo": 1383,
+              "win_rate": 64.6,
+              "rank": 1
+            },
+            {
+              "arena": "models",
+              "category": "website",
+              "elo": 1321,
+              "win_rate": 57.1,
+              "rank": 7
+            }
+          ],
+          "artificial_analysis": {
+            "intelligence_index": 55.1,
+            "coding_index": null,
+            "agentic_index": null
+          }
+        },
+        "reasoning": {
+          "mandatory": false,
+          "default_enabled": true,
+          "supported_efforts": [
+            "max",
+            "high",
+            "low",
+            "none"
+          ],
+          "default_effort": "max"
+        }
+      },
+      "selected_endpoint": {
+        "name": "Moonshot AI | moonshotai/kimi-k3.1-pro-20261023",
+        "model_id": "moonshotai/kimi-k3.1-pro",
+        "model_name": "MoonshotAI: Kimi K3.1 Pro",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "0.000002",
+          "completion": "0.00001",
+          "input_cache_read": "0.0000002",
+          "discount": 0
+        },
+        "provider_name": "Moonshot AI",
+        "tag": "moonshotai/mxfp4",
+        "service_tier": null,
+        "quantization": "mxfp4",
+        "max_completion_tokens": 943718,
+        "max_prompt_tokens": null,
+        "supported_parameters": [
+          "reasoning",
+          "include_reasoning",
+          "max_tokens",
+          "stop",
+          "frequency_penalty",
+          "presence_penalty",
+          "structured_outputs",
+          "response_format",
+          "tool_choice",
+          "tools",
+          "reasoning_effort"
+        ],
+        "supports_tool_choice": {
+          "none": true,
+          "auto": true,
+          "required": true,
+          "function": false
+        },
+        "status": 0,
+        "uptime_last_30m": 100,
+        "uptime_last_5m": 100,
+        "uptime_last_1d": 100,
+        "supports_implicit_caching": true,
+        "native_tools": {},
+        "supports_voice_cloning": false,
+        "supports_multiple_audio_references": false,
+        "supports_image_reference": false,
+        "supports_diarization": false,
+        "latency_last_30m": null,
+        "throughput_last_30m": null
+      }
+    }
+  ]
+}
