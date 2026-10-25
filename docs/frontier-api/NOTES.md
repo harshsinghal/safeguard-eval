@@ -25,3 +25,7 @@ User authorized a $20 spending limit. Interpret this as the cumulative project l
 ## Pilot routing amendment
 
 The initial OpenAI and Anthropic calls succeeded. The direct DeepSeek endpoint returned a 404 before inference: account settings exclude providers that may train on paid inputs. Keep those settings unchanged and amend the DeepSeek deployment to the same checkpoint on DeepInfra FP8, excluding flex/priority variants. Preserve the failed call and reserve its full maximum cost until billing reconciliation. Resume the pilot explicitly, retaining completed calls and all failed attempts; never rerun invalid classifications to improve their labels. The resume change affects orchestration, not classification requests or parsing.
+
+## Pilot content-filter accounting amendment
+
+Anthropic returned a content-filter response for one fitting prompt without usage or cost. Its generation lookup returned 404. Preserve the failed classification as ERROR and do not retry or reword it. Charge the entire reserved request ceiling to the local budget until billing can be reconciled. Amend the runner to continue after this specifically identified scored failure while retaining conservative cost accounting; generic unknown-cost/transport/routing errors still stop. The original pre-reconciliation predictions/summary are retained alongside the corrected billing metadata. No valid label was inferred from the filter.

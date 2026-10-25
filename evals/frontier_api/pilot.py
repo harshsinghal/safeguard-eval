@@ -65,6 +65,8 @@ def pilot(args):
         summary['conditions'][arm] = dict(n=len(rows), valid=sum(r['prediction'] != 'ERROR' for r in rows),
             billed_usd=sum(float(u.get('cost', 0)) for u in usages),
             missing_cost=sum('cost' not in u for u in usages),
+            unreported_cost_upper_bound_usd=sum(r.get('cost_upper_bound_usd', 0) for r in rows),
+            content_filtered=sum(r.get('finish_reason') == 'content_filter' or r.get('error_type') == 'ContentFiltered' for r in rows),
             mean_latency_seconds=mean(r['latency_seconds'] for r in rows),
             mean_input_tokens=mean(u.get('prompt_tokens', 0) for u in usages),
             mean_output_tokens=mean(u.get('completion_tokens', 0) for u in usages),

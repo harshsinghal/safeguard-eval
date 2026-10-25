@@ -141,14 +141,15 @@ class Ledger:
                 raise ValueError('Study budget cannot cover next request')
             self.append(dict(event='reserve', request_id=request_id, microusd=amount, created_utc=now()))
 
-    def settle(self, request_id, dollars):
+    def settle(self, request_id, dollars, cost_status='reported'):
         amount = micros(dollars)
         with self.locked() as events:
             charges = self.charges(events)
             if request_id not in charges or any(e['event'] == 'settle' and e['request_id'] == request_id for e in events):
                 raise ValueError('Missing or already settled reservation')
             reserved = charges[request_id]
-            self.append(dict(event='settle', request_id=request_id, microusd=amount, created_utc=now()))
+            self.append(dict(event='settle', request_id=request_id, microusd=amount,
+                             cost_status=cost_status, created_utc=now()))
             if amount > reserved:
                 raise ValueError('Actual billing exceeds reservation; review before continuing')
 
@@ -253,13 +254,22 @@ def run(args):
                 row['generation_id'] = response.get('id')
                 row['served_model'] = response.get('model')
                 row['provider'] = response.get('provider')
+                choice = (response.get('choices') or [{}])[0]
+                row['finish_reason'] = choice.get('finish_reason')
                 usage = response.get('usage') or {}
                 row['usage'] = {k: usage[k] for k in ('prompt_tokens', 'completion_tokens',
                     'completion_tokens_details', 'prompt_tokens_details', 'cost', 'cost_details') if k in usage}
                 # No inferred zero cost: unknown charges remain reserved and stop the run.
-                if 'cost' not in usage:
+                if 'cost' not in usage and row['finish_reason'] == 'content_filter':
+                    # A filtered response is a scored failure, never retried. Deduct the entire
+                    # pre-reserved ceiling until the provider supplies reconciled billing.
+                    ledger.settle(request_id, bound, cost_status='conservative_content_filter_ceiling')
+                    row['cost_upper_bound_usd'] = bound
+                    row['billing_status'] = 'unreported; full request ceiling deducted'
+                elif 'cost' not in usage:
                     raise RuntimeError('Missing billing')
-                ledger.settle(request_id, usage['cost'])
+                else:
+                    ledger.settle(request_id, usage['cost'])
                 if response.get('provider') != model['provider_name'] or response.get('model') not in model['allowed_response_models']:
                     raise RuntimeError('Unexpected provider/model')
                 if args.arm.endswith('-lower') and registry['arms'][args.arm]['effort'] == 'none':
@@ -268,7 +278,7 @@ def run(args):
                 try:
                     row['prediction'] = parse(response)
                 except (ValueError, KeyError, TypeError, IndexError):
-                    row['error_type'] = 'InvalidClassification'
+                    row['error_type'] = 'ContentFiltered' if row['finish_reason'] == 'content_filter' else 'InvalidClassification'
             except Exception as e:
                 row['error_type'] = type(e).__name__
                 if isinstance(e, urllib.error.HTTPError):
