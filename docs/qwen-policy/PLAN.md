@@ -47,9 +47,9 @@ Preserve private raw requests/responses, exact source/policy/model versions, run
 - [x] Verify candidate model sizes and record comparison limitations.
 - [x] Pin models, implement adapter and verify leakage/output/scoring checks.
 - [x] Publish protocol before new paid inference.
-- [ ] Run fitting-only pilots and shared policy evaluations.
-- [ ] Write and evaluate fitting-derived candidate prompts.
-- [ ] Select on validation and freeze all new comparisons.
+- [x] Run fitting-only pilots and shared policy evaluations.
+- [x] Write and evaluate fitting-derived candidate prompts.
+- [x] Select on validation and freeze all new comparisons.
 - [ ] Run complete official-test and internal-audit comparisons.
 - [ ] Collect, terminate compute, reconcile billing and reproduce public results.
 - [ ] Publish plain-language findings and research evidence.

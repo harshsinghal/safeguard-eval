@@ -1,6 +1,6 @@
 {
   "study": "qwen-policy-v1",
-  "status": "model_specific_candidate_evaluation",
+  "status": "frozen_before_new_test",
   "prior_cost_usd": 5.87,
   "total_budget_usd": 10,
   "new_maximum_usd": 4.12,
@@ -8,8 +8,8 @@
     "protocol": "complete",
     "runner": "complete",
     "pilot": "complete",
-    "search": "in_progress",
-    "freeze": "pending",
+    "search": "complete",
+    "freeze": "complete",
     "test": "pending",
     "report": "pending",
     "cleanup": "pending"
@@ -22,5 +22,13 @@
     "price_per_hour": 1.99
   },
   "registered_candidates": 25,
-  "completed_runs": 35
+  "completed_runs": 55,
+  "selected": {
+    "Qwen/Qwen3.5-2B": "wg-p2-boundary-checklist",
+    "Qwen/Qwen3.5-4B": "wg-p1-concrete-harm",
+    "Qwen/Qwen3.5-9B": "qwen-9b-p3-social-and-sensitive-boundaries",
+    "Qwen/Qwen3.5-27B": "wg-p1-concrete-harm",
+    "Qwen/Qwen3.5-35B-A3B": "qwen-35b-a3b-p4-compact-content-and-purpose"
+  },
+  "freeze_created_utc": "2026-10-25T04:08:27.994038+00:00"
 }

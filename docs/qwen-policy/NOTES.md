@@ -39,3 +39,23 @@ Qwen 27B's p0/p1/p2 fitting accuracy is 92.48/94.04/93.16%, with validation 91.8
 All five pilots returned valid labels and complete score coverage. The 27B and 35B-A3B pilot accuracies were both 93.36%. Shared-policy fitting runs also have zero output failures so far. Repeated calls can still differ under batching despite greedy decoding; the final analysis will report the identical-request pilot/search diagnostic without treating it as a controlled repeatability experiment.
 
 Qwen 35B-A3B's p0/p1/p2 fitting accuracy is 92.87/92.87/93.07%. The p2 parent has 45 false blocks and 26 misses. Its drafts test action-and-object evidence (rather than inferring harmful context from vague language), with explicit benign transformation and safety-work exceptions. The second tests a compact rule that also counts direct harmful endorsements and abusive content in the input. These drafts were based on fitting/pilot errors, not individual validation examples. All ten new candidates are now registered, bringing the search to five candidates per model: 25 model/candidate configurations and 13 distinct policy texts.
+
+## Tailored-candidate outcomes: first two sizes
+
+Both new 2B candidates underperform its original shared checklist: p3/p4 validation accuracy is 86.91/85.94%, compared with p2 at 87.70%. The corresponding fitting accuracies also fall to 84.77/83.69%. For 4B, p3/p4 validation is 89.65/88.87%, below p1 at 91.02%; fitting falls to 89.26/89.55% from p1's 91.80%. These are retained negative results. The candidate budget is closed: no further revisions will be written in reaction to these scores. This helps distinguish limited prompt search from a guaranteed improvement story.
+
+## Validation selection and pre-test freeze
+
+All 55 pilot/search/validation runs completed. Candidate editing is closed. Each model evaluated p0, p1, p2 and exactly two fitting-derived drafts. The selected configurations below maximize validation accuracy; no new Qwen test or audit inference had begun when the freeze was created. Prior specialist test results remain known, so this is exploratory.
+
+| Model | Selected policy | Validation accuracy |
+|---|---|---:|
+| Qwen/Qwen3.5-2B | wg-p2-boundary-checklist | 87.70% |
+| Qwen/Qwen3.5-4B | wg-p1-concrete-harm | 91.02% |
+| Qwen/Qwen3.5-9B | qwen-9b-p3-social-and-sensitive-boundaries | 94.14% |
+| Qwen/Qwen3.5-27B | wg-p1-concrete-harm | 94.53% |
+| Qwen/Qwen3.5-35B-A3B | qwen-35b-a3b-p4-compact-content-and-purpose | 94.53% |
+
+The freeze records every final policy/model/source/data hash, fixed decoding settings and each available validation-derived label-score threshold. Primary results will use strict free-generated labels. p0, shared p2 and selected configurations are all evaluated on test and audit, reusing identical configurations. No prompt editing or test-based threshold selection is permitted.
+
+For 35B-A3B, the compact p4 ties p1 at 94.53% validation accuracy and wins the registered shorter-text tie-break. This is not a validation accuracy improvement. The 9B p3 wins by two validation examples over shared p2. The other sizes select inherited prompts. All ten new drafts remain in the record, and no further edits were made. Fourteen distinct final configurations produce 28 final runs because 2B's selected and shared policies are identical.

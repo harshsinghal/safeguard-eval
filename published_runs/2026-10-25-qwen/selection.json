@@ -1,0 +1,1441 @@
+{
+  "created_utc": "2026-10-25T04:08:27.699649+00:00",
+  "registry_sha256": "aae21dc38eca01a2050d6c2a58e3f37737fb1ab94cba82775310abeff61149f6",
+  "objective": "validation accuracy; shorter text then lexicographic ID",
+  "selected": {
+    "Qwen/Qwen3.5-2B": "wg-p2-boundary-checklist",
+    "Qwen/Qwen3.5-4B": "wg-p1-concrete-harm",
+    "Qwen/Qwen3.5-9B": "qwen-9b-p3-social-and-sensitive-boundaries",
+    "Qwen/Qwen3.5-27B": "wg-p1-concrete-harm",
+    "Qwen/Qwen3.5-35B-A3B": "qwen-35b-a3b-p4-compact-content-and-purpose"
+  },
+  "records": [
+    {
+      "model": "Qwen/Qwen3.5-2B",
+      "policy_id": "wg-p0-taxonomy",
+      "policy_sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "path": "../wildguard/policies/p0.json",
+      "words": 269,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.8291015625,
+          "harmful_f1": 0.8538011695906432,
+          "macro_f1": 0.8240803732794579,
+          "official_harmful_f1": 0.8538011695906432,
+          "harmful_recall": 0.9376146788990826,
+          "benign_false_positive_rate": 0.29436325678496866,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 338,
+              "BLOCK": 141,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 34,
+              "BLOCK": 511,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.841796875,
+          "harmful_f1": 0.8652246256239601,
+          "macro_f1": 0.8368676319609162,
+          "official_harmful_f1": 0.8652246256239601,
+          "harmful_recall": 0.948905109489051,
+          "benign_false_positive_rate": 0.2815126050420168,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 171,
+              "BLOCK": 67,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 14,
+              "BLOCK": 260,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-2b-search-p0",
+        "validation": "qwen-2b-validation-p0"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-2B",
+      "policy_id": "wg-p1-concrete-harm",
+      "policy_sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "path": "../wildguard/policies/p1.json",
+      "words": 358,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.837890625,
+          "harmful_f1": 0.8590831918505942,
+          "macro_f1": 0.8341392970747223,
+          "official_harmful_f1": 0.8590831918505942,
+          "harmful_recall": 0.9284403669724771,
+          "benign_false_positive_rate": 0.2651356993736952,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 352,
+              "BLOCK": 127,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 39,
+              "BLOCK": 506,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.8671875,
+          "harmful_f1": 0.8851351351351351,
+          "macro_f1": 0.8638638638638638,
+          "official_harmful_f1": 0.8851351351351351,
+          "harmful_recall": 0.9562043795620438,
+          "benign_false_positive_rate": 0.23529411764705882,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 182,
+              "BLOCK": 56,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 12,
+              "BLOCK": 262,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-2b-search-p1",
+        "validation": "qwen-2b-validation-p1"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-2B",
+      "policy_id": "wg-p2-boundary-checklist",
+      "policy_sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "path": "../wildguard/policies/p2.json",
+      "words": 315,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.8603515625,
+          "harmful_f1": 0.8712871287128713,
+          "macro_f1": 0.8593362004290077,
+          "official_harmful_f1": 0.8712871287128713,
+          "harmful_recall": 0.8880733944954129,
+          "benign_false_positive_rate": 0.17118997912317327,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 397,
+              "BLOCK": 82,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 61,
+              "BLOCK": 484,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.876953125,
+          "harmful_f1": 0.8880994671403197,
+          "macro_f1": 0.8757200155658215,
+          "official_harmful_f1": 0.8880994671403197,
+          "harmful_recall": 0.9124087591240876,
+          "benign_false_positive_rate": 0.1638655462184874,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 199,
+              "BLOCK": 39,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 24,
+              "BLOCK": 250,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-2b-search-p2",
+        "validation": "qwen-2b-validation-p2"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "policy_id": "wg-p0-taxonomy",
+      "policy_sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "path": "../wildguard/policies/p0.json",
+      "words": 269,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.9033203125,
+          "harmful_f1": 0.9068673565380997,
+          "macro_f1": 0.9031798711624508,
+          "official_harmful_f1": 0.9068673565380997,
+          "harmful_recall": 0.8844036697247707,
+          "benign_false_positive_rate": 0.07515657620041753,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 443,
+              "BLOCK": 36,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 63,
+              "BLOCK": 482,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.89453125,
+          "harmful_f1": 0.9018181818181819,
+          "macro_f1": 0.8939470655926351,
+          "official_harmful_f1": 0.9018181818181819,
+          "harmful_recall": 0.9051094890510949,
+          "benign_false_positive_rate": 0.11764705882352941,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 210,
+              "BLOCK": 28,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 26,
+              "BLOCK": 248,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-4b-search-p0",
+        "validation": "qwen-4b-validation-p0"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "policy_id": "wg-p1-concrete-harm",
+      "policy_sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "path": "../wildguard/policies/p1.json",
+      "words": 358,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.91796875,
+          "harmful_f1": 0.9227941176470589,
+          "macro_f1": 0.9176470588235295,
+          "official_harmful_f1": 0.9227941176470589,
+          "harmful_recall": 0.9211009174311927,
+          "benign_false_positive_rate": 0.08559498956158663,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 438,
+              "BLOCK": 41,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 43,
+              "BLOCK": 502,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.91015625,
+          "harmful_f1": 0.9172661870503597,
+          "macro_f1": 0.9094877943798807,
+          "official_harmful_f1": 0.9172661870503597,
+          "harmful_recall": 0.9306569343065694,
+          "benign_false_positive_rate": 0.1134453781512605,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 211,
+              "BLOCK": 27,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 19,
+              "BLOCK": 255,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-4b-search-p1",
+        "validation": "qwen-4b-validation-p1"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "policy_id": "wg-p2-boundary-checklist",
+      "policy_sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "path": "../wildguard/policies/p2.json",
+      "words": 315,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.9111328125,
+          "harmful_f1": 0.9148737137511693,
+          "macro_f1": 0.9109608609613865,
+          "official_harmful_f1": 0.9148737137511693,
+          "harmful_recall": 0.8972477064220183,
+          "benign_false_positive_rate": 0.07306889352818371,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 444,
+              "BLOCK": 35,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 56,
+              "BLOCK": 489,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.904296875,
+          "harmful_f1": 0.9107468123861566,
+          "macro_f1": 0.9037944588246573,
+          "official_harmful_f1": 0.9107468123861566,
+          "harmful_recall": 0.9124087591240876,
+          "benign_false_positive_rate": 0.10504201680672269,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 213,
+              "BLOCK": 25,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 24,
+              "BLOCK": 250,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-4b-search-p2",
+        "validation": "qwen-4b-validation-p2"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "policy_id": "wg-p0-taxonomy",
+      "policy_sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "path": "../wildguard/policies/p0.json",
+      "words": 269,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.923828125,
+          "harmful_f1": 0.9276437847866419,
+          "macro_f1": 0.9236157068263107,
+          "official_harmful_f1": 0.9276437847866419,
+          "harmful_recall": 0.9174311926605505,
+          "benign_false_positive_rate": 0.06889352818371608,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 446,
+              "BLOCK": 33,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 45,
+              "BLOCK": 500,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.923828125,
+          "harmful_f1": 0.9279112754158965,
+          "macro_f1": 0.9235829669004948,
+          "official_harmful_f1": 0.9279112754158965,
+          "harmful_recall": 0.916058394160584,
+          "benign_false_positive_rate": 0.06722689075630252,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 222,
+              "BLOCK": 16,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 23,
+              "BLOCK": 251,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-9b-search-p0",
+        "validation": "qwen-9b-validation-p0"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "policy_id": "wg-p1-concrete-harm",
+      "policy_sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "path": "../wildguard/policies/p1.json",
+      "words": 358,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.931640625,
+          "harmful_f1": 0.9347014925373134,
+          "macro_f1": 0.9314900905309518,
+          "official_harmful_f1": 0.9347014925373134,
+          "harmful_recall": 0.9192660550458716,
+          "benign_false_positive_rate": 0.054279749478079335,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 453,
+              "BLOCK": 26,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 44,
+              "BLOCK": 501,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.93359375,
+          "harmful_f1": 0.9372693726937269,
+          "macro_f1": 0.933364976803295,
+          "official_harmful_f1": 0.9372693726937269,
+          "harmful_recall": 0.927007299270073,
+          "benign_false_positive_rate": 0.058823529411764705,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 224,
+              "BLOCK": 14,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 20,
+              "BLOCK": 254,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-9b-search-p1",
+        "validation": "qwen-9b-validation-p1"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "policy_id": "wg-p2-boundary-checklist",
+      "policy_sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "path": "../wildguard/policies/p2.json",
+      "words": 315,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.916015625,
+          "harmful_f1": 0.9197761194029851,
+          "macro_f1": 0.9158306826523122,
+          "official_harmful_f1": 0.9197761194029851,
+          "harmful_recall": 0.9045871559633027,
+          "benign_false_positive_rate": 0.0709812108559499,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 445,
+              "BLOCK": 34,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 52,
+              "BLOCK": 493,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.9375,
+          "harmful_f1": 0.9405204460966543,
+          "macro_f1": 0.9373384123487387,
+          "official_harmful_f1": 0.9405204460966543,
+          "harmful_recall": 0.9233576642335767,
+          "benign_false_positive_rate": 0.046218487394957986,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 227,
+              "BLOCK": 11,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 21,
+              "BLOCK": 253,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-9b-search-p2",
+        "validation": "qwen-9b-validation-p2"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-27B",
+      "policy_id": "wg-p0-taxonomy",
+      "policy_sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "path": "../wildguard/policies/p0.json",
+      "words": 269,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.9248046875,
+          "harmful_f1": 0.9320388349514563,
+          "macro_f1": 0.9239429147434877,
+          "official_harmful_f1": 0.9320388349514563,
+          "harmful_recall": 0.9688073394495413,
+          "benign_false_positive_rate": 0.12526096033402923,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 419,
+              "BLOCK": 60,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 17,
+              "BLOCK": 528,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.91796875,
+          "harmful_f1": 0.9273356401384083,
+          "macro_f1": 0.9165826182754822,
+          "official_harmful_f1": 0.9273356401384083,
+          "harmful_recall": 0.9781021897810219,
+          "benign_false_positive_rate": 0.15126050420168066,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 202,
+              "BLOCK": 36,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 6,
+              "BLOCK": 268,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-27b-search-p0",
+        "validation": "qwen-27b-validation-p0"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-27B",
+      "policy_id": "wg-p1-concrete-harm",
+      "policy_sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "path": "../wildguard/policies/p1.json",
+      "words": 358,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.9404296875,
+          "harmful_f1": 0.9449954914337241,
+          "macro_f1": 0.9400163825645724,
+          "official_harmful_f1": 0.9449954914337241,
+          "harmful_recall": 0.9614678899082569,
+          "benign_false_positive_rate": 0.08350730688935282,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 439,
+              "BLOCK": 40,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 21,
+              "BLOCK": 524,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.9453125,
+          "harmful_f1": 0.950354609929078,
+          "macro_f1": 0.9447425223558434,
+          "official_harmful_f1": 0.950354609929078,
+          "harmful_recall": 0.9781021897810219,
+          "benign_false_positive_rate": 0.09243697478991597,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 216,
+              "BLOCK": 22,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 6,
+              "BLOCK": 268,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-27b-search-p1",
+        "validation": "qwen-27b-validation-p1"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-27B",
+      "policy_id": "wg-p2-boundary-checklist",
+      "policy_sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "path": "../wildguard/policies/p2.json",
+      "words": 315,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.931640625,
+          "harmful_f1": 0.9375,
+          "macro_f1": 0.9310344827586207,
+          "official_harmful_f1": 0.9375,
+          "harmful_recall": 0.963302752293578,
+          "benign_false_positive_rate": 0.10438413361169102,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 429,
+              "BLOCK": 50,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 20,
+              "BLOCK": 525,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.935546875,
+          "harmful_f1": 0.9420035149384886,
+          "macro_f1": 0.9347380212055081,
+          "official_harmful_f1": 0.9420035149384886,
+          "harmful_recall": 0.9781021897810219,
+          "benign_false_positive_rate": 0.1134453781512605,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 211,
+              "BLOCK": 27,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 6,
+              "BLOCK": 268,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-27b-search-p2",
+        "validation": "qwen-27b-validation-p2"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-35B-A3B",
+      "policy_id": "wg-p0-taxonomy",
+      "policy_sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "path": "../wildguard/policies/p0.json",
+      "words": 269,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.9287109375,
+          "harmful_f1": 0.934056007226739,
+          "macro_f1": 0.9282394807653355,
+          "official_harmful_f1": 0.934056007226739,
+          "harmful_recall": 0.9486238532110092,
+          "benign_false_positive_rate": 0.09394572025052192,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 434,
+              "BLOCK": 45,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 28,
+              "BLOCK": 517,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.9296875,
+          "harmful_f1": 0.9361702127659575,
+          "macro_f1": 0.92895467160037,
+          "official_harmful_f1": 0.9361702127659575,
+          "harmful_recall": 0.9635036496350365,
+          "benign_false_positive_rate": 0.1092436974789916,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 212,
+              "BLOCK": 26,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 10,
+              "BLOCK": 264,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-35b-a3b-search-p0",
+        "validation": "qwen-35b-a3b-validation-p0"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-35B-A3B",
+      "policy_id": "wg-p1-concrete-harm",
+      "policy_sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "path": "../wildguard/policies/p1.json",
+      "words": 358,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.9287109375,
+          "harmful_f1": 0.9344115004492363,
+          "macro_f1": 0.9281683170695378,
+          "official_harmful_f1": 0.9344115004492363,
+          "harmful_recall": 0.9541284403669725,
+          "benign_false_positive_rate": 0.10020876826722339,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 431,
+              "BLOCK": 48,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 25,
+              "BLOCK": 520,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.9453125,
+          "harmful_f1": 0.9507042253521126,
+          "macro_f1": 0.9446503582900914,
+          "official_harmful_f1": 0.9507042253521126,
+          "harmful_recall": 0.9854014598540146,
+          "benign_false_positive_rate": 0.10084033613445378,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 214,
+              "BLOCK": 24,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 4,
+              "BLOCK": 270,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-35b-a3b-search-p1",
+        "validation": "qwen-35b-a3b-validation-p1"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-35B-A3B",
+      "policy_id": "wg-p2-boundary-checklist",
+      "policy_sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "path": "../wildguard/policies/p2.json",
+      "words": 315,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.9306640625,
+          "harmful_f1": 0.9359783588818755,
+          "macro_f1": 0.9301830026571252,
+          "official_harmful_f1": 0.9359783588818755,
+          "harmful_recall": 0.9522935779816514,
+          "benign_false_positive_rate": 0.09394572025052192,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 434,
+              "BLOCK": 45,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 26,
+              "BLOCK": 519,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.9375,
+          "harmful_f1": 0.9436619718309859,
+          "macro_f1": 0.9367432666172473,
+          "official_harmful_f1": 0.9436619718309859,
+          "harmful_recall": 0.9781021897810219,
+          "benign_false_positive_rate": 0.1092436974789916,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 212,
+              "BLOCK": 26,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 6,
+              "BLOCK": 268,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-35b-a3b-search-p2",
+        "validation": "qwen-35b-a3b-validation-p2"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-2B",
+      "policy_id": "qwen-2b-p3-grounded-boundaries",
+      "policy_sha256": "d8b8a3a7dc2f505bc03e399986370f416378333b40b833bf99c16070bbc69126",
+      "path": "policies/qwen-2b-p3-grounded-boundaries.json",
+      "words": 307,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.84765625,
+          "harmful_f1": 0.8675721561969439,
+          "macro_f1": 0.8441309056846789,
+          "official_harmful_f1": 0.8675721561969439,
+          "harmful_recall": 0.9376146788990826,
+          "benign_false_positive_rate": 0.2546972860125261,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 357,
+              "BLOCK": 122,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 34,
+              "BLOCK": 511,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.869140625,
+          "harmful_f1": 0.8854700854700854,
+          "macro_f1": 0.8664252477464323,
+          "official_harmful_f1": 0.8854700854700854,
+          "harmful_recall": 0.9452554744525548,
+          "benign_false_positive_rate": 0.2184873949579832,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 186,
+              "BLOCK": 52,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 15,
+              "BLOCK": 259,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-2b-search-p3",
+        "validation": "qwen-2b-validation-p3"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-2B",
+      "policy_id": "qwen-2b-p4-compact-evidence",
+      "policy_sha256": "b2859f27e272eacd4db24e39086e95e04277785749df44104d471158eee9c412",
+      "path": "policies/qwen-2b-p4-compact-evidence.json",
+      "words": 214,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.8369140625,
+          "harmful_f1": 0.8588334742180896,
+          "macro_f1": 0.8328849452015303,
+          "official_harmful_f1": 0.8588334742180896,
+          "harmful_recall": 0.9321100917431193,
+          "benign_false_positive_rate": 0.27139874739039666,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 349,
+              "BLOCK": 130,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 37,
+              "BLOCK": 508,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.859375,
+          "harmful_f1": 0.8775510204081632,
+          "macro_f1": 0.8562067028646321,
+          "official_harmful_f1": 0.8775510204081632,
+          "harmful_recall": 0.9416058394160584,
+          "benign_false_positive_rate": 0.23529411764705882,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 182,
+              "BLOCK": 56,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 16,
+              "BLOCK": 258,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-2b-search-p4",
+        "validation": "qwen-2b-validation-p4"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "policy_id": "qwen-4b-p3-deliverable-and-exceptions",
+      "policy_sha256": "dc74fe6ab25810f95000bc5de8cd0c39f7e82108984cc1ab210d9c31d02193c6",
+      "path": "policies/qwen-4b-p3-deliverable-and-exceptions.json",
+      "words": 264,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.892578125,
+          "harmful_f1": 0.8981481481481481,
+          "macro_f1": 0.8922558922558923,
+          "official_harmful_f1": 0.8981481481481481,
+          "harmful_recall": 0.8899082568807339,
+          "benign_false_positive_rate": 0.10438413361169102,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 429,
+              "BLOCK": 50,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 60,
+              "BLOCK": 485,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.896484375,
+          "harmful_f1": 0.9038112522686026,
+          "macro_f1": 0.8958802561554429,
+          "official_harmful_f1": 0.9038112522686026,
+          "harmful_recall": 0.9087591240875912,
+          "benign_false_positive_rate": 0.11764705882352941,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 210,
+              "BLOCK": 28,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 25,
+              "BLOCK": 249,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-4b-search-p3",
+        "validation": "qwen-4b-validation-p3"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "policy_id": "qwen-4b-p4-content-and-request",
+      "policy_sha256": "92624d2e04cf69df9895074ab54f26fedfb9c54b5c11b0ccd6678e116d4ecf3c",
+      "path": "policies/qwen-4b-p4-content-and-request.json",
+      "words": 241,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.8955078125,
+          "harmful_f1": 0.8972142170989433,
+          "macro_f1": 0.8954790052724111,
+          "official_harmful_f1": 0.8972142170989433,
+          "harmful_recall": 0.8568807339449541,
+          "benign_false_positive_rate": 0.060542797494780795,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 450,
+              "BLOCK": 29,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 78,
+              "BLOCK": 467,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.888671875,
+          "harmful_f1": 0.8934579439252337,
+          "macro_f1": 0.8884467633736598,
+          "official_harmful_f1": 0.8934579439252337,
+          "harmful_recall": 0.8722627737226277,
+          "benign_false_positive_rate": 0.09243697478991597,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 216,
+              "BLOCK": 22,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 35,
+              "BLOCK": 239,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-4b-search-p4",
+        "validation": "qwen-4b-validation-p4"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "policy_id": "qwen-9b-p3-social-and-sensitive-boundaries",
+      "policy_sha256": "ce483a51e1dd80e98f1f3829d13c3e4bed949e86c3b2d9163e10f32e91765d8f",
+      "path": "policies/qwen-9b-p3-social-and-sensitive-boundaries.json",
+      "words": 278,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.9228515625,
+          "harmful_f1": 0.9271889400921659,
+          "macro_f1": 0.922576816878897,
+          "official_harmful_f1": 0.9271889400921659,
+          "harmful_recall": 0.9229357798165138,
+          "benign_false_positive_rate": 0.07724425887265135,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 442,
+              "BLOCK": 37,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 42,
+              "BLOCK": 503,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.94140625,
+          "harmful_f1": 0.945054945054945,
+          "macro_f1": 0.9411467193893972,
+          "official_harmful_f1": 0.945054945054945,
+          "harmful_recall": 0.9416058394160584,
+          "benign_false_positive_rate": 0.058823529411764705,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 224,
+              "BLOCK": 14,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 16,
+              "BLOCK": 258,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-9b-search-p3",
+        "validation": "qwen-9b-validation-p3"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "policy_id": "qwen-9b-p4-compact-substance",
+      "policy_sha256": "a651863ce933dc1a6294eb2dd4e6cd119848750d0081270f147ddbe79c3f0934",
+      "path": "policies/qwen-9b-p4-compact-substance.json",
+      "words": 217,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.9169921875,
+          "harmful_f1": 0.9212233549582948,
+          "macro_f1": 0.9167520283563404,
+          "official_harmful_f1": 0.9212233549582948,
+          "harmful_recall": 0.9119266055045872,
+          "benign_false_positive_rate": 0.07724425887265135,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 442,
+              "BLOCK": 37,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 48,
+              "BLOCK": 497,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.927734375,
+          "harmful_f1": 0.9318600368324125,
+          "macro_f1": 0.9274684799546677,
+          "official_harmful_f1": 0.9318600368324125,
+          "harmful_recall": 0.9233576642335767,
+          "benign_false_positive_rate": 0.06722689075630252,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 222,
+              "BLOCK": 16,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 21,
+              "BLOCK": 253,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-9b-search-p4",
+        "validation": "qwen-9b-validation-p4"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-27B",
+      "policy_id": "qwen-27b-p3-evidence-and-sensitive-data",
+      "policy_sha256": "f2be516f9fc49ec056398c5d2d86491c4e83b2821e04beadd8211154cbf87f1d",
+      "path": "policies/qwen-27b-p3-evidence-and-sensitive-data.json",
+      "words": 309,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.931640625,
+          "harmful_f1": 0.9377224199288257,
+          "macro_f1": 0.9309824220856249,
+          "official_harmful_f1": 0.9377224199288257,
+          "harmful_recall": 0.9669724770642202,
+          "benign_false_positive_rate": 0.10855949895615867,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 427,
+              "BLOCK": 52,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 18,
+              "BLOCK": 527,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.927734375,
+          "harmful_f1": 0.9354275741710296,
+          "macro_f1": 0.9266938314314128,
+          "official_harmful_f1": 0.9354275741710296,
+          "harmful_recall": 0.9781021897810219,
+          "benign_false_positive_rate": 0.13025210084033614,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 207,
+              "BLOCK": 31,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 6,
+              "BLOCK": 268,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-27b-search-p3",
+        "validation": "qwen-27b-validation-p3"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-27B",
+      "policy_id": "qwen-27b-p4-compact-substance-and-endorsement",
+      "policy_sha256": "bb4d4bdff3ec80f565a34391c73cfdaf52fab9b7c4cc9c46184b8603252919e2",
+      "path": "policies/qwen-27b-p4-compact-substance-and-endorsement.json",
+      "words": 240,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.923828125,
+          "harmful_f1": 0.931095406360424,
+          "macro_f1": 0.9229712839662382,
+          "official_harmful_f1": 0.931095406360424,
+          "harmful_recall": 0.9669724770642202,
+          "benign_false_positive_rate": 0.12526096033402923,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 419,
+              "BLOCK": 60,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 18,
+              "BLOCK": 527,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.92578125,
+          "harmful_f1": 0.9340277777777778,
+          "macro_f1": 0.9246031746031746,
+          "official_harmful_f1": 0.9340277777777778,
+          "harmful_recall": 0.9817518248175182,
+          "benign_false_positive_rate": 0.13865546218487396,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 205,
+              "BLOCK": 33,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 5,
+              "BLOCK": 269,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-27b-search-p4",
+        "validation": "qwen-27b-validation-p4"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-35B-A3B",
+      "policy_id": "qwen-35b-a3b-p3-action-object-boundaries",
+      "policy_sha256": "0fe56cf8f955ef3fe74a9c950571dcc3c1fc697fbb5411eace16d828325ef16a",
+      "path": "policies/qwen-35b-a3b-p3-action-object-boundaries.json",
+      "words": 287,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.9130859375,
+          "harmful_f1": 0.9221347331583553,
+          "macro_f1": 0.9118960958609457,
+          "official_harmful_f1": 0.9221347331583553,
+          "harmful_recall": 0.9669724770642202,
+          "benign_false_positive_rate": 0.14822546972860126,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 408,
+              "BLOCK": 71,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 18,
+              "BLOCK": 527,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.923828125,
+          "harmful_f1": 0.9324090121317158,
+          "macro_f1": 0.9225803449920325,
+          "official_harmful_f1": 0.9324090121317158,
+          "harmful_recall": 0.9817518248175182,
+          "benign_false_positive_rate": 0.14285714285714285,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 204,
+              "BLOCK": 34,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 5,
+              "BLOCK": 269,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-35b-a3b-search-p3",
+        "validation": "qwen-35b-a3b-validation-p3"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-35B-A3B",
+      "policy_id": "qwen-35b-a3b-p4-compact-content-and-purpose",
+      "policy_sha256": "f1035169515b28fe365333a386fb33135105f66625a27e2958d092d4c8f62438",
+      "path": "policies/qwen-35b-a3b-p4-compact-content-and-purpose.json",
+      "words": 254,
+      "scores": {
+        "fit": {
+          "n": 1024,
+          "accuracy": 0.931640625,
+          "harmful_f1": 0.9363636363636364,
+          "macro_f1": 0.9312619869581895,
+          "official_harmful_f1": 0.9363636363636364,
+          "harmful_recall": 0.944954128440367,
+          "benign_false_positive_rate": 0.08350730688935282,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 439,
+              "BLOCK": 40,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 30,
+              "BLOCK": 515,
+              "ERROR": 0
+            }
+          }
+        },
+        "validation": {
+          "n": 512,
+          "accuracy": 0.9453125,
+          "harmful_f1": 0.9496402877697842,
+          "macro_f1": 0.9449056139703622,
+          "official_harmful_f1": 0.9496402877697842,
+          "harmful_recall": 0.9635036496350365,
+          "benign_false_positive_rate": 0.07563025210084033,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 220,
+              "BLOCK": 18,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 10,
+              "BLOCK": 264,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "runs": {
+        "fit": "qwen-35b-a3b-search-p4",
+        "validation": "qwen-35b-a3b-validation-p4"
+      }
+    }
+  ],
+  "exploratory": true,
+  "prior_official_test_results_known": true
+}
