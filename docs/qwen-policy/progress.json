@@ -1,17 +1,26 @@
 {
   "study": "qwen-policy-v1",
-  "status": "ready_for_pilot",
+  "status": "model_specific_candidate_evaluation",
   "prior_cost_usd": 5.87,
   "total_budget_usd": 10,
   "new_maximum_usd": 4.12,
   "steps": {
     "protocol": "complete",
     "runner": "complete",
-    "pilot": "pending",
-    "search": "pending",
+    "pilot": "complete",
+    "search": "in_progress",
     "freeze": "pending",
     "test": "pending",
     "report": "pending",
     "cleanup": "pending"
-  }
+  },
+  "instance": {
+    "provider": "GPU.ai",
+    "id": "gpu-e4319df3",
+    "ready_at": "2026-10-25T03:29:48.416494Z",
+    "automatic_cutoff": "2026-10-25T05:29:48.416494Z",
+    "price_per_hour": 1.99
+  },
+  "registered_candidates": 25,
+  "completed_runs": 35
 }

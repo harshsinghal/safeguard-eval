@@ -202,6 +202,136 @@
         "fit": "qwen-35b-a3b-search-p2",
         "validation": "qwen-35b-a3b-validation-p2"
       }
+    },
+    {
+      "model": "Qwen/Qwen3.5-2B",
+      "path": "policies/qwen-2b-p3-grounded-boundaries.json",
+      "sha256": "d8b8a3a7dc2f505bc03e399986370f416378333b40b833bf99c16070bbc69126",
+      "scope": "model-specific",
+      "parent": "wg-p2-boundary-checklist",
+      "registered_utc": "2026-10-25T03:42:46.499128+00:00",
+      "rationale": "Fitting p2: 82 false blocks and 61 misses. Clarify ordinary competition/metaphor, public versus confidential facts, and harmless fiction while covering practical fictional harm, substantial protected works and harmful transformations.",
+      "runs": {
+        "fit": "qwen-2b-search-p3",
+        "validation": "qwen-2b-validation-p3"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-2B",
+      "path": "policies/qwen-2b-p4-compact-evidence.json",
+      "sha256": "b2859f27e272eacd4db24e39086e95e04277785749df44104d471158eee9c412",
+      "scope": "model-specific",
+      "parent": "wg-p2-boundary-checklist",
+      "registered_utc": "2026-10-25T03:42:46.499546+00:00",
+      "rationale": "Compact alternative from the same fitting errors: reduce overlapping instructions and require identifiable prohibited output, while distinguishing endorsement from discussion.",
+      "runs": {
+        "fit": "qwen-2b-search-p4",
+        "validation": "qwen-2b-validation-p4"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "path": "policies/qwen-4b-p3-deliverable-and-exceptions.json",
+      "sha256": "dc74fe6ab25810f95000bc5de8cd0c39f7e82108984cc1ab210d9c31d02193c6",
+      "scope": "model-specific",
+      "parent": "wg-p1-concrete-harm",
+      "registered_utc": "2026-10-25T03:45:01.076736+00:00",
+      "rationale": "From p1 fitting errors (41 false blocks, 43 misses): distinguish neutral history, prevention and ordinary creative scenarios from usable harmful deliverables; retain mixed-request and disguised-harm checks.",
+      "runs": {
+        "fit": "qwen-4b-search-p3",
+        "validation": "qwen-4b-validation-p3"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "path": "policies/qwen-4b-p4-content-and-request.json",
+      "sha256": "92624d2e04cf69df9895074ab54f26fedfb9c54b5c11b0ccd6678e116d4ecf3c",
+      "scope": "model-specific",
+      "parent": "wg-p1-concrete-harm",
+      "registered_utc": "2026-10-25T03:45:01.077115+00:00",
+      "rationale": "Tests a broader prompt-harmfulness interpretation for fitting misses containing harmful assertions or endorsements, while preserving analysis/quotation exceptions and reducing suspicion-based false blocks.",
+      "runs": {
+        "fit": "qwen-4b-search-p4",
+        "validation": "qwen-4b-validation-p4"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "path": "policies/qwen-9b-p3-social-and-sensitive-boundaries.json",
+      "sha256": "ce483a51e1dd80e98f1f3829d13c3e4bed949e86c3b2d9163e10f32e91765d8f",
+      "scope": "model-specific",
+      "parent": "wg-p1-concrete-harm",
+      "registered_utc": "2026-10-25T03:46:43.865197+00:00",
+      "rationale": "P1 fitting has 26 false blocks and 44 misses, including 13 social-group and six private-information cases. Clarifies group portrayals, requests to validate harmful beliefs and sensitive-attribute scope, while retaining benign fiction/context limits.",
+      "runs": {
+        "fit": "qwen-9b-search-p3",
+        "validation": "qwen-9b-validation-p3"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "path": "policies/qwen-9b-p4-compact-substance.json",
+      "sha256": "a651863ce933dc1a6294eb2dd4e6cd119848750d0081270f147ddbe79c3f0934",
+      "scope": "model-specific",
+      "parent": "wg-p1-concrete-harm",
+      "registered_utc": "2026-10-25T03:46:43.865632+00:00",
+      "rationale": "Concise alternative from p1 fitting mistakes: preserve the taxonomy, distinguish harmful requests from the possibility of a safe refusal, and reduce invented-context false blocks.",
+      "runs": {
+        "fit": "qwen-9b-search-p4",
+        "validation": "qwen-9b-validation-p4"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-27B",
+      "path": "policies/qwen-27b-p3-evidence-and-sensitive-data.json",
+      "sha256": "f2be516f9fc49ec056398c5d2d86491c4e83b2821e04beadd8211154cbf87f1d",
+      "scope": "model-specific",
+      "parent": "wg-p1-concrete-harm",
+      "registered_utc": "2026-10-25T03:51:36.978525+00:00",
+      "rationale": "Parent p1; fitting false blocks often infer sexual content, criminal concealment or harmful intent from vague fiction, while missed privacy examples concern real-person health and medication. Tests explicit evidence boundaries and broader sensitive-data coverage.",
+      "runs": {
+        "fit": "qwen-27b-search-p3",
+        "validation": "qwen-27b-validation-p3"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-27B",
+      "path": "policies/qwen-27b-p4-compact-substance-and-endorsement.json",
+      "sha256": "bb4d4bdff3ec80f565a34391c73cfdaf52fab9b7c4cc9c46184b8603252919e2",
+      "scope": "model-specific",
+      "parent": "wg-p1-concrete-harm",
+      "registered_utc": "2026-10-25T03:51:36.978901+00:00",
+      "rationale": "Parent p1; tests a shorter rule and direct harmful-endorsement scope alongside the evidence boundary. Training contains conversational endorsements and degrading portrayals missed by an output-method-only reading; no source-specific exceptions.",
+      "runs": {
+        "fit": "qwen-27b-search-p4",
+        "validation": "qwen-27b-validation-p4"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-35B-A3B",
+      "path": "policies/qwen-35b-a3b-p3-action-object-boundaries.json",
+      "sha256": "0fe56cf8f955ef3fe74a9c950571dcc3c1fc697fbb5411eace16d828325ef16a",
+      "scope": "model-specific",
+      "parent": "wg-p2-boundary-checklist",
+      "registered_utc": "2026-10-25T03:55:42.200001+00:00",
+      "rationale": "Parent p2; fitting errors include false blocks on underspecified requests, benign transformations, security/safety discussion and imaginary relationships, with misses on privacy, realistic forgery and disguised harmful content. Tests action-and-object evidence without entity-specific rules.",
+      "runs": {
+        "fit": "qwen-35b-a3b-search-p3",
+        "validation": "qwen-35b-a3b-validation-p3"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-35B-A3B",
+      "path": "policies/qwen-35b-a3b-p4-compact-content-and-purpose.json",
+      "sha256": "f1035169515b28fe365333a386fb33135105f66625a27e2958d092d4c8f62438",
+      "scope": "model-specific",
+      "parent": "wg-p2-boundary-checklist",
+      "registered_utc": "2026-10-25T03:55:42.200707+00:00",
+      "rationale": "Parent p2; tests shorter scope that includes direct harmful endorsements and abusive input, motivated by fitting conversational misses. Benign quoted analysis and unsupported hidden-intent inferences remain excluded; this is an explicit scope hypothesis.",
+      "runs": {
+        "fit": "qwen-35b-a3b-search-p4",
+        "validation": "qwen-35b-a3b-validation-p4"
+      }
     }
   ]
 }
