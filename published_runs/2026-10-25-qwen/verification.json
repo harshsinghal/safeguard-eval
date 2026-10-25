@@ -1,0 +1,507 @@
+{
+  "complete": true,
+  "total_runs": 83,
+  "predictions": 70634,
+  "output_errors": 0,
+  "verified_source_population_fields": true,
+  "runs": [
+    {
+      "run": "qwen-2b-pilot-p0",
+      "n": 256,
+      "errors": 0,
+      "score_coverage": 256
+    },
+    {
+      "run": "qwen-4b-pilot-p0",
+      "n": 256,
+      "errors": 0,
+      "score_coverage": 256
+    },
+    {
+      "run": "qwen-9b-pilot-p0",
+      "n": 256,
+      "errors": 0,
+      "score_coverage": 256
+    },
+    {
+      "run": "qwen-27b-pilot-p0",
+      "n": 256,
+      "errors": 0,
+      "score_coverage": 256
+    },
+    {
+      "run": "qwen-35b-a3b-pilot-p0",
+      "n": 256,
+      "errors": 0,
+      "score_coverage": 256
+    },
+    {
+      "run": "qwen-2b-search-p0",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-2b-validation-p0",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-2b-search-p1",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-2b-validation-p1",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-2b-search-p2",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-2b-validation-p2",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-4b-search-p0",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-4b-validation-p0",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-4b-search-p1",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-4b-validation-p1",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-4b-search-p2",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-4b-validation-p2",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-9b-search-p0",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-9b-validation-p0",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-9b-search-p1",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-9b-validation-p1",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-9b-search-p2",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-9b-validation-p2",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-27b-search-p0",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-27b-validation-p0",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-27b-search-p1",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-27b-validation-p1",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-27b-search-p2",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-27b-validation-p2",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-35b-a3b-search-p0",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-35b-a3b-validation-p0",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-35b-a3b-search-p1",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-35b-a3b-validation-p1",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-35b-a3b-search-p2",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-35b-a3b-validation-p2",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-2b-search-p3",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-2b-validation-p3",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-2b-search-p4",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-2b-validation-p4",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-4b-search-p3",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-4b-validation-p3",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-4b-search-p4",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-4b-validation-p4",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-9b-search-p3",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-9b-validation-p3",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-9b-search-p4",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-9b-validation-p4",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-27b-search-p3",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-27b-validation-p3",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-27b-search-p4",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-27b-validation-p4",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-35b-a3b-search-p3",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-35b-a3b-validation-p3",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-35b-a3b-search-p4",
+      "n": 1024,
+      "errors": 0,
+      "score_coverage": 1024
+    },
+    {
+      "run": "qwen-35b-a3b-validation-p4",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-2b-test-p0",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-2b-audit-p0",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-2b-test-p2",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-2b-audit-p2",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-4b-test-p0",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-4b-audit-p0",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-4b-test-p1",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-4b-audit-p1",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-4b-test-p2",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-4b-audit-p2",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-9b-test-p3",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-9b-audit-p3",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-9b-test-p0",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-9b-audit-p0",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-9b-test-p2",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-9b-audit-p2",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-27b-test-p0",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-27b-audit-p0",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-27b-test-p1",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-27b-audit-p1",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-27b-test-p2",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-27b-audit-p2",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-35b-a3b-test-p4",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-35b-a3b-audit-p4",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-35b-a3b-test-p0",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-35b-a3b-audit-p0",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    },
+    {
+      "run": "qwen-35b-a3b-test-p2",
+      "n": 1699,
+      "errors": 0,
+      "score_coverage": 1699
+    },
+    {
+      "run": "qwen-35b-a3b-audit-p2",
+      "n": 512,
+      "errors": 0,
+      "score_coverage": 512
+    }
+  ]
+}

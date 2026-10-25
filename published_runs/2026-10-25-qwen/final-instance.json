@@ -1,0 +1,15 @@
+{
+  "id": "gpu-e4319df3",
+  "name": "qwen-policy-study-20261025",
+  "status": "terminated",
+  "gpu_type": "rtx_pro_6000",
+  "gpu_count": 1,
+  "tier": "on_demand",
+  "region": "us-central",
+  "price_per_hour": 1.99,
+  "created_at": "2026-10-25T03:28:07.145478Z",
+  "ready_at": "2026-10-25T03:29:48.416494Z",
+  "terminated_at": "2026-10-25T04:31:18.003975Z",
+  "auto_terminate_hours": 2,
+  "auto_terminate_at": "2026-10-25T05:29:48.416494Z"
+}

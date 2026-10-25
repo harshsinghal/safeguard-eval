@@ -1,0 +1,162 @@
+[
+  {
+    "id": "qwen-2b-search-p3",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-2b-p3-grounded-boundaries.json"
+  },
+  {
+    "id": "qwen-2b-validation-p3",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-2b-p3-grounded-boundaries.json"
+  },
+  {
+    "id": "qwen-2b-search-p4",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-2b-p4-compact-evidence.json"
+  },
+  {
+    "id": "qwen-2b-validation-p4",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-2b-p4-compact-evidence.json"
+  },
+  {
+    "id": "qwen-4b-search-p3",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-4b-p3-deliverable-and-exceptions.json"
+  },
+  {
+    "id": "qwen-4b-validation-p3",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-4b-p3-deliverable-and-exceptions.json"
+  },
+  {
+    "id": "qwen-4b-search-p4",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-4b-p4-content-and-request.json"
+  },
+  {
+    "id": "qwen-4b-validation-p4",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-4b-p4-content-and-request.json"
+  },
+  {
+    "id": "qwen-9b-search-p3",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-9b-p3-social-and-sensitive-boundaries.json"
+  },
+  {
+    "id": "qwen-9b-validation-p3",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-9b-p3-social-and-sensitive-boundaries.json"
+  },
+  {
+    "id": "qwen-9b-search-p4",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-9b-p4-compact-substance.json"
+  },
+  {
+    "id": "qwen-9b-validation-p4",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-9b-p4-compact-substance.json"
+  },
+  {
+    "id": "qwen-27b-search-p3",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-27b-p3-evidence-and-sensitive-data.json"
+  },
+  {
+    "id": "qwen-27b-validation-p3",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-27b-p3-evidence-and-sensitive-data.json"
+  },
+  {
+    "id": "qwen-27b-search-p4",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-27b-p4-compact-substance-and-endorsement.json"
+  },
+  {
+    "id": "qwen-27b-validation-p4",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-27b-p4-compact-substance-and-endorsement.json"
+  },
+  {
+    "id": "qwen-35b-a3b-search-p3",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-35b-a3b-p3-action-object-boundaries.json"
+  },
+  {
+    "id": "qwen-35b-a3b-validation-p3",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-35b-a3b-p3-action-object-boundaries.json"
+  },
+  {
+    "id": "qwen-35b-a3b-search-p4",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-35b-a3b-p4-compact-content-and-purpose.json"
+  },
+  {
+    "id": "qwen-35b-a3b-validation-p4",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-35b-a3b-p4-compact-content-and-purpose.json"
+  }
+]

@@ -50,9 +50,9 @@ Preserve private raw requests/responses, exact source/policy/model versions, run
 - [x] Run fitting-only pilots and shared policy evaluations.
 - [x] Write and evaluate fitting-derived candidate prompts.
 - [x] Select on validation and freeze all new comparisons.
-- [ ] Run complete official-test and internal-audit comparisons.
-- [ ] Collect, terminate compute, reconcile billing and reproduce public results.
-- [ ] Publish plain-language findings and research evidence.
+- [x] Run complete official-test and internal-audit comparisons.
+- [x] Collect, terminate compute, reconcile billing and reproduce public results.
+- [x] Publish plain-language findings and research evidence.
 
 ## Primary sources
 

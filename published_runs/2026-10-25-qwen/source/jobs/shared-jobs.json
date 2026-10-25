@@ -1,0 +1,242 @@
+[
+  {
+    "id": "qwen-2b-search-p0",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "qwen-2b-validation-p0",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "qwen-2b-search-p1",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "qwen-2b-validation-p1",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "qwen-2b-search-p2",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "qwen-2b-validation-p2",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "qwen-4b-search-p0",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "qwen-4b-validation-p0",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "qwen-4b-search-p1",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "qwen-4b-validation-p1",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "qwen-4b-search-p2",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "qwen-4b-validation-p2",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "qwen-9b-search-p0",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "qwen-9b-validation-p0",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "qwen-9b-search-p1",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "qwen-9b-validation-p1",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "qwen-9b-search-p2",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "qwen-9b-validation-p2",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "qwen-27b-search-p0",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "qwen-27b-validation-p0",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "qwen-27b-search-p1",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "qwen-27b-validation-p1",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "qwen-27b-search-p2",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "qwen-27b-validation-p2",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "qwen-35b-a3b-search-p0",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "qwen-35b-a3b-validation-p0",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p0.json"
+  },
+  {
+    "id": "qwen-35b-a3b-search-p1",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "qwen-35b-a3b-validation-p1",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p1.json"
+  },
+  {
+    "id": "qwen-35b-a3b-search-p2",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "search",
+    "data": "/root/data/fit-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  },
+  {
+    "id": "qwen-35b-a3b-validation-p2",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "validation",
+    "data": "/root/data/validation-search.jsonl",
+    "policy": "/root/safeguard-eval/evals/wildguard/policies/p2.json"
+  }
+]

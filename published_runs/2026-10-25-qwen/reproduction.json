@@ -1,0 +1,423 @@
+{
+  "verified_runs": 83,
+  "predictions": 70634,
+  "metrics_match": true,
+  "intervals_reproduced": true,
+  "runs": [
+    {
+      "run": "qwen-27b-audit-p0",
+      "n": 512,
+      "accuracy": 0.908203125
+    },
+    {
+      "run": "qwen-27b-audit-p1",
+      "n": 512,
+      "accuracy": 0.916015625
+    },
+    {
+      "run": "qwen-27b-audit-p2",
+      "n": 512,
+      "accuracy": 0.91015625
+    },
+    {
+      "run": "qwen-27b-pilot-p0",
+      "n": 256,
+      "accuracy": 0.93359375
+    },
+    {
+      "run": "qwen-27b-search-p0",
+      "n": 1024,
+      "accuracy": 0.9248046875
+    },
+    {
+      "run": "qwen-27b-search-p1",
+      "n": 1024,
+      "accuracy": 0.9404296875
+    },
+    {
+      "run": "qwen-27b-search-p2",
+      "n": 1024,
+      "accuracy": 0.931640625
+    },
+    {
+      "run": "qwen-27b-search-p3",
+      "n": 1024,
+      "accuracy": 0.931640625
+    },
+    {
+      "run": "qwen-27b-search-p4",
+      "n": 1024,
+      "accuracy": 0.923828125
+    },
+    {
+      "run": "qwen-27b-test-p0",
+      "n": 1699,
+      "accuracy": 0.8940553266627428
+    },
+    {
+      "run": "qwen-27b-test-p1",
+      "n": 1699,
+      "accuracy": 0.912889935256033
+    },
+    {
+      "run": "qwen-27b-test-p2",
+      "n": 1699,
+      "accuracy": 0.9064155385520895
+    },
+    {
+      "run": "qwen-27b-validation-p0",
+      "n": 512,
+      "accuracy": 0.91796875
+    },
+    {
+      "run": "qwen-27b-validation-p1",
+      "n": 512,
+      "accuracy": 0.9453125
+    },
+    {
+      "run": "qwen-27b-validation-p2",
+      "n": 512,
+      "accuracy": 0.935546875
+    },
+    {
+      "run": "qwen-27b-validation-p3",
+      "n": 512,
+      "accuracy": 0.927734375
+    },
+    {
+      "run": "qwen-27b-validation-p4",
+      "n": 512,
+      "accuracy": 0.92578125
+    },
+    {
+      "run": "qwen-2b-audit-p0",
+      "n": 512,
+      "accuracy": 0.802734375
+    },
+    {
+      "run": "qwen-2b-audit-p2",
+      "n": 512,
+      "accuracy": 0.822265625
+    },
+    {
+      "run": "qwen-2b-pilot-p0",
+      "n": 256,
+      "accuracy": 0.859375
+    },
+    {
+      "run": "qwen-2b-search-p0",
+      "n": 1024,
+      "accuracy": 0.8291015625
+    },
+    {
+      "run": "qwen-2b-search-p1",
+      "n": 1024,
+      "accuracy": 0.837890625
+    },
+    {
+      "run": "qwen-2b-search-p2",
+      "n": 1024,
+      "accuracy": 0.8603515625
+    },
+    {
+      "run": "qwen-2b-search-p3",
+      "n": 1024,
+      "accuracy": 0.84765625
+    },
+    {
+      "run": "qwen-2b-search-p4",
+      "n": 1024,
+      "accuracy": 0.8369140625
+    },
+    {
+      "run": "qwen-2b-test-p0",
+      "n": 1699,
+      "accuracy": 0.7992937021777516
+    },
+    {
+      "run": "qwen-2b-test-p2",
+      "n": 1699,
+      "accuracy": 0.8304885226603884
+    },
+    {
+      "run": "qwen-2b-validation-p0",
+      "n": 512,
+      "accuracy": 0.841796875
+    },
+    {
+      "run": "qwen-2b-validation-p1",
+      "n": 512,
+      "accuracy": 0.8671875
+    },
+    {
+      "run": "qwen-2b-validation-p2",
+      "n": 512,
+      "accuracy": 0.876953125
+    },
+    {
+      "run": "qwen-2b-validation-p3",
+      "n": 512,
+      "accuracy": 0.869140625
+    },
+    {
+      "run": "qwen-2b-validation-p4",
+      "n": 512,
+      "accuracy": 0.859375
+    },
+    {
+      "run": "qwen-35b-a3b-audit-p0",
+      "n": 512,
+      "accuracy": 0.9375
+    },
+    {
+      "run": "qwen-35b-a3b-audit-p2",
+      "n": 512,
+      "accuracy": 0.9375
+    },
+    {
+      "run": "qwen-35b-a3b-audit-p4",
+      "n": 512,
+      "accuracy": 0.931640625
+    },
+    {
+      "run": "qwen-35b-a3b-pilot-p0",
+      "n": 256,
+      "accuracy": 0.93359375
+    },
+    {
+      "run": "qwen-35b-a3b-search-p0",
+      "n": 1024,
+      "accuracy": 0.9287109375
+    },
+    {
+      "run": "qwen-35b-a3b-search-p1",
+      "n": 1024,
+      "accuracy": 0.9287109375
+    },
+    {
+      "run": "qwen-35b-a3b-search-p2",
+      "n": 1024,
+      "accuracy": 0.9306640625
+    },
+    {
+      "run": "qwen-35b-a3b-search-p3",
+      "n": 1024,
+      "accuracy": 0.9130859375
+    },
+    {
+      "run": "qwen-35b-a3b-search-p4",
+      "n": 1024,
+      "accuracy": 0.931640625
+    },
+    {
+      "run": "qwen-35b-a3b-test-p0",
+      "n": 1699,
+      "accuracy": 0.9028840494408475
+    },
+    {
+      "run": "qwen-35b-a3b-test-p2",
+      "n": 1699,
+      "accuracy": 0.9011183048852266
+    },
+    {
+      "run": "qwen-35b-a3b-test-p4",
+      "n": 1699,
+      "accuracy": 0.9028840494408475
+    },
+    {
+      "run": "qwen-35b-a3b-validation-p0",
+      "n": 512,
+      "accuracy": 0.9296875
+    },
+    {
+      "run": "qwen-35b-a3b-validation-p1",
+      "n": 512,
+      "accuracy": 0.9453125
+    },
+    {
+      "run": "qwen-35b-a3b-validation-p2",
+      "n": 512,
+      "accuracy": 0.9375
+    },
+    {
+      "run": "qwen-35b-a3b-validation-p3",
+      "n": 512,
+      "accuracy": 0.923828125
+    },
+    {
+      "run": "qwen-35b-a3b-validation-p4",
+      "n": 512,
+      "accuracy": 0.9453125
+    },
+    {
+      "run": "qwen-4b-audit-p0",
+      "n": 512,
+      "accuracy": 0.884765625
+    },
+    {
+      "run": "qwen-4b-audit-p1",
+      "n": 512,
+      "accuracy": 0.8828125
+    },
+    {
+      "run": "qwen-4b-audit-p2",
+      "n": 512,
+      "accuracy": 0.888671875
+    },
+    {
+      "run": "qwen-4b-pilot-p0",
+      "n": 256,
+      "accuracy": 0.90625
+    },
+    {
+      "run": "qwen-4b-search-p0",
+      "n": 1024,
+      "accuracy": 0.9033203125
+    },
+    {
+      "run": "qwen-4b-search-p1",
+      "n": 1024,
+      "accuracy": 0.91796875
+    },
+    {
+      "run": "qwen-4b-search-p2",
+      "n": 1024,
+      "accuracy": 0.9111328125
+    },
+    {
+      "run": "qwen-4b-search-p3",
+      "n": 1024,
+      "accuracy": 0.892578125
+    },
+    {
+      "run": "qwen-4b-search-p4",
+      "n": 1024,
+      "accuracy": 0.8955078125
+    },
+    {
+      "run": "qwen-4b-test-p0",
+      "n": 1699,
+      "accuracy": 0.8563861094761624
+    },
+    {
+      "run": "qwen-4b-test-p1",
+      "n": 1699,
+      "accuracy": 0.8758092995879929
+    },
+    {
+      "run": "qwen-4b-test-p2",
+      "n": 1699,
+      "accuracy": 0.8681577398469688
+    },
+    {
+      "run": "qwen-4b-validation-p0",
+      "n": 512,
+      "accuracy": 0.89453125
+    },
+    {
+      "run": "qwen-4b-validation-p1",
+      "n": 512,
+      "accuracy": 0.91015625
+    },
+    {
+      "run": "qwen-4b-validation-p2",
+      "n": 512,
+      "accuracy": 0.904296875
+    },
+    {
+      "run": "qwen-4b-validation-p3",
+      "n": 512,
+      "accuracy": 0.896484375
+    },
+    {
+      "run": "qwen-4b-validation-p4",
+      "n": 512,
+      "accuracy": 0.888671875
+    },
+    {
+      "run": "qwen-9b-audit-p0",
+      "n": 512,
+      "accuracy": 0.908203125
+    },
+    {
+      "run": "qwen-9b-audit-p2",
+      "n": 512,
+      "accuracy": 0.91015625
+    },
+    {
+      "run": "qwen-9b-audit-p3",
+      "n": 512,
+      "accuracy": 0.91796875
+    },
+    {
+      "run": "qwen-9b-pilot-p0",
+      "n": 256,
+      "accuracy": 0.9375
+    },
+    {
+      "run": "qwen-9b-search-p0",
+      "n": 1024,
+      "accuracy": 0.923828125
+    },
+    {
+      "run": "qwen-9b-search-p1",
+      "n": 1024,
+      "accuracy": 0.931640625
+    },
+    {
+      "run": "qwen-9b-search-p2",
+      "n": 1024,
+      "accuracy": 0.916015625
+    },
+    {
+      "run": "qwen-9b-search-p3",
+      "n": 1024,
+      "accuracy": 0.9228515625
+    },
+    {
+      "run": "qwen-9b-search-p4",
+      "n": 1024,
+      "accuracy": 0.9169921875
+    },
+    {
+      "run": "qwen-9b-test-p0",
+      "n": 1699,
+      "accuracy": 0.8905238375515009
+    },
+    {
+      "run": "qwen-9b-test-p2",
+      "n": 1699,
+      "accuracy": 0.8928781636256622
+    },
+    {
+      "run": "qwen-9b-test-p3",
+      "n": 1699,
+      "accuracy": 0.8958210712183637
+    },
+    {
+      "run": "qwen-9b-validation-p0",
+      "n": 512,
+      "accuracy": 0.923828125
+    },
+    {
+      "run": "qwen-9b-validation-p1",
+      "n": 512,
+      "accuracy": 0.93359375
+    },
+    {
+      "run": "qwen-9b-validation-p2",
+      "n": 512,
+      "accuracy": 0.9375
+    },
+    {
+      "run": "qwen-9b-validation-p3",
+      "n": 512,
+      "accuracy": 0.94140625
+    },
+    {
+      "run": "qwen-9b-validation-p4",
+      "n": 512,
+      "accuracy": 0.927734375
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "protocol_commit": "351e587",
+  "candidate_commit": "b4f8652",
+  "pre_test_freeze_commit": "84a5270ebe55cc8c4b803977958a512bf5736c73",
+  "historical_baseline_commit": "2ba4cd021caece767432bbe60fd0a08770f3fd7e",
+  "freeze_sha256": "59679e8bd583e939edb3e39cded2fc60d2c89f48852ca9ac6b1f34c8fd6374a0",
+  "prior_test_results_known": true,
+  "note": "Freeze commit was successfully pushed before new Qwen test/audit data upload and inference. No policies were edited after this freeze."
+}

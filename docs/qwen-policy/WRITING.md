@@ -1,6 +1,6 @@
 # Questions and evidence for the Qwen follow-up
 
-This study extends the earlier policy-tuning story by asking whether a general-purpose instruction model can serve as the classifier. Final claims must come from complete frozen test runs, not pilot or validation ranks.
+This study extends the earlier policy-tuning story by asking whether a general-purpose instruction model can serve as the classifier. Final results are complete; the [plain-language readout](READOUT.md) and [claim-to-evidence map](CLAIMS.md) now anchor future writing. Claims below must remain tied to the completed frozen test runs.
 
 Potential article: **Does a moderation policy need a specialized model? A nearby-size Qwen comparison.** Explain that the policy is a system instruction in both cases; the model's training and native interface differ. Avoid treating document formatting as a fundamentally different method.
 
@@ -18,3 +18,5 @@ Potential article: **Does a moderation policy need a specialized model? A nearby
 Use the original study as a fixed historical baseline. Do not replace its chosen policies with test-favored candidates. Present all seven registered nearby-size pairings, including negative outcomes, and note that the two large Qwen models are reused across two specialist comparisons.
 
 A competitive Qwen result would support using general-purpose models for this particular classification deployment. It would not show that specialized policy models are unnecessary across arbitrary rules, languages, policy changes, latency budgets or adversarial settings. A stronger specialization study would include direct parent instruction checkpoints, a fresh benchmark, repeated prompt searches and controlled inference budgets.
+
+The completed study supports a mixed story: small specialists won; larger Qwen configurations had competitive headline scores; most tailored drafts failed; prompt tuning and threshold movement can overlap. Preserve the uncertainty and secondary-analysis labels in any article or paper. All 83 runs and their unsuccessful candidates are retained.

@@ -1,0 +1,254 @@
+[
+  {
+    "id": "qwen-2b-test-p0",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p0.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-2b-audit-p0",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p0.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-2b-test-p2",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p2.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-2b-audit-p2",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p2.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-4b-test-p0",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p0.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-4b-audit-p0",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p0.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-4b-test-p1",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p1.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-4b-audit-p1",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p1.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-4b-test-p2",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p2.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-4b-audit-p2",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p2.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-9b-test-p3",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-9b-p3-social-and-sensitive-boundaries.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-9b-audit-p3",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-9b-p3-social-and-sensitive-boundaries.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-9b-test-p0",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p0.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-9b-audit-p0",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p0.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-9b-test-p2",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p2.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-9b-audit-p2",
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p2.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-27b-test-p0",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p0.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-27b-audit-p0",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p0.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-27b-test-p1",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p1.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-27b-audit-p1",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p1.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-27b-test-p2",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p2.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-27b-audit-p2",
+    "model": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p2.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-35b-a3b-test-p4",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-35b-a3b-p4-compact-content-and-purpose.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-35b-a3b-audit-p4",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/policies/qwen-35b-a3b-p4-compact-content-and-purpose.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-35b-a3b-test-p0",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p0.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-35b-a3b-audit-p0",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p0.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-35b-a3b-test-p2",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "test",
+    "data": "/root/data/test.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p2.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  },
+  {
+    "id": "qwen-35b-a3b-audit-p2",
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "stage": "audit",
+    "data": "/root/data/audit-budget.jsonl",
+    "policy": "/root/safeguard-eval/evals/qwen_policy/../wildguard/policies/p2.json",
+    "freeze": "/root/safeguard-eval/published_runs/2026-10-25-qwen/freeze.json"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "provider": "GPU.ai",
+  "instance_id": "gpu-e4319df3",
+  "status": "terminated",
+  "cost_cents": 204,
+  "cumulative_cost_cents": 791,
+  "prior_cost_cents": 587,
+  "gpu_seconds": 3690,
+  "price_per_hour_usd": 1.99,
+  "server_auto_terminate_hours": 2,
+  "usage": [
+    {
+      "bucket_start": "2026-10-25T00:00:00Z",
+      "instance_id": "gpu-e4319df3",
+      "gpu_seconds": 3690,
+      "cost_cents": 204
+    }
+  ],
+  "scope": "Only this Qwen comparison instance, plus separately documented $5.87 prior studies; no Runpod resources used"
+}

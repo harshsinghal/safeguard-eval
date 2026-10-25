@@ -105,6 +105,18 @@ def analyze(root,freeze,selection,prior):
             qwen_threshold=new_controls[key],policy_model_threshold=old_threshold,
             policy_model_control='original explicit-label deployment' if old_threshold is None else 'previous validation-selected threshold',
             qwen_metrics=report(qrows),policy_model_metrics=report(orows),qwen_minus_policy=paired_interval(qrows,orows)))
+    prompt_controls=[]
+    for model in f['models']:
+        initial=(model,'wg-p0-taxonomy');selected=(model,s['selected'][model])
+        if initial not in new_controls:continue
+        base=threshold_rows(runs[initial],new_controls[initial])
+        item=dict(model=model,initial_threshold=new_controls[initial],initial_threshold_metrics=report(base),
+                  selected_free_metrics=report(runs[selected]),selected_free_vs_initial_threshold=paired_interval(runs[selected],base))
+        if selected in new_controls:
+            tuned=threshold_rows(runs[selected],new_controls[selected])
+            item.update(selected_threshold=new_controls[selected],selected_threshold_metrics=report(tuned),
+                        selected_threshold_vs_initial_threshold=paired_interval(tuned,base))
+        prompt_controls.append(item)
     repeated=[]
     for model in f['models']:
         stages={}
@@ -119,7 +131,7 @@ def analyze(root,freeze,selection,prior):
                 changed_decisions=sum(a[k]['prediction']!=b[k]['prediction'] for k in identical),
                 note='Descriptive repeated-input diagnostic under changed batch context, not a controlled repetition.'))
     return dict(exploratory=True,prior_test_results_known=True,entries=entries,paired_comparisons=pairs,calibration_controls=controls,
-                calibrated_paired_comparisons=calibrated_pairs,repeatability=repeated,
+                calibrated_paired_comparisons=calibrated_pairs,prompt_vs_threshold_controls=prompt_controls,repeatability=repeated,
                 caveat='Nearby sizes and deployment choices are not controlled training-specialization ablations. All intervals are exploratory, unadjusted, conditional on selected prompts, and exclude runtime/annotation uncertainty.')
 
 

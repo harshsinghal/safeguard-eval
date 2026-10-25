@@ -1,6 +1,14 @@
 # Policy Model Evaluation
 
-Compare how policy models apply written rules to text. The repository contains a controlled WildGuard policy-tuning study, earlier image-prompt and prompt-injection demonstrations, and the original GPT-OSS Safeguard 20B interactive demo powered by Groq.
+Compare how specialized policy models and general-purpose instruction models apply written rules to text. The repository includes WildGuard policy-tuning and nearby-size Qwen comparisons, earlier image-prompt and prompt-injection demonstrations, and the original GPT-OSS Safeguard 20B demo powered by Groq.
+
+## General-purpose Qwen versus policy models
+
+We tested five Qwen3.5 checkpoints using the policy as a system instruction, with five prompt candidates per model and validation selection before new test inference. On all **1,699 labeled WildGuardTest prompts**, selected-prompt accuracy was **83.05% (2B), 87.58% (4B), 89.58% (9B), 91.29% (27B), and 90.29% (35B-A3B)**. Weights stayed fixed.
+
+**The smallest specialists won their nearby-size comparisons.** PolicyLM-1.7B scored 86.82% and Shieldstral-3B scored 90.82%. Larger Qwen results were competitive, with most nearby-size gaps uncertain. Qwen 27B exceeded the recorded Safeguard deployment, while its advantage over CoPE remained uncertain. This exploratory comparison does not isolate the effect of specialized training.
+
+The new study completed **83 runs for $2.04**, bringing cumulative GPU spend to **$7.91**. The GPU is terminated. Read the [plain-language explanation](docs/qwen-policy/READOUT.md), [full results and figure](published_runs/2026-10-25-qwen/README.md), [exact prompt changes](docs/qwen-policy/PROMPT-CHANGES.md), and [reproduction guide](published_runs/2026-10-25-qwen/REPRODUCING.md).
 
 ## WildGuard: tuning policies with frozen model weights
 
@@ -16,7 +24,7 @@ We evaluated four custom-policy models against the released WildGuard model on *
 
 **Policy tuning helped, but superiority over WildGuard is not established.** Shieldstral gained 2.88 percentage points over its initial policy. Its 0.47-point advantage over WildGuard has a paired 95% interval of **−0.24 to +1.24 points**. Calibrating the initial policy alone reaches 90.11%, explaining much of the gain. Failures count as wrong; unsuccessful candidates and negative results are retained.
 
-All five models ran on GPU.ai. The study completed 84 runs for **$4.30**, bringing cumulative experiment spend to **$5.87**. The GPU is terminated. Public prediction records and archived code reproduce the reported scores without paid inference; gated prompts and raw model traces remain private.
+All five models ran on GPU.ai. The study completed 84 runs for **$4.30**, bringing cumulative experiment spend at that stage to **$5.87**. The GPU is terminated. Public prediction records and archived code reproduce the reported scores without paid inference; gated prompts and raw model traces remain private.
 
 Read the [full results and reproducible evidence](published_runs/2026-10-24-wildguard/README.md), [result figure](published_runs/2026-10-24-wildguard/figures/policy-tuning.png), [experiment plan](docs/wildguard/PLAN.md), [methods](docs/wildguard/METHODS.md), [lab notebook](docs/wildguard/NOTES.md), and [claim-to-evidence map](docs/wildguard/CLAIMS.md). The [writing map](docs/wildguard/WRITING.md) organizes findings for future articles and a research report. The study is a bounded, one-benchmark experiment; original training exposure is not fully known.
 

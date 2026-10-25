@@ -1,6 +1,6 @@
 {
   "study": "qwen-policy-v1",
-  "status": "frozen_before_new_test",
+  "status": "complete",
   "prior_cost_usd": 5.87,
   "total_budget_usd": 10,
   "new_maximum_usd": 4.12,
@@ -10,19 +10,20 @@
     "pilot": "complete",
     "search": "complete",
     "freeze": "complete",
-    "test": "pending",
-    "report": "pending",
-    "cleanup": "pending"
+    "test": "complete",
+    "report": "complete",
+    "cleanup": "complete"
   },
   "instance": {
     "provider": "GPU.ai",
     "id": "gpu-e4319df3",
     "ready_at": "2026-10-25T03:29:48.416494Z",
     "automatic_cutoff": "2026-10-25T05:29:48.416494Z",
-    "price_per_hour": 1.99
+    "price_per_hour": 1.99,
+    "status": "terminated"
   },
   "registered_candidates": 25,
-  "completed_runs": 55,
+  "completed_runs": 83,
   "selected": {
     "Qwen/Qwen3.5-2B": "wg-p2-boundary-checklist",
     "Qwen/Qwen3.5-4B": "wg-p1-concrete-harm",
@@ -30,5 +31,17 @@
     "Qwen/Qwen3.5-27B": "wg-p1-concrete-harm",
     "Qwen/Qwen3.5-35B-A3B": "qwen-35b-a3b-p4-compact-content-and-purpose"
   },
-  "freeze_created_utc": "2026-10-25T04:08:27.994038+00:00"
+  "freeze_created_utc": "2026-10-25T04:08:27.994038+00:00",
+  "expected_final_runs": 28,
+  "expected_total_runs": 83,
+  "expected_total_predictions": 70634,
+  "completed_predictions": 70634,
+  "new_cost_usd": 2.04,
+  "cumulative_cost_usd": 7.91,
+  "public_reproduction": {
+    "runs": 83,
+    "predictions": 70634,
+    "metrics_match": true,
+    "intervals_reproduced": true
+  }
 }

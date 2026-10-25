@@ -59,3 +59,23 @@ All 55 pilot/search/validation runs completed. Candidate editing is closed. Each
 The freeze records every final policy/model/source/data hash, fixed decoding settings and each available validation-derived label-score threshold. Primary results will use strict free-generated labels. p0, shared p2 and selected configurations are all evaluated on test and audit, reusing identical configurations. No prompt editing or test-based threshold selection is permitted.
 
 For 35B-A3B, the compact p4 ties p1 at 94.53% validation accuracy and wins the registered shorter-text tie-break. This is not a validation accuracy improvement. The 9B p3 wins by two validation examples over shared p2. The other sizes select inherited prompts. All ten new drafts remain in the record, and no further edits were made. Fourteen distinct final configurations produce 28 final runs because 2B's selected and shared policies are identical.
+
+## Analysis clarification during final inference
+
+The registered threshold controls already compare validation-calibrated initial and selected policies. The analysis now also emits explicit paired intervals for selected free labels versus the calibrated initial policy, and for selected-calibrated versus initial-calibrated predictions. This makes the prompt-versus-operating-point comparison directly reproducible. It is a secondary analysis added after some new test scores were visible; it changes no prompt, threshold, inference setting, primary comparison or test population. All five models receive the same diagnostic.
+
+## Inference complete and compute terminated
+
+All 83 runs completed, producing 70,634 classification outputs across repeated model/prompt evaluations. Every registered test configuration has all 1,699 labeled official-test rows and every audit configuration has all 512 audit rows. All outputs parse as valid labels; there are zero output errors. Source population metadata, prompt hashes, settings, model/policy revisions, metrics and freeze bindings were verified for every run. A local verification-helper JSONL parsing bug was corrected before this check; inference code and recorded predictions were unchanged.
+
+The private archive contains 525 files, 36,649,454 bytes, SHA256 `16f5cc98d4ad61c7866c51d54da60ee861da4b3baaac97a339df97bc5fef5792`. It includes raw requests/responses, inference source, job files and full logs and is retained outside the repository. The GPU was terminated after collection, and its temporary provider/local SSH key was removed. Provider usage is 3,690 GPU seconds at $1.99/hour, charged $2.04; cumulative experiment spend is $7.91 including the previous $5.87. Final analysis and public score reproduction run locally after termination.
+
+## Findings and publication
+
+Selected Qwen test accuracies are 83.05% (2B), 87.58% (4B), 89.58% (9B), 91.29% (27B), and 90.29% (35B-A3B). The two smallest specialists outperform their nearby Qwen comparators in the exploratory paired intervals; this remains true under available frozen threshold controls. Qwen 27B exceeds the recorded Safeguard deployment, but its advantage over CoPE is uncertain. Other larger-model nearby-size comparisons also have intervals crossing zero.
+
+Prompt-selection gains over initial Qwen are +3.12, +1.94, +0.53, +1.88 and 0.00 percentage points. The new 9B candidate's small validation gain transfers to a small, uncertain test gain. The 35B candidate wins its validation length tie but adds no test accuracy. For 2B, the calibrated initial policy reaches 82.93%, nearly the selected free-label score of 83.05%; for 4B, selected wording still exceeds its calibrated initial policy. Secondary paired contrasts are labeled as added during final inference, with no changes to primary outcomes.
+
+The exported figure was visually reviewed; its legend was moved to avoid covering data. This cosmetic change affects no analysis. All public result tables are generated from analysis.json. The original WildGuard code and published evidence remain unchanged.
+
+CPU reproduction succeeded for all 83 runs / 70,634 predictions, including every metric and paired interval. The archived Python/JSON analysis and inference sources were checked byte-for-byte against the sources used for reproduction. Provider billing was rechecked after termination and remained $2.04. The public artifacts contain no source prompts or raw traces. Final results, plots, prompt histories, methodology, costs and a plain-language readout are published together for future articles and a research report.

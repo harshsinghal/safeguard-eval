@@ -24,14 +24,16 @@ def plot(analysis,out):
         export.append(dict(pair=label,qwen_accuracy=qa,specialist_accuracy=pa,delta_percentage_points=v,ci95_low=lo,ci95_high=hi))
     left.set_yticks(range(len(rows)),labels);left.invert_yaxis();left.set_xlabel('Test accuracy (%)');right.set_xlabel('Qwen minus specialist (percentage points)')
     left.set_title('Validation-selected prompts',loc='left',fontweight='bold');right.set_title('Paired 95% intervals',loc='left',fontweight='bold');right.axvline(0,color='#777',lw=1,ls='--')
-    left.legend(loc='lower right',frameon=False);left.grid(axis='x',alpha=.2);right.grid(axis='x',alpha=.2);right.margins(x=.28)
+    left.legend(loc='lower left',frameon=False);left.grid(axis='x',alpha=.2);right.grid(axis='x',alpha=.2);right.margins(x=.28)
     fig.suptitle('General-purpose Qwen and nearby-size policy models',x=.03,ha='left',fontsize=16,fontweight='bold')
     fig.text(.03,.035,'WildGuardTest: all 1,699 labeled prompts. Exploratory, unadjusted group-bootstrap intervals.\nApproximate size matches; architectures and deployments differ. Large Qwen runs are reused across two comparisons.',fontsize=9,color='#4b5563')
     fig.subplots_adjust(left=.30,right=.98,top=.86,bottom=.17,wspace=.15)
     for suffix in ['png','svg']:fig.savefig(out/('qwen-comparison.'+suffix),dpi=220,facecolor='white')
+    svg=out/'qwen-comparison.svg'
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().split('\n')).rstrip()+'\n')
     plt.close(fig)
     with (out/'qwen-comparison.csv').open('w',newline='') as f:
-        w=csv.DictWriter(f,fieldnames=list(export[0]));w.writeheader();w.writerows(export)
+        w=csv.DictWriter(f,fieldnames=list(export[0]),lineterminator='\n');w.writeheader();w.writerows(export)
 
 
 if __name__=='__main__':

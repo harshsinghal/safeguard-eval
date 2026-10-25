@@ -1,6 +1,6 @@
 # Nearby-size general-purpose classification
 
-This follow-up uses Qwen3.5's post-trained checkpoints to classify the same WildGuard prompts as the specialized policy models. See the [protocol](../../docs/qwen-policy/PLAN.md), [notebook](../../docs/qwen-policy/NOTES.md) and [progress](../../docs/qwen-policy/progress.json). Results are pending.
+This follow-up uses Qwen3.5's post-trained checkpoints to classify the same WildGuard prompts as the specialized policy models. See the [protocol](../../docs/qwen-policy/PLAN.md), [notebook](../../docs/qwen-policy/NOTES.md) and [progress](../../docs/qwen-policy/progress.json). Results are complete: see the [plain-language readout](../../docs/qwen-policy/READOUT.md) and [reproducible evidence](../../published_runs/2026-10-25-qwen/README.md).
 
 The original WildGuard experiment remains immutable. This package adds a general-purpose system-prompt adapter, five-candidate validation selection, explicit final-inference freeze, and matched historical comparisons. It reuses the existing metrics and prompt-free export/reproduction tools.
 
