@@ -1,0 +1,207 @@
+{
+  "study": "qwen-policy-v1",
+  "models": {
+    "Qwen/Qwen3.5-2B": {
+      "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "checkpoint_parameters": 2274069824,
+      "architecture": "Qwen3_5ForConditionalGeneration"
+    },
+    "Qwen/Qwen3.5-4B": {
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "checkpoint_parameters": 4659865088,
+      "architecture": "Qwen3_5ForConditionalGeneration"
+    },
+    "Qwen/Qwen3.5-9B": {
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "checkpoint_parameters": 9653104368,
+      "architecture": "Qwen3_5ForConditionalGeneration"
+    },
+    "Qwen/Qwen3.5-27B": {
+      "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+      "checkpoint_parameters": 27781427952,
+      "architecture": "Qwen3_5ForConditionalGeneration"
+    },
+    "Qwen/Qwen3.5-35B-A3B": {
+      "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+      "checkpoint_parameters": 35951822704,
+      "architecture": "Qwen3_5MoeForConditionalGeneration"
+    }
+  },
+  "dataset": {
+    "repo": "allenai/wildguardmix",
+    "revision": "d29c47f41c8b51348b5c8e8c81c039b3132b66d1"
+  },
+  "data_hashes": {
+    "fit": "cc03cd46be158fbe6bf2d9a60b2aca4e07dfd38107f078dc3cbe9508812a8661",
+    "validation": "c4d61392c20bc491fa3a3ee7df3c861d75ccfd7529f9f32ae9d5a08b2ea14090",
+    "audit": "03cec44113edb0ef86ec81deb1cd4c35d100f5e4509cd07c5bf150aacd72eabf",
+    "test": "a5fe285c83b24f31bbbc7f75d6deaaab6091224418d11efa39de2ddd5d1fe395"
+  },
+  "candidates": [
+    {
+      "model": "Qwen/Qwen3.5-2B",
+      "path": "../wildguard/policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-2b-search-p0",
+        "validation": "qwen-2b-validation-p0"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-2B",
+      "path": "../wildguard/policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-2b-search-p1",
+        "validation": "qwen-2b-validation-p1"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-2B",
+      "path": "../wildguard/policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-2b-search-p2",
+        "validation": "qwen-2b-validation-p2"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "path": "../wildguard/policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-4b-search-p0",
+        "validation": "qwen-4b-validation-p0"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "path": "../wildguard/policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-4b-search-p1",
+        "validation": "qwen-4b-validation-p1"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "path": "../wildguard/policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-4b-search-p2",
+        "validation": "qwen-4b-validation-p2"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "path": "../wildguard/policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-9b-search-p0",
+        "validation": "qwen-9b-validation-p0"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "path": "../wildguard/policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-9b-search-p1",
+        "validation": "qwen-9b-validation-p1"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "path": "../wildguard/policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-9b-search-p2",
+        "validation": "qwen-9b-validation-p2"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-27B",
+      "path": "../wildguard/policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-27b-search-p0",
+        "validation": "qwen-27b-validation-p0"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-27B",
+      "path": "../wildguard/policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-27b-search-p1",
+        "validation": "qwen-27b-validation-p1"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-27B",
+      "path": "../wildguard/policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-27b-search-p2",
+        "validation": "qwen-27b-validation-p2"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-35B-A3B",
+      "path": "../wildguard/policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-35b-a3b-search-p0",
+        "validation": "qwen-35b-a3b-validation-p0"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-35B-A3B",
+      "path": "../wildguard/policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-35b-a3b-search-p1",
+        "validation": "qwen-35b-a3b-validation-p1"
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-35B-A3B",
+      "path": "../wildguard/policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "scope": "inherited-shared",
+      "rationale": "Unchanged policy from the original frozen study; same semantic instructions across systems.",
+      "runs": {
+        "fit": "qwen-35b-a3b-search-p2",
+        "validation": "qwen-35b-a3b-validation-p2"
+      }
+    }
+  ]
+}

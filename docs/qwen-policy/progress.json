@@ -1,0 +1,17 @@
+{
+  "study": "qwen-policy-v1",
+  "status": "ready_for_pilot",
+  "prior_cost_usd": 5.87,
+  "total_budget_usd": 10,
+  "new_maximum_usd": 4.12,
+  "steps": {
+    "protocol": "complete",
+    "runner": "complete",
+    "pilot": "pending",
+    "search": "pending",
+    "freeze": "pending",
+    "test": "pending",
+    "report": "pending",
+    "cleanup": "pending"
+  }
+}

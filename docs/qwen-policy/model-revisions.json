@@ -1,0 +1,27 @@
+{
+  "Qwen/Qwen3.5-2B": {
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "checkpoint_parameters": 2274069824,
+    "architecture": "Qwen3_5ForConditionalGeneration"
+  },
+  "Qwen/Qwen3.5-4B": {
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "checkpoint_parameters": 4659865088,
+    "architecture": "Qwen3_5ForConditionalGeneration"
+  },
+  "Qwen/Qwen3.5-9B": {
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "checkpoint_parameters": 9653104368,
+    "architecture": "Qwen3_5ForConditionalGeneration"
+  },
+  "Qwen/Qwen3.5-27B": {
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "checkpoint_parameters": 27781427952,
+    "architecture": "Qwen3_5ForConditionalGeneration"
+  },
+  "Qwen/Qwen3.5-35B-A3B": {
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "checkpoint_parameters": 35951822704,
+    "architecture": "Qwen3_5MoeForConditionalGeneration"
+  }
+}
