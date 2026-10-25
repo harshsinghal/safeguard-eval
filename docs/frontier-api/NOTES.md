@@ -21,3 +21,7 @@ Keep a dated entry for every policy hypothesis, fitting error pattern, exact bef
 ## 2026-10-25 — pilot authorized
 
 User authorized a $20 spending limit. Interpret this as the cumulative project limit, including the $7.91 already spent. Retain the proposed $10 cap for this pilot phase, leaving $2.09 of additional project headroom even if the entire pilot allowance is used. Full search remains a separate, unstarted phase. Record source/catalog checks and account usage before the first paid request.
+
+## Pilot routing amendment
+
+The initial OpenAI and Anthropic calls succeeded. The direct DeepSeek endpoint returned a 404 before inference: account settings exclude providers that may train on paid inputs. Keep those settings unchanged and amend the DeepSeek deployment to the same checkpoint on DeepInfra FP8, excluding flex/priority variants. Preserve the failed call and reserve its full maximum cost until billing reconciliation. Resume the pilot explicitly, retaining completed calls and all failed attempts; never rerun invalid classifications to improve their labels. The resume change affects orchestration, not classification requests or parsing.
