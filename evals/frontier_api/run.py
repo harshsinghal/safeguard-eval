@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 import re
 import time
+import urllib.error
 import urllib.request
 
 from evals.qwen_policy.run import render
@@ -270,6 +271,12 @@ def run(args):
                     row['error_type'] = 'InvalidClassification'
             except Exception as e:
                 row['error_type'] = type(e).__name__
+                if isinstance(e, urllib.error.HTTPError):
+                    row['http_status'] = e.code
+                    try:
+                        response = json.loads(e.read().decode())
+                    except (ValueError, UnicodeError):
+                        response = {'error': {'message': 'Non-JSON HTTP error; body omitted'}}
                 # API/transport/config/billing errors abort; their attempted rows remain errors.
                 fatal = True
             row['latency_seconds'] = time.monotonic() - start

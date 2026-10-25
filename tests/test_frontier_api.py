@@ -85,6 +85,7 @@ class FrontierTests(unittest.TestCase):
             data = td / 'fit.jsonl'; data.write_text(json.dumps(row) + '\n')
             r = copy.deepcopy(self.r)
             r['data_hashes']['fit'] = digest(data); r['data_counts']['fit'] = 1
+            r['budget']['status'] = 'awaiting_user_budget'
             registry = td / 'registry.json'; registry.write_text(json.dumps(r))
             args = argparse.Namespace(registry=registry, data=data, policy=ROOT/'evals/wildguard/policies/p0.json',
                 arm='astra-lower', stage='pilot', out=td/'out', dry_run=True, freeze=None,

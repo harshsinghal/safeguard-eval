@@ -17,3 +17,7 @@ Next: obtain explicit authorization for the proposed $10 pilot phase, interleave
 ## Evidence to retain for articles and research
 
 Keep a dated entry for every policy hypothesis, fitting error pattern, exact before/after text, candidate hash, validation result, rejection, protocol amendment, and infrastructure failure. Publish both improvements and regressions. Preserve provider identity and billing metadata so future writing can distinguish policy effects, reasoning effects, and deployment changes. Raw gated dataset text and model traces stay private; publish prompt-free predictions and reproducible metrics. Treat all comparisons as exploratory because the earlier official-test results are already known.
+
+## 2026-10-25 — pilot authorized
+
+User authorized a $20 spending limit. Interpret this as the cumulative project limit, including the $7.91 already spent. Retain the proposed $10 cap for this pilot phase, leaving $2.09 of additional project headroom even if the entire pilot allowance is used. Full search remains a separate, unstarted phase. Record source/catalog checks and account usage before the first paid request.

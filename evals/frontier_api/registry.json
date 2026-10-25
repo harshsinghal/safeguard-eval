@@ -549,10 +549,16 @@
   ],
   "candidates_per_arm": 5,
   "budget": {
-    "status": "awaiting_user_budget",
+    "status": "approved",
+    "authorization_note": "User authorized a $20 spending limit on 2026-10-25 in response to the proposed $10 pilot. Interpret as a cumulative project cap; retain $10 pilot-only cap.",
+    "authorized_utc": "2026-10-25T14:27:43.681693+00:00",
     "prior_cumulative_usd": 7.91,
-    "cumulative_cap_exclusive_usd": 10,
-    "available_new_ceiling_usd": 2.08
+    "cumulative_cap_usd": 20,
+    "approved_new_cap_usd": 10,
+    "allowed_stages": [
+      "pilot"
+    ],
+    "remaining_project_headroom_after_full_pilot_usd": 2.09
   },
   "prior_test_results_known": true
 }

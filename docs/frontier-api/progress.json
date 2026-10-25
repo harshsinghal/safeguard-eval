@@ -1,6 +1,6 @@
 {
   "study": "frontier-api-v1",
-  "status": "prepared_awaiting_pilot_budget",
+  "status": "pilot_authorized",
   "models": 4,
   "reasoning_conditions": 8,
   "local_tests_passed": 35,
@@ -10,15 +10,18 @@
   "existing_cumulative_cap_exclusive_usd": 10,
   "proposed_pilot_cap_usd": 10,
   "proposed_cumulative_cap_usd": 17.91,
-  "proposal_authorized": false,
+  "proposal_authorized": true,
   "steps": {
     "catalog": "complete",
     "protocol": "complete",
     "runner": "locally_tested",
-    "pilot": "awaiting_budget",
+    "pilot": "authorized",
     "search": "not_started",
     "freeze": "not_started",
     "test": "not_started",
     "report": "not_started"
-  }
+  },
+  "current_cumulative_cap_usd": 20,
+  "approved_pilot_cap_usd": 10,
+  "authorization_utc": "2026-10-25T14:27:43.681693+00:00"
 }

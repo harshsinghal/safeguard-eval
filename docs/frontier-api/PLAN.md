@@ -1,6 +1,6 @@
 # Frontier models as policy classifiers
 
-**Status: implementation and local checks complete; paid pilot awaiting a new budget. No frontier inference results yet.** This is the third study, after the specialized-policy and nearby-size Qwen comparisons.
+**Status: pilot authorized on October 25, 2026.** The user raised the cumulative cap to $20; retain the proposed $10 pilot-only limit within it. The budget estimates and original proposal below are preserved as the preregistration. No frontier inference results yet. This is the third study, after the specialized-policy and nearby-size Qwen comparisons.
 
 ## Questions
 
@@ -72,7 +72,8 @@ No GPUs are needed for this API study. Existing GPU.ai/Runpod preferences remain
 - [x] Preserve model/endpoint snapshots and register the core conditions.
 - [x] Implement runner, cost estimator, selection/freeze validation, and paired analysis.
 - [x] Check local parsing, billing, leakage boundaries, and freeze integrity with offline tests.
-- [ ] Obtain a new pilot budget; run and document the fitting-only pilot.
+- [x] Obtain a new pilot budget ($10 phase cap within the approved $20 cumulative cap).
+- [ ] Run and document the fitting-only pilot.
 - [ ] Use measured costs to finalize and approve full-study scope/budget.
 - [ ] Evaluate shared policies; write fitting-derived candidates and log every change.
 - [ ] Select on validation; freeze all final configurations.
