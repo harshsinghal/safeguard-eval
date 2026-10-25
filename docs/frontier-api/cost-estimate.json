@@ -1,0 +1,307 @@
+{
+  "assumptions": {
+    "input_tokens": "UTF-8 bytes / 4 + 32 per request; not provider tokenization",
+    "policy": "longest of shared p0/p1/p2; new candidate lengths unknown",
+    "final_policies_max": 3,
+    "repetitions": 256,
+    "pilot_n": 32,
+    "cache_discount": 0,
+    "retries": 0,
+    "scope": "4 models / 8 arms"
+  },
+  "arms": {
+    "astra-lower": {
+      "requests": 14601,
+      "stages": {
+        "fit": {
+          "requests": 5120,
+          "estimated_input_tokens": 4462531.25
+        },
+        "validation": {
+          "requests": 2560,
+          "estimated_input_tokens": 2230456.25
+        },
+        "audit": {
+          "requests": 1536,
+          "estimated_input_tokens": 1337733.0
+        },
+        "test": {
+          "requests": 5097,
+          "estimated_input_tokens": 4410126.0
+        },
+        "pilot": {
+          "requests": 32,
+          "estimated_input_tokens": 24549.25
+        },
+        "repeat": {
+          "requests": 256,
+          "estimated_input_tokens": 211871.25
+        }
+      },
+      "cost_scenarios_usd": {
+        "short": 220.21907000000002,
+        "moderate": 500.55827000000005,
+        "long": 1621.9150700000002
+      },
+      "conservative_request_reservations_usd": 10378.750699999997
+    },
+    "astra-higher": {
+      "requests": 14601,
+      "stages": {
+        "fit": {
+          "requests": 5120,
+          "estimated_input_tokens": 4462531.25
+        },
+        "validation": {
+          "requests": 2560,
+          "estimated_input_tokens": 2230456.25
+        },
+        "audit": {
+          "requests": 1536,
+          "estimated_input_tokens": 1337733.0
+        },
+        "test": {
+          "requests": 5097,
+          "estimated_input_tokens": 4410126.0
+        },
+        "pilot": {
+          "requests": 32,
+          "estimated_input_tokens": 24549.25
+        },
+        "repeat": {
+          "requests": 256,
+          "estimated_input_tokens": 211871.25
+        }
+      },
+      "cost_scenarios_usd": {
+        "short": 500.55827000000005,
+        "moderate": 1621.9150700000002,
+        "long": 6107.342270000001
+      },
+      "conservative_request_reservations_usd": 10378.750699999997
+    },
+    "opus-lower": {
+      "requests": 14601,
+      "stages": {
+        "fit": {
+          "requests": 5120,
+          "estimated_input_tokens": 4462531.25
+        },
+        "validation": {
+          "requests": 2560,
+          "estimated_input_tokens": 2230456.25
+        },
+        "audit": {
+          "requests": 1536,
+          "estimated_input_tokens": 1337733.0
+        },
+        "test": {
+          "requests": 5097,
+          "estimated_input_tokens": 4410126.0
+        },
+        "pilot": {
+          "requests": 32,
+          "estimated_input_tokens": 24549.25
+        },
+        "repeat": {
+          "requests": 256,
+          "estimated_input_tokens": 211871.25
+        }
+      },
+      "cost_scenarios_usd": {
+        "short": 88.087628,
+        "moderate": 200.223308,
+        "long": 648.766028
+      },
+      "conservative_request_reservations_usd": 2842.7546559999987
+    },
+    "opus-higher": {
+      "requests": 14601,
+      "stages": {
+        "fit": {
+          "requests": 5120,
+          "estimated_input_tokens": 4462531.25
+        },
+        "validation": {
+          "requests": 2560,
+          "estimated_input_tokens": 2230456.25
+        },
+        "audit": {
+          "requests": 1536,
+          "estimated_input_tokens": 1337733.0
+        },
+        "test": {
+          "requests": 5097,
+          "estimated_input_tokens": 4410126.0
+        },
+        "pilot": {
+          "requests": 32,
+          "estimated_input_tokens": 24549.25
+        },
+        "repeat": {
+          "requests": 256,
+          "estimated_input_tokens": 211871.25
+        }
+      },
+      "cost_scenarios_usd": {
+        "short": 200.223308,
+        "moderate": 648.766028,
+        "long": 2442.936908
+      },
+      "conservative_request_reservations_usd": 2842.7546559999987
+    },
+    "deepseek-lower": {
+      "requests": 14601,
+      "stages": {
+        "fit": {
+          "requests": 5120,
+          "estimated_input_tokens": 4462531.25
+        },
+        "validation": {
+          "requests": 2560,
+          "estimated_input_tokens": 2230456.25
+        },
+        "audit": {
+          "requests": 1536,
+          "estimated_input_tokens": 1337733.0
+        },
+        "test": {
+          "requests": 5097,
+          "estimated_input_tokens": 4410126.0
+        },
+        "pilot": {
+          "requests": 32,
+          "estimated_input_tokens": 24549.25
+        },
+        "repeat": {
+          "requests": 256,
+          "estimated_input_tokens": 211871.25
+        }
+      },
+      "cost_scenarios_usd": {
+        "short": 1.9716748499999999,
+        "moderate": 1.9716748499999999,
+        "long": 1.9716748499999999
+      },
+      "conservative_request_reservations_usd": 160.428426
+    },
+    "deepseek-higher": {
+      "requests": 14601,
+      "stages": {
+        "fit": {
+          "requests": 5120,
+          "estimated_input_tokens": 4462531.25
+        },
+        "validation": {
+          "requests": 2560,
+          "estimated_input_tokens": 2230456.25
+        },
+        "audit": {
+          "requests": 1536,
+          "estimated_input_tokens": 1337733.0
+        },
+        "test": {
+          "requests": 5097,
+          "estimated_input_tokens": 4410126.0
+        },
+        "pilot": {
+          "requests": 32,
+          "estimated_input_tokens": 24549.25
+        },
+        "repeat": {
+          "requests": 256,
+          "estimated_input_tokens": 211871.25
+        }
+      },
+      "cost_scenarios_usd": {
+        "short": 6.3870172499999995,
+        "moderate": 19.84329885,
+        "long": 73.66842525
+      },
+      "conservative_request_reservations_usd": 160.428426
+    },
+    "kimi-lower": {
+      "requests": 14601,
+      "stages": {
+        "fit": {
+          "requests": 5120,
+          "estimated_input_tokens": 4462531.25
+        },
+        "validation": {
+          "requests": 2560,
+          "estimated_input_tokens": 2230456.25
+        },
+        "audit": {
+          "requests": 1536,
+          "estimated_input_tokens": 1337733.0
+        },
+        "test": {
+          "requests": 5097,
+          "estimated_input_tokens": 4410126.0
+        },
+        "pilot": {
+          "requests": 32,
+          "estimated_input_tokens": 24549.25
+        },
+        "repeat": {
+          "requests": 256,
+          "estimated_input_tokens": 211871.25
+        }
+      },
+      "cost_scenarios_usd": {
+        "short": 26.522613999999997,
+        "moderate": 26.522613999999997,
+        "long": 26.522613999999997
+      },
+      "conservative_request_reservations_usd": 1308.7456239999992
+    },
+    "kimi-higher": {
+      "requests": 14601,
+      "stages": {
+        "fit": {
+          "requests": 5120,
+          "estimated_input_tokens": 4462531.25
+        },
+        "validation": {
+          "requests": 2560,
+          "estimated_input_tokens": 2230456.25
+        },
+        "audit": {
+          "requests": 1536,
+          "estimated_input_tokens": 1337733.0
+        },
+        "test": {
+          "requests": 5097,
+          "estimated_input_tokens": 4410126.0
+        },
+        "pilot": {
+          "requests": 32,
+          "estimated_input_tokens": 24549.25
+        },
+        "repeat": {
+          "requests": 256,
+          "estimated_input_tokens": 211871.25
+        }
+      },
+      "cost_scenarios_usd": {
+        "short": 100.111654,
+        "moderate": 324.383014,
+        "long": 1221.468454
+      },
+      "conservative_request_reservations_usd": 1308.7456239999992
+    }
+  },
+  "totals_usd": {
+    "short": 1144.0812361,
+    "moderate": 3344.1832777000004,
+    "long": 12144.5914441
+  },
+  "total_requests_max": 116808,
+  "conservative_request_reservations_usd": 29381.358811999984,
+  "paid_requests": 0,
+  "pilot_cost_scenarios_usd": {
+    "short": 2.402924775,
+    "moderate": 7.224735975000001,
+    "long": 26.511980774999994
+  }
+}

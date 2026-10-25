@@ -4,6 +4,8 @@ Compare how specialized policy models and general-purpose instruction models app
 
 Experiments use GPU.ai first, with Runpod available when credits or GPU capacity are insufficient. See the [compute and budget notes](docs/COMPUTE.md).
 
+The [third study: frontier API models](docs/frontier-api/PLAN.md) is prepared for OpenRouter, comparing policy tuning and reasoning settings on the same WildGuard splits. Its runner is locally tested; the paid pilot awaits a new budget, and no frontier accuracy results are available yet.
+
 ## General-purpose Qwen versus policy models
 
 We tested five Qwen3.5 checkpoints using the policy as a system instruction, with five prompt candidates per model and validation selection before new test inference. On all **1,699 labeled WildGuardTest prompts**, selected-prompt accuracy was **83.05% (2B), 87.58% (4B), 89.58% (9B), 91.29% (27B), and 90.29% (35B-A3B)**. Weights stayed fixed.

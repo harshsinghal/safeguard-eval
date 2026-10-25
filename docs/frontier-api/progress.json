@@ -1,0 +1,24 @@
+{
+  "study": "frontier-api-v1",
+  "status": "prepared_awaiting_pilot_budget",
+  "models": 4,
+  "reasoning_conditions": 8,
+  "local_tests_passed": 35,
+  "paid_inference_calls": 0,
+  "new_cost_usd": 0,
+  "prior_cumulative_cost_usd": 7.91,
+  "existing_cumulative_cap_exclusive_usd": 10,
+  "proposed_pilot_cap_usd": 10,
+  "proposed_cumulative_cap_usd": 17.91,
+  "proposal_authorized": false,
+  "steps": {
+    "catalog": "complete",
+    "protocol": "complete",
+    "runner": "locally_tested",
+    "pilot": "awaiting_budget",
+    "search": "not_started",
+    "freeze": "not_started",
+    "test": "not_started",
+    "report": "not_started"
+  }
+}

@@ -30,6 +30,7 @@ synthetic_*.csv
 
 # Results
 results/
+work/
 *.html
 
 # Database (populated locally from DiffusionDB)

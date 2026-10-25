@@ -1,0 +1,558 @@
+{
+  "study": "frontier-api-v1",
+  "dataset": {
+    "repo": "allenai/wildguardmix",
+    "revision": "d29c47f41c8b51348b5c8e8c81c039b3132b66d1"
+  },
+  "data_hashes": {
+    "fit": "cc03cd46be158fbe6bf2d9a60b2aca4e07dfd38107f078dc3cbe9508812a8661",
+    "validation": "c4d61392c20bc491fa3a3ee7df3c861d75ccfd7529f9f32ae9d5a08b2ea14090",
+    "audit": "03cec44113edb0ef86ec81deb1cd4c35d100f5e4509cd07c5bf150aacd72eabf",
+    "test": "a5fe285c83b24f31bbbc7f75d6deaaab6091224418d11efa39de2ddd5d1fe395"
+  },
+  "data_counts": {
+    "fit": 1024,
+    "validation": 512,
+    "audit": 512,
+    "test": 1699
+  },
+  "pilot_n": 32,
+  "models": {
+    "astra": {
+      "id": "openai/gpt-6-astra",
+      "weights": "closed",
+      "provider_tag": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_name": "OpenAI | openai/gpt-6-astra-20260903",
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "medium"
+      },
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "seed",
+        "max_tokens",
+        "response_format",
+        "structured_outputs",
+        "tools",
+        "tool_choice",
+        "verbosity",
+        "reasoning_effort"
+      ],
+      "price_ceiling_per_token": {
+        "prompt": 2e-05,
+        "completion": 7.5e-05,
+        "request": 0.0,
+        "input_cache_write": 2.5e-05,
+        "input_cache_write_1h": 0.0
+      },
+      "max_tokens": 8192,
+      "context_length": 1050000,
+      "allowed_response_models": [
+        "openai/gpt-6-astra",
+        "openai/gpt-6-astra-20260903"
+      ],
+      "availability": "catalog verified; inference pilot pending",
+      "source": "https://openrouter.ai/openai/gpt-6-astra",
+      "price_per_token": {
+        "prompt": 1e-05,
+        "completion": 5e-05,
+        "request": 0.0
+      },
+      "excluded_provider_tags": [
+        "openai/flex",
+        "openai/fast",
+        "openai/ultrafast"
+      ],
+      "quantization": "unknown"
+    },
+    "opus": {
+      "id": "anthropic/claude-opus-5.5",
+      "weights": "closed",
+      "provider_tag": "anthropic",
+      "provider_name": "Anthropic",
+      "endpoint_name": "Anthropic | anthropic/claude-opus-5.5-20260921",
+      "reasoning": {
+        "mandatory": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "high"
+      },
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "stop",
+        "tool_choice",
+        "tools",
+        "structured_outputs",
+        "response_format",
+        "verbosity",
+        "reasoning_effort"
+      ],
+      "price_ceiling_per_token": {
+        "prompt": 4e-06,
+        "completion": 2e-05,
+        "request": 0.0,
+        "input_cache_write": 5e-06,
+        "input_cache_write_1h": 8e-06
+      },
+      "max_tokens": 8192,
+      "context_length": 1000000,
+      "allowed_response_models": [
+        "anthropic/claude-opus-5.5",
+        "anthropic/claude-opus-5.5-20260921"
+      ],
+      "availability": "catalog verified; inference pilot pending",
+      "source": "https://openrouter.ai/anthropic/claude-opus-5.5",
+      "price_per_token": {
+        "prompt": 4e-06,
+        "completion": 2e-05,
+        "request": 0.0
+      },
+      "excluded_provider_tags": [
+        "anthropic/fast"
+      ],
+      "quantization": "unknown"
+    },
+    "deepseek": {
+      "id": "deepseek/deepseek-v4.1-flash-1017",
+      "weights": "open",
+      "provider_tag": "deepseek",
+      "provider_name": "DeepSeek",
+      "endpoint_name": "DeepSeek | deepseek/deepseek-v4.1-flash-20261017",
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "high",
+          "low",
+          "none"
+        ],
+        "default_effort": "high"
+      },
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "stop",
+        "frequency_penalty",
+        "presence_penalty",
+        "logprobs",
+        "top_logprobs",
+        "tools",
+        "tool_choice",
+        "response_format",
+        "reasoning_effort"
+      ],
+      "price_ceiling_per_token": {
+        "prompt": 3e-07,
+        "completion": 1.2e-06,
+        "request": 0.0,
+        "input_cache_write": 0.0,
+        "input_cache_write_1h": 0.0
+      },
+      "max_tokens": 8192,
+      "context_length": 1048576,
+      "allowed_response_models": [
+        "deepseek/deepseek-v4.1-flash-1017",
+        "deepseek/deepseek-v4.1-flash-20261017"
+      ],
+      "availability": "catalog verified; inference pilot pending",
+      "source": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
+      "price_per_token": {
+        "prompt": 1.5e-07,
+        "completion": 6e-07,
+        "request": 0.0
+      },
+      "excluded_provider_tags": [],
+      "quantization": "unknown"
+    },
+    "kimi": {
+      "id": "moonshotai/kimi-k3.1-pro",
+      "weights": "open",
+      "provider_tag": "moonshotai/mxfp4",
+      "provider_name": "Moonshot AI",
+      "endpoint_name": "Moonshot AI | moonshotai/kimi-k3.1-pro-20261023",
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "high",
+          "low",
+          "none"
+        ],
+        "default_effort": "max"
+      },
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "stop",
+        "frequency_penalty",
+        "presence_penalty",
+        "structured_outputs",
+        "response_format",
+        "tool_choice",
+        "tools",
+        "reasoning_effort"
+      ],
+      "price_ceiling_per_token": {
+        "prompt": 2e-06,
+        "completion": 1e-05,
+        "request": 0.0,
+        "input_cache_write": 0.0,
+        "input_cache_write_1h": 0.0
+      },
+      "max_tokens": 8192,
+      "context_length": 1048576,
+      "allowed_response_models": [
+        "moonshotai/kimi-k3.1-pro",
+        "moonshotai/kimi-k3.1-pro-20261023"
+      ],
+      "availability": "catalog verified; inference pilot pending",
+      "source": "https://openrouter.ai/moonshotai/kimi-k3.1-pro",
+      "price_per_token": {
+        "prompt": 2e-06,
+        "completion": 1e-05,
+        "request": 0.0
+      },
+      "excluded_provider_tags": [],
+      "quantization": "mxfp4"
+    }
+  },
+  "arms": {
+    "astra-lower": {
+      "model_key": "astra",
+      "effort": "low",
+      "description": "low reasoning; not off"
+    },
+    "astra-higher": {
+      "model_key": "astra",
+      "effort": "high",
+      "description": "high reasoning; not off"
+    },
+    "opus-lower": {
+      "model_key": "opus",
+      "effort": "low",
+      "description": "low reasoning; not off"
+    },
+    "opus-higher": {
+      "model_key": "opus",
+      "effort": "high",
+      "description": "high reasoning; not off"
+    },
+    "deepseek-lower": {
+      "model_key": "deepseek",
+      "effort": "none",
+      "description": "reasoning off"
+    },
+    "deepseek-higher": {
+      "model_key": "deepseek",
+      "effort": "high",
+      "description": "high reasoning; not off"
+    },
+    "kimi-lower": {
+      "model_key": "kimi",
+      "effort": "none",
+      "description": "reasoning off"
+    },
+    "kimi-higher": {
+      "model_key": "kimi",
+      "effort": "high",
+      "description": "high reasoning; not off"
+    }
+  },
+  "candidates": [
+    {
+      "arm": "astra-lower",
+      "path": "../wildguard/policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "astra-lower-fit-p0",
+        "validation": "astra-lower-validation-p0"
+      }
+    },
+    {
+      "arm": "astra-lower",
+      "path": "../wildguard/policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "astra-lower-fit-p1",
+        "validation": "astra-lower-validation-p1"
+      }
+    },
+    {
+      "arm": "astra-lower",
+      "path": "../wildguard/policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "astra-lower-fit-p2",
+        "validation": "astra-lower-validation-p2"
+      }
+    },
+    {
+      "arm": "astra-higher",
+      "path": "../wildguard/policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "astra-higher-fit-p0",
+        "validation": "astra-higher-validation-p0"
+      }
+    },
+    {
+      "arm": "astra-higher",
+      "path": "../wildguard/policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "astra-higher-fit-p1",
+        "validation": "astra-higher-validation-p1"
+      }
+    },
+    {
+      "arm": "astra-higher",
+      "path": "../wildguard/policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "astra-higher-fit-p2",
+        "validation": "astra-higher-validation-p2"
+      }
+    },
+    {
+      "arm": "opus-lower",
+      "path": "../wildguard/policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "opus-lower-fit-p0",
+        "validation": "opus-lower-validation-p0"
+      }
+    },
+    {
+      "arm": "opus-lower",
+      "path": "../wildguard/policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "opus-lower-fit-p1",
+        "validation": "opus-lower-validation-p1"
+      }
+    },
+    {
+      "arm": "opus-lower",
+      "path": "../wildguard/policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "opus-lower-fit-p2",
+        "validation": "opus-lower-validation-p2"
+      }
+    },
+    {
+      "arm": "opus-higher",
+      "path": "../wildguard/policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "opus-higher-fit-p0",
+        "validation": "opus-higher-validation-p0"
+      }
+    },
+    {
+      "arm": "opus-higher",
+      "path": "../wildguard/policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "opus-higher-fit-p1",
+        "validation": "opus-higher-validation-p1"
+      }
+    },
+    {
+      "arm": "opus-higher",
+      "path": "../wildguard/policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "opus-higher-fit-p2",
+        "validation": "opus-higher-validation-p2"
+      }
+    },
+    {
+      "arm": "deepseek-lower",
+      "path": "../wildguard/policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "deepseek-lower-fit-p0",
+        "validation": "deepseek-lower-validation-p0"
+      }
+    },
+    {
+      "arm": "deepseek-lower",
+      "path": "../wildguard/policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "deepseek-lower-fit-p1",
+        "validation": "deepseek-lower-validation-p1"
+      }
+    },
+    {
+      "arm": "deepseek-lower",
+      "path": "../wildguard/policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "deepseek-lower-fit-p2",
+        "validation": "deepseek-lower-validation-p2"
+      }
+    },
+    {
+      "arm": "deepseek-higher",
+      "path": "../wildguard/policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "deepseek-higher-fit-p0",
+        "validation": "deepseek-higher-validation-p0"
+      }
+    },
+    {
+      "arm": "deepseek-higher",
+      "path": "../wildguard/policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "deepseek-higher-fit-p1",
+        "validation": "deepseek-higher-validation-p1"
+      }
+    },
+    {
+      "arm": "deepseek-higher",
+      "path": "../wildguard/policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "deepseek-higher-fit-p2",
+        "validation": "deepseek-higher-validation-p2"
+      }
+    },
+    {
+      "arm": "kimi-lower",
+      "path": "../wildguard/policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "kimi-lower-fit-p0",
+        "validation": "kimi-lower-validation-p0"
+      }
+    },
+    {
+      "arm": "kimi-lower",
+      "path": "../wildguard/policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "kimi-lower-fit-p1",
+        "validation": "kimi-lower-validation-p1"
+      }
+    },
+    {
+      "arm": "kimi-lower",
+      "path": "../wildguard/policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "kimi-lower-fit-p2",
+        "validation": "kimi-lower-validation-p2"
+      }
+    },
+    {
+      "arm": "kimi-higher",
+      "path": "../wildguard/policies/p0.json",
+      "sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "kimi-higher-fit-p0",
+        "validation": "kimi-higher-validation-p0"
+      }
+    },
+    {
+      "arm": "kimi-higher",
+      "path": "../wildguard/policies/p1.json",
+      "sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "kimi-higher-fit-p1",
+        "validation": "kimi-higher-validation-p1"
+      }
+    },
+    {
+      "arm": "kimi-higher",
+      "path": "../wildguard/policies/p2.json",
+      "sha256": "9dbe9470cfe18ab5e28a138d890d7c8cbe9ebf4b206d83b748e9fa84d9859a97",
+      "origin": "inherited-shared",
+      "rationale": "Unchanged shared policy; additional candidates require new fitting errors.",
+      "runs": {
+        "fit": "kimi-higher-fit-p2",
+        "validation": "kimi-higher-validation-p2"
+      }
+    }
+  ],
+  "candidates_per_arm": 5,
+  "budget": {
+    "status": "awaiting_user_budget",
+    "prior_cumulative_usd": 7.91,
+    "cumulative_cap_exclusive_usd": 10,
+    "available_new_ceiling_usd": 2.08
+  },
+  "prior_test_results_known": true
+}
