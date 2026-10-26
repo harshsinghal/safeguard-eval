@@ -4,6 +4,8 @@ Compare how specialized policy models and general-purpose instruction models app
 
 Experiments use GPU.ai first, with Runpod available when credits or GPU capacity are insufficient. See the [compute and budget notes](docs/COMPUTE.md).
 
+The [research directions](docs/research-directions/README.md) record six proposed studies for choosing policy models and a separate [enterprise AI governance track](docs/research-directions/ENTERPRISE-AI-GOVERNANCE.md). These are future research proposals; the activation study is parked and no new experiments have started.
+
 The [third study: frontier API models](docs/frontier-api/PLAN.md) completed a 256-observation fitting-only pilot through OpenRouter for **$0.55**, bringing cumulative spend at that stage to **$8.46** within the $20 cap. Read the [pilot findings](docs/frontier-api/READOUT.md) and [reproducible evidence](published_runs/2026-10-25-frontier-pilot/README.md). The full policy search and held-out evaluation have not run; projected API costs exceed the remaining budget.
 
 ## Policy transfer: validate the text and model together
