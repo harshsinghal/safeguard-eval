@@ -1,0 +1,26 @@
+{
+  "study": "policy-transfer-v1",
+  "status": "gpu_setup",
+  "updated_utc": "2026-10-26T01:42:09.970435+00:00",
+  "tests_passed": 43,
+  "prior_cumulative_cost_usd": 8.46119753456,
+  "cumulative_cap_usd": 20,
+  "remaining_authorized_usd": 11.53880246544,
+  "maximum_rental_usd": 9.95,
+  "provider": "GPU.ai",
+  "fallback_provider": "RunPod",
+  "steps": {
+    "protocol": "complete",
+    "implementation": "locally_tested",
+    "input_verification": "complete",
+    "authoring": "pending",
+    "search": "pending",
+    "transfer_validation": "pending",
+    "freeze": "pending",
+    "final_matrix": "pending",
+    "billing": "pending",
+    "report": "pending"
+  },
+  "instance_id": "gpu-07cc74ef",
+  "auto_terminate_at": "2026-10-26T06:40:03.593342Z"
+}
