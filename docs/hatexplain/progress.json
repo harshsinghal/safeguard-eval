@@ -1,0 +1,24 @@
+{
+  "study": "hatexplain-structured-v1",
+  "status": "ready_for_protocol_registration",
+  "updated_utc": "2026-10-26T23:17:05.496478+00:00",
+  "prior_cumulative_cost_usd": 10.78119753456,
+  "cumulative_cap_usd": 20,
+  "remaining_authorized_usd": 9.21880246544,
+  "new_spend_ceiling_usd": 5.97,
+  "provider": "GPU.ai",
+  "fallback_provider": "RunPod",
+  "steps": {
+    "dataset_audit": "complete",
+    "protocol": "written",
+    "implementation": "complete",
+    "local_tests": "50 passed",
+    "training_revision": "pending",
+    "scope_review": "pending",
+    "validation_selection": "pending",
+    "freeze": "pending",
+    "test_matrix": "pending",
+    "billing": "pending",
+    "report": "pending"
+  }
+}
