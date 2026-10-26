@@ -29,3 +29,12 @@ native fields, fixed scope/examples, failure scoring, and paired alignment.
 All 50 repository tests passed before inference; the seven new checks also passed
 after the single-line rendering correction. These are local checks, not model
 results. No paid resources have yet been created.
+
+## 26 October 2026 — provision and final-input guard
+
+The protocol and implementation were committed as `d428f8e` before provisioning.
+While GPU allocation was pending, an additional check tightened the final-input
+guard: verify the hash of the actual policy file supplied to the runner, rather
+than a same-ID file in the standard policy directory. A regression check covers
+that alternate-file case. No inference had begun. The original registration is
+retained alongside a source amendment record; the experimental protocol is unchanged.

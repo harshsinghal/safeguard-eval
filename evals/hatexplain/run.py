@@ -15,14 +15,15 @@ from evals.wildguard.run import post, score_ids, parse as specialist_parse
 from evals.qwen_policy.run import parse as qwen_parse
 
 
-def verify_freeze(state, model, policy, variant, data, repeat):
+def verify_freeze(state, model, policy_path, variant, data, repeat):
+    policy = read(policy_path)
     freeze = read(Path(state) / 'freeze.json')
     if freeze['sources'] != sources() or freeze['registry_sha256'] != digest(REGISTRY):
         raise ValueError('Changed implementation or registry after freeze')
     identity = dict(model=model, policy_id=policy['id'], variant=variant, repeat=repeat)
     if identity not in freeze['jobs']:
         raise ValueError('Unregistered test condition')
-    if freeze['policy_hashes'][policy['id']] != digest(Path(state) / 'policies' / (policy['id'] + '.json')):
+    if freeze['policy_hashes'][policy['id']] != digest(policy_path):
         raise ValueError('Policy changed after freeze')
     expected = read(REGISTRY)['data_hashes']['repeat' if repeat else 'test']
     if digest(data) != expected:
@@ -35,7 +36,7 @@ def run(state, slug, policy_path, variant, split, out, checkpoint=None, repeat=F
     spec = reg['models'][slug]; adapter = spec['adapter']; model = spec['model']
     data = state / 'data' / (('repeat' if repeat else split) + '.jsonl')
     if split == 'test':
-        verify_freeze(state, slug, policy, variant, data, repeat)
+        verify_freeze(state, slug, policy_path, variant, data, repeat)
     if digest(data) != reg['data_hashes']['repeat' if repeat else split]:
         raise ValueError('Unregistered data')
     cases = rows(data)

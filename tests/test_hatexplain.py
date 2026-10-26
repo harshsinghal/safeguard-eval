@@ -2,11 +2,15 @@ import copy
 import json
 from pathlib import Path
 import unittest
+import tempfile
+from unittest.mock import patch
 
 from evals.hatexplain.data import majority
 from evals.hatexplain.policy import components, native_fields, payload, render, VARIANTS
 from evals.hatexplain.author import validate_revision
 from evals.hatexplain.metrics import metric, paired
+from evals.hatexplain.common import REGISTRY, digest, read
+from evals.hatexplain.run import verify_freeze
 
 BASE = Path(__file__).resolve().parents[1] / 'evals/hatexplain/policies/p0.json'
 
@@ -66,6 +70,24 @@ class HateXplainTests(unittest.TestCase):
         self.assertAlmostEqual(result['macro_f1'], 1/3)
         self.assertEqual(result['missed_hate'], 1)
         self.assertEqual(result['errors'], 1)
+
+    def test_freeze_checks_actual_policy_file_not_an_alternate_with_same_id(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            state = Path(tmp); (state / 'policies').mkdir()
+            policy = state / 'policies/p0.json'; policy.write_text(BASE.read_text())
+            data = state / 'test.jsonl'; data.write_text('test fixture')
+            freeze = dict(sources={}, registry_sha256=digest(REGISTRY),
+                          jobs=[dict(model='policylm', policy_id='p0', variant='markdown', repeat=False)],
+                          policy_hashes={'p0': digest(policy)})
+            (state / 'freeze.json').write_text(json.dumps(freeze))
+            fake_registry = dict(data_hashes={'test': digest(data)})
+            with patch('evals.hatexplain.run.sources', return_value={}), patch('evals.hatexplain.run.read',
+                    side_effect=lambda p: fake_registry if Path(p) == REGISTRY else read(p)):
+                verify_freeze(state, 'policylm', policy, 'markdown', data, False)
+                changed = copy.deepcopy(self.policy); changed['sections']['block'][0]['text'] = 'Changed rule.'
+                alternative = state / 'alternative.json'; alternative.write_text(json.dumps(changed))
+                with self.assertRaises(ValueError):
+                    verify_freeze(state, 'policylm', alternative, 'markdown', data, False)
 
     def test_paired_rejects_misalignment_and_counts_fixed_broken(self):
         a = [dict(id='a', group='g1', source_label='hatespeech', expected='BLOCK', prediction='BLOCK'),
