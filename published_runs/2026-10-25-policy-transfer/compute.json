@@ -1,0 +1,23 @@
+{
+  "gpu_type": "rtx_pro_6000",
+  "gpu_count": 1,
+  "cpu_cores": 16,
+  "ram_gb": 144,
+  "storage_gb": 725,
+  "region": "us-central",
+  "price_per_hour": 1.99,
+  "disk_price_per_gb_hour": 0,
+  "environment": {
+    "image": "ghcr.io/gpuai-dev/base-cuda128:2026-07",
+    "image_digest": "ghcr.io/gpuai-dev/base-cuda128:2026-07@sha256:ec4cea51710fcfc2a2b292c82d4d212a7181499e89db7463fda04de886731844",
+    "driver_min": "570.26",
+    "cuda": "12.8"
+  },
+  "provider": "GPU.ai",
+  "instance_id": "gpu-07cc74ef",
+  "status": "terminated",
+  "auto_terminate_hours": 5,
+  "temporary_ssh_key_removed": true,
+  "created_at": "2026-10-26T01:38:21.992297Z",
+  "terminated_at": "2026-10-26T02:49:56.518023Z"
+}

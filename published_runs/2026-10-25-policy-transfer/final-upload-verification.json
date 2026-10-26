@@ -1,0 +1,9 @@
+{
+  "verified_utc": "2026-10-26T02:19:33.953923+00:00",
+  "freeze_sha256": "5a7e46774f251a2c20257339f043c84bb395272a3639d9e3f079077471ccf72a",
+  "source_selections_verified": 5,
+  "recipient_selections_verified": 5,
+  "pool_policies": 4,
+  "test_n": 1699,
+  "audit_n": 512
+}

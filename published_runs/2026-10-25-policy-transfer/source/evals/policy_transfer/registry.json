@@ -1,0 +1,150 @@
+{
+  "study": "policy-transfer-v1",
+  "models": {
+    "policylm": {
+      "model": "musubilabs/policylm-1.7b",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+      "adapter": "policylm"
+    },
+    "shieldstral": {
+      "model": "mistralai/Shieldstral-1.0-3B",
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+      "adapter": "shieldstral"
+    },
+    "qwen-2b": {
+      "model": "Qwen/Qwen3.5-2B",
+      "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "adapter": "qwen"
+    },
+    "qwen-4b": {
+      "model": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "adapter": "qwen"
+    },
+    "qwen-27b": {
+      "model": "Qwen/Qwen3.5-27B",
+      "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+      "adapter": "qwen"
+    }
+  },
+  "dataset": {
+    "repo": "allenai/wildguardmix",
+    "revision": "d29c47f41c8b51348b5c8e8c81c039b3132b66d1"
+  },
+  "data_hashes": {
+    "fit": "cc03cd46be158fbe6bf2d9a60b2aca4e07dfd38107f078dc3cbe9508812a8661",
+    "validation": "c4d61392c20bc491fa3a3ee7df3c861d75ccfd7529f9f32ae9d5a08b2ea14090",
+    "audit": "03cec44113edb0ef86ec81deb1cd4c35d100f5e4509cd07c5bf150aacd72eabf",
+    "test": "a5fe285c83b24f31bbbc7f75d6deaaab6091224418d11efa39de2ddd5d1fe395"
+  },
+  "counts": {
+    "fit": 1024,
+    "validation": 512,
+    "audit": 512,
+    "test": 1699
+  },
+  "baseline": {
+    "policylm": {
+      "fit": {
+        "original_run": "policylm-search-p0",
+        "files": {
+          "manifest.json": "733de019527b8541396668c31f28e7ba1fabe3d8d985ce1a370dcd53e52f0b39",
+          "summary.json": "1441f94c8fabdb7aebaa58aca5f6e6ea66230ccfd5030536e28961585947f0ab",
+          "policy.json": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+          "predictions.jsonl": "087a923999ede166f2cf5db1d91083719e53e9cacc7b02f219a2ce05c7c54915"
+        }
+      },
+      "validation": {
+        "original_run": "policylm-validation-p0",
+        "files": {
+          "manifest.json": "46a03cdad3376342699225a3a05e637858a9786f36533ecdc85851baf2f1fdbd",
+          "summary.json": "7d97dbf9541c760775b50601960c100e0ca191d10c68522299d84e8502b6cbe9",
+          "policy.json": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+          "predictions.jsonl": "076d3d966398f8f33cac021ebf5c626ad34b1878463d0e737f579df503a39c7b"
+        }
+      }
+    },
+    "shieldstral": {
+      "fit": {
+        "original_run": "shieldstral-search-p0",
+        "files": {
+          "manifest.json": "dc9d6a64330f90ec8efdc9ea9e30c9eb9ac236575bdcf8e0d2cb1bfe2856a3c3",
+          "summary.json": "82d2a9ad66ee444ab6d2e37550f0e6bc004a3664029315c12f9651e8d10c0f7d",
+          "policy.json": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+          "predictions.jsonl": "9fa6ba127067b49c2ed13c7cae7468674250e64853cc0b37f602bcb7397c9b46"
+        }
+      },
+      "validation": {
+        "original_run": "shieldstral-validation-p0",
+        "files": {
+          "manifest.json": "8f42fc45dee68b9b2abdb7b1acea367d72587d608c3bc587b991f45940b155cf",
+          "summary.json": "5cd56d1eebc7db55a43eed4ff2466d80b96b50471410a179ead2615a69bfd06e",
+          "policy.json": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+          "predictions.jsonl": "e276ee568bc6ec05b2c182ef9cb155358d17ff5a37bd9f41a37f722e10d7504e"
+        }
+      }
+    },
+    "qwen-2b": {
+      "fit": {
+        "original_run": "qwen-2b-search-p0",
+        "files": {
+          "manifest.json": "99a634e62cd4fef1fb3a7161b94802e1994f64abfd3492e9868034df124fffb1",
+          "summary.json": "b189f2c6bf6657faa37ab68a2456dcce905e93f2411fa17406bdd05efc787c9d",
+          "policy.json": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+          "predictions.jsonl": "c8347181fbeb0781479ddcac99fa74f0ce61842d111d286230e8f4e1404081c8"
+        }
+      },
+      "validation": {
+        "original_run": "qwen-2b-validation-p0",
+        "files": {
+          "manifest.json": "0816366fe027fee69401e04c575adf8e083a8e7be0b79c45040764a5778f6af6",
+          "summary.json": "da255e6dbeb88924107828f10a2efd139e26bb4b63b6375bf00f52fac5f97ee6",
+          "policy.json": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+          "predictions.jsonl": "7d8569b74d03a98d5dcc0840da36234f7151e4e5f0b08ba96bde57fd2534e03c"
+        }
+      }
+    },
+    "qwen-4b": {
+      "fit": {
+        "original_run": "qwen-4b-search-p0",
+        "files": {
+          "manifest.json": "cbbba69c44bf86b4d6864c4f7b81746d004fc73cfad3e2d8466c0347cf755c90",
+          "summary.json": "4021ffef24608e2a0d6aa87c835ceda6e57c12446c31b05b4ea521baba554716",
+          "policy.json": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+          "predictions.jsonl": "efe07ef1dd3445db2622cac792caa37f9e1017efe7a6c098d4e4118e2a09015f"
+        }
+      },
+      "validation": {
+        "original_run": "qwen-4b-validation-p0",
+        "files": {
+          "manifest.json": "a3e6455a70cdeec2b57d4d3376e66096c1c5497f31fe197a6f756f74d2d501f1",
+          "summary.json": "e6888d0f2f909ab6673a11022786f9f55fd0164275a7811c85bd5ae64b7ead19",
+          "policy.json": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+          "predictions.jsonl": "7f493d44eadc47de995548c07df4fc9b642f66deabf262f8b02d4c8e5fb5f207"
+        }
+      }
+    },
+    "qwen-27b": {
+      "fit": {
+        "original_run": "qwen-27b-search-p0",
+        "files": {
+          "manifest.json": "7b0b2950c31da95e6d27584dcbde3077abf982c09179a64cb32f26169b08f275",
+          "summary.json": "1026952fa62112243447f23a5a3908a7b798e860e7cc6647dd14f66647bac571",
+          "policy.json": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+          "predictions.jsonl": "366e3549968176b96c352e4a7e408c56c7bb5be7ebd7b7ebdafb3fc0e8056172"
+        }
+      },
+      "validation": {
+        "original_run": "qwen-27b-validation-p0",
+        "files": {
+          "manifest.json": "023c3c0dbdc6449188b4af6e84588d5e2855bd398c4648b10c7d6e316cd9c499",
+          "summary.json": "c3b10c34b8cecfd5a1b3510fae6d64265d5738e5fa236bdc3968eeb09c1c8053",
+          "policy.json": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+          "predictions.jsonl": "23bffb0c8962dc7fa517887b1ecd4e0270318892821fbed73dd83f1c4c64a2c7"
+        }
+      }
+    }
+  },
+  "prior_cumulative_cost_usd": 8.46119753456,
+  "cumulative_cap_usd": 20
+}

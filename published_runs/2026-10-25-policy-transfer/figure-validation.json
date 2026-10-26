@@ -1,0 +1,13 @@
+{
+  "png_visual_review": "passed: labels readable; no clipping or overlap",
+  "png_size": [
+    1640,
+    1532
+  ],
+  "python": "3.9.6",
+  "matplotlib": "3.9.4",
+  "numpy": "2.0.2",
+  "pillow": "11.3.0",
+  "source_sha256": "c44b7f7d27e5f5920d1b5fc286e3e1d10cfac9bd235fdc900584932598683796",
+  "plotted_analysis_sha256": "133ddeaf4b611bcd39ab017c34aa02500fbf0550fbfee1039b66acc1f6253e56"
+}

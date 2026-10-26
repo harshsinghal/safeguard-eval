@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-10-26T01:37:27.835831+00:00",
+  "registry_sha256": "fbe6f1dfd8e951805f990b54cef6313e9439b5bced306f7e104bc63a45e56044",
+  "sources": {
+    "evals/run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986",
+    "evals/wildguard/run.py": "a2e35b7a878a729c2f8dfc0340be0b1fd3224c593746deb2f0cecf57658bac1b",
+    "evals/wildguard/metrics.py": "8fd93378cb6bbbcbca2e6ed47e3f3ae198da663709d3fa7dbf44b1be41c69da7",
+    "evals/qwen_policy/run.py": "837baa4f70eb150062d647e90779f23f13363d90ba71fbf181205ebde59dea16",
+    "evals/policy_transfer/__init__.py": "9e2d1d537434f08c5e4cf3e1322e8552681f95b24988219319edc3270ceff2f7",
+    "evals/policy_transfer/analyze.py": "3959f800b54d588a23349d283dedd9672314628e9d2bc3def9359b72b8a9f9d6",
+    "evals/policy_transfer/author.py": "869d35a0f68e597263ea2122cfbd28b6b0141ed3577f0c27dcff71adb1183767",
+    "evals/policy_transfer/common.py": "e91b2c4060822395959e17a3de7786be6f9022be6311b456cc3ee90eb398e52f",
+    "evals/policy_transfer/orchestrate.py": "ddd3f498d804f0212349e937717c4cec3bbc4dd050d62336856ab30beced21e4",
+    "evals/policy_transfer/run.py": "658c624e177cc7dd22193adfa4d4c5a97c3a9d6aae4fb3018ca2d34935fd6684",
+    "evals/policy_transfer/study.py": "78912f9fab43b0d7f565841177a44e4ba26731aefe2e04d3ecb7d0595a97b1e4"
+  },
+  "plan_sha256": "da158bf1b45eb114d703a5469c484ee218372e5a09fcb8c34a9ba46e491ddd3f",
+  "status": "registered_before_new_inference"
+}

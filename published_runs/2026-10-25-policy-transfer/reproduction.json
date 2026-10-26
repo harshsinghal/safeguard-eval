@@ -1,0 +1,6 @@
+{
+  "verified": true,
+  "runs": 102,
+  "predictions": 88764,
+  "metrics": "all summaries, frozen choices, matrices and paired intervals"
+}

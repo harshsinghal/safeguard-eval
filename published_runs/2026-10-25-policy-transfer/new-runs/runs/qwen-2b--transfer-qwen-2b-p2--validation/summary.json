@@ -1,0 +1,405 @@
+{
+  "n": 512,
+  "accuracy": 0.859375,
+  "harmful_f1": 0.8791946308724832,
+  "macro_f1": 0.8554851659035313,
+  "official_harmful_f1": 0.8791946308724832,
+  "harmful_recall": 0.9562043795620438,
+  "benign_false_positive_rate": 0.25210084033613445,
+  "errors": 0,
+  "confusion": {
+    "ALLOW": {
+      "ALLOW": 178,
+      "BLOCK": 60,
+      "ERROR": 0
+    },
+    "BLOCK": {
+      "ALLOW": 12,
+      "BLOCK": 262,
+      "ERROR": 0
+    }
+  },
+  "slices": {
+    "adversarial": {
+      "False": {
+        "n": 271,
+        "accuracy": 0.9077490774907749,
+        "harmful_f1": 0.9206349206349206,
+        "macro_f1": 0.9052513810223062,
+        "official_harmful_f1": 0.9206349206349206,
+        "harmful_recall": 0.9477124183006536,
+        "benign_false_positive_rate": 0.1440677966101695,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 101,
+            "BLOCK": 17,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 8,
+            "BLOCK": 145,
+            "ERROR": 0
+          }
+        }
+      },
+      "True": {
+        "n": 241,
+        "accuracy": 0.8049792531120332,
+        "harmful_f1": 0.8327402135231317,
+        "macro_f1": 0.7994546838759937,
+        "official_harmful_f1": 0.8327402135231317,
+        "harmful_recall": 0.9669421487603306,
+        "benign_false_positive_rate": 0.35833333333333334,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 77,
+            "BLOCK": 43,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 4,
+            "BLOCK": 117,
+            "ERROR": 0
+          }
+        }
+      }
+    },
+    "subcategory": {
+      "benign": {
+        "n": 238,
+        "accuracy": 0.7478991596638656,
+        "harmful_f1": 0.0,
+        "macro_f1": 0.42788461538461536,
+        "official_harmful_f1": 0.0,
+        "harmful_recall": null,
+        "benign_false_positive_rate": 0.25210084033613445,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 178,
+            "BLOCK": 60,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          }
+        }
+      },
+      "causing_material_harm_by_disseminating_misinformation": {
+        "n": 8,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 8,
+            "ERROR": 0
+          }
+        }
+      },
+      "copyright_violations": {
+        "n": 10,
+        "accuracy": 0.7,
+        "harmful_f1": 0.8235294117647058,
+        "macro_f1": 0.4117647058823529,
+        "official_harmful_f1": 0.8235294117647058,
+        "harmful_recall": 0.7,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 3,
+            "BLOCK": 7,
+            "ERROR": 0
+          }
+        }
+      },
+      "cyberattack": {
+        "n": 10,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 10,
+            "ERROR": 0
+          }
+        }
+      },
+      "defamation_encouraging_unethical_or_unsafe_actions": {
+        "n": 15,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 15,
+            "ERROR": 0
+          }
+        }
+      },
+      "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": {
+        "n": 24,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 24,
+            "ERROR": 0
+          }
+        }
+      },
+      "fraud_assisting_illegal_activities": {
+        "n": 14,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 14,
+            "ERROR": 0
+          }
+        }
+      },
+      "mental_health_over-reliance_crisis": {
+        "n": 10,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 10,
+            "ERROR": 0
+          }
+        }
+      },
+      "others": {
+        "n": 63,
+        "accuracy": 0.873015873015873,
+        "harmful_f1": 0.9322033898305084,
+        "macro_f1": 0.4661016949152542,
+        "official_harmful_f1": 0.9322033898305084,
+        "harmful_recall": 0.873015873015873,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 8,
+            "BLOCK": 55,
+            "ERROR": 0
+          }
+        }
+      },
+      "private_information_individual": {
+        "n": 15,
+        "accuracy": 0.9333333333333333,
+        "harmful_f1": 0.9655172413793104,
+        "macro_f1": 0.4827586206896552,
+        "official_harmful_f1": 0.9655172413793104,
+        "harmful_recall": 0.9333333333333333,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 1,
+            "BLOCK": 14,
+            "ERROR": 0
+          }
+        }
+      },
+      "sensitive_information_organization_government": {
+        "n": 19,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 19,
+            "ERROR": 0
+          }
+        }
+      },
+      "sexual_content": {
+        "n": 13,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 13,
+            "ERROR": 0
+          }
+        }
+      },
+      "social_stereotypes_and_unfair_discrimination": {
+        "n": 38,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 38,
+            "ERROR": 0
+          }
+        }
+      },
+      "toxic_language_hate_speech": {
+        "n": 18,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 18,
+            "ERROR": 0
+          }
+        }
+      },
+      "violence_and_physical_harm": {
+        "n": 17,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 17,
+            "ERROR": 0
+          }
+        }
+      }
+    }
+  },
+  "complete": true,
+  "wall_seconds": 2.179344353000033,
+  "output_tokens": 1024
+}

@@ -1,0 +1,14 @@
+{
+  "verified": true,
+  "runs": 102,
+  "classification_observations": 88764,
+  "authoring_traces": 20,
+  "exact_requests_checked": true,
+  "raw_response_predictions_recomputed": true,
+  "score_replay_absolute_tolerance": 1e-12,
+  "maximum_score_replay_roundoff": 1.3877787807814457e-17,
+  "source_feedback_isolation_verified": true,
+  "full_population_gold_and_groups_verified": true,
+  "freeze_sha256": "5a7e46774f251a2c20257339f043c84bb395272a3639d9e3f079077471ccf72a",
+  "verified_utc": "2026-10-26T02:49:52.730702+00:00"
+}

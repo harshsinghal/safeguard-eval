@@ -1,0 +1,7 @@
+{
+  "filename": "private-evidence.tar.gz",
+  "sha256": "59e668d018aca9b63315daf3055f416bfec16d01ba6a12b86dd80f0578992931",
+  "bytes": 43807238,
+  "public_download": false,
+  "contents": "Gated source text, complete new model/editor requests and responses, runtime logs, and operational provenance. No API tokens or private SSH keys."
+}

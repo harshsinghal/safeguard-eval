@@ -1,7 +1,7 @@
 """Recompute published selections, metrics and intervals without gated prompt text.
 
 Run from the repository root:
-    python3 docs/policy-transfer/reproduce.py --bundle docs/policy-transfer/evidence
+    python3 docs/policy-transfer/reproduce.py --bundle published_runs/2026-10-25-policy-transfer
 """
 import argparse
 import gzip
@@ -49,7 +49,7 @@ def reproduce(bundle):
                     raise ValueError('Summary mismatch')
                 if digest(target/'policy.json')!=manifest['policy_sha256']:
                     raise ValueError('Policy bytes changed')
-                results[entry['run']]=(summary,rows,manifest);count+=len(rows)
+                results[entry['run']]=(summary,rows,manifest,digest(target/'predictions.jsonl'));count+=len(rows)
         selection=read(state/'source-selection.json');f=read(state/'freeze.json')
         for slug,entries in selection['searches'].items():
             for e in entries:
@@ -57,12 +57,19 @@ def reproduce(bundle):
                     raise ValueError('Selection score mismatch')
                 if results[e['fit_run']][0]['accuracy']!=e['fit_accuracy']:
                     raise ValueError('Fitting score mismatch')
+                if (results[e['run']][3]!=e['predictions_sha256']
+                        or results[e['fit_run']][3]!=e['fit_predictions_sha256']):
+                    raise ValueError('Selection prediction hash mismatch')
+                if results[e['run']][2]['policy_sha256']!=e['sha256']:
+                    raise ValueError('Selection policy hash mismatch')
             if min(entries,key=rank)['sha256']!=selection['selected'][slug]['sha256']:
                 raise ValueError('Source winner mismatch')
         for slug,entries in f['validation'].items():
             for e in entries:
                 if results[e['run']][0]['accuracy']!=e['accuracy']:
                     raise ValueError('Transfer validation mismatch')
+                if results[e['run']][3]!=e['predictions_sha256']:
+                    raise ValueError('Frozen validation prediction hash mismatch')
             if min(entries,key=rank)['sha256']!=f['recipient_choice'][slug]['sha256']:
                 raise ValueError('Frozen recipient winner mismatch')
         actual=analyze(state,state/'recomputed.json');expected=read(bundle/'analysis.json')

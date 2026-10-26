@@ -1,10 +1,20 @@
 # Policy Model Evaluation
 
-Compare how specialized policy models and general-purpose instruction models apply written rules to text. The repository includes WildGuard policy-tuning and nearby-size Qwen comparisons, earlier image-prompt and prompt-injection demonstrations, and the original GPT-OSS Safeguard 20B demo powered by Groq.
+Compare how specialized policy models and general-purpose instruction models apply written rules to text. The repository includes policy-transfer experiments, WildGuard policy-tuning and nearby-size Qwen comparisons, earlier image-prompt and prompt-injection demonstrations, and the original GPT-OSS Safeguard 20B demo powered by Groq.
 
 Experiments use GPU.ai first, with Runpod available when credits or GPU capacity are insufficient. See the [compute and budget notes](docs/COMPUTE.md).
 
-The [third study: frontier API models](docs/frontier-api/PLAN.md) completed a 256-observation fitting-only pilot through OpenRouter for **$0.55**, bringing cumulative spend to **$8.46** within the $20 cap. Read the [pilot findings](docs/frontier-api/READOUT.md) and [reproducible evidence](published_runs/2026-10-25-frontier-pilot/README.md). The full policy search and held-out evaluation have not run; projected API costs exceed the remaining budget.
+The [third study: frontier API models](docs/frontier-api/PLAN.md) completed a 256-observation fitting-only pilot through OpenRouter for **$0.55**, bringing cumulative spend at that stage to **$8.46** within the $20 cap. Read the [pilot findings](docs/frontier-api/READOUT.md) and [reproducible evidence](published_runs/2026-10-25-frontier-pilot/README.md). The full policy search and held-out evaluation have not run; projected API costs exceed the remaining budget.
+
+## Policy transfer: validate the text and model together
+
+We created **20 fresh policy revisions** using isolated fitting feedback from five models, selected policies on validation, then tested **four distinct texts across all five models** on all **1,699 labeled WildGuardTest prompts**. All model weights stayed fixed.
+
+Transfer was asymmetric. The policy selected for Qwen 2B raised Shieldstral from **87.82% to 90.76%**. In reverse, the Shieldstral-selected policy reduced Qwen 2B from **80.11% to 75.10%**; it reduced PolicyLM from **85.05% to 74.57%**. PolicyLM's own revision left its overall accuracy unchanged while shifting the balance between missed harmful prompts and false blocks.
+
+With choices frozen from the same policy pool, Shieldstral 3B scored **90.76%** versus Qwen 27B's **89.35%**. The unadjusted paired interval for the difference is **+0.06 to +2.77 percentage points**. This is a narrow exploratory result for this search: the earlier Qwen study reached **91.29%** with a different selected policy. A review also found a category omission in one generated policy, so benchmark gains do not certify that an editor preserved the intended rules.
+
+Read the [plain-language findings](docs/policy-transfer/READOUT.md), [policy changes](docs/policy-transfer/POLICY-CHANGES.md), [full matrix and reproducible evidence](published_runs/2026-10-25-policy-transfer/README.md), and [registered plan](docs/policy-transfer/PLAN.md). The experiment made **81,084 new classifications**, cost **$2.32**, and brought cumulative project spend to **$10.78 of $20**. The GPU is terminated.
 
 ## General-purpose Qwen versus policy models
 

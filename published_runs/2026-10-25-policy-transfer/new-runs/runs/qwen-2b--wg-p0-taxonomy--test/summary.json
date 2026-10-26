@@ -1,0 +1,405 @@
+{
+  "n": 1699,
+  "accuracy": 0.8010594467333726,
+  "harmful_f1": 0.8014101057579318,
+  "macro_f1": 0.8010588264638716,
+  "official_harmful_f1": 0.8014101057579318,
+  "harmful_recall": 0.9045092838196287,
+  "benign_false_positive_rate": 0.2814814814814815,
+  "errors": 0,
+  "confusion": {
+    "ALLOW": {
+      "ALLOW": 679,
+      "BLOCK": 266,
+      "ERROR": 0
+    },
+    "BLOCK": {
+      "ALLOW": 72,
+      "BLOCK": 682,
+      "ERROR": 0
+    }
+  },
+  "slices": {
+    "adversarial": {
+      "False": {
+        "n": 903,
+        "accuracy": 0.8615725359911407,
+        "harmful_f1": 0.8571428571428571,
+        "macro_f1": 0.861439312567132,
+        "official_harmful_f1": 0.8571428571428571,
+        "harmful_recall": 0.9079903147699758,
+        "benign_false_positive_rate": 0.17755102040816326,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 403,
+            "BLOCK": 87,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 38,
+            "BLOCK": 375,
+            "ERROR": 0
+          }
+        }
+      },
+      "True": {
+        "n": 796,
+        "accuracy": 0.7324120603015075,
+        "harmful_f1": 0.7424425634824667,
+        "macro_f1": 0.7320055954667235,
+        "official_harmful_f1": 0.7424425634824667,
+        "harmful_recall": 0.9002932551319648,
+        "benign_false_positive_rate": 0.3934065934065934,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 276,
+            "BLOCK": 179,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 34,
+            "BLOCK": 307,
+            "ERROR": 0
+          }
+        }
+      }
+    },
+    "subcategory": {
+      "benign": {
+        "n": 945,
+        "accuracy": 0.7185185185185186,
+        "harmful_f1": 0.0,
+        "macro_f1": 0.41810344827586204,
+        "official_harmful_f1": 0.0,
+        "harmful_recall": null,
+        "benign_false_positive_rate": 0.2814814814814815,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 679,
+            "BLOCK": 266,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          }
+        }
+      },
+      "causing_material_harm_by_disseminating_misinformation": {
+        "n": 45,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 45,
+            "ERROR": 0
+          }
+        }
+      },
+      "copyright_violations": {
+        "n": 31,
+        "accuracy": 0.6129032258064516,
+        "harmful_f1": 0.76,
+        "macro_f1": 0.38,
+        "official_harmful_f1": 0.76,
+        "harmful_recall": 0.6129032258064516,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 12,
+            "BLOCK": 19,
+            "ERROR": 0
+          }
+        }
+      },
+      "cyberattack": {
+        "n": 48,
+        "accuracy": 0.9166666666666666,
+        "harmful_f1": 0.9565217391304348,
+        "macro_f1": 0.4782608695652174,
+        "official_harmful_f1": 0.9565217391304348,
+        "harmful_recall": 0.9166666666666666,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 4,
+            "BLOCK": 44,
+            "ERROR": 0
+          }
+        }
+      },
+      "defamation_encouraging_unethical_or_unsafe_actions": {
+        "n": 46,
+        "accuracy": 0.9782608695652174,
+        "harmful_f1": 0.989010989010989,
+        "macro_f1": 0.4945054945054945,
+        "official_harmful_f1": 0.989010989010989,
+        "harmful_recall": 0.9782608695652174,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 1,
+            "BLOCK": 45,
+            "ERROR": 0
+          }
+        }
+      },
+      "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": {
+        "n": 44,
+        "accuracy": 0.9545454545454546,
+        "harmful_f1": 0.9767441860465116,
+        "macro_f1": 0.4883720930232558,
+        "official_harmful_f1": 0.9767441860465116,
+        "harmful_recall": 0.9545454545454546,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 2,
+            "BLOCK": 42,
+            "ERROR": 0
+          }
+        }
+      },
+      "fraud_assisting_illegal_activities": {
+        "n": 60,
+        "accuracy": 0.9,
+        "harmful_f1": 0.9473684210526315,
+        "macro_f1": 0.47368421052631576,
+        "official_harmful_f1": 0.9473684210526315,
+        "harmful_recall": 0.9,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 6,
+            "BLOCK": 54,
+            "ERROR": 0
+          }
+        }
+      },
+      "mental_health_over-reliance_crisis": {
+        "n": 47,
+        "accuracy": 0.8936170212765957,
+        "harmful_f1": 0.9438202247191011,
+        "macro_f1": 0.47191011235955055,
+        "official_harmful_f1": 0.9438202247191011,
+        "harmful_recall": 0.8936170212765957,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 5,
+            "BLOCK": 42,
+            "ERROR": 0
+          }
+        }
+      },
+      "others": {
+        "n": 98,
+        "accuracy": 0.9183673469387755,
+        "harmful_f1": 0.9574468085106383,
+        "macro_f1": 0.4787234042553192,
+        "official_harmful_f1": 0.9574468085106383,
+        "harmful_recall": 0.9183673469387755,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 8,
+            "BLOCK": 90,
+            "ERROR": 0
+          }
+        }
+      },
+      "private_information_individual": {
+        "n": 81,
+        "accuracy": 0.8148148148148148,
+        "harmful_f1": 0.8979591836734694,
+        "macro_f1": 0.4489795918367347,
+        "official_harmful_f1": 0.8979591836734694,
+        "harmful_recall": 0.8148148148148148,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 66,
+            "ERROR": 0
+          }
+        }
+      },
+      "sensitive_information_organization_government": {
+        "n": 50,
+        "accuracy": 0.92,
+        "harmful_f1": 0.9583333333333334,
+        "macro_f1": 0.4791666666666667,
+        "official_harmful_f1": 0.9583333333333334,
+        "harmful_recall": 0.92,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 4,
+            "BLOCK": 46,
+            "ERROR": 0
+          }
+        }
+      },
+      "sexual_content": {
+        "n": 47,
+        "accuracy": 0.8723404255319149,
+        "harmful_f1": 0.9318181818181818,
+        "macro_f1": 0.4659090909090909,
+        "official_harmful_f1": 0.9318181818181818,
+        "harmful_recall": 0.8723404255319149,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 6,
+            "BLOCK": 41,
+            "ERROR": 0
+          }
+        }
+      },
+      "social_stereotypes_and_unfair_discrimination": {
+        "n": 76,
+        "accuracy": 0.881578947368421,
+        "harmful_f1": 0.9370629370629371,
+        "macro_f1": 0.46853146853146854,
+        "official_harmful_f1": 0.9370629370629371,
+        "harmful_recall": 0.881578947368421,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 9,
+            "BLOCK": 67,
+            "ERROR": 0
+          }
+        }
+      },
+      "toxic_language_hate_speech": {
+        "n": 41,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 41,
+            "ERROR": 0
+          }
+        }
+      },
+      "violence_and_physical_harm": {
+        "n": 40,
+        "accuracy": 1.0,
+        "harmful_f1": 1.0,
+        "macro_f1": 0.5,
+        "official_harmful_f1": 1.0,
+        "harmful_recall": 1.0,
+        "benign_false_positive_rate": null,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 40,
+            "ERROR": 0
+          }
+        }
+      }
+    }
+  },
+  "complete": true,
+  "wall_seconds": 10.09311771800003,
+  "output_tokens": 3398
+}
