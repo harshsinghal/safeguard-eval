@@ -4,9 +4,17 @@ Compare how specialized policy models and general-purpose instruction models app
 
 Experiments use GPU.ai first, with Runpod available when credits or GPU capacity are insufficient. See the [compute and budget notes](docs/COMPUTE.md).
 
-The [research directions](docs/research-directions/README.md) record six proposed studies for choosing policy models and a separate [enterprise AI governance track](docs/research-directions/ENTERPRISE-AI-GOVERNANCE.md). These are future research proposals; the activation study is parked and no new experiments have started.
+The [research directions](docs/research-directions/README.md) record proposed studies for choosing policy models and a separate [enterprise AI governance track](docs/research-directions/ENTERPRISE-AI-GOVERNANCE.md). The activation study remains parked. The structured-policy study on HateXplain is now complete, as described below.
 
 The [third study: frontier API models](docs/frontier-api/PLAN.md) completed a 256-observation fitting-only pilot through OpenRouter for **$0.55**, bringing cumulative spend at that stage to **$8.46** within the $20 cap. Read the [pilot findings](docs/frontier-api/READOUT.md) and [reproducible evidence](published_runs/2026-10-25-frontier-pilot/README.md). The full policy search and held-out evaluation have not run; projected API costs exceed the remaining budget.
+
+## HateXplain: policy structure changes decisions
+
+On all **1,924 HateXplain test posts**, removing the same four policy examples raised Shieldstral's accuracy from **52.4% to 61.0%**, while reducing Qwen4B's from **72.5% to 61.8%**. Presenting unchanged clauses as linear text also helped Shieldstral and hurt Qwen. PolicyLM's native field interface was tested for component omissions and wording transfer, with whole-document formatting excluded.
+
+An accuracy gain can hide a policy trade-off: removing PolicyLM's definitions increased accuracy but let **36 more hateful posts pass**, alongside **64 fewer false blocks**. Automated wording revision produced a small gain for Shieldstral, a negligible change for Qwen, and no eligible new PolicyLM draft. These results support testing policy text and its model together; they do not establish a universal winning format or each model's best performance.
+
+Read the [plain-language findings](docs/hatexplain/READOUT.md), [plan and execution notes](docs/hatexplain/README.md), and [complete reproducible evidence](published_runs/2026-10-26-hatexplain/README.md). The study completed **45 runs and 73,452 classifications**, cost **$1.34**, and brought cumulative spending to **$12.12 of $20**. The GPU is terminated.
 
 ## Policy transfer: validate the text and model together
 

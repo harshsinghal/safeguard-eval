@@ -1,0 +1,46 @@
+{
+  "_metadata": {
+    "reviewed_utc": "2026-10-26T23:39:56.054354+00:00",
+    "reviewer": "Codex coordinating assistant; AI-assisted scope review, not independent human adjudication",
+    "authoring_amendment_sha256": "0871e930f0881b300a3ec7323c9c7e6fe4597b55adfa1efac8329c389f5f0576",
+    "repair_source_sha256": "57df73b264674932b2ad0850fb99a503ddb79439a0c35c7ee0b3a54b47e82ecd",
+    "validation_results_observed": false,
+    "test_results_observed": false,
+    "cross_source_duplicate_note": "Qwen p1 and Shieldstral p1 have identical substantive text. If both are selected, retain their source identities and treat repeated transfer runs as replicas, not distinct authoring strategies."
+  },
+  "p0": {
+    "policy_sha256": "48ff3502bdad0530a0e99792c53f40a0b6a8a534b41266e4ec8bf3c30e512183",
+    "eligible": true,
+    "reason": "Registered complete reference policy; dataset mapping and fixed scope reviewed."
+  },
+  "policylm-p1": {
+    "policy_sha256": "3a8811edbd971ff259c98ca673a6e710d50610bde598293b6037a266ffd0607d",
+    "eligible": false,
+    "reason": "Defines normal as non-offensive but includes profanity and personal insults, and replaces the instruction against assuming missing context. Does not faithfully preserve the original definitions and context constraint."
+  },
+  "policylm-p2": {
+    "policy_sha256": "66b4d4bdcd4ebc71eaea7541557d2eb9aa3cf1aff1c94c458a3a3aacce1af18b",
+    "eligible": false,
+    "reason": "Same substantive text as rejected PolicyLM p1; retains its contradictory definition and missing context constraint."
+  },
+  "shieldstral-p1": {
+    "policy_sha256": "3698b4b8d06ed978d3758dc60600fd01bd482a0dd19bad87fdc74ad27c5d8bc4",
+    "eligible": true,
+    "reason": "Punctuation changes only; all intended rules, exceptions, covered groups and examples retained. Same substantive text as Qwen p1."
+  },
+  "shieldstral-p2": {
+    "policy_sha256": "de63b5dfcda53af29c08da0d8235bef54ec982d7485f8e2c7a3bcd02ddee4771",
+    "eligible": true,
+    "reason": "Adds a clarification that context distinguishes an identity attack from a descriptor or unrelated insult. Retains the original identity groups, prohibitions, exceptions, examples and instruction not to assume missing context."
+  },
+  "qwen-4b-p1": {
+    "policy_sha256": "f8a6fe582b6489f6164945e0b626ca9b8a251a8f90285c4617a025a1db6c703e",
+    "eligible": true,
+    "reason": "Punctuation changes only; intended scope and all substantive clauses retained. Same substantive text as Shieldstral p1."
+  },
+  "qwen-4b-p2": {
+    "policy_sha256": "78570b0d7f035930ef370f087bb4be90ad4b0f8a6ffaf8f89d8b4b298f1238da",
+    "eligible": false,
+    "reason": "Exact substantive duplicate of Qwen p1. Exclude from selection so a second stochastic measurement of the same input cannot win by chance."
+  }
+}

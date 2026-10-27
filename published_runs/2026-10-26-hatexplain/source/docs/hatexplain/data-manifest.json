@@ -1,0 +1,124 @@
+{
+  "hf_repository": "Hate-speech-CNERG/hatexplain",
+  "hf_revision": "f6a8b7de6ec31b30919d2f48cf685400ce61185f",
+  "upstream_repository": "hate-alert/HateXplain",
+  "upstream_revision": "01d742279dac941981f53806154481c0e15ee686",
+  "source_hashes": {
+    "dataset.json": "63bb3340fee0ec469b09690d04cb68f7c187787dd8b83807f071892c084967fb",
+    "post_id_divisions.json": "c2fb0d89862e7897b11ea3e9380753f15a793482b4b70ad0532dfb1212212835"
+  },
+  "original_counts": {
+    "test": 1924,
+    "train": 15383,
+    "val": 1922
+  },
+  "grouping": {
+    "unique_normalized_prompts": 19192,
+    "groups": 19178,
+    "near_duplicate_pairs": 18,
+    "conflicting_label_groups": 5,
+    "grouping": "NFKC/casefold/whitespace exact; 64-permutation 5-word MinHash LSH candidates at 0.65, verified Jaccard >=0.85; connected components",
+    "limitation": "Approximate candidate retrieval may miss some near duplicates; no semantic paraphrase detector."
+  },
+  "quarantine_rule": "Keep highest-priority split in each duplicate component: test > validation > train; never remove test rows.",
+  "excluded": [
+    {
+      "id": "1178899405115707392_twitter",
+      "split": "fit",
+      "group": "hx-172e18ca3708352fe1c7"
+    },
+    {
+      "id": "1178951876349267968_twitter",
+      "split": "fit",
+      "group": "hx-172e18ca3708352fe1c7"
+    },
+    {
+      "id": "1179091164432986114_twitter",
+      "split": "fit",
+      "group": "hx-172e18ca3708352fe1c7"
+    },
+    {
+      "id": "1227692091393937410_twitter",
+      "split": "fit",
+      "group": "hx-172e18ca3708352fe1c7"
+    },
+    {
+      "id": "3572917_gab",
+      "split": "fit",
+      "group": "hx-e8cfae52679510e64297"
+    },
+    {
+      "id": "26337318_gab",
+      "split": "fit",
+      "group": "hx-1d83d9204ea2c474d053"
+    },
+    {
+      "id": "1184411429132263424_twitter",
+      "split": "fit",
+      "group": "hx-9b430e2036af646fbbce"
+    },
+    {
+      "id": "1172986514147381249_twitter",
+      "split": "fit",
+      "group": "hx-15e16b7785c5d892f315"
+    },
+    {
+      "id": "1203540995377225728_twitter",
+      "split": "fit",
+      "group": "hx-05387a900cf980005bf2"
+    },
+    {
+      "id": "1207741179795783680_twitter",
+      "split": "fit",
+      "group": "hx-05387a900cf980005bf2"
+    },
+    {
+      "id": "1077513363154976770_twitter",
+      "split": "validation",
+      "group": "hx-05387a900cf980005bf2"
+    },
+    {
+      "id": "1179041764763504641_twitter",
+      "split": "fit",
+      "group": "hx-85a39f6504e437e1ff23"
+    },
+    {
+      "id": "1142152131748794368_twitter",
+      "split": "fit",
+      "group": "hx-7949a733cc522a3aabb2"
+    },
+    {
+      "id": "11580271_gab",
+      "split": "validation",
+      "group": "hx-9695f6c64849d1b68a73"
+    }
+  ],
+  "unused_source_rows": 919,
+  "text_reconstruction": "Join publisher post_tokens with one ASCII space; no other text rewriting.",
+  "label_mapping": {
+    "hatespeech": "BLOCK",
+    "offensive": "ALLOW",
+    "normal": "ALLOW"
+  },
+  "selection_seed": 20261026,
+  "fit_selection": "Proportional majority-label strata; deterministic SHA256 ordering; demonstration groups excluded.",
+  "counts": {
+    "fit": 1024,
+    "validation": 1920,
+    "test": 1924
+  },
+  "data_hashes": {
+    "fit": "4e58221cc65eb26057be03d57df3211e93e05ee565614c39aa11a11018e89151",
+    "validation": "c3979094db0c88187ef75de86ab8be6081563e411e853cc01f0e363b65efe0ad",
+    "test": "2585d43cbc0462291323a10dd3203dac0f814c76511ff90daef8020c68714858",
+    "repeat": "5de4d9451c1762f591339dd4c0ecffe3e9e453a20e99c26b5933e1da384f4e38"
+  },
+  "example_ids": [
+    "15729057_gab",
+    "13557607_gab",
+    "1196256638547701761_twitter",
+    "1179087522510573568_twitter"
+  ],
+  "example_selection": "First unanimous training rows by seeded hash within 8–24 tokens: two hate, one offensive, one normal.",
+  "contamination_limit": "Upstream model exposure to this public benchmark is unknown; deduplication is approximate, not semantic."
+}

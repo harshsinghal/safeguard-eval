@@ -1,0 +1,22 @@
+{
+  "provider": "GPU.ai",
+  "instance_id": "gpu-8e9d66ea",
+  "status": "terminated",
+  "cost_usd": 1.34,
+  "prior_cumulative_cost_usd": 10.78119753456,
+  "cumulative_cost_usd": 12.12119753456,
+  "cumulative_cap_usd": 20,
+  "remaining_authorized_usd": 7.87880246544,
+  "gpu_seconds": 2416,
+  "price_per_hour_usd": 1.99,
+  "server_auto_terminate_hours": 3,
+  "usage": [
+    {
+      "bucket_start": "2026-10-26T00:00:00Z",
+      "instance_id": "gpu-8e9d66ea",
+      "gpu_seconds": 2416,
+      "cost_cents": 134
+    }
+  ],
+  "runpod_resources_used": false
+}

@@ -1,0 +1,269 @@
+{
+  "status": "frozen",
+  "created_utc": "2026-10-26T23:45:07.327870+00:00",
+  "sources": {
+    "evals/run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986",
+    "evals/wildguard/run.py": "a2e35b7a878a729c2f8dfc0340be0b1fd3224c593746deb2f0cecf57658bac1b",
+    "evals/wildguard/metrics.py": "8fd93378cb6bbbcbca2e6ed47e3f3ae198da663709d3fa7dbf44b1be41c69da7",
+    "evals/qwen_policy/run.py": "837baa4f70eb150062d647e90779f23f13363d90ba71fbf181205ebde59dea16",
+    "evals/hatexplain/__init__.py": "8d6e20e037224b8bdd7c525aec3fd756002c100724a84423861cbc312a4af6aa",
+    "evals/hatexplain/author.py": "0ca0db2cca730494a3de0c289122f717cae693e558a3958c324a8cfc5846ccde",
+    "evals/hatexplain/bootstrap.py": "9875f463b827f31127f40e8ee3db6bdd912c643e8b33d22874c060676a91621d",
+    "evals/hatexplain/common.py": "21e5e1f76bcbb869e6887d45bc721473f82a6804874556c51b37e793696eab26",
+    "evals/hatexplain/data.py": "9bc3b36b1152597ec76e7aa705bcd8de47338d07b4e113ef02116ab27585cc4c",
+    "evals/hatexplain/metrics.py": "4d3b19c1479451e7f4fad4c90c47c52023e67b3023e54d20902f0c6bac64223d",
+    "evals/hatexplain/orchestrate.py": "129aa6472760e2f5232c13db60a32179cf206ae846f8ea4574a6199528f9dd1a",
+    "evals/hatexplain/policy.py": "1997e56d6a7c459b30e0bd1dbfc95d2f275cf6c3d19526c1effdffca6cc188e3",
+    "evals/hatexplain/run.py": "63706b40489011808b98669f1b5a8edf1ba33c49542240d513416664f64d2684",
+    "evals/hatexplain/study.py": "22351c3256f9a0ee9ca0289bceb5a3c057703494ce0aba6206eb12abbe8c8ecd"
+  },
+  "registry_sha256": "8e32f3e27fe35d3237ac0b18c2b156e78d4e600892cfe1a91f0f1a53798560c8",
+  "protocol_sha256": "bc054f190879be917f9e59a149cc5c9c0efaa2476009c57f4bd4f66bf5ec031d",
+  "review_sha256": "5475d628faf0ff6dd78b6e06ef7590cd09266d23627c9f712f1ae08814b594d5",
+  "selections": {
+    "policylm": "p0",
+    "shieldstral": "shieldstral-p2",
+    "qwen-4b": "qwen-4b-p1"
+  },
+  "considered": {
+    "policylm": [
+      {
+        "policy_id": "p0",
+        "macro_f1": 0.6589677747979366,
+        "accuracy": 0.7046875,
+        "words": 319
+      }
+    ],
+    "shieldstral": [
+      {
+        "policy_id": "p0",
+        "macro_f1": 0.5285343909186618,
+        "accuracy": 0.5307291666666667,
+        "words": 319
+      },
+      {
+        "policy_id": "shieldstral-p1",
+        "macro_f1": 0.5246985744446965,
+        "accuracy": 0.5270833333333333,
+        "words": 319
+      },
+      {
+        "policy_id": "shieldstral-p2",
+        "macro_f1": 0.5379544422557389,
+        "accuracy": 0.5395833333333333,
+        "words": 341
+      }
+    ],
+    "qwen-4b": [
+      {
+        "policy_id": "p0",
+        "macro_f1": 0.7432641328648993,
+        "accuracy": 0.7546875,
+        "words": 319
+      },
+      {
+        "policy_id": "qwen-4b-p1",
+        "macro_f1": 0.7441177749317371,
+        "accuracy": 0.7557291666666667,
+        "words": 319
+      }
+    ]
+  },
+  "policy_hashes": {
+    "p0": "48ff3502bdad0530a0e99792c53f40a0b6a8a534b41266e4ec8bf3c30e512183",
+    "policylm-p1": "3a8811edbd971ff259c98ca673a6e710d50610bde598293b6037a266ffd0607d",
+    "policylm-p2": "66b4d4bdcd4ebc71eaea7541557d2eb9aa3cf1aff1c94c458a3a3aacce1af18b",
+    "qwen-4b-p1": "f8a6fe582b6489f6164945e0b626ca9b8a251a8f90285c4617a025a1db6c703e",
+    "qwen-4b-p2": "78570b0d7f035930ef370f087bb4be90ad4b0f8a6ffaf8f89d8b4b298f1238da",
+    "shieldstral-p1": "3698b4b8d06ed978d3758dc60600fd01bd482a0dd19bad87fdc74ad27c5d8bc4",
+    "shieldstral-p2": "de63b5dfcda53af29c08da0d8235bef54ec982d7485f8e2c7a3bcd02ddee4771"
+  },
+  "jobs": [
+    {
+      "model": "policylm",
+      "policy_id": "p0",
+      "variant": "markdown",
+      "repeat": false
+    },
+    {
+      "model": "policylm",
+      "policy_id": "p0",
+      "variant": "omit-definitions",
+      "repeat": false
+    },
+    {
+      "model": "policylm",
+      "policy_id": "p0",
+      "variant": "omit-exceptions",
+      "repeat": false
+    },
+    {
+      "model": "policylm",
+      "policy_id": "p0",
+      "variant": "omit-allow-examples",
+      "repeat": false
+    },
+    {
+      "model": "policylm",
+      "policy_id": "p0",
+      "variant": "omit-all-examples",
+      "repeat": false
+    },
+    {
+      "model": "policylm",
+      "policy_id": "qwen-4b-p1",
+      "variant": "markdown",
+      "repeat": false
+    },
+    {
+      "model": "policylm",
+      "policy_id": "shieldstral-p2",
+      "variant": "markdown",
+      "repeat": false
+    },
+    {
+      "model": "policylm",
+      "policy_id": "p0",
+      "variant": "markdown",
+      "repeat": true
+    },
+    {
+      "model": "shieldstral",
+      "policy_id": "p0",
+      "variant": "markdown",
+      "repeat": false
+    },
+    {
+      "model": "shieldstral",
+      "policy_id": "p0",
+      "variant": "omit-definitions",
+      "repeat": false
+    },
+    {
+      "model": "shieldstral",
+      "policy_id": "p0",
+      "variant": "omit-exceptions",
+      "repeat": false
+    },
+    {
+      "model": "shieldstral",
+      "policy_id": "p0",
+      "variant": "omit-allow-examples",
+      "repeat": false
+    },
+    {
+      "model": "shieldstral",
+      "policy_id": "p0",
+      "variant": "omit-all-examples",
+      "repeat": false
+    },
+    {
+      "model": "shieldstral",
+      "policy_id": "p0",
+      "variant": "linear",
+      "repeat": false
+    },
+    {
+      "model": "shieldstral",
+      "policy_id": "p0",
+      "variant": "tagged",
+      "repeat": false
+    },
+    {
+      "model": "shieldstral",
+      "policy_id": "p0",
+      "variant": "reordered",
+      "repeat": false
+    },
+    {
+      "model": "shieldstral",
+      "policy_id": "qwen-4b-p1",
+      "variant": "markdown",
+      "repeat": false
+    },
+    {
+      "model": "shieldstral",
+      "policy_id": "shieldstral-p2",
+      "variant": "markdown",
+      "repeat": false
+    },
+    {
+      "model": "shieldstral",
+      "policy_id": "p0",
+      "variant": "markdown",
+      "repeat": true
+    },
+    {
+      "model": "qwen-4b",
+      "policy_id": "p0",
+      "variant": "markdown",
+      "repeat": false
+    },
+    {
+      "model": "qwen-4b",
+      "policy_id": "p0",
+      "variant": "omit-definitions",
+      "repeat": false
+    },
+    {
+      "model": "qwen-4b",
+      "policy_id": "p0",
+      "variant": "omit-exceptions",
+      "repeat": false
+    },
+    {
+      "model": "qwen-4b",
+      "policy_id": "p0",
+      "variant": "omit-allow-examples",
+      "repeat": false
+    },
+    {
+      "model": "qwen-4b",
+      "policy_id": "p0",
+      "variant": "omit-all-examples",
+      "repeat": false
+    },
+    {
+      "model": "qwen-4b",
+      "policy_id": "p0",
+      "variant": "linear",
+      "repeat": false
+    },
+    {
+      "model": "qwen-4b",
+      "policy_id": "p0",
+      "variant": "tagged",
+      "repeat": false
+    },
+    {
+      "model": "qwen-4b",
+      "policy_id": "p0",
+      "variant": "reordered",
+      "repeat": false
+    },
+    {
+      "model": "qwen-4b",
+      "policy_id": "qwen-4b-p1",
+      "variant": "markdown",
+      "repeat": false
+    },
+    {
+      "model": "qwen-4b",
+      "policy_id": "shieldstral-p2",
+      "variant": "markdown",
+      "repeat": false
+    },
+    {
+      "model": "qwen-4b",
+      "policy_id": "p0",
+      "variant": "markdown",
+      "repeat": true
+    }
+  ],
+  "data_hashes": {
+    "fit": "4e58221cc65eb26057be03d57df3211e93e05ee565614c39aa11a11018e89151",
+    "validation": "c3979094db0c88187ef75de86ab8be6081563e411e853cc01f0e363b65efe0ad",
+    "test": "2585d43cbc0462291323a10dd3203dac0f814c76511ff90daef8020c68714858",
+    "repeat": "5de4d9451c1762f591339dd4c0ecffe3e9e453a20e99c26b5933e1da384f4e38"
+  }
+}

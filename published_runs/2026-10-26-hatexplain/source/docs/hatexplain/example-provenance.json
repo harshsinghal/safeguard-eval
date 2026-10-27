@@ -1,0 +1,26 @@
+[
+  {
+    "component_id": "block_examples-1",
+    "training_id": "15729057_gab",
+    "source_label": "hatespeech",
+    "prompt_sha256": "1a16797070b17005b7932c9c801b68556aa4c7d598035e1b7bba05be9b2912f4"
+  },
+  {
+    "component_id": "block_examples-2",
+    "training_id": "13557607_gab",
+    "source_label": "hatespeech",
+    "prompt_sha256": "93ef70e44ce38a8166d3cbc7f18e7472ac162d51b1d6615a263d5372ede56dc9"
+  },
+  {
+    "component_id": "allow_examples-1",
+    "training_id": "1196256638547701761_twitter",
+    "source_label": "offensive",
+    "prompt_sha256": "c0162ee91b2d2248329851642915b33e3800b58682c4b999fa4baf6f8031fcbf"
+  },
+  {
+    "component_id": "allow_examples-2",
+    "training_id": "1179087522510573568_twitter",
+    "source_label": "normal",
+    "prompt_sha256": "b123f8c4de429ae9bcdfd1269d6067001937d5c6acc6d6263ac23f2ae82f7f35"
+  }
+]

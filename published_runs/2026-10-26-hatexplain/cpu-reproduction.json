@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-27T00:12:47.075054+00:00",
+  "python": "3.11.14",
+  "numpy": "2.4.6",
+  "working_directory": "/tmp",
+  "archived_sources": true,
+  "private_data_required": false,
+  "model_calls": 0,
+  "verified_runs": 45,
+  "classification_observations": 73452,
+  "analysis_sha256": "2f6dc162a49d80a5a1e59b1fd7284ccc1c0bb68523b7ac9d3b6fa0b7d29ab2fb",
+  "freeze_sha256": "9e2181c8ffdadf03e2c975865b7e60c0968dda18c4d1e4e8711560f67d4b7731",
+  "note": "Subsequent finalization changed completion metadata and documentation only; final file hashes rechecked."
+}

@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-26T23:18:44.429065+00:00",
+  "git_commit": "57b9ecd58912633ce465ded77bbff38e7bf9fdf1",
+  "reason": "Final-input guard verifies the actual supplied policy file; extra regression test before inference. Protocol unchanged.",
+  "sources": {
+    "evals/run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986",
+    "evals/wildguard/run.py": "a2e35b7a878a729c2f8dfc0340be0b1fd3224c593746deb2f0cecf57658bac1b",
+    "evals/wildguard/metrics.py": "8fd93378cb6bbbcbca2e6ed47e3f3ae198da663709d3fa7dbf44b1be41c69da7",
+    "evals/qwen_policy/run.py": "837baa4f70eb150062d647e90779f23f13363d90ba71fbf181205ebde59dea16",
+    "evals/hatexplain/__init__.py": "8d6e20e037224b8bdd7c525aec3fd756002c100724a84423861cbc312a4af6aa",
+    "evals/hatexplain/author.py": "0ca0db2cca730494a3de0c289122f717cae693e558a3958c324a8cfc5846ccde",
+    "evals/hatexplain/bootstrap.py": "9875f463b827f31127f40e8ee3db6bdd912c643e8b33d22874c060676a91621d",
+    "evals/hatexplain/common.py": "21e5e1f76bcbb869e6887d45bc721473f82a6804874556c51b37e793696eab26",
+    "evals/hatexplain/data.py": "9bc3b36b1152597ec76e7aa705bcd8de47338d07b4e113ef02116ab27585cc4c",
+    "evals/hatexplain/metrics.py": "4d3b19c1479451e7f4fad4c90c47c52023e67b3023e54d20902f0c6bac64223d",
+    "evals/hatexplain/orchestrate.py": "129aa6472760e2f5232c13db60a32179cf206ae846f8ea4574a6199528f9dd1a",
+    "evals/hatexplain/policy.py": "1997e56d6a7c459b30e0bd1dbfc95d2f275cf6c3d19526c1effdffca6cc188e3",
+    "evals/hatexplain/run.py": "63706b40489011808b98669f1b5a8edf1ba33c49542240d513416664f64d2684",
+    "evals/hatexplain/study.py": "22351c3256f9a0ee9ca0289bceb5a3c057703494ce0aba6206eb12abbe8c8ecd"
+  }
+}

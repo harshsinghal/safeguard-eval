@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-26T23:33:05.501023+00:00",
+  "reason": "Six initial editor calls echoed the input and created no policies. Revise only the editor output contract before validation or test.",
+  "initial_failed_calls": 6,
+  "maximum_additional_calls": 6,
+  "repair_source_sha256": "57df73b264674932b2ad0850fb99a503ddb79439a0c35c7ee0b3a54b47e82ecd",
+  "amendment_document_sha256": "3003ae2078557dd516ad1a7b884c25d2b85b6fd44b36f42514c9f9894362c7cd",
+  "validation_runs_observed": 0,
+  "test_uploaded": false
+}

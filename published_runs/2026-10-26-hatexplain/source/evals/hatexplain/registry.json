@@ -1,0 +1,52 @@
+{
+  "study": "hatexplain-structured-v1",
+  "created_utc": "2026-10-26T23:11:26.942457+00:00",
+  "models": {
+    "policylm": {
+      "model": "musubilabs/policylm-1.7b",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+      "adapter": "policylm"
+    },
+    "shieldstral": {
+      "model": "mistralai/Shieldstral-1.0-3B",
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+      "adapter": "shieldstral"
+    },
+    "qwen-4b": {
+      "model": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "adapter": "qwen"
+    }
+  },
+  "data_hashes": {
+    "fit": "4e58221cc65eb26057be03d57df3211e93e05ee565614c39aa11a11018e89151",
+    "validation": "c3979094db0c88187ef75de86ab8be6081563e411e853cc01f0e363b65efe0ad",
+    "test": "2585d43cbc0462291323a10dd3203dac0f814c76511ff90daef8020c68714858",
+    "repeat": "5de4d9451c1762f591339dd4c0ecffe3e9e453a20e99c26b5933e1da384f4e38"
+  },
+  "counts": {
+    "fit": 1024,
+    "validation": 1920,
+    "test": 1924
+  },
+  "baseline_sha256": "48ff3502bdad0530a0e99792c53f40a0b6a8a534b41266e4ec8bf3c30e512183",
+  "primary_objective": "validation binary macro-F1; tie-break accuracy, shorter policy, lexicographic policy ID",
+  "revisions_per_model": 2,
+  "author_model": "qwen-4b",
+  "settings": {
+    "dtype": "bfloat16",
+    "threshold": 0.5,
+    "temperature": 0,
+    "qwen_thinking": false,
+    "concurrency": 32,
+    "retries": 0,
+    "native_cleaning": true,
+    "native_max_batch_rows": 1,
+    "native_max_chars": null
+  },
+  "prior_cumulative_cost_usd": 10.78119753456,
+  "cumulative_cap_usd": 20,
+  "maximum_planned_rental_hours": 3,
+  "maximum_planned_rate_usd": 1.99,
+  "maximum_planned_new_compute_usd": 5.97
+}

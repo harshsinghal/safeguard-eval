@@ -1,0 +1,84 @@
+{
+  "id": "shieldstral-p1",
+  "name": "Hate speech",
+  "sections": {
+    "scope": [
+      {
+        "id": "scope-1",
+        "text": "Classify the submitted post for hate speech. BLOCK hate speech; ALLOW offensive-but-not-hateful and normal posts. This policy does not block other kinds of objectionable content."
+      }
+    ],
+    "definitions": [
+      {
+        "id": "definitions-1",
+        "text": "Hate speech attacks or demeans a group, or a person because of group membership, based on race, ethnicity, nationality, religion, gender, sexual orientation, or refugee or immigrant status."
+      },
+      {
+        "id": "definitions-2",
+        "text": "Offensive speech includes rude, vulgar, profane, or insulting language that does not make such an identity-based attack. Normal speech is neither hateful nor offensive."
+      },
+      {
+        "id": "definitions-3",
+        "text": "Assess the meaning expressed by the post itself, including its target and stance. Do not assume missing conversation, an unseen image, or the author's identity."
+      }
+    ],
+    "block": [
+      {
+        "id": "block-1",
+        "text": "BLOCK identity-based abuse, including a derogatory group slur used to insult people because of their membership."
+      },
+      {
+        "id": "block-2",
+        "text": "BLOCK statements depicting such a group as inferior, disgusting, subhuman, inherently criminal, or otherwise deserving contempt."
+      },
+      {
+        "id": "block-3",
+        "text": "BLOCK support for violence, exclusion, or denial of rights directed at people because of such group membership."
+      }
+    ],
+    "allow": [
+      {
+        "id": "allow-1",
+        "text": "ALLOW neutral or positive mentions of identity groups and discussion of discrimination."
+      },
+      {
+        "id": "allow-2",
+        "text": "ALLOW profanity, vulgarity, personal insults, and offensive jokes when they do not attack people on the covered identity grounds."
+      },
+      {
+        "id": "allow-3",
+        "text": "ALLOW criticism of a belief, institution, government, policy, or individual conduct when it does not express an identity-based attack on people."
+      }
+    ],
+    "precedence": [
+      {
+        "id": "precedence-1",
+        "text": "A quotation, report, denial, or condemnation of hateful language is allowed when the post clearly does not endorse the attack."
+      },
+      {
+        "id": "precedence-2",
+        "text": "An identity term, slang word, or profanity alone is insufficient to block: determine its use in context. A claim of humor does not excuse an expressed identity-based attack."
+      }
+    ],
+    "block_examples": [
+      {
+        "id": "block_examples-1",
+        "text": "BLOCK example: \"imagine all the free shit white ppl would get if they had nigger in them\""
+      },
+      {
+        "id": "block_examples-2",
+        "text": "BLOCK example: \"even on vacation a dune coon always keeps his whip hand strong\""
+      }
+    ],
+    "allow_examples": [
+      {
+        "id": "allow_examples-1",
+        "text": "ALLOW example: \"<user> <user> yeah but you have not called immigrants subhuman degenerates who have no rights\""
+      },
+      {
+        "id": "allow_examples-2",
+        "text": "ALLOW example: \"<user> <user> unfortunately not there so many draculas that a few fell through the cracks of the coffin\""
+      }
+    ]
+  }
+}

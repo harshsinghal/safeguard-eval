@@ -1,0 +1,411 @@
+{
+  "n": 1024,
+  "accuracy": 0.517578125,
+  "macro_f1": 0.5150455373406193,
+  "hate_f1": 0.5500910746812386,
+  "hate_recall": 0.9556962025316456,
+  "errors": 0,
+  "blocked": 782,
+  "false_blocks": 480,
+  "missed_hate": 14,
+  "confusion": {
+    "ALLOW": {
+      "ALLOW": 228,
+      "BLOCK": 480,
+      "ERROR": 0
+    },
+    "BLOCK": {
+      "ALLOW": 14,
+      "BLOCK": 302,
+      "ERROR": 0
+    }
+  },
+  "slices": {
+    "source_label": {
+      "hatespeech": {
+        "n": 316,
+        "accuracy": 0.9556962025316456,
+        "macro_f1": 0.4886731391585761,
+        "hate_f1": 0.9773462783171522,
+        "hate_recall": 0.9556962025316456,
+        "errors": 0,
+        "blocked": 302,
+        "false_blocks": 0,
+        "missed_hate": 14,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 14,
+            "BLOCK": 302,
+            "ERROR": 0
+          }
+        },
+        "block_rate": 0.9556962025316456
+      },
+      "normal": {
+        "n": 416,
+        "accuracy": 0.46875,
+        "macro_f1": 0.3191489361702128,
+        "hate_f1": 0.0,
+        "hate_recall": null,
+        "errors": 0,
+        "blocked": 221,
+        "false_blocks": 221,
+        "missed_hate": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 195,
+            "BLOCK": 221,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          }
+        },
+        "block_rate": 0.53125
+      },
+      "offensive": {
+        "n": 292,
+        "accuracy": 0.11301369863013698,
+        "macro_f1": 0.10153846153846154,
+        "hate_f1": 0.0,
+        "hate_recall": null,
+        "errors": 0,
+        "blocked": 259,
+        "false_blocks": 259,
+        "missed_hate": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 33,
+            "BLOCK": 259,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 0,
+            "BLOCK": 0,
+            "ERROR": 0
+          }
+        },
+        "block_rate": 0.886986301369863
+      }
+    },
+    "agreement": {
+      "2": {
+        "n": 504,
+        "accuracy": 0.43452380952380953,
+        "macro_f1": 0.4295631177846525,
+        "hate_f1": 0.4827586206896552,
+        "hate_recall": 0.9172413793103448,
+        "errors": 0,
+        "blocked": 406,
+        "false_blocks": 273,
+        "missed_hate": 12,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 86,
+            "BLOCK": 273,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 12,
+            "BLOCK": 133,
+            "ERROR": 0
+          }
+        },
+        "block_rate": 0.8055555555555556
+      },
+      "3": {
+        "n": 520,
+        "accuracy": 0.5980769230769231,
+        "macro_f1": 0.5969904068290621,
+        "hate_f1": 0.6179159049360147,
+        "hate_recall": 0.9883040935672515,
+        "errors": 0,
+        "blocked": 376,
+        "false_blocks": 207,
+        "missed_hate": 2,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 142,
+            "BLOCK": 207,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 2,
+            "BLOCK": 169,
+            "ERROR": 0
+          }
+        },
+        "block_rate": 0.7230769230769231
+      }
+    },
+    "platform": {
+      "gab": {
+        "n": 544,
+        "accuracy": 0.5992647058823529,
+        "macro_f1": 0.5422430830039525,
+        "hate_f1": 0.7038043478260869,
+        "hate_recall": 0.955719557195572,
+        "errors": 0,
+        "blocked": 465,
+        "false_blocks": 206,
+        "missed_hate": 12,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 67,
+            "BLOCK": 206,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 12,
+            "BLOCK": 259,
+            "ERROR": 0
+          }
+        },
+        "block_rate": 0.8547794117647058
+      },
+      "twitter": {
+        "n": 480,
+        "accuracy": 0.425,
+        "macro_f1": 0.3880152996175096,
+        "hate_f1": 0.23756906077348067,
+        "hate_recall": 0.9555555555555556,
+        "errors": 0,
+        "blocked": 317,
+        "false_blocks": 274,
+        "missed_hate": 2,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 161,
+            "BLOCK": 274,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 2,
+            "BLOCK": 43,
+            "ERROR": 0
+          }
+        },
+        "block_rate": 0.6604166666666667
+      }
+    }
+  },
+  "targets": {
+    "African": {
+      "n": 157,
+      "accuracy": 0.7133757961783439,
+      "macro_f1": 0.504036504036504,
+      "hate_f1": 0.8262548262548263,
+      "hate_recall": 0.9907407407407407,
+      "errors": 0,
+      "blocked": 151,
+      "false_blocks": 44,
+      "missed_hate": 1,
+      "confusion": {
+        "ALLOW": {
+          "ALLOW": 5,
+          "BLOCK": 44,
+          "ERROR": 0
+        },
+        "BLOCK": {
+          "ALLOW": 1,
+          "BLOCK": 107,
+          "ERROR": 0
+        }
+      }
+    },
+    "Arab": {
+      "n": 39,
+      "accuracy": 0.6666666666666666,
+      "macro_f1": 0.4,
+      "hate_f1": 0.8,
+      "hate_recall": 1.0,
+      "errors": 0,
+      "blocked": 39,
+      "false_blocks": 13,
+      "missed_hate": 0,
+      "confusion": {
+        "ALLOW": {
+          "ALLOW": 0,
+          "BLOCK": 13,
+          "ERROR": 0
+        },
+        "BLOCK": {
+          "ALLOW": 0,
+          "BLOCK": 26,
+          "ERROR": 0
+        }
+      }
+    },
+    "Caucasian": {
+      "n": 30,
+      "accuracy": 0.26666666666666666,
+      "macro_f1": 0.26339285714285715,
+      "hate_f1": 0.3125,
+      "hate_recall": 0.8333333333333334,
+      "errors": 0,
+      "blocked": 26,
+      "false_blocks": 21,
+      "missed_hate": 1,
+      "confusion": {
+        "ALLOW": {
+          "ALLOW": 3,
+          "BLOCK": 21,
+          "ERROR": 0
+        },
+        "BLOCK": {
+          "ALLOW": 1,
+          "BLOCK": 5,
+          "ERROR": 0
+        }
+      }
+    },
+    "Homosexual": {
+      "n": 103,
+      "accuracy": 0.4368932038834951,
+      "macro_f1": 0.4246918335901386,
+      "hate_f1": 0.5084745762711864,
+      "hate_recall": 1.0,
+      "errors": 0,
+      "blocked": 88,
+      "false_blocks": 58,
+      "missed_hate": 0,
+      "confusion": {
+        "ALLOW": {
+          "ALLOW": 15,
+          "BLOCK": 58,
+          "ERROR": 0
+        },
+        "BLOCK": {
+          "ALLOW": 0,
+          "BLOCK": 30,
+          "ERROR": 0
+        }
+      }
+    },
+    "Islam": {
+      "n": 117,
+      "accuracy": 0.6239316239316239,
+      "macro_f1": 0.5652027027027027,
+      "hate_f1": 0.725,
+      "hate_recall": 0.9508196721311475,
+      "errors": 0,
+      "blocked": 99,
+      "false_blocks": 41,
+      "missed_hate": 3,
+      "confusion": {
+        "ALLOW": {
+          "ALLOW": 15,
+          "BLOCK": 41,
+          "ERROR": 0
+        },
+        "BLOCK": {
+          "ALLOW": 3,
+          "BLOCK": 58,
+          "ERROR": 0
+        }
+      }
+    },
+    "Jewish": {
+      "n": 106,
+      "accuracy": 0.7358490566037735,
+      "macro_f1": 0.4847222222222222,
+      "hate_f1": 0.8444444444444444,
+      "hate_recall": 0.987012987012987,
+      "errors": 0,
+      "blocked": 103,
+      "false_blocks": 27,
+      "missed_hate": 1,
+      "confusion": {
+        "ALLOW": {
+          "ALLOW": 2,
+          "BLOCK": 27,
+          "ERROR": 0
+        },
+        "BLOCK": {
+          "ALLOW": 1,
+          "BLOCK": 76,
+          "ERROR": 0
+        }
+      }
+    },
+    "Other": {
+      "n": 35,
+      "accuracy": 0.3142857142857143,
+      "macro_f1": 0.3092105263157895,
+      "hate_f1": 0.3684210526315789,
+      "hate_recall": 0.875,
+      "errors": 0,
+      "blocked": 30,
+      "false_blocks": 23,
+      "missed_hate": 1,
+      "confusion": {
+        "ALLOW": {
+          "ALLOW": 4,
+          "BLOCK": 23,
+          "ERROR": 0
+        },
+        "BLOCK": {
+          "ALLOW": 1,
+          "BLOCK": 7,
+          "ERROR": 0
+        }
+      }
+    },
+    "Refugee": {
+      "n": 45,
+      "accuracy": 0.6222222222222222,
+      "macro_f1": 0.5817386550027337,
+      "hate_f1": 0.45161290322580644,
+      "hate_recall": 0.7777777777777778,
+      "errors": 0,
+      "blocked": 22,
+      "false_blocks": 15,
+      "missed_hate": 2,
+      "confusion": {
+        "ALLOW": {
+          "ALLOW": 21,
+          "BLOCK": 15,
+          "ERROR": 0
+        },
+        "BLOCK": {
+          "ALLOW": 2,
+          "BLOCK": 7,
+          "ERROR": 0
+        }
+      }
+    },
+    "Women": {
+      "n": 74,
+      "accuracy": 0.33783783783783783,
+      "macro_f1": 0.322875816993464,
+      "hate_f1": 0.4235294117647059,
+      "hate_recall": 0.9473684210526315,
+      "errors": 0,
+      "blocked": 66,
+      "false_blocks": 48,
+      "missed_hate": 1,
+      "confusion": {
+        "ALLOW": {
+          "ALLOW": 7,
+          "BLOCK": 48,
+          "ERROR": 0
+        },
+        "BLOCK": {
+          "ALLOW": 1,
+          "BLOCK": 18,
+          "ERROR": 0
+        }
+      }
+    }
+  },
+  "complete": true,
+  "wall_seconds": 25.418496738000016,
+  "max_prompt_tokens": 948
+}
