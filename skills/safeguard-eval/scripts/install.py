@@ -37,7 +37,8 @@ def verify_package(root: Path) -> dict:
                 or path.as_posix() != name or not path.parts
                 or len(digest) != 64 or any(c not in "0123456789abcdef" for c in digest)):
             raise ValueError(f"Invalid manifest entry: {name}")
-    required = {"SKILL.md", "release.json", "scripts/install.py", "references/sources.json"}
+    required = {"SKILL.md", "release.json", "scripts/install.py", "references/sources.json",
+                "references/start-here.md"}
     if not required <= manifest["files"].keys():
         raise ValueError("Required skill files are missing from the manifest.")
     actual = package_files(root)
@@ -124,7 +125,18 @@ def main() -> int:
     try:
         source = Path(__file__).resolve().parents[1]
         dest = args.dest or destination(args.target, args.scope, args.project)
-        print(json.dumps(install(source, dest, args.update), indent=2))
+        result = install(source, dest, args.update)
+        prefix = "Use $safeguard-eval to give" if args.target == "codex" else "/safeguard-eval Give"
+        prompt = prefix + " me a two-minute introduction and suggest what to explore next."
+        result["quick_start"] = {
+            "guide": str(Path(result["destination"]) / "references" / "start-here.md"),
+            "prompt": prompt,
+        }
+        # Preserve machine-readable stdout; terminal users also get a clear next step.
+        print(json.dumps(result, indent=2))
+        print("\nSafeguard Eval is ready: explore policy-model research by Harsh Singhal.\n"
+              "https://www.linkedin.com/in/harshsinghal\n\n"
+              "Start in your agent with:\n" + prompt, file=sys.stderr)
     except (OSError, ValueError) as exc:
         print(f"Install failed: {exc}", file=sys.stderr)
         return 1

@@ -97,6 +97,30 @@ class SkillInstallTests(unittest.TestCase):
             expected = self.root / target / directory / "skills" / "safeguard-eval"
             self.assertEqual(Path(data["destination"]).resolve(), expected.resolve())
             INSTALLER["verify_package"](expected)
+            # Every successful installation points to the installed introduction,
+            # and supplies a usable invocation for the chosen agent.
+            guide = Path(data["quick_start"]["guide"])
+            self.assertEqual(guide.resolve(), (expected / "references" / "start-here.md").resolve())
+            self.assertTrue(guide.is_file())
+            prompt = data["quick_start"]["prompt"]
+            self.assertIn("$safeguard-eval" if target == "codex" else "/safeguard-eval", prompt)
+            self.assertIn(prompt, completed.stderr)
+
+    def test_missing_quick_start_prevents_install_and_success_output(self):
+        # Even a regenerated manifest cannot produce an installation whose
+        # advertised next step points at an absent guide.
+        (self.source / "references" / "start-here.md").unlink()
+        manifest_path = self.source / "manifest.json"
+        manifest = json.loads(manifest_path.read_text())
+        manifest["files"] = INSTALLER["package_files"](self.source)
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+        completed = subprocess.run(
+            [sys.executable, str(self.source / "scripts" / "install.py"),
+             "--target", "codex", "--dest", str(self.dest)],
+            capture_output=True, text=True)
+        self.assertNotEqual(completed.returncode, 0)
+        self.assertEqual(completed.stdout, "")
+        self.assertFalse(self.dest.exists())
 
     def test_failed_final_rename_restores_previous_installation(self):
         INSTALLER["install"](self.source, self.dest)

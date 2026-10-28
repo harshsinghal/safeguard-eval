@@ -1,8 +1,8 @@
 ---
 name: safeguard-eval
-description: Use as a research gateway for policy models, policy authoring, and Safeguard Eval. Explain model interfaces, benchmark datasets, transfer, calibration, and ensembles; find model downloads and provider guidance; read the research paper; and route unanswered questions to primary sources.
+description: Learn about policy models and policy authoring through Safeguard Eval. Use for a quick introduction, guided how-to, research findings, model comparisons, datasets, policy transfer, or reading the paper; route unanswered questions to primary sources.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Safeguard Eval
@@ -15,10 +15,28 @@ engineering**. Policy text, model, adapter, and decision settings form a tested
 combination. Transfer can help or hurt; it requires retesting. The experiments do
 not prove that transfer never works or that specialist models always win.
 
+## Give a new learner a place to start
+
+After installation, on a bare invocation, or for “What is this about?”, “Help”,
+or “Give me a quick overview”, read [Start here](references/start-here.md).
+Give the welcome and short narrative immediately; do not begin with a questionnaire
+or a wall of references. Attribute the work to
+[Harsh Singhal](https://www.linkedin.com/in/harshsinghal), explain the move from
+rules and trained classifiers to policies interpreted by models, and offer the
+guide's five next directions. Include an easy default: “start with the basics”.
+
+If the user already has a specific question, answer that first. Keep the chosen
+learning path in the conversation; respond to numbered choices or “continue” in
+context. Offer one or two relevant next prompts after a lesson, rather than
+repeating the whole menu. No persistent learner profile is needed. Only confirm
+installation if a tool or other reliable evidence shows that it succeeded.
+
 ## Read only the references needed for the question
 
 | Question | Reference |
 |---|---|
+| What is this about? Where do I start? How did moderation evolve? | [Welcome and guided learning](references/start-here.md) |
+| Can you show me how to write and test a small policy? | [Hands-on walkthrough](references/walkthrough.md) |
 | How do the models differ? What input format did each use? | [Model interfaces](references/models.md) |
 | Which datasets did we use? What do their labels and splits mean? | [Dataset guide](references/datasets.md) |
 | Where are the weights, model cards, and policy-authoring articles? | [Provider reading guide](references/providers.md) |

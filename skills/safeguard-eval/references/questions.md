@@ -5,6 +5,10 @@ into the same shape. Source IDs resolve through [sources.json](sources.json).
 
 | User asks | Start with | Essential distinction |
 |---|---|---|
+| What is this about? Give me a quick overview. | [Start here](start-here.md) | Welcome, a familiar workflow, then a few next directions; no background knowledge required. |
+| What do I do after installing? | [Start here](start-here.md) | Give the overview now, not just another list of files to read. |
+| How did we get from rules to policy models? | [Start here](start-here.md), basics narrative | The tools can coexist; natural-language policies still need examples and tests. |
+| Can you walk me through writing a policy? | [Walkthrough](walkthrough.md) | An untested teaching draft and test plan, not an inference result. |
 | Which datasets were used, and where do I get them? | [Datasets](datasets.md) | Used benchmark, synthetic demonstration, and proposed dataset are different statuses. |
 | Did you test every WildGuard task? | [Datasets](datasets.md), `wildguard-methods` | Prompt harmfulness only; not response harmfulness or refusal. |
 | Did HateXplain mean blocking all offensive text? | [Datasets](datasets.md), `hatexplain-data` | Hate was BLOCK; offensive and normal were ALLOW. |

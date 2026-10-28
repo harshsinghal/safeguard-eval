@@ -12,9 +12,15 @@ transfer, calibration, and ensembles. It includes plain-language guides, officia
 provider references, a reading route through the paper, and links to the exact
 experimental evidence. No keys, GPUs, or model downloads are needed.
 
-[Download version 0.2.0](https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.2.0)
+[Download version 0.3.0](https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.3.0)
 or use the [copy-and-paste installation prompt](skills/safeguard-eval/README.md#install-by-asking-your-agent).
-Try: “What changed in the HateXplain policies, and why did the changes affect models differently?”
+Start with: “Give me a two-minute introduction and suggest what to explore next.”
+
+New to policy models? The installation prompt now asks your agent to introduce
+the work by [Harsh Singhal](https://www.linkedin.com/in/harshsinghal), explain the
+idea in two minutes, and suggest a learning path. Start with the
+[guided introduction](skills/safeguard-eval/references/start-here.md) or
+[try writing a small policy](skills/safeguard-eval/references/walkthrough.md).
 
 Read the consolidated **[research paper](research-preprint/README.md)** as a PDF,
 agent-readable text, or editable LaTeX source package. This is author review draft

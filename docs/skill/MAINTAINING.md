@@ -7,7 +7,7 @@ understanding while preserving unsuccessful results and limitations.
 
 ## Release plan and scope
 
-Version 0.2.0 covers the recorded model interfaces, WildGuard policy tuning,
+Version 0.3.0 covers the recorded model interfaces, WildGuard policy tuning,
 nearby-size Qwen comparisons, policy transfer, HateXplain structure/omission tests,
 individual calibration, and probability/log-odds ensembles. Earlier demos and
 the frontier API pilot are routed separately. Enterprise governance is labelled
@@ -18,6 +18,12 @@ guides, a curated external catalog, scoped search guidance, and the v0.5 paper's
 PDF/text/source package. The paper remains a review draft. The skill's evidence
 registry pins those files; the external catalog deliberately distinguishes live
 provider material from historical project evidence.
+
+The guided-learning update adds a welcome, a two-minute introduction, five learning
+paths, and an untested policy-writing exercise. The author attribution links to
+Harsh Singhal's LinkedIn profile. No research findings or evidence pins changed.
+The [onboarding notes](ONBOARDING.md) describe the installation handoff and the
+acceptance checks for progressive learning.
 
 The first release also publishes the previously local ensemble evidence and its
 reproduction code. The frozen archives are copied byte for byte, including their

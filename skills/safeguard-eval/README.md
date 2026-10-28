@@ -6,11 +6,34 @@ plain-language guides, measured findings, provider references, and the paper.
 Your existing agent answers the questions. It needs no API keys, GPU, model
 downloads, or paid service to use its bundled guides.
 
-**Version 0.2.0 · evidence through 28 October 2026 · Codex and Claude Code**
+Based on work by **[Harsh Singhal](https://www.linkedin.com/in/harshsinghal)**.
 
-[Download the skill](https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.2.0)
+**Version 0.3.0 · evidence through 28 October 2026 · Codex and Claude Code**
+
+[Download the skill](https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.3.0)
 or browse [all releases](https://github.com/harshsinghal/safeguard-eval/releases).
 The release ZIP contains just the skill, not the full research repository.
+
+## A place to start
+
+You do not need to know the model names or research terminology. The installation
+prompt below asks your agent to begin with a short welcome and a two-minute
+overview, then offer five directions:
+
+1. **Start with the basics:** From keyword rules and text classifiers to policy models.
+2. **Explore the findings:** What we changed, what helped, and what did not.
+3. **Compare models and transfer:** General-purpose LLMs, specialist models, and reusing policies.
+4. **Try writing a policy:** A small example, boundary cases, and a test plan.
+5. **Go deeper:** Datasets, official model guides, and the research paper.
+
+You can reply with a number, a question, or simply **“start with the basics.”**
+The agent should explain one idea at a time and suggest relevant follow-ups. It
+can tailor examples to trust and safety, engineering, or compliance work without
+requiring you to choose a role first.
+
+Preview the [guided introduction](references/start-here.md) or the
+[hands-on how-to](references/walkthrough.md). The exercise is a teaching example;
+it does not run or deploy a model.
 
 ## What you can ask
 
@@ -36,6 +59,8 @@ applications are labelled explicitly.
 
 | Start here | What it explains |
 |---|---|
+| [Welcome and learning paths](references/start-here.md) | A short introduction, moderation's evolving toolkit, and where to go next |
+| [Hands-on how-to](references/walkthrough.md) | From a policy intention to a draft, example decisions, and a test plan |
 | [Datasets](references/datasets.md) | Sources, labels, splits, exclusions, and the difference between benchmarks and demos |
 | [Model interfaces](references/models.md) | How the tested adapters delivered policies and read decisions |
 | [Provider reading guide](references/providers.md) | Weight downloads, OpenAI/ROOST authoring guidance, other providers, and untested discoveries |
@@ -44,7 +69,7 @@ applications are labelled explicitly.
 | [Paper guide](references/paper.md) | How an agent can retrieve, read, and cite the consolidated draft |
 | [Search guide](references/search.md) | Where to look when the project cannot answer the question |
 
-The [research paper](https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.2.0/research-preprint/README.md)
+The [research paper](https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.3.0/research-preprint/README.md)
 is available as a PDF, extracted text, and LaTeX source package. It is author
 review draft v0.5, **not peer reviewed or submitted to arXiv**. The paper is fetched
 on demand rather than included in the small skill ZIP.
@@ -55,17 +80,23 @@ Paste this into **Codex or Claude Code**:
 
 ```text
 Install the Safeguard Eval skill for this agent from the official release:
-https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.2.0
+https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.3.0
 
 Read its installation instructions:
-https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.2.0/skills/safeguard-eval/README.md
+https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.3.0/skills/safeguard-eval/README.md
 
 Download the skill ZIP and SHA256SUMS, verify the ZIP checksum, inspect the
 package, and install the whole safeguard-eval folder for my current agent.
 Use the included Python installer for Codex or Claude Code. Preserve any
 existing installation; do not overwrite local changes without a backup.
 Do not install model weights, research dependencies, or run experiments.
-Then use the skill to explain why policy transfer needs to be tested.
+
+After installation succeeds, read the installed SKILL.md and
+references/start-here.md. In your first reply after installation, welcome me,
+credit Harsh Singhal with his LinkedIn link, give the short introduction, and
+offer the five learning paths. Do not stop at "installed" or ask me to decide
+what to learn before giving the overview. If the skill has not appeared in your
+picker yet, read those installed files directly to give the welcome now.
 ```
 
 An agent needs network access and permission to write its skill directory to carry
@@ -76,7 +107,9 @@ In **Codex**, the built-in skill installer is another option:
 
 ```text
 Use $skill-installer to install the skill at
-https://github.com/harshsinghal/safeguard-eval/tree/skill-v0.2.0/skills/safeguard-eval
+https://github.com/harshsinghal/safeguard-eval/tree/skill-v0.3.0/skills/safeguard-eval
+Then read its SKILL.md and references/start-here.md and give me the welcome,
+two-minute overview, and suggested learning paths in the same reply.
 ```
 
 That installer chooses the directory supported by your Codex installation. Some
@@ -89,10 +122,10 @@ Use Python 3.10 or later. On macOS or Linux, run these commands in an empty work
 directory after reviewing the package source:
 
 ```bash
-curl -fL https://github.com/harshsinghal/safeguard-eval/releases/download/skill-v0.2.0/safeguard-eval-skill-v0.2.0.zip -o safeguard-eval-skill-v0.2.0.zip
-curl -fL https://github.com/harshsinghal/safeguard-eval/releases/download/skill-v0.2.0/SHA256SUMS -o SHA256SUMS
+curl -fL https://github.com/harshsinghal/safeguard-eval/releases/download/skill-v0.3.0/safeguard-eval-skill-v0.3.0.zip -o safeguard-eval-skill-v0.3.0.zip
+curl -fL https://github.com/harshsinghal/safeguard-eval/releases/download/skill-v0.3.0/SHA256SUMS -o SHA256SUMS
 shasum -a 256 -c SHA256SUMS
-unzip safeguard-eval-skill-v0.2.0.zip
+unzip safeguard-eval-skill-v0.3.0.zip
 ```
 
 Then choose your agent:
@@ -116,6 +149,9 @@ For a custom or older Codex location, supply the full path with, for example,
 You can also copy the entire folder manually to a documented skill directory.
 Keep `SKILL.md`, references, metadata, and supporting files together.
 
+The terminal installer prints a starter prompt for your selected agent and the
+quick-start file path. Paste that prompt into your agent to begin the guided tour.
+
 These paths follow the [Codex skills documentation](https://developers.openai.com/codex/skills)
 and [Claude Code skills documentation](https://code.claude.com/docs/en/skills).
 This package targets local Codex and Claude Code skill discovery; it does not
@@ -126,19 +162,23 @@ configure a cloud connector or a separate hosted agent.
 In Codex, select the skill or ask:
 
 ```text
-Use $safeguard-eval to explain how I should write and test a policy for Shieldstral.
+Use $safeguard-eval to give me a two-minute introduction and suggest what to explore next.
 ```
 
 In Claude Code:
 
 ```text
-/safeguard-eval Explain policy transfer using a successful and an unsuccessful example.
+/safeguard-eval Give me a two-minute introduction and suggest what to explore next.
 ```
 
 Both agents can also select it automatically for a matching question. If it does
 not appear after installation, start a new session or restart the agent. When
 offline, it can answer from the bundled snapshot and disclose that boundary.
 Network access lets it inspect the full commit-pinned research files.
+
+You can skip the tour and ask a specific question at any time. The welcome should
+not repeat on every answer. The shared installation prompt requests an immediate
+introduction; a manual file copy alone does not start a conversation in your agent.
 
 ## Update or remove it
 
@@ -175,7 +215,7 @@ CI checks source drift, new study directories, generated numbers, package integr
 and installation behavior. It does **not** rewrite the prose or establish that an
 agent will answer every question correctly. A maintainer reviews new findings,
 updates the guides, and issues a new version. See the
-[maintenance guide](https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.2.0/docs/skill/MAINTAINING.md).
+[maintenance guide](https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.3.0/docs/skill/MAINTAINING.md).
 
 The skill package is [MIT licensed](LICENSE). Models, datasets, and linked material
 outside the package keep their own terms. This is an independent research skill,

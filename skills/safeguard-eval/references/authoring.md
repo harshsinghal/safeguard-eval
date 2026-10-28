@@ -4,6 +4,10 @@ This is practitioner guidance drawn from the experiments, not a tested enterpris
 product or a universal policy format. Source IDs resolve through
 [sources.json](sources.json).
 
+For a first practical lesson, use the [short walkthrough](walkthrough.md): it turns
+a fictional forum rule into a draft, boundary cases, and a test plan. It does not
+run a model. Continue here when the learner wants to design their own evaluation.
+
 ## Start with the decision the policy owner wants
 
 Clarify the content being judged, the prohibited behavior, permitted uses, and
