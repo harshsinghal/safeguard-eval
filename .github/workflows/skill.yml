@@ -1,0 +1,54 @@
+name: Safeguard Eval skill
+
+on:
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'tools/skill_release.py'
+      - 'tests/test_skill_package.py'
+      - 'published_runs/**'
+      - 'docs/**'
+      - 'evals/**'
+      - '.github/workflows/skill.yml'
+  push:
+    branches: [main]
+    tags: ['skill-v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check evidence and package
+        run: python tools/skill_release.py check
+      - name: Test installation, updates, and reproducible packaging
+        run: python -m unittest discover -s tests -p 'test_skill_package.py' -v
+      - name: Verify release tag
+        if: startsWith(github.ref, 'refs/tags/skill-v')
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          release = json.loads(Path('skills/safeguard-eval/release.json').read_text())
+          assert os.environ['RELEASE_TAG'] == release['release_tag'], 'Tag and package version disagree'
+          PY
+      - name: Build skill ZIP and checksums
+        run: python tools/skill_release.py build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: safeguard-eval-skill
+          path: |
+            dist/safeguard-eval-skill-v*.zip
+            dist/SHA256SUMS
+          if-no-files-found: error

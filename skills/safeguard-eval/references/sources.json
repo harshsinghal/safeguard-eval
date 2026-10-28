@@ -1,0 +1,269 @@
+{
+  "evidence_revision": "30c64cec335c14bf1cc32b39c1f31b07742ecb49",
+  "evidence_through": "2026-10-28",
+  "recorded_run_directories": [
+    "2026-10-21",
+    "2026-10-24-injection",
+    "2026-10-24-wildguard",
+    "2026-10-25-frontier-pilot",
+    "2026-10-25-policy-transfer",
+    "2026-10-25-qwen",
+    "2026-10-26-hatexplain",
+    "2026-10-27-ensemble",
+    "2026-10-28-ensemble-logits"
+  ],
+  "sources": [
+    {
+      "id": "interface-audit",
+      "path": "docs/research-directions/POLICY-INTERFACE-AUDIT.md",
+      "sha256": "021ee49634fec91d4d00b80e68bd8106cefc73b548095a8e1a6146def75db26c",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/research-directions/POLICY-INTERFACE-AUDIT.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/research-directions/POLICY-INTERFACE-AUDIT.md"
+    },
+    {
+      "id": "shared-adapters",
+      "path": "evals/run.py",
+      "sha256": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/evals/run.py",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/evals/run.py"
+    },
+    {
+      "id": "wildguard-runner",
+      "path": "evals/wildguard/run.py",
+      "sha256": "a2e35b7a878a729c2f8dfc0340be0b1fd3224c593746deb2f0cecf57658bac1b",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/evals/wildguard/run.py",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/evals/wildguard/run.py"
+    },
+    {
+      "id": "qwen-runner",
+      "path": "evals/qwen_policy/run.py",
+      "sha256": "837baa4f70eb150062d647e90779f23f13363d90ba71fbf181205ebde59dea16",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/evals/qwen_policy/run.py",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/evals/qwen_policy/run.py"
+    },
+    {
+      "id": "hatexplain-renderer",
+      "path": "evals/hatexplain/policy.py",
+      "sha256": "1997e56d6a7c459b30e0bd1dbfc95d2f275cf6c3d19526c1effdffca6cc188e3",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/evals/hatexplain/policy.py",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/evals/hatexplain/policy.py"
+    },
+    {
+      "id": "model-exposure",
+      "path": "docs/wildguard/MODEL_EXPOSURE.md",
+      "sha256": "6ecf201c6404d2e8e1300fd3646876fca9158972606e03ab7ded586796fe0cd1",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/wildguard/MODEL_EXPOSURE.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/wildguard/MODEL_EXPOSURE.md"
+    },
+    {
+      "id": "wildguard-methods",
+      "path": "docs/wildguard/METHODS.md",
+      "sha256": "c3eb4716a2b674ac5e912f026c29ee5596015b5b42b593b4178f69ebb96b7388",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/wildguard/METHODS.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/wildguard/METHODS.md"
+    },
+    {
+      "id": "wildguard-results",
+      "path": "published_runs/2026-10-24-wildguard/README.md",
+      "sha256": "b4bed2a3a5f059d6fc852b10278cb9a45874527411eb08ad2a2abb89fe9cc277",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-24-wildguard/README.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-24-wildguard/README.md"
+    },
+    {
+      "id": "wildguard-claims",
+      "path": "docs/wildguard/CLAIMS.md",
+      "sha256": "cdb8b3515798625c826b4002d9d37acd6b86a83ab459fe47285b8acc89cb2e85",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/wildguard/CLAIMS.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/wildguard/CLAIMS.md"
+    },
+    {
+      "id": "wildguard-analysis",
+      "path": "published_runs/2026-10-24-wildguard/analysis.json",
+      "sha256": "6ba45eb5ec37dc865e2c543d1ebecb5f118fa8ae3af3f97419b9c55e276fe9b8",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-24-wildguard/analysis.json",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-24-wildguard/analysis.json"
+    },
+    {
+      "id": "qwen-results",
+      "path": "published_runs/2026-10-25-qwen/README.md",
+      "sha256": "ea5eb73ea7e3bff8c6541f86230372ce4f25a6265703f5dfd7478db21cf51c56",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-25-qwen/README.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-25-qwen/README.md"
+    },
+    {
+      "id": "qwen-edits",
+      "path": "docs/qwen-policy/PROMPT-CHANGES.md",
+      "sha256": "fa57fc1cd515559889578e50701f222a8cf1a895ff57dcbf8c8ba05787d9d608",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/qwen-policy/PROMPT-CHANGES.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/qwen-policy/PROMPT-CHANGES.md"
+    },
+    {
+      "id": "qwen-analysis",
+      "path": "published_runs/2026-10-25-qwen/analysis.json",
+      "sha256": "48cfe0fd36095d05292ed477254005344914643e35f311740ccef64e2b0b1460",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-25-qwen/analysis.json",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-25-qwen/analysis.json"
+    },
+    {
+      "id": "transfer-readout",
+      "path": "docs/policy-transfer/READOUT.md",
+      "sha256": "de07ce2482d16585e7f6bf9bfcff2157a8407dd876c28c3b9977fb2092f04cd6",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/policy-transfer/READOUT.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/policy-transfer/READOUT.md"
+    },
+    {
+      "id": "transfer-edits",
+      "path": "docs/policy-transfer/POLICY-CHANGES.md",
+      "sha256": "5ddb6f456b5086fc26a7a986145f84922f03181eae1d289e1ae152464e2ee654",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/policy-transfer/POLICY-CHANGES.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/policy-transfer/POLICY-CHANGES.md"
+    },
+    {
+      "id": "transfer-results",
+      "path": "published_runs/2026-10-25-policy-transfer/README.md",
+      "sha256": "f60aa6d424004df39d7ad4139b0d18fdea4c88ad63dc52b6485053b606e58fa6",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-25-policy-transfer/README.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-25-policy-transfer/README.md"
+    },
+    {
+      "id": "transfer-analysis",
+      "path": "published_runs/2026-10-25-policy-transfer/analysis.json",
+      "sha256": "133ddeaf4b611bcd39ab017c34aa02500fbf0550fbfee1039b66acc1f6253e56",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-25-policy-transfer/analysis.json",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-25-policy-transfer/analysis.json"
+    },
+    {
+      "id": "hatexplain-plan",
+      "path": "docs/hatexplain/PLAN.md",
+      "sha256": "bc054f190879be917f9e59a149cc5c9c0efaa2476009c57f4bd4f66bf5ec031d",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/hatexplain/PLAN.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/hatexplain/PLAN.md"
+    },
+    {
+      "id": "hatexplain-results",
+      "path": "published_runs/2026-10-26-hatexplain/README.md",
+      "sha256": "f711db2704097fa2f10931a2c79a66d876a8690c6c83652827dda7d60c6d6d4e",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-26-hatexplain/README.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-26-hatexplain/README.md"
+    },
+    {
+      "id": "hatexplain-readout",
+      "path": "docs/hatexplain/READOUT.md",
+      "sha256": "12daab0b7c74a0fc1067b787d9114e6bf51f239396fa7e5eaa4b327722f78caa",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/hatexplain/READOUT.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/hatexplain/READOUT.md"
+    },
+    {
+      "id": "hatexplain-edits",
+      "path": "docs/hatexplain/POLICY-CHANGES.md",
+      "sha256": "eaed0bbd979aa83f36e8b3c702ea84e80320d49cdf3ed6b9590a17b2a7b3212d",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/hatexplain/POLICY-CHANGES.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/hatexplain/POLICY-CHANGES.md"
+    },
+    {
+      "id": "hatexplain-scope",
+      "path": "docs/hatexplain/SCOPE-REVIEW.md",
+      "sha256": "3b33334bae10c1a0a6b322b4fd6813e7bb06054cfe67ba214156f30eb3acf4cd",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/hatexplain/SCOPE-REVIEW.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/hatexplain/SCOPE-REVIEW.md"
+    },
+    {
+      "id": "hatexplain-analysis",
+      "path": "published_runs/2026-10-26-hatexplain/analysis.json",
+      "sha256": "2f6dc162a49d80a5a1e59b1fd7284ccc1c0bb68523b7ac9d3b6fa0b7d29ab2fb",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-26-hatexplain/analysis.json",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-26-hatexplain/analysis.json"
+    },
+    {
+      "id": "ensemble-readout",
+      "path": "docs/ensemble/READOUT.md",
+      "sha256": "ffd612280175bc68cf2ba15ec7ec933576e1ff094e1149fac4c37a3755814cb8",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/ensemble/READOUT.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/ensemble/READOUT.md"
+    },
+    {
+      "id": "ensemble-results",
+      "path": "docs/ensemble/RESULTS.md",
+      "sha256": "dcf8b0661bafca7802d5c27a3b20e59454f4690d7a83651ecf647a0dfeec8d6d",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/ensemble/RESULTS.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/ensemble/RESULTS.md"
+    },
+    {
+      "id": "ensemble-archive",
+      "path": "published_runs/2026-10-27-ensemble/README.md",
+      "sha256": "324906cc94b9edd594d947596ce9662bd0c721e97c25665d831d18723dc39bf4",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-27-ensemble/README.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-27-ensemble/README.md"
+    },
+    {
+      "id": "logits-claims",
+      "path": "docs/ensemble-logits/CLAIMS.md",
+      "sha256": "78693a3cac4f1dde186c26f86f706ecf07fa14c7d378b5167cf591b6029731b4",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/ensemble-logits/CLAIMS.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/ensemble-logits/CLAIMS.md"
+    },
+    {
+      "id": "logits-results",
+      "path": "docs/ensemble-logits/RESULTS.md",
+      "sha256": "7240c822bdd47f5d229c8b9ea16ba53a291d1e193a7130c34ae0bbffd24a6d00",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/ensemble-logits/RESULTS.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/ensemble-logits/RESULTS.md"
+    },
+    {
+      "id": "logits-plan",
+      "path": "docs/ensemble-logits/PLAN.md",
+      "sha256": "af74dcf59333e8614f8b47eaf83bd0f028ce2235bf78d54215e2bbb3e1e6d690",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/ensemble-logits/PLAN.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/ensemble-logits/PLAN.md"
+    },
+    {
+      "id": "logits-wildguard",
+      "path": "published_runs/2026-10-28-ensemble-logits/cohorts/wildguard-specialists/results.json",
+      "sha256": "cc66ead09be3a68b77e0a0901c66e5e6df799d80cd83f66ab2a9db4f950b3835",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-28-ensemble-logits/cohorts/wildguard-specialists/results.json",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-28-ensemble-logits/cohorts/wildguard-specialists/results.json"
+    },
+    {
+      "id": "logits-hate-specialists",
+      "path": "published_runs/2026-10-28-ensemble-logits/cohorts/hatexplain-specialists/results.json",
+      "sha256": "890436d8e2086c5616e6b033b48efd648071243cbba114317c881a9da5e0fed8",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-28-ensemble-logits/cohorts/hatexplain-specialists/results.json",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-28-ensemble-logits/cohorts/hatexplain-specialists/results.json"
+    },
+    {
+      "id": "logits-hate-mixed",
+      "path": "published_runs/2026-10-28-ensemble-logits/cohorts/hatexplain-mixed/results.json",
+      "sha256": "84ccddfd3de79b57aa678e90eab4df9bf14e033d23e071207c3e5e8bb9882872",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-28-ensemble-logits/cohorts/hatexplain-mixed/results.json",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-28-ensemble-logits/cohorts/hatexplain-mixed/results.json"
+    },
+    {
+      "id": "early-demo",
+      "path": "published_runs/2026-10-21/README.md",
+      "sha256": "97a634890c33480a5bf395c16d7feaef7ba78d23b3c91a8e0768a6cf77171852",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-21/README.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-21/README.md"
+    },
+    {
+      "id": "injection-results",
+      "path": "published_runs/2026-10-24-injection/README.md",
+      "sha256": "671bfc694f69e92a8fa95cc2f403f7425e0b99dfaf40a2e1a408a51811fadf4b",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-24-injection/README.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-24-injection/README.md"
+    },
+    {
+      "id": "frontier-pilot",
+      "path": "published_runs/2026-10-25-frontier-pilot/README.md",
+      "sha256": "073899101e46ad2702d8f86c7c5e597efd57be785f722752c52ae4e2ec47212f",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-25-frontier-pilot/README.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/published_runs/2026-10-25-frontier-pilot/README.md"
+    },
+    {
+      "id": "enterprise-track",
+      "path": "docs/research-directions/ENTERPRISE-AI-GOVERNANCE.md",
+      "sha256": "0a4ab47aa043e914a8bac52f22cd5e096a63dc1116e316860231352ed4d46087",
+      "url": "https://github.com/harshsinghal/safeguard-eval/blob/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/research-directions/ENTERPRISE-AI-GOVERNANCE.md",
+      "raw_url": "https://raw.githubusercontent.com/harshsinghal/safeguard-eval/30c64cec335c14bf1cc32b39c1f31b07742ecb49/docs/research-directions/ENTERPRISE-AI-GOVERNANCE.md"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "safeguard-eval",
+  "version": "0.1.0",
+  "files": {
+    "LICENSE": "ed33d2856efcba266730773481902f879ea34549394d4f38d08a59cfd0b55b0c",
+    "README.md": "4cc2b251aa46f2395aabbe30bc3a507ce39df1caee3150153cae6aefe2575cc8",
+    "SKILL.md": "2261869b51e1de69123095a940a26312e1059fe985c3e0647b67d078d8bfc81e",
+    "agents/openai.yaml": "fec9ada7cae5231061e16ca48a41e87e571ea6d5ab3df36ed74d602f295ffab5",
+    "references/authoring.md": "c312a8fb8fa50daee9c593fae70d154673ab368fa49e5697a5913df4b93e5c85",
+    "references/models.md": "5fc6fcfdee255e2392cd9ad6b2aed59ebaef83120ba0c54bc5e9885c4168c184",
+    "references/questions.md": "2a8676ee65f4203be54c9418a0ad3bf09cd3d47a25ee89a29b16ca7a5764ddc0",
+    "references/results.json": "571d520263e113982e7ff7e934427d1a641edc3d9e187b0858eb562195a27a16",
+    "references/sources.json": "0684e0614affc5ea95aa18644d2ace00548a986b54af2d5f11cd507313486a4e",
+    "references/studies.md": "a7e03b879033022549f5512771d075a0e77cc52f0d61cd28dd845f53fe538280",
+    "release.json": "6f392ef2d49593e1dba22d7a69d9955444d761cee8eb887b3d704a66320aa692",
+    "scripts/install.py": "11342a2aaf74f87ae72ca581af11573702c3e435bef3517397cb87fe47cc1de8"
+  }
+}

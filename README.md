@@ -4,6 +4,22 @@ Compare how specialized policy models and general-purpose instruction models app
 
 Experiments use GPU.ai first, with Runpod available when credits or GPU capacity are insufficient. See the [compute and budget notes](docs/COMPUTE.md).
 
+## Ask your agent about the research
+
+Install the **[Safeguard Eval skill](skills/safeguard-eval/README.md)** in Codex or
+Claude Code to ask about policy authoring, model-specific formats, transfer,
+calibration, and ensembles. It includes plain-language guides and links to the
+exact experimental evidence. No keys, GPUs, or model downloads are needed.
+
+[Download version 0.1.0](https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.1.0)
+or use the [copy-and-paste installation prompt](skills/safeguard-eval/README.md#install-by-asking-your-agent).
+Try: “What changed in the HateXplain policies, and why did the changes affect models differently?”
+
+The latest [ensemble findings](docs/ensemble/READOUT.md) and
+[log-odds extension](docs/ensemble-logits/RESULTS.md) are included in this release.
+The [maintenance guide](docs/skill/MAINTAINING.md) explains how new evidence becomes
+a versioned skill update.
+
 The [research directions](docs/research-directions/README.md) record proposed studies for choosing policy models and a separate [enterprise AI governance track](docs/research-directions/ENTERPRISE-AI-GOVERNANCE.md). The activation study remains parked. The structured-policy study on HateXplain is now complete, as described below.
 
 The [third study: frontier API models](docs/frontier-api/PLAN.md) completed a 256-observation fitting-only pilot through OpenRouter for **$0.55**, bringing cumulative spend at that stage to **$8.46** within the $20 cap. Read the [pilot findings](docs/frontier-api/READOUT.md) and [reproducible evidence](published_runs/2026-10-25-frontier-pilot/README.md). The full policy search and held-out evaluation have not run; projected API costs exceed the remaining budget.

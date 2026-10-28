@@ -1,0 +1,2511 @@
+{
+  "evidence_revision": "30c64cec335c14bf1cc32b39c1f31b07742ecb49",
+  "metric_units": "Accuracy, recall and F1 are fractions, not percentages. Confusion rows are gold labels, columns predictions.",
+  "interpretation": "Historical configurations only; later extensions reused previously examined tests. See studies.md for caveats.",
+  "wildguard": {
+    "source_id": "wildguard-analysis",
+    "entries": [
+      {
+        "run": "cope-test-p0",
+        "adapter": "cope",
+        "policy_id": "wg-p0-taxonomy",
+        "roles": [
+          "initial"
+        ],
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.9046497939964685,
+          "macro_f1": 0.9022722818260062,
+          "harmful_f1": 0.8870292887029289,
+          "harmful_recall": 0.843501326259947,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 901,
+              "BLOCK": 44,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 118,
+              "BLOCK": 636,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "cope-test-p2",
+        "adapter": "cope",
+        "policy_id": "wg-p2-boundary-checklist",
+        "roles": [
+          "shared"
+        ],
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.9040612124779281,
+          "macro_f1": 0.901460811087291,
+          "harmful_f1": 0.8854532677442024,
+          "harmful_recall": 0.8355437665782494,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 906,
+              "BLOCK": 39,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 124,
+              "BLOCK": 630,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "cope-test-p3",
+        "adapter": "cope",
+        "policy_id": "wg-p3-cope-social-and-deception",
+        "roles": [
+          "individual"
+        ],
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.90759270158917,
+          "macro_f1": 0.905613950040427,
+          "harmful_f1": 0.891947694425327,
+          "harmful_recall": 0.8594164456233422,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 894,
+              "BLOCK": 51,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 106,
+              "BLOCK": 648,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "policylm-test-p0",
+        "adapter": "policylm",
+        "policy_id": "wg-p0-taxonomy",
+        "roles": [
+          "initial"
+        ],
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.8505002942907592,
+          "macro_f1": 0.8491456576757974,
+          "harmful_f1": 0.834850455136541,
+          "harmful_recall": 0.8514588859416445,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 803,
+              "BLOCK": 142,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 112,
+              "BLOCK": 642,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "policylm-test-p2",
+        "adapter": "policylm",
+        "policy_id": "wg-p2-boundary-checklist",
+        "roles": [
+          "shared"
+        ],
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.8716892289582107,
+          "macro_f1": 0.8693571098017969,
+          "harmful_f1": 0.8519021739130435,
+          "harmful_recall": 0.8315649867374005,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 854,
+              "BLOCK": 91,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 127,
+              "BLOCK": 627,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "policylm-test-p4",
+        "adapter": "policylm",
+        "policy_id": "wg-p4-policylm-compact",
+        "roles": [
+          "individual"
+        ],
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.8681577398469688,
+          "macro_f1": 0.8656306226150227,
+          "harmful_f1": 0.8472032742155525,
+          "harmful_recall": 0.8236074270557029,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 854,
+              "BLOCK": 91,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 133,
+              "BLOCK": 621,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "safeguard-test-p0",
+        "adapter": "safeguard",
+        "policy_id": "wg-p0-taxonomy",
+        "roles": [
+          "initial"
+        ],
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.898175397292525,
+          "macro_f1": 0.8994878170593048,
+          "harmful_f1": 0.8866396761133604,
+          "harmful_recall": 0.8713527851458885,
+          "errors": 11,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 869,
+              "BLOCK": 71,
+              "ERROR": 5
+            },
+            "BLOCK": {
+              "ALLOW": 91,
+              "BLOCK": 657,
+              "ERROR": 6
+            }
+          }
+        }
+      },
+      {
+        "run": "safeguard-test-p2",
+        "adapter": "safeguard",
+        "policy_id": "wg-p2-boundary-checklist",
+        "roles": [
+          "shared",
+          "individual"
+        ],
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.8964096527369041,
+          "macro_f1": 0.8964208354822073,
+          "harmful_f1": 0.88,
+          "harmful_recall": 0.8461538461538461,
+          "errors": 9,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 885,
+              "BLOCK": 58,
+              "ERROR": 2
+            },
+            "BLOCK": {
+              "ALLOW": 109,
+              "BLOCK": 638,
+              "ERROR": 7
+            }
+          }
+        }
+      },
+      {
+        "run": "shieldstral-test-p0",
+        "adapter": "shieldstral",
+        "policy_id": "wg-p0-taxonomy",
+        "roles": [
+          "initial"
+        ],
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.8793407886992348,
+          "macro_f1": 0.8757199372988627,
+          "harmful_f1": 0.8545067423704755,
+          "harmful_recall": 0.7984084880636605,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 892,
+              "BLOCK": 53,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 152,
+              "BLOCK": 602,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "shieldstral-test-p2",
+        "adapter": "shieldstral",
+        "policy_id": "wg-p2-boundary-checklist",
+        "roles": [
+          "shared"
+        ],
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.9081812831077104,
+          "macro_f1": 0.9063591706142384,
+          "harmful_f1": 0.893296853625171,
+          "harmful_recall": 0.8660477453580901,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 890,
+              "BLOCK": 55,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 101,
+              "BLOCK": 653,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "shieldstral-test-p4",
+        "adapter": "shieldstral",
+        "policy_id": "wg-p4-shieldstral-taxonomy-priority",
+        "roles": [
+          "individual"
+        ],
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.9081812831077104,
+          "macro_f1": 0.9064213264640336,
+          "harmful_f1": 0.8935879945429741,
+          "harmful_recall": 0.8687002652519894,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 888,
+              "BLOCK": 57,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 99,
+              "BLOCK": 655,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "wildguard-test-p0",
+        "adapter": "wildguard",
+        "policy_id": "wildguard-official",
+        "roles": [
+          "baseline"
+        ],
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.9034726309593879,
+          "macro_f1": 0.9012836428360882,
+          "harmful_f1": 0.8865836791147994,
+          "harmful_recall": 0.850132625994695,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 894,
+              "BLOCK": 51,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 113,
+              "BLOCK": 641,
+              "ERROR": 0
+            }
+          }
+        }
+      }
+    ],
+    "calibration_controls": [
+      {
+        "run": "policylm-test-p0",
+        "threshold": 0.54,
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.8510888758092996,
+          "macro_f1": 0.8493984831481736,
+          "harmful_f1": 0.8334430546412114,
+          "harmful_recall": 0.8395225464190982,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 813,
+              "BLOCK": 132,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 121,
+              "BLOCK": 633,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "policylm-test-p2",
+        "threshold": 0.32,
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.8534432018834609,
+          "macro_f1": 0.8524122455857219,
+          "harmful_f1": 0.8400770712909441,
+          "harmful_recall": 0.8673740053050398,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 796,
+              "BLOCK": 149,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 100,
+              "BLOCK": 654,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "policylm-test-p4",
+        "threshold": 0.44,
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.8652148322542672,
+          "macro_f1": 0.8631639513712233,
+          "harmful_f1": 0.846411804158283,
+          "harmful_recall": 0.8368700265251989,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 839,
+              "BLOCK": 106,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 123,
+              "BLOCK": 631,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "shieldstral-test-p0",
+        "threshold": 0.14,
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.9011183048852266,
+          "macro_f1": 0.8997983553887978,
+          "harmful_f1": 0.8882978723404256,
+          "harmful_recall": 0.8859416445623343,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 863,
+              "BLOCK": 82,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 86,
+              "BLOCK": 668,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "shieldstral-test-p2",
+        "threshold": 0.46,
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.9081812831077104,
+          "macro_f1": 0.9063903911031244,
+          "harmful_f1": 0.8934426229508197,
+          "harmful_recall": 0.8673740053050398,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 889,
+              "BLOCK": 56,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 100,
+              "BLOCK": 654,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "shieldstral-test-p4",
+        "threshold": 0.5,
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.9081812831077104,
+          "macro_f1": 0.9064213264640336,
+          "harmful_f1": 0.8935879945429741,
+          "harmful_recall": 0.8687002652519894,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 888,
+              "BLOCK": 57,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 99,
+              "BLOCK": 655,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "cope-test-p0",
+        "threshold": 0.5,
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.9046497939964685,
+          "macro_f1": 0.9022722818260062,
+          "harmful_f1": 0.8870292887029289,
+          "harmful_recall": 0.843501326259947,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 901,
+              "BLOCK": 44,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 118,
+              "BLOCK": 636,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "cope-test-p2",
+        "threshold": 0.06,
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.9058269570335491,
+          "macro_f1": 0.903827103888238,
+          "harmful_f1": 0.889958734525447,
+          "harmful_recall": 0.8580901856763926,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 892,
+              "BLOCK": 53,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 107,
+              "BLOCK": 647,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "cope-test-p3",
+        "threshold": 0.08,
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.909358446144791,
+          "macro_f1": 0.907559694067902,
+          "harmful_f1": 0.8946648426812586,
+          "harmful_recall": 0.8673740053050398,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 891,
+              "BLOCK": 54,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 100,
+              "BLOCK": 654,
+              "ERROR": 0
+            }
+          }
+        }
+      }
+    ]
+  },
+  "qwen": {
+    "source_id": "qwen-analysis",
+    "selected_test": [
+      {
+        "run": "qwen-27b-test-p1",
+        "model": "Qwen/Qwen3.5-27B",
+        "policy_id": "wg-p1-concrete-harm",
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.912889935256033,
+          "macro_f1": 0.9118674626162591,
+          "harmful_f1": 0.9023746701846965,
+          "harmful_recall": 0.9071618037135278,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 867,
+              "BLOCK": 78,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 70,
+              "BLOCK": 684,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "qwen-2b-test-p2",
+        "model": "Qwen/Qwen3.5-2B",
+        "policy_id": "wg-p2-boundary-checklist",
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.8304885226603884,
+          "macro_f1": 0.8292791170879981,
+          "harmful_f1": 0.8149100257069408,
+          "harmful_recall": 0.8408488063660478,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 777,
+              "BLOCK": 168,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 120,
+              "BLOCK": 634,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "qwen-35b-a3b-test-p4",
+        "model": "Qwen/Qwen3.5-35B-A3B",
+        "policy_id": "qwen-35b-a3b-p4-compact-content-and-purpose",
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.9028840494408475,
+          "macro_f1": 0.9016541302739414,
+          "harmful_f1": 0.8906560636182903,
+          "harmful_recall": 0.8912466843501327,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 862,
+              "BLOCK": 83,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 82,
+              "BLOCK": 672,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "qwen-4b-test-p1",
+        "model": "Qwen/Qwen3.5-4B",
+        "policy_id": "wg-p1-concrete-harm",
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.8758092995879929,
+          "macro_f1": 0.8739563281314551,
+          "harmful_f1": 0.8586738111185532,
+          "harmful_recall": 0.850132625994695,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 847,
+              "BLOCK": 98,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 113,
+              "BLOCK": 641,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "run": "qwen-9b-test-p3",
+        "model": "Qwen/Qwen3.5-9B",
+        "policy_id": "qwen-9b-p3-social-and-sensitive-boundaries",
+        "metrics": {
+          "n": 1699,
+          "accuracy": 0.8958210712183637,
+          "macro_f1": 0.8942047865594418,
+          "harmful_f1": 0.8811282740094023,
+          "harmful_recall": 0.870026525198939,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 866,
+              "BLOCK": 79,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 98,
+              "BLOCK": 656,
+              "ERROR": 0
+            }
+          }
+        }
+      }
+    ]
+  },
+  "transfer": {
+    "source_id": "transfer-analysis",
+    "source_selected": {
+      "policylm": "transfer-policylm-p2",
+      "shieldstral": "transfer-shieldstral-p3",
+      "qwen-2b": "transfer-qwen-2b-p3",
+      "qwen-4b": "wg-p0-taxonomy",
+      "qwen-27b": "wg-p0-taxonomy"
+    },
+    "pool_selected": {
+      "policylm": "transfer-policylm-p2",
+      "shieldstral": "transfer-qwen-2b-p3",
+      "qwen-2b": "transfer-qwen-2b-p3",
+      "qwen-4b": "wg-p0-taxonomy",
+      "qwen-27b": "transfer-qwen-2b-p3"
+    },
+    "test_matrix": {
+      "policylm": {
+        "wg-p0-taxonomy": {
+          "n": 1699,
+          "accuracy": 0.8505002942907592,
+          "macro_f1": 0.8491456576757974,
+          "harmful_f1": 0.834850455136541,
+          "harmful_recall": 0.8514588859416445,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 803,
+              "BLOCK": 142,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 112,
+              "BLOCK": 642,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-policylm-p2": {
+          "n": 1699,
+          "accuracy": 0.8505002942907592,
+          "macro_f1": 0.8495218687845034,
+          "harmful_f1": 0.8373879641485276,
+          "harmful_recall": 0.8673740053050398,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 791,
+              "BLOCK": 154,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 100,
+              "BLOCK": 654,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-shieldstral-p3": {
+          "n": 1699,
+          "accuracy": 0.7457327839905827,
+          "macro_f1": 0.7426818904660536,
+          "harmful_f1": 0.7707006369426752,
+          "harmful_recall": 0.9628647214854111,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 541,
+              "BLOCK": 404,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 28,
+              "BLOCK": 726,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-qwen-2b-p3": {
+          "n": 1699,
+          "accuracy": 0.8175397292525015,
+          "macro_f1": 0.8170818955218075,
+          "harmful_f1": 0.8079306071871127,
+          "harmful_recall": 0.8647214854111406,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 737,
+              "BLOCK": 208,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 102,
+              "BLOCK": 652,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "shieldstral": {
+        "wg-p0-taxonomy": {
+          "n": 1699,
+          "accuracy": 0.8781636256621542,
+          "macro_f1": 0.8744553047348462,
+          "harmful_f1": 0.8528784648187633,
+          "harmful_recall": 0.7957559681697612,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 892,
+              "BLOCK": 53,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 154,
+              "BLOCK": 600,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-policylm-p2": {
+          "n": 1699,
+          "accuracy": 0.9070041200706298,
+          "macro_f1": 0.9048952168786704,
+          "harmful_f1": 0.8907330567081605,
+          "harmful_recall": 0.8541114058355438,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 897,
+              "BLOCK": 48,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 110,
+              "BLOCK": 644,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-shieldstral-p3": {
+          "n": 1699,
+          "accuracy": 0.9052383755150089,
+          "macro_f1": 0.9033740093715614,
+          "harmful_f1": 0.8899521531100478,
+          "harmful_recall": 0.863395225464191,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 887,
+              "BLOCK": 58,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 103,
+              "BLOCK": 651,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-qwen-2b-p3": {
+          "n": 1699,
+          "accuracy": 0.90759270158917,
+          "macro_f1": 0.9055809411145883,
+          "harmful_f1": 0.8917987594762233,
+          "harmful_recall": 0.8580901856763926,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 895,
+              "BLOCK": 50,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 107,
+              "BLOCK": 647,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "qwen-2b": {
+        "wg-p0-taxonomy": {
+          "n": 1699,
+          "accuracy": 0.8010594467333726,
+          "macro_f1": 0.8010588264638716,
+          "harmful_f1": 0.8014101057579318,
+          "harmful_recall": 0.9045092838196287,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 679,
+              "BLOCK": 266,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 72,
+              "BLOCK": 682,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-policylm-p2": {
+          "n": 1699,
+          "accuracy": 0.8087110064743968,
+          "macro_f1": 0.8086728285444513,
+          "harmful_f1": 0.8059701492537313,
+          "harmful_recall": 0.8952254641909815,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 699,
+              "BLOCK": 246,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 79,
+              "BLOCK": 675,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-shieldstral-p3": {
+          "n": 1699,
+          "accuracy": 0.7510300176574456,
+          "macro_f1": 0.7495638047308761,
+          "harmful_f1": 0.768726079825041,
+          "harmful_recall": 0.9323607427055703,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 573,
+              "BLOCK": 372,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 51,
+              "BLOCK": 703,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-qwen-2b-p3": {
+          "n": 1699,
+          "accuracy": 0.8116539140670983,
+          "macro_f1": 0.8110878847180216,
+          "harmful_f1": 0.800747198007472,
+          "harmful_recall": 0.8527851458885941,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 736,
+              "BLOCK": 209,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 111,
+              "BLOCK": 643,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "qwen-4b": {
+        "wg-p0-taxonomy": {
+          "n": 1699,
+          "accuracy": 0.8557975279576221,
+          "macro_f1": 0.8529604490436804,
+          "harmful_f1": 0.8325358851674641,
+          "harmful_recall": 0.8076923076923077,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 845,
+              "BLOCK": 100,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 145,
+              "BLOCK": 609,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-policylm-p2": {
+          "n": 1699,
+          "accuracy": 0.8487345497351383,
+          "macro_f1": 0.8483088941084265,
+          "harmful_f1": 0.8402734617775015,
+          "harmful_recall": 0.896551724137931,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 766,
+              "BLOCK": 179,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 78,
+              "BLOCK": 676,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-shieldstral-p3": {
+          "n": 1699,
+          "accuracy": 0.8393172454384933,
+          "macro_f1": 0.8389420798179923,
+          "harmful_f1": 0.8311688311688312,
+          "harmful_recall": 0.8912466843501327,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 754,
+              "BLOCK": 191,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 82,
+              "BLOCK": 672,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-qwen-2b-p3": {
+          "n": 1699,
+          "accuracy": 0.8552089464390819,
+          "macro_f1": 0.8532357700281481,
+          "harmful_f1": 0.8362183754993342,
+          "harmful_recall": 0.8328912466843501,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 825,
+              "BLOCK": 120,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 126,
+              "BLOCK": 628,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "qwen-27b": {
+        "wg-p0-taxonomy": {
+          "n": 1699,
+          "accuracy": 0.8934667451442024,
+          "macro_f1": 0.8926959225225194,
+          "harmful_f1": 0.8836012861736334,
+          "harmful_recall": 0.9111405835543767,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 831,
+              "BLOCK": 114,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 67,
+              "BLOCK": 687,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-policylm-p2": {
+          "n": 1699,
+          "accuracy": 0.8911124190700412,
+          "macro_f1": 0.890584635864039,
+          "harmful_f1": 0.8829854522454142,
+          "harmful_recall": 0.9257294429708223,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 816,
+              "BLOCK": 129,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 56,
+              "BLOCK": 698,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-shieldstral-p3": {
+          "n": 1699,
+          "accuracy": 0.8734549735138316,
+          "macro_f1": 0.8731876951255625,
+          "harmful_f1": 0.8673658235657001,
+          "harmful_recall": 0.9323607427055703,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 781,
+              "BLOCK": 164,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 51,
+              "BLOCK": 703,
+              "ERROR": 0
+            }
+          }
+        },
+        "transfer-qwen-2b-p3": {
+          "n": 1699,
+          "accuracy": 0.8934667451442024,
+          "macro_f1": 0.8926298339339289,
+          "harmful_f1": 0.8831504196255648,
+          "harmful_recall": 0.9071618037135278,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 834,
+              "BLOCK": 111,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 70,
+              "BLOCK": 684,
+              "ERROR": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "hatexplain": {
+    "source_id": "hatexplain-analysis",
+    "selections": {
+      "policylm": "p0",
+      "shieldstral": "shieldstral-p2",
+      "qwen-4b": "qwen-4b-p1"
+    },
+    "test_conditions": [
+      {
+        "model": "policylm",
+        "policy_id": "p0",
+        "variant": "markdown",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.6871101871101871,
+          "macro_f1": 0.6387429198792325,
+          "hate_f1": 0.5065573770491804,
+          "hate_recall": 0.5202020202020202,
+          "false_blocks": 317,
+          "missed_hate": 285,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 1013,
+              "BLOCK": 317,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 285,
+              "BLOCK": 309,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "policylm",
+        "policy_id": "p0",
+        "variant": "omit-definitions",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.7016632016632016,
+          "macro_f1": 0.6385447214076246,
+          "hate_f1": 0.4875,
+          "hate_recall": 0.4595959595959596,
+          "false_blocks": 253,
+          "missed_hate": 321,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 1077,
+              "BLOCK": 253,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 321,
+              "BLOCK": 273,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "policylm",
+        "policy_id": "p0",
+        "variant": "omit-exceptions",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.7032224532224532,
+          "macro_f1": 0.651861816326563,
+          "hate_f1": 0.5181434599156118,
+          "hate_recall": 0.5168350168350169,
+          "false_blocks": 284,
+          "missed_hate": 287,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 1046,
+              "BLOCK": 284,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 287,
+              "BLOCK": 307,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "policylm",
+        "policy_id": "p0",
+        "variant": "omit-allow-examples",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.6772349272349273,
+          "macro_f1": 0.6313169697614893,
+          "hate_f1": 0.5012048192771085,
+          "hate_recall": 0.5252525252525253,
+          "false_blocks": 339,
+          "missed_hate": 282,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 991,
+              "BLOCK": 339,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 282,
+              "BLOCK": 312,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "policylm",
+        "policy_id": "p0",
+        "variant": "omit-all-examples",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.6663201663201663,
+          "macro_f1": 0.6256741276796917,
+          "hate_f1": 0.5023255813953489,
+          "hate_recall": 0.5454545454545454,
+          "false_blocks": 372,
+          "missed_hate": 270,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 958,
+              "BLOCK": 372,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 270,
+              "BLOCK": 324,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "policylm",
+        "policy_id": "qwen-4b-p1",
+        "variant": "markdown",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.6735966735966736,
+          "macro_f1": 0.6297655423633046,
+          "hate_f1": 0.5023771790808241,
+          "hate_recall": 0.5336700336700336,
+          "false_blocks": 351,
+          "missed_hate": 277,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 979,
+              "BLOCK": 351,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 277,
+              "BLOCK": 317,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "policylm",
+        "policy_id": "shieldstral-p2",
+        "variant": "markdown",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.7027027027027027,
+          "macro_f1": 0.6460045366878575,
+          "hate_f1": 0.5043327556325823,
+          "hate_recall": 0.4898989898989899,
+          "false_blocks": 269,
+          "missed_hate": 303,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 1061,
+              "BLOCK": 269,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 303,
+              "BLOCK": 291,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "shieldstral",
+        "policy_id": "p0",
+        "variant": "markdown",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.5239085239085239,
+          "macro_f1": 0.521074646074646,
+          "hate_f1": 0.5579150579150579,
+          "hate_recall": 0.9730639730639731,
+          "false_blocks": 900,
+          "missed_hate": 16,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 430,
+              "BLOCK": 900,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 16,
+              "BLOCK": 578,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "shieldstral",
+        "policy_id": "p0",
+        "variant": "omit-definitions",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.5072765072765073,
+          "macro_f1": 0.5027285218870641,
+          "hate_f1": 0.5502846299810247,
+          "hate_recall": 0.9764309764309764,
+          "false_blocks": 934,
+          "missed_hate": 14,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 396,
+              "BLOCK": 934,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 14,
+              "BLOCK": 580,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "shieldstral",
+        "policy_id": "p0",
+        "variant": "omit-exceptions",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.5233887733887734,
+          "macro_f1": 0.5205131027360497,
+          "hate_f1": 0.5576459237819585,
+          "hate_recall": 0.9730639730639731,
+          "false_blocks": 901,
+          "missed_hate": 16,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 429,
+              "BLOCK": 901,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 16,
+              "BLOCK": 578,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "shieldstral",
+        "policy_id": "p0",
+        "variant": "omit-allow-examples",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.5025987525987526,
+          "macro_f1": 0.49743637053937345,
+          "hate_f1": 0.5483718735252477,
+          "hate_recall": 0.9781144781144782,
+          "false_blocks": 944,
+          "missed_hate": 13,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 386,
+              "BLOCK": 944,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 13,
+              "BLOCK": 581,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "shieldstral",
+        "policy_id": "p0",
+        "variant": "omit-all-examples",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.6096673596673596,
+          "macro_f1": 0.6092213467779078,
+          "hate_f1": 0.5960193652501344,
+          "hate_recall": 0.9326599326599326,
+          "false_blocks": 711,
+          "missed_hate": 40,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 619,
+              "BLOCK": 711,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 40,
+              "BLOCK": 554,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "shieldstral",
+        "policy_id": "p0",
+        "variant": "linear",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.5727650727650727,
+          "macro_f1": 0.5726468566388669,
+          "hate_f1": 0.5797546012269938,
+          "hate_recall": 0.9545454545454546,
+          "false_blocks": 795,
+          "missed_hate": 27,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 535,
+              "BLOCK": 795,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 27,
+              "BLOCK": 567,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "shieldstral",
+        "policy_id": "p0",
+        "variant": "tagged",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.5280665280665281,
+          "macro_f1": 0.5256966616711192,
+          "hate_f1": 0.5592233009708738,
+          "hate_recall": 0.9696969696969697,
+          "false_blocks": 890,
+          "missed_hate": 18,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 440,
+              "BLOCK": 890,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 18,
+              "BLOCK": 576,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "shieldstral",
+        "policy_id": "p0",
+        "variant": "reordered",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.5420997920997921,
+          "macro_f1": 0.5405148323112425,
+          "hate_f1": 0.5675012272950417,
+          "hate_recall": 0.9730639730639731,
+          "false_blocks": 865,
+          "missed_hate": 16,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 465,
+              "BLOCK": 865,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 16,
+              "BLOCK": 578,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "shieldstral",
+        "policy_id": "qwen-4b-p1",
+        "variant": "markdown",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.5192307692307693,
+          "macro_f1": 0.5159248142592333,
+          "hate_f1": 0.5559289486317811,
+          "hate_recall": 0.9747474747474747,
+          "false_blocks": 910,
+          "missed_hate": 15,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 420,
+              "BLOCK": 910,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 15,
+              "BLOCK": 579,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "shieldstral",
+        "policy_id": "shieldstral-p2",
+        "variant": "markdown",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.5317047817047817,
+          "macro_f1": 0.5294562804841471,
+          "hate_f1": 0.5619834710743802,
+          "hate_recall": 0.9730639730639731,
+          "false_blocks": 885,
+          "missed_hate": 16,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 445,
+              "BLOCK": 885,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 16,
+              "BLOCK": 578,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "qwen-4b",
+        "policy_id": "p0",
+        "variant": "markdown",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.7245322245322245,
+          "macro_f1": 0.7124746936450739,
+          "hate_f1": 0.6535947712418301,
+          "hate_recall": 0.8417508417508418,
+          "false_blocks": 436,
+          "missed_hate": 94,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 894,
+              "BLOCK": 436,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 94,
+              "BLOCK": 500,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "qwen-4b",
+        "policy_id": "p0",
+        "variant": "omit-definitions",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.7130977130977131,
+          "macro_f1": 0.7024475524475524,
+          "hate_f1": 0.6461538461538462,
+          "hate_recall": 0.8484848484848485,
+          "false_blocks": 462,
+          "missed_hate": 90,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 868,
+              "BLOCK": 462,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 90,
+              "BLOCK": 504,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "qwen-4b",
+        "policy_id": "p0",
+        "variant": "omit-exceptions",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.7302494802494802,
+          "macro_f1": 0.7177427128138752,
+          "hate_f1": 0.6583278472679395,
+          "hate_recall": 0.8417508417508418,
+          "false_blocks": 425,
+          "missed_hate": 94,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 905,
+              "BLOCK": 425,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 94,
+              "BLOCK": 500,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "qwen-4b",
+        "policy_id": "p0",
+        "variant": "omit-allow-examples",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.7037422037422038,
+          "macro_f1": 0.6939588775031813,
+          "hate_f1": 0.6392405063291139,
+          "hate_recall": 0.8501683501683501,
+          "false_blocks": 481,
+          "missed_hate": 89,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 849,
+              "BLOCK": 481,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 89,
+              "BLOCK": 505,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "qwen-4b",
+        "policy_id": "p0",
+        "variant": "omit-all-examples",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.617983367983368,
+          "macro_f1": 0.6170099017784527,
+          "hate_f1": 0.5977011494252874,
+          "hate_recall": 0.9191919191919192,
+          "false_blocks": 687,
+          "missed_hate": 48,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 643,
+              "BLOCK": 687,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 48,
+              "BLOCK": 546,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "qwen-4b",
+        "policy_id": "p0",
+        "variant": "linear",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.7063409563409564,
+          "macro_f1": 0.6972725680312413,
+          "hate_f1": 0.64487743557511,
+          "hate_recall": 0.8636363636363636,
+          "false_blocks": 484,
+          "missed_hate": 81,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 846,
+              "BLOCK": 484,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 81,
+              "BLOCK": 513,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "qwen-4b",
+        "policy_id": "p0",
+        "variant": "tagged",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.739085239085239,
+          "macro_f1": 0.7225273178360849,
+          "hate_f1": 0.6547455295735901,
+          "hate_recall": 0.8013468013468014,
+          "false_blocks": 384,
+          "missed_hate": 118,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 946,
+              "BLOCK": 384,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 118,
+              "BLOCK": 476,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "qwen-4b",
+        "policy_id": "p0",
+        "variant": "reordered",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.6964656964656964,
+          "macro_f1": 0.6883757719772936,
+          "hate_f1": 0.6381660470879802,
+          "hate_recall": 0.867003367003367,
+          "false_blocks": 505,
+          "missed_hate": 79,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 825,
+              "BLOCK": 505,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 79,
+              "BLOCK": 515,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "qwen-4b",
+        "policy_id": "qwen-4b-p1",
+        "variant": "markdown",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.725051975051975,
+          "macro_f1": 0.7126959909105665,
+          "hate_f1": 0.6531147540983606,
+          "hate_recall": 0.8383838383838383,
+          "false_blocks": 433,
+          "missed_hate": 96,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 897,
+              "BLOCK": 433,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 96,
+              "BLOCK": 498,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      {
+        "model": "qwen-4b",
+        "policy_id": "shieldstral-p2",
+        "variant": "markdown",
+        "metrics": {
+          "n": 1924,
+          "accuracy": 0.7271309771309772,
+          "macro_f1": 0.7146099853448371,
+          "hate_f1": 0.6548323471400395,
+          "hate_recall": 0.8383838383838383,
+          "false_blocks": 429,
+          "missed_hate": 96,
+          "errors": 0,
+          "confusion": {
+            "ALLOW": {
+              "ALLOW": 901,
+              "BLOCK": 429,
+              "ERROR": 0
+            },
+            "BLOCK": {
+              "ALLOW": 96,
+              "BLOCK": 498,
+              "ERROR": 0
+            }
+          }
+        }
+      }
+    ]
+  },
+  "log_odds_ensembles": {
+    "wildguard-specialists": {
+      "source_id": "logits-wildguard",
+      "n": 1699,
+      "selection": {
+        "primary": "logit-logistic/C10",
+        "secondary": "logit-equal",
+        "best_single": "logit-single/shieldstral/C0.01",
+        "per_model": {
+          "policylm": "single/policylm/logistic-C1",
+          "shieldstral": "logit-single/shieldstral/C0.01",
+          "cope": "logit-single/cope/C0.01"
+        },
+        "prior_probability_logistic": "logistic/C1",
+        "prior_best_single": "single/shieldstral/logistic-C0.01",
+        "prior_best_ensemble": "weighted/lambda0"
+      },
+      "display_candidates": {
+        "logistic/C1": {
+          "threshold": 0.41,
+          "metrics": {
+            "n": 1699,
+            "accuracy": 0.90759270158917,
+            "macro_f1": 0.90589804548551,
+            "violation_f1": 0.8932698844323589,
+            "violation_recall": 0.8713527851458885,
+            "false_blocks": 60,
+            "missed_violations": 97,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 885,
+                "BLOCK": 60,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 97,
+                "BLOCK": 657,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "logit-equal": {
+          "threshold": 0.06,
+          "metrics": {
+            "n": 1699,
+            "accuracy": 0.909358446144791,
+            "macro_f1": 0.9081484924397313,
+            "violation_f1": 0.8976063829787234,
+            "violation_recall": 0.8952254641909815,
+            "false_blocks": 75,
+            "missed_violations": 79,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 870,
+                "BLOCK": 75,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 79,
+                "BLOCK": 675,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "logit-logistic/C10": {
+          "threshold": 0.4,
+          "metrics": {
+            "n": 1699,
+            "accuracy": 0.912889935256033,
+            "macro_f1": 0.9114453469469401,
+            "violation_f1": 0.9001349527665317,
+            "violation_recall": 0.8846153846153846,
+            "false_blocks": 61,
+            "missed_violations": 87,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 884,
+                "BLOCK": 61,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 87,
+                "BLOCK": 667,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "logit-single/cope/C0.01": {
+          "threshold": 0.49,
+          "metrics": {
+            "n": 1699,
+            "accuracy": 0.9070041200706298,
+            "macro_f1": 0.905029265089635,
+            "violation_f1": 0.8913342503438789,
+            "violation_recall": 0.8594164456233422,
+            "false_blocks": 52,
+            "missed_violations": 106,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 893,
+                "BLOCK": 52,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 106,
+                "BLOCK": 648,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "logit-single/shieldstral/C0.01": {
+          "threshold": 0.5,
+          "metrics": {
+            "n": 1699,
+            "accuracy": 0.90759270158917,
+            "macro_f1": 0.9059580281516346,
+            "violation_f1": 0.8935593220338983,
+            "violation_recall": 0.8740053050397878,
+            "false_blocks": 62,
+            "missed_violations": 95,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 883,
+                "BLOCK": 62,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 95,
+                "BLOCK": 659,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "single/policylm/logistic-C1": {
+          "threshold": 0.46,
+          "metrics": {
+            "n": 1699,
+            "accuracy": 0.8646262507357269,
+            "macro_f1": 0.8624645928245211,
+            "violation_f1": 0.845222072678331,
+            "violation_recall": 0.8328912466843501,
+            "false_blocks": 104,
+            "missed_violations": 126,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 841,
+                "BLOCK": 104,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 126,
+                "BLOCK": 628,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "single/shieldstral/logistic-C0.01": {
+          "threshold": 0.34,
+          "metrics": {
+            "n": 1699,
+            "accuracy": 0.9087698646262508,
+            "macro_f1": 0.9071265462304159,
+            "violation_f1": 0.8947725729803123,
+            "violation_recall": 0.8740053050397878,
+            "false_blocks": 60,
+            "missed_violations": 95,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 885,
+                "BLOCK": 60,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 95,
+                "BLOCK": 659,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "weighted/lambda0": {
+          "threshold": 0.29,
+          "metrics": {
+            "n": 1699,
+            "accuracy": 0.9087698646262508,
+            "macro_f1": 0.9071265462304159,
+            "violation_f1": 0.8947725729803123,
+            "violation_recall": 0.8740053050397878,
+            "false_blocks": 60,
+            "missed_violations": 95,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 885,
+                "BLOCK": 60,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 95,
+                "BLOCK": 659,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "wildguard-baseline": {
+          "threshold": null,
+          "metrics": {
+            "n": 1699,
+            "accuracy": 0.9034726309593879,
+            "macro_f1": 0.9012836428360882,
+            "violation_f1": 0.8865836791147994,
+            "violation_recall": 0.850132625994695,
+            "false_blocks": 51,
+            "missed_violations": 113,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 894,
+                "BLOCK": 51,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 113,
+                "BLOCK": 641,
+                "ERROR": 0
+              }
+            }
+          }
+        }
+      },
+      "highest_observed_test_single": {
+        "candidate": "single/shieldstral/thresholded",
+        "accuracy": 0.9087698646262508,
+        "role": "Descriptive only; not used to select any method"
+      }
+    },
+    "hatexplain-specialists": {
+      "source_id": "logits-hate-specialists",
+      "n": 1924,
+      "selection": {
+        "primary": "logit-logistic/C1",
+        "secondary": "logit-equal",
+        "best_single": "single/shieldstral/logistic-C0.01",
+        "per_model": {
+          "policylm": "logit-single/policylm/C0.1",
+          "shieldstral": "single/shieldstral/logistic-C0.01"
+        },
+        "prior_probability_logistic": "logistic/C1",
+        "prior_best_single": "single/shieldstral/logistic-C0.01",
+        "prior_best_ensemble": "forest/depth2-leaf20"
+      },
+      "display_candidates": {
+        "forest/depth2-leaf20": {
+          "threshold": 0.39,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.7931392931392931,
+            "macro_f1": 0.752454276492738,
+            "violation_f1": 0.6520979020979021,
+            "violation_recall": 0.6279461279461279,
+            "false_blocks": 177,
+            "missed_violations": 221,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1153,
+                "BLOCK": 177,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 221,
+                "BLOCK": 373,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "logistic/C1": {
+          "threshold": 0.52,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.7557172557172557,
+            "macro_f1": 0.6985263034366694,
+            "violation_f1": 0.567219152854512,
+            "violation_recall": 0.5185185185185185,
+            "false_blocks": 184,
+            "missed_violations": 286,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1146,
+                "BLOCK": 184,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 286,
+                "BLOCK": 308,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "logit-equal": {
+          "threshold": 0.91,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.7733887733887734,
+            "macro_f1": 0.7151445425885504,
+            "violation_f1": 0.5863377609108159,
+            "violation_recall": 0.5202020202020202,
+            "false_blocks": 151,
+            "missed_violations": 285,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1179,
+                "BLOCK": 151,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 285,
+                "BLOCK": 309,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "logit-logistic/C1": {
+          "threshold": 0.55,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.7879417879417879,
+            "macro_f1": 0.7225608075153211,
+            "violation_f1": 0.5878787878787879,
+            "violation_recall": 0.4898989898989899,
+            "false_blocks": 105,
+            "missed_violations": 303,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1225,
+                "BLOCK": 105,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 303,
+                "BLOCK": 291,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "logit-single/policylm/C0.1": {
+          "threshold": 0.47,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.7188149688149689,
+            "macro_f1": 0.6258632433471898,
+            "violation_f1": 0.43937823834196893,
+            "violation_recall": 0.3569023569023569,
+            "false_blocks": 159,
+            "missed_violations": 382,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1171,
+                "BLOCK": 159,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 382,
+                "BLOCK": 212,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "single/shieldstral/logistic-C0.01": {
+          "threshold": 0.48,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.7957380457380457,
+            "macro_f1": 0.7561769807403766,
+            "violation_f1": 0.6579634464751958,
+            "violation_recall": 0.6363636363636364,
+            "false_blocks": 177,
+            "missed_violations": 216,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1153,
+                "BLOCK": 177,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 216,
+                "BLOCK": 378,
+                "ERROR": 0
+              }
+            }
+          }
+        }
+      },
+      "highest_observed_test_single": {
+        "candidate": "single/shieldstral/thresholded",
+        "accuracy": 0.7957380457380457,
+        "role": "Descriptive only; not used to select any method"
+      }
+    },
+    "hatexplain-mixed": {
+      "source_id": "logits-hate-mixed",
+      "n": 1924,
+      "selection": {
+        "primary": "logit-logistic/C0.1",
+        "secondary": "logit-equal",
+        "best_single": "logit-single/qwen-4b/C0.01",
+        "per_model": {
+          "policylm": "logit-single/policylm/C0.1",
+          "shieldstral": "single/shieldstral/logistic-C0.01",
+          "qwen-4b": "logit-single/qwen-4b/C0.01"
+        },
+        "prior_probability_logistic": "logistic/C10",
+        "prior_best_single": "single/qwen-4b/logistic-C0.01",
+        "prior_best_ensemble": "forest/depth4-leaf20"
+      },
+      "display_candidates": {
+        "forest/depth4-leaf20": {
+          "threshold": 0.49,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.7972972972972973,
+            "macro_f1": 0.7472718454449923,
+            "violation_f1": 0.6348314606741573,
+            "violation_recall": 0.5707070707070707,
+            "false_blocks": 135,
+            "missed_violations": 255,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1195,
+                "BLOCK": 135,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 255,
+                "BLOCK": 339,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "logistic/C10": {
+          "threshold": 0.52,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.7869022869022869,
+            "macro_f1": 0.7528681257401362,
+            "violation_f1": 0.6611570247933884,
+            "violation_recall": 0.6734006734006734,
+            "false_blocks": 216,
+            "missed_violations": 194,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1114,
+                "BLOCK": 216,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 194,
+                "BLOCK": 400,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "logit-equal": {
+          "threshold": 0.89,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.7874220374220374,
+            "macro_f1": 0.7316703987898987,
+            "violation_f1": 0.609360076408787,
+            "violation_recall": 0.5370370370370371,
+            "false_blocks": 134,
+            "missed_violations": 275,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1196,
+                "BLOCK": 134,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 275,
+                "BLOCK": 319,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "logit-logistic/C0.1": {
+          "threshold": 0.51,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.8082120582120582,
+            "macro_f1": 0.7657695524436534,
+            "violation_f1": 0.6660633484162896,
+            "violation_recall": 0.6195286195286195,
+            "false_blocks": 143,
+            "missed_violations": 226,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1187,
+                "BLOCK": 143,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 226,
+                "BLOCK": 368,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "logit-single/policylm/C0.1": {
+          "threshold": 0.47,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.7188149688149689,
+            "macro_f1": 0.6258632433471898,
+            "violation_f1": 0.43937823834196893,
+            "violation_recall": 0.3569023569023569,
+            "false_blocks": 159,
+            "missed_violations": 382,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1171,
+                "BLOCK": 159,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 382,
+                "BLOCK": 212,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "logit-single/qwen-4b/C0.01": {
+          "threshold": 0.51,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.7915800415800416,
+            "macro_f1": 0.7402932793761579,
+            "violation_f1": 0.6248830682881198,
+            "violation_recall": 0.5622895622895623,
+            "false_blocks": 141,
+            "missed_violations": 260,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1189,
+                "BLOCK": 141,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 260,
+                "BLOCK": 334,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "single/qwen-4b/logistic-C0.01": {
+          "threshold": 0.55,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.7915800415800416,
+            "macro_f1": 0.7402932793761579,
+            "violation_f1": 0.6248830682881198,
+            "violation_recall": 0.5622895622895623,
+            "false_blocks": 141,
+            "missed_violations": 260,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1189,
+                "BLOCK": 141,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 260,
+                "BLOCK": 334,
+                "ERROR": 0
+              }
+            }
+          }
+        },
+        "single/shieldstral/logistic-C0.01": {
+          "threshold": 0.48,
+          "metrics": {
+            "n": 1924,
+            "accuracy": 0.7957380457380457,
+            "macro_f1": 0.7561769807403766,
+            "violation_f1": 0.6579634464751958,
+            "violation_recall": 0.6363636363636364,
+            "false_blocks": 177,
+            "missed_violations": 216,
+            "errors": 0,
+            "confusion": {
+              "ALLOW": {
+                "ALLOW": 1153,
+                "BLOCK": 177,
+                "ERROR": 0
+              },
+              "BLOCK": {
+                "ALLOW": 216,
+                "BLOCK": 378,
+                "ERROR": 0
+              }
+            }
+          }
+        }
+      },
+      "highest_observed_test_single": {
+        "candidate": "single/shieldstral/thresholded",
+        "accuracy": 0.7957380457380457,
+        "role": "Descriptive only; not used to select any method"
+      }
+    }
+  }
+}
