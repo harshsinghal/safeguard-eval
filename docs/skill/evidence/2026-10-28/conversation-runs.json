@@ -1,0 +1,136 @@
+{
+  "scope": "Assistant-authored exploratory smoke tests, not independent user research. No human test-user transcripts published.",
+  "runs": [
+    {
+      "name": "baseline-v0.3",
+      "runtime": "0.87.1",
+      "model": "openai/gpt-6-luna",
+      "thinking": "low",
+      "skill_version": "0.3.0",
+      "skill_manifest_sha256": "865ddf35a7692476e1e6bd19b8a73b1a8c6592598eb348a5813c7fdfed4bc58b",
+      "user_questions": 3,
+      "usage": {
+        "tokens": {
+          "input": 21,
+          "output": 1489,
+          "cacheRead": 27387,
+          "cacheWrite": 19706,
+          "totalTokens": 48603
+        },
+        "model_responses": 7,
+        "pi_estimated_cost_usd": 0.00348372,
+        "assistant_messages_missing_usage": 0,
+        "openrouter_cost_usd_for_available_records": 0.00348372,
+        "billing_records_available": 7,
+        "billing_records_requested": 7
+      },
+      "tools_called": [
+        "read",
+        "read",
+        "read",
+        "read",
+        "read",
+        "read"
+      ]
+    },
+    {
+      "name": "learner-v0.4",
+      "runtime": "0.87.1",
+      "model": "openai/gpt-6-luna",
+      "thinking": "low",
+      "skill_version": "0.4.0",
+      "skill_manifest_sha256": "869aa3dea63fe96df5fc1d8fbc6d8eafc359fdefe7e6ab47f0f7ce5fd22139ba",
+      "user_questions": 3,
+      "usage": {
+        "tokens": {
+          "input": 24,
+          "output": 1638,
+          "cacheRead": 74543,
+          "cacheWrite": 34270,
+          "totalTokens": 110475
+        },
+        "model_responses": 8,
+        "pi_estimated_cost_usd": 0.00585058,
+        "assistant_messages_missing_usage": 0,
+        "openrouter_cost_usd_for_available_records": 0.00585058,
+        "billing_records_available": 8,
+        "billing_records_requested": 8
+      },
+      "tools_called": [
+        "read",
+        "read",
+        "read",
+        "read",
+        "read",
+        "read"
+      ]
+    },
+    {
+      "name": "engineering-v0.4",
+      "runtime": "0.87.1",
+      "model": "openai/gpt-6-luna",
+      "thinking": "low",
+      "skill_version": "0.4.0",
+      "skill_manifest_sha256": "869aa3dea63fe96df5fc1d8fbc6d8eafc359fdefe7e6ab47f0f7ce5fd22139ba",
+      "user_questions": 3,
+      "usage": {
+        "tokens": {
+          "input": 21,
+          "output": 2235,
+          "cacheRead": 142318,
+          "cacheWrite": 37624,
+          "totalTokens": 182198
+        },
+        "model_responses": 7,
+        "pi_estimated_cost_usd": 0.00724578,
+        "assistant_messages_missing_usage": 0,
+        "openrouter_cost_usd_for_available_records": 0.0072457799999999985,
+        "billing_records_available": 7,
+        "billing_records_requested": 7
+      },
+      "tools_called": [
+        "read",
+        "bash",
+        "read",
+        "read",
+        "read",
+        "read",
+        "read",
+        "read",
+        "read",
+        "bash"
+      ]
+    },
+    {
+      "name": "grc-v0.4",
+      "runtime": "0.87.1",
+      "model": "openai/gpt-6-luna",
+      "thinking": "low",
+      "skill_version": "0.4.0",
+      "skill_manifest_sha256": "869aa3dea63fe96df5fc1d8fbc6d8eafc359fdefe7e6ab47f0f7ce5fd22139ba",
+      "user_questions": 3,
+      "usage": {
+        "tokens": {
+          "input": 21,
+          "output": 1888,
+          "cacheRead": 53615,
+          "cacheWrite": 17942,
+          "totalTokens": 73466
+        },
+        "model_responses": 7,
+        "pi_estimated_cost_usd": 0.0037250000000000004,
+        "assistant_messages_missing_usage": 0,
+        "openrouter_cost_usd_for_available_records": 0.0037250000000000004,
+        "billing_records_available": 7,
+        "billing_records_requested": 7
+      },
+      "tools_called": [
+        "read",
+        "bash",
+        "read",
+        "read",
+        "read"
+      ]
+    }
+  ]
+}
