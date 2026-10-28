@@ -79,7 +79,9 @@ usually needs to understand the changed decisions before a metric or equation.
 - The bundled summaries work offline. For exact wording, implementation details,
   or a disputed claim, read the corresponding source when network or a repository
   checkout is available. If it is unavailable, state the snapshot boundary rather
-  than inventing details. Do not claim to have rerun an experiment.
+  than inventing details. Attribute archived measurements to the Safeguard Eval
+  project; do not say “I tested” or “I ran” unless this agent actually performed
+  that test in the current work. Reading a result is not rerunning an experiment.
 - Distinguish observed results, interpretations, proposed follow-ups, and untested
   teaching examples. Provider guidance and provider benchmark claims are not our
   findings. If the repository does not answer a question, use the search guide
