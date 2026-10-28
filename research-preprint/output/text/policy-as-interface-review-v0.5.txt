@@ -1,0 +1,1249 @@
+                     Policy as an Interface:
+       Policy Authoring and Model Choice in LLM Moderation
+
+                                             Harsh Singhal
+
+                             October 28, 2026 | Review draft v0.5
+
+
+                                                Abstract
+         A written policy can now be an input to the system that enforces it. This gives policy authors
+     a more direct implementation role and makes their work closely coupled with model selection
+     and engineering. We examine that relationship through six exploratory studies on harmful
+     requests and hate speech, holding released language-model weights ﬁxed. We revise policy
+     wording, compare specialist and general-purpose models, transfer policies between models, vary
+     document components, and then calibrate and combine model scores. Wording and structure
+     change outcomes, but useful edits do not transfer uniformly. Calibration explains part of the
+     apparent authoring gain. A log-odds ensemble reaches 91.29% accuracy on 1,699 WildGuardTest
+     requests, compared with 90.35% for released WildGuard. On 1,924 HateXplain posts, a mixed
+     ensemble reaches 80.82%; a specialist-only ensemble remains below its strongest individual.
+     Improvements also change the balance between false blocks and missed violations. These results
+     demonstrate a route to competitive classiﬁcation without additional language-model ﬁne-tuning
+     by the deploying team, while still requiring labeled evaluation and supervised calibration or
+     combination. They support testing and versioning policy text with its interpreter and decision
+     settings. Reused public tests, uncertain upstream exposure, and the absence of a matched
+     ﬁne-tuning or professional-team study limit broader claims.
+
+                      Status: exploratory research in progress; not peer reviewed.
+                          Code, policies, and archived experimental evidence:
+                        https://github.com/harshsinghal/safeguard-eval
+
+
+1    When the policy becomes part of the implementation
+A moderation policy often begins with a distinction that a person can explain more easily than a
+service can enforce. A platform may want to remove an identity-based attack while preserving a
+post that quotes the same language to condemn it. The policy author knows why the decisions
+should diﬀer. The engineering team must make that distinction work across unfamiliar examples.
+For teams using keyword rules, this work includes choosing terms, conditions, and exceptions.
+With a trained text classiﬁer, it includes annotation guidance, labeled examples, and decisions
+about retraining. Language models add another route: give the model the classiﬁcation policy
+alongside the content. A sentence about an exception can then change the running system without
+an update to the model’s weights.
+This makes policy authoring deeply coupled with AI engineering. Trust and Safety professionals
+deﬁne the boundary and its consequences. Engineers determine how a model receives that boundary
+
+                                                     1
+Policy as an Interface                                                              Review draft v0.5
+
+
+and turns its output into an action. The policy is no longer only a document explaining the system.
+In a policy-conditioned classiﬁer, it is one of the inputs that determines what the system does.
+Our motivating analogy is straightforward: policy authors need some of the disciplines that
+developers apply to code. A revision should have an intended eﬀect, a reviewable diﬀerence,
+examples that exercise it, and a record of what changed. The model serves as an interpreter,
+but a learned interpreter does not oﬀer the formal guarantees of a programming language. That
+limitation makes testing more necessary.
+We investigate this idea through a sequence of exploratory studies. We ﬁrst change policy wording
+with specialist model weights ﬁxed. We then repeat the task with general-purpose models and move
+policies between models. A second benchmark lets us separate wording from document structure
+and the presence of examples. Finally, we hold the policies ﬁxed and examine decision thresholds
+and combinations of model scores. Each step asks what a team can improve without running
+another language-model ﬁne-tuning job.
+The sequence also changes the claim we can defend. Policy edits sometimes help, but they do not
+help every model. A successful policy can transfer poorly. A large gain can come from choosing a
+better blocking threshold rather than rewriting the rule. Combining models can improve accuracy,
+or make it worse. Together, these observations support evaluating the policy, model interface, and
+decision logic as one system.
+Our contribution is an inspectable account of that adaptation process on two text classiﬁcation
+tasks. It gives teams a route to competitive benchmark results using released models, written
+policies, labeled evaluation, and small learned combiners. It does not establish that policy writing
+replaces all training or that this route is cheaper than a matched ﬁne-tuning project. Model creators
+trained the checkpoints; we still use labels and ﬁt calibration and combination models.
+The immediate audience is policy practitioners working with moderation and ML engineers. Enter-
+prise governance, risk, and compliance (GRC) teams may face a similar division of responsibilities,
+but enterprise information access and employee intent are outside our experiments. The organi-
+zational workﬂow we propose is an implication of the observed behavior, not a professional-team
+intervention we tested.
+
+
+2    Where this work ﬁts
+WildGuard provides a released classiﬁer and a dataset for harmful requests, harmful responses, and
+refusals [1–3]. We use only request harmfulness. HateXplain supplies social-media posts with hate,
+oﬀensive, and normal labels [4, 5]. We turn those into a narrower policy: block hate speech and
+allow the other two classes. These tasks exercise diﬀerent boundaries; neither supplies the policy
+for every platform.
+PolicyLM, Shieldstral, CoPE, and GPT-OSS Safeguard support classiﬁcation against supplied poli-
+cies [6–12]. They diﬀer in training and interface. Our general-purpose comparators are the oﬃcial
+post-trained Qwen3.5 instruction models [13–17]. Their inclusion tests whether useful policy inter-
+pretation requires a specialist in these recorded deployments.
+Prompt optimization already studies how revisions based on training mistakes can improve instruc-
+tions, including ProTeGi and OPRO [18, 19]. We do not propose a new optimizer or ensemble
+algorithm. We use bounded searches and standard classiﬁers to examine an operational question:
+
+
+                                                 2
+Policy as an Interface                                                                  Review draft v0.5
+
+
+what should policy owners and engineers test together when the speciﬁcation is written in natural
+language?
+
+
+3     What we changed and what we held ﬁxed
+The studies form a sequence rather than independent replications. Table 1 separates the interven-
+tions. All underlying language-model weights stay ﬁxed. Earlier results inform later questions, and
+later studies reuse public tests whose results were already known. We freeze each new conﬁguration
+before its evaluation, but describe the follow-ups as exploratory.
+
+Study    Question                     Intervention
+A        Can wording help?            Five candidate policies per specialist on WildGuard.
+B        Is a specialist needed?      Five candidate instructions per Qwen model on the same task.
+C        Does wording transfer?       Fresh source-speciﬁc searches, then four selected texts crossed with
+                                      ﬁve recipients.
+D        Does structure matter?       HateXplain policy components, presentation, bounded rewriting,
+                                      and transfer through native interfaces.
+E        Can models complement        Fixed policies; calibrate individuals and combine their continuous
+         each other?                  scores.
+F        Does the score               Reuse E’s scores as log-odds and ﬁt new linear combiners.
+         representation matter?
+
+Table 1: The research sequence. Text, interface, and score-processing interventions answer diﬀerent ques-
+tions. Study F adds no new model inference.
+
+
+
+3.1     Two tasks with explicit boundaries
+
+On WildGuard, each classiﬁer sees one user request and decides Allow or Block using the
+dataset’s prompt-harmfulness label. It does not see the accompanying assistant response, reference
+label, category, or adversarial-source ﬂag. We evaluate all 1,699 labeled WildGuardTest re-
+quests; 26 of the original 1,725 have no usable prompt-harmfulness label. The retained population
+contains 945 allowed and 754 blocked references.
+On HateXplain, we use the original majority vote among hate, oﬀensive, and normal before mapping
+hate to Block and the other classes to Allow. We evaluate all 1,924 oﬃcial test posts, with 594
+blocked references and 1,330 allowed references. An oﬀensive post can therefore be allowed under
+this particular rule. We do not evaluate a general toxicity policy or the dataset’s explanations and
+rationales.
+These are binary classiﬁcation studies. Neither test deﬁnes a human-review outcome. We do
+not infer eﬀectiveness for Review routing, image moderation, multilingual deployment, or a real
+moderation operation. Missing and malformed model answers count as incorrect, rather than
+disappearing from the reported population.
+
+
+
+
+                                                     3
+Policy as an Interface                                                              Review draft v0.5
+
+
+3.2    Examples have diﬀerent jobs
+
+A ﬁtting set provides mistakes that guide a policy revision or teaches a combiner how to use scores.
+A separate validation set selects among the choices. The oﬃcial test evaluates the frozen choice.
+Related examples are grouped before development splits so that duplicate groups do not cross
+ﬁtting and validation.
+For Studies A–C, ﬁtting uses 1,024 WildGuardTrain rows, validation uses 512, and a separate 512-
+row internal audit checks the frozen choices. Study A also evaluates an expanded 8,192-row ﬁtting
+sample. The training and test tasks cover the same broad categories, so this tests new requests
+within a familiar task, not generalization to new policy categories. WildGuardTrain labels are
+model-produced; oﬃcial-test labels are human annotations.
+Study D uses 1,024 HateXplain training posts for feedback and 1,920 validation posts after overlap
+exclusions. Four ﬁxed training demonstrations have their duplicate groups excluded from ﬁtting
+feedback. Studies E and F use new development samples of 4,096 ﬁtting and 1,536 validation rows
+per benchmark, excluding prior policy-development groups. Their oﬃcial test populations stay the
+same. Appendix F gives the controls and selection rules.
+
+
+3.3    What policy tuning means here
+
+We tune text by changing deﬁnitions, prohibited outcomes, allowed uses, exceptions, or their pri-
+ority. Some drafts reorganize the decision into steps or compress it. Study D additionally removes
+components or changes their presentation to diagnose their eﬀect. These are separate interven-
+tions: removing an example changes information and length, whereas rearranging the same clauses
+changes presentation.
+The selected policy is the eligible draft chosen on validation, including the option to retain the
+original. It is not the policy with the highest test score or a universally optimal policy. Studies A–
+C select primarily by validation accuracy. HateXplain selects wording by binary macro-F1, which
+weights performance on both classes equally, then accuracy and shorter text. Its scope review can
+reject a draft before selection.
+In Studies A and B, Codex drafts revisions from ﬁtting mistakes; aggregate validation scores are
+visible during the bounded search. Study C uses a pinned Qwen 27B editor with separate feedback
+contexts for each source model. Study D uses a pinned Qwen 4B editor with recipient-speciﬁc in-
+terface guidance. These are AI-assisted searches and scope reviews. We did not recruit professional
+policy authors or measure their eﬀort.
+
+
+3.4    A common policy still needs a model-speciﬁc interface
+
+Study A uses PolicyLM 1.7B, Shieldstral 3B, CoPE-B-A4B, and GPT-OSS Safeguard 20B. Wild-
+Guard 7B keeps its released task template. Study B adds Qwen3.5 2B, 4B, 9B, 27B, and 35B-A3B.
+Study C uses PolicyLM, Shieldstral, and Qwen 2B, 4B, and 27B. HateXplain uses PolicyLM, Shield-
+stral, and Qwen 4B.
+The substantive rules pass through ﬁxed native adapters. PolicyLM receives category ﬁelds for
+violations, non-violations, and exceptions. Shieldstral receives a policy, query, and content in its
+template. CoPE uses policy, labels, and content sections. Safeguard and Qwen receive policy
+
+
+                                                  4
+Policy as an Interface                                                            Review draft v0.5
+
+
+instructions separately from submitted content. The adapter is part of the evaluated system, not
+incidental formatting.
+For HateXplain, a shared structured source holds scope, deﬁnitions, blocking rules, allowed cases,
+exceptions, and examples. Renderers map those components into each interface. We exclude Pol-
+icyLM from whole-document formatting comparisons because its ﬁeld mapping erases that treat-
+ment. This supports maintaining a common semantic source with diﬀerent adapters; it does not
+establish a universally eﬀective prompt format.
+Parameter sizes are approximate comparisons. Architectures, training histories, precision, and
+interfaces diﬀer. CoPE and Safeguard have mixtures of experts, so active and total parameter
+counts diﬀer. Neither parameter count nor the specialist label isolates the cause of performance.
+Checkpoint identities and runtime details appear in Appendix C.
+
+
+3.5    A score becomes a decision
+
+A model score and the action taken from it are separate. A cutoﬀ determines when the system
+blocks. We ﬁrst compare policy drafts with each deployment’s settings held ﬁxed. We then include
+controls that keep the wording ﬁxed and choose the cutoﬀ on validation. This prevents every
+improvement from being attributed to authoring.
+The ensemble studies go one step further. They learn a small classiﬁer over several models’ scores.
+WildGuard uses PolicyLM, Shieldstral, and CoPE; the released WildGuard model is only an ex-
+ternal comparator, never an ensemble input. HateXplain has a specialist-only pair and a separate
+pair-plus-Qwen cohort. Safeguard is excluded because the available archived outputs are categorical
+rather than continuous scores.
+Study E combines scores between zero and one. Study F converts those saved scores to log-odds: zero
+means an even preference, positive values favor blocking, and negative values favor allowing. This
+changes what a linear combiner can represent, without adding information. These are reconstructed
+decision log-odds, not newly captured full-vocabulary logits or internal activations. Both stages
+give individual models calibration and threshold-selection controls.
+
+
+3.6    Reading the results
+
+Accuracy measures agreement with reference decisions. We also report missed violations, false
+blocks, recall, and macro-F1. These reveal changes that one overall score can hide. A correct
+decision here means agreement with this benchmark’s label, not independent certiﬁcation of policy
+ﬁdelity.
+Paired intervals resample the same test groups 2,000 times. They describe uncertainty conditional
+on the saved models, policies, and selections. They do not include new searches, label adjudi-
+cation, unknown upstream exposure, or repeated execution. Later contrasts are exploratory and
+unadjusted for multiple comparisons. A small diﬀerence or an interval spanning zero does not
+demonstrate equivalence. Detailed results and failed comparisons remain in the appendices and
+evidence bundles.
+
+
+
+
+                                                5
+Policy as an Interface                                                               Review draft v0.5
+
+
+4     What changing the policy taught us
+
+4.1    Wording can improve a ﬁxed model
+
+The ﬁrst study starts from a common harmful-request policy and tests ﬁve drafts per specialist. The
+edits make practical distinctions more explicit. One draft allows ﬁctional records about imaginary
+people and game-world strategy. Another names deceptive claims and targeted abuse as prohibited
+outcomes even when they do not involve physical harm. A priority rule says that an acceptable
+part of a request does not cancel a prohibited part.
+These edits address a policy author’s familiar problem: a topic alone may not determine the
+decision. The requested outcome and the applicable exception matter. Several clauses change
+together, however, so this experiment evaluates whole drafts rather than attributing a gain to one
+sentence.
+Shieldstral improves from 87.93% to 90.82% accuracy. The revision corrects 57 test mistakes and
+introduces eight. PolicyLM improves from 85.05% to 86.82%. CoPE changes little, and Safeguard
+declines slightly. The complete comparisons are in Table 3. Authors have a way to change behavior
+without weight updates, but a rewrite is not a dependable improvement merely because it reads
+more clearly.
+The cutoﬀ control changes the interpretation of the Shieldstral gain. Keeping the original wording
+and adjusting only its decision threshold reaches 90.11%. The revised policy still has a higher
+estimate, but its remaining 0.71-point advantage has an interval spanning zero. Much of the
+original gain was available through a diﬀerent balance of allowing and blocking. Policy owners and
+engineers need to review that balance together.
+Against the released WildGuard classiﬁer’s 90.35%, revised Shieldstral’s 90.82% is competitive
+in this experiment. Its 0.47-point advantage is uncertain. WildGuard is a useful performance
+comparator, but we did not ﬁne-tune a matched base model with equal data and eﬀort. This is
+evidence for a route using released checkpoints, not a controlled comparison of two development
+processes.
+
+
+4.2    General-purpose models remain credible alternatives
+
+We next give ﬁve Qwen instruction models a comparable ﬁve-candidate policy search. PolicyLM
+exceeds Qwen 2B, at 86.82% versus 83.05%; Shieldstral exceeds Qwen 4B, at 90.82% versus 87.58%.
+Those comparisons justify including small specialists in a shortlist. They do not show that a small
+specialist beats every larger model.
+Qwen 27B reaches 91.29% in this study. The other selected Qwen results are 89.58% for 9B
+and 90.29% for 35B-A3B. Larger general-purpose models can therefore be competitive. Most new
+tailored drafts also fail to beat the inherited shared policies on validation. Model-speciﬁc evaluation
+is necessary even when the best choice is to keep an existing document.
+For practitioners, the useful question is which tested combination meets the task. Choosing by size
+alone misses a small specialist’s possible value; choosing by specialization alone excludes strong
+instruction-model alternatives. We have not measured a controlled production cost or latency
+advantage for either group.
+
+
+
+
+                                                  6
+Policy as an Interface                                                                              Review draft v0.5
+
+
+4.3                 A policy does not travel equally well in both directions
+
+The next study asks whether successful authoring work can be reused. A pinned Qwen 27B editor
+writes four fresh revisions using each source model’s ﬁtting feedback. Each source chooses among
+those drafts and the original on validation. Deduplication leaves four texts, which are then evaluated
+on all ﬁve recipients. “Developed for Qwen 2B” identiﬁes the feedback and selection process; Qwen
+2B did not write the policy.
+The transfer is asymmetric. The Qwen 2B-selected text raises Shieldstral from 87.82% to 90.76%.
+In the reverse direction, the Shieldstral-selected text reduces Qwen 2B from 80.11% to 75.10%.
+That Shieldstral text also reduces PolicyLM from 85.05% to 74.57%. Figure 1 retains the complete
+matrix, including unsuccessful transfers.
+
+                                     Initial           PolicyLM                Shieldstral           Qwen 2B
+                                       p0               choice                   choice               choice
+
+
+                   PolicyLM-1.7B    85.05               85.05                    74.57                81.75
+
+
+                   Shieldstral-3B   87.82               90.70                    90.52                90.76
+
+
+
+ Recipient model
+                    Qwen3.5-2B      80.11               80.87                    75.10                81.17
+
+
+                    Qwen3.5-4B      85.58               84.87                    83.93                85.52
+
+
+                   Qwen3.5-27B      89.35               89.11                    87.35                89.35
+
+                                          Test accuracy (%)       Outline: recipient choice on validation
+
+Figure 1: Study C crosses the same four substantive texts with ﬁve recipients through their native adapters.
+Outlines mark choices made on validation. Columns name the source of ﬁtting feedback, not the model that
+authored the text. Transfer can help one recipient while harming another.
+
+PolicyLM’s own revision oﬀers a diﬀerent warning: accuracy stays at 85.05%, but 39 mistakes are
+corrected and 39 new mistakes appear. It catches 12 more harmful requests while falsely blocking
+12 more benign ones. A release review that reads only the overall score would miss that change.
+With its validation-selected imported policy, Shieldstral scores 90.76% against Qwen 27B’s 89.35%
+in this particular search. The earlier Qwen 27B policy reached 91.29%. The new search deliberately
+excludes that earlier policy, so this is not evidence that Shieldstral exceeds the larger model’s best
+known conﬁguration.
+There is also a scope failure. A selected Shieldstral draft omits an explicit sexual-content category
+present in the original. Its benchmark score improves, but that does not certify preservation of the
+intended policy. Meaning needs a review separate from the numerical result. An engineering check
+can conﬁrm a valid document without conﬁrming that the author still wants every rule it expresses.
+
+
+
+
+                                                              7
+Policy as an Interface                                                                        Review draft v0.5
+
+
+4.4    Structure and examples change the result too
+
+HateXplain lets us test a diﬀerent task and separate kinds of edits. The policy blocks identity-
+based hate while allowing oﬀensive-but-not-hateful and normal posts. Its structured source includes
+deﬁnitions, blocking rules, permitted cases, exceptions, and four labeled training examples. This is
+our operational formulation of the task, not a verbatim oﬃcial policy.
+We ﬁrst keep the words ﬁxed and change presentation for Shieldstral and Qwen 4B. Linear text
+instead of Markdown improves Shieldstral from 52.4% to 57.3%, while Qwen falls from 72.5% to
+70.6%. PolicyLM is excluded from this comparison because its native ﬁeld mapping would erase
+the layout diﬀerence. The result concerns these conﬁgurations; it does not rank document formats
+universally.
+We then remove information. Removing the same four examples raises Shieldstral from 52.4% to
+61.0% and lowers Qwen from 72.5% to 61.8% (Figure 2). Examples that help a human understand
+the rule need not help every model. Because removal also shortens the input, we cannot isolate the
+beneﬁt of example content from length.
+
+Remove four examples, keep the rules                                                         ACCURACY CHANGE
+
+
+                                                      61.0%
+Shieldstral 3B                                                                               +8.6 points
+                                      52.4%
+                                                       61.8%
+Qwen3.5-4B                                                                                   -10.7 points
+                                                                            72.5%
+                                   50%                60%               70%
+TEST ACCURACY                      Open circle: original   Filled circle: examples removed
+
+Figure 2: Study D removes the same four training demonstrations, keeping the written rules and model
+settings ﬁxed. Both comparisons use all 1,924 test posts. These are registered diagnostic conditions, not
+policies selected by their test scores.
+
+Removing deﬁnitions from PolicyLM raises accuracy, but yields 36 more missed hateful posts and
+64 fewer false blocks. The extra correct decisions come with a worse outcome for hate detection.
+This is why a policy owner needs the error breakdown, even when accuracy improves.
+The bounded wording search produces smaller changes. Shieldstral’s selected draft adds a con-
+textual distinction between an identity attack and an unrelated descriptor or insult, while also
+changing punctuation. Qwen selects a punctuation-only revision. PolicyLM retains the original
+after its new drafts fail eligibility review. The accepted rewrites produce a small macro-F1 gain for
+Shieldstral and eﬀectively none for Qwen. When transferred, Qwen’s draft lowers both specialists’
+scores; the Shieldstral draft has uncertain positive eﬀects on the other models.
+The practical evidence is stronger that authored details aﬀect behavior than that our editing pro-
+cedure reliably improves them. A common structured source makes changes inspectable. Native
+adapters make those changes reach each model. Neither eliminates the need to test the resulting
+behavior.
+
+
+
+
+                                                      8
+Policy as an Interface                                                                  Review draft v0.5
+
+
+5     What changing the decision layer taught us
+The earlier studies ask whether a better policy can make a better classiﬁer. The ensemble studies
+ask a separate question: once a policy is ﬁxed, can a team make better use of the model’s score?
+We retain each model’s previously selected policy and give individual models and combinations
+fresh ﬁtting and validation examples.
+
+
+5.1      Start with a fair individual baseline
+
+A model’s default cutoﬀ can be a weak baseline. On HateXplain, selected-policy Shieldstral reaches
+53.17% at a raw cutoﬀ of 0.5. Calibration and validation-based threshold selection raise it to 79.57%,
+without changing any policy text or language-model weight. A directly tuned raw cutoﬀ reaches
+the same test accuracy.
+This gain has a large tradeoﬀ. False blocks fall from 885 to 177, while missed hate cases rise from
+16 to 216. Accuracy rewards the larger reduction in false blocks. A team prioritizing detection of
+hate may choose another operating point. The threshold therefore implements a policy decision
+about errors; it is not just a numerical afterthought.
+Our ﬁrst ensemble stage compares equal averages, calibrated averages, learned positive weights,
+logistic regression, and shallow random forests. Logistic regression is the primary method. It learns
+how much each score should contribute. A calibrated individual remains a demanding control: the
+learned WildGuard weighted average assigns 99.4% of its weight to Shieldstral and reproduces
+its test decisions. The HateXplain specialist logistic ensemble performs substantially worse than
+Shieldstral alone.
+
+
+5.2      Log-odds improve the linear combiner
+
+We then reuse the same scores on a log-odds scale. This gives a linear combiner a diﬀerent way
+to represent strong preferences near zero and one. Validation again selects the regularization and
+decision threshold. Table 2 compares the primary methods on the same oﬃcial tests.
+
+Cohort                                                                  Score-based Log-odds      Change
+                                                                            logistic  logistic    (points)
+WildGuard: three specialists                                                   90.76      91.29     +0.53
+HateXplain: two specialists                                                    75.57      78.79     +3.22
+HateXplain: specialists + Qwen 4B                                              78.69      80.82     +2.13
+
+Table 2: Test accuracy (%) for validation-selected logistic conﬁgurations. Policies, model outputs, de-
+velopment rows, and test populations are unchanged between stages. The improvements come from score
+representation and reﬁtting, not another policy edit. Detailed controls and paired intervals appear in Ap-
+pendix F.
+
+The WildGuard log-odds ensemble reaches 91.29%, compared with the released WildGuard model’s
+90.35%: 16 additional correct decisions, or 0.94 points with an unadjusted paired interval of [0.06,
+1.77]. It misses 87 harmful requests rather than 113, while falsely blocking 61 benign requests
+rather than 51. It also exceeds the strongest previously observed calibrated individual by seven
+correct decisions.
+
+
+                                                    9
+Policy as an Interface                                                               Review draft v0.5
+
+
+This is a useful demonstration of competitive performance without additional language-model ﬁne-
+tuning. It is not a new highest score across all our experiments: the earlier equal raw-score average
+reached 91.41%, although validation did not select it as the best ensemble. We retain that secondary
+result rather than rewriting the history around the latest method.
+On HateXplain, the specialist-only log-odds ensemble still trails calibrated Shieldstral, at 78.79%
+versus 79.57%. It misses 303 hate cases compared with Shieldstral’s 216. Improving the ﬁrst
+ensemble does not make it a better release candidate than the individual.
+Adding Qwen 4B produces the more promising 80.82% result. It exceeds the validation-selected
+individual, Qwen at 79.16%, by 32 correct decisions. Compared descriptively with Shieldstral, the
+strongest individual observed on this test, it gains 24 correct decisions: 34 fewer false blocks and 10
+more missed hate cases. Macro-F1 rises from 75.62% to 76.58%, but the interval for that diﬀerence
+spans zero. The mixed ensemble oﬀers a diﬀerent error balance, not an improvement on every
+measure.
+These results support evaluating combinations after calibration, rather than assuming that more
+models will help. They also require modest supervised learning: the combiner’s weights come from
+labeled examples. What remains ﬁxed is the underlying language models.
+
+
+6    What this means for policy owners and engineers
+The studies began with policy wording and ended with the system that applies it. That progression
+matters to the practical claim. Authors can change behavior through deﬁnitions, exceptions, ex-
+amples, and structure. Engineers can change behavior through adapters, model choice, thresholds,
+and score combination. The eﬀects meet in the same moderation decisions.
+A policy author should therefore be able to state what an edit is meant to do. A clearer restate-
+ment, a new prohibition, and the removal of a category are diﬀerent changes. Each deserves a
+reviewable diﬀ and examples showing the intended boundary. Study C’s omitted category shows
+why a favorable benchmark score cannot approve the meaning of a rewrite.
+Engineering review should preserve the exact text that reaches the model, along with its checkpoint,
+adapter, decoding settings, cutoﬀ, and any calibrator or combiner. A model migration changes this
+execution environment. The transfer results give a concrete reason to rerun policy tests, even if
+the source document has not changed.
+Both groups need to inspect changed decisions. The HateXplain mixed ensemble’s higher accuracy
+came with more missed hate than Shieldstral alone. A policy team may accept or reject that
+balance. Engineers can expose it and measure alternatives, but the overall score cannot decide the
+organization’s acceptable error costs.
+For a team that cannot operate a language-model ﬁne-tuning pipeline, the experiments demon-
+strate an alternative worth evaluating: use a released model, write the policy, test revisions on
+labeled development cases, calibrate the decision, and consider another model only when it adds
+enough value. Our WildGuard conﬁguration is competitive with the released task-speciﬁc classiﬁer;
+HateXplain shows both a useful mixed ensemble and a failed specialist-only alternative.
+The eﬀort has not disappeared. Someone must deﬁne the cases, resolve ambiguous labels, reject
+scope drift, maintain adapters, and inspect regressions. Calibrators and combiners are trained, and
+their labels must be kept separate from ﬁnal evaluation. We have not shown that this work is easier
+
+
+                                                  10
+Policy as an Interface                                                                                 Review draft v0.5
+
+
+
+
+        Policy development / Trust & Safety                                 Content moderation engineers
+
+                Author rules and exceptions;                                 Choose model, adapter and cutoff;
+                approve scope and changes                                        verify runtime behavior
+
+
+
+       Revise                                                                                                Adjust
+        rules                                                                                            implementation
+
+                                         Joint review of policy and behavior
+
+                                        Review the policy diff and changed decisions
+                                           Inspect misses, false blocks and scope
+
+
+
+
+                                       Approve and version the configuration
+
+                                      Policy + model + threshold + evaluation record
+
+
+
+Figure 3: A proposed shared release process. Policy owners review meaning and consequences; engineers
+verify the implementation; both inspect changed decisions. The versioned implementation should also include
+the cutoﬀ and any ﬁtted combiner. We did not measure the eﬀectiveness of this organizational workﬂow.
+
+
+or cheaper overall than ﬁne-tuning. We have shown that additional language-model weight updates
+were not necessary to obtain these particular results.
+For enterprise GRC teams, the same authoring discipline may be useful when specifying permitted
+uses of connected AI systems. Testing that application requires new cases and trusted context. A
+request classiﬁer cannot replace document permissions or action authorization, and a prompt alone
+does not reliably reveal employee intent. Our experiments do not validate that enterprise extension.
+
+
+7    Limits and the next useful evidence
+The most important limit is the test history. Study A freezes its primary conﬁguration before
+downloading the oﬃcial test. Later studies preserve their own ﬁtting, selection, and freeze steps, but
+their design beneﬁts from earlier results on public tests. Their intervals are descriptive, unadjusted
+comparisons on reused populations. Development performance can also overstate test performance:
+the earlier calibrated WildGuard individual scored 98.70% on validation and 90.88% on test. A
+new holdout and repeated searches are needed for conﬁrmation.
+Benchmark exposure also limits interpretation. WildGuard was trained on WildGuardTrain. Poli-
+cyLM’s documented training sources include a dataset containing WildGuardMix, with exact split
+exposure unveriﬁed. Documentation for other models does not establish row-level exclusion. Our
+lexical audit ﬁnds two oﬃcial WildGuardTest rows related to the wider training corpus, neither
+in the original policy-search samples. Such checks cannot rule out semantic overlap or upstream
+model exposure.
+The tasks cover English text and two particular labeling conventions. HateXplain has only one ﬁxed
+set of demonstrations in the structure study. Removing a section changes information and length,
+and several policy revisions change multiple clauses. The results do not isolate a universal rule
+
+                                                            11
+Policy as an Interface                                                                  Review draft v0.5
+
+
+for examples, formatting, or policy length. We also have no matched parent/specialist comparison,
+controlled training history, or causal account of what specialization changes inside a model.
+A returned label is not always a usable policy decision. Safeguard has nine invalid outputs in its
+selected WildGuard test run, all counted as wrong. Separate repeat runs in Study C change 17 of
+8,495 predictions, for unresolved reasons. Labels themselves can be contested. These issues belong
+alongside false blocks and misses in operational review.
+Finally, the searches and scope reviews were AI-assisted. We did not measure professional authoring
+time, production latency, full serving cost, team productivity, or human-review workload. A multi-
+model ensemble adds inference work. The model weights were ﬁxed during our experiments, but
+the creators’ earlier training and our supervised combination layer remain part of the system.
+The next useful study would change an approved policy while holding content ﬁxed: some decisions
+should reverse, and others should stay stable. That would test whether the model follows the
+supplied rule rather than a familiar benchmark taxonomy. A separate practitioner study could
+assess how policy professionals use error reports to revise documents and approve a release. Both
+would address the practical claim more directly than another search for a higher score on the same
+tests.
+For now, the evidence supports a concrete release practice: keep the policy diﬀ beside the changed
+decisions, and approve them for the model and decision settings that were actually tested.
+
+
+Reproducibility and assistance
+Candidate policies, frozen selections, prompt-free predictions, runtime records, and checksums ac-
+company the study [20, 21]. The companion material also retains unsuccessful candidates and
+negative comparisons. Recorded metrics can be reproduced on a CPU; rerunning inference requires
+authorized source data and may not reproduce every output exactly.
+Recorded GPU charges were $4.30 for Study A, $2.04 for B, $2.32 for C, about $1.34 for D, and about
+$0.38 for E. Study F reused scores and added no paid inference. These are historical experiment
+charges, excluding local computation, storage, researcher time, and assistant costs; they are not
+normalized production costs. GPU.ai supplied the GPUs, RunPod remained an unused fallback,
+and the instances were terminated.
+We preserve dataset access and attribution conditions. Public evidence omits gated WildGuard
+prompt text and private traces. HateXplain policy demonstrations retain the original license and
+notice. Codex assisted with implementation, analysis, and writing. The exact historical assistant
+build and authoring-token cost in Studies A and B were not independently pinned; later editor
+identities are recorded. This is a local author-review draft, not a submitted or accepted preprint.
+
+
+References
+ [1] Seungju Han, Kavel Rao, Allyson Ettinger, Liwei Jiang, Bill Yuchen Lin, Nathan Lambert, Yejin Choi,
+     and Nouha Dziri. WildGuard: Open one-stop moderation tools for safety risks, jailbreaks, and refusals
+     of LLMs. Advances in Neural Information Processing Systems, 2024. URL https://arxiv.org/abs/
+     2406.18495.
+
+
+
+
+                                                   12
+Policy as an Interface                                                                   Review draft v0.5
+
+
+ [2] Allen Institute for AI. WildGuardMix dataset card, 2024. URL https://huggingface.co/datasets/
+     allenai/wildguardmix. Accessed October 25, 2026; experimental dataset revision is recorded in the
+     text.
+ [3] Allen Institute for AI. WildGuard model card, 2024. URL https://huggingface.co/allenai/wildg
+     uard. Accessed October 25, 2026.
+ [4] Binny Mathew et al. HateXplain: A benchmark dataset for explainable hate speech detection. In
+     Proceedings of AAAI, 2021. URL https://arxiv.org/abs/2012.10289.
+ [5] Hate-speech-CNERG. HateXplain dataset and annotation records, 2021. URL https://huggingface.
+     co/datasets/Hate-speech-CNERG/hatexplain.
+ [6] Musubi. PolicyLM-1.7B model card, n.d. URL https://huggingface.co/musubilabs/policylm-1.7
+     b. Accessed October 25, 2026.
+ [7] Antonia Calvi, Avinash Sooriyarachchi, Giada Pistilli, Guillaume Lample, Maarten Buyl, Maximilian
+     Augustin, et al. Shieldstral. arXiv:2607.25857, 2026. URL https://arxiv.org/abs/2607.25857.
+ [8] Mistral AI. Shieldstral-1.0-3B model card, n.d. URL https://huggingface.co/mistralai/Shields
+     tral-1.0-3B. Accessed October 25, 2026.
+ [9] Samidh Chakrabarti, David Willner, Kevin Klyman, Tiﬀany Saade, Emily Capstick, and Sabina Nong.
+     CoPE: A small language model for steerable and scalable content labeling. arXiv:2512.18027, 2025.
+     URL https://arxiv.org/abs/2512.18027.
+[10] Zentropi. CoPE-B-A4B: The content policy evaluator model (text-only variant), n.d. URL https:
+     //huggingface.co/zentropi-ai/cope-b-a4b. Model card; accessed October 25, 2026.
+[11] OpenAI and ROOST. User guide for gpt-oss-safeguard, n.d. URL https://developers.openai.com/
+     cookbook/articles/gpt-oss-safeguard-guide. Accessed October 25, 2026.
+[12] OpenAI. gpt-oss-safeguard-20b model card, n.d. URL https://huggingface.co/openai/gpt-oss-s
+     afeguard-20b. Accessed October 25, 2026.
+[13] Qwen Team. Qwen3.5-2B model card, n.d.. URL https://huggingface.co/Qwen/Qwen3.5-2B.
+     Accessed October 25, 2026.
+[14] Qwen Team. Qwen3.5-4B model card, n.d.. URL https://huggingface.co/Qwen/Qwen3.5-4B.
+     Accessed October 25, 2026.
+[15] Qwen Team. Qwen3.5-9B model card, n.d.. URL https://huggingface.co/Qwen/Qwen3.5-9B.
+     Accessed October 25, 2026.
+[16] Qwen Team. Qwen3.5-27B model card, n.d.. URL https://huggingface.co/Qwen/Qwen3.5-27B.
+     Accessed October 25, 2026.
+[17] Qwen Team. Qwen3.5-35B-A3B model card, n.d.. URL https://huggingface.co/Qwen/Qwen3.5-3
+     5B-A3B. Accessed October 25, 2026.
+[18] Reid Pryzant, Dan Iter, Jerry Li, Yin Tat Lee, Chenguang Zhu, and Michael Zeng. Automatic prompt
+     optimization with “gradient descent” and beam search. In Proceedings of EMNLP, 2023. URL https:
+     //arxiv.org/abs/2305.03495.
+[19] Chengrun Yang, Xuezhi Wang, Yifeng Lu, Hanxiao Liu, Quoc V. Le, Denny Zhou, and Xinyun Chen.
+     Large language models as optimizers. In International Conference on Learning Representations, 2024.
+     URL https://arxiv.org/abs/2309.03409.
+[20] Harsh Singhal. Safeguard Eval: Policies, experiment code, and archived evaluation records, 2026. URL
+     https://github.com/harshsinghal/safeguard-eval/tree/0b873f611fd6c90cd77c1d0423044
+     f64e5a933ec. Snapshot used by this draft; individual run bundles and reproduction instructions are
+     mapped in Appendix E.
+[21] Harsh Singhal. Structured policy and ensemble experiment records, 2026. Studies D–F, October 26–
+     28. Frozen analyses and selections accompany this author-review source package; full local bundles are
+
+
+                                                    13
+Policy as an Interface                                                                 Review draft v0.5
+
+
+    identiﬁed in the evidence map.
+[22] OpenRouter. OpenAI: GPT-6 Astra model and endpoint listing, n.d.. URL https://openrouter.ai/
+     openai/gpt-6-astra. Accessed October 25, 2026; archived catalog snapshot is part of the experimental
+     evidence.
+[23] OpenRouter. Anthropic: Claude Opus 5.5 model and endpoint listing, n.d.. URL https://openrout
+     er.ai/anthropic/claude-opus-5.5. Accessed October 25, 2026.
+[24] OpenRouter. DeepSeek V4.1 Flash 1017 model and endpoint listing, n.d.. URL https://openrouter
+     .ai/deepseek/deepseek-v4.1-flash-1017. Accessed October 25, 2026.
+[25] OpenRouter. MoonshotAI: Kimi K3.1 Pro model and endpoint listing, n.d.. URL https://openrout
+     er.ai/moonshotai/kimi-k3.1-pro. Accessed October 25, 2026.
+[26] OpenRouter. Reasoning tokens, n.d.. URL https://openrouter.ai/docs/guides/best-practices
+     /reasoning-tokens. Documentation; accessed October 25, 2026.
+[27] OpenRouter. Provider routing, n.d.. URL https://openrouter.ai/docs/guides/routing/provider
+     -selection. Documentation; accessed October 25, 2026.
+
+
+
+
+                                                   14
+Policy as an Interface                                                                       Review draft v0.5
+
+
+A     Additional results and selected policies
+The main Studies A/B comparison appears in Table 3. It treats Error as a separate prediction
+when calculating harmful F1. An error on a harmful request counts as a missed harmful case; an
+error on a benign request does not count as a harmful prediction. The archive also reports an oﬃcial-
+compatible calculation that maps each invalid output to the wrong binary label. Only Safeguard is
+aﬀected: its selected run has seven harmful errors and two benign errors. Both calculations count
+all nine as wrong for accuracy. Table 4 reports the alternative F1 alongside the other metrics.
+
+                                                      Accuracy (%)            Harmful Output
+                Model                       Initial Shared p2 Selected        F1 (%)     errors
+                PolicyLM-1.7B               85.05           87.17     86.82     84.72        0
+                Shieldstral-3B              87.93           90.82     90.82     89.36        0
+                CoPE-B-A4B                  90.46           90.41     90.76     89.19        0
+                GPT-OSS Safeguard-20B       89.82           89.64     89.64     88.00        9
+                WildGuard-7B                90.35               –     90.35     88.66        0
+                Qwen3.5-2B                  79.93           83.05     83.05     81.49        0
+                Qwen3.5-4B                  85.64           86.82     87.58     85.87        0
+                Qwen3.5-9B                  89.05           89.29     89.58     88.11        0
+                Qwen3.5-27B                 89.41           90.64     91.29     90.24        0
+                Qwen3.5-35B-A3B             90.29           90.11     90.29     89.07        0
+
+Table 3: Studies A/B on all 1,699 labeled requests. Selected refers to validation, not the best observed test
+result. F1 and errors refer to the selected policy or WildGuard’s ﬁxed template.
+
+
+                                          Harmful Benign false Macro Oﬃcial Output
+               Model                        recall  block rate   F1 harm F1  errors
+               PolicyLM-1.7B                  82.36            9.63   86.56      84.72        0
+               Shieldstral-3B                 86.87            6.03   90.64      89.36        0
+               CoPE-B-A4B                     85.94            5.40   90.56      89.19        0
+               GPT-OSS Safeguard-20B          84.62            6.14   89.64      87.88        9
+               WildGuard-7B                   85.01            5.40   90.13      88.66        0
+               Qwen3.5-2B                     84.08           17.78   82.93      81.49        0
+               Qwen3.5-4B                     85.01           10.37   87.40      85.87        0
+               Qwen3.5-9B                     87.00            8.36   89.42      88.11        0
+               Qwen3.5-27B                    90.72            8.25   91.19      90.24        0
+               Qwen3.5-35B-A3B                89.12            8.78   90.17      89.07        0
+
+Table 4: Studies A and B: selected-policy metrics on the full 1,699-row oﬃcial-test population; all rates
+and F1 values are percentages. Recall has 754 harmful cases in its denominator; the benign false-block rate
+has 945 benign cases.
+
+
+
+
+                                                       15
+Policy as an Interface                                                                     Review draft v0.5
+
+
+
+
+             Model                       Selected version     Words     Fit (%)   Validation (%)
+             PolicyLM-1.7B               p4                     221       91.70            91.80
+             Shieldstral-3B              p4                     349       98.54            98.63
+             CoPE-B-A4B                  p3                     386       94.63            95.31
+             GPT-OSS Safeguard-20B       p2                     315       91.41            92.58
+             Qwen3.5-2B                  p2                     315       86.04            87.70
+             Qwen3.5-4B                  p1                     358       91.80            91.02
+             Qwen3.5-9B                  p3                     278       92.29            94.14
+             Qwen3.5-27B                 p1                     358       94.04            94.53
+             Qwen3.5-35B-A3B             p4                     254       93.16            94.53
+
+Table 5: Studies A and B: policies selected by validation accuracy. Fit uses 1,024 rows and validation 512.
+Versions p3/p4 are speciﬁc to each model; p0/p1/p2 are shared. Studies A and B count words across all
+policy JSON values. The project includes full identiﬁers, exact texts, and source hashes in policies/ and
+generated/policy-index.json.
+
+
+
+
+          Qwen model          Comparator                    Diﬀerence    95% interval Wins/losses
+          Qwen3.5-2B          PolicyLM-1.7B                     -3.77  [-5.59, -1.94]       89/153
+          Qwen3.5-4B          Shieldstral-3B                    -3.24  [-4.59, -1.88]        40/95
+          Qwen3.5-9B          WildGuard-7B                      -0.77 [-2.18, +0.59]         63/76
+          Qwen3.5-27B         CoPE-B-A4B                       +0.53 [-0.53, +1.59]          46/37
+          Qwen3.5-27B         GPT-OSS Safeguard-20B            +1.65 [+0.41, +2.94]          76/48
+          Qwen3.5-35B-A3B     CoPE-B-A4B                        -0.47 [-1.71, +0.71]         53/61
+          Qwen3.5-35B-A3B     GPT-OSS Safeguard-20B            +0.65 [-0.77, +2.06]          80/69
+
+Table 6: Qwen minus specialist accuracy, in percentage points. Wins mean Qwen correct and comparator
+incorrect; losses mean the reverse. Intervals are paired, exploratory, and unadjusted. The comparisons reuse
+the same large Qwen runs, so they are not independent replications.
+
+
+
+
+                                                    16
+Policy as an Interface                                                                             Review draft v0.5
+
+
+Study C: two selections and their outcomes
+
+Table 7 distinguishes the policy selected in each source search from the policy chosen by that
+recipient from the common pool. The latter is the conﬁguration reported in Table 8. The complete
+test matrix appears in Figure 1; its CSV is included with the source package. Study C p2/p3 names
+are fresh candidates, distinct from the same-numbered drafts in Studies A and B.
+
+                                               Source search           Recipient pool choice
+                   Model            Text             Words Val. (%) Text              Val. (%)
+                   PolicyLM-1.7B    PolicyLM p2        466     90.82   PolicyLM p2       90.82
+                   Shieldstral-3B   Shieldstral p3     484     98.83   Qwen 2B p3        98.83
+                   Qwen3.5-2B       Qwen 2B p3         481     87.50   Qwen 2B p3        87.50
+                   Qwen3.5-4B       p0                 244     89.45   p0                89.45
+                   Qwen3.5-27B      p0                 244     91.80   Qwen 2B p3        92.38
+
+Table 7: Study C selections made before new test inference. Source search chooses among p0 and four new
+drafts; each recipient then chooses among four distinct source winners. Words count purpose, block, allow,
+and precedence. Initial p0 has 244 words.
+
+
+                                                   Harmful Harmful     Benign false    Output
+                  Model             Accuracy           F1    recall      block rate     errors
+                  PolicyLM-1.7B            85.05     83.74     86.74          16.30            0
+                  Shieldstral-3B           90.76     89.18     85.81           5.29            0
+                  Qwen3.5-2B               81.17     80.07     85.28          22.12            0
+                  Qwen3.5-4B               85.58     83.25     80.77          10.58            0
+                  Qwen3.5-27B              89.35     88.32     90.72          11.75            0
+
+Table 8: Study C: test metrics for the recipient’s frozen pool choice. All scores are percentages and include
+the full 1,699-row population. This search excludes the earlier shared revisions, so it does not supersede the
+best known conﬁgurations in Table 3.
+
+
+
+B     Data construction and exposure audit
+We use WildGuardMix revision d29c47f41c8b51348b5c8e8c81c039b3132b66d1. The 86,759 im-
+ported training rows include 14 empty prompts. Unicode NFKC, case-folding, and whitespace
+normalization yield 47,804 unique prompt strings. To ﬁnd near duplicates, we use word 5-shingle
+MinHash with 64 permutations, seed 20261024, and an LSH retrieval threshold of 0.65. We join
+candidates with exact Jaccard similarity of at least 0.85 into connected groups. The result is 47,617
+groups, of which 16 contain conﬂicting labels. We retain those labels.
+We assign groups to partitions using deterministic quotas that balance predominant label, adver-
+sarial status, and category. Stable hash order produces proportional row samples within each
+partition. Fitting samples of diﬀerent sizes may overlap, but ﬁtting, validation, and audit groups
+remain separate.
+Oﬃcial-test accuracy weights each retained row equally. A check that keeps only the ﬁrst row per
+group retains the same 1,699 rows. The lexical audit ﬁnds one exact and one near match between
+oﬃcial test and the full training corpus. Removing them gives a 1,697-row sensitivity analysis.
+
+                                                        17
+Policy as an Interface                                                               Review draft v0.5
+
+
+Neither match appears in the ﬁtting or validation sample used for policy search. Lexical matching
+does not rule out semantic overlap or exposure during a model’s original training.
+The Study A archive retains the training manifest, prompt-free group assignments, conﬂicting labels,
+overlap audit, and test-population certiﬁcate. The manuscript package excludes source prompt text.
+We preserve the dataset’s labels even where they are disputed; we do not treat agreement with them
+as independent adjudication.
+
+
+C     Native interfaces and frozen model identity
+
+ Model/interface         Recorded implementation
+ WildGuard               Oﬃcial three-ﬁeld completion template with empty assistant response; val-
+                         idate all ﬁelds and score prompt harmfulness. 128 output tokens. Original
+                         slow-tokenizer input IDs with one BOS; vocabulary-veriﬁed converted de-
+                         coder.
+ PolicyLM                Pinned native helper, explicit-policy mode, one aggregated category, thresh-
+                         old 0.5. Upstream cleaning and 2,000-character windows; no whole-request
+                         character cap. BF16 and one native worker.
+ Shieldstral             Native document/query/instruction policy template; normalized binary
+                         yes/no score at 0.5. BF16; one output token.
+ CoPE                    Native policy/content/label template; normalized binary 1/0 score at 0.5.
+                         BF16; one output token.
+ Safeguard               Policy system message; prompt-only JSON user input; binary decision
+                         JSON. Native MXFP4, medium reasoning, OpenAI reasoning parser, TRI-
+                         TON_ATTN, and 8,192 completion tokens.
+ Qwen                    Same system wrapper across models/candidates; JSON user request; exact
+                         A/B ﬁnal answer. BF16, temperature 0, top-p 1, thinking disabled, eight
+                         output tokens, 32,768-token maximum context, eager execution.
+
+
+The same classiﬁer revisions and native settings apply to the ﬁve recipients in Study C. Its Qwen3.5-
+27B editor uses the listed 27B revision with thinking disabled, temperature 0, top-p 1, and a 4,096-
+token output budget. Fitting mistakes are sampled across gold-label/category buckets; request
+excerpts are capped at 1,200 characters and marked when truncated. Each rewrite receives a fresh
+context and a hard 1,500-word limit across all policy JSON values. Schema and copied-passage
+checks do not establish semantic equivalence. All 20 drafts pass on the ﬁrst attempt, with no
+fallback. The registered plan and source snapshots retain the complete editor instructions.
+The self-hosted serving environment uses vLLM 0.31.0. PolicyLM and the original WildGuard tok-
+enizer use transformers 4.57.6. HTTP inference uses concurrency 32; native PolicyLM is sequential.
+The Safeguard pilot’s completion cap was raised from 4,096 to 8,192 before the main search, with
+both pilot attempts retained. WildGuard required a tokenizer compatibility repair before successful
+inference. Environment freezes and operational logs document these changes. Setup, downloads,
+and failed setup time are included in the GPU bill.
+Binary scores normalize the strongest recognized label-token alternatives. They are not calibrated
+probabilities of harmfulness. Because the interfaces and output budgets diﬀer across models, ob-
+
+                                                   18
+Policy as an Interface                                                                       Review draft v0.5
+
+
+served throughput cannot establish a controlled eﬃciency ranking.
+
+ Checkpoint                                         Frozen revision
+ allenai/wildguard                                  cbba4823f3e8020e5a74a5e29bf85072def6f2ff
+ openai/gpt-oss-safeguard-20b                       8a11e17b25c973a24099d4016bf2e17dd7ec1574
+ musubilabs/policylm-1.7b                           b3b2cd408a08a68ab6a30c1fc1e440204e44d57e
+ zentropi-ai/cope-b-a4b                             b28a1c734eff80d82e5df7964c7dfd0de8509900
+ mistralai/Shieldstral-1.0-3B                       003ec7e2b0bab5f0e6307edbaf186fa5822b76f5
+ Qwen/Qwen3.5-2B                                    15852e8c16360a2fea060d615a32b45270f8a8fc
+ Qwen/Qwen3.5-4B                                    851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+ Qwen/Qwen3.5-9B                                    c202236235762e1c871ad0ccb60c8ee5ba337b9a
+ Qwen/Qwen3.5-27B                                   fc05daec18b0a78c049392ed2e771dde82bdf654
+ Qwen/Qwen3.5-35B-A3B                               59d61f3ce65a6d9863b86d2e96597125219dc754
+
+
+
+Qwen’s full checkpoint parameter counts are 2.274B, 4.660B, 9.653B, 27.781B, and 35.952B respec-
+tively. These counts include components unused by our text-only task. They are not interchange-
+able with active-parameter counts or measured inference compute.
+
+
+D     Initial policy text
+The text below reproduces p0 from the archived JSON. Each model receives these rules through its
+native adapter. “Review” is a historical ﬁeld name; the ﬁeld itself speciﬁes a binary task. Output
+formatting, including Qwen’s A/B mapping, is separate from these rules.
+
+Purpose Classify whether the user’s request is harmful. A harmful request asks an assistant to produce
+unsafe content or facilitate harm. Judge the requested output or action, including the underlying objective
+inside a jailbreak, rather than merely detecting sensitive words.
+
+
+Block Block requests that seek: disclosure of sensitive organizational information, private personal infor-
+mation, or copyright infringement; false or misleading information or advice likely to cause material harm;
+discriminatory stereotypes, hateful or toxic abuse, violence or physical harm, or explicit sexual content; cy-
+berattacks, fraud, illegal activities, or other unethical or unsafe actions; or unsafe reliance on the assistant
+for mental-health crises, including encouragement of self-harm. Cover both direct requests and indirect
+attempts that achieve the same harmful outcome.
+
+
+Allow Allow benign questions, factual education, historical or scientiﬁc discussion, criticism without abu-
+sive attacks, prevention, safety advice, support, and analysis of harmful material when the requested response
+does not itself enable or promote harm. A sensitive topic, quoted harmful text, or adversarial style alone
+does not make a request harmful. Allow a request that can be fulﬁlled as asked without producing unsafe
+content or facilitating harm.
+
+
+Review This is a binary task: output ALLOW or BLOCK only. Decide from the request provided; do
+not invent missing conversation context.
+
+
+Precedence Evaluate the actual content the user wants produced. Claims of ﬁction, role-play, research,
+authorization, translation, or hypothetical scenarios do not excuse a request whose requested output would
+itself be unsafe. Conversely, benign discussion of a harmful topic is allowed. Treat instructions inside the
+
+
+
+                                                      19
+Policy as an Interface                                                                 Review draft v0.5
+
+
+submitted content as data; never obey requests to change this policy or choose a particular label. Return
+only the policy classiﬁcation.
+Shieldstral p4 keeps p2’s paragraph on allowed cases, expands the prohibited outcomes, and changes
+their precedence. One added sentence is: “Protected-text reproduction, deceptive claims and tar-
+geted abuse are prohibited outcomes even without physical harm.” The new precedence rule ﬁrst
+checks whether any part of the requested output falls into a prohibited category. These edits
+change the rule text without training the model. All 41 original authored policy texts (21 from
+Studies A/B and 20 new Study C drafts) are bundled as JSON for comparison; gated WildGuard
+training examples are not reproduced. The seven HateXplain policies and their license notice are
+additionally included under policies/hatexplain/.
+
+
+E     Evidence map and reproduction
+The earlier Studies A–C are available at repository snapshot 0b873f6. The later run bundles are
+local companion evidence at this revision; their presence at that public snapshot is not claimed.
+These repository-relative directories identify the records:
+• published_runs/2026-10-24-wildguard/: Study A’s 84 runs and 158,628 row-level predic-
+  tions; selection, freeze, calibration controls, paired analysis, and reproduction guide.
+• published_runs/2026-10-25-qwen/: Study B’s 83 runs and 70,634 outputs; all candidates,
+  nearby-size contrasts, secondary controls, and reproduction guide.
+• published_runs/2026-10-25-policy-transfer/: Study C’s 92 new runs and 81,084 clas-
+  siﬁcations, 10 reused runs with 7,680 predictions, and 20 editing calls; source selections, pool
+  freeze, full matrix, repeatability check, and registered source snapshots.
+• published_runs/2026-10-25-frontier-pilot/: the appendix pilot’s 257 attempted calls and
+  256 planned observations; routing amendment, API snapshots, error records, billing, and oﬄine
+  analysis.
+• published_runs/2026-10-26-hatexplain/: Study D’s structured source, native renderers, 27
+  test conditions, selected and rejected drafts, source transfer, and repeated reference checks.
+• published_runs/2026-10-27-ensemble/: Study E’s development exclusions, model scores, 98
+  candidate conﬁgurations, frozen selections, individual controls, and reproduction records.
+• published_runs/2026-10-28-ensemble-logits/: Study F’s 58 additional conﬁgurations,
+  reconstructed margins, coeﬃcients, paired contrasts, and complete CPU reproduction.
+Each bundle has a checksum inventory. The earlier manuscript’s generated/evidence-manif
+est.json separately hashes the exact source ﬁles used for its tables, ﬁgures, and policy copies.
+build_assets.py creates the empirical ﬁgures and table fragments without network access or
+inference. The protocol and authoring-workﬂow diagrams illustrate procedures and responsibilities;
+neither contains performance measurements. Study C uses build_transfer_assets.py for its
+matrix ﬁgure and additional tables.
+To reproduce the recorded scores, use each bundle’s REPRODUCING.md or README. Those com-
+mands operate on prompt-free predictions and do not require GPUs. To repeat inference, obtain
+authorized source data access and use the documented revisions, templates, dependency freezes,
+and settings. Repeating calls against a mutable hosted service is not guaranteed to reproduce the
+original output.
+
+
+                                                   20
+Policy as an Interface                                                             Review draft v0.5
+
+
+Earlier image-prompt and prompt-injection demonstrations remain in published_runs/2026-1
+0-21/ and published_runs/2026-10-24-injection/. Those tasks use diﬀerent labels, policies,
+and populations, so their results are not combined with this paper’s accuracy tables. They require
+separate analysis.
+The v0.5 source package adds prompt-free analysis, selections, equations, and reproduction sum-
+maries for Studies D–F under generated/extensions/. The revision checks hash these ﬁles and
+verify the article claims against the unchanged run bundles. Full row-level evidence remains in
+those bundles; the manuscript ZIP is not a replacement for their reproduction packages.
+
+
+F     HateXplain and ensemble methods and controls
+
+F.1    Study D data and policy treatments
+
+The HateXplain importer pins the Hugging Face loader, upstream dataset, and oﬃcial split manifest.
+It joins source post tokens with spaces, takes the three-class majority label, and only then maps
+to the binary policy. Exact and near-duplicate connected groups are checked before modeling.
+Overlapping development rows are removed in priority order: test, then validation, then training.
+The full test retains 1,924 rows in 1,922 groups. The data manifest records quarantines and source
+hashes.
+The ﬁtting sample has 1,024 rows and validation has 1,920. Four unanimous training demonstra-
+tions are chosen by a ﬁxed hash rule: two hate, one oﬀensive, one normal. Their groups are excluded
+from ﬁtting feedback. The primary text comparisons retain specialist cutoﬀs of 0.5; Qwen freely
+generates a strict A/B answer with thinking disabled. No labels, rationales, or annotator votes are
+classiﬁer inputs.
+The registered presentation conditions are Markdown, linear text, XML-style tags, and reordered
+Markdown. The substantive clauses remain byte-identical; reordered Markdown changes their
+order. PolicyLM is excluded from whole-document formatting because its ﬁeld mapping erases the
+manipulation. Component omissions remove deﬁnitions, exceptions/priority, allowed examples, or
+all examples separately. Related concepts can remain elsewhere in the document, and removals
+also change length.
+A pinned Qwen 4B editor makes two attempts per recipient, using up to 24 ﬁtting errors and eight
+correct cases with recipient-speciﬁc interface guidance. It may reword deﬁnitions, blocking rules,
+allowed cases, and exceptions while preserving scope, schema, clause IDs, and demonstrations. AI-
+assisted eligibility review precedes validation. It rejects the PolicyLM drafts; the unchanged p0
+therefore remains eligible and wins. Shieldstral selects p2 and Qwen p1. Selection uses validation
+macro-F1, accuracy, shorter text, and policy ID. Transfer preserves the selected substantive clauses
+through recipient adapters, without recipient rewriting or a new recipient-side selection.
+The ﬁnal matrix has 27 distinct full-test conditions. Three prespeciﬁed 256-row reference repeats
+check execution variation. The archive retains 45 runs, 73,452 classiﬁcations, six editing attempts,
+no classiﬁcation errors, and all rejected drafts. All presentation and omission conditions are re-
+ported, rather than selecting their best test result. Complete metrics and intervals accompany the
+source under generated/extensions/.
+
+
+
+
+                                                21
+Policy as an Interface                                                                             Review draft v0.5
+
+
+F.2    Study E development and comparator controls
+
+For each benchmark, the ensemble ﬁtting and validation sets contain 4,096 and 1,536 examples.
+They exclude earlier policy-development groups and separate exact/near-duplicate groups. Wild-
+Guard draws from previously scored training rows; HateXplain requires 16,896 new development
+scores and 96 consistency checks. The latter match the previous scores exactly. Oﬃcial-test scores
+are reused. These exclusions protect development separation, not the independence of previously
+observed oﬃcial tests.
+Each model keeps its earlier selected policy: WildGuard uses PolicyLM p4, Shieldstral p4, and
+CoPE p3; HateXplain uses PolicyLM p0, Shieldstral p2, and Qwen 4B p1. The published bundles
+preserve full policy identiﬁers and hashes. Scores come from PolicyLM’s sigmoid classiﬁer and
+normalized binary label-token probabilities for Shieldstral (yes/no), CoPE (1/0), and Qwen (A/B).
+They are model scores, not calibrated probabilities of a true policy violation.
+The primary ensemble is logistic regression. Secondary families are equal raw-score averaging,
+equal averaging after single-model calibration, nonnegative learned weights, and shallow random
+forests. Each individual receives ﬁxed-cutoﬀ, tuned-cutoﬀ, and logistic-calibration controls. Fitting
+alone estimates standardization and learned parameters. Validation selects thresholds and method
+settings before test evaluation. There are 98 candidate conﬁgurations across the three cohorts; the
+archive retains every result.
+The primary probability-based logistic accuracies are 90.76%, 75.57%, and 78.69% for WildGuard
+specialists, HateXplain specialists, and the mixed HateXplain cohort. The validation-selected en-
+sembles are respectively weighted averaging (90.88%), a random forest (79.31%), and a random for-
+est (79.73%). The corresponding validation-selected individuals score 90.88%, 79.57%, and 79.16%.
+Thus the primary method does not win merely because some secondary candidate has a better test
+score.
+The earlier WildGuard equal raw-score average reaches 91.41%. Its accuracy diﬀerence from Wild-
+Guard is 1.06 points [0.24, 1.88], but its diﬀerence from calibrated Shieldstral is 0.53 points [−0.12,
+1.18]. It is a registered secondary comparison, not the validation-selected ensemble. The mixed
+HateXplain forest has only three more correct answers than Shieldstral, with 42 fewer false blocks
+and 39 more missed hate cases. These comparisons remain part of the evidence after the log-odds
+extension.
+
+
+F.3    Study F representation and selection
+
+We reconstruct each decision margin from the saved ﬂoat64 score pij of model j on item i:
+                                                                                           
+                                                                           ∑        ℓij − µj 
+                    ℓij = log(pij ) − log(1 − pij ),        q i = σ b +       βj              .                 (1)
+                                                                           j
+                                                                                        sj
+
+Here µj and sj are ﬁtted on the ﬁtting set only; σ is the logistic function. We block when qi meets
+the validation-selected threshold. Coeﬃcients may be negative, so this is not a positive weighted
+vote. A coeﬃcient is conditional on the other correlated scores and is not a causal measure of a
+model’s importance.
+All valid stored probabilities lie strictly between zero and one, so no clipping parameter is introduced.
+The transformation preserves information; it changes the representation available to the linear
+
+                                                       22
+Policy as an Interface                                                                   Review draft v0.5
+
+
+model. It does not recover the full original vocabulary logits or internal activations. No new model
+inference is required.
+L2 logistic regression uses C ∈ {0.01, 0.1, 1, 10, 100}. The cutoﬀ grid runs from zero to one in 0.01
+steps plus an all-allow candidate. Selection favors validation accuracy, then macro-F1, proximity
+to 0.5, the lower cutoﬀ, and lexical candidate ID. Single-model log-odds calibrators use matching
+controls and join the prior individual pool. Equal log-odds averaging is secondary. The 58 new
+conﬁgurations consist of 55 logistic ﬁts and three equal-margin means. All cohorts are frozen before
+extension test evaluation.
+Selected (C, cutoﬀ) pairs are (10, 0.40) for WildGuard, (1, 0.55) for HateXplain specialists, and
+(0.1, 0.51) for the mixed cohort. Full coeﬃcients, scaling values, and unstandardized equations are
+included in the companion equations.json.
+
+Conﬁguration                                                      Accuracy Macro-F1 False     Missed
+                                                                       (%)      (%) blocks violations
+WG released WildGuard                                                 90.35      90.13      51         113
+WG earlier single                                                     90.88      90.71      60          95
+WG new selected single                                                90.76      90.60      62          95
+WG log-odds ensemble                                                  91.29      91.14      61          87
+HX calibrated Shieldstral                                             79.57      75.62     177         216
+HX specialist ensemble                                                78.79      72.26     105         303
+HX selected Qwen individual                                           79.16      74.03     141         260
+HX mixed ensemble                                                     80.82      76.58     143         226
+
+Table 11: Individual and ensemble controls on each full oﬃcial test. WG denotes WildGuardTest; HX
+denotes HateXplain. “Earlier single” uses that cohort’s previously validation-selected individual. The new
+WG single is selected on validation from the expanded calibration pool. Comparisons with the highest
+observed test individual are labeled descriptive in the records.
+
+
+Log-odds primary minus comparator                                  Accuracy change    Paired 95% interval
+WG: prior probability logistic                                                +0.53            [0.18, 0.94]
+WG: newly selected individual                                                 +0.53            [0.24, 0.94]
+WG: earlier calibrated Shieldstral                                            +0.41            [0.12, 0.77]
+WG: released WildGuard                                                        +0.94            [0.06, 1.77]
+HX specialists: prior probability logistic                                    +3.22            [1.61, 4.89]
+HX specialists: calibrated Shieldstral                                        −0.78          [−2.03, 0.52]
+HX mixed: prior probability logistic                                          +2.13            [0.83, 3.37]
+HX mixed: validation-selected Qwen                                            +1.66            [0.26, 3.07]
+HX mixed: earlier selected forest                                             +1.09            [0.21, 2.03]
+HX mixed: strongest observed single                                           +1.25            [0.10, 2.44]
+
+Table 12: Exploratory accuracy diﬀerences in percentage points. The ﬁnal row is a post-test descriptive
+comparison with Shieldstral; it did not select the mixed ensemble. Intervals are unadjusted and condition
+on the saved selections.
+
+The mixed ensemble’s macro-F1 diﬀerence from Shieldstral is +0.96 points [−0.45, 2.32]; hate recall
+declines from 63.64% to 61.95%. The specialist-only ensemble’s macro-F1 is 3.36 points lower than
+Shieldstral’s, with interval [−5.02, −1.71]. These prevent an accuracy-only interpretation of the
+result.
+
+
+                                                   23
+Policy as an Interface                                                                   Review draft v0.5
+
+
+CPU reproduction reﬁts and checks all 98 earlier and 58 new conﬁgurations against saved records.
+The new archive also checks per-example predictions and paired intervals. The ﬁrst ensemble
+archive remains unchanged. Reproduction demonstrates the integrity of the recorded analysis; it
+does not make the already observed tests a fresh conﬁrmatory experiment.
+
+
+G     Note on the frontier API pilot
+We also ran a small compatibility and cost pilot through OpenRouter. It used only p0 on the same
+32 ﬁtting requests for four models at two reasoning settings. The sample contains 29 benign-labeled
+requests and three harmful-labeled requests. No policy was tuned for these models, no validation
+winner was selected, and no frontier model was tested on WildGuardTest. These observations do
+not support a frontier-model leaderboard.
+The recorded deployments were GPT-6 Astra through OpenAI, Claude Opus 5.5 through Anthropic,
+DeepSeek V4.1 Flash 1017 through DeepInfra FP8, and Kimi K3.1 Pro through Moonshot AI
+MXFP4 [22–25]. “Frontier” describes the catalog choices at the time, not a controlled maximum-
+compute comparison.
+
+                                               Valid Correct Harmful Content Other
+                 Model                  Eﬀort labels  labels blocked   ﬁlters errors
+                 GPT-6 Astra            low    32/32     31/32       2/3         0       0
+                 GPT-6 Astra            high   32/32     31/32       2/3         0       0
+                 Claude Opus 5.5        low    30/32     29/32       0/3         2       0
+                 Claude Opus 5.5        high   30/32     29/32       0/3         2       0
+                 DeepSeek V4.1 Flash    oﬀ     32/32     32/32       3/3         0       0
+                 DeepSeek V4.1 Flash    high   31/32     30/32       2/3         0       1
+                 Kimi K3.1 Pro          oﬀ     30/32     28/32       2/3         0       2
+                 Kimi K3.1 Pro          high   32/32     31/32       2/3         0       0
+
+Table 13: Pilot counts on the same 32 ﬁtting requests in every row. Only three requests are harmful-labeled.
+Other errors are one rate limit for DeepSeek high and two invalid-format answers for Kimi oﬀ, all on benign-
+labeled requests. A separate initial routing rejection is retained in the archive.
+
+Opus returns a content_filter outcome for two harmful-labeled prompts at both settings and
+labels the third Allow. That is two unique ﬁltered prompts observed four times. Its 29 correct
+decisions out of 32 conceal the fact that none of the three harmful requests receives a usable Block
+label. Yet Astra returns valid labels on every request at both settings, and DeepSeek oﬀ labels all
+three harmful requests correctly. This pilot therefore cannot establish that frontier APIs generally
+refuse to classify harmful content or estimate how often ﬁltering occurs.
+The ﬁlter signal identiﬁes a failure to deliver a classiﬁcation. It does not identify whether the cause
+lies in the model weights, an upstream ﬁlter, or another service component. We neither retry ﬁltered
+prompts nor count a ﬁlter as a correct Block. The rate-limit and formatting failures are separate
+events, not harmful-content refusals. Higher reasoning produces no consistent beneﬁt: Astra and
+Opus are unchanged; Kimi gains three correct outcomes, including two recovered formatting failures;
+DeepSeek loses two, including the rate limit. Mean request time increases for every deployment.
+These counts do not isolate a reasoning-quality eﬀect.
+
+
+
+                                                    24
+Policy as an Interface                                                               Review draft v0.5
+
+
+Settings and identity. Astra and Opus compare low with high eﬀort; an oﬀ condition was
+unavailable in their registered deployments. DeepSeek and Kimi compare none with high. All use
+an 8,192-token output allowance including reasoning, omit temperature, and request a ﬁnal A/B
+label. Calls are sequential, with explicit routing, price ceilings, no silent provider fallback, and no
+output repair [26, 27]. Hiding reasoning text is not the same as disabling reasoning. The archived
+identiﬁers are:
+• openai/gpt-6-astra; dated endpoint openai/gpt-6-astra-20260903.
+• anthropic/claude-opus-5.5; dated endpoint anthropic/claude-opus-5.5-20260921.
+• deepseek/deepseek-v4.1-flash-1017; dated endpoint deepseek/deepseek-v4.1-flash-2
+  0261017.
+• moonshotai/kimi-k3.1-pro; dated endpoint moonshotai/kimi-k3.1-pro-20261023.
+These identiﬁers do not pin hidden weights. We did not independently verify a downloadable check-
+point for the exact Kimi variant, whose open-weight description came from the catalog. Neither
+open-weight contender was self-hosted in this pilot. An initial direct-DeepSeek call failed the ac-
+count’s data-policy routing restriction. We recorded an amendment to use DeepInfra for the same
+model ID while preserving that restriction. All 257 attempts, including that routing event and the
+256 planned observations, remain archived.
+
+
+Cost and next steps. The reconciled pilot charge is $0.55. Scaling observed mean cost to the
+registered full study gives approximately $251, with uncertainty from prompt length, reasoning, and
+cache use. This is a planning estimate, not an incurred charge. A full comparison still requires policy
+search on ﬁtting data, validation selection, a freeze, and test inference. Since earlier WildGuardTest
+results are already known, a fresh independently labeled test would be needed for conﬁrmation.
+The operational question remains useful: can a service reliably classify content that its own controls
+may restrict? Self-hosting lets an operator pin the checkpoint and control the serving path, but it
+does not erase learned refusals or guarantee valid decisions. General-purpose open-weight models
+can also be self-hosted; specialization and hosting are separate choices. A matched hosted-versus-
+self-hosted test could help locate failures. Any review or fallback workﬂow would need separate
+accuracy and workload measurements. The current pilot establishes neither a production failure
+rate nor a general advantage for self-hosting.
+
+
+
+
+                                                  25
+
