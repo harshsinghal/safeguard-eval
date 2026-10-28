@@ -3,6 +3,8 @@
 Source IDs below resolve to pinned repository links in [sources.json](sources.json).
 Use [results.json](results.json) for machine-extracted numeric anchors. Do not mix
 the best result from one study with a differently configured comparison in another.
+For dataset origins, split construction, and label mappings, read
+[datasets.md](datasets.md). For the consolidated manuscript, use [paper.md](paper.md).
 
 ## What was classified
 

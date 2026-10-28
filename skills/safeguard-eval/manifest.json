@@ -1,18 +1,23 @@
 {
   "name": "safeguard-eval",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "files": {
     "LICENSE": "ed33d2856efcba266730773481902f879ea34549394d4f38d08a59cfd0b55b0c",
-    "README.md": "4cc2b251aa46f2395aabbe30bc3a507ce39df1caee3150153cae6aefe2575cc8",
-    "SKILL.md": "2261869b51e1de69123095a940a26312e1059fe985c3e0647b67d078d8bfc81e",
-    "agents/openai.yaml": "fec9ada7cae5231061e16ca48a41e87e571ea6d5ab3df36ed74d602f295ffab5",
+    "README.md": "c65f73b527eee725fa229f7cf4427ce8246b729b3f317d2adcba6faa84b68480",
+    "SKILL.md": "d1e798f8926896d8beefcae888feafd9b23b09066bea152bcb41cfd41a8e4c8d",
+    "agents/openai.yaml": "e745d81ab9638681f0469a1955753767b92f4ae1c1c089074f0fc6cf51d30deb",
     "references/authoring.md": "c312a8fb8fa50daee9c593fae70d154673ab368fa49e5697a5913df4b93e5c85",
-    "references/models.md": "5fc6fcfdee255e2392cd9ad6b2aed59ebaef83120ba0c54bc5e9885c4168c184",
-    "references/questions.md": "2a8676ee65f4203be54c9418a0ad3bf09cd3d47a25ee89a29b16ca7a5764ddc0",
-    "references/results.json": "571d520263e113982e7ff7e934427d1a641edc3d9e187b0858eb562195a27a16",
-    "references/sources.json": "0684e0614affc5ea95aa18644d2ace00548a986b54af2d5f11cd507313486a4e",
-    "references/studies.md": "a7e03b879033022549f5512771d075a0e77cc52f0d61cd28dd845f53fe538280",
-    "release.json": "6f392ef2d49593e1dba22d7a69d9955444d761cee8eb887b3d704a66320aa692",
+    "references/datasets.md": "5d82fe232074b9ffab2e71a786a818174ce9041fa6d84d09d7d88d9d68f07235",
+    "references/external-sources.json": "2eae09e31c3fe968febf645f9ddfee57580dd83663e3568d9897ae4ed6d28fb9",
+    "references/models.md": "da1fd2bcfc58f30a1c97e6caea69ba86f1269a187ced9b822277f327f509e243",
+    "references/paper.md": "516238e419e9487c4dbefce00f59739de4573bea1ec83ca6b9144fe36287dd99",
+    "references/providers.md": "668cd8b98be1041d649e0b14bc1161f79e892f5b89bb99c2a3dd754285504556",
+    "references/questions.md": "4b8875a8c1f34c4c38ebe7b58b8450ca71b1fa2b5a5be02441fe278695e1428e",
+    "references/results.json": "1bfd5d34362d946a0d700af33e33721b033845a7b239b8f60dd15667445f0234",
+    "references/search.md": "e21238c760f65be164ce1209c5a41afbd4311bf5ce277b668988ca4303268973",
+    "references/sources.json": "c6b6c1971484c508d3a07cf7819c938aa0e4f427b1558b674bd58de8abf1a6c9",
+    "references/studies.md": "d2ac53446be24bbf5cd1871a2c2ffb680f11ec86631c4d5c72f1cb42d219c94a",
+    "release.json": "9cb03c5a910fcd705be533c47647da0b28182ac4e44aa0bb4440ca75f4c858fb",
     "scripts/install.py": "11342a2aaf74f87ae72ca581af11573702c3e435bef3517397cb87fe47cc1de8"
   }
 }

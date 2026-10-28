@@ -81,7 +81,9 @@ experiments. Its inspected materials did not provide every competitor's rendered
 input or a complete competitor harness. That limits independent verification; it
 does not establish that those comparisons are invalid. See `interface-audit`.
 
-For current publisher details, consult the model cards:
+For model downloads, provider articles, and guidance on authoring policies, use
+[the provider reading guide](providers.md). It also separates untested discoveries
+from this panel. For current publisher details, consult the model cards:
 [PolicyLM](https://huggingface.co/musubilabs/policylm-1.7b),
 [Shieldstral](https://huggingface.co/mistralai/Shieldstral-1.0-3B),
 [CoPE](https://huggingface.co/zentropi-ai/cope-b-a4b),

@@ -7,11 +7,17 @@ understanding while preserving unsuccessful results and limitations.
 
 ## Release plan and scope
 
-Version 0.1.0 covers the recorded model interfaces, WildGuard policy tuning,
+Version 0.2.0 covers the recorded model interfaces, WildGuard policy tuning,
 nearby-size Qwen comparisons, policy transfer, HateXplain structure/omission tests,
 individual calibration, and probability/log-odds ensembles. Earlier demos and
 the frontier API pilot are routed separately. Enterprise governance is labelled
 as a proposal. No new paid inference is needed to build or use the skill.
+
+The gateway update adds dataset provenance, publisher model cards and authoring
+guides, a curated external catalog, scoped search guidance, and the v0.5 paper's
+PDF/text/source package. The paper remains a review draft. The skill's evidence
+registry pins those files; the external catalog deliberately distinguishes live
+provider material from historical project evidence.
 
 The first release also publishes the previously local ensemble evidence and its
 reproduction code. The frozen archives are copied byte for byte, including their
@@ -24,9 +30,14 @@ and release; old archive text is not retroactively rewritten.
    a correction separately if necessary. Avoid credentials, private notes, or
    dataset content that is not intended for redistribution.
 2. Review `skills/safeguard-eval/references/` for changed interpretations. Update
-   models, studies, authoring guidance, and question routing as appropriate. Preserve
+   models, datasets, studies, authoring guidance, and question routing as appropriate. Preserve
    the distinction between findings and hypotheses. An automated hash refresh is
    not an editorial review.
+   When changing provider guidance, read the primary source and update the external
+   catalog's check date and scope. A source being reachable is not proof that its
+   contents support the summary. Mark new models as untested until evidence exists.
+   For a new paper version, publish its PDF, matching text extraction, portable
+   source, and metadata together; preserve the previous version and its status.
 3. Add relevant files to `SOURCES` in `tools/skill_release.py`. Every dated
    `published_runs` directory needs at least one source entry. If the new experiment
    changes JSON shape, update the numeric extractor and its checks deliberately.
@@ -57,6 +68,14 @@ Use realistic questions to inspect the guide's routing and evidence, including:
 - Did ensembles require no training? Explain the supervised combiner and frozen LMs.
 - Is REVIEW validated? Distinguish the binary studies from earlier demonstrations.
 - Can it govern employee intent? Identify the proposed, unvalidated scope.
+- Were the first scored prompts from DiffusionDB? No; distinguish the browsing
+  source from the original synthetic demonstration.
+- What did HateXplain label? Preserve the hate/offensive/normal mapping and our
+  binary adaptation; do not call all offensive text a BLOCK case.
+- Can it summarize the paper? Fetch the actual pinned text/PDF and disclose the
+  review-draft status; do not claim a full read from a summary.
+- Does a newly discovered guard support our policy? Separate a provider's stated
+  interface from a measured project result; route to current primary sources.
 
 If an agent runtime is used for behavioral evaluation, record its version, prompts,
 answers, and judged failures. Offline file checks do not establish answer quality.
@@ -91,3 +110,16 @@ Codex and Claude Code project directories. Record those checks in the release no
 
 These checks use local CPU work and GitHub access. They do not rerun the models,
 change historical results, or claim testing inside every version of Codex/Claude Code.
+
+## Gateway release checks
+
+Check that external links resolve and match the described publisher. Review the
+paper reading map against the actual PDF. Verify the public artifacts against
+`research-preprint/publication.json` and the pinned source registry. Run the same
+installer, source-drift, and reproducible-package checks used for the first release.
+For updates, test upgrading an extracted prior release with a local edit and
+confirm that the backup preserves it. Record results in the new release notes.
+
+Do not claim a behavioral evaluation of Codex or Claude Code unless one was
+actually performed. Static routing review and installation checks establish the
+package's integrity and portability, not guaranteed answers from every agent.

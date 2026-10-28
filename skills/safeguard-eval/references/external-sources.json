@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-28",
+  "scope": "Curated primary-source entry points, not an exhaustive model catalog or live availability guarantee. External pages are not frozen evidence.",
+  "project_role_definitions": {
+    "tested_checkpoint": "This exact checkpoint family/size was evaluated; consult the frozen run for revision and task.",
+    "used_benchmark": "Used in recorded experiments, with the project's mappings and subsets.",
+    "demo_dataset": "Used in the original interactive demo, not a labelled main-study benchmark.",
+    "provider_guidance": "Recommendations or examples from the provider; not measured findings of this project.",
+    "background_paper": "Original research for a model or dataset; distinguish its version and results from ours.",
+    "discovery_only": "Search entry point outside our evaluated panel; no comparative result is implied."
+  },
+  "sources": [
+    {
+      "id": "openai-safeguard-introduction",
+      "title": "Introducing GPT-OSS Safeguard",
+      "publisher": "OpenAI",
+      "kind": "article",
+      "project_role": "provider_guidance",
+      "url": "https://openai.com/index/introducing-gpt-oss-safeguard/",
+      "note": "Custom-policy moderation motivation; launch material is separate from our evaluations."
+    },
+    {
+      "id": "openai-safeguard-guide",
+      "title": "GPT-OSS Safeguard policy guide",
+      "publisher": "OpenAI and ROOST",
+      "kind": "guide",
+      "project_role": "provider_guidance",
+      "url": "https://developers.openai.com/cookbook/articles/gpt-oss-safeguard-guide",
+      "note": "Policy components, examples, output contract, and Harmony formatting."
+    },
+    {
+      "id": "openai-teen-policy-pack",
+      "title": "Teen safety policy pack",
+      "publisher": "OpenAI",
+      "kind": "policy_examples",
+      "project_role": "provider_guidance",
+      "url": "https://github.com/openai/teen-safety-policy-pack",
+      "note": "Example policies and associated evaluation material; not evaluated in Safeguard Eval."
+    },
+    {
+      "id": "policylm-1.7b",
+      "title": "PolicyLM 1.7B",
+      "publisher": "Musubi",
+      "kind": "model_card",
+      "project_role": "tested_checkpoint",
+      "url": "https://huggingface.co/musubilabs/policylm-1.7b",
+      "note": "Native categories and policy-writing guidance; inspect the writing-a-policy section."
+    },
+    {
+      "id": "shieldstral-3b",
+      "title": "Shieldstral 1.0 3B",
+      "publisher": "Mistral AI",
+      "kind": "model_card",
+      "project_role": "tested_checkpoint",
+      "url": "https://huggingface.co/mistralai/Shieldstral-1.0-3B",
+      "note": "Native Instruct / Query / Document interface; project tests used text."
+    },
+    {
+      "id": "shieldstral-article",
+      "title": "Shieldstral release article",
+      "publisher": "Mistral AI",
+      "kind": "article",
+      "project_role": "provider_guidance",
+      "url": "https://mistral.ai/news/shieldstral/",
+      "note": "Publisher motivation and capabilities; not an independent project result."
+    },
+    {
+      "id": "shieldstral-paper",
+      "title": "Shieldstral",
+      "publisher": "Mistral AI authors",
+      "kind": "paper",
+      "project_role": "background_paper",
+      "url": "https://arxiv.org/abs/2607.25857",
+      "note": "Provider research behind the model; check paper version."
+    },
+    {
+      "id": "cope-b-a4b",
+      "title": "CoPE-B-A4B",
+      "publisher": "Zentropi",
+      "kind": "model_card",
+      "project_role": "tested_checkpoint",
+      "url": "https://huggingface.co/zentropi-ai/cope-b-a4b",
+      "note": "Prompt format, labels, and generation-specific migration guidance."
+    },
+    {
+      "id": "cope-paper",
+      "title": "CoPE: A Small Language Model for Steerable and Scalable Content Labeling",
+      "publisher": "Zentropi authors",
+      "kind": "paper",
+      "project_role": "background_paper",
+      "url": "https://arxiv.org/abs/2512.18027",
+      "note": "Earlier CoPE research; not the exact CoPE-B architecture specification."
+    },
+    {
+      "id": "cope-steerability",
+      "title": "Policy-steerability benchmark article",
+      "publisher": "Zentropi",
+      "kind": "article",
+      "project_role": "provider_guidance",
+      "url": "https://blog.zentropi.ai/introducing-the-policy-steerability-benchmark/",
+      "note": "Benchmark was non-public when checked; provider results are not reproduced here."
+    },
+    {
+      "id": "safeguard-20b",
+      "title": "GPT-OSS Safeguard 20B",
+      "publisher": "OpenAI",
+      "kind": "model_card",
+      "project_role": "tested_checkpoint",
+      "url": "https://huggingface.co/openai/gpt-oss-safeguard-20b",
+      "note": "The tested Safeguard size; distinguish from the 120B release."
+    },
+    {
+      "id": "wildguard-model",
+      "title": "WildGuard",
+      "publisher": "Ai2",
+      "kind": "model_card",
+      "project_role": "tested_checkpoint",
+      "url": "https://huggingface.co/allenai/wildguard",
+      "note": "Fixed-task baseline; project used prompt-harmfulness output."
+    },
+    {
+      "id": "wildguard-paper",
+      "title": "WildGuard: Open One-stop Moderation Tools for Safety Risks, Jailbreaks, and Refusals of LLMs",
+      "publisher": "Ai2 authors",
+      "kind": "paper",
+      "project_role": "background_paper",
+      "url": "https://arxiv.org/abs/2406.18495",
+      "note": "Upstream model, dataset, and annotation methods."
+    },
+    {
+      "id": "wildguardmix",
+      "title": "WildGuardMix",
+      "publisher": "Ai2",
+      "kind": "dataset_card",
+      "project_role": "used_benchmark",
+      "url": "https://huggingface.co/datasets/allenai/wildguardmix",
+      "note": "Project used prompt harmfulness from train/test configs, not every task."
+    },
+    {
+      "id": "hatexplain",
+      "title": "HateXplain",
+      "publisher": "HateXplain authors",
+      "kind": "dataset_card",
+      "project_role": "used_benchmark",
+      "url": "https://huggingface.co/datasets/Hate-speech-CNERG/hatexplain",
+      "note": "Project mapped hate to BLOCK and offensive/normal to ALLOW."
+    },
+    {
+      "id": "hatexplain-data",
+      "title": "HateXplain source repository",
+      "publisher": "HateXplain authors",
+      "kind": "data_repository",
+      "project_role": "used_benchmark",
+      "url": "https://github.com/hate-alert/HateXplain",
+      "note": "Original annotations and official splits; source pin differs from loader pin."
+    },
+    {
+      "id": "hatexplain-paper",
+      "title": "HateXplain: A Benchmark Dataset for Explainable Hate Speech Detection",
+      "publisher": "HateXplain authors",
+      "kind": "paper",
+      "project_role": "background_paper",
+      "url": "https://arxiv.org/abs/2012.10289",
+      "note": "Original task and annotations; our experiment did not evaluate rationale extraction."
+    },
+    {
+      "id": "deepset-injections",
+      "title": "Prompt injections",
+      "publisher": "deepset",
+      "kind": "dataset_card",
+      "project_role": "used_benchmark",
+      "url": "https://huggingface.co/datasets/deepset/prompt-injections",
+      "note": "Earlier binary demonstration; see recorded license-metadata discrepancy."
+    },
+    {
+      "id": "diffusiondb",
+      "title": "DiffusionDB",
+      "publisher": "Polo Club",
+      "kind": "dataset_card",
+      "project_role": "demo_dataset",
+      "url": "https://huggingface.co/datasets/poloclub/diffusiondb",
+      "note": "Original interactive demo source, not the synthetic scored iconography set."
+    },
+    {
+      "id": "roost-model-community",
+      "title": "ROOST Model Community",
+      "publisher": "ROOST",
+      "kind": "directory",
+      "project_role": "discovery_only",
+      "url": "https://github.com/roostorg/model-community",
+      "note": "Model folders and policy-pack pointers; directory membership is not a ranking."
+    },
+    {
+      "id": "roost-guide",
+      "title": "RMC Guide to Using Open Safety Models",
+      "publisher": "ROOST",
+      "kind": "guide",
+      "project_role": "discovery_only",
+      "url": "https://github.com/roostorg/model-community/blob/main/resources/RMC%20Guide%20to%20Using%20Open%20Safety%20Models.md",
+      "note": "Guide to the open safety model landscape; follow through to model owners."
+    },
+    {
+      "id": "roost-awesome",
+      "title": "Awesome Safety Tools",
+      "publisher": "ROOST",
+      "kind": "directory",
+      "project_role": "discovery_only",
+      "url": "https://github.com/roostorg/awesome-safety-tools",
+      "note": "Broader tools directory; includes different types of safety components."
+    },
+    {
+      "id": "granite-guardian",
+      "title": "Granite Guardian",
+      "publisher": "IBM Granite",
+      "kind": "model_repository",
+      "project_role": "discovery_only",
+      "url": "https://github.com/ibm-granite/granite-guardian",
+      "note": "Custom criteria and other risk checks; not evaluated in Safeguard Eval."
+    },
+    {
+      "id": "llama-guard-4",
+      "title": "Llama Guard 4 12B",
+      "publisher": "Meta",
+      "kind": "model_card",
+      "project_role": "discovery_only",
+      "url": "https://huggingface.co/meta-llama/Llama-Guard-4-12B",
+      "note": "Taxonomy-based safety classifier; not evaluated here."
+    },
+    {
+      "id": "llama-prompt-guard-2",
+      "title": "Llama Prompt Guard 2 86M",
+      "publisher": "Meta",
+      "kind": "model_card",
+      "project_role": "discovery_only",
+      "url": "https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-86M",
+      "note": "Instruction-override detection; not evaluated here or interchangeable with harmfulness."
+    },
+    {
+      "id": "shieldgemma-9b",
+      "title": "ShieldGemma 9B",
+      "publisher": "Google",
+      "kind": "model_card",
+      "project_role": "discovery_only",
+      "url": "https://huggingface.co/google/shieldgemma-9b",
+      "note": "Guidelines differ for prompt-only and prompt/response tasks; not evaluated here."
+    },
+    {
+      "id": "qwen3.5-2b",
+      "title": "Qwen3.5 2B",
+      "publisher": "Qwen",
+      "kind": "model_card",
+      "project_role": "tested_checkpoint",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-2B",
+      "note": "General-purpose comparator; recorded study used thinking disabled."
+    },
+    {
+      "id": "qwen3.5-4b",
+      "title": "Qwen3.5 4B",
+      "publisher": "Qwen",
+      "kind": "model_card",
+      "project_role": "tested_checkpoint",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-4B",
+      "note": "General-purpose comparator; recorded study used thinking disabled."
+    },
+    {
+      "id": "qwen3.5-9b",
+      "title": "Qwen3.5 9B",
+      "publisher": "Qwen",
+      "kind": "model_card",
+      "project_role": "tested_checkpoint",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-9B",
+      "note": "General-purpose comparator; recorded study used thinking disabled."
+    },
+    {
+      "id": "qwen3.5-27b",
+      "title": "Qwen3.5 27B",
+      "publisher": "Qwen",
+      "kind": "model_card",
+      "project_role": "tested_checkpoint",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-27B",
+      "note": "General-purpose comparator; recorded study used thinking disabled."
+    },
+    {
+      "id": "qwen3.5-35b-a3b",
+      "title": "Qwen3.5 35B-A3B",
+      "publisher": "Qwen",
+      "kind": "model_card",
+      "project_role": "tested_checkpoint",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
+      "note": "General-purpose comparator; recorded study used thinking disabled."
+    }
+  ]
+}

@@ -1,4 +1,4 @@
 interface:
   display_name: "Safeguard Eval"
-  short_description: "Policy models and authoring backed by experiments"
-  default_prompt: "Use $safeguard-eval to explain how I should write and test a policy for my chosen model."
+  short_description: "Explore policy models, datasets, and research findings"
+  default_prompt: "Use $safeguard-eval to explain the research, find the relevant model and dataset sources, and show how I should write and test a policy."

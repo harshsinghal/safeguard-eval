@@ -7,13 +7,19 @@ Experiments use GPU.ai first, with Runpod available when credits or GPU capacity
 ## Ask your agent about the research
 
 Install the **[Safeguard Eval skill](skills/safeguard-eval/README.md)** in Codex or
-Claude Code to ask about policy authoring, model-specific formats, transfer,
-calibration, and ensembles. It includes plain-language guides and links to the
-exact experimental evidence. No keys, GPUs, or model downloads are needed.
+Claude Code to ask about policy authoring, model-specific formats, datasets,
+transfer, calibration, and ensembles. It includes plain-language guides, official
+provider references, a reading route through the paper, and links to the exact
+experimental evidence. No keys, GPUs, or model downloads are needed.
 
-[Download version 0.1.0](https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.1.0)
+[Download version 0.2.0](https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.2.0)
 or use the [copy-and-paste installation prompt](skills/safeguard-eval/README.md#install-by-asking-your-agent).
 Try: “What changed in the HateXplain policies, and why did the changes affect models differently?”
+
+Read the consolidated **[research paper](research-preprint/README.md)** as a PDF,
+agent-readable text, or editable LaTeX source package. This is author review draft
+v0.5, not peer reviewed or submitted to arXiv. The skill can help readers explore
+the paper and find primary sources for questions beyond our experiments.
 
 The latest [ensemble findings](docs/ensemble/READOUT.md) and
 [log-odds extension](docs/ensemble-logits/RESULTS.md) are included in this release.
