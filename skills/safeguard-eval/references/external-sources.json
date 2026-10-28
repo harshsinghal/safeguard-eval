@@ -289,6 +289,96 @@
       "project_role": "tested_checkpoint",
       "url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
       "note": "General-purpose comparator; recorded study used thinking disabled."
+    },
+    {
+      "id": "pi-skills",
+      "title": "Pi skills",
+      "publisher": "Pi",
+      "kind": "documentation",
+      "project_role": "provider_guidance",
+      "url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/skills.md",
+      "note": "Portable skill format and explicit /skill:name invocation; checked against installed Pi 0.87.1."
+    },
+    {
+      "id": "pi-models",
+      "title": "Pi model configuration",
+      "publisher": "Pi",
+      "kind": "documentation",
+      "project_role": "provider_guidance",
+      "url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/models.md",
+      "note": "Isolated profile and compatible endpoint configuration."
+    },
+    {
+      "id": "pi-sessions",
+      "title": "Pi session format",
+      "publisher": "Pi",
+      "kind": "documentation",
+      "project_role": "provider_guidance",
+      "url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/session-format.md",
+      "note": "Native JSONL branching, messages, and usage; opt-in review tooling."
+    },
+    {
+      "id": "ollama-qwen-small",
+      "title": "Qwen3.5 2B in Ollama",
+      "publisher": "Ollama",
+      "kind": "documentation",
+      "project_role": "provider_guidance",
+      "url": "https://ollama.com/library/qwen3.5:2b",
+      "note": "Local integration tested separately on eight teaching cases, not benchmark accuracy."
+    },
+    {
+      "id": "ollama-safeguard",
+      "title": "GPT-OSS Safeguard library",
+      "publisher": "Ollama",
+      "kind": "documentation",
+      "project_role": "provider_guidance",
+      "url": "https://ollama.com/library/gpt-oss-safeguard",
+      "note": "Provider-listed 20B/120B support; not locally tested in this project."
+    },
+    {
+      "id": "ollama-chat",
+      "title": "Ollama chat API",
+      "publisher": "Ollama",
+      "kind": "documentation",
+      "project_role": "provider_guidance",
+      "url": "https://docs.ollama.com/api/chat",
+      "note": "Structured output, runtime options, thinking, counters, and unload controls."
+    },
+    {
+      "id": "groq-safeguard",
+      "title": "Groq GPT-OSS Safeguard 20B endpoint",
+      "publisher": "Groq",
+      "kind": "documentation",
+      "project_role": "provider_guidance",
+      "url": "https://console.groq.com/docs/model/openai/gpt-oss-safeguard-20b",
+      "note": "Exact Safeguard endpoint verified; listed as preview, not a project latency result."
+    },
+    {
+      "id": "cerebras-catalog",
+      "title": "Cerebras shared inference catalog",
+      "publisher": "Cerebras",
+      "kind": "documentation",
+      "project_role": "provider_guidance",
+      "url": "https://inference-docs.cerebras.ai/models/overview",
+      "note": "Listed gpt-oss-120b and qwen-3.8-27b; did not establish shared Safeguard availability."
+    },
+    {
+      "id": "openrouter-luna",
+      "title": "GPT-6 Luna on OpenRouter",
+      "publisher": "OpenRouter",
+      "kind": "documentation",
+      "project_role": "provider_guidance",
+      "url": "https://openrouter.ai/openai/gpt-6-luna",
+      "note": "Backend for skill conversation tests, not a moderation benchmark model in our panel."
+    },
+    {
+      "id": "openrouter-usage",
+      "title": "OpenRouter usage accounting",
+      "publisher": "OpenRouter",
+      "kind": "documentation",
+      "project_role": "provider_guidance",
+      "url": "https://openrouter.ai/docs/cookbook/administration/usage-accounting",
+      "note": "Distinguish provider billing metadata from agent cost estimates."
     }
   ]
 }

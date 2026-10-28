@@ -5,7 +5,9 @@ on:
     paths:
       - 'skills/**'
       - 'tools/skill_release.py'
-      - 'tests/test_skill_package.py'
+      - 'tools/pi_skill*'
+      - 'tools/ollama_policy_smoke.py'
+      - 'tests/test_skill_*.py'
       - 'published_runs/**'
       - 'research-preprint/**'
       - 'docs/**'
@@ -32,7 +34,7 @@ jobs:
       - name: Check evidence and package
         run: python tools/skill_release.py check
       - name: Test installation, updates, and reproducible packaging
-        run: python -m unittest discover -s tests -p 'test_skill_package.py' -v
+        run: python -m unittest discover -s tests -p 'test_skill_*.py' -v
       - name: Verify release tag
         if: startsWith(github.ref, 'refs/tags/skill-v')
         env:

@@ -70,6 +70,9 @@ Define review routing separately and test its workload and missed violations.
 ## What the model names do not establish
 
 Models differ in training, architecture, score scales, and native interfaces.
+Use the exact publisher card for architecture, base model, training disclosures,
+and supported runtime. A small parameter count does not mean the checkpoint is
+a drop-in chat model or that Ollama can load its native scoring interface.
 These experiments did not fine-tune matched base/specialist pairs, isolate a causal
 architectural advantage, or measure internal activations. Model size alone is not
 a serving benchmark. PolicyLM's disclosed training sources include a dataset that
@@ -90,3 +93,8 @@ from this panel. For current publisher details, consult the model cards:
 [Safeguard](https://huggingface.co/openai/gpt-oss-safeguard-20b),
 [Qwen3.5-4B](https://huggingface.co/Qwen/Qwen3.5-4B), and
 [WildGuard](https://huggingface.co/allenai/wildguard).
+
+For local, API, and rented-GPU options—and what we actually tried locally—read
+[running models](running-models.md). Serving convenience and classification
+quality are separate questions; our size comparisons did not measure production
+latency, throughput, retention guarantees, or cost per correct decision.

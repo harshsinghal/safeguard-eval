@@ -63,6 +63,17 @@ SOURCES = {
     "paper-text": "research-preprint/output/text/policy-as-interface-review-v0.5.txt",
     "paper-source": "research-preprint/output/policy-as-interface-source-v0.5.zip",
     "paper-publication": "research-preprint/publication.json",
+    "local-running-readout": "docs/skill/evidence/2026-10-28/README.md",
+    "local-ollama-smoke": "docs/skill/evidence/2026-10-28/ollama-smoke.json",
+    "ollama-smoke-runner": "tools/ollama_policy_smoke.py",
+    "pi-lab-guide": "docs/skill/PI-USER-TEST.md",
+    "pi-lab-runner": "tools/pi_skill_lab.py",
+    "pi-feedback-extension": "tools/pi_skill_feedback.ts",
+    "pi-conversation-runs": "docs/skill/evidence/2026-10-28/conversation-runs.json",
+    "pi-baseline-conversation": "docs/skill/evidence/2026-10-28/baseline-v0.3.md",
+    "pi-learner-conversation": "docs/skill/evidence/2026-10-28/learner-v0.4.md",
+    "pi-engineering-conversation": "docs/skill/evidence/2026-10-28/engineering-v0.4.md",
+    "pi-enterprise-conversation": "docs/skill/evidence/2026-10-28/grc-v0.4.md",
 }
 
 

@@ -31,6 +31,10 @@ into the same shape. Source IDs resolve through [sources.json](sources.json).
 | Were the first 48 scored prompts from DiffusionDB? | [Datasets](datasets.md), `demo-methods` | No; the scored set was original synthetic data. |
 | Could this govern employee requests? | [Authoring](authoring.md), `enterprise-track` | Proposed application, not validated intent detection or permission repair. |
 | Which is cheapest, fastest, or commercially licensed today? | Current publisher documentation | Historical research compute bills are not serving benchmarks or current terms. |
+| Can I run PolicyLM or Safeguard in Ollama? | [Running models](running-models.md), [models](models.md) | Check exact runtime support; our local Qwen integration ran but failed the allowed teaching cases. |
+| Does Cerebras serve GPT-OSS Safeguard? | [Running models](running-models.md), current catalog | A GPT-OSS entry is not a Safeguard entry; verify the exact endpoint. |
+| Which GPU provider should I use? | [Running models](running-models.md) | Neutral options, current terms, budget, usage reporting, verified teardown; no endorsement. |
+| Will this work with a cheap Pi backend? | [Agent testing](agent-testing.md) | Test normal conversations; skill portability does not guarantee equal answer quality. |
 | Can a new model handle my company's policy? | [Search](search.md), [authoring](authoring.md) | An input interface is not empirical validation in that domain. |
 
 Useful starter questions:

@@ -83,6 +83,21 @@ interfaces and repeatable tests; a legal or compliance professional about scope,
 exceptions, and who approves changes. Do not infer their employer's actual policy
 or imply that this research validates legal compliance or enterprise intent detection.
 
+Usually the question already supplies enough context. “We remove threats” calls
+for decisions and boundary examples; “what input does the endpoint expect” calls
+for adapters; “who should approve a change” calls for ownership and evidence.
+Respond to that need without announcing an inferred persona or asking their job.
+For a policy-writing lesson, connect the draft to the chosen publisher's guidance
+in [providers.md](providers.md); explain which pieces the native model accepts.
+Use one or two natural next questions, such as “Shall we test the reporting
+exception?” or “Want to see how this maps to PolicyLM?” An answer should help the
+reader take the next step, not make them choose among a new full menu each time.
+
+When someone wants to run a model, read [running-models.md](running-models.md).
+First distinguish learning about the research from running a new classifier.
+The agent's backend and the policy classifier can be different models. Do not
+turn a simple learning question into a GPU setup task.
+
 ## The basics: one continuing workflow
 
 Start with a familiar decision: should this item stay, be removed, or go to a

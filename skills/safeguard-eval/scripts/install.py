@@ -6,6 +6,7 @@ import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
+import os
 from pathlib import Path, PurePosixPath
 import shutil
 import sys
@@ -55,6 +56,9 @@ def verify_package(root: Path) -> dict:
 
 def destination(target: str, scope: str, project: Path | None = None) -> Path:
     base = Path.home() if scope == "user" else (project or Path.cwd()).resolve()
+    if target == "pi":
+        profile = Path(os.environ.get("PI_CODING_AGENT_DIR", str(base / ".pi" / "agent"))).expanduser()
+        return (profile if scope == "user" else base / ".pi") / "skills" / NAME
     directory = ".agents" if target == "codex" else ".claude"
     return base / directory / "skills" / NAME
 
@@ -114,7 +118,7 @@ def install(source: Path, dest: Path, update: bool = False) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--target", choices=["codex", "claude-code"], required=True)
+    parser.add_argument("--target", choices=["codex", "claude-code", "pi"], required=True)
     parser.add_argument("--scope", choices=["user", "project"], default="user")
     parser.add_argument("--project", type=Path, help="Project directory for --scope project")
     parser.add_argument("--dest", type=Path, help="Override the full destination, including safeguard-eval")
@@ -126,7 +130,8 @@ def main() -> int:
         source = Path(__file__).resolve().parents[1]
         dest = args.dest or destination(args.target, args.scope, args.project)
         result = install(source, dest, args.update)
-        prefix = "Use $safeguard-eval to give" if args.target == "codex" else "/safeguard-eval Give"
+        prefix = {"codex": "Use $safeguard-eval to give", "claude-code": "/safeguard-eval Give",
+                  "pi": "/skill:safeguard-eval Give"}[args.target]
         prompt = prefix + " me a two-minute introduction and suggest what to explore next."
         result["quick_start"] = {
             "guide": str(Path(result["destination"]) / "references" / "start-here.md"),

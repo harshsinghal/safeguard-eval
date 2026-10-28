@@ -87,8 +87,8 @@ class SkillInstallTests(unittest.TestCase):
             INSTALLER["install"](self.source, self.source / "nested")
         self.assertFalse((self.source / "nested").exists())
 
-    def test_cli_installs_both_project_layouts(self):
-        for target, directory in [("codex", ".agents"), ("claude-code", ".claude")]:
+    def test_cli_installs_all_project_layouts(self):
+        for target, directory in [("codex", ".agents"), ("claude-code", ".claude"), ("pi", ".pi")]:
             completed = subprocess.run(
                 [sys.executable, str(self.source / "scripts" / "install.py"),
                  "--target", target, "--scope", "project", "--project", str(self.root / target)],
@@ -103,8 +103,16 @@ class SkillInstallTests(unittest.TestCase):
             self.assertEqual(guide.resolve(), (expected / "references" / "start-here.md").resolve())
             self.assertTrue(guide.is_file())
             prompt = data["quick_start"]["prompt"]
-            self.assertIn("$safeguard-eval" if target == "codex" else "/safeguard-eval", prompt)
+            self.assertIn({"codex": "$safeguard-eval", "claude-code": "/safeguard-eval",
+                           "pi": "/skill:safeguard-eval"}[target], prompt)
             self.assertIn(prompt, completed.stderr)
+
+    def test_pi_user_profile_override_does_not_change_project_destination(self):
+        with mock.patch.dict("os.environ", {"PI_CODING_AGENT_DIR": str(self.root / "test-agent")}):
+            self.assertEqual(INSTALLER["destination"]("pi", "user"),
+                             self.root / "test-agent" / "skills" / "safeguard-eval")
+            self.assertEqual(INSTALLER["destination"]("pi", "project", self.root),
+                             self.root.resolve() / ".pi" / "skills" / "safeguard-eval")
 
     def test_missing_quick_start_prevents_install_and_success_output(self):
         # Even a regenerated manifest cannot produce an installation whose

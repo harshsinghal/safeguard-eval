@@ -74,6 +74,12 @@ Transfer worked in one direction and failed in another:
 | Shieldstral-selected text → Qwen 2B | 80.11% | 75.10% |
 | Shieldstral-selected text → PolicyLM | 85.05% | 74.57% |
 
+Read each row as **policy selected using source model → model doing the new
+classification**. In particular, 80.11% → 75.10% is **Shieldstral → Qwen 2B**,
+not PolicyLM → Qwen. The first two rows are the reverse-direction pair; the
+third is a different recipient. For another pair, consult the full matrix in
+`transfer-analysis`/`transfer-readout` rather than borrowing one of these numbers.
+
 PolicyLM's own revision left its accuracy at 85.05%, yet caught 12 more harmful
 requests and falsely blocked 12 more benign ones. Unchanged accuracy did not mean
 unchanged behavior. Sources: `transfer-readout`, `transfer-analysis`.

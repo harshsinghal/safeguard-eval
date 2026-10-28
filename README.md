@@ -6,13 +6,14 @@ Experiments use GPU.ai first, with Runpod available when credits or GPU capacity
 
 ## Ask your agent about the research
 
-Install the **[Safeguard Eval skill](skills/safeguard-eval/README.md)** in Codex or
-Claude Code to ask about policy authoring, model-specific formats, datasets,
+Install the **[Safeguard Eval skill](skills/safeguard-eval/README.md)** in Codex,
+Claude Code, or Pi to ask about policy authoring, model-specific formats, datasets,
 transfer, calibration, and ensembles. It includes plain-language guides, official
 provider references, a reading route through the paper, and links to the exact
-experimental evidence. No keys, GPUs, or model downloads are needed.
+experimental evidence. Reading its guides requires no additional classifier or
+GPU; your agent backend may have its own charges.
 
-[Download version 0.3.0](https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.3.0)
+[Download version 0.4.0](https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.4.0)
 or use the [copy-and-paste installation prompt](skills/safeguard-eval/README.md#install-by-asking-your-agent).
 Start with: “Give me a two-minute introduction and suggest what to explore next.”
 
@@ -21,6 +22,12 @@ the work by [Harsh Singhal](https://www.linkedin.com/in/harshsinghal), explain t
 idea in two minutes, and suggest a learning path. Start with the
 [guided introduction](skills/safeguard-eval/references/start-here.md) or
 [try writing a small policy](skills/safeguard-eval/references/walkthrough.md).
+
+To test the user experience with a lower-cost backend, the optional
+[Pi lab](docs/skill/PI-USER-TEST.md) uses GPT-6 Luna through OpenRouter and saves
+conversations and feedback locally. The [running guide](skills/safeguard-eval/references/running-models.md)
+distinguishes local, hosted, and rented-GPU options, including what failed in our
+small Ollama integration test. It does not endorse a GPU provider.
 
 Read the consolidated **[research paper](research-preprint/README.md)** as a PDF,
 agent-readable text, or editable LaTeX source package. This is author review draft

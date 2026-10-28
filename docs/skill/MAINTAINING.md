@@ -1,13 +1,13 @@
 # Maintaining the Safeguard Eval skill
 
-The skill is a portable explanation and evidence layer for Codex and Claude Code.
+The skill is a portable explanation and evidence layer for Codex, Claude Code, and Pi.
 It is not a model-serving package. Its central message is that policy authoring
 and engineering must be evaluated together. New releases should improve that
 understanding while preserving unsuccessful results and limitations.
 
 ## Release plan and scope
 
-Version 0.3.0 covers the recorded model interfaces, WildGuard policy tuning,
+Version 0.4.0 covers the recorded model interfaces, WildGuard policy tuning,
 nearby-size Qwen comparisons, policy transfer, HateXplain structure/omission tests,
 individual calibration, and probability/log-odds ensembles. Earlier demos and
 the frontier API pilot are routed separately. Enterprise governance is labelled
@@ -24,6 +24,15 @@ paths, and an untested policy-writing exercise. The author attribution links to
 Harsh Singhal's LinkedIn profile. No research findings or evidence pins changed.
 The [onboarding notes](ONBOARDING.md) describe the installation handoff and the
 acceptance checks for progressive learning.
+
+Version 0.4.0 adds Pi installation, a separate opt-in conversation-testing lab,
+task-sensitive guidance for different readers, and local/hosted/GPU running options.
+The [Pi test guide](PI-USER-TEST.md) explains the ordinary-user simulation and local
+feedback workflow. The [recorded checks](evidence/2026-10-28/README.md) preserve an
+incorrect transfer attribution, the retest, citation/verbosity limitations, and a
+local Ollama integration that overblocked all allowed teaching cases. Do not turn
+these smoke checks into a new benchmark or a guarantee for every agent backend.
+Do not publish the author's future user sessions without an explicit request.
 
 The first release also publishes the previously local ensemble evidence and its
 reproduction code. The frozen archives are copied byte for byte, including their
@@ -55,7 +64,7 @@ and release; old archive text is not retroactively rewritten.
 ```bash
 python3 tools/skill_release.py refresh --evidence-ref <full-evidence-commit>
 python3 tools/skill_release.py check
-python3 -m unittest discover -s tests -p 'test_skill_package.py' -v
+python3 -m unittest discover -s tests -p 'test_skill_*.py' -v
 python3 tools/skill_release.py build
 ```
 
@@ -102,7 +111,7 @@ The GitHub workflow validates pull requests and tags and uploads the built packa
 as a workflow artifact. The explicit release command publishes downloadable assets;
 CI does not automatically publish or mutate installed skills. After publication,
 download the release asset, verify its checksum, and install it into temporary
-Codex and Claude Code project directories. Record those checks in the release notes.
+Codex, Claude Code, and Pi project directories. Record those checks in the release notes.
 
 ## Validation recorded for 0.1.0
 
