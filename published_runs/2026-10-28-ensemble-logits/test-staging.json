@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-10-28T07:00:53.771663+00:00",
+  "all_cohorts_frozen": true,
+  "cohort_freezes": {
+    "wildguard-specialists": "ecd9235d8d7ad0ab0ee6b253bc6f71dbf5117c68b04d260b8b5e4033d13a706d",
+    "hatexplain-specialists": "4a7d3432b1c927d377ab60b56a2318b62ec838871151631e79a9281833ba2ca3",
+    "hatexplain-mixed": "ce2b08b6e2e6440ff164e6f07af85e7a8018b89aa4aa5e40899226eb36bd420a"
+  }
+}

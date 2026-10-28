@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-10-28T07:00:29.643541+00:00",
+  "cohort": "hatexplain-mixed",
+  "dataset": "hatexplain",
+  "features": [
+    "policylm",
+    "shieldstral",
+    "qwen-4b"
+  ],
+  "fit_n": 4096,
+  "validation_n": 1536,
+  "registration_sha256": "1919e504b26cd7228c4041b951591c14ba07d301dc3176bc5c65c8c935270e0c",
+  "source_hashes": {
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/ensemble/learn.py": "a4dc29d099781020a3fe376aca071bf96e18182f9d4e0a597a1573c49c30e986",
+    "evals/ensemble/study.py": "edeb73a5977def2d02182160db0dd3bdb5f1d06868826fcb4a492244f974c25b",
+    "evals/ensemble_logits/__init__.py": "9cf28709c052c2fa8590a92addca04e681169d6142292f4f849c170397f37175",
+    "evals/ensemble_logits/learn.py": "26ea464738d0de139f4dc8ad8f379b36f55af6504f676d02f9e1dc4ff380c083",
+    "evals/ensemble_logits/study.py": "85be14bf007ed72c4e2ec07f099fbdb75cda94bd51ee2eda88fa6b6c6b8bd1f5"
+  },
+  "models_sha256": "f079650c9d66a9f2a84c8866fa79beed2a6184aa6847adc20e68a58869c92de9",
+  "selection_sha256": "664c80b8f74967640af6babaa1bbfbd7e97bdab6690f8eee5547dc0c0488e51c",
+  "protocol_sha256": "af74dcf59333e8614f8b47eaf83bd0f028ce2235bf78d54215e2bbb3e1e6d690",
+  "prior_freeze_sha256": "a1e5d807696b150fbc8901c4ecaacf3d7f5f3de16e623a144c0462982fec8581",
+  "fit_seconds": 0.22415845841169357,
+  "scope": "New combiners and calibrators only; no model or policy updates"
+}

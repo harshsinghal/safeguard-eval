@@ -1,0 +1,32 @@
+{
+  "completed_utc": "2026-10-28T06:30:21.846819+00:00",
+  "status": "passed",
+  "source": "archived prompt-free scores; no model/API inference",
+  "bundle_files_verified": 109,
+  "cohorts": [
+    {
+      "cohort": "wildguard-specialists",
+      "candidates": 35,
+      "test_n": 1699,
+      "refit_matches": true,
+      "metrics_match": true,
+      "paired_intervals_match": true
+    },
+    {
+      "cohort": "hatexplain-specialists",
+      "candidates": 28,
+      "test_n": 1924,
+      "refit_matches": true,
+      "metrics_match": true,
+      "paired_intervals_match": true
+    },
+    {
+      "cohort": "hatexplain-mixed",
+      "candidates": 35,
+      "test_n": 1924,
+      "refit_matches": true,
+      "metrics_match": true,
+      "paired_intervals_match": true
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "study": "policy-ensemble-log-odds-v1",
+  "status": "complete",
+  "updated_utc": "2026-10-28T07:15:03.030655+00:00",
+  "new_gpu_api_calls": 0,
+  "new_paid_compute_usd": 0,
+  "cumulative_cost_usd": 12.50119753456,
+  "cumulative_cap_usd": 20,
+  "remaining_authorized_usd": 7.49880246544,
+  "new_configurations": 58,
+  "fitted_logistic_estimators": 55,
+  "equal_averages": 3,
+  "steps": {
+    "protocol": "registered and unchanged",
+    "prior_integrity": "111 files verified; preceding archive unchanged",
+    "software_tests": "70 passed, including 7 new log-odds tests; legacy fixture validation passed",
+    "fitting": "three cohorts frozen before extension test evaluation",
+    "test": "all configurations and paired comparisons complete",
+    "report": "plain-language readout, complete results, learned equations, claim-to-evidence guide and figure",
+    "reproduction": "passed from archived source on CPU; selections, metrics, intervals and predictions match"
+  },
+  "cohorts": {
+    "wildguard-specialists": {
+      "freeze_sha256": "ecd9235d8d7ad0ab0ee6b253bc6f71dbf5117c68b04d260b8b5e4033d13a706d",
+      "test_n": 1699,
+      "primary": "logit-logistic/C10"
+    },
+    "hatexplain-specialists": {
+      "freeze_sha256": "4a7d3432b1c927d377ab60b56a2318b62ec838871151631e79a9281833ba2ca3",
+      "test_n": 1924,
+      "primary": "logit-logistic/C1"
+    },
+    "hatexplain-mixed": {
+      "freeze_sha256": "ce2b08b6e2e6440ff164e6f07af85e7a8018b89aa4aa5e40899226eb36bd420a",
+      "test_n": 1924,
+      "primary": "logit-logistic/C0.1"
+    }
+  },
+  "scope": "Reconstructed decision log-odds from fixed saved scores; no language-model fine-tuning or policy changes",
+  "limitations": [
+    "Official tests observed previously; exploratory",
+    "Unadjusted intervals",
+    "Upstream benchmark exposure not fully known",
+    "No matched fine-tuning or human-effort comparison"
+  ]
+}

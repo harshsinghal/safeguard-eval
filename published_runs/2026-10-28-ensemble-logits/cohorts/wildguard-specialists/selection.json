@@ -1,0 +1,2582 @@
+{
+  "created_from": "fitting and validation only",
+  "candidates": [
+    {
+      "id": "logit-single/policylm/C0.01",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.49,
+      "parameters": {
+        "C": 0.01,
+        "column": 0
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222766928304178,
+        "violation_f1": 0.9266789895255699,
+        "violation_recall": 0.9193154034229829,
+        "false_blocks": 53,
+        "missed_violations": 66,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 665,
+            "BLOCK": 53,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 66,
+            "BLOCK": 752,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06934844070446476,
+        "log_loss": 0.2508394947635471
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.2669742104010804
+        ],
+        "intercept": 0.2886405931037473,
+        "feature_means": [
+          0.5536800427320937
+        ],
+        "feature_scales": [
+          4.070831321618963
+        ]
+      }
+    },
+    {
+      "id": "logit-single/policylm/C0.1",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 0.1,
+        "column": 0
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06146262603094538,
+        "log_loss": 0.20972528119050596
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.5147646314317456
+        ],
+        "intercept": 0.46985660157504755,
+        "feature_means": [
+          0.5536800427320937
+        ],
+        "feature_scales": [
+          4.070831321618963
+        ]
+      }
+    },
+    {
+      "id": "logit-single/policylm/C1",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 1.0,
+        "column": 0
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06080897607764052,
+        "log_loss": 0.20574288631919746
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.932525576557655
+        ],
+        "intercept": 0.5364492069328677,
+        "feature_means": [
+          0.5536800427320937
+        ],
+        "feature_scales": [
+          4.070831321618963
+        ]
+      }
+    },
+    {
+      "id": "logit-single/policylm/C10",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 10.0,
+        "column": 0
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.0607558853198226,
+        "log_loss": 0.2054356880514792
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.9891509493045914
+        ],
+        "intercept": 0.5455876497638079,
+        "feature_means": [
+          0.5536800427320937
+        ],
+        "feature_scales": [
+          4.070831321618963
+        ]
+      }
+    },
+    {
+      "id": "logit-single/policylm/C100",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 100.0,
+        "column": 0
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06075077302993164,
+        "log_loss": 0.20540660057406343
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.99503268728332
+        ],
+        "intercept": 0.5465379927480138,
+        "feature_means": [
+          0.5536800427320937
+        ],
+        "feature_scales": [
+          4.070831321618963
+        ]
+      }
+    },
+    {
+      "id": "logit-single/shieldstral/C0.01",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 0.01,
+        "column": 1
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.02233699204119306,
+        "log_loss": 0.1242586929383185
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.6086719761591515
+        ],
+        "intercept": 0.24431986681220624,
+        "feature_means": [
+          -0.18890380715883026
+        ],
+        "feature_scales": [
+          6.982455857676336
+        ]
+      }
+    },
+    {
+      "id": "logit-single/shieldstral/C0.1",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 0.1,
+        "column": 1
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.013641990535455055,
+        "log_loss": 0.06491638434539448
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          4.509822075086366
+        ],
+        "intercept": 0.37976470701571435,
+        "feature_means": [
+          -0.18890380715883026
+        ],
+        "feature_scales": [
+          6.982455857676336
+        ]
+      }
+    },
+    {
+      "id": "logit-single/shieldstral/C1",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 1.0,
+        "column": 1
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.01268639305010808,
+        "log_loss": 0.05745627293105136
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          5.833426263335695
+        ],
+        "intercept": 0.49552733108818486,
+        "feature_means": [
+          -0.18890380715883026
+        ],
+        "feature_scales": [
+          6.982455857676336
+        ]
+      }
+    },
+    {
+      "id": "logit-single/shieldstral/C10",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 10.0,
+        "column": 1
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012584237601871351,
+        "log_loss": 0.05715572479714085
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          6.1670382520688705
+        ],
+        "intercept": 0.5279435300458933,
+        "feature_means": [
+          -0.18890380715883026
+        ],
+        "feature_scales": [
+          6.982455857676336
+        ]
+      }
+    },
+    {
+      "id": "logit-single/shieldstral/C100",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 100.0,
+        "column": 1
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012573945488194571,
+        "log_loss": 0.05714653275784931
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          6.20734202560823
+        ],
+        "intercept": 0.5320408402296402,
+        "feature_means": [
+          -0.18890380715883026
+        ],
+        "feature_scales": [
+          6.982455857676336
+        ]
+      }
+    },
+    {
+      "id": "logit-single/cope/C0.01",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.49,
+      "parameters": {
+        "C": 0.01,
+        "column": 2
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.046145822304861084,
+        "log_loss": 0.1901320789004137
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.323924946862375
+        ],
+        "intercept": 0.32138029662762446,
+        "feature_means": [
+          1.741775519461807
+        ],
+        "feature_scales": [
+          12.904689185595172
+        ]
+      }
+    },
+    {
+      "id": "logit-single/cope/C0.1",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.51,
+      "parameters": {
+        "C": 0.1,
+        "column": 2
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04187443403917008,
+        "log_loss": 0.15593137966683443
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.361737440585552
+        ],
+        "intercept": 0.5805523211069641,
+        "feature_means": [
+          1.741775519461807
+        ],
+        "feature_scales": [
+          12.904689185595172
+        ]
+      }
+    },
+    {
+      "id": "logit-single/cope/C1",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.52,
+      "parameters": {
+        "C": 1.0,
+        "column": 2
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04178804416863564,
+        "log_loss": 0.15323673209418423
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.6618124421192784
+        ],
+        "intercept": 0.6754782623180311,
+        "feature_means": [
+          1.741775519461807
+        ],
+        "feature_scales": [
+          12.904689185595172
+        ]
+      }
+    },
+    {
+      "id": "logit-single/cope/C10",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 10.0,
+        "column": 2
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490806223479491,
+        "violation_f1": 0.9517326732673267,
+        "violation_recall": 0.9400977995110025,
+        "false_blocks": 29,
+        "missed_violations": 49,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 689,
+            "BLOCK": 29,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 49,
+            "BLOCK": 769,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04179228623118105,
+        "log_loss": 0.15304087191817542
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.700039284874275
+        ],
+        "intercept": 0.6882791900978205,
+        "feature_means": [
+          1.741775519461807
+        ],
+        "feature_scales": [
+          12.904689185595172
+        ]
+      }
+    },
+    {
+      "id": "logit-single/cope/C100",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 100.0,
+        "column": 2
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490806223479491,
+        "violation_f1": 0.9517326732673267,
+        "violation_recall": 0.9400977995110025,
+        "false_blocks": 29,
+        "missed_violations": 49,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 689,
+            "BLOCK": 29,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 49,
+            "BLOCK": 769,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04179288607890327,
+        "log_loss": 0.1530224056430495
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.703977856574842
+        ],
+        "intercept": 0.6896033605228015,
+        "feature_means": [
+          1.741775519461807
+        ],
+        "feature_scales": [
+          12.904689185595172
+        ]
+      }
+    },
+    {
+      "id": "logit-logistic/C0.01",
+      "family": "logit-logistic",
+      "kind": "logit-logistic",
+      "selected_threshold": 0.44,
+      "parameters": {
+        "C": 0.01
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.982421875,
+        "macro_f1": 0.9823626601456594,
+        "violation_f1": 0.9833846153846154,
+        "violation_recall": 0.9767726161369193,
+        "false_blocks": 8,
+        "missed_violations": 19,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 710,
+            "BLOCK": 8,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 19,
+            "BLOCK": 799,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.01952737662546877,
+        "log_loss": 0.09530208707190675
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          0.7888250849550461,
+          1.609521138546089,
+          1.047452767811462
+        ],
+        "intercept": 0.447990649745378,
+        "feature_means": [
+          0.5536800427320944,
+          -0.18890380715882552,
+          1.7417755194618099
+        ],
+        "feature_scales": [
+          4.070831321618967,
+          6.982455857676333,
+          12.904689185595167
+        ]
+      }
+    },
+    {
+      "id": "logit-logistic/C0.1",
+      "family": "logit-logistic",
+      "kind": "logit-logistic",
+      "selected_threshold": 0.55,
+      "parameters": {
+        "C": 0.1
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9856770833333334,
+        "macro_f1": 0.9856320421786641,
+        "violation_f1": 0.9864364981504316,
+        "violation_recall": 0.9779951100244498,
+        "false_blocks": 4,
+        "missed_violations": 18,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 714,
+            "BLOCK": 4,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 18,
+            "BLOCK": 800,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.013967792497956641,
+        "log_loss": 0.060597012896136164
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          0.6766695090864157,
+          3.3053292923032753,
+          1.0516307149818975
+        ],
+        "intercept": 0.681026133316654,
+        "feature_means": [
+          0.5536800427320944,
+          -0.18890380715882552,
+          1.7417755194618099
+        ],
+        "feature_scales": [
+          4.070831321618967,
+          6.982455857676333,
+          12.904689185595167
+        ]
+      }
+    },
+    {
+      "id": "logit-logistic/C1",
+      "family": "logit-logistic",
+      "kind": "logit-logistic",
+      "selected_threshold": 0.66,
+      "parameters": {
+        "C": 1.0
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9856770833333334,
+        "macro_f1": 0.9856361463113563,
+        "violation_f1": 0.9864029666254636,
+        "violation_recall": 0.9755501222493888,
+        "false_blocks": 2,
+        "missed_violations": 20,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 716,
+            "BLOCK": 2,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 20,
+            "BLOCK": 798,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012657791270294302,
+        "log_loss": 0.0550935588128894
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          0.2612836250069765,
+          4.902921995356772,
+          0.743480998826115
+        ],
+        "intercept": 0.6939349634777573,
+        "feature_means": [
+          0.5536800427320944,
+          -0.18890380715882552,
+          1.7417755194618099
+        ],
+        "feature_scales": [
+          4.070831321618967,
+          6.982455857676333,
+          12.904689185595167
+        ]
+      }
+    },
+    {
+      "id": "logit-logistic/C10",
+      "family": "logit-logistic",
+      "kind": "logit-logistic",
+      "selected_threshold": 0.4,
+      "parameters": {
+        "C": 10.0
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.986328125,
+        "macro_f1": 0.9862756252364089,
+        "violation_f1": 0.9871244635193133,
+        "violation_recall": 0.9841075794621027,
+        "false_blocks": 8,
+        "missed_violations": 13,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 710,
+            "BLOCK": 8,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 13,
+            "BLOCK": 805,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012539846380923939,
+        "log_loss": 0.0550962738792058
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          0.12646444935515241,
+          5.343153302143727,
+          0.644994011980264
+        ],
+        "intercept": 0.6718571781641425,
+        "feature_means": [
+          0.5536800427320944,
+          -0.18890380715882552,
+          1.7417755194618099
+        ],
+        "feature_scales": [
+          4.070831321618967,
+          6.982455857676333,
+          12.904689185595167
+        ]
+      }
+    },
+    {
+      "id": "logit-logistic/C100",
+      "family": "logit-logistic",
+      "kind": "logit-logistic",
+      "selected_threshold": 0.4,
+      "parameters": {
+        "C": 100.0
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.986328125,
+        "macro_f1": 0.9862756252364089,
+        "violation_f1": 0.9871244635193133,
+        "violation_recall": 0.9841075794621027,
+        "false_blocks": 8,
+        "missed_violations": 13,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 710,
+            "BLOCK": 8,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 13,
+            "BLOCK": 805,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012530118407211613,
+        "log_loss": 0.055127923252027
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          0.10962108776329513,
+          5.396976106537021,
+          0.6327672080053683
+        ],
+        "intercept": 0.6684764140948188,
+        "feature_means": [
+          0.5536800427320944,
+          -0.18890380715882552,
+          1.7417755194618099
+        ],
+        "feature_scales": [
+          4.070831321618967,
+          6.982455857676333,
+          12.904689185595167
+        ]
+      }
+    },
+    {
+      "id": "logit-equal",
+      "family": "logit-equal",
+      "kind": "logit-equal",
+      "selected_threshold": 0.06,
+      "parameters": {},
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.97265625,
+        "macro_f1": 0.9725203950193215,
+        "violation_f1": 0.9744525547445255,
+        "violation_recall": 0.9792176039119804,
+        "false_blocks": 25,
+        "missed_violations": 17,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 693,
+            "BLOCK": 25,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 17,
+            "BLOCK": 801,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.02606010444856871,
+        "log_loss": 0.1070690997426716
+      }
+    }
+  ],
+  "single_pool": [
+    {
+      "id": "logit-single/policylm/C0.01",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.49,
+      "parameters": {
+        "C": 0.01,
+        "column": 0
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222766928304178,
+        "violation_f1": 0.9266789895255699,
+        "violation_recall": 0.9193154034229829,
+        "false_blocks": 53,
+        "missed_violations": 66,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 665,
+            "BLOCK": 53,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 66,
+            "BLOCK": 752,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06934844070446476,
+        "log_loss": 0.2508394947635471
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.2669742104010804
+        ],
+        "intercept": 0.2886405931037473,
+        "feature_means": [
+          0.5536800427320937
+        ],
+        "feature_scales": [
+          4.070831321618963
+        ]
+      }
+    },
+    {
+      "id": "logit-single/policylm/C0.1",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 0.1,
+        "column": 0
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06146262603094538,
+        "log_loss": 0.20972528119050596
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.5147646314317456
+        ],
+        "intercept": 0.46985660157504755,
+        "feature_means": [
+          0.5536800427320937
+        ],
+        "feature_scales": [
+          4.070831321618963
+        ]
+      }
+    },
+    {
+      "id": "logit-single/policylm/C1",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 1.0,
+        "column": 0
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06080897607764052,
+        "log_loss": 0.20574288631919746
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.932525576557655
+        ],
+        "intercept": 0.5364492069328677,
+        "feature_means": [
+          0.5536800427320937
+        ],
+        "feature_scales": [
+          4.070831321618963
+        ]
+      }
+    },
+    {
+      "id": "logit-single/policylm/C10",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 10.0,
+        "column": 0
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.0607558853198226,
+        "log_loss": 0.2054356880514792
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.9891509493045914
+        ],
+        "intercept": 0.5455876497638079,
+        "feature_means": [
+          0.5536800427320937
+        ],
+        "feature_scales": [
+          4.070831321618963
+        ]
+      }
+    },
+    {
+      "id": "logit-single/policylm/C100",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 100.0,
+        "column": 0
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06075077302993164,
+        "log_loss": 0.20540660057406343
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.99503268728332
+        ],
+        "intercept": 0.5465379927480138,
+        "feature_means": [
+          0.5536800427320937
+        ],
+        "feature_scales": [
+          4.070831321618963
+        ]
+      }
+    },
+    {
+      "id": "logit-single/shieldstral/C0.01",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 0.01,
+        "column": 1
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.02233699204119306,
+        "log_loss": 0.1242586929383185
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.6086719761591515
+        ],
+        "intercept": 0.24431986681220624,
+        "feature_means": [
+          -0.18890380715883026
+        ],
+        "feature_scales": [
+          6.982455857676336
+        ]
+      }
+    },
+    {
+      "id": "logit-single/shieldstral/C0.1",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 0.1,
+        "column": 1
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.013641990535455055,
+        "log_loss": 0.06491638434539448
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          4.509822075086366
+        ],
+        "intercept": 0.37976470701571435,
+        "feature_means": [
+          -0.18890380715883026
+        ],
+        "feature_scales": [
+          6.982455857676336
+        ]
+      }
+    },
+    {
+      "id": "logit-single/shieldstral/C1",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 1.0,
+        "column": 1
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.01268639305010808,
+        "log_loss": 0.05745627293105136
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          5.833426263335695
+        ],
+        "intercept": 0.49552733108818486,
+        "feature_means": [
+          -0.18890380715883026
+        ],
+        "feature_scales": [
+          6.982455857676336
+        ]
+      }
+    },
+    {
+      "id": "logit-single/shieldstral/C10",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 10.0,
+        "column": 1
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012584237601871351,
+        "log_loss": 0.05715572479714085
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          6.1670382520688705
+        ],
+        "intercept": 0.5279435300458933,
+        "feature_means": [
+          -0.18890380715883026
+        ],
+        "feature_scales": [
+          6.982455857676336
+        ]
+      }
+    },
+    {
+      "id": "logit-single/shieldstral/C100",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 100.0,
+        "column": 1
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012573945488194571,
+        "log_loss": 0.05714653275784931
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          6.20734202560823
+        ],
+        "intercept": 0.5320408402296402,
+        "feature_means": [
+          -0.18890380715883026
+        ],
+        "feature_scales": [
+          6.982455857676336
+        ]
+      }
+    },
+    {
+      "id": "logit-single/cope/C0.01",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.49,
+      "parameters": {
+        "C": 0.01,
+        "column": 2
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.046145822304861084,
+        "log_loss": 0.1901320789004137
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.323924946862375
+        ],
+        "intercept": 0.32138029662762446,
+        "feature_means": [
+          1.741775519461807
+        ],
+        "feature_scales": [
+          12.904689185595172
+        ]
+      }
+    },
+    {
+      "id": "logit-single/cope/C0.1",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.51,
+      "parameters": {
+        "C": 0.1,
+        "column": 2
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04187443403917008,
+        "log_loss": 0.15593137966683443
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.361737440585552
+        ],
+        "intercept": 0.5805523211069641,
+        "feature_means": [
+          1.741775519461807
+        ],
+        "feature_scales": [
+          12.904689185595172
+        ]
+      }
+    },
+    {
+      "id": "logit-single/cope/C1",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.52,
+      "parameters": {
+        "C": 1.0,
+        "column": 2
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04178804416863564,
+        "log_loss": 0.15323673209418423
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.6618124421192784
+        ],
+        "intercept": 0.6754782623180311,
+        "feature_means": [
+          1.741775519461807
+        ],
+        "feature_scales": [
+          12.904689185595172
+        ]
+      }
+    },
+    {
+      "id": "logit-single/cope/C10",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 10.0,
+        "column": 2
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490806223479491,
+        "violation_f1": 0.9517326732673267,
+        "violation_recall": 0.9400977995110025,
+        "false_blocks": 29,
+        "missed_violations": 49,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 689,
+            "BLOCK": 29,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 49,
+            "BLOCK": 769,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04179228623118105,
+        "log_loss": 0.15304087191817542
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.700039284874275
+        ],
+        "intercept": 0.6882791900978205,
+        "feature_means": [
+          1.741775519461807
+        ],
+        "feature_scales": [
+          12.904689185595172
+        ]
+      }
+    },
+    {
+      "id": "logit-single/cope/C100",
+      "family": "single",
+      "kind": "single-logit",
+      "selected_threshold": 0.5,
+      "parameters": {
+        "C": 100.0,
+        "column": 2
+      },
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490806223479491,
+        "violation_f1": 0.9517326732673267,
+        "violation_recall": 0.9400977995110025,
+        "false_blocks": 29,
+        "missed_violations": 49,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 689,
+            "BLOCK": 29,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 49,
+            "BLOCK": 769,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04179288607890327,
+        "log_loss": 0.1530224056430495
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.703977856574842
+        ],
+        "intercept": 0.6896033605228015,
+        "feature_means": [
+          1.741775519461807
+        ],
+        "feature_scales": [
+          12.904689185595172
+        ]
+      }
+    },
+    {
+      "id": "single/policylm/fixed",
+      "family": "single",
+      "kind": "single-raw",
+      "selected_threshold": 0.5,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.0606814518093409,
+        "log_loss": 0.20508794530011207
+      },
+      "parameters": {
+        "column": 0
+      }
+    },
+    {
+      "id": "single/policylm/thresholded",
+      "family": "single",
+      "kind": "single-raw",
+      "selected_threshold": 0.5,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.0606814518093409,
+        "log_loss": 0.20508794530011207
+      },
+      "parameters": {
+        "column": 0
+      }
+    },
+    {
+      "id": "single/policylm/logistic-C0.01",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.52,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.0639694929811749,
+        "log_loss": 0.24065209909791993
+      },
+      "parameters": {
+        "C": 0.01,
+        "column": 0
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.123452838123786
+        ],
+        "intercept": 0.22138282913762447,
+        "feature_means": [
+          0.5319109991431077
+        ],
+        "feature_scales": [
+          0.43192398087963524
+        ]
+      }
+    },
+    {
+      "id": "single/policylm/logistic-C0.1",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.52,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06132481434441375,
+        "log_loss": 0.21740844056080122
+      },
+      "parameters": {
+        "C": 0.1,
+        "column": 0
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.831391234297209
+        ],
+        "intercept": 0.2821998512353682,
+        "feature_means": [
+          0.5319109991431077
+        ],
+        "feature_scales": [
+          0.43192398087963524
+        ]
+      }
+    },
+    {
+      "id": "single/policylm/logistic-C1",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.46,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9231770833333334,
+        "macro_f1": 0.9228758169934641,
+        "violation_f1": 0.9276960784313726,
+        "violation_recall": 0.9254278728606357,
+        "false_blocks": 57,
+        "missed_violations": 61,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 661,
+            "BLOCK": 57,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 61,
+            "BLOCK": 757,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.061370320088746176,
+        "log_loss": 0.21601617368119594
+      },
+      "parameters": {
+        "C": 1.0,
+        "column": 0
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.976113081050298
+        ],
+        "intercept": 0.2963849420599392,
+        "feature_means": [
+          0.5319109991431077
+        ],
+        "feature_scales": [
+          0.43192398087963524
+        ]
+      }
+    },
+    {
+      "id": "single/policylm/logistic-C10",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.46,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9231770833333334,
+        "macro_f1": 0.9228758169934641,
+        "violation_f1": 0.9276960784313726,
+        "violation_recall": 0.9254278728606357,
+        "false_blocks": 57,
+        "missed_violations": 61,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 661,
+            "BLOCK": 57,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 61,
+            "BLOCK": 757,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06138196793775095,
+        "log_loss": 0.21591281222508527
+      },
+      "parameters": {
+        "C": 10.0,
+        "column": 0
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.992573963627359
+        ],
+        "intercept": 0.29803988032274936,
+        "feature_means": [
+          0.5319109991431077
+        ],
+        "feature_scales": [
+          0.43192398087963524
+        ]
+      }
+    },
+    {
+      "id": "single/policylm/logistic-C100",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.46,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9231770833333334,
+        "macro_f1": 0.9228758169934641,
+        "violation_f1": 0.9276960784313726,
+        "violation_recall": 0.9254278728606357,
+        "false_blocks": 57,
+        "missed_violations": 61,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 661,
+            "BLOCK": 57,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 61,
+            "BLOCK": 757,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06138321480963871,
+        "log_loss": 0.21590292436138805
+      },
+      "parameters": {
+        "C": 100.0,
+        "column": 0
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.9942437524501586
+        ],
+        "intercept": 0.2982082379685442,
+        "feature_means": [
+          0.5319109991431077
+        ],
+        "feature_scales": [
+          0.43192398087963524
+        ]
+      }
+    },
+    {
+      "id": "single/shieldstral/fixed",
+      "family": "single",
+      "kind": "single-raw",
+      "selected_threshold": 0.5,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9850260416666666,
+        "macro_f1": 0.9849800452452329,
+        "violation_f1": 0.9858112276372609,
+        "violation_recall": 0.9767726161369193,
+        "false_blocks": 4,
+        "missed_violations": 19,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 714,
+            "BLOCK": 4,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 19,
+            "BLOCK": 799,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.013210068396908132,
+        "log_loss": 0.06581701884207196
+      },
+      "parameters": {
+        "column": 1
+      }
+    },
+    {
+      "id": "single/shieldstral/thresholded",
+      "family": "single",
+      "kind": "single-raw",
+      "selected_threshold": 0.34,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.013210068396908132,
+        "log_loss": 0.06581701884207196
+      },
+      "parameters": {
+        "column": 1
+      }
+    },
+    {
+      "id": "single/shieldstral/logistic-C0.01",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.34,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.016462443681875504,
+        "log_loss": 0.10578713652706717
+      },
+      "parameters": {
+        "C": 0.01,
+        "column": 1
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.547959997822552
+        ],
+        "intercept": 0.27718128298796163,
+        "feature_means": [
+          0.5231939496915954
+        ],
+        "feature_scales": [
+          0.48743646627699866
+        ]
+      }
+    },
+    {
+      "id": "single/shieldstral/logistic-C0.1",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.29,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.01277370097180981,
+        "log_loss": 0.06279438436295624
+      },
+      "parameters": {
+        "C": 0.1,
+        "column": 1
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.970583693085818
+        ],
+        "intercept": 0.5447632364831801,
+        "feature_means": [
+          0.5231939496915954
+        ],
+        "feature_scales": [
+          0.48743646627699866
+        ]
+      }
+    },
+    {
+      "id": "single/shieldstral/logistic-C1",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.29,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012720091946507533,
+        "log_loss": 0.059045314782991465
+      },
+      "parameters": {
+        "C": 1.0,
+        "column": 1
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          4.653552116870797
+        ],
+        "intercept": 0.7801026249853572,
+        "feature_means": [
+          0.5231939496915954
+        ],
+        "feature_scales": [
+          0.48743646627699866
+        ]
+      }
+    },
+    {
+      "id": "single/shieldstral/logistic-C10",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.29,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012722973254784853,
+        "log_loss": 0.058852501228779754
+      },
+      "parameters": {
+        "C": 10.0,
+        "column": 1
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          4.77811529302638
+        ],
+        "intercept": 0.8326387138279928,
+        "feature_means": [
+          0.5231939496915954
+        ],
+        "feature_scales": [
+          0.48743646627699866
+        ]
+      }
+    },
+    {
+      "id": "single/shieldstral/logistic-C100",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.29,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012723357789724164,
+        "log_loss": 0.05883783910331222
+      },
+      "parameters": {
+        "C": 100.0,
+        "column": 1
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          4.791856064410158
+        ],
+        "intercept": 0.8386172986113917,
+        "feature_means": [
+          0.5231939496915954
+        ],
+        "feature_scales": [
+          0.48743646627699866
+        ]
+      }
+    },
+    {
+      "id": "single/cope/fixed",
+      "family": "single",
+      "kind": "single-raw",
+      "selected_threshold": 0.5,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9479166666666666,
+        "macro_f1": 0.9477888439443897,
+        "violation_f1": 0.9503722084367245,
+        "violation_recall": 0.9364303178484108,
+        "false_blocks": 28,
+        "missed_violations": 52,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 52,
+            "BLOCK": 766,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04876230168439336,
+        "log_loss": 0.3441467651692751
+      },
+      "parameters": {
+        "column": 2
+      }
+    },
+    {
+      "id": "single/cope/thresholded",
+      "family": "single",
+      "kind": "single-raw",
+      "selected_threshold": 0.43,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04876230168439336,
+        "log_loss": 0.3441467651692751
+      },
+      "parameters": {
+        "column": 2
+      }
+    },
+    {
+      "id": "single/cope/logistic-C0.01",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.48,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04999049286611479,
+        "log_loss": 0.21297225502715733
+      },
+      "parameters": {
+        "C": 0.01,
+        "column": 2
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.1555963090867603
+        ],
+        "intercept": 0.27733117192963913,
+        "feature_means": [
+          0.5165303623800637
+        ],
+        "feature_scales": [
+          0.49579800601433444
+        ]
+      }
+    },
+    {
+      "id": "single/cope/logistic-C0.1",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.49,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04705154188699976,
+        "log_loss": 0.1919755933003072
+      },
+      "parameters": {
+        "C": 0.1,
+        "column": 2
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.811799513144666
+        ],
+        "intercept": 0.4185469354418717,
+        "feature_means": [
+          0.5165303623800637
+        ],
+        "feature_scales": [
+          0.49579800601433444
+        ]
+      }
+    },
+    {
+      "id": "single/cope/logistic-C1",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.49,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04698511006110518,
+        "log_loss": 0.1909195637671264
+      },
+      "parameters": {
+        "C": 1.0,
+        "column": 2
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.9396500131007133
+        ],
+        "intercept": 0.4559680612547141,
+        "feature_means": [
+          0.5165303623800637
+        ],
+        "feature_scales": [
+          0.49579800601433444
+        ]
+      }
+    },
+    {
+      "id": "single/cope/logistic-C10",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.49,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04698271823575922,
+        "log_loss": 0.19084851109743836
+      },
+      "parameters": {
+        "C": 10.0,
+        "column": 2
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.9540382728521304
+        ],
+        "intercept": 0.460418055656423,
+        "feature_means": [
+          0.5165303623800637
+        ],
+        "feature_scales": [
+          0.49579800601433444
+        ]
+      }
+    },
+    {
+      "id": "single/cope/logistic-C100",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.49,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04698252613662012,
+        "log_loss": 0.1908418270330723
+      },
+      "parameters": {
+        "C": 100.0,
+        "column": 2
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.955496024274212
+        ],
+        "intercept": 0.4608716664309079,
+        "feature_means": [
+          0.5165303623800637
+        ],
+        "feature_scales": [
+          0.49579800601433444
+        ]
+      }
+    }
+  ],
+  "selected": {
+    "primary": "logit-logistic/C10",
+    "secondary": "logit-equal",
+    "best_single": "logit-single/shieldstral/C0.01",
+    "per_model": {
+      "policylm": "single/policylm/logistic-C1",
+      "shieldstral": "logit-single/shieldstral/C0.01",
+      "cope": "logit-single/cope/C0.01"
+    },
+    "prior_probability_logistic": "logistic/C1",
+    "prior_best_single": "single/shieldstral/logistic-C0.01",
+    "prior_best_ensemble": "weighted/lambda0"
+  },
+  "feature_names": [
+    "policylm",
+    "shieldstral",
+    "cope"
+  ],
+  "fitting_rows": 4096,
+  "excluded_training_failures": 0,
+  "selection": "validation accuracy, macro-F1, threshold nearest .5, lower threshold, lexical ID"
+}

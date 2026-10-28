@@ -1,0 +1,21 @@
+{
+  "role": "Post-test descriptive comparison; not used for selection",
+  "comparison": "HateXplain mixed log-odds logistic vs individually validation-selected Shieldstral",
+  "result": {
+    "accuracy_delta": 0.012474012474012475,
+    "macro_f1_delta": 0.009592571703276764,
+    "accuracy_ci95": [
+      0.0010395010395010118,
+      0.024378226216482918
+    ],
+    "macro_f1_ci95": [
+      -0.004456740304610854,
+      0.023193868493660733
+    ],
+    "cases_fixed": 78,
+    "cases_broken": 54,
+    "groups": 1922,
+    "replicates": 2000,
+    "limitation": "Unadjusted descriptive intervals; exclude policy-search and inference uncertainty; tests reused from prior studies."
+  }
+}

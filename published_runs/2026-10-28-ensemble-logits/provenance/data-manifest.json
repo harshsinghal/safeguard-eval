@@ -1,0 +1,2578 @@
+{
+  "created_utc": "2026-10-28T05:59:06.954770+00:00",
+  "seed": 20261027,
+  "datasets": {
+    "wildguard": {
+      "cached_rows": 8192,
+      "excluded_development_groups": 2004,
+      "known_test_overlap_groups": 2,
+      "eligible": {
+        "n": 7015,
+        "groups": 6530,
+        "labels": {
+          "ALLOW": 3280,
+          "BLOCK": 3735
+        },
+        "source_labels": {
+          "benign": 3280,
+          "others": 883,
+          "toxic_language_hate_speech": 242,
+          "private_information_individual": 205,
+          "sensitive_information_organization_government": 249,
+          "cyberattack": 128,
+          "sexual_content": 177,
+          "copyright_violations": 142,
+          "mental_health_over-reliance_crisis": 148,
+          "violence_and_physical_harm": 235,
+          "social_stereotypes_and_unfair_discrimination": 503,
+          "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 325,
+          "defamation_encouraging_unethical_or_unsafe_actions": 195,
+          "causing_material_harm_by_disseminating_misinformation": 121,
+          "fraud_assisting_illegal_activities": 182
+        }
+      },
+      "fit": {
+        "n": 4096,
+        "groups": 3823,
+        "labels": {
+          "ALLOW": 1916,
+          "BLOCK": 2180
+        },
+        "source_labels": {
+          "benign": 1916,
+          "others": 513,
+          "toxic_language_hate_speech": 139,
+          "cyberattack": 85,
+          "sexual_content": 109,
+          "copyright_violations": 91,
+          "social_stereotypes_and_unfair_discrimination": 281,
+          "mental_health_over-reliance_crisis": 91,
+          "violence_and_physical_harm": 137,
+          "defamation_encouraging_unethical_or_unsafe_actions": 106,
+          "causing_material_harm_by_disseminating_misinformation": 67,
+          "sensitive_information_organization_government": 161,
+          "fraud_assisting_illegal_activities": 109,
+          "private_information_individual": 119,
+          "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 172
+        }
+      },
+      "validation": {
+        "n": 1536,
+        "groups": 1424,
+        "labels": {
+          "ALLOW": 718,
+          "BLOCK": 818
+        },
+        "source_labels": {
+          "benign": 718,
+          "others": 189,
+          "private_information_individual": 47,
+          "sensitive_information_organization_government": 46,
+          "mental_health_over-reliance_crisis": 31,
+          "violence_and_physical_harm": 44,
+          "copyright_violations": 30,
+          "social_stereotypes_and_unfair_discrimination": 113,
+          "cyberattack": 23,
+          "sexual_content": 38,
+          "defamation_encouraging_unethical_or_unsafe_actions": 44,
+          "causing_material_harm_by_disseminating_misinformation": 30,
+          "toxic_language_hate_speech": 51,
+          "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 88,
+          "fraud_assisting_illegal_activities": 44
+        }
+      },
+      "exclusions": [
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-audit-p0/predictions.jsonl.gz",
+          "sha256": "a249a4b756ccac1b5d762ca997651b3ed622c54cc23dbbc2a010e087069ba804",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-audit-p2/predictions.jsonl.gz",
+          "sha256": "29082e9122ff23dddee924cd3854d627120a485a63d97a56b7d15312f7361ca6",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-audit-p3/predictions.jsonl.gz",
+          "sha256": "796f230a9beacd66d0a4b0377967cb7280e16cf56aa02ee50a30a38bd49aa0a0",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-pilot-p0/predictions.jsonl.gz",
+          "sha256": "c05ed363ded76b3dc5f4d43511d1480e5765a6df42fc540eda359f7d226bdd07",
+          "n": 256
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-search-p0/predictions.jsonl.gz",
+          "sha256": "0ee3095f666b78a86dd8b647477ab13d6f2ce6b8ed32f1143b20d6d798b5f1dd",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-search-p1/predictions.jsonl.gz",
+          "sha256": "07f4c6a80d75ff06fcdba01752dda739bd8981cc76c7aac7c20268651c54081c",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-search-p2/predictions.jsonl.gz",
+          "sha256": "f98286b24c1a5b902a222c1af4f6104dbdcbcad45e29dc8602bede868dc55db4",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-search-p3/predictions.jsonl.gz",
+          "sha256": "af39eecce7f80c246d530d00df1fa5681d4a63783f22636261b803c2c5985010",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-search-p4/predictions.jsonl.gz",
+          "sha256": "7c9e357d936566422e2256c36af80e062aedaa1e6cf2bbaf15c76f56712f78ca",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-validation-p0/predictions.jsonl.gz",
+          "sha256": "1da277a1f33ef4e1fc18847e7251de4a7a2b32d3f2ad2836a44eb73b8440519b",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-validation-p1/predictions.jsonl.gz",
+          "sha256": "0d77bc9eb65d1d6c9a309f9d9c6e3a8200ee5eed3b2c02c95ee5233bc91291b4",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-validation-p2/predictions.jsonl.gz",
+          "sha256": "2094373b7694ff885fbf8c85911d3d4956c6274f3d2288090fa8e6f5611d79a1",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-validation-p3/predictions.jsonl.gz",
+          "sha256": "571cf1d21b7d1de1e5bd86385bd24bf547f66f45568794a27cc65bb91b3b3045",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/cope-validation-p4/predictions.jsonl.gz",
+          "sha256": "631333fe9685ccb56befb19fe1dffcdec4e2e537142fdbcdeefc002bf205df56",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-audit-p0/predictions.jsonl.gz",
+          "sha256": "6af0cc12bd7aef170a534a0b1cb380466fcd9e8dbb426871de14a2cef77ea43f",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-audit-p2/predictions.jsonl.gz",
+          "sha256": "34a3f82c77b7a20a1a2c5260c5c1f2a678f14ff446309b15b06e70369fbd99aa",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-audit-p4/predictions.jsonl.gz",
+          "sha256": "ab6c87a6da618e9de0a946d420c2558ee6b2776eee17b937bc05541bebc9d2ba",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-pilot-p0/predictions.jsonl.gz",
+          "sha256": "9dc41a4dc4eff6167befb20f9d084c5a1346b8cd49c0e51b024bd9c2f3d36412",
+          "n": 256
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-search-p0/predictions.jsonl.gz",
+          "sha256": "7308e44ffb6a0e9cad620809e18ef7c60479a868cdabac2532349710b87d57d4",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-search-p1/predictions.jsonl.gz",
+          "sha256": "fc0da4fe37d5a3ad3db046172c708e014afd3058b57fba0c8df9acef6f077ef0",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-search-p2/predictions.jsonl.gz",
+          "sha256": "b0081a0990655c4d3dfda89af76a3ef8ff1fbb2fc4b2dbccd8c373fe053e6606",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-search-p3/predictions.jsonl.gz",
+          "sha256": "7af8942706f4feec63fd9c776bac61c5acdba95c1eda57dbf9517d08b8507da6",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-search-p4/predictions.jsonl.gz",
+          "sha256": "f1574e5c1e8a2155d72888e0ccf554083f62e22e0f89dbc9c9d194246223276a",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-validation-p0/predictions.jsonl.gz",
+          "sha256": "fa1de5ed05b212813d9de0dbb66fa6d196902d3fe25fc3a27d1948ca885e502d",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-validation-p1/predictions.jsonl.gz",
+          "sha256": "93e6e1279900d2741ce1a43b41bd769b859fbd074716b163862c7696d1e69adc",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-validation-p2/predictions.jsonl.gz",
+          "sha256": "0f71e6461d0ef055c74f90773fa70cb54d265b8918adaf49ddee2a063626e5c0",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-validation-p3/predictions.jsonl.gz",
+          "sha256": "59b74dae851dc1cbd198d1c0adf9ff5621a622bac8c387872fb83ba4938c2f1e",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/policylm-validation-p4/predictions.jsonl.gz",
+          "sha256": "19bf1c1babd2b07c8799a9134620e96459e02ce98e0abb2bad574e1c72022cab",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-audit-p0/predictions.jsonl.gz",
+          "sha256": "ffb44e92ab0439cc4566147caa8ee250eba06cfd9002bd746871dc90ff4d3646",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-audit-p2/predictions.jsonl.gz",
+          "sha256": "25845276eba8916b06f4572951d7a338829f144b14e80284345853716af8e020",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-pilot-8192-p0/predictions.jsonl.gz",
+          "sha256": "53873ae6a6f178fde6782ad89ec35db4a63309c38d2e4195e5b34ff94ca6712e",
+          "n": 256
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-pilot-p0/predictions.jsonl.gz",
+          "sha256": "6897dd27991a9b6b44f8a4f5a4ee687d92fd4a4bac193d2507f6456985ae1c1d",
+          "n": 256
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-search-p0/predictions.jsonl.gz",
+          "sha256": "017421e519cd69c161c763e3fae7b0e9f9e2f46fa69478ec44f4deabbc424c27",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-search-p1/predictions.jsonl.gz",
+          "sha256": "e0db538916818a089a8d32192d3b169fbf1380ef8cc7e34e12a04de2eb02fffa",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-search-p2/predictions.jsonl.gz",
+          "sha256": "0e0e0c89f515c380da8032de500dbce0829609445bc62c81f8b6489c4cde9a79",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-search-p3/predictions.jsonl.gz",
+          "sha256": "36fef5ea8c6a6a7022ca771e4abba64c6668784d6ee2e0694ee2be0a4d80abb2",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-search-p4/predictions.jsonl.gz",
+          "sha256": "003ca472e01d29e0c9a2c9b935e2d02af5c92cb9c05276180a3dcf89e1e2c9fa",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-validation-p0/predictions.jsonl.gz",
+          "sha256": "e1b1ec7b47ed759846b05c1aab14176a7ef82dcb259eb4ad2d20eb0a379702b2",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-validation-p1/predictions.jsonl.gz",
+          "sha256": "371bd889c25af04e3ed0e535eb0586c20ce6d0980a3fbb052bbf6cbd8cbb9553",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-validation-p2/predictions.jsonl.gz",
+          "sha256": "464bdc4d71ecb2a9d7be720bd7369102f87233b38e816fb75a03005dbb6896c4",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-validation-p3/predictions.jsonl.gz",
+          "sha256": "b4f150f0e49ff39aae76a035735b43360088bf132e993e85fc4280875691e7da",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/safeguard-validation-p4/predictions.jsonl.gz",
+          "sha256": "ff78a8456c206a630f106ac4174c35abd2336fc5c22fe517d6ece61c61a304bc",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-audit-p0/predictions.jsonl.gz",
+          "sha256": "d1f3c7eaf33d5e0af73e9afbce7e1c81d9eb734845afb30ec988c57bc39b8cd3",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-audit-p2/predictions.jsonl.gz",
+          "sha256": "4019c2085abc45df81aa5123daf83d93c05c19730dbd1ad2c09848c36f2388e6",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-audit-p4/predictions.jsonl.gz",
+          "sha256": "47200c32bf33e487022f45d4aa38bdbda3fa09f3ea8bc97d699d5e6dbf3d86e1",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-pilot-p0/predictions.jsonl.gz",
+          "sha256": "029b0ff8dfc8998304ac352bfdd17334709a360b77c085d074604b614dfe0fe2",
+          "n": 256
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-search-p0/predictions.jsonl.gz",
+          "sha256": "e7cb382498d90f75286b26afece9910dba1538b1fc2dc85ff5e9884e6d1cd0ef",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-search-p1/predictions.jsonl.gz",
+          "sha256": "fae62c85e7a18964447065f4e98063497bb21b390ef383a9bca8e3627e935cb7",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-search-p2/predictions.jsonl.gz",
+          "sha256": "698ad416b76c701c65484670a78e1472946cdf432e7f34cf9a4de934723971e7",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-search-p3/predictions.jsonl.gz",
+          "sha256": "ee4858166487d66e85f79c5a94e957161469d752b9e6c86c35a0d0aa868fe47a",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-search-p4/predictions.jsonl.gz",
+          "sha256": "4daefef9412e9d7e8bab65e996e53e64564e0ce52a51d40e8d29353d327dfaf5",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-validation-p0/predictions.jsonl.gz",
+          "sha256": "969c00210eb984317dc283c321d728fc48ade43d537493aa595992b9aef483fc",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-validation-p1/predictions.jsonl.gz",
+          "sha256": "28ee83124c2757efa8d2cd20da5fdcd06cc2df9ddf55315c0eadbf508ef103a6",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-validation-p2/predictions.jsonl.gz",
+          "sha256": "457c697262ec3317e6bbbbf8d3d8cfd18a821664d0a5dc69e2ce8c69f38bc245",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-validation-p3/predictions.jsonl.gz",
+          "sha256": "0d606c07c340566cb5d7f3ed94b61eaefb8a899e026336fe08bb3e2a066812c1",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-validation-p4/predictions.jsonl.gz",
+          "sha256": "4bac79932617dbef0588f02e7d1e9e77c45ad00e7f0dab0c34f55edb937afaf3",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/wildguard-audit-p0/predictions.jsonl.gz",
+          "sha256": "e023ffb91666a00f32bc6b45efcbec1ce1f3eef9a58be13dcb8f70e2b4b843e4",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/wildguard-pilot-p0/predictions.jsonl.gz",
+          "sha256": "e34428b570f25e95aca0aa45b9a72229deadcf4171f5b94358c9a7d7264cda32",
+          "n": 256
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/wildguard-search-p0/predictions.jsonl.gz",
+          "sha256": "560c0b9f820ea592ada96968c6e400f84394c27f681d5aa1bc3fade32f0f9a18",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-24-wildguard/runs/wildguard-validation-p0/predictions.jsonl.gz",
+          "sha256": "40a57fd535f8cf708ce94767d0bf2bdfe51f88f5b881db621f351047a9fe9b9b",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-audit-p0/predictions.jsonl.gz",
+          "sha256": "7ba2d92911382cf323ed94bf160f5a8e2059511f7669b1a823c4a3cd75443a66",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-audit-p1/predictions.jsonl.gz",
+          "sha256": "13e882cc2c167df23fc9549650fef67f42e8fbaec76cdd3dc3520a29d48a270d",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-audit-p2/predictions.jsonl.gz",
+          "sha256": "1f630e2692974def6cab6d6ab77fa5175602e31ff41d6a22c865649132471abe",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-pilot-p0/predictions.jsonl.gz",
+          "sha256": "704ad15ad681d3b722e47006358ad796c5d8710155d8523d3dd4f5011afd9084",
+          "n": 256
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-search-p0/predictions.jsonl.gz",
+          "sha256": "4d65af27195444b5436b2ff0076d9e6d740b555ffff4167139a36c05d22a7019",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-search-p1/predictions.jsonl.gz",
+          "sha256": "e2175f2fdb5125165da44e7a04272e0e71939422f10bbe902a6d3ba30b9aa18d",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-search-p2/predictions.jsonl.gz",
+          "sha256": "37b8369a52aca342c8ec2a1008c418ddc9dc35cd8d3b7ca6c94f7ed6f43a1a5b",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-search-p3/predictions.jsonl.gz",
+          "sha256": "5f52cb58be05433e0b83163ce38e2090db3c289c6ca46584e2eb2c2c5e272fbc",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-search-p4/predictions.jsonl.gz",
+          "sha256": "c70120c8c1faa22287518b5818f774ef99b7824fbce02007b5c2374090364429",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-validation-p0/predictions.jsonl.gz",
+          "sha256": "a2c6b376e3af2cec1f7627f86bdb942cb8205493a8620c52f3e14605541bf8c0",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-validation-p1/predictions.jsonl.gz",
+          "sha256": "aa645e48a4e7c9b9ecf11ebf707e45c90933b91042a54fec39a305a4565a46e6",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-validation-p2/predictions.jsonl.gz",
+          "sha256": "af8cf1bff2659abe6178d7d80421ff73eab08d512f11d9ed211a3c895813e325",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-validation-p3/predictions.jsonl.gz",
+          "sha256": "9896d22772c457e159d10435b97191c3d8565d0a29a84386ba0baea9364899ed",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-validation-p4/predictions.jsonl.gz",
+          "sha256": "9c715decb070d7ed1ff3ccd7567d9d6520615d1288a1c537086f5eca57c80681",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-audit-p0/predictions.jsonl.gz",
+          "sha256": "2d0bc1f20acb8844abe572144c3475a4ea2d9188b76a884a0ef666323660a5b5",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-audit-p2/predictions.jsonl.gz",
+          "sha256": "712e747004c176deee722a76a256cb3a430746b5d4bfb8b00888b7e8366b33d2",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-pilot-p0/predictions.jsonl.gz",
+          "sha256": "8fd8cc4e4e418f1e21104a4e0d3f68250100136b04eaf96c3ff6d0549c82d083",
+          "n": 256
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-search-p0/predictions.jsonl.gz",
+          "sha256": "d25f428adc1ddb28361793c14c829269cf6c398470235dc2524285660b82bcef",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-search-p1/predictions.jsonl.gz",
+          "sha256": "fb15045084aaf25349ca464ac7a2d27290a27ab92aa6f330908c867cf85b4e77",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-search-p2/predictions.jsonl.gz",
+          "sha256": "7d3cbdee5abf3670bfeda8a28d903de203fab2e6aa098d5079ff2824b70952c1",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-search-p3/predictions.jsonl.gz",
+          "sha256": "4a8595f0cf0d1e995fe25a189b481f12c66ba98cc7fda03af4f709480dd7c48b",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-search-p4/predictions.jsonl.gz",
+          "sha256": "e02932a3e12dae4364d3ed699dcf1c53da4b22656250cb313508640e1b6f4997",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-validation-p0/predictions.jsonl.gz",
+          "sha256": "fcd4355ab9eb6ecdbae1d7e893e4bb35cebc6736d4dfa1e6cf195ec9346bbee6",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-validation-p1/predictions.jsonl.gz",
+          "sha256": "0c341701c17a29f423276de65591b7f982e8096c8c16c122e6eb9a73d6852806",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-validation-p2/predictions.jsonl.gz",
+          "sha256": "fd1d64cfacc1d2ddf8042c9744e321ada8c97a8e919756c1f90c7a23ad3a5507",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-validation-p3/predictions.jsonl.gz",
+          "sha256": "56bf03d8e39c8698158e4997972c5f4bde59810e499e81730908888e9fd8e9bf",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-validation-p4/predictions.jsonl.gz",
+          "sha256": "9f4ec4ad270bede4398b47dd2ff8314e855b8c302db7d5adb3a21d902435994c",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-audit-p0/predictions.jsonl.gz",
+          "sha256": "d30d21836814714d148ce9ee0be1e372bcbb0277e18bbffab5e3cb8b3d64a85c",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-audit-p2/predictions.jsonl.gz",
+          "sha256": "a0652554f63c14d68aa444523386076da479b29640c656cc9df8f0f0bec72257",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-audit-p4/predictions.jsonl.gz",
+          "sha256": "41c767db5bf6903f52aa3c0869bc6a89ec717e8ccb59bcd0d987b93c4847f983",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-pilot-p0/predictions.jsonl.gz",
+          "sha256": "93894bf1d60c9becfa9fae8c15699253abefa41cdff48708d0912458bcc52632",
+          "n": 256
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-search-p0/predictions.jsonl.gz",
+          "sha256": "64888035ff440e0bbb1155d10af2d6f0cdbad927ec7075f71fe1ea8f4820e982",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-search-p1/predictions.jsonl.gz",
+          "sha256": "6aa43b403feca0b25e328f184a19d1eefc5f2524514539c189e2f0db85525e27",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-search-p2/predictions.jsonl.gz",
+          "sha256": "94d3cdfd2c5d32d668e6c2d828206b7eb7a8bf470df473ac7d749c32d9c77a83",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-search-p3/predictions.jsonl.gz",
+          "sha256": "f057704e92d2657f98f4163270fa5a5385455be689de5c2c589ca75b112aadee",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-search-p4/predictions.jsonl.gz",
+          "sha256": "bab823dda1f2065d15a5a40a96726a9b5fb2f64b04eb46176cbc63b0b2782882",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-validation-p0/predictions.jsonl.gz",
+          "sha256": "1ef884a9443b7b7b32761fb6ee945e75a53b7eb0b2e149d1026b38dc0ab5d979",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-validation-p1/predictions.jsonl.gz",
+          "sha256": "9c9920f19deb835d009b191b3c635c1cb19471a6bb3e7f935bfabfb9e5e37bfd",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-validation-p2/predictions.jsonl.gz",
+          "sha256": "982f36f1270ae8c63796cfa7c05038352b3fe6b2c0d339eb1179118b0c131eb6",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-validation-p3/predictions.jsonl.gz",
+          "sha256": "6286cf282aec689b4ce9421e986d7ede1888ef7e442c25490ea23e05bbf62fc1",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-validation-p4/predictions.jsonl.gz",
+          "sha256": "12a7cfde8791d0426759cb1682be2489921857e22c7b951b208d68655f0a206a",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-audit-p0/predictions.jsonl.gz",
+          "sha256": "e372e06d0def54287f4c881e610522a113117f29c31c538c2a11b6825e31ac8d",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-audit-p1/predictions.jsonl.gz",
+          "sha256": "bf9573d61029325e0ce30987fe5897f25822fc2af90fa89aa3a898ae311505b4",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-audit-p2/predictions.jsonl.gz",
+          "sha256": "119b6ea75b27a348cf694878a2f96a48a98b6b7da8690d2de31814d710d70732",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-pilot-p0/predictions.jsonl.gz",
+          "sha256": "dd5ecf6b58999de7edaaefd762d6844105458928d64ab750c9c4c5f9e7f949e6",
+          "n": 256
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-search-p0/predictions.jsonl.gz",
+          "sha256": "c61a296f836be82e8fb37b2479ab5dfb24d5ee995d5d2c58d4545da007fa97a2",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-search-p1/predictions.jsonl.gz",
+          "sha256": "655fe2be5b541d727e4747616395635c13a276a52a2268c06bc115e10be2eec7",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-search-p2/predictions.jsonl.gz",
+          "sha256": "4472222c8ab5129646086ec7126301f62509cf0ee8db5af769d02b69457a23fd",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-search-p3/predictions.jsonl.gz",
+          "sha256": "32a7a1e5ce83a7c6612d8c88cf2d9b89b2bb3af7e8aad8adeb48afc605194647",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-search-p4/predictions.jsonl.gz",
+          "sha256": "b58b245b818428ceb01a32769296b3e3d2bd5b0902213d4173809eaa844c7a23",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-validation-p0/predictions.jsonl.gz",
+          "sha256": "3efedfc75963e18c1e61ef1e6bbaa5034f93f9ba1d093e64b1528ac7dbd0cb3f",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-validation-p1/predictions.jsonl.gz",
+          "sha256": "03a0b5245c9e3cff2f18a9efe3a11abfd3432075ce0d21cc375e1e8b403d400f",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-validation-p2/predictions.jsonl.gz",
+          "sha256": "a1c7b630bd5f2aac97a5021b52b06b338f85832ca64c94ae79aa53e93d1288ff",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-validation-p3/predictions.jsonl.gz",
+          "sha256": "baf3c989bc43a7afe340e8b965c598f070f2af1db4bbe04e8196ea327ef54f11",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-validation-p4/predictions.jsonl.gz",
+          "sha256": "27e42b427b85493d0cb4eb01aac364e032cd60d018661dfa4122eb15998776bf",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-audit-p0/predictions.jsonl.gz",
+          "sha256": "57ac7e92ccc325c1e7d74fa69040f0f25a2503826c12c9ca11e5d3bd88942b5a",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-audit-p2/predictions.jsonl.gz",
+          "sha256": "eb4918a256c1f0582363437f9967101e7cddea44a86ff0ea1a38850ee67a05d9",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-audit-p3/predictions.jsonl.gz",
+          "sha256": "96ef7b9d9af725a1192187b09064b98af72ddeae298913f1337a8b72e553811e",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-pilot-p0/predictions.jsonl.gz",
+          "sha256": "726cc77cf5797255d4c97bc5f7bb64b6ee0196e48e0eb4c4705cdbcee43805bf",
+          "n": 256
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-search-p0/predictions.jsonl.gz",
+          "sha256": "df15c12e0b54d611dbd916e120a5ac0318dc04702bf2c3eec9edb10689916734",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-search-p1/predictions.jsonl.gz",
+          "sha256": "b9cbeeacad854b6a74dad33c3615c834f7b8b39157654f0e1ad23914d7d9ed6e",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-search-p2/predictions.jsonl.gz",
+          "sha256": "fe4070124e33f90504dead9334156a527d5d7fcc8d0daf8998af5b2380b12e19",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-search-p3/predictions.jsonl.gz",
+          "sha256": "cfdef595827f2eec5b3950bb3341c7be7dcf8eb61c37432156543f8508acfb17",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-search-p4/predictions.jsonl.gz",
+          "sha256": "cf848f86ddd2f51cf7a0bf5fff5b5fca5b991d8f9eb5373f538ec982b385ad63",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-validation-p0/predictions.jsonl.gz",
+          "sha256": "01a57ed1718e41fdec1122da7e7ef0aacb19cdcf12cb65e45c103fd98a459a83",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-validation-p1/predictions.jsonl.gz",
+          "sha256": "0bc6e8b07ba01e08991091c70b72cbd0561c0d21afab5d77e54686532cae0809",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-validation-p2/predictions.jsonl.gz",
+          "sha256": "f3b0ceb53cffbb5e862d3e2a93faddef0ce110e6dc32740738f170d463a41d9d",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-validation-p3/predictions.jsonl.gz",
+          "sha256": "6ff29e6c1d39cd6ac064baefe6e11ef44807113b05eb25637ef9c451e9ff6f5f",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-validation-p4/predictions.jsonl.gz",
+          "sha256": "1c4be9423fa237aa41995cadff4d30f21d29e7a99db8f6b358eea47a8c8d6cbb",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/baseline/runs/policylm-fit/predictions.jsonl.gz",
+          "sha256": "7308e44ffb6a0e9cad620809e18ef7c60479a868cdabac2532349710b87d57d4",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/baseline/runs/policylm-validation/predictions.jsonl.gz",
+          "sha256": "fa1de5ed05b212813d9de0dbb66fa6d196902d3fe25fc3a27d1948ca885e502d",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/baseline/runs/qwen-27b-fit/predictions.jsonl.gz",
+          "sha256": "4d65af27195444b5436b2ff0076d9e6d740b555ffff4167139a36c05d22a7019",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/baseline/runs/qwen-27b-validation/predictions.jsonl.gz",
+          "sha256": "a2c6b376e3af2cec1f7627f86bdb942cb8205493a8620c52f3e14605541bf8c0",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/baseline/runs/qwen-2b-fit/predictions.jsonl.gz",
+          "sha256": "d25f428adc1ddb28361793c14c829269cf6c398470235dc2524285660b82bcef",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/baseline/runs/qwen-2b-validation/predictions.jsonl.gz",
+          "sha256": "fcd4355ab9eb6ecdbae1d7e893e4bb35cebc6736d4dfa1e6cf195ec9346bbee6",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/baseline/runs/qwen-4b-fit/predictions.jsonl.gz",
+          "sha256": "c61a296f836be82e8fb37b2479ab5dfb24d5ee995d5d2c58d4545da007fa97a2",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/baseline/runs/qwen-4b-validation/predictions.jsonl.gz",
+          "sha256": "3efedfc75963e18c1e61ef1e6bbaa5034f93f9ba1d093e64b1528ac7dbd0cb3f",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/baseline/runs/shieldstral-fit/predictions.jsonl.gz",
+          "sha256": "e7cb382498d90f75286b26afece9910dba1538b1fc2dc85ff5e9884e6d1cd0ef",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/baseline/runs/shieldstral-validation/predictions.jsonl.gz",
+          "sha256": "969c00210eb984317dc283c321d728fc48ade43d537493aa595992b9aef483fc",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-policylm-p1--fit/predictions.jsonl.gz",
+          "sha256": "095ba9c188cf0bb764881d36d5c6dacb9ea90f0de2ace500adc0a05f9514d7dc",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-policylm-p1--validation/predictions.jsonl.gz",
+          "sha256": "77fa2f6764e8b64bd3b97805f7077ff661e230d59af8393172616a5d7255885e",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-policylm-p2--audit/predictions.jsonl.gz",
+          "sha256": "9a33dc8274e988a6d96620dc95885375d180b0efbd1308d53fcc0a21a246fc8a",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-policylm-p2--fit/predictions.jsonl.gz",
+          "sha256": "59b67eef483d354f0add3904769b4247368e7815fe294bdf2b7ae46aab851b40",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-policylm-p2--validation/predictions.jsonl.gz",
+          "sha256": "d8bce8a330041cb77a7b8466820358e532538d1e216847617497c55dcd367c77",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-policylm-p3--fit/predictions.jsonl.gz",
+          "sha256": "867bd602055cf8b98bd379a92e3c1ddf76e262fe2fe133ffa07b95c9a1804076",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-policylm-p3--validation/predictions.jsonl.gz",
+          "sha256": "40b069cf99a09bbcad6c7e47a1731e183815f2ce279cc84b92c57c1c95e5131a",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-policylm-p4--fit/predictions.jsonl.gz",
+          "sha256": "e27f8280551807367d773c782bd80effdcded5ace9be036a44aadc3b9433dcf9",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-policylm-p4--validation/predictions.jsonl.gz",
+          "sha256": "a3664983e21294196d0dee2d3ad74e84f6f5b5b30fff0f44cec387d11f674821",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-qwen-2b-p3--audit/predictions.jsonl.gz",
+          "sha256": "d632c50d9b7d2318cd22ef14548768f1a41ba768f638cc40e8c2105b6a02cf4d",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-qwen-2b-p3--validation/predictions.jsonl.gz",
+          "sha256": "35585476ccecba0b598f656725a95e6fb68d2ab783d996b8e3cf120f5bd3d404",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-shieldstral-p3--audit/predictions.jsonl.gz",
+          "sha256": "f8eaa8026b1004f35b338d5d9043a83a04342ff768439d34d4ad779066071457",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-shieldstral-p3--validation/predictions.jsonl.gz",
+          "sha256": "f09d02d3ef62773718412457fe0c69a79c151019f12eb5c293ddf4cdecacf0f9",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--wg-p0-taxonomy--audit/predictions.jsonl.gz",
+          "sha256": "c88300e9b6d1d6ebc65accb16ea6067805cda2fbd0c53b81d546634db6dfd470",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-policylm-p2--audit/predictions.jsonl.gz",
+          "sha256": "816b4af0152cf710fa271b5a8cade9ab9e2b7ea299825b8abdc57cec2a5b5f22",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-policylm-p2--validation/predictions.jsonl.gz",
+          "sha256": "ec5a7f0c122cf65f889b307bf5672ee196bd2acba5c15e4cd7522ab838b43f2e",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-27b-p1--fit/predictions.jsonl.gz",
+          "sha256": "895ecc0c13d5caea58c4f7371b57c9e71ab4b00f5ddc3942b92b4f89f0cccacf",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-27b-p1--validation/predictions.jsonl.gz",
+          "sha256": "13cd4f9c537e8d83bf76d66127d50fd15b615f780139ab3e098a3f6919141e68",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-27b-p2--fit/predictions.jsonl.gz",
+          "sha256": "5587e90faff26d07b09bb591a7a324349940b9ff6c503344081b4067111666d9",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-27b-p2--validation/predictions.jsonl.gz",
+          "sha256": "f75897ae5d7c3b55816ff59002865846f7f7e659801e2db40ac8beaf840426a6",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-27b-p3--fit/predictions.jsonl.gz",
+          "sha256": "3e6b08bc664b951779797fd9031f159a5fbd0d8a8d90a1d526b79c54016a974f",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-27b-p3--validation/predictions.jsonl.gz",
+          "sha256": "5fea0ee724f5582b5061b5bdd58ed997f54ef49448ebcc49a384fc587988c092",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-27b-p4--fit/predictions.jsonl.gz",
+          "sha256": "c595e513722ffc9752eebaee00aff6934e186daee4ee3735d4103266c6e2f286",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-27b-p4--validation/predictions.jsonl.gz",
+          "sha256": "1f5ce0bfefa56516a35622d8bf418dc0040920511ac573294a1dd169045c1728",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-2b-p3--audit/predictions.jsonl.gz",
+          "sha256": "179b1c9409ee3ce03d66429ecbaaa3f3973fd66a6d922900dc2a05b7903f3c73",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-2b-p3--validation/predictions.jsonl.gz",
+          "sha256": "8f85685fa5a62c2c43410bd5f70c60f86143dec98bddd144d81d7702f0e989a8",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-shieldstral-p3--audit/predictions.jsonl.gz",
+          "sha256": "b6e4ad30813eecfb743768ab6ed81d51154c695e5bbe17c4a58fc98163dd346a",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-shieldstral-p3--validation/predictions.jsonl.gz",
+          "sha256": "ae433b378173de78ab196730fc4de52a25d954629ee68765d081f7444deb8db1",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--wg-p0-taxonomy--audit/predictions.jsonl.gz",
+          "sha256": "a267312e6a36c7b71737a16ba676b7427d779c624cae5200cbdffb54bd2bead5",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-policylm-p2--audit/predictions.jsonl.gz",
+          "sha256": "f8cb61dbcc725e26437b4dce61050821fa92c5223ef91143bc7ccc67c93586cc",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-policylm-p2--validation/predictions.jsonl.gz",
+          "sha256": "51f540750bc0b826b3e5fe13970a61a964edc61628789f16ac1433acef1926ae",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-qwen-2b-p1--fit/predictions.jsonl.gz",
+          "sha256": "16a81e5f5da5a4c54c9109bcb2f3f49d7cf12c47d91452eb463d88a4da745773",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-qwen-2b-p1--validation/predictions.jsonl.gz",
+          "sha256": "48d1ea1373fc5a9cfb9345ff9bc5de4e01e2f33ddedccbc24959df79ed532529",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-qwen-2b-p2--fit/predictions.jsonl.gz",
+          "sha256": "0c7e7e48422f865d878c4487986e9499c50a3027087a0d5ce3c00151078d99f9",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-qwen-2b-p2--validation/predictions.jsonl.gz",
+          "sha256": "a156daa8bbb76fcc4b8610b6487902c4e6dcc2ec775f856e54ea4356e148e247",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-qwen-2b-p3--audit/predictions.jsonl.gz",
+          "sha256": "671890b4fccdd7b8d9afe89c85478c92182af56e2db2859a5779a809481f9357",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-qwen-2b-p3--fit/predictions.jsonl.gz",
+          "sha256": "52bd90147ecab499ea4577a15ef50848ac87eb9fe55ccadd21927a8af9664f10",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-qwen-2b-p3--validation/predictions.jsonl.gz",
+          "sha256": "c27e198563b54f44fa47f60cefdc882e8d3a7a303175d7aa2dfc2e075ec75d6d",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-qwen-2b-p4--fit/predictions.jsonl.gz",
+          "sha256": "0ea2a75ca5547a01c55b942fd974593752ae8fb6ed4dcf5ec14d92fcdebad15f",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-qwen-2b-p4--validation/predictions.jsonl.gz",
+          "sha256": "a98c620262b901cc3a9e6415f90cb709a8b6fb5d74f320d780ea2e2195aeb533",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-shieldstral-p3--audit/predictions.jsonl.gz",
+          "sha256": "bd7a22a9620831a99290a5d97995df75fded966a7033b9f2ebd29003ac4a345f",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-shieldstral-p3--validation/predictions.jsonl.gz",
+          "sha256": "833d8c2dab59f42c1a3dd87593a9735c3ae7653aaec918e146c39a40a32a873c",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--wg-p0-taxonomy--audit/predictions.jsonl.gz",
+          "sha256": "b0fc5593f2911b7d9776e96b3f9716983827df0e0d02dc207e4cc438c5147bfa",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-policylm-p2--audit/predictions.jsonl.gz",
+          "sha256": "adc49e874f987c8fd00c849305aff05947d94555cc5c855632c22c241f08398c",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-policylm-p2--validation/predictions.jsonl.gz",
+          "sha256": "b72c69fbfcf3c2151eb2a22a94ad8d60d26845f9580af117a863265084eb17e7",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-2b-p3--audit/predictions.jsonl.gz",
+          "sha256": "dfdcedb454b44afbbe9536318e2cb805f9ae10e64e2cb8e20179a124af5e6e38",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-2b-p3--validation/predictions.jsonl.gz",
+          "sha256": "47a704c86d83433c6b881114b211b8470ddc423d2089cad536fe69a2fef967a3",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-4b-p1--fit/predictions.jsonl.gz",
+          "sha256": "4f5821e24f25e877b6e5061a2a772f651abc235c49e2fdfd1b364ac59cf19049",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-4b-p1--validation/predictions.jsonl.gz",
+          "sha256": "1fdda5cf50b48a8de7fd74c38f90171600095b8f45e73f647429d0a8e6dc9104",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-4b-p2--fit/predictions.jsonl.gz",
+          "sha256": "e82ebf9db279a2706e1bcc69c0e63159e82a82800bbb7013e025d84c1740b297",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-4b-p2--validation/predictions.jsonl.gz",
+          "sha256": "ab39f3a70090be298013cb90e0732503df79c5d742aa4f785bd9c78ed535ba27",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-4b-p3--fit/predictions.jsonl.gz",
+          "sha256": "41d8abb550a0dc32c3cd264a144e860728f89e61fbdc4cb559c894d732771a61",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-4b-p3--validation/predictions.jsonl.gz",
+          "sha256": "aa9b44da9244e80c8d36fc433c3668896852c65e46a8d90254adc5d5140778c0",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-4b-p4--fit/predictions.jsonl.gz",
+          "sha256": "cc9b8d3487f15a1b5ee812af64e853c0b86e542834f59996036655e80fa8a6dd",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-4b-p4--validation/predictions.jsonl.gz",
+          "sha256": "5c961bbbe4c5d4c8d0adfa7c4b677bfa76dd6eba9570e73042f1ec1846b93d2f",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-shieldstral-p3--audit/predictions.jsonl.gz",
+          "sha256": "31bd29a27290b3cfe67e4fad78ef43a42116337231a9fce74169394cb305d9c8",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-shieldstral-p3--validation/predictions.jsonl.gz",
+          "sha256": "2ce595f16067ba7cf8f06d52ef8ea848ebdf9195ce3ad1999ef7f8c1ab1e124d",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--wg-p0-taxonomy--audit/predictions.jsonl.gz",
+          "sha256": "710bcca0217522ddb35b065d97c3df37f191ea7f42e6fe1fb4349af20a7558cc",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-policylm-p2--audit/predictions.jsonl.gz",
+          "sha256": "fcbe9c1263ccab8e11125c24cb4c28aa06b03edb83f239beb7bd8f2ca0f5c2c1",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-policylm-p2--validation/predictions.jsonl.gz",
+          "sha256": "eaa47713e9919cb392b27407b77456698aa1440122c7e16d4d2ae79f7e1f6d9d",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-qwen-2b-p3--audit/predictions.jsonl.gz",
+          "sha256": "fec8091dbcc4f2771ab748a755750a32c8a0104c71c4bde0e345795fd5052851",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-qwen-2b-p3--validation/predictions.jsonl.gz",
+          "sha256": "f4fcb8c80fb867736bf78db18f21339067b5491d2372f2cfeae7f54b15f93854",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-shieldstral-p1--fit/predictions.jsonl.gz",
+          "sha256": "17e02ac9cad639a310b0cf793a956a822956c70ad8ce7244587ca5c87a38391b",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-shieldstral-p1--validation/predictions.jsonl.gz",
+          "sha256": "937549c9a86c4431d72a125774ec9fd92a927cbe397b244c2ea8858ef8245aa2",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-shieldstral-p2--fit/predictions.jsonl.gz",
+          "sha256": "7a865af28ee00d37e6e158294857430fa2203aeace9868438ccc119cfdf6b6a4",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-shieldstral-p2--validation/predictions.jsonl.gz",
+          "sha256": "b5ce0b0349526df581d4a31f46d646426ed9787d4e7c11965944d0a11f2a45e8",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-shieldstral-p3--audit/predictions.jsonl.gz",
+          "sha256": "38e8462bc74c6569656da572ba20b938d597eeb22aa475148f5496792618c0e5",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-shieldstral-p3--fit/predictions.jsonl.gz",
+          "sha256": "9b41b5a93f58031d3732b7cf90b39f5f565e86ec060abe23a35968822c97b747",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-shieldstral-p3--validation/predictions.jsonl.gz",
+          "sha256": "f34728c31da30b83af852fcff80e5c61ab0df584d29fc4257c1b03e63aa03b17",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-shieldstral-p4--fit/predictions.jsonl.gz",
+          "sha256": "4a6deb212ed14731ddeba2810d57d63b5b18fe02897eb0cf93417e28803a2a83",
+          "n": 1024
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-shieldstral-p4--validation/predictions.jsonl.gz",
+          "sha256": "8be776e913b63ff39cf9abbe3cf07e1089c982353196b831126fba8b4201734d",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--wg-p0-taxonomy--audit/predictions.jsonl.gz",
+          "sha256": "11683d332eb1189aaa18ff3c8c2848bd9c0ee27dc3540e82552db7cdb0a695af",
+          "n": 512
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/00-astra-higher/predictions.jsonl",
+          "sha256": "131877918c6c6c82f86743e86385b726fcf4ff4e97d8987880dc7ed101d7ff48",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/00-astra-lower/predictions.jsonl",
+          "sha256": "940991bc13f6020330388059dc8d416ac3b676ad7b0d76debb39771a96dc16a8",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/00-deepseek-higher/predictions.jsonl",
+          "sha256": "7190cbf61ccbf195b88567f8bf7d53408cb7a105d85e7e7c74fb5ee01f77408f",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/00-deepseek-lower/predictions.jsonl",
+          "sha256": "f08bce14b3656458bd45e0a4482562055d0b764f94708339e642dfc6e7b53481",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/00-deepseek-lower-attempt2/predictions.jsonl",
+          "sha256": "3c101725fd38ea6babde772d9e922ce1c64d1eb4a0dfa743c6709554822e3944",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/00-kimi-higher/predictions.jsonl",
+          "sha256": "ae6e614ec5e181040ec826ce51f94665f402d976246736cd3f0b92074c53603e",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/00-kimi-lower/predictions.jsonl",
+          "sha256": "16e32d9777f46b01fe5ece2f8d978a113bd4080fa7e7021200ed50c161fa9d69",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/00-opus-higher/predictions.jsonl",
+          "sha256": "da9ce64af172ca9f67006ce1f126cc5a16ebcbe3dc84933b1a9b7d94494cbad3",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/00-opus-lower/predictions.jsonl",
+          "sha256": "e08af9d721f577430e1938b434dfab006885e53ec57347cb04addede77eb812e",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/01-astra-higher/predictions.jsonl",
+          "sha256": "0f1568a5043667e78dfb113d7799f39f1bbb5ebdf05d8bb39dda817f36404abb",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/01-astra-lower/predictions.jsonl",
+          "sha256": "6b55d3cee2cd38813c58da243d2bf621b7aee2023f7af75f51801a9c50cece3d",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/01-deepseek-higher/predictions.jsonl",
+          "sha256": "28989ea5c30c0cf46e795fa891ef9718d869a3b2615c0d14ad1c4ef1350021fa",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/01-deepseek-lower/predictions.jsonl",
+          "sha256": "4ffcb121b9055257a0ca784b983582004cca4bdedfd3a5ca6d85bab036cd17df",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/01-kimi-higher/predictions.jsonl",
+          "sha256": "df443dc7ce48caff39d5cd4bce8e0cdccaf402b71e8689c03e1e250430b49336",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/01-kimi-lower/predictions.jsonl",
+          "sha256": "41f732785f44ddba6cf768e192927231a6b4deaf6e7c74e88babe3b37edd4ddd",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/01-opus-higher/predictions.jsonl",
+          "sha256": "10aae3de4f60006128a286ce6de286b90232ff42024b0ba0fd5c09987f1ad3f9",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/01-opus-lower/predictions.jsonl",
+          "sha256": "60478436063c2bc93edf52ab753c84fb6e08451d28dd71afd9674bef5a29511c",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/02-astra-higher/predictions.jsonl",
+          "sha256": "82c500d53bc4e73ad0f95da703d9b24bf6f6b9188f9524c0dfa6079113ffcf20",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/02-astra-lower/predictions.jsonl",
+          "sha256": "78d7293076301a4de555b6066f984d1dd26cbab99ed7c088fcf0da972260d1bc",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/02-deepseek-higher/predictions.jsonl",
+          "sha256": "3ddb50344af3ec5a5cb50b1e2efa0c996fcef24e7c9474c46ec2088be00640e1",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/02-deepseek-lower/predictions.jsonl",
+          "sha256": "09cf0ef826574fb145c018b9b9176f53a0e10bc654baf41bd92bfdbc8d6cf653",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/02-kimi-higher/predictions.jsonl",
+          "sha256": "7b455fa4a4d5d6a01a3ae112a8e129ae93d8db591f73365a7317532408a3f719",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/02-kimi-lower/predictions.jsonl",
+          "sha256": "1633ed4078b16457cab5dfcc9306807cb7f441174935c6160f4f177060db754e",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/02-opus-higher/predictions.jsonl",
+          "sha256": "c3eeb9189a62ab18a7d5dd5eab52134e2ab84710e81ea5ab6bc585639980555a",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/02-opus-lower/predictions.jsonl",
+          "sha256": "405c68276bd0e9ce8bbf4c1ff757e27b037a23b99905a4dd38d28c7c1a804215",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/03-astra-higher/predictions.jsonl",
+          "sha256": "5090ed6915cb0801dacc966e0a2b899b4faa84e12fdd79fc6fb58a3024f068c7",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/03-astra-lower/predictions.jsonl",
+          "sha256": "3ebd74215c6248488c7fd413c86c9d0d4c335c669db8c161febe8024b1f0e5ea",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/03-deepseek-higher/predictions.jsonl",
+          "sha256": "a09df12ab202de75e224f74925b7c85d632cfba78114ddcae0b5402d25f823e1",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/03-deepseek-lower/predictions.jsonl",
+          "sha256": "8efef5db36cb62d114c81b4098f0ea4d0633d42d7a81de258f9bac2bc4280b40",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/03-kimi-higher/predictions.jsonl",
+          "sha256": "cc6e9c9ea23f6c3b1be098bcadf7a98602be00cd38ead5ff420cd8fc89701d4f",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/03-kimi-lower/predictions.jsonl",
+          "sha256": "4c46f33ff4100950362b0b349b4bffe810a70b4bba8ff26c59c97e738668c1a1",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/03-opus-higher/predictions.jsonl",
+          "sha256": "2c5602d9f5c96317f55d111c247fb2e6402d73e8e587ffee4555ad0193c5243b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/03-opus-lower/predictions.jsonl",
+          "sha256": "882f6e8f9400f69bd7555e8ac08f601adba3dce833ce31399f1744ac188c06ff",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/04-astra-higher/predictions.jsonl",
+          "sha256": "0f8ad3221e654f98053c201304b071ed397866bf68e8afa6d618fd3747153f86",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/04-astra-lower/predictions.jsonl",
+          "sha256": "4b26844b3726876e3ace9016377805eadd8061d648b83ca7eb42c9d837fb55eb",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/04-deepseek-higher/predictions.jsonl",
+          "sha256": "aa87d8080d40eadcd6c1b6aa85f0c07cc88b0872ddbc3a50eafc64e1070b6f1f",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/04-deepseek-lower/predictions.jsonl",
+          "sha256": "1f23be4f1daf90d91e721969ea99993a78d40db9242adc497621d5f175fa5164",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/04-kimi-higher/predictions.jsonl",
+          "sha256": "69fe756f83c5947d3b1ef849e640b4cff72ced118d2eac26db460b04aa374c2a",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/04-kimi-lower/predictions.jsonl",
+          "sha256": "d1b35dd883ade705ee83068449e00cb932aa3c9aa1a17b50e980db9a1452288b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/04-opus-higher/predictions.jsonl",
+          "sha256": "55e57c8059aecb858ab701a03657f9417dafef8c29e7f893eaf5423de36c2786",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/04-opus-lower/predictions.jsonl",
+          "sha256": "3ec3848c42ba35b4b78344d65d62837342008f7e53bf852107002e861d4fec6b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/05-astra-higher/predictions.jsonl",
+          "sha256": "deaf541c92f1210159e561944fbd6750948a7a4e9dbc24aeb186fd12d8e15a94",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/05-astra-lower/predictions.jsonl",
+          "sha256": "94b93c344b60ebe683068b8b8c76abe80ff30e8afce50af0237f3a063ffc63a3",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/05-deepseek-higher/predictions.jsonl",
+          "sha256": "09cbccb49989f67ba5175ebdb3f50e5bd576fdc45ca216afc4b28a70e7d9ba71",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/05-deepseek-lower/predictions.jsonl",
+          "sha256": "7b47dca13eb7f8cd664ef661ffde2bf178100b828765f693bf07c96d7974cd83",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/05-kimi-higher/predictions.jsonl",
+          "sha256": "8ebcd35f1d769afe18c78e82cb333d23caed9b958ea4daf0e815ae0005107893",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/05-kimi-lower/predictions.jsonl",
+          "sha256": "fe228dd3a577f253884e37eb2427315a9bbf5ca84f0f335784d3aab7b0e23815",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/05-opus-higher/predictions.jsonl",
+          "sha256": "c81924d662e0afe2958d6637678f2e39b7810b150737177edc76f990c78a69c7",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/05-opus-lower/predictions.jsonl",
+          "sha256": "74fc8614ce0049b97c334c84a382b59dd384b5085fd1cca38ae6c94bd5cd2fab",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/06-astra-higher/predictions.jsonl",
+          "sha256": "bf44f0dd1202de63c1a5e6ce64172bceb96e416b6420a52b7f8b39f30d69233b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/06-astra-lower/predictions.jsonl",
+          "sha256": "b26da6ab0dacb5f3db6ee6eb78b40db9d2d6d8f35b25b8236c2a62c6f3f4ba29",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/06-deepseek-higher/predictions.jsonl",
+          "sha256": "8e96cb3d7c6eabd8e908dee646008153e0d89092c5fedfcc2e1ba4f1c4fea15b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/06-deepseek-lower/predictions.jsonl",
+          "sha256": "e0b1aab9aab4c7a58c1ce9c7c51b8d3a941b7ee6e70c2d3e7794080cab12867a",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/06-kimi-higher/predictions.jsonl",
+          "sha256": "e4bf0fb042a6428354abb072fd39cce3fc9643ecf0ab865c391902978b664a6d",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/06-kimi-lower/predictions.jsonl",
+          "sha256": "4860b66bee07a3b9c2a41a888bf3ebf8b2862c07a5c35eb00d604408c9e54f6d",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/06-opus-higher/predictions.jsonl",
+          "sha256": "8a0c4cd6dc317a8175aa9d1f132fb1306470f1179dd446d4617c64571cad75e7",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/06-opus-lower/predictions.jsonl",
+          "sha256": "c4c2eebab2377aa9c090c8dc257dd64eb3670920082dc125658ef816677ef3eb",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/07-astra-higher/predictions.jsonl",
+          "sha256": "bdff8fb7b118340f8a103aa9fe24607e6bfcb5f3117265d91af94935109de408",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/07-astra-lower/predictions.jsonl",
+          "sha256": "5ab44e0bac424e21417cc72f9c80698a16a20624fdbb945ceb50ee247e416e08",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/07-deepseek-higher/predictions.jsonl",
+          "sha256": "abe60bcd4db47f95e9c908f1c888601cf9f39312e598d9732324421451657035",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/07-deepseek-lower/predictions.jsonl",
+          "sha256": "4b88f32c64b0d694dec2ad922b2f8b1ce1a507bece8da3ca072612bea0cd4057",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/07-kimi-higher/predictions.jsonl",
+          "sha256": "34b4ff27d1e4dfcde1f040c390a78a68393d56746dd997724b11aa356e61d36b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/07-kimi-lower/predictions.jsonl",
+          "sha256": "cfdebadbf37e8ac7fa059b88c7e1405e4bcb15d08d7e41630741d564fd964ace",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/07-opus-higher/predictions.jsonl",
+          "sha256": "3a0506b991c4a5b357aca94c909b41989a4754369de71e920071bab1dbedc78a",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/07-opus-lower/predictions.jsonl",
+          "sha256": "4f54a7532744df8bc21f3d852a4ce6fc8e5716b0ed40d9c9e477c62672c39e54",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/08-astra-higher/predictions.jsonl",
+          "sha256": "1077053948660b26bf402528ef99ddbf669376cda9f0a46bd03588df1adc2869",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/08-astra-lower/predictions.jsonl",
+          "sha256": "fbe1229953334346e616e23c5a893a0864e94ac7166e0842995d247bf127f5f0",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/08-deepseek-higher/predictions.jsonl",
+          "sha256": "936027c8024fc812900033c14fe95b7f37eda59167cf184be7718fd9e26fc28c",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/08-deepseek-lower/predictions.jsonl",
+          "sha256": "feca3e941ba922830c01a71ee8bee66220a77ab3c59d85e2b9dfabe776f401d8",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/08-kimi-higher/predictions.jsonl",
+          "sha256": "ba2be36fc4797e37564aae7b40678e0efd34738fdb39119b563b8dc15f6ee016",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/08-kimi-lower/predictions.jsonl",
+          "sha256": "06c32d17d90e950595fdf084b3ed3321b0c00aca9b192d25b562e38ab117c7c2",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/08-opus-higher/predictions.jsonl",
+          "sha256": "ceb9f0a9bc2ed349c91ed715ff3f65e6e7807722f45d7f6bebdc852c6259f685",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/08-opus-lower/predictions.jsonl",
+          "sha256": "a1e2d31f9dc885c7c48e8310010d24874f9fbb6b6b98d0bb316f93a5b3c8e15a",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/09-astra-higher/predictions.jsonl",
+          "sha256": "631a20a316f25eaa7d8968caf3bc737a61dd319e643e886fc30bca017210386f",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/09-astra-lower/predictions.jsonl",
+          "sha256": "0d5fcccbbb1acb09465fd4bf51357f1cbceffb1b4d11ff7851710b5c0588dec1",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/09-deepseek-higher/predictions.jsonl",
+          "sha256": "7aaa41f7dca3149faa2c46ab2fbe19d4ed928c590cca862ed879a453519764b1",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/09-deepseek-lower/predictions.jsonl",
+          "sha256": "6f3267f47f784a79c0ba115b0ecf367f68aec6abacbbe55824961b57dcf99d13",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/09-kimi-higher/predictions.jsonl",
+          "sha256": "cbf44198a594d480e52357b40d2e17cde598343defcfa7dd571328f66aaf31d4",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/09-kimi-lower/predictions.jsonl",
+          "sha256": "32f93eb52f33897e1cf1bcc91009952dbcbb3e2ef7496be425ec131d125d2c42",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/09-opus-higher/predictions.jsonl",
+          "sha256": "3ec9fa2f5b8685a57b7d6ad73172a3f107c0449583c4168200272a43cec95d41",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/09-opus-lower/predictions.jsonl",
+          "sha256": "d64e1eb7b7896aa49e976d298716123bf5f6346afb90a0a1a0eeedc06e2cb4e0",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/10-astra-higher/predictions.jsonl",
+          "sha256": "eee113819e0f36ef3de7240cf5cc3754c75daedaf66a5c0d96afff78ca16c1e2",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/10-astra-lower/predictions.jsonl",
+          "sha256": "04bb09140039e7b078a7ae20fa1b9da7d671e7604fc1cbd7427dfe4677f5ad2f",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/10-deepseek-higher/predictions.jsonl",
+          "sha256": "c519a442b367134ced990d04947cc8042c2e95ef9421e3f5619a49f164d98481",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/10-deepseek-lower/predictions.jsonl",
+          "sha256": "f08c9fbbe98ae94ea939f2aebba42974c48362938c78e2a3d7eba03102a6dbf2",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/10-kimi-higher/predictions.jsonl",
+          "sha256": "c127c7b8b2343aa527701a81a1335d329c06f30e26abc7b551aed3869622f374",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/10-kimi-lower/predictions.jsonl",
+          "sha256": "d24b107ac33b7c589ccdb11292d253b106fe41372b5389c37d1825d17ee78ec3",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/10-opus-higher/predictions.jsonl",
+          "sha256": "c754f5bd840da5e139d62bbd6c4fb83f6e667bcf9c0585464bd653edd1283eef",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/10-opus-lower/predictions.jsonl",
+          "sha256": "4089aebb2240bf4b08e75c0319291a978953cf6cbd72d3790ec0eadb472bacef",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/11-astra-higher/predictions.jsonl",
+          "sha256": "3bf8a47a419e2b886d459d87b0b14cfba4bba18568e9a136431e9a56c7b93484",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/11-astra-lower/predictions.jsonl",
+          "sha256": "43fabc9c1303df432697ddef5a487103bfff6bd32c200fe8917e1dea6262fb5d",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/11-deepseek-higher/predictions.jsonl",
+          "sha256": "9d5d1c6e925216919d1ebbafe060e901dfb4da6f7bac78355049a84c114e4cd6",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/11-deepseek-lower/predictions.jsonl",
+          "sha256": "2144b302e133eeae9970b9c31fa583b92be44fc6656dd988dc73fea0cc9418bc",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/11-kimi-higher/predictions.jsonl",
+          "sha256": "72c009e799cedb30058307c0d13f171c1187909292f59e2130f2507f5965c79f",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/11-kimi-lower/predictions.jsonl",
+          "sha256": "d2fe62bc3753d3f3e3280ebfbe357a74377fa83e5906998436d6a1c388514466",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/11-opus-higher/predictions.jsonl",
+          "sha256": "0595c3a308308f0e0cd17a1cd4ab22b694c64aee871d46b1ec93420bc0a65452",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/11-opus-lower/predictions.jsonl",
+          "sha256": "348a1f2e68c4a8b9be7239f7e8847a1da2ff7ab7e098a533017c57e01e08c800",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/12-astra-higher/predictions.jsonl",
+          "sha256": "b258e7db88850ed939775e29d576733ffc06ab4aa661878fc9a79f6e149067c5",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/12-astra-lower/predictions.jsonl",
+          "sha256": "934306acaeac587cc00d2997d18db76b342e5cd49892f4aafdf2e1ebaae001cd",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/12-deepseek-higher/predictions.jsonl",
+          "sha256": "ed595dc9635c95f70bf6227066059841f5826c870643e3a3c7f96360fc1e6f72",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/12-deepseek-lower/predictions.jsonl",
+          "sha256": "3a6fb645fc9c5a0cd6a594b4f354b6e9046de1e6a7eec6e266ddccc8bab21dc6",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/12-kimi-higher/predictions.jsonl",
+          "sha256": "422449fb90e71725c378210837ff95daf4dc17f1e22cf1a9435a9eea56cdca9b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/12-kimi-lower/predictions.jsonl",
+          "sha256": "30b287428c8f71e2c660fc13f80438ff133dcff7fd215a442d079c6679b9ae6d",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/12-opus-higher/predictions.jsonl",
+          "sha256": "26c61348d37e7e19f5cb28f8fedda192aed4f3b5711b3703af6c89bf797dda52",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/12-opus-lower/predictions.jsonl",
+          "sha256": "759b850b95b4a5a0d9e91c48521f4d14be38cb3d3e7214ba236b17c74f59b7d3",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/13-astra-higher/predictions.jsonl",
+          "sha256": "dac82e67f0c7723dc4034281b757e01d0e9fc41848cb91df5fd05155ddc1548d",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/13-astra-lower/predictions.jsonl",
+          "sha256": "047f96754d8fc3ed7d4a85b8b4dabc6345c4615813e093af0d9dea4470ae04d3",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/13-deepseek-higher/predictions.jsonl",
+          "sha256": "d7e8f7e65524eedc176c4af80be55571b82127da591f998bb3e65e54af7510d8",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/13-deepseek-lower/predictions.jsonl",
+          "sha256": "d926d15954b80fe7af43343878cfa3eff7bc752d988ba64c99a109f05005893b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/13-kimi-higher/predictions.jsonl",
+          "sha256": "5af961e3ec6ebd6a1f3022eb239c6f8101501db2deac591b672ed93a4e94661f",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/13-kimi-lower/predictions.jsonl",
+          "sha256": "1ecbdfdf9028d8bdfe6127625ac4c6945665e80bcaa0ff2392a8b605c8658556",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/13-opus-higher/predictions.jsonl",
+          "sha256": "63fef317c65b27b9151886a0bda92a60a4554b962ba7f5c6b078ba0e942ba80c",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/13-opus-lower/predictions.jsonl",
+          "sha256": "ac88f7a434b0ca3e7c5c22fda2130dab4b50ac5b018e6783e2a966ea3cbd12a9",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/14-astra-higher/predictions.jsonl",
+          "sha256": "c5bec2187a13a2865f4479e9be7b3e8827809512e03586c79fb23dd7aa242ea4",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/14-astra-lower/predictions.jsonl",
+          "sha256": "b35c849c5fb8f006f6254214b2466bea13c0442a24b0715bebce8843af4c8487",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/14-deepseek-higher/predictions.jsonl",
+          "sha256": "22b876b48dc5db3838054dbc8fa168c67f30c34e104164418eae15303b6ed325",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/14-deepseek-lower/predictions.jsonl",
+          "sha256": "b4d2e9038e5fc954fdcc0f2dd529d25360b142852e62356682bea720d41086e8",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/14-kimi-higher/predictions.jsonl",
+          "sha256": "50cc593a1865a8d02a8f8c1ad6fa752a63589cfbdb2ad32067ecccf909dffb95",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/14-kimi-lower/predictions.jsonl",
+          "sha256": "110d43c807c0294a3d34cf5a06cb8bcddd05dfbfd32c856f2d877970af3d2a03",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/14-opus-higher/predictions.jsonl",
+          "sha256": "3a8cb9ca314452d93db9457f9f54f194e405e23d9ce62f6640cb561d87e22c06",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/14-opus-lower/predictions.jsonl",
+          "sha256": "ed68b25f7dc0b41691619d9034d119d7e09922a2ec778d85b6b968907aff1e3d",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/15-astra-higher/predictions.jsonl",
+          "sha256": "74f002c8736821a944c4f90c436587ec660fe4abc735c92244420e6cbc2eb97c",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/15-astra-lower/predictions.jsonl",
+          "sha256": "b47139cf66bf648229ba1f1092f36ffc663942040898a177b331525c82a02c19",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/15-deepseek-higher/predictions.jsonl",
+          "sha256": "70afff730dbaa56189edc231bf05eb059147f743101d38d07901fedfd9a0dd71",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/15-deepseek-lower/predictions.jsonl",
+          "sha256": "d85a70f970ad97d03770f91ad9ebb8ef9c059a45d62dfc17f09168b2b036bc77",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/15-kimi-higher/predictions.jsonl",
+          "sha256": "5652294c6b7e33ec5b2219aa2741d2d30876d9a77f1691817e9588cc4bc72d85",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/15-kimi-lower/predictions.jsonl",
+          "sha256": "4107829ae4be453e3a22a087434ccc097b05a9457a0586b67c7a8a56def7caa3",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/15-opus-higher/predictions.jsonl",
+          "sha256": "d55f5a89c8fa44ce206bdc33e9b5981242c9db9279313920749e3784e4462cb0",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/15-opus-lower/predictions.jsonl",
+          "sha256": "3a058833fc4d1cd079025c1fa8490f388df5c27e2b1363236e7706b3994d784e",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/16-astra-higher/predictions.jsonl",
+          "sha256": "0fcca32cc474c153b7ce9e8cdd042b5941a67568c9c7125caf94173baf94211b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/16-astra-lower/predictions.jsonl",
+          "sha256": "61522cfc5645a234b561dc16b7f24fb5420db574ee3f45444d4c50f107276471",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/16-deepseek-higher/predictions.jsonl",
+          "sha256": "8cb7e88606d13aa926ad80eba31e854c9b72da0002115f40e5c52d21fdb2af9e",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/16-deepseek-lower/predictions.jsonl",
+          "sha256": "7f4c4ff707e935f1a8c072b2de34041920d3ea734a822c4ed5cdaf331bc4f57c",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/16-kimi-higher/predictions.jsonl",
+          "sha256": "4b391947eb5ccd869b656fcbeda79e5557f28ab118b571e7312dde393a2e1a75",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/16-kimi-lower/predictions.jsonl",
+          "sha256": "231e8f8197fe7dbddd900efbc4e29586f39102a00fd011f9ea1c6b0bf18c5789",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/16-opus-higher/predictions.jsonl",
+          "sha256": "5df7377ea56382a75bae472820648c0f356b926e4a3bc45717bbbf237fb40603",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/16-opus-lower/predictions.jsonl",
+          "sha256": "3e6bd9edb3cf5220377889c3d90bee22bc70ee3ab83518c5f3b9123e2ef23b0f",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/17-astra-higher/predictions.jsonl",
+          "sha256": "58ed6eb1868775eb26d6f9758e323b7ec988821e6c7ff7d37f94e5b12cbb8828",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/17-astra-lower/predictions.jsonl",
+          "sha256": "6d614d5d48e1b3f5613cf3fa080701a50733dbf3222a51647c1e15ef31ac5b96",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/17-deepseek-higher/predictions.jsonl",
+          "sha256": "62352791d12485c391e210e82d30315cb4f18ec24d69e8c0b38546439ef0867e",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/17-deepseek-lower/predictions.jsonl",
+          "sha256": "2b0f71a681d87656c39fca7e3d2a839bf5e3a8c19019f2698be5372c51789bc5",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/17-kimi-higher/predictions.jsonl",
+          "sha256": "ea782535468960b7208a743aee5738095bc8e8fd1368f66438719231c37f9b36",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/17-kimi-lower/predictions.jsonl",
+          "sha256": "11fd4e32b0e2220df3ecba22a7f0ebaa87041a32498ab1a47fcb7b3e7425b236",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/17-opus-higher/predictions.jsonl",
+          "sha256": "34791df649de67a181672cff86100149e460a603ead73c0d4a0b38a5bf4a8103",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/17-opus-lower/predictions.jsonl",
+          "sha256": "4c233cef729ab368c388ab5a074096f4a3983cfd9ed92c4d2b507fc9907f6131",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/18-astra-higher/predictions.jsonl",
+          "sha256": "d7e9afdd95d81e2087534ed130335a81f87260a8de4e8f2ac6b624903ac00051",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/18-astra-lower/predictions.jsonl",
+          "sha256": "7bcff9763edb54ae6d8b2fa48b369a996ab7eca0a3287dfb21b159891ae2337d",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/18-deepseek-higher/predictions.jsonl",
+          "sha256": "6174b77d2bd49844f4d945219a39526e8113fbe1c7315bfd989732e492e2c66a",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/18-deepseek-lower/predictions.jsonl",
+          "sha256": "3a09ada993b406df3fc0aa9ca882c71388948f85cfc4370858015a7fbbb5a8d7",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/18-kimi-higher/predictions.jsonl",
+          "sha256": "12c8ed93ed5ef13d3775021d9b14ce692218944f96f9a1ee8e08c1dce57c86d3",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/18-kimi-lower/predictions.jsonl",
+          "sha256": "437925eabbca1302037b74319d64c887d2b738ea4eec6666f2b4a79a2330347b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/18-opus-higher/predictions.jsonl",
+          "sha256": "051c703396b5365fcc7e4dc5447b55dffc8625915ecbea8d7d4eb359ca6f9adc",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/18-opus-lower/predictions.jsonl",
+          "sha256": "9831c1a13600738552ee63d306170c4efea06c08cfa21366a68daa722065d0a7",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/19-astra-higher/predictions.jsonl",
+          "sha256": "7c0dbf8080a9177040b408bc7a9e04c3c01b41c2e19854ebd3cc64e9585ada70",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/19-astra-lower/predictions.jsonl",
+          "sha256": "43a9bae28bdd919bf9aa8c844d4098d461cc5844d8cbf4a652cde23e0fb8eafc",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/19-deepseek-higher/predictions.jsonl",
+          "sha256": "b440be12825975ef4b6853cc786a4640a0746feaac3ce62476defcd436c72b18",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/19-deepseek-lower/predictions.jsonl",
+          "sha256": "9df1bab44c8288fb8880009e3115b5a79fc5928437dea9e73276d4f2c12a7aa9",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/19-kimi-higher/predictions.jsonl",
+          "sha256": "05ce54f0a2a0d9b786dfdb5c0c35107286f77d2bc0f44e519eebe08638a1585b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/19-kimi-lower/predictions.jsonl",
+          "sha256": "8c6237ef47e6a97c3ef01d04e90ec27430066d9200703d5c84ae30d1043f92e1",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/19-opus-higher/predictions.jsonl",
+          "sha256": "556b5ed74db58caa18b1f729384e9b5ee387b392686fb427fd9ac3ea2f5b8bfd",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/19-opus-lower/predictions.jsonl",
+          "sha256": "02b2b3302c7056977d43c748165464ca6895506ad2453c8e304ee34ffe7f0e3c",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/20-astra-higher/predictions.jsonl",
+          "sha256": "d1083e2fed68fa6e94231cc79a78417256d74d9d649b4709b97356008e3d4c43",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/20-astra-lower/predictions.jsonl",
+          "sha256": "3943981dec0b93ebe765759b9192539fbd5f8153a3b8b795f093b9656913d770",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/20-deepseek-higher/predictions.jsonl",
+          "sha256": "ae6897c234589241cb7175cd6e5e95bd426a5c87021be2d8c13699304f7258ce",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/20-deepseek-lower/predictions.jsonl",
+          "sha256": "ca6d8ac78f8164ef672352c014a33ded4607ee6e33758cdfdfcf098a4cb5199c",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/20-kimi-higher/predictions.jsonl",
+          "sha256": "eea4f0b83550ea42443cb30b3c6b7ead1bd7a47a90b55fb27c8bb7c2cf427e2b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/20-kimi-lower/predictions.jsonl",
+          "sha256": "73cbba87f979497efb14b33942dc011d55262b04b1a0b41b2b9a244e9cf6c5f1",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/20-opus-higher/predictions.jsonl",
+          "sha256": "decb2c0630e5a50c55d5a7c5f4eb570b1fe3c87da60d715e283aa3b59d952174",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/20-opus-lower/predictions.jsonl",
+          "sha256": "cc5fbf6547fd1224f85e6b0f555f9494151ad40b934c29c0bc56976f322d9d5e",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/21-astra-higher/predictions.jsonl",
+          "sha256": "aa7416ab8f622283860fb96d120d0eed421ad0101232e410f83f591eb8eb5a63",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/21-astra-lower/predictions.jsonl",
+          "sha256": "b57c58dd6a0128d7914e78cd106e389835547b41a0d43a343b169f43dce87242",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/21-deepseek-higher/predictions.jsonl",
+          "sha256": "70a224436a57a94cd8b17c00b502e178a71f0b64db45938494753b3b11943151",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/21-deepseek-lower/predictions.jsonl",
+          "sha256": "a88b9e2f001b71882155501c95d00a1d7e611e03d905593215fd3ed9bb8bc051",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/21-kimi-higher/predictions.jsonl",
+          "sha256": "9b6781c90195d48f245c18c1dd8c84ef79ca91c93711e7d0fca1138d370cf74d",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/21-kimi-lower/predictions.jsonl",
+          "sha256": "c3cc41650abadd595bc8f773c278b27737f966dfa1e62d9b2d98d1b2c5160aa5",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/21-opus-higher/predictions.jsonl",
+          "sha256": "5583fe3b9c862067c53fc45bdd7e4c328586cc1ffe794e6c0c42458687ab6c7c",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/21-opus-lower/predictions.jsonl",
+          "sha256": "78c8206fff4db89a4321229ca3912ff1d69effafe4dc40b541d3e036866443bc",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/22-astra-higher/predictions.jsonl",
+          "sha256": "17199105512b414e05bda2f7e432e9ac1cccfe7726d23644939cc250f80629b6",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/22-astra-lower/predictions.jsonl",
+          "sha256": "d5ed3c312bb2b1460add77799773d1e167a09f98345bf359d30bdaabaabda1fb",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/22-deepseek-higher/predictions.jsonl",
+          "sha256": "414156d621da7919d88012d2b8d2be5426d149f18f6ef3274bfc221f3bf5f737",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/22-deepseek-lower/predictions.jsonl",
+          "sha256": "8f69e86116df7e6d9327c383b7dee6992925f1648096dbb66239ed592f311814",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/22-kimi-higher/predictions.jsonl",
+          "sha256": "7438b48a6251242304eeae517b1b2a0039c132b7d8454843677a6087700deb30",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/22-kimi-lower/predictions.jsonl",
+          "sha256": "e705769d12e4240b25f27e1016d56d6b333750f5db0b6dd622d8c9b4303edab4",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/22-opus-higher/predictions.jsonl",
+          "sha256": "e55c1faf653fa5271eeb2cd12491164d01fb6a6a5c7b6c05af8ab99ba6be92df",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/22-opus-lower/predictions.jsonl",
+          "sha256": "4c9b93e327efc748da7093bd81822b1cfd7aa2cd9da6129e9051754f69c03db1",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/23-astra-higher/predictions.jsonl",
+          "sha256": "80e6c402d1c1960856f443cc85aa109c2e828eccf8c41b915e8ad1ebe1a7a631",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/23-astra-lower/predictions.jsonl",
+          "sha256": "b3caa7fc010c38d3158144236874d9dd550b0b5ba9fc1ac013fc111f9aacf2ff",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/23-deepseek-higher/predictions.jsonl",
+          "sha256": "0fe3a53088e2e912a2347ab4d06497a9e70caedac28d16cf9416fd9286e3b793",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/23-deepseek-lower/predictions.jsonl",
+          "sha256": "23b2255f0bcbe0061dc75d64e856cbdc9a3657c855416db6196abdba770d36d5",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/23-kimi-higher/predictions.jsonl",
+          "sha256": "93bbeaaaf6bd275ecb804a92f997ac17f4edece4db2ccc1ef9f0165d3005cb58",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/23-kimi-lower/predictions.jsonl",
+          "sha256": "cd2d026c4706a811e378534bba43176a5107e168904198f3472facdc9023da27",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/23-opus-higher/predictions.jsonl",
+          "sha256": "c56a3b3e2c7205d41c9db67456be4ded532da5e516d307a70fea7ceb6123041c",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/23-opus-lower/predictions.jsonl",
+          "sha256": "a689a11f29145bdb3a4f8d7d1b7e7ce16264d58788f54240e84c8abc775d250f",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/24-astra-higher/predictions.jsonl",
+          "sha256": "bcf6f355bc966838276d84b1e8f6c4b78e107552c5abbbc740ca1239232eb346",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/24-astra-lower/predictions.jsonl",
+          "sha256": "d6cf9e9d2734dbb5a25a4e5b9a101734f2f9e5793c07645712daded4542269b6",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/24-deepseek-higher/predictions.jsonl",
+          "sha256": "633996dcf9ad35e4330cb9bb0f6fa5c07e84b766144eef3e343ebd20f4bd0bc3",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/24-deepseek-lower/predictions.jsonl",
+          "sha256": "bd8410463574fa171ddacfa1330a94c36a6ed7736534de13543dfc1c39c89d01",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/24-kimi-higher/predictions.jsonl",
+          "sha256": "f43b741821632f0be98642913c6d490c377cc450461b0038ad0f7c6168487955",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/24-kimi-lower/predictions.jsonl",
+          "sha256": "8b65eb28b9c52d8ad9f30a99bca52f17c2256f8a2614df8bac86ed67c25d6c5d",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/24-opus-higher/predictions.jsonl",
+          "sha256": "5f3aa53f5104ed0e2a1a5b4a9122cd1b22fdf85a6d4338be33e8294f0819efe7",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/24-opus-lower/predictions.jsonl",
+          "sha256": "bead6bccbfedf6569b71ce58abd7edff03b9d60794daa460100d5f2766b3c34b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/25-astra-higher/predictions.jsonl",
+          "sha256": "837b31d30d70e05e0b281875a1d7f3f7b8c3c26409770bb4f59aa0d099cf5b3c",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/25-astra-lower/predictions.jsonl",
+          "sha256": "91faa9a4d9156274e4c9c96c0ef745113e873193b27bc9190ee8910a318e7551",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/25-deepseek-higher/predictions.jsonl",
+          "sha256": "b357b2a7eb880cb007b890db1e26d5671d98bb1476de4741702ece4246b707c7",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/25-deepseek-lower/predictions.jsonl",
+          "sha256": "f7e2240154250477261aab46c6431fbcbd5ae89acaba9339549ae70712166175",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/25-kimi-higher/predictions.jsonl",
+          "sha256": "70fb1e575b9ee39a422c35ae8ca9068d2e0173b26bd1dfcf8207fe536331c885",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/25-kimi-lower/predictions.jsonl",
+          "sha256": "121282bacf3c5a0bfd0739af467e6266600b4f813e3331b4c86f09a0f7b2f1bd",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/25-opus-higher/predictions.jsonl",
+          "sha256": "f0e1d1f514f4be00861e214c25c6bcb9c7855800f4fed8771a7e95b23eeafd36",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/25-opus-lower/predictions.jsonl",
+          "sha256": "ddb9d00d7d74b91cb3f5301264ee0ed3a7614a71caff340b73d8d66221b6c395",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/26-astra-higher/predictions.jsonl",
+          "sha256": "381cba10297a9fe94269a578627e8895de11c96b5c505d2b8f6759dc55430293",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/26-astra-lower/predictions.jsonl",
+          "sha256": "df268b22b9f6411c793829874d33c823402c9a9cdc2e0ae7fb3b5724cd8e1aca",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/26-deepseek-higher/predictions.jsonl",
+          "sha256": "cecd1ddbb4a86ebfddf4d18df180322a05bb65c4dad4e62b31da5c3c20a328e8",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/26-deepseek-lower/predictions.jsonl",
+          "sha256": "10f841d6c37a4262b326707afe5091be98049ea4db83f7216f530acd39719006",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/26-kimi-higher/predictions.jsonl",
+          "sha256": "ac031cf63928abcf81a9c79fb63ddf805731cd269623f7188bc992d839b2ee33",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/26-kimi-lower/predictions.jsonl",
+          "sha256": "a68883916340fc5e85861489690c67e1c3f71cc62e3ebdc78efd714437fc2967",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/26-opus-higher/predictions.jsonl",
+          "sha256": "f1f53d2a0d56cac2a7be187fbb835d02cf3ac3b9915a27e2f9e3a1b3348cd25a",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/26-opus-lower/predictions.jsonl",
+          "sha256": "d031a989ac3498a7c070d041c5e723364abb23d508a0f050999fc89ac177f0be",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/27-astra-higher/predictions.jsonl",
+          "sha256": "5f67e9a9f5d816a357d938714953d6a50561340aa94df9b2549142a741f22923",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/27-astra-lower/predictions.jsonl",
+          "sha256": "be4204cab07f40a1a34f1675c53df83c5610e580d44afc3c886d29e0cd1fb79c",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/27-deepseek-higher/predictions.jsonl",
+          "sha256": "5bfe3180a680bbfbe4b6fe79ce8a0499edbb02e1cc432778ae3d16dc6c8f4723",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/27-deepseek-lower/predictions.jsonl",
+          "sha256": "ce1594cf1a92ab7160c05caf98907a255b11566b51dbb9c428bdfd9fd32b3ba3",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/27-kimi-higher/predictions.jsonl",
+          "sha256": "ce4d75557775f86d05f4e8636e0336748aaacb846659b797aa0ce50823feced2",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/27-kimi-lower/predictions.jsonl",
+          "sha256": "7d73cfe634cc4e77120037afb831638fc3f4c86bf5a1891c5fc437e9acab4fac",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/27-opus-higher/predictions.jsonl",
+          "sha256": "272672654c3e0cbfad6ed615afdbce2d9fbb2ff19846d45a869fecbaf25dbbee",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/27-opus-lower/predictions.jsonl",
+          "sha256": "59fbc1ea343381d0cd6ef0aa325bb91229df077b338d88301250e82e1d765a70",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/28-astra-higher/predictions.jsonl",
+          "sha256": "6c4f7173643762ed3c2de85da94ebb356d746e8aca8670d0e88c50ac5f8ceb43",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/28-astra-lower/predictions.jsonl",
+          "sha256": "2109f9afc68e720fd15c121f529aad1c94a21f464aa4cf0ffd71a7ab8c6d932a",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/28-deepseek-higher/predictions.jsonl",
+          "sha256": "0ea34eec07cbf0ffdb0038fb2b14a1fb54f3438dd99c8dd2472847dab03f6a0b",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/28-deepseek-lower/predictions.jsonl",
+          "sha256": "628312707248f20b80989225625f375e9c8a746892c2adf829584fe45f58373d",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/28-kimi-higher/predictions.jsonl",
+          "sha256": "4e55f38f2f0b6bc61747215a5ad04f6a393f184f6891491094080250b392e5cf",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/28-kimi-lower/predictions.jsonl",
+          "sha256": "fc50cdff4f6533be1e22d2c707e01dc211698461d199d4e1d802225df803b28d",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/28-opus-higher/predictions.jsonl",
+          "sha256": "54488655a3abc9ee68cc9133df14c0a12aa0f49bed573d1fc9427f7f108e8032",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/28-opus-lower/predictions.jsonl",
+          "sha256": "671e492139dcf775ed755419f2440b73bd378e276ff384094dd08576859a50ce",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/29-astra-higher/predictions.jsonl",
+          "sha256": "c0cb81cbac58d486f7302b49856839aab1d71ebea189ade942dffadf3650f226",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/29-astra-lower/predictions.jsonl",
+          "sha256": "bd39d081595cc5de6eb305a19c1ba3c7d8bf68d0445f790c13114126249b2cf2",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/29-deepseek-higher/predictions.jsonl",
+          "sha256": "8b553818a1c03b96b2235f9af9b373258e54b82b848bfcaa67599b1512c9025a",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/29-deepseek-lower/predictions.jsonl",
+          "sha256": "146c480850bb40b90e1e76fe65ec2687e2216668c80a25870031645602c1cb57",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/29-kimi-higher/predictions.jsonl",
+          "sha256": "50cf9a5711213256cde155dd0e626cd564cf185f821ae21dfa85afe02c5fe0a0",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/29-kimi-lower/predictions.jsonl",
+          "sha256": "68d61a5fd14e5eaa5c28857784ca286ced72c3069c6cceac1f27944fc1d0d35c",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/29-opus-higher/predictions.jsonl",
+          "sha256": "f0ba1fa1e0f394ede9f9309088799070366db0090aa03ba8363f220378d000b6",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/29-opus-lower/predictions.jsonl",
+          "sha256": "fecae69c5674eaa279d032a917211c08fce273fb5f0026f10ce59fc6acbb6365",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/30-astra-higher/predictions.jsonl",
+          "sha256": "59b84ea4f4eeb109f4ec21c76c9c98867b6a7445ab55c3be319b116317a0dcd8",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/30-astra-lower/predictions.jsonl",
+          "sha256": "0c923320b626033bcbc4b32e706074a0045e6f772be3e9467d5171b3d500c7e8",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/30-deepseek-higher/predictions.jsonl",
+          "sha256": "2d916a80ba15dd7ce2b8cf25ec762d5fb4048e583fdf5e16f3c11172c0b3cdce",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/30-deepseek-lower/predictions.jsonl",
+          "sha256": "767cb865f02935a3cd346c73873c86062d67dbe6a15e038ff4f91ff4a38e9837",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/30-kimi-higher/predictions.jsonl",
+          "sha256": "5400235a1943f749683a33d1862b35ee24e9436aac480ecd44632c81404553ca",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/30-kimi-lower/predictions.jsonl",
+          "sha256": "5a8424afb1e12cdfcaec24dcfbe5927a4b56a8cba29ed8a35874ad54125a766e",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/30-opus-higher/predictions.jsonl",
+          "sha256": "10c2d1c66f6129986a81d65ecf9bff4ecb0dffda28cb7af501d2f6435e0a9844",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/30-opus-lower/predictions.jsonl",
+          "sha256": "2e95fe88b4285a9d196d19fd05e915f3f277d4a686f311365534a3f2d9a0cef2",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/31-astra-higher/predictions.jsonl",
+          "sha256": "3539d4fa601aa16ee0c225031cf58c5de4bd0d2e6ff7ae49cc1737de485448d6",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/31-astra-lower/predictions.jsonl",
+          "sha256": "dbd6b200da9e855caa71e896f54093431cd5287f4ec1f39319d80bc90f212817",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/31-deepseek-higher/predictions.jsonl",
+          "sha256": "ff97bce6ef492c2fd26976ba26e48640220792cd61f2e71d83e2127cf2cfe7a0",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/31-deepseek-lower/predictions.jsonl",
+          "sha256": "57ebb63a6b850959956d9f0c486909342bb2b929a88d99783cb9f55c81123fe8",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/31-kimi-higher/predictions.jsonl",
+          "sha256": "f2867c5933b398b80c187a646ec67d02878ecc81866eeff2892ec57747268902",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/31-kimi-lower/predictions.jsonl",
+          "sha256": "371eeb7cd6f59f250f6739e1d2ac05d27de09756ae2793d9b96ab61440b9a163",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/31-opus-higher/predictions.jsonl",
+          "sha256": "44933b0479dcbc4c5a36bebdfc330b6853c6f118d03eba840b9e678b77a1e055",
+          "n": 1
+        },
+        {
+          "path": "published_runs/2026-10-25-frontier-pilot/runs/31-opus-lower/predictions.jsonl",
+          "sha256": "765af9092d38989992439cb19ec8691eac5c4f40171ebb44ca9dc8f575fc55f6",
+          "n": 1
+        }
+      ],
+      "grouping": {
+        "unique_normalized_prompts": 47804,
+        "groups": 47617,
+        "near_duplicate_pairs": 751,
+        "conflicting_label_groups": 16,
+        "grouping": "NFKC/casefold/whitespace exact; 64-permutation 5-word MinHash LSH candidates at 0.65, verified Jaccard >=0.85; connected components",
+        "limitation": "Approximate candidate retrieval may miss some near duplicates; no semantic paraphrase detector."
+      },
+      "note": "Earlier final-fit aggregate results were published; these rows were not used for policy search. Reused official tests remain exploratory."
+    },
+    "hatexplain": {
+      "official_train": 15383,
+      "excluded_groups": 4869,
+      "eligible": {
+        "n": 14325,
+        "groups": 14309,
+        "labels": {
+          "ALLOW": 9899,
+          "BLOCK": 4426
+        },
+        "source_labels": {
+          "offensive": 4084,
+          "normal": 5815,
+          "hatespeech": 4426
+        }
+      },
+      "fit": {
+        "n": 4096,
+        "groups": 4090,
+        "labels": {
+          "BLOCK": 1267,
+          "ALLOW": 2829
+        },
+        "source_labels": {
+          "hatespeech": 1267,
+          "offensive": 1166,
+          "normal": 1663
+        }
+      },
+      "validation": {
+        "n": 1536,
+        "groups": 1535,
+        "labels": {
+          "BLOCK": 475,
+          "ALLOW": 1061
+        },
+        "source_labels": {
+          "hatespeech": 475,
+          "offensive": 438,
+          "normal": 623
+        }
+      },
+      "grouping": {
+        "unique_normalized_prompts": 19192,
+        "groups": 19178,
+        "near_duplicate_pairs": 18,
+        "conflicting_label_groups": 5,
+        "grouping": "NFKC/casefold/whitespace exact; 64-permutation 5-word MinHash LSH candidates at 0.65, verified Jaccard >=0.85; connected components",
+        "limitation": "Approximate candidate retrieval may miss some near duplicates; no semantic paraphrase detector."
+      },
+      "canary_rows": 32,
+      "canary_role": "Earlier fitting rows, excluded from all ensemble fitting/selection; consistency diagnostic only"
+    }
+  },
+  "policies": {
+    "wildguard/policylm": {
+      "policy_id": "wg-p4-policylm-compact",
+      "sha256": "ad0ceb520f16254b6f8e444be008349d04d26baf70492e770cb1daf59f4da0f2",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e"
+    },
+    "wildguard/shieldstral": {
+      "policy_id": "wg-p4-shieldstral-taxonomy-priority",
+      "sha256": "c52970c306ee4b66901c0ba9b1e057b0cfeca7d300771a652fe79a3bdbddeaca",
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5"
+    },
+    "wildguard/cope": {
+      "policy_id": "wg-p3-cope-social-and-deception",
+      "sha256": "8af17e18ab7f9888c54e53c06d44346f888869ac780643fc335518af896261cb",
+      "revision": "b28a1c734eff80d82e5df7964c7dfd0de8509900"
+    },
+    "hatexplain/policylm": {
+      "policy_id": "p0",
+      "sha256": "48ff3502bdad0530a0e99792c53f40a0b6a8a534b41266e4ec8bf3c30e512183",
+      "model": "musubilabs/policylm-1.7b",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+      "adapter": "policylm"
+    },
+    "hatexplain/shieldstral": {
+      "policy_id": "shieldstral-p2",
+      "sha256": "de63b5dfcda53af29c08da0d8235bef54ec982d7485f8e2c7a3bcd02ddee4771",
+      "model": "mistralai/Shieldstral-1.0-3B",
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+      "adapter": "shieldstral"
+    },
+    "hatexplain/qwen-4b": {
+      "policy_id": "qwen-4b-p1",
+      "sha256": "f8a6fe582b6489f6164945e0b626ca9b8a251a8f90285c4617a025a1db6c703e",
+      "model": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "adapter": "qwen"
+    }
+  },
+  "source_hashes": {
+    "published_runs/2026-10-24-wildguard/runs/policylm-fit-final-p4/predictions.jsonl.gz": "ea6750dd5c1f731b0c3aef2874336b4123cf4a36db2435b0a0c13cef0bd4e99d",
+    "published_runs/2026-10-24-wildguard/runs/shieldstral-fit-final-p4/predictions.jsonl.gz": "1413ea16a2c9a4e06d63da76645a65e06828c61f52d27d5e9f44470558201d41",
+    "published_runs/2026-10-24-wildguard/runs/cope-fit-final-p3/predictions.jsonl.gz": "aba2ea6f50e58423021dbc3a08a6af635eab1b81d170a55cfebd4ef30e7e79f7",
+    "/Users/harshsinghal/Documents/Codex/2026-10-14/there-is-a-project-in-my/work/hatexplain-run/source/dataset.json": "63bb3340fee0ec469b09690d04cb68f7c187787dd8b83807f071892c084967fb",
+    "/Users/harshsinghal/Documents/Codex/2026-10-14/there-is-a-project-in-my/work/hatexplain-run/source/post_id_divisions.json": "c2fb0d89862e7897b11ea3e9380753f15a793482b4b70ad0532dfb1212212835",
+    "published_runs/2026-10-26-hatexplain/policies/p0.json": "48ff3502bdad0530a0e99792c53f40a0b6a8a534b41266e4ec8bf3c30e512183",
+    "published_runs/2026-10-26-hatexplain/policies/shieldstral-p2.json": "de63b5dfcda53af29c08da0d8235bef54ec982d7485f8e2c7a3bcd02ddee4771",
+    "published_runs/2026-10-26-hatexplain/policies/qwen-4b-p1.json": "f8a6fe582b6489f6164945e0b626ca9b8a251a8f90285c4617a025a1db6c703e"
+  },
+  "data_hashes": {
+    "data/hatexplain/canary.jsonl": "f0348cb51fcd00842272a937ee2841b1ef2d24cf701ec94154be5239507070f7",
+    "data/hatexplain/fit.jsonl": "0038e131970ad62cc25148f317fa1013561eb8ab32f0802bc3f12ec8cd5d5a4b",
+    "data/hatexplain/validation.jsonl": "7ddf1635890a810e74c47c6c5026f0a96c72e06d839f1897ef36155584cd1edf",
+    "scores/wildguard/cope/fit.jsonl.gz": "5677ba6f75de127f9feae36acc12046d37da68c17c8b1c90c1f5b10f26c4206a",
+    "scores/wildguard/cope/validation.jsonl.gz": "f43501b5a5966d72138ac1925eda4a5fa58cc7321bf73854c61fb0a417d74b71",
+    "scores/wildguard/policylm/fit.jsonl.gz": "fa87137349de47d265fdd3938a78d8e761febf26719dbd297c98e574c4be69ee",
+    "scores/wildguard/policylm/validation.jsonl.gz": "c8e235750070512f762f3d8b1d1f18b862752f78767da8800b0991934d855e97",
+    "scores/wildguard/shieldstral/fit.jsonl.gz": "819624f45a906cfc778275c68f9f096523b7e0b119af31ae9edfbbb18c79eaa7",
+    "scores/wildguard/shieldstral/validation.jsonl.gz": "e3b271070ad6862e97b3a3ba17d7b298c48f9d937b35fe3e4a6207fe83778f53"
+  },
+  "hx_models": {
+    "policylm": {
+      "model": "musubilabs/policylm-1.7b",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+      "adapter": "policylm"
+    },
+    "shieldstral": {
+      "model": "mistralai/Shieldstral-1.0-3B",
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+      "adapter": "shieldstral"
+    },
+    "qwen-4b": {
+      "model": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "adapter": "qwen"
+    }
+  },
+  "hx_settings": {
+    "dtype": "bfloat16",
+    "threshold": 0.5,
+    "temperature": 0,
+    "qwen_thinking": false,
+    "concurrency": 32,
+    "retries": 0,
+    "native_cleaning": true,
+    "native_max_batch_rows": 1,
+    "native_max_chars": null
+  },
+  "protocol_sha256": "989692f703030053621d0d1c0a2801fc3e8bfa4de77b2da991928327d38b48e7"
+}

@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-10-28T06:18:02.618498+00:00",
+  "cohort": "hatexplain-specialists",
+  "dataset": "hatexplain",
+  "features": [
+    "policylm",
+    "shieldstral"
+  ],
+  "source_hashes": {
+    "evals/ensemble/study.py": "edeb73a5977def2d02182160db0dd3bdb5f1d06868826fcb4a492244f974c25b",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/ensemble/learn.py": "a4dc29d099781020a3fe376aca071bf96e18182f9d4e0a597a1573c49c30e986"
+  },
+  "development_hashes": {
+    "scores/hatexplain/policylm/fit.jsonl.gz": "9d707a0d5992f2573232a271b861d76b4830412a20b6ffa5c256469329ddd298",
+    "scores/hatexplain/shieldstral/fit.jsonl.gz": "05b314cc4e8a8dc09e951e14e8b1210ca0aa49628253bb3fb5868ede90f4742a",
+    "scores/hatexplain/policylm/validation.jsonl.gz": "7dd587f1bc6d7d9a2f6b1f86207fd2715d712cfbf64c2e9b922bcf92e5085c0b",
+    "scores/hatexplain/shieldstral/validation.jsonl.gz": "d50374c3faea9707e5c06adacdba6fc8aab3ea2257ddfda70566720a2df1f152"
+  },
+  "models_sha256": "e900f9398261624633ba61cfe7129cbff1abde19c000d49b99f766abb42af95b",
+  "selection_sha256": "248f04f3968f8202be8cdb9621a6cebadaf4904279081de05653ca2e596161e8",
+  "data_manifest_sha256": "b59e0fd9fe0061a7d80d461be58f443b7b96905d1bab68a8db4a6960bf72363d",
+  "protocol_sha256": "989692f703030053621d0d1c0a2801fc3e8bfa4de77b2da991928327d38b48e7",
+  "policies": {
+    "hatexplain/policylm": {
+      "policy_id": "p0",
+      "sha256": "48ff3502bdad0530a0e99792c53f40a0b6a8a534b41266e4ec8bf3c30e512183",
+      "model": "musubilabs/policylm-1.7b",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+      "adapter": "policylm"
+    },
+    "hatexplain/shieldstral": {
+      "policy_id": "shieldstral-p2",
+      "sha256": "de63b5dfcda53af29c08da0d8235bef54ec982d7485f8e2c7a3bcd02ddee4771",
+      "model": "mistralai/Shieldstral-1.0-3B",
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+      "adapter": "shieldstral"
+    },
+    "hatexplain/qwen-4b": {
+      "policy_id": "qwen-4b-p1",
+      "sha256": "f8a6fe582b6489f6164945e0b626ca9b8a251a8f90285c4617a025a1db6c703e",
+      "model": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "adapter": "qwen"
+    }
+  },
+  "test_sources": {
+    "policylm": {
+      "path": "published_runs/2026-10-26-hatexplain/runs/policylm--p0--markdown--test/predictions.jsonl.gz",
+      "sha256": "8059855d1b919172bb6ec9bae8287cefdec1dd37daa7b996503d4ee80154d1d1"
+    },
+    "shieldstral": {
+      "path": "published_runs/2026-10-26-hatexplain/runs/shieldstral--shieldstral-p2--markdown--test/predictions.jsonl.gz",
+      "sha256": "c6109273fe732d1d16a8f4517d8664fa51ef024d5c0e39e6e991bc6df27b9527"
+    }
+  },
+  "fit_seconds": 1.5722895413637161,
+  "fit_n": 4096,
+  "validation_n": 1536,
+  "test_role": "Exploratory reused official test. No test scores used in this fit or selection."
+}

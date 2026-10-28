@@ -1,0 +1,50 @@
+{
+  "study": "policy-ensemble-v1",
+  "status": "complete",
+  "updated_utc": "2026-10-28T06:32:01.077116+00:00",
+  "provider": "GPU.ai",
+  "fallback_provider": "RunPod",
+  "instance_id": "gpu-3ebe6b31",
+  "instance_status": "terminated",
+  "new_cost_usd": 0.38,
+  "prior_cumulative_cost_usd": 12.12119753456,
+  "cumulative_cost_usd": 12.501197534560001,
+  "cumulative_cap_usd": 20,
+  "remaining_authorized_usd": 7.49880246544,
+  "gpu_seconds": 691,
+  "new_inference_observations": 16992,
+  "new_development_scores": 16896,
+  "canary_scores": 96,
+  "inference_errors": 0,
+  "steps": {
+    "data_audit": "complete",
+    "protocol": "registered, unchanged",
+    "local_tests": "63 passed, including 12 ensemble tests; legacy fixture validation passed",
+    "missing_scores": "complete, checksums verified; all canary scores identical",
+    "fit": "all three cohorts frozen before ensemble test evaluation",
+    "test": "complete, all registered candidates retained",
+    "report": "readout, complete tables, two figures and evidence package",
+    "reproduction": "passed: 98 candidates refitted; selections, test metrics and paired intervals match",
+    "billing": "reconciled, instance terminated, temporary SSH keys removed"
+  },
+  "cohorts": {
+    "wildguard-specialists": {
+      "freeze_sha256": "bc9844c404de9753d279e75ec1f19a4224829774a695535ba58db59803a6fadc",
+      "test_n": 1699
+    },
+    "hatexplain-specialists": {
+      "freeze_sha256": "484bb22c9162631883c4b06b3b72fe55b8258bb18043c21f5113a34bbe391d4e",
+      "test_n": 1924
+    },
+    "hatexplain-mixed": {
+      "freeze_sha256": "a1e5d807696b150fbc8901c4ecaacf3d7f5f3de16e623a144c0462982fec8581",
+      "test_n": 1924
+    }
+  },
+  "limitations": [
+    "Reused official tests; exploratory follow-up",
+    "Intervals unadjusted for multiple comparisons",
+    "No production serving-cost/latency benchmark",
+    "No validated review routing"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "role": "Descriptive post-test comparison against strongest observed individual; not used in selection",
+  "comparison": "HateXplain mixed random forest vs validation-selected Shieldstral configuration",
+  "result": {
+    "accuracy_delta": 0.0015592515592515177,
+    "macro_f1_delta": -0.008905135295384392,
+    "accuracy_ci95": [
+      -0.01144640998959412,
+      0.015057504485074594
+    ],
+    "macro_f1_ci95": [
+      -0.025006220334849453,
+      0.007016264225721779
+    ],
+    "cases_fixed": 88,
+    "cases_broken": 85,
+    "groups": 1922,
+    "replicates": 2000,
+    "limitation": "Unadjusted descriptive intervals; exclude policy-search and inference uncertainty; tests reused from prior studies."
+  }
+}

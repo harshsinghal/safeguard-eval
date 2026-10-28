@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-10-28T07:00:29.099398+00:00",
+  "cohort": "wildguard-specialists",
+  "dataset": "wildguard",
+  "features": [
+    "policylm",
+    "shieldstral",
+    "cope"
+  ],
+  "fit_n": 4096,
+  "validation_n": 1536,
+  "registration_sha256": "1919e504b26cd7228c4041b951591c14ba07d301dc3176bc5c65c8c935270e0c",
+  "source_hashes": {
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/ensemble/learn.py": "a4dc29d099781020a3fe376aca071bf96e18182f9d4e0a597a1573c49c30e986",
+    "evals/ensemble/study.py": "edeb73a5977def2d02182160db0dd3bdb5f1d06868826fcb4a492244f974c25b",
+    "evals/ensemble_logits/__init__.py": "9cf28709c052c2fa8590a92addca04e681169d6142292f4f849c170397f37175",
+    "evals/ensemble_logits/learn.py": "26ea464738d0de139f4dc8ad8f379b36f55af6504f676d02f9e1dc4ff380c083",
+    "evals/ensemble_logits/study.py": "85be14bf007ed72c4e2ec07f099fbdb75cda94bd51ee2eda88fa6b6c6b8bd1f5"
+  },
+  "models_sha256": "e2be06f0e22f6d3a9274a39641891f33008067041ab8b5a69d0849479b67ead7",
+  "selection_sha256": "6fe1c5e5690744a00595e6e520bfa5f0ec55b32051a161ddacec28a809cf2aa7",
+  "protocol_sha256": "af74dcf59333e8614f8b47eaf83bd0f028ce2235bf78d54215e2bbb3e1e6d690",
+  "prior_freeze_sha256": "bc9844c404de9753d279e75ec1f19a4224829774a695535ba58db59803a6fadc",
+  "fit_seconds": 0.2116731246933341,
+  "scope": "New combiners and calibrators only; no model or policy updates"
+}

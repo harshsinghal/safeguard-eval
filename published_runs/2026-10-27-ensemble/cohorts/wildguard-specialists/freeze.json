@@ -1,0 +1,66 @@
+{
+  "created_utc": "2026-10-28T06:10:39.842822+00:00",
+  "cohort": "wildguard-specialists",
+  "dataset": "wildguard",
+  "features": [
+    "policylm",
+    "shieldstral",
+    "cope"
+  ],
+  "source_hashes": {
+    "evals/ensemble/study.py": "edeb73a5977def2d02182160db0dd3bdb5f1d06868826fcb4a492244f974c25b",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/ensemble/learn.py": "a4dc29d099781020a3fe376aca071bf96e18182f9d4e0a597a1573c49c30e986"
+  },
+  "development_hashes": {
+    "scores/wildguard/policylm/fit.jsonl.gz": "fa87137349de47d265fdd3938a78d8e761febf26719dbd297c98e574c4be69ee",
+    "scores/wildguard/shieldstral/fit.jsonl.gz": "819624f45a906cfc778275c68f9f096523b7e0b119af31ae9edfbbb18c79eaa7",
+    "scores/wildguard/cope/fit.jsonl.gz": "5677ba6f75de127f9feae36acc12046d37da68c17c8b1c90c1f5b10f26c4206a",
+    "scores/wildguard/policylm/validation.jsonl.gz": "c8e235750070512f762f3d8b1d1f18b862752f78767da8800b0991934d855e97",
+    "scores/wildguard/shieldstral/validation.jsonl.gz": "e3b271070ad6862e97b3a3ba17d7b298c48f9d937b35fe3e4a6207fe83778f53",
+    "scores/wildguard/cope/validation.jsonl.gz": "f43501b5a5966d72138ac1925eda4a5fa58cc7321bf73854c61fb0a417d74b71"
+  },
+  "models_sha256": "a469bf5a808c250744c4873e828e35d05c5938fc36c9be8772456e6792e5343f",
+  "selection_sha256": "75656a86b87b7e56922f3ae6811635fb39889b04cdfdd4d7fd2efebb18cbc002",
+  "data_manifest_sha256": "b59e0fd9fe0061a7d80d461be58f443b7b96905d1bab68a8db4a6960bf72363d",
+  "protocol_sha256": "989692f703030053621d0d1c0a2801fc3e8bfa4de77b2da991928327d38b48e7",
+  "policies": {
+    "wildguard/policylm": {
+      "policy_id": "wg-p4-policylm-compact",
+      "sha256": "ad0ceb520f16254b6f8e444be008349d04d26baf70492e770cb1daf59f4da0f2",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e"
+    },
+    "wildguard/shieldstral": {
+      "policy_id": "wg-p4-shieldstral-taxonomy-priority",
+      "sha256": "c52970c306ee4b66901c0ba9b1e057b0cfeca7d300771a652fe79a3bdbddeaca",
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5"
+    },
+    "wildguard/cope": {
+      "policy_id": "wg-p3-cope-social-and-deception",
+      "sha256": "8af17e18ab7f9888c54e53c06d44346f888869ac780643fc335518af896261cb",
+      "revision": "b28a1c734eff80d82e5df7964c7dfd0de8509900"
+    }
+  },
+  "test_sources": {
+    "policylm": {
+      "path": "published_runs/2026-10-24-wildguard/runs/policylm-test-p4/predictions.jsonl.gz",
+      "sha256": "f14a65d4fd49ae0bb5ebbd5d8232be960c9bf19db5d5fea7598cb14944a1c7c3"
+    },
+    "shieldstral": {
+      "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-test-p4/predictions.jsonl.gz",
+      "sha256": "8215dc2c46fd5ba2dd5f78b67c73fce5bd60d4ed9623edc0ef1dc45584e5ca7c"
+    },
+    "cope": {
+      "path": "published_runs/2026-10-24-wildguard/runs/cope-test-p3/predictions.jsonl.gz",
+      "sha256": "77a9678ae16106982eb57c364ad44b97ee7f27721cb1014435320a2b50bc3114"
+    },
+    "wildguard-baseline": {
+      "path": "published_runs/2026-10-24-wildguard/runs/wildguard-test-p0/predictions.jsonl.gz",
+      "sha256": "3d9020eb3e0eb92158b31d99dd5bbfdd2d763c24b9be77009f2d3559735e89e9"
+    }
+  },
+  "fit_seconds": 1.520463166758418,
+  "fit_n": 4096,
+  "validation_n": 1536,
+  "test_role": "Exploratory reused official test. No test scores used in this fit or selection."
+}

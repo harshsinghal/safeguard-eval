@@ -1,0 +1,48 @@
+{
+  "wildguard-specialists": {
+    "features": [
+      "policylm",
+      "shieldstral",
+      "cope"
+    ],
+    "coefficients_on_unstandardized_log_odds": [
+      0.031066000864132484,
+      0.7652255038991189,
+      0.04998136744744207
+    ],
+    "intercept": 0.7121542422505686,
+    "decision_threshold": 0.4,
+    "form": "score = sigmoid(intercept + sum(coefficient_i * log(p_i/(1-p_i))))",
+    "caution": "Conditional fitted coefficients, not causal importance or normalized voting weights."
+  },
+  "hatexplain-specialists": {
+    "features": [
+      "policylm",
+      "shieldstral"
+    ],
+    "coefficients_on_unstandardized_log_odds": [
+      -0.05992568492331583,
+      0.572218054954222
+    ],
+    "intercept": -2.5011333149867916,
+    "decision_threshold": 0.55,
+    "form": "score = sigmoid(intercept + sum(coefficient_i * log(p_i/(1-p_i))))",
+    "caution": "Conditional fitted coefficients, not causal importance or normalized voting weights."
+  },
+  "hatexplain-mixed": {
+    "features": [
+      "policylm",
+      "shieldstral",
+      "qwen-4b"
+    ],
+    "coefficients_on_unstandardized_log_odds": [
+      -0.09345171818248894,
+      0.37507618251912284,
+      0.3610030484599873
+    ],
+    "intercept": -2.119081294304401,
+    "decision_threshold": 0.51,
+    "form": "score = sigmoid(intercept + sum(coefficient_i * log(p_i/(1-p_i))))",
+    "caution": "Conditional fitted coefficients, not causal importance or normalized voting weights."
+  }
+}

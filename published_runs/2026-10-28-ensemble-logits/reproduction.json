@@ -1,0 +1,27 @@
+{
+  "completed_utc": "2026-10-28T07:12:13.058452+00:00",
+  "status": "passed",
+  "inventory_files_verified": 82,
+  "cohorts": [
+    {
+      "cohort": "wildguard-specialists",
+      "new_candidates_refitted": 21,
+      "test_n": 1699,
+      "all_results_and_predictions_match": true
+    },
+    {
+      "cohort": "hatexplain-specialists",
+      "new_candidates_refitted": 16,
+      "test_n": 1924,
+      "all_results_and_predictions_match": true
+    },
+    {
+      "cohort": "hatexplain-mixed",
+      "new_candidates_refitted": 21,
+      "test_n": 1924,
+      "all_results_and_predictions_match": true
+    }
+  ],
+  "new_model_or_api_inference": 0,
+  "extra_paid_compute_usd": 0
+}

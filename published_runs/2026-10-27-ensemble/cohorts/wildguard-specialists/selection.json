@@ -1,0 +1,1479 @@
+{
+  "candidates": [
+    {
+      "id": "single/policylm/fixed",
+      "family": "single",
+      "kind": "single-raw",
+      "selected_threshold": 0.5,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.0606814518093409,
+        "log_loss": 0.20508794530011207
+      },
+      "parameters": {
+        "column": 0
+      }
+    },
+    {
+      "id": "single/policylm/thresholded",
+      "family": "single",
+      "kind": "single-raw",
+      "selected_threshold": 0.5,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.0606814518093409,
+        "log_loss": 0.20508794530011207
+      },
+      "parameters": {
+        "column": 0
+      }
+    },
+    {
+      "id": "single/policylm/logistic-C0.01",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.52,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.0639694929811749,
+        "log_loss": 0.24065209909791993
+      },
+      "parameters": {
+        "C": 0.01,
+        "column": 0
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.123452838123786
+        ],
+        "intercept": 0.22138282913762447,
+        "feature_means": [
+          0.5319109991431077
+        ],
+        "feature_scales": [
+          0.43192398087963524
+        ]
+      }
+    },
+    {
+      "id": "single/policylm/logistic-C0.1",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.52,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9225260416666666,
+        "macro_f1": 0.9222991599667915,
+        "violation_f1": 0.9264978381717109,
+        "violation_recall": 0.9168704156479217,
+        "false_blocks": 51,
+        "missed_violations": 68,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 667,
+            "BLOCK": 51,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 68,
+            "BLOCK": 750,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06132481434441375,
+        "log_loss": 0.21740844056080122
+      },
+      "parameters": {
+        "C": 0.1,
+        "column": 0
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.831391234297209
+        ],
+        "intercept": 0.2821998512353682,
+        "feature_means": [
+          0.5319109991431077
+        ],
+        "feature_scales": [
+          0.43192398087963524
+        ]
+      }
+    },
+    {
+      "id": "single/policylm/logistic-C1",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.46,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9231770833333334,
+        "macro_f1": 0.9228758169934641,
+        "violation_f1": 0.9276960784313726,
+        "violation_recall": 0.9254278728606357,
+        "false_blocks": 57,
+        "missed_violations": 61,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 661,
+            "BLOCK": 57,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 61,
+            "BLOCK": 757,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.061370320088746176,
+        "log_loss": 0.21601617368119594
+      },
+      "parameters": {
+        "C": 1.0,
+        "column": 0
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.976113081050298
+        ],
+        "intercept": 0.2963849420599392,
+        "feature_means": [
+          0.5319109991431077
+        ],
+        "feature_scales": [
+          0.43192398087963524
+        ]
+      }
+    },
+    {
+      "id": "single/policylm/logistic-C10",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.46,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9231770833333334,
+        "macro_f1": 0.9228758169934641,
+        "violation_f1": 0.9276960784313726,
+        "violation_recall": 0.9254278728606357,
+        "false_blocks": 57,
+        "missed_violations": 61,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 661,
+            "BLOCK": 57,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 61,
+            "BLOCK": 757,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06138196793775095,
+        "log_loss": 0.21591281222508527
+      },
+      "parameters": {
+        "C": 10.0,
+        "column": 0
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.992573963627359
+        ],
+        "intercept": 0.29803988032274936,
+        "feature_means": [
+          0.5319109991431077
+        ],
+        "feature_scales": [
+          0.43192398087963524
+        ]
+      }
+    },
+    {
+      "id": "single/policylm/logistic-C100",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.46,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9231770833333334,
+        "macro_f1": 0.9228758169934641,
+        "violation_f1": 0.9276960784313726,
+        "violation_recall": 0.9254278728606357,
+        "false_blocks": 57,
+        "missed_violations": 61,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 661,
+            "BLOCK": 57,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 61,
+            "BLOCK": 757,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.06138321480963871,
+        "log_loss": 0.21590292436138805
+      },
+      "parameters": {
+        "C": 100.0,
+        "column": 0
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.9942437524501586
+        ],
+        "intercept": 0.2982082379685442,
+        "feature_means": [
+          0.5319109991431077
+        ],
+        "feature_scales": [
+          0.43192398087963524
+        ]
+      }
+    },
+    {
+      "id": "single/shieldstral/fixed",
+      "family": "single",
+      "kind": "single-raw",
+      "selected_threshold": 0.5,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9850260416666666,
+        "macro_f1": 0.9849800452452329,
+        "violation_f1": 0.9858112276372609,
+        "violation_recall": 0.9767726161369193,
+        "false_blocks": 4,
+        "missed_violations": 19,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 714,
+            "BLOCK": 4,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 19,
+            "BLOCK": 799,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.013210068396908132,
+        "log_loss": 0.06581701884207196
+      },
+      "parameters": {
+        "column": 1
+      }
+    },
+    {
+      "id": "single/shieldstral/thresholded",
+      "family": "single",
+      "kind": "single-raw",
+      "selected_threshold": 0.34,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.013210068396908132,
+        "log_loss": 0.06581701884207196
+      },
+      "parameters": {
+        "column": 1
+      }
+    },
+    {
+      "id": "single/shieldstral/logistic-C0.01",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.34,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.016462443681875504,
+        "log_loss": 0.10578713652706717
+      },
+      "parameters": {
+        "C": 0.01,
+        "column": 1
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.547959997822552
+        ],
+        "intercept": 0.27718128298796163,
+        "feature_means": [
+          0.5231939496915954
+        ],
+        "feature_scales": [
+          0.48743646627699866
+        ]
+      }
+    },
+    {
+      "id": "single/shieldstral/logistic-C0.1",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.29,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.01277370097180981,
+        "log_loss": 0.06279438436295624
+      },
+      "parameters": {
+        "C": 0.1,
+        "column": 1
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          3.970583693085818
+        ],
+        "intercept": 0.5447632364831801,
+        "feature_means": [
+          0.5231939496915954
+        ],
+        "feature_scales": [
+          0.48743646627699866
+        ]
+      }
+    },
+    {
+      "id": "single/shieldstral/logistic-C1",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.29,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012720091946507533,
+        "log_loss": 0.059045314782991465
+      },
+      "parameters": {
+        "C": 1.0,
+        "column": 1
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          4.653552116870797
+        ],
+        "intercept": 0.7801026249853572,
+        "feature_means": [
+          0.5231939496915954
+        ],
+        "feature_scales": [
+          0.48743646627699866
+        ]
+      }
+    },
+    {
+      "id": "single/shieldstral/logistic-C10",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.29,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012722973254784853,
+        "log_loss": 0.058852501228779754
+      },
+      "parameters": {
+        "C": 10.0,
+        "column": 1
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          4.77811529302638
+        ],
+        "intercept": 0.8326387138279928,
+        "feature_means": [
+          0.5231939496915954
+        ],
+        "feature_scales": [
+          0.48743646627699866
+        ]
+      }
+    },
+    {
+      "id": "single/shieldstral/logistic-C100",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.29,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012723357789724164,
+        "log_loss": 0.05883783910331222
+      },
+      "parameters": {
+        "C": 100.0,
+        "column": 1
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          4.791856064410158
+        ],
+        "intercept": 0.8386172986113917,
+        "feature_means": [
+          0.5231939496915954
+        ],
+        "feature_scales": [
+          0.48743646627699866
+        ]
+      }
+    },
+    {
+      "id": "single/cope/fixed",
+      "family": "single",
+      "kind": "single-raw",
+      "selected_threshold": 0.5,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9479166666666666,
+        "macro_f1": 0.9477888439443897,
+        "violation_f1": 0.9503722084367245,
+        "violation_recall": 0.9364303178484108,
+        "false_blocks": 28,
+        "missed_violations": 52,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 52,
+            "BLOCK": 766,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04876230168439336,
+        "log_loss": 0.3441467651692751
+      },
+      "parameters": {
+        "column": 2
+      }
+    },
+    {
+      "id": "single/cope/thresholded",
+      "family": "single",
+      "kind": "single-raw",
+      "selected_threshold": 0.43,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04876230168439336,
+        "log_loss": 0.3441467651692751
+      },
+      "parameters": {
+        "column": 2
+      }
+    },
+    {
+      "id": "single/cope/logistic-C0.01",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.48,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04999049286611479,
+        "log_loss": 0.21297225502715733
+      },
+      "parameters": {
+        "C": 0.01,
+        "column": 2
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.1555963090867603
+        ],
+        "intercept": 0.27733117192963913,
+        "feature_means": [
+          0.5165303623800637
+        ],
+        "feature_scales": [
+          0.49579800601433444
+        ]
+      }
+    },
+    {
+      "id": "single/cope/logistic-C0.1",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.49,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04705154188699976,
+        "log_loss": 0.1919755933003072
+      },
+      "parameters": {
+        "C": 0.1,
+        "column": 2
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.811799513144666
+        ],
+        "intercept": 0.4185469354418717,
+        "feature_means": [
+          0.5165303623800637
+        ],
+        "feature_scales": [
+          0.49579800601433444
+        ]
+      }
+    },
+    {
+      "id": "single/cope/logistic-C1",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.49,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04698511006110518,
+        "log_loss": 0.1909195637671264
+      },
+      "parameters": {
+        "C": 1.0,
+        "column": 2
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.9396500131007133
+        ],
+        "intercept": 0.4559680612547141,
+        "feature_means": [
+          0.5165303623800637
+        ],
+        "feature_scales": [
+          0.49579800601433444
+        ]
+      }
+    },
+    {
+      "id": "single/cope/logistic-C10",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.49,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04698271823575922,
+        "log_loss": 0.19084851109743836
+      },
+      "parameters": {
+        "C": 10.0,
+        "column": 2
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.9540382728521304
+        ],
+        "intercept": 0.460418055656423,
+        "feature_means": [
+          0.5165303623800637
+        ],
+        "feature_scales": [
+          0.49579800601433444
+        ]
+      }
+    },
+    {
+      "id": "single/cope/logistic-C100",
+      "family": "single",
+      "kind": "single-logistic",
+      "selected_threshold": 0.49,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.94921875,
+        "macro_f1": 0.9490874600333501,
+        "violation_f1": 0.9516728624535316,
+        "violation_recall": 0.9388753056234719,
+        "false_blocks": 28,
+        "missed_violations": 50,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 690,
+            "BLOCK": 28,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 50,
+            "BLOCK": 768,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.04698252613662012,
+        "log_loss": 0.1908418270330723
+      },
+      "parameters": {
+        "C": 100.0,
+        "column": 2
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          2.955496024274212
+        ],
+        "intercept": 0.4608716664309079,
+        "feature_means": [
+          0.5165303623800637
+        ],
+        "feature_scales": [
+          0.49579800601433444
+        ]
+      }
+    },
+    {
+      "id": "equal/raw",
+      "family": "equal-raw",
+      "kind": "equal-raw",
+      "selected_threshold": 0.43,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9765625,
+        "macro_f1": 0.9764921946740128,
+        "violation_f1": 0.9777777777777777,
+        "violation_recall": 0.9682151589242054,
+        "false_blocks": 10,
+        "missed_violations": 26,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 708,
+            "BLOCK": 10,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 26,
+            "BLOCK": 792,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.024123059106205158,
+        "log_loss": 0.1007988066408765
+      },
+      "parameters": {}
+    },
+    {
+      "id": "equal/calibrated",
+      "family": "equal-calibrated",
+      "kind": "equal-calibrated",
+      "selected_threshold": 0.37,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9817708333333334,
+        "macro_f1": 0.9816993464052287,
+        "violation_f1": 0.9828431372549019,
+        "violation_recall": 0.980440097799511,
+        "false_blocks": 12,
+        "missed_violations": 16,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 706,
+            "BLOCK": 12,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 16,
+            "BLOCK": 802,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.024083869293491367,
+        "log_loss": 0.11048867123670665
+      },
+      "parameters": {}
+    },
+    {
+      "id": "weighted/lambda0",
+      "family": "weighted",
+      "kind": "weighted",
+      "selected_threshold": 0.29,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012696101531997671,
+        "log_loss": 0.05870881818805387
+      },
+      "parameters": {
+        "strength": 0.0
+      },
+      "weights": [
+        3.895844173243827e-17,
+        0.9941200391033269,
+        0.00587996089667314
+      ]
+    },
+    {
+      "id": "weighted/lambda0.01",
+      "family": "weighted",
+      "kind": "weighted",
+      "selected_threshold": 0.28,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9869791666666666,
+        "macro_f1": 0.9869343091771167,
+        "violation_f1": 0.9876998769987699,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 5,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 713,
+            "BLOCK": 5,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.01264997445039981,
+        "log_loss": 0.058384648050887354
+      },
+      "parameters": {
+        "strength": 0.01
+      },
+      "weights": [
+        3.2081523982861057e-18,
+        0.9802129650949084,
+        0.01978703490509163
+      ]
+    },
+    {
+      "id": "weighted/lambda0.1",
+      "family": "weighted",
+      "kind": "weighted",
+      "selected_threshold": 0.42,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.986328125,
+        "macro_f1": 0.9862841222641914,
+        "violation_f1": 0.9870609981515711,
+        "violation_recall": 0.9792176039119804,
+        "false_blocks": 4,
+        "missed_violations": 17,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 714,
+            "BLOCK": 4,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 17,
+            "BLOCK": 801,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.015389499738979212,
+        "log_loss": 0.07859257109329161
+      },
+      "parameters": {
+        "strength": 0.1
+      },
+      "weights": [
+        0.12384618500273488,
+        0.6348152160724072,
+        0.24133859892485807
+      ]
+    },
+    {
+      "id": "logistic/C0.01",
+      "family": "logistic",
+      "kind": "logistic",
+      "selected_threshold": 0.36,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9856770833333334,
+        "macro_f1": 0.9856255147113873,
+        "violation_f1": 0.9864864864864865,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 7,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 711,
+            "BLOCK": 7,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.016545681481595173,
+        "log_loss": 0.0865333147383005
+      },
+      "parameters": {
+        "C": 0.01
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          0.8000962801234279,
+          1.6581616765739962,
+          0.8370930005298856
+        ],
+        "intercept": 0.40184421019271743,
+        "feature_means": [
+          0.5319109991431077,
+          0.5231939496915949,
+          0.516530362380062
+        ],
+        "feature_scales": [
+          0.4319239808796347,
+          0.48743646627699805,
+          0.4957980060143348
+        ]
+      }
+    },
+    {
+      "id": "logistic/C0.1",
+      "family": "logistic",
+      "kind": "logistic",
+      "selected_threshold": 0.22,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.986328125,
+        "macro_f1": 0.9862799684391634,
+        "violation_f1": 0.9870928088506453,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 6,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 712,
+            "BLOCK": 6,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012823032981961566,
+        "log_loss": 0.05959031259023682
+      },
+      "parameters": {
+        "C": 0.1
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          0.6899189798452436,
+          3.0676341069158153,
+          0.7061589499226887
+        ],
+        "intercept": 0.6962595900783083,
+        "feature_means": [
+          0.5319109991431077,
+          0.5231939496915949,
+          0.516530362380062
+        ],
+        "feature_scales": [
+          0.4319239808796347,
+          0.48743646627699805,
+          0.4957980060143348
+        ]
+      }
+    },
+    {
+      "id": "logistic/C1",
+      "family": "logistic",
+      "kind": "logistic",
+      "selected_threshold": 0.41,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.986328125,
+        "macro_f1": 0.9862841222641914,
+        "violation_f1": 0.9870609981515711,
+        "violation_recall": 0.9792176039119804,
+        "false_blocks": 4,
+        "missed_violations": 17,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 714,
+            "BLOCK": 4,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 17,
+            "BLOCK": 801,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012598652862350852,
+        "log_loss": 0.056883358287354545
+      },
+      "parameters": {
+        "C": 1.0
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          0.41404255660687084,
+          3.986209503289039,
+          0.47146104291506286
+        ],
+        "intercept": 0.8630674515308528,
+        "feature_means": [
+          0.5319109991431077,
+          0.5231939496915949,
+          0.516530362380062
+        ],
+        "feature_scales": [
+          0.4319239808796347,
+          0.48743646627699805,
+          0.4957980060143348
+        ]
+      }
+    },
+    {
+      "id": "logistic/C10",
+      "family": "logistic",
+      "kind": "logistic",
+      "selected_threshold": 0.41,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.986328125,
+        "macro_f1": 0.9862841222641914,
+        "violation_f1": 0.9870609981515711,
+        "violation_recall": 0.9792176039119804,
+        "false_blocks": 4,
+        "missed_violations": 17,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 714,
+            "BLOCK": 4,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 17,
+            "BLOCK": 801,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012604777061991567,
+        "log_loss": 0.05689058664103765
+      },
+      "parameters": {
+        "C": 10.0
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          0.33342693335325224,
+          4.1980318241952,
+          0.4077048731751871
+        ],
+        "intercept": 0.8970392230049627,
+        "feature_means": [
+          0.5319109991431077,
+          0.5231939496915949,
+          0.516530362380062
+        ],
+        "feature_scales": [
+          0.4319239808796347,
+          0.48743646627699805,
+          0.4957980060143348
+        ]
+      }
+    },
+    {
+      "id": "logistic/C100",
+      "family": "logistic",
+      "kind": "logistic",
+      "selected_threshold": 0.41,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.986328125,
+        "macro_f1": 0.9862841222641914,
+        "violation_f1": 0.9870609981515711,
+        "violation_recall": 0.9792176039119804,
+        "false_blocks": 4,
+        "missed_violations": 17,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 714,
+            "BLOCK": 4,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 17,
+            "BLOCK": 801,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.012606133247407227,
+        "log_loss": 0.056902622913069134
+      },
+      "parameters": {
+        "C": 100.0
+      },
+      "logistic_parameters": {
+        "coefficients": [
+          0.323618555682101,
+          4.222897742485981,
+          0.40003419225933323
+        ],
+        "intercept": 0.9008785150498473,
+        "feature_means": [
+          0.5319109991431077,
+          0.5231939496915949,
+          0.516530362380062
+        ],
+        "feature_scales": [
+          0.4319239808796347,
+          0.48743646627699805,
+          0.4957980060143348
+        ]
+      }
+    },
+    {
+      "id": "forest/depth2-leaf20",
+      "family": "forest",
+      "kind": "forest",
+      "selected_threshold": 0.46,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9850260416666666,
+        "macro_f1": 0.9849821905818168,
+        "violation_f1": 0.9857936998147004,
+        "violation_recall": 0.9755501222493888,
+        "false_blocks": 3,
+        "missed_violations": 20,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 715,
+            "BLOCK": 3,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 20,
+            "BLOCK": 798,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.018172438749411827,
+        "log_loss": 0.08616511002068168
+      },
+      "parameters": {
+        "depth": 2,
+        "leaf": 20
+      }
+    },
+    {
+      "id": "forest/depth2-leaf80",
+      "family": "forest",
+      "kind": "forest",
+      "selected_threshold": 0.39,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.9850260416666666,
+        "macro_f1": 0.9849755993833396,
+        "violation_f1": 0.9858461538461538,
+        "violation_recall": 0.9792176039119804,
+        "false_blocks": 6,
+        "missed_violations": 17,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 712,
+            "BLOCK": 6,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 17,
+            "BLOCK": 801,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.019099925281673067,
+        "log_loss": 0.08812805915047565
+      },
+      "parameters": {
+        "depth": 2,
+        "leaf": 80
+      }
+    },
+    {
+      "id": "forest/depth4-leaf20",
+      "family": "forest",
+      "kind": "forest",
+      "selected_threshold": 0.41,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.986328125,
+        "macro_f1": 0.9862841222641914,
+        "violation_f1": 0.9870609981515711,
+        "violation_recall": 0.9792176039119804,
+        "false_blocks": 4,
+        "missed_violations": 17,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 714,
+            "BLOCK": 4,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 17,
+            "BLOCK": 801,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.013703936759353186,
+        "log_loss": 0.06411463292141956
+      },
+      "parameters": {
+        "depth": 4,
+        "leaf": 20
+      }
+    },
+    {
+      "id": "forest/depth4-leaf80",
+      "family": "forest",
+      "kind": "forest",
+      "selected_threshold": 0.41,
+      "validation": {
+        "n": 1536,
+        "accuracy": 0.986328125,
+        "macro_f1": 0.9862799684391634,
+        "violation_f1": 0.9870928088506453,
+        "violation_recall": 0.9816625916870416,
+        "false_blocks": 6,
+        "missed_violations": 15,
+        "errors": 0,
+        "confusion": {
+          "ALLOW": {
+            "ALLOW": 712,
+            "BLOCK": 6,
+            "ERROR": 0
+          },
+          "BLOCK": {
+            "ALLOW": 15,
+            "BLOCK": 803,
+            "ERROR": 0
+          }
+        },
+        "brier": 0.01752263766016054,
+        "log_loss": 0.07860157056707819
+      },
+      "parameters": {
+        "depth": 4,
+        "leaf": 80
+      }
+    }
+  ],
+  "selected": {
+    "equal-calibrated": "equal/calibrated",
+    "equal-raw": "equal/raw",
+    "forest": "forest/depth4-leaf20",
+    "logistic": "logistic/C1",
+    "single": "single/shieldstral/logistic-C0.01",
+    "weighted": "weighted/lambda0"
+  },
+  "best_ensemble": "weighted/lambda0",
+  "primary": "logistic/C1",
+  "best_single": "single/shieldstral/logistic-C0.01",
+  "fitting_rows": 4096,
+  "excluded_training_failures": 0,
+  "feature_names": [
+    "policylm",
+    "shieldstral",
+    "cope"
+  ],
+  "calibration_folds": 5,
+  "selection": "validation accuracy, macro-F1, threshold nearest .5, lower threshold, lexical ID"
+}
