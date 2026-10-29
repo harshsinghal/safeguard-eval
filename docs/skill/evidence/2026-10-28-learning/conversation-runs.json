@@ -1,0 +1,404 @@
+{
+  "scope": "Assistant-authored iterative smoke checks, not blinded user research or proof of model independence. Expected checks stayed outside the tested agents prompts. All failed candidates retained.",
+  "new_prompt_count": 29,
+  "new_model_responses": 68,
+  "new_openrouter_cost_usd": 0.033534725,
+  "baseline_cost_usd": 0.009961265,
+  "runs": [
+    {
+      "name": "baseline-v0.4",
+      "pi_version": "0.87.1",
+      "model": "openai/gpt-6-luna",
+      "thinking": "low",
+      "skill_version": "0.4.0",
+      "skill_manifest_sha256": "895ddbaae4f6922df9f8752f39720226460961bdc787de8df44f32c6a0e41ac1",
+      "started_at": "2026-10-28T20:05:57.065335+00:00",
+      "finished_at": "2026-10-28T20:09:34.833263+00:00",
+      "user_questions": [
+        "I've just installed Safeguard Eval. I help write our community rules, but I'm not an engineer. What can I actually do with it?",
+        "We run a community where people talk about problems at work. Personal insults should be removed, but people must be able to quote what a manager said when asking for help. Can you help me write that rule?",
+        "Why would 'They said something awful to me' need review? They're just reporting something. I don't want harmless posts held up. And what about 'My manager called me useless, but he's the idiot'?",
+        "That reads better. How would I check whether a model follows it? What's the smallest useful test I could do before involving our engineering team?",
+        "Do I need a specialist policy model for this, or could I just use Qwen? If I get the rule working with Qwen, can our engineers switch to the small PolicyLM model later?",
+        "That example uses Shieldstral, though. Did your research actually try a policy written for Qwen on PolicyLM? What happened, in plain English?",
+        "All right. Please save a short handoff I can take to our engineer: the rule we agreed, a few examples, and what they need to check. Keep it to about one page and make clear what I can do myself."
+      ],
+      "usage": {
+        "tokens": {
+          "input": 42,
+          "output": 4064,
+          "cacheRead": 265569,
+          "cacheWrite": 42155,
+          "totalTokens": 311830
+        },
+        "model_responses": 14,
+        "pi_estimated_cost_usd": 0.009961264999999999,
+        "assistant_messages_missing_usage": 0,
+        "openrouter_cost_usd_for_available_records": 0.009961265,
+        "billing_records_available": 14,
+        "billing_records_requested": 14
+      },
+      "tools_called": [
+        "read",
+        "read",
+        "read",
+        "read",
+        "read",
+        "read",
+        "read",
+        "read",
+        "write"
+      ],
+      "tool_errors": 0,
+      "transcript": "baseline-v0.4.md",
+      "transcript_sha256": "cd978e20ec0d1eb78c2690bfe1ed689a8fc034cab03aea3348e9f0e1a76617cc"
+    },
+    {
+      "name": "candidate-a-authoring",
+      "pi_version": "0.87.1",
+      "model": "openai/gpt-6-luna",
+      "thinking": "low",
+      "skill_version": "0.5.0",
+      "skill_manifest_sha256": "b353d3e8a5d8d5cfca90345041c922b0fd8e0b9febd95b38fbdf4e7c7ed831eb",
+      "started_at": "2026-10-29T01:57:13.693582+00:00",
+      "finished_at": "2026-10-29T01:57:41.720646+00:00",
+      "user_questions": [
+        "I've just installed Safeguard Eval. I help write our community rules, but I'm not an engineer. What can I actually do with it?",
+        "We run a community where people talk about problems at work. Personal insults should be removed, but people must be able to quote what a manager said when asking for help. Can you help me write that rule?",
+        "Please walk through these posts: 'They said something awful to me'; 'My manager called me useless, but he is the idiot'; and 'He called me that word again.' What does our draft decide, and what is still undecided?",
+        "Let's allow vague reports. Keep a human-review route for potentially insulting messages when we cannot tell whether they are quoting or attacking. Please save a short handoff with the policy, examples, what I can do myself, and what engineering needs to check."
+      ],
+      "usage": {
+        "tokens": {
+          "input": 27,
+          "output": 2232,
+          "cacheRead": 49184,
+          "cacheWrite": 9304,
+          "totalTokens": 60747
+        },
+        "model_responses": 9,
+        "pi_estimated_cost_usd": 0.0027735399999999997,
+        "assistant_messages_missing_usage": 0,
+        "openrouter_cost_usd_for_available_records": 0.0027735399999999997,
+        "billing_records_available": 9,
+        "billing_records_requested": 9
+      },
+      "tools_called": [
+        "read",
+        "read",
+        "read",
+        "edit",
+        "write"
+      ],
+      "tool_errors": 1,
+      "transcript": "candidate-a-authoring.md",
+      "transcript_sha256": "d5eb69fe358066a57bced194794c8bc8cf8bb6d9dbe8976b0860d7917f920b8d",
+      "artifact": "candidate-a-handoff.md",
+      "artifact_sha256": "c7ee1473099fd83143424703ce8b9fcf06f1ad69d123fee754f69b9248ec78df"
+    },
+    {
+      "name": "candidate-a-transfer",
+      "pi_version": "0.87.1",
+      "model": "openai/gpt-6-luna",
+      "thinking": "low",
+      "skill_version": "0.5.0",
+      "skill_manifest_sha256": "b353d3e8a5d8d5cfca90345041c922b0fd8e0b9febd95b38fbdf4e7c7ed831eb",
+      "started_at": "2026-10-29T01:57:13.693171+00:00",
+      "finished_at": "2026-10-29T01:57:39.520873+00:00",
+      "user_questions": [
+        "Do I need a specialist policy model, or could I use Qwen? If I get my rule working with Qwen, can our engineers switch to the small PolicyLM model later? What did Safeguard Eval actually find about that direction?",
+        "What about the other direction: a policy selected for PolicyLM used with Qwen 2B? Please explain the changed mistakes as well as the accuracy, and show me the source.",
+        "Did a policy tuned for the big Qwen 27B improve PolicyLM? Would that be a good way for us to get the best of both models?"
+      ],
+      "usage": {
+        "tokens": {
+          "input": 24,
+          "output": 1742,
+          "cacheRead": 54221,
+          "cacheWrite": 11508,
+          "totalTokens": 67495
+        },
+        "model_responses": 8,
+        "pi_estimated_cost_usd": 0.002854110000000001,
+        "assistant_messages_missing_usage": 0,
+        "openrouter_cost_usd_for_available_records": 0.00285411,
+        "billing_records_available": 8,
+        "billing_records_requested": 8
+      },
+      "tools_called": [
+        "read",
+        "read",
+        "read",
+        "read",
+        "read",
+        "bash",
+        "bash",
+        "bash"
+      ],
+      "tool_errors": 1,
+      "transcript": "candidate-a-transfer.md",
+      "transcript_sha256": "674cfe4fd5260407592855798ed8de60a637b402d9e04dfc28dd49177e82969b"
+    },
+    {
+      "name": "candidate-a-experiment",
+      "pi_version": "0.87.1",
+      "model": "openai/gpt-6-luna",
+      "thinking": "low",
+      "skill_version": "0.5.0",
+      "skill_manifest_sha256": "b353d3e8a5d8d5cfca90345041c922b0fd8e0b9febd95b38fbdf4e7c7ed831eb",
+      "started_at": "2026-10-29T01:57:13.693528+00:00",
+      "finished_at": "2026-10-29T01:57:40.485718+00:00",
+      "user_questions": [
+        "We run a gardening forum. We remove posts selling products, but allow people to recommend products when they are discussing their own experience and are not selling. Help me draft a policy, then explain how I could test whether adding that exception helps. I am new to model evaluation.",
+        "What should happen to 'This fertilizer worked well for my roses', 'I have ten bags for sale, message me', and 'Ask me where to get it'? I don't want to infer commercial intent from every vague recommendation.",
+        "I can write twelve examples and use those to revise the policy until all twelve pass. Can I then say the policy is accurate? What is a realistic next step for me?",
+        "How does your research help me design this experiment? Give me one relevant finding, what it does not prove about my forum, and a simple comparison I can take to an engineer."
+      ],
+      "usage": {
+        "tokens": {
+          "input": 21,
+          "output": 1895,
+          "cacheRead": 36173,
+          "cacheWrite": 22742,
+          "totalTokens": 60831
+        },
+        "model_responses": 7,
+        "pi_estimated_cost_usd": 0.00415408,
+        "assistant_messages_missing_usage": 0,
+        "openrouter_cost_usd_for_available_records": 0.00415408,
+        "billing_records_available": 7,
+        "billing_records_requested": 7
+      },
+      "tools_called": [
+        "read",
+        "bash",
+        "read",
+        "read",
+        "read",
+        "read",
+        "read"
+      ],
+      "tool_errors": 1,
+      "transcript": "candidate-a-experiment.md",
+      "transcript_sha256": "bfe6f52067bdd6fb02cfe2e96bccac94b74f26257e7d205283f42a81ad5a01b9"
+    },
+    {
+      "name": "candidate-b-authoring",
+      "pi_version": "0.87.1",
+      "model": "openai/gpt-6-luna",
+      "thinking": "low",
+      "skill_version": "0.5.0",
+      "skill_manifest_sha256": "1ec10df10216a7081c74bf8058f2836bfd6e1b5f757d8e5df818b6693df7aea9",
+      "started_at": "2026-10-29T02:00:58.733575+00:00",
+      "finished_at": "2026-10-29T02:01:50.350037+00:00",
+      "user_questions": [
+        "I've just installed Safeguard Eval. I help write our community rules, but I'm not an engineer. What can I actually do with it?",
+        "We run a community where people talk about problems at work. Personal insults should be removed, but people must be able to quote what a manager said when asking for help. Can you help me write that rule?",
+        "Please walk through these posts: 'They said something awful to me'; 'My manager called me useless, but he is the idiot'; and 'He called me that word again.' What does our draft decide, and what is still undecided?",
+        "Let's allow vague reports. Keep a human-review route for potentially insulting messages when we cannot tell whether they are quoting or attacking. Please save a short handoff with the policy, examples, what I can do myself, and what engineering needs to check."
+      ],
+      "usage": {
+        "tokens": {
+          "input": 24,
+          "output": 2241,
+          "cacheRead": 42912,
+          "cacheWrite": 9779,
+          "totalTokens": 54956
+        },
+        "model_responses": 8,
+        "pi_estimated_cost_usd": 0.002774395,
+        "assistant_messages_missing_usage": 0,
+        "openrouter_cost_usd_for_available_records": 0.002774395,
+        "billing_records_available": 8,
+        "billing_records_requested": 8
+      },
+      "tools_called": [
+        "read",
+        "read",
+        "read",
+        "write"
+      ],
+      "tool_errors": 0,
+      "transcript": "candidate-b-authoring.md",
+      "transcript_sha256": "75339f634915a8b431aa8e0de5f160d8a2bb78ccae5f101e0f86e848012629db",
+      "artifact": "candidate-b-handoff.md",
+      "artifact_sha256": "e40809b8135114cde508b2dcecd832f4ebfdd6e447afd74b278d3ac15de76ab3"
+    },
+    {
+      "name": "candidate-b-transfer",
+      "pi_version": "0.87.1",
+      "model": "openai/gpt-6-luna",
+      "thinking": "low",
+      "skill_version": "0.5.0",
+      "skill_manifest_sha256": "1ec10df10216a7081c74bf8058f2836bfd6e1b5f757d8e5df818b6693df7aea9",
+      "started_at": "2026-10-29T02:00:58.733576+00:00",
+      "finished_at": "2026-10-29T02:01:44.804233+00:00",
+      "user_questions": [
+        "Do I need a specialist policy model, or could I use Qwen? If I get my rule working with Qwen, can our engineers switch to the small PolicyLM model later? What did Safeguard Eval actually find about that direction?",
+        "What about the other direction: a policy selected for PolicyLM used with Qwen 2B? Please explain the changed mistakes as well as the accuracy, and show me the source.",
+        "Did a policy tuned for the big Qwen 27B improve PolicyLM? Would that be a good way for us to get the best of both models?"
+      ],
+      "usage": {
+        "tokens": {
+          "input": 24,
+          "output": 1875,
+          "cacheRead": 54476,
+          "cacheWrite": 11645,
+          "totalTokens": 68020
+        },
+        "model_responses": 8,
+        "pi_estimated_cost_usd": 0.002940285,
+        "assistant_messages_missing_usage": 0,
+        "openrouter_cost_usd_for_available_records": 0.002940285,
+        "billing_records_available": 8,
+        "billing_records_requested": 8
+      },
+      "tools_called": [
+        "read",
+        "read",
+        "read",
+        "read",
+        "bash",
+        "bash",
+        "bash",
+        "bash"
+      ],
+      "tool_errors": 1,
+      "transcript": "candidate-b-transfer.md",
+      "transcript_sha256": "bd482d6daedd9cfbb1a62bcc16900e7c45d19ce0a1c01aa3fe0c43e3e5cfc01f"
+    },
+    {
+      "name": "candidate-b-experiment",
+      "pi_version": "0.87.1",
+      "model": "openai/gpt-6-luna",
+      "thinking": "low",
+      "skill_version": "0.5.0",
+      "skill_manifest_sha256": "1ec10df10216a7081c74bf8058f2836bfd6e1b5f757d8e5df818b6693df7aea9",
+      "started_at": "2026-10-29T02:00:58.733608+00:00",
+      "finished_at": "2026-10-29T02:02:07.187401+00:00",
+      "user_questions": [
+        "We run a gardening forum. We remove posts selling products, but allow people to recommend products when they are discussing their own experience and are not selling. Help me draft a policy, then explain how I could test whether adding that exception helps. I am new to model evaluation.",
+        "What should happen to 'This fertilizer worked well for my roses', 'I have ten bags for sale, message me', and 'Ask me where to get it'? I don't want to infer commercial intent from every vague recommendation.",
+        "I can write twelve examples and use those to revise the policy until all twelve pass. Can I then say the policy is accurate? What is a realistic next step for me?",
+        "How does your research help me design this experiment? Give me one relevant finding, what it does not prove about my forum, and a simple comparison I can take to an engineer."
+      ],
+      "usage": {
+        "tokens": {
+          "input": 27,
+          "output": 1797,
+          "cacheRead": 69304,
+          "cacheWrite": 24328,
+          "totalTokens": 95456
+        },
+        "model_responses": 9,
+        "pi_estimated_cost_usd": 0.00463524,
+        "assistant_messages_missing_usage": 0,
+        "openrouter_cost_usd_for_available_records": 0.00463524,
+        "billing_records_available": 9,
+        "billing_records_requested": 9
+      },
+      "tools_called": [
+        "read",
+        "bash",
+        "bash",
+        "read",
+        "read",
+        "read",
+        "read",
+        "read"
+      ],
+      "tool_errors": 0,
+      "transcript": "candidate-b-experiment.md",
+      "transcript_sha256": "ad0d25e2cbb7e4c3a74a2fa0d7e85913968c9a2ca1db297e77408fe6e8c1fd6a"
+    },
+    {
+      "name": "final-authoring",
+      "pi_version": "0.87.1",
+      "model": "openai/gpt-6-luna",
+      "thinking": "low",
+      "skill_version": "0.5.0",
+      "skill_manifest_sha256": "91591dce95878c7bfad1241e70451afcbc44c9be4776670ef5315332c43ec681",
+      "started_at": "2026-10-29T02:04:28.707644+00:00",
+      "finished_at": "2026-10-29T02:05:18.990929+00:00",
+      "user_questions": [
+        "I've just installed Safeguard Eval. I help write our community rules, but I'm not an engineer. What can I actually do with it?",
+        "We run a community where people talk about problems at work. Personal insults should be removed, but people must be able to quote what a manager said when asking for help. Can you help me write that rule?",
+        "Please walk through these posts: 'They said something awful to me'; 'My manager called me useless, but he is the idiot'; and 'He called me that word again.' What does our draft decide, and what is still undecided?",
+        "Let's allow vague reports. Keep a human-review route for potentially insulting messages when we cannot tell whether they are quoting or attacking. Please save a short handoff with the policy, examples, what I can do myself, and what engineering needs to check."
+      ],
+      "usage": {
+        "tokens": {
+          "input": 33,
+          "output": 2854,
+          "cacheRead": 153078,
+          "cacheWrite": 23284,
+          "totalTokens": 179249
+        },
+        "model_responses": 11,
+        "pi_estimated_cost_usd": 0.00587158,
+        "assistant_messages_missing_usage": 0,
+        "openrouter_cost_usd_for_available_records": 0.00587158,
+        "billing_records_available": 11,
+        "billing_records_requested": 11
+      },
+      "tools_called": [
+        "read",
+        "bash",
+        "read",
+        "read",
+        "read",
+        "read",
+        "write",
+        "edit"
+      ],
+      "tool_errors": 0,
+      "transcript": "final-authoring.md",
+      "transcript_sha256": "48dcfe2a50b628b3d3cbcd94b8cceca7fbc1b2d77a3dd1e4410421866229e723",
+      "artifact": "final-handoff.md",
+      "artifact_sha256": "372eed90fab4376e46b102a283861a04a97f24e773fd4e78f1a1a0acb1879e7f"
+    },
+    {
+      "name": "final-transfer",
+      "pi_version": "0.87.1",
+      "model": "openai/gpt-6-luna",
+      "thinking": "low",
+      "skill_version": "0.5.0",
+      "skill_manifest_sha256": "91591dce95878c7bfad1241e70451afcbc44c9be4776670ef5315332c43ec681",
+      "started_at": "2026-10-29T02:04:28.707479+00:00",
+      "finished_at": "2026-10-29T02:05:02.344550+00:00",
+      "user_questions": [
+        "Do I need a specialist policy model, or could I use Qwen? If I get my rule working with Qwen, can our engineers switch to the small PolicyLM model later? What did Safeguard Eval actually find about that direction?",
+        "What about the other direction: a policy selected for PolicyLM used with Qwen 2B? Please explain the changed mistakes as well as the accuracy, and show me the source.",
+        "Did a policy tuned for the big Qwen 27B improve PolicyLM? Would that be a good way for us to get the best of both models?"
+      ],
+      "usage": {
+        "tokens": {
+          "input": 24,
+          "output": 1893,
+          "cacheRead": 185397,
+          "cacheWrite": 37829,
+          "totalTokens": 225143
+        },
+        "model_responses": 8,
+        "pi_estimated_cost_usd": 0.007531494999999999,
+        "assistant_messages_missing_usage": 0,
+        "openrouter_cost_usd_for_available_records": 0.007531495,
+        "billing_records_available": 8,
+        "billing_records_requested": 8
+      },
+      "tools_called": [
+        "read",
+        "read",
+        "read",
+        "read",
+        "read",
+        "bash",
+        "bash",
+        "bash"
+      ],
+      "tool_errors": 0,
+      "transcript": "final-transfer.md",
+      "transcript_sha256": "d40a15390a336d94a879dfc6311176db9cda978027d3650b053a097423804203"
+    }
+  ]
+}
