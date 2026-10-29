@@ -9,6 +9,7 @@ into the same shape. Source IDs resolve through [sources.json](sources.json).
 | What do I do after installing? | [Start here](start-here.md) | Give the overview now, not just another list of files to read. |
 | How did we get from rules to policy models? | [Start here](start-here.md), basics narrative | The tools can coexist; natural-language policies still need examples and tests. |
 | Can you walk me through writing a policy? | [Walkthrough](walkthrough.md) | An untested teaching draft and test plan, not an inference result. |
+| How can I use your experiments to design mine? | [Learning and experiments](learning-and-experiments.md) | A hypothesis and controlled comparison for the user's task, not a promised benchmark gain. |
 | Which datasets were used, and where do I get them? | [Datasets](datasets.md) | Used benchmark, synthetic demonstration, and proposed dataset are different statuses. |
 | Did you test every WildGuard task? | [Datasets](datasets.md), `wildguard-methods` | Prompt harmfulness only; not response harmfulness or refusal. |
 | Did HateXplain mean blocking all offensive text? | [Datasets](datasets.md), `hatexplain-data` | Hate was BLOCK; offensive and normal were ALLOW. |
@@ -19,6 +20,7 @@ into the same shape. Source IDs resolve through [sources.json](sources.json).
 | Does changing a policy really change outcomes? | [Studies](studies.md), sections 1 and 4 | Wording, examples, presentation, and cutoffs are different interventions. |
 | What is a selected policy? | [Studies](studies.md), section 1 | A validation choice from a bounded search; baseline can win. |
 | Can I use one policy with every model? | [Models](models.md), [studies](studies.md), section 3 | Shared source plus native adapters can help; behavior still needs testing. |
+| What happened for this exact model-transfer pair? | [Offline lookup](../scripts/lookup_transfer.py), [studies](studies.md), section 3 | Look up the source-selected policy in the recipient row before offering any other pair. |
 | Were the earlier experiments invalid because formats differ? | `interface-audit` | Native adapters were already used; best authoring practices were not exhaustively optimized. |
 | Can PolicyLM beat a larger Qwen? | [Studies](studies.md), sections 2 and 3 | Do not substitute Shieldstral's result for PolicyLM or mix studies. |
 | Should I remove examples or definitions? | [Studies](studies.md), section 4 | Opposite changes across models and hidden error trade-offs; no universal recipe. |

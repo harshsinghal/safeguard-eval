@@ -7,6 +7,8 @@ product or a universal policy format. Source IDs resolve through
 For a first practical lesson, use the [short walkthrough](walkthrough.md): it turns
 a fictional forum rule into a draft, boundary cases, and a test plan. It does not
 run a model. Continue here when the learner wants to design their own evaluation.
+Use [learning-and-experiments.md](learning-and-experiments.md) to connect a recorded
+finding to a testable question rather than copying its outcome as a recommendation.
 
 ## Start with the decision the policy owner wants
 
@@ -16,6 +18,19 @@ to change those boundaries. In the transfer study a selected draft omitted an
 explicit category; in HateXplain a draft was rejected for changing definitions.
 Those are concrete reasons for policy review alongside model evaluation.
 Sources: `transfer-edits`, `hatexplain-scope`.
+
+Check each example's proposed action against the actual rule and applicable
+exception. An unexplained gap in context does not itself trigger a violation or
+REVIEW. Surface the missing policy choice when it matters; a provisional draft
+decision is not a benchmark label. Keep agreed labels and review conditions intact
+when making a local correction. Do not silently simplify a three-way workflow
+because the research used binary benchmarks.
+
+Read supplied attribution as evidence: under a policy allowing reports, a person
+saying someone called them an insult is not thereby directing that insult. Do not
+invent unseen context to make a clear report ambiguous. Likewise, expanding a ban
+on selling into a ban on every promotion is a scope change, not clearer wording.
+Keep such additions outside the active draft until the owner chooses them.
 
 A useful authoring source can include:
 

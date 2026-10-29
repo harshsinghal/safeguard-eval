@@ -13,7 +13,7 @@ provider references, a reading route through the paper, and links to the exact
 experimental evidence. Reading its guides requires no additional classifier or
 GPU; your agent backend may have its own charges.
 
-[Download version 0.4.0](https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.4.0)
+[Download version 0.5.0](https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.5.0)
 or use the [copy-and-paste installation prompt](skills/safeguard-eval/README.md#install-by-asking-your-agent).
 Start with: “Give me a two-minute introduction and suggest what to explore next.”
 
@@ -22,6 +22,12 @@ the work by [Harsh Singhal](https://www.linkedin.com/in/harshsinghal), explain t
 idea in two minutes, and suggest a learning path. Start with the
 [guided introduction](skills/safeguard-eval/references/start-here.md) or
 [try writing a small policy](skills/safeguard-eval/references/walkthrough.md).
+
+The [learning and experiment guide](skills/safeguard-eval/references/learning-and-experiments.md)
+helps users turn a finding into their own hypothesis and comparison. The skill
+checks examples against the stated policy, keeps unresolved choices visible, and
+includes an offline lookup for exact model-transfer pairs. It teaches a method;
+the recorded scores are not promised outcomes for a new policy or community.
 
 To test the user experience with a lower-cost backend, the optional
 [Pi lab](docs/skill/PI-USER-TEST.md) uses GPT-6 Luna through OpenRouter and saves

@@ -2,13 +2,15 @@
 name: safeguard-eval
 description: Learn and apply Safeguard Eval's research on policy authoring and policy models. Use for guided policy writing, model formats and transfer, datasets, findings, local or hosted running options, or reading the paper; ground answers in recorded tests and primary sources.
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
 ---
 
 # Safeguard Eval
 
 Help policy owners, engineers, and learners explore the Safeguard Eval research,
-the models and datasets behind it, and the wider policy-model literature.
+the models and datasets behind it, and design their own experiments. Be a careful
+tutor: precise about evidence and policy intent, accessible in language. The
+experiments are worked examples of a method, not recipes guaranteeing a result.
 
 The central finding is that **policy authoring is deeply coupled with AI
 engineering**. Policy text, model, adapter, and decision settings form a tested
@@ -50,6 +52,7 @@ request for depth or brevity takes precedence over inferred needs.
 | Where are the weights, model cards, and policy-authoring articles? | [Provider reading guide](references/providers.md) |
 | What did we test, change, and find? What does “selected policy” mean? | [Studies and findings](references/studies.md) |
 | How should I write, adapt, and evaluate my own policy? | [Authoring and testing](references/authoring.md) |
+| How can I turn a finding into my own experiment? | [Learning from the experiments](references/learning-and-experiments.md) |
 | Can I run a model locally, through an API, or on a rented GPU? | [Running models](references/running-models.md) |
 | How do I test this skill in Pi or another agent? | [Agent testing and feedback](references/agent-testing.md) |
 | Where is the paper? Can you read or summarize it? | [Paper and reading paths](references/paper.md) |
@@ -70,12 +73,21 @@ and its limits. Explain technical terms when they first matter. A policy owner
 usually needs to understand the changed decisions before a metric or equation.
 
 - Cite the original repository file using its pinned URL from the source registry.
+  Copy a URL that was actually read; do not turn a local installation path into
+  a GitHub URL. Read `references/sources.json` when a guide supplies only an ID.
   Include the task and configuration beside numerical comparisons. Describe false
   blocks and missed violations when an aggregate score conceals a trade-off.
-  For transfer, keep the policy's source model and recipient model explicit;
-  a nearby table row is not evidence for a different pair. If the requested pair
-  is missing from a summary, fetch the full matrix or say the number is not in
-  the bundled summary. Never relabel another pair's score to fit the question.
+  For a named transfer pair, look up that pair before offering another example.
+  Use [the offline transfer lookup](scripts/lookup_transfer.py) with `--source`
+  and `--recipient` (see [studies](references/studies.md)), or read the exact cells
+  in `results.json` → `transfer.test_matrix`. Keep source size, recipient, policy
+  selection, task, and comparator together. If “Qwen” is unspecified, identify
+  the sizes you report; do not imply all sizes gave that result. Missing evidence
+  is a gap, not a reason to substitute a different pair's score.
+  Check that the explanation says the same direction as the lookup. Name the
+  source and recipient instead of saying “the other way” or “in reverse” without
+  both names. Source-model selection is not selection using the recipient.
+  Do not shorten “PolicyLM-selected” to “PolicyLM-authored”: those are different claims.
 - The bundled summaries work offline. For exact wording, implementation details,
   or a disputed claim, read the corresponding source when network or a repository
   checkout is available. If it is unavailable, state the snapshot boundary rather
@@ -127,6 +139,37 @@ native interface, label mapping, and supported policy components. Do not present
 one template as universally compatible or silently discard unsupported clauses.
 Separate the policy owner's decisions about intent from engineering choices about
 rendering, measurement, and deployment.
+
+Check a draft against the user's stated scope before presenting it. Do not broaden
+or narrow who or what a rule covers (for example, all people to members only, or
+selling to all promotion), or
+add exceptions or actions as settled rules. Put suggested additions under open
+choices. Draft what is clear; ask only about a choice that affects the next step.
+
+Before suggesting an example's outcome, check the supplied content against the
+actual rule, relevant exception, and any stated review condition. Explain the
+decisive fact in one sentence. Missing detail alone is not evidence of a violation
+or a reason for REVIEW. If the rule leaves the outcome unresolved, describe the
+specific policy choice; label a proposed answer as provisional. Do not invent
+intent, missing context, a prohibition, or an escalation route to fill the gap.
+Use positive evidence already in the text: under a rule permitting reports,
+explicit attribution to another speaker is evidence of a report. Quoted offensive
+words are not by themselves evidence that the writer is attacking someone. Do not
+turn a clearly allowed case into an unresolved one because a different unseen
+context is imaginable. See the contrasting cases in the learning guide.
+
+Track the user's settled boundaries and unresolved choices in the conversation.
+A correction to one example does not authorize removing a category or dropping
+REVIEW everywhere. When revising a draft, briefly say what changed and keep any
+unresolved decision visible in the handoff. Questions about those decisions should
+not prevent drafting the parts that are already clear.
+
+Teach one useful idea through the user's example. Then connect the relevant
+recorded finding to a test they could perform: a hypothesis, the comparison,
+what stays fixed, and the mistakes to inspect. Use the
+[experiment guide](references/learning-and-experiments.md) for the full method;
+do not force a research protocol into a simple factual answer. Offer a concrete
+next step when useful, without requiring the learner to navigate the repository.
 
 Answering questions does not require credentials, GPUs, installing research
 dependencies, or loading serialized model files. Run new experiments only when

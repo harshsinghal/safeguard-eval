@@ -1,9 +1,9 @@
 {
   "name": "safeguard-eval",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "evidence_through": "2026-10-28",
   "repository": "https://github.com/harshsinghal/safeguard-eval",
-  "evidence_revision": "e08554bf6af217e5e34820986f02c23a845b4f6d",
-  "release_tag": "skill-v0.4.0",
+  "evidence_revision": "092928c85e226a7e67a27f26e279add9af12a44c",
+  "release_tag": "skill-v0.5.0",
   "license_scope": "MIT for this skill package; linked models, datasets and other repository content retain their own terms."
 }

@@ -7,11 +7,12 @@ understanding while preserving unsuccessful results and limitations.
 
 ## Release plan and scope
 
-Version 0.4.0 covers the recorded model interfaces, WildGuard policy tuning,
+Version 0.5.0 covers the recorded model interfaces, WildGuard policy tuning,
 nearby-size Qwen comparisons, policy transfer, HateXplain structure/omission tests,
 individual calibration, and probability/log-odds ensembles. Earlier demos and
 the frontier API pilot are routed separately. Enterprise governance is labelled
-as a proposal. No new paid inference is needed to build or use the skill.
+as a proposal. Building the package needs no paid inference; using the skill may
+incur the learner's normal agent-backend charges.
 
 The gateway update adds dataset provenance, publisher model cards and authoring
 guides, a curated external catalog, scoped search guidance, and the v0.5 paper's
@@ -33,6 +34,16 @@ incorrect transfer attribution, the retest, citation/verbosity limitations, and 
 local Ollama integration that overblocked all allowed teaching cases. Do not turn
 these smoke checks into a new benchmark or a guarantee for every agent backend.
 Do not publish the author's future user sessions without an explicit request.
+
+Version 0.5.0 makes the learning role explicit: distinguish findings from examples
+and hypotheses, check each suggested action against the user's rule, preserve
+unresolved choices, and turn a relevant finding into a proportionate experiment.
+The offline transfer lookup reads the exact source-selected policy and recipient
+row from the bundled numeric anchors. Its tests cover all named pairs and baseline
+selections; prose still needs behavioral review. See the
+[learning-revision plan](evidence/2026-10-28-learning/PLAN.md) and its recorded
+conversation checks. Retain the failure that motivated a change and avoid claiming
+that a successful retest makes a cheap backend universally reliable.
 
 The first release also publishes the previously local ensemble evidence and its
 reproduction code. The frozen archives are copied byte for byte, including their

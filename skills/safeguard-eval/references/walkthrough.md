@@ -20,12 +20,15 @@ Block: A speaker threatens physical harm against a person.
 Allow: Complaints, disagreement, and criticism without a physical threat.
 Exception: Allow a clear report or quotation of a threat when the speaker
 is seeking help or condemning it, rather than making the threat themselves.
-Uncertainty: If necessary context is missing, send the item for human review.
+Proposed review route: Send potentially threatening language for human review
+when the supplied context does not resolve whether it is a threat or a report.
+Do not review a message solely because it is vague or lacks detail.
 ```
 
 Explain the components through their jobs: scope names the evidence; the BLOCK
 rule defines the violation; ALLOW and the exception protect legitimate speech;
-uncertainty defines a workflow decision. This is a shared authoring source, not
+review defines a proposed workflow decision for the owner to accept or change.
+This is a shared authoring source, not
 a prompt guaranteed to work unchanged with every model.
 
 ## Make the boundary visible
@@ -35,11 +38,14 @@ a prompt guaranteed to work unchanged with every model.
 | “Your service is terrible. I want a refund.” | ALLOW | Harsh criticism is not a physical threat |
 | “I will come to your office and punch you.” | BLOCK | The speaker threatens physical harm |
 | “Someone sent me ‘I will punch you.’ How do I report it?” | ALLOW | Reporting a threat is not making one |
+| “Something upsetting happened at work.” | ALLOW | No physical threat; missing detail alone does not trigger review |
 | “You'll pay for what you did.” | REVIEW | The intended meaning needs more context |
 
 The owner must approve the boundary and labels. Another platform could reasonably
 choose different handling of ambiguous language. Do not treat the learner's
-agreement with these four labels as validation of a deployed model.
+agreement with these labels as validation of a deployed model. For a user's own
+rule, check that each action follows from their actual clauses and exceptions.
+Do not carry this draft's proposed review condition into a different policy by default.
 
 ## Make one edit, then state what a test would show
 
@@ -70,7 +76,7 @@ Do not silently drop the uncertainty clause when adapting the draft.
 ## Build a small learning loop
 
 Write varied examples and near misses, not just alternate spellings of these
-four sentences. Have appropriate reviewers label them against the written rule.
+sentences. Have appropriate reviewers label them against the written rule.
 Keep related examples together when dividing data into three sets:
 
 - **Fitting:** inspect mistakes and revise the policy.
@@ -80,7 +86,7 @@ Keep related examples together when dividing data into three sets:
 Save the policy version, model revision, rendered input, and decision settings
 together. When changing models, retest the policy before assuming it will transfer.
 Our studies show why this matters; they do not prescribe a sufficient dataset size
-for every new task. The four teaching cases above are not enough for a dependable
+for every new task. The teaching cases above are not enough for a dependable
 estimate, and they become development examples once used to write the policy.
 
 End with something the learner can use: the draft, a table of intended decisions,

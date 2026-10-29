@@ -74,6 +74,12 @@ SOURCES = {
     "pi-learner-conversation": "docs/skill/evidence/2026-10-28/learner-v0.4.md",
     "pi-engineering-conversation": "docs/skill/evidence/2026-10-28/engineering-v0.4.md",
     "pi-enterprise-conversation": "docs/skill/evidence/2026-10-28/grc-v0.4.md",
+    "skill-learning-readout": "docs/skill/evidence/2026-10-28-learning/README.md",
+    "skill-learning-runs": "docs/skill/evidence/2026-10-28-learning/conversation-runs.json",
+    "skill-learning-baseline": "docs/skill/evidence/2026-10-28-learning/baseline-v0.4.md",
+    "skill-learning-authoring": "docs/skill/evidence/2026-10-28-learning/final-authoring.md",
+    "skill-learning-transfer": "docs/skill/evidence/2026-10-28-learning/final-transfer.md",
+    "skill-learning-experiment": "docs/skill/evidence/2026-10-28-learning/candidate-b-experiment.md",
 }
 
 

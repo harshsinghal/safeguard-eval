@@ -1,5 +1,5 @@
 {
-  "evidence_revision": "e08554bf6af217e5e34820986f02c23a845b4f6d",
+  "evidence_revision": "092928c85e226a7e67a27f26e279add9af12a44c",
   "metric_units": "Accuracy, recall and F1 are fractions, not percentages. Confusion rows are gold labels, columns predictions.",
   "interpretation": "Historical configurations only; later extensions reused previously examined tests. See studies.md for caveats.",
   "wildguard": {

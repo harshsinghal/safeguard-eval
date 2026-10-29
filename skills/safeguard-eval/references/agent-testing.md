@@ -39,6 +39,23 @@ Quote only the relevant visible exchange. Keep model identity, skill version, an
 test conditions with the finding. Do not claim the problem is fixed from a file
 edit alone; try the affected conversation again and retain the original failure.
 
+Also try a new scenario that exercises the same skill: whether example decisions
+follow a different rule, whether an unresolved review choice survives an edit,
+whether the exact requested model pair is retrieved on the first answer, and
+whether the learner can turn a finding into a small experiment. Keep expected
+outcomes in the review notes, not in a hidden prompt to the tested agent. Normal
+user corrections are part of the conversation; disclose when they were needed.
+Separate policy-content errors from bad citations and poor teaching flow. A lookup
+helper can protect numerical comparisons but cannot settle an ambiguous policy.
+
+The project's v0.5 development checks (`skill-learning-readout` and
+`skill-learning-runs` in [sources.json](sources.json)) retained failures as well as
+retests. The lookup returned correct recorded numbers, but some explanations still
+blurred selection roles, used an indirect citation, or broadened an unresolved
+exception. These are known limits, not guarantees that another conversation will
+repeat or avoid the same mistake. Review the draft's meaning with the owner and
+keep new tests separate from the examples used to improve the skill.
+
 Budgeted test calls should report usage and distinguish the agent's estimate from
 provider billing. A local estimated stop is not a provider-side hard spending cap.
 See [running-models.md](running-models.md) for neutral deployment and cost guidance.

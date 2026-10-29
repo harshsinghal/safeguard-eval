@@ -78,7 +78,27 @@ Read each row as **policy selected using source model → model doing the new
 classification**. In particular, 80.11% → 75.10% is **Shieldstral → Qwen 2B**,
 not PolicyLM → Qwen. The first two rows are the reverse-direction pair; the
 third is a different recipient. For another pair, consult the full matrix in
-`transfer-analysis`/`transfer-readout` rather than borrowing one of these numbers.
+`transfer-analysis` rather than borrowing one of these numbers. The bundled
+`results.json` contains that full matrix; the readout shows only selected comparisons.
+
+For a named pair, use the small offline lookup before composing the answer:
+
+```sh
+python3 /path/to/safeguard-eval/scripts/lookup_transfer.py --source qwen-2b --recipient policylm
+```
+
+Replace the package path with this installation's path. IDs are `policylm`,
+`shieldstral`, `qwen-2b`, `qwen-4b`, and `qwen-27b`; `--list` shows their full names.
+The output includes the exact policy, denominator, baseline, transferred result,
+error counts, limitations, and pinned citations. It makes no network or model calls.
+Qwen 4B and 27B selected the unchanged initial policy in this search; do not present
+those rows as transfers of a newly improved large-model policy.
+
+Without Python or shell access, read `transfer.source_selected[source]` and then
+`transfer.test_matrix[recipient]` in `results.json`. Compare that selected-policy
+cell with `wg-p0-taxonomy` in the same recipient row. Do not substitute another
+study's baseline, reverse the direction, or infer a missing number. Explain what
+the exact comparison means for the user's question before giving other examples.
 
 PolicyLM's own revision left its accuracy at 85.05%, yet caught 12 more harmful
 requests and falsely blocked 12 more benign ones. Unchanged accuracy did not mean

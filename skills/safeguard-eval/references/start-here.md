@@ -56,6 +56,11 @@ list to the welcome. The fictional community above is an illustration, not a
 description of an experiment we ran. Keep study numbers for the next step unless
 the reader asks for them immediately.
 
+Read the actual URL values in `sources.json` before citing them. A local skill
+path is not a repository path or Git reference; never manufacture a GitHub link
+from the directory where this agent happens to be installed. If a link has not
+been retrieved, name the available local guide rather than inventing a web address.
+
 ## Continue without making the reader design a curriculum
 
 If they choose a number, interpret it using the most recent menu. At the initial

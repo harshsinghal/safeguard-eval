@@ -59,14 +59,14 @@ claims that a live Codex/Claude Code session has already produced each answer.
 | “Just answer this question; no tour” | Honor that preference; no forced curriculum or repeated menu |
 | Installation fails | Report the problem and how to proceed; no false success message |
 
-Keep fictional examples separate from study data. Do not turn the four walkthrough
+Keep fictional examples separate from study data. Do not turn the walkthrough
 cases into a benchmark score. Do not run paid inference or collect confidential
 records to teach the exercise. Conversation context is sufficient for navigation;
 no user profile, tracking, or persistent progress file is created.
 
 ## Verification for this release
 
-The package tests exercise the installer handoff for both target agents, check
+The package tests exercise the installer handoff for all three target agents, check
 that the guide exists at the returned installed path, preserve JSON output, and
 reject a package missing the guide. Existing update/backup and deterministic ZIP
 checks still apply. The official skill validator checks the skill format.

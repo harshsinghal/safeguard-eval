@@ -9,9 +9,9 @@ have subscription or API charges.
 
 Based on work by **[Harsh Singhal](https://www.linkedin.com/in/harshsinghal)**.
 
-**Version 0.4.0 · evidence through 28 October 2026 · Codex, Claude Code, and Pi**
+**Version 0.5.0 · evidence through 28 October 2026 · Codex, Claude Code, and Pi**
 
-[Download the skill](https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.4.0)
+[Download the skill](https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.5.0)
 or browse [all releases](https://github.com/harshsinghal/safeguard-eval/releases).
 The release ZIP contains just the skill, not the full research repository.
 
@@ -56,6 +56,15 @@ Its search guide directs unanswered questions to primary sources and distinguish
 provider recommendations from results we measured. Untested models and proposed
 applications are labelled explicitly.
 
+It is also a guide to doing your own experiments. The agent should distinguish
+recorded findings from teaching examples, check suggested decisions against your
+actual rule, and keep unresolved policy choices visible. It can help turn one
+finding into a hypothesis, a controlled comparison, and a plan for reviewing
+mistakes. These instructions improve grounding; they do not guarantee that every
+agent answer is correct. The [learning guide](references/learning-and-experiments.md)
+shows the approach. An [offline lookup](scripts/lookup_transfer.py) retrieves exact
+historical transfer pairs without a model call or a large context dump.
+
 ## Explore the reference library
 
 | Start here | What it explains |
@@ -67,12 +76,13 @@ applications are labelled explicitly.
 | [Provider reading guide](references/providers.md) | Weight downloads, OpenAI/ROOST authoring guidance, other providers, and untested discoveries |
 | [Studies and findings](references/studies.md) | What changed, the numbers, unsuccessful results, and limitations |
 | [Authoring and testing](references/authoring.md) | How to draft a policy and test it with the intended model |
+| [Learning through experiments](references/learning-and-experiments.md) | Turn findings into your own hypotheses, comparisons, and reviewable decisions |
 | [Running models](references/running-models.md) | Local testing, hosted inference, rented GPUs, neutral provider guidance, usage and teardown |
 | [Testing the agent experience](references/agent-testing.md) | Cheap backends, normal conversations, and opt-in local feedback |
 | [Paper guide](references/paper.md) | How an agent can retrieve, read, and cite the consolidated draft |
 | [Search guide](references/search.md) | Where to look when the project cannot answer the question |
 
-The [research paper](https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.4.0/research-preprint/README.md)
+The [research paper](https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.5.0/research-preprint/README.md)
 is available as a PDF, extracted text, and LaTeX source package. It is author
 review draft v0.5, **not peer reviewed or submitted to arXiv**. The paper is fetched
 on demand rather than included in the small skill ZIP.
@@ -83,10 +93,10 @@ Paste this into **Codex, Claude Code, or Pi**:
 
 ```text
 Install the Safeguard Eval skill for this agent from the official release:
-https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.4.0
+https://github.com/harshsinghal/safeguard-eval/releases/tag/skill-v0.5.0
 
 Read its installation instructions:
-https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.4.0/skills/safeguard-eval/README.md
+https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.5.0/skills/safeguard-eval/README.md
 
 Download the skill ZIP and SHA256SUMS, verify the ZIP checksum, inspect the
 package, and install the whole safeguard-eval folder for my current agent.
@@ -110,7 +120,7 @@ In **Codex**, the built-in skill installer is another option:
 
 ```text
 Use $skill-installer to install the skill at
-https://github.com/harshsinghal/safeguard-eval/tree/skill-v0.4.0/skills/safeguard-eval
+https://github.com/harshsinghal/safeguard-eval/tree/skill-v0.5.0/skills/safeguard-eval
 Then read its SKILL.md and references/start-here.md and give me the welcome,
 two-minute overview, and suggested learning paths in the same reply.
 ```
@@ -125,10 +135,10 @@ Use Python 3.10 or later. On macOS or Linux, run these commands in an empty work
 directory after reviewing the package source:
 
 ```bash
-curl -fL https://github.com/harshsinghal/safeguard-eval/releases/download/skill-v0.4.0/safeguard-eval-skill-v0.4.0.zip -o safeguard-eval-skill-v0.4.0.zip
-curl -fL https://github.com/harshsinghal/safeguard-eval/releases/download/skill-v0.4.0/SHA256SUMS -o SHA256SUMS
+curl -fL https://github.com/harshsinghal/safeguard-eval/releases/download/skill-v0.5.0/safeguard-eval-skill-v0.5.0.zip -o safeguard-eval-skill-v0.5.0.zip
+curl -fL https://github.com/harshsinghal/safeguard-eval/releases/download/skill-v0.5.0/SHA256SUMS -o SHA256SUMS
 shasum -a 256 -c SHA256SUMS
-unzip safeguard-eval-skill-v0.4.0.zip
+unzip safeguard-eval-skill-v0.5.0.zip
 ```
 
 Then choose your agent:
@@ -203,7 +213,7 @@ example”, “Would that policy work with another model?”, or “How can I ru
 The agent should adapt to the question without asking you to pick a profession.
 Skill portability does not guarantee equal answers from every model or harness.
 
-The optional [Pi user-test lab](https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.4.0/docs/skill/PI-USER-TEST.md)
+The optional [Pi user-test lab](https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.5.0/docs/skill/PI-USER-TEST.md)
 uses an isolated Pi profile with OpenRouter's `openai/gpt-6-luna`. It records native
 sessions, readable local reviews, model identity, token usage, and cost information.
 Use `/feedback` in that lab to mark an answer. The extension adds no answer
@@ -251,7 +261,7 @@ CI checks source drift, new study directories, generated numbers, package integr
 and installation behavior. It does **not** rewrite the prose or establish that an
 agent will answer every question correctly. A maintainer reviews new findings,
 updates the guides, and issues a new version. See the
-[maintenance guide](https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.4.0/docs/skill/MAINTAINING.md).
+[maintenance guide](https://github.com/harshsinghal/safeguard-eval/blob/skill-v0.5.0/docs/skill/MAINTAINING.md).
 
 The skill package is [MIT licensed](LICENSE). Models, datasets, and linked material
 outside the package keep their own terms. This is an independent research skill,
