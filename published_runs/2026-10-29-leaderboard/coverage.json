@@ -1,0 +1,498 @@
+{
+  "candidate_counts": {
+    "hatexplain": 98,
+    "wildguard": 99
+  },
+  "exclusions": [
+    {
+      "dataset": "wildguard",
+      "model": "cope",
+      "path": "published_runs/2026-10-24-wildguard/runs/cope-validation-p4",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "cope",
+      "path": "published_runs/2026-10-24-wildguard/runs/cope-validation-p1",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "policylm",
+      "path": "published_runs/2026-10-24-wildguard/runs/policylm-validation-p1",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "policylm",
+      "path": "published_runs/2026-10-24-wildguard/runs/policylm-validation-p3",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "safeguard",
+      "path": "published_runs/2026-10-24-wildguard/runs/safeguard-validation-p3",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "safeguard",
+      "path": "published_runs/2026-10-24-wildguard/runs/safeguard-validation-p1",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "safeguard",
+      "path": "published_runs/2026-10-24-wildguard/runs/safeguard-validation-p4",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-validation-p3",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-24-wildguard/runs/shieldstral-validation-p1",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-27b",
+      "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-validation-p4",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-27b",
+      "path": "published_runs/2026-10-25-qwen/runs/qwen-27b-validation-p3",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-2b",
+      "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-validation-p1",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-2b",
+      "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-validation-p4",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-2b",
+      "path": "published_runs/2026-10-25-qwen/runs/qwen-2b-validation-p3",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-35b-a3b",
+      "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-validation-p3",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-35b-a3b",
+      "path": "published_runs/2026-10-25-qwen/runs/qwen-35b-a3b-validation-p1",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-validation-p4",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-25-qwen/runs/qwen-4b-validation-p3",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-9b",
+      "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-validation-p1",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-9b",
+      "path": "published_runs/2026-10-25-qwen/runs/qwen-9b-validation-p4",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "policylm",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-policylm-p4--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "policylm",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-policylm-p3--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "policylm",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/policylm--transfer-policylm-p1--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-27b",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-27b-p3--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-27b",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-27b-p4--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-27b",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-27b-p1--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-27b",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-27b--transfer-qwen-27b-p2--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-2b",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-qwen-2b-p1--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-2b",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-qwen-2b-p2--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-2b",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-2b--transfer-qwen-2b-p4--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-4b-p3--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-4b-p4--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-4b-p2--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/qwen-4b--transfer-qwen-4b-p1--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-shieldstral-p1--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-shieldstral-p4--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "wildguard",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-25-policy-transfer/new-runs/runs/shieldstral--transfer-shieldstral-p2--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "path": "published_runs/2026-10-26-hatexplain/runs/policylm--p0--markdown--test--repeat",
+      "reason": "repeat diagnostic"
+    },
+    {
+      "path": "published_runs/2026-10-26-hatexplain/runs/qwen-4b--p0--markdown--test--repeat",
+      "reason": "repeat diagnostic"
+    },
+    {
+      "path": "published_runs/2026-10-26-hatexplain/runs/shieldstral--p0--markdown--test--repeat",
+      "reason": "repeat diagnostic"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "policylm",
+      "path": "published_runs/2026-10-26-hatexplain/runs/policylm--p0--omit-all-examples--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "policylm",
+      "path": "published_runs/2026-10-26-hatexplain/runs/policylm--p0--omit-allow-examples--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "policylm",
+      "path": "published_runs/2026-10-26-hatexplain/runs/policylm--p0--omit-definitions--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "policylm",
+      "path": "published_runs/2026-10-26-hatexplain/runs/policylm--p0--omit-exceptions--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "policylm",
+      "path": "published_runs/2026-10-26-hatexplain/runs/policylm--shieldstral-p2--markdown--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "policylm",
+      "path": "published_runs/2026-10-26-hatexplain/runs/policylm--qwen-4b-p1--markdown--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-26-hatexplain/runs/qwen-4b--p0--linear--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-26-hatexplain/runs/qwen-4b--p0--omit-all-examples--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-26-hatexplain/runs/qwen-4b--p0--omit-allow-examples--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-26-hatexplain/runs/qwen-4b--p0--omit-definitions--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-26-hatexplain/runs/qwen-4b--p0--omit-exceptions--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-26-hatexplain/runs/qwen-4b--p0--reordered--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-26-hatexplain/runs/qwen-4b--p0--tagged--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "qwen-4b",
+      "path": "published_runs/2026-10-26-hatexplain/runs/qwen-4b--shieldstral-p2--markdown--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-26-hatexplain/runs/shieldstral--shieldstral-p1--markdown--validation",
+      "reason": "no matching test run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-26-hatexplain/runs/shieldstral--p0--linear--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-26-hatexplain/runs/shieldstral--p0--omit-all-examples--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-26-hatexplain/runs/shieldstral--p0--omit-allow-examples--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-26-hatexplain/runs/shieldstral--p0--omit-definitions--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-26-hatexplain/runs/shieldstral--p0--omit-exceptions--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-26-hatexplain/runs/shieldstral--p0--reordered--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-26-hatexplain/runs/shieldstral--p0--tagged--test",
+      "reason": "no matching validation run"
+    },
+    {
+      "dataset": "hatexplain",
+      "model": "shieldstral",
+      "path": "published_runs/2026-10-26-hatexplain/runs/shieldstral--qwen-4b-p1--markdown--test",
+      "reason": "no matching validation run"
+    }
+  ],
+  "grouping_note": "Jev HateXplain exports omit group IDs; exact-matched original dataset groups govern bootstrap resampling.",
+  "historical_results": {
+    "ensemble": "published_runs/2026-10-27-ensemble/README.md",
+    "frontier": "published_runs/2026-10-25-frontier-pilot/README.md",
+    "hatexplain": "published_runs/2026-10-26-hatexplain/README.md",
+    "jev": "published_runs/2026-10-29-jev/README.md",
+    "logits": "published_runs/2026-10-28-ensemble-logits/README.md",
+    "qwen": "published_runs/2026-10-25-qwen/README.md",
+    "transfer": "published_runs/2026-10-25-policy-transfer/README.md",
+    "wildguard": "published_runs/2026-10-24-wildguard/README.md"
+  },
+  "models": [
+    {
+      "category": "Specialist",
+      "hatexplain": "full test",
+      "model": "PolicyLM 1.7B",
+      "model_id": "musubilabs/policylm-1.7b",
+      "wildguard": "full test"
+    },
+    {
+      "category": "Specialist",
+      "hatexplain": "full test",
+      "model": "Shieldstral 3B",
+      "model_id": "mistralai/Shieldstral-1.0-3B",
+      "wildguard": "full test"
+    },
+    {
+      "category": "Specialist",
+      "hatexplain": "not evaluated",
+      "model": "CoPE",
+      "model_id": "zentropi-ai/cope-b-a4b",
+      "wildguard": "full test"
+    },
+    {
+      "category": "Specialist",
+      "hatexplain": "not evaluated",
+      "model": "GPT-OSS Safeguard 20B",
+      "model_id": "openai/gpt-oss-safeguard-20b",
+      "wildguard": "full test"
+    },
+    {
+      "category": "Task-specific",
+      "hatexplain": "not evaluated",
+      "model": "WildGuard 7B",
+      "model_id": "allenai/wildguard",
+      "wildguard": "full test"
+    },
+    {
+      "category": "General-purpose",
+      "hatexplain": "not evaluated",
+      "model": "Qwen3.5 2B",
+      "model_id": "Qwen/Qwen3.5-2B",
+      "wildguard": "full test"
+    },
+    {
+      "category": "General-purpose",
+      "hatexplain": "full test",
+      "model": "Qwen3.5 4B",
+      "model_id": "Qwen/Qwen3.5-4B",
+      "wildguard": "full test"
+    },
+    {
+      "category": "General-purpose",
+      "hatexplain": "not evaluated",
+      "model": "Qwen3.5 9B",
+      "model_id": "Qwen/Qwen3.5-9B",
+      "wildguard": "full test"
+    },
+    {
+      "category": "General-purpose",
+      "hatexplain": "not evaluated",
+      "model": "Qwen3.5 27B",
+      "model_id": "Qwen/Qwen3.5-27B",
+      "wildguard": "full test"
+    },
+    {
+      "category": "General-purpose",
+      "hatexplain": "not evaluated",
+      "model": "Qwen3.5 35B-A3B",
+      "model_id": "Qwen/Qwen3.5-35B-A3B",
+      "wildguard": "full test"
+    },
+    {
+      "category": "Typed classifier",
+      "hatexplain": "full test",
+      "model": "Jev 1.14",
+      "model_id": "typesafe/jev-1.14-20261014",
+      "wildguard": "full test"
+    },
+    {
+      "category": "Frontier API pilot",
+      "hatexplain": "not evaluated",
+      "model": "openai/gpt-6-astra",
+      "model_id": "openai/gpt-6-astra",
+      "wildguard": "32 fitting examples only; unranked"
+    },
+    {
+      "category": "Frontier API pilot",
+      "hatexplain": "not evaluated",
+      "model": "anthropic/claude-opus-5.5",
+      "model_id": "anthropic/claude-opus-5.5",
+      "wildguard": "32 fitting examples only; unranked"
+    },
+    {
+      "category": "Frontier API pilot",
+      "hatexplain": "not evaluated",
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "wildguard": "32 fitting examples only; unranked"
+    },
+    {
+      "category": "Frontier API pilot",
+      "hatexplain": "not evaluated",
+      "model": "moonshotai/kimi-k3.1-pro",
+      "model_id": "moonshotai/kimi-k3.1-pro",
+      "wildguard": "32 fitting examples only; unranked"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "command": "PYTHONPATH=source python -m evals.leaderboard.build reproduce --bundle .",
+  "dependencies": {
+    "joblib": "1.6.0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.1",
+    "threadpoolctl": "3.7.0"
+  },
+  "exact_agreement": [
+    "validation choices",
+    "test metrics",
+    "slice metrics",
+    "confidence intervals",
+    "306 paired comparisons"
+  ],
+  "fitted_score_replays_matched": 140,
+  "focused_tests_passed": 11,
+  "new_api_requests": 0,
+  "new_fitting": false,
+  "python": "3.11.14",
+  "recorded_utc": "2026-10-29T17:24:55.169021+00:00",
+  "run_from": "bundle directory, archived source only",
+  "status": "passed"
+}

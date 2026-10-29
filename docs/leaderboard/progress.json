@@ -1,0 +1,37 @@
+{
+  "api_gpu_cost_usd": 0,
+  "archived_candidate_records": 197,
+  "common_validation_n": {
+    "hatexplain": 1920,
+    "wildguard": 512
+  },
+  "entries": {
+    "hatexplain": 18,
+    "wildguard": 18
+  },
+  "frozen_before_new_test_scoring": true,
+  "new_fitting": false,
+  "new_inference": false,
+  "original_archives_modified": false,
+  "original_test_results_previously_known": true,
+  "profiles": [
+    "balanced",
+    "false_block_limit",
+    "catch_target"
+  ],
+  "reproduction": "passed, archived-source CPU only",
+  "status": "complete",
+  "test_n": {
+    "hatexplain": 1924,
+    "wildguard": 1699
+  },
+  "tests_passed": 11,
+  "ui_checks": [
+    "both benchmarks",
+    "individual and ensemble filters",
+    "metric sorting including unavailable MCC",
+    "operating target attainment",
+    "paired comparison display",
+    "screenshot visual inspection"
+  ]
+}

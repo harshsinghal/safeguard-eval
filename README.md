@@ -49,6 +49,26 @@ The [research directions](docs/research-directions/README.md) record proposed st
 
 The [third study: frontier API models](docs/frontier-api/PLAN.md) completed a 256-observation fitting-only pilot through OpenRouter for **$0.55**, bringing cumulative spend at that stage to **$8.46** within the $20 cap. Read the [pilot findings](docs/frontier-api/READOUT.md) and [reproducible evidence](published_runs/2026-10-25-frontier-pilot/README.md). The full policy search and held-out evaluation have not run; projected API costs exceed the remaining budget.
 
+## A comprehensive leaderboard that balances both kinds of mistakes
+
+The [balanced leaderboard](docs/leaderboard/README.md) compares **197 eligible
+saved configurations**, with **18 entries per benchmark**, covering specialist
+models, all tested Qwen sizes, WildGuard, Jev, and seven ensemble methods.
+Each entry is selected on a common validation set; no test maximum selects the
+policy or cutoff. The report includes balanced accuracy, macro-F1, MCC, false
+blocks, missed violations, uncertainty, and two operating-target views.
+
+Open the [interactive HTML](published_runs/2026-10-29-leaderboard/index.html)
+(download and open locally from GitHub), read the
+[complete tables](published_runs/2026-10-29-leaderboard/RESULTS.md), or download
+the [CSV](published_runs/2026-10-29-leaderboard/leaderboard.csv).
+The leading observed balanced scores are **91.08% on WildGuard** and **79.35% on
+HateXplain**, both from ensembles; nearby scores often have unresolved uncertainty.
+Several validation operating targets failed on test, so the report displays
+those failures alongside the rankings. Frontier fitting-only pilots are unranked.
+This retrospective reanalysis used **no new inference, fitting, or paid compute**
+and preserves the original experiment results.
+
 ## Jev: typed decisions still need policy and threshold testing
 
 We added **Jev 1.14 through OpenRouter's Decisions API** on the same 1,699

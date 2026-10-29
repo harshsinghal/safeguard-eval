@@ -1,0 +1,705 @@
+{
+  "all_matched": true,
+  "fitted_candidates": [
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/equal/calibrated",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/equal/raw",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/forest/depth2-leaf20",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/forest/depth2-leaf80",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/forest/depth4-leaf20",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/forest/depth4-leaf80",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/logistic/C0.01",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/logistic/C0.1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/logistic/C1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/logistic/C10",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/logistic/C100",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/cope/logistic-C0.01",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/cope/logistic-C0.1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/cope/logistic-C1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/cope/logistic-C10",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/cope/logistic-C100",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/policylm/logistic-C0.01",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/policylm/logistic-C0.1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/policylm/logistic-C1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/policylm/logistic-C10",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/policylm/logistic-C100",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/shieldstral/logistic-C0.01",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/shieldstral/logistic-C0.1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/shieldstral/logistic-C1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/shieldstral/logistic-C10",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/single/shieldstral/logistic-C100",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/weighted/lambda0",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/weighted/lambda0.01",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/ensemble/wildguard-specialists/weighted/lambda0.1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-equal",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-logistic/C0.01",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-logistic/C0.1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-logistic/C1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-logistic/C10",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-logistic/C100",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/cope/C0.01",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/cope/C0.1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/cope/C1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/cope/C10",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/cope/C100",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/policylm/C0.01",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/policylm/C0.1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/policylm/C1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/policylm/C10",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/policylm/C100",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/shieldstral/C0.01",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/shieldstral/C0.1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/shieldstral/C1",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/shieldstral/C10",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/shieldstral/C100",
+      "matched": true,
+      "n": 1699
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/equal/calibrated",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/equal/raw",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/forest/depth2-leaf20",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/forest/depth2-leaf80",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/forest/depth4-leaf20",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/forest/depth4-leaf80",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/logistic/C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/logistic/C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/logistic/C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/logistic/C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/logistic/C100",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/policylm/logistic-C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/policylm/logistic-C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/policylm/logistic-C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/policylm/logistic-C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/policylm/logistic-C100",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/qwen-4b/logistic-C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/qwen-4b/logistic-C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/qwen-4b/logistic-C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/qwen-4b/logistic-C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/qwen-4b/logistic-C100",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/shieldstral/logistic-C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/shieldstral/logistic-C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/shieldstral/logistic-C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/shieldstral/logistic-C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/single/shieldstral/logistic-C100",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/weighted/lambda0",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/weighted/lambda0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-mixed/weighted/lambda0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/equal/calibrated",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/equal/raw",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/forest/depth2-leaf20",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/forest/depth2-leaf80",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/forest/depth4-leaf20",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/forest/depth4-leaf80",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/logistic/C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/logistic/C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/logistic/C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/logistic/C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/logistic/C100",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/single/policylm/logistic-C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/single/policylm/logistic-C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/single/policylm/logistic-C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/single/policylm/logistic-C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/single/policylm/logistic-C100",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/single/shieldstral/logistic-C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/single/shieldstral/logistic-C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/single/shieldstral/logistic-C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/single/shieldstral/logistic-C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/single/shieldstral/logistic-C100",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/weighted/lambda0",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/weighted/lambda0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/ensemble/hatexplain-specialists/weighted/lambda0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-equal",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-logistic/C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-logistic/C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-logistic/C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-logistic/C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-logistic/C100",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/policylm/C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/policylm/C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/policylm/C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/policylm/C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/policylm/C100",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/qwen-4b/C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/qwen-4b/C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/qwen-4b/C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/qwen-4b/C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/qwen-4b/C100",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/shieldstral/C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/shieldstral/C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/shieldstral/C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/shieldstral/C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/shieldstral/C100",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-equal",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-logistic/C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-logistic/C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-logistic/C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-logistic/C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-logistic/C100",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-single/policylm/C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-single/policylm/C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-single/policylm/C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-single/policylm/C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-single/policylm/C100",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-single/shieldstral/C0.01",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-single/shieldstral/C0.1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-single/shieldstral/C1",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-single/shieldstral/C10",
+      "matched": true,
+      "n": 1924
+    },
+    {
+      "candidate": "hatexplain/logits/hatexplain-specialists/logit-single/shieldstral/C100",
+      "matched": true,
+      "n": 1924
+    }
+  ]
+}
