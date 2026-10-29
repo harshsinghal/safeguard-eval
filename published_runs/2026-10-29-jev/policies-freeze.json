@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-29T15:36:22.935042+00:00",
+  "policy_hashes": {
+    "wildguard": "0babb326ab47f8fc111ae9a819c1d3621f60105841c338cec7c7287258be5c81",
+    "hatexplain": "f5829030267a3b101bc39dbedd0bfaba23f44c96d638f8676c8961ea0e4a0a9f"
+  },
+  "fitting_hashes": {
+    "wildguard": "8e1a7597a63ba646d61aaecdcc9a0c7c49b609df1941dde49aa83a7a951efa3c",
+    "hatexplain": "e0ab4c29fe0c6c2f49dd4000fc0c4f50f9340bcef0544f869fb52ba9e6c50c4c"
+  },
+  "sources": {
+    "evals/jev/api.py": "d368250e8b9a632bc63bb3b5a12fde49500cf99f6e9c26237fbfd7f94af3756b",
+    "evals/jev/study.py": "d9683a7917c86657c1a8d9f6d52e837010130a55b75a5a4ff33d9205c1fd189c",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/wildguard/metrics.py": "8fd93378cb6bbbcbca2e6ed47e3f3ae198da663709d3fa7dbf44b1be41c69da7",
+    "docs/jev/PLAN.md": "d9488998558b89bddbc04785f9697411bde3c3ea93880fe4cb7fa411a6924a0a"
+  }
+}

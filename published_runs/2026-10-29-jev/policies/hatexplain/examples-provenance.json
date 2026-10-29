@@ -1,0 +1,63 @@
+[
+  {
+    "id": "9140891_gab",
+    "prompt_sha256": "b39eec65ae14da80d9b84cfa0056627890ef376277b5d1a74530391a91dbe17b",
+    "expected": "BLOCK",
+    "source_label": "hatespeech",
+    "agreement": 3,
+    "targets": [
+      "Islam"
+    ],
+    "split": "fit",
+    "original_split": "train",
+    "platform": "gab",
+    "group": "hx-b39eec65ae14da80d9b8",
+    "detailed_prediction": "ALLOW"
+  },
+  {
+    "id": "12845540_gab",
+    "prompt_sha256": "be51bcc378ad6b9012b24c5e8720bb7ffd404efbeb6e5035bed43de5d86124b1",
+    "expected": "BLOCK",
+    "source_label": "hatespeech",
+    "agreement": 3,
+    "targets": [
+      "African"
+    ],
+    "split": "fit",
+    "original_split": "train",
+    "platform": "gab",
+    "group": "hx-be51bcc378ad6b9012b2",
+    "detailed_prediction": "ALLOW"
+  },
+  {
+    "id": "21544081_gab",
+    "prompt_sha256": "d46119ac47d6944bd991bdcf60dd837db797773af7d5d973c77efe64eb5012a5",
+    "expected": "ALLOW",
+    "source_label": "offensive",
+    "agreement": 3,
+    "targets": [
+      "Homosexual",
+      "Jewish"
+    ],
+    "split": "fit",
+    "original_split": "train",
+    "platform": "gab",
+    "group": "hx-d46119ac47d6944bd991",
+    "detailed_prediction": "BLOCK"
+  },
+  {
+    "id": "1178444478023180289_twitter",
+    "prompt_sha256": "5ca59c8de2ebda33024ddb8d4a1f499128a90c25d0f58646a593744ef2e2854e",
+    "expected": "ALLOW",
+    "source_label": "normal",
+    "agreement": 3,
+    "targets": [
+      "None"
+    ],
+    "split": "fit",
+    "original_split": "train",
+    "platform": "twitter",
+    "group": "hx-5ca59c8de2ebda33024d",
+    "detailed_prediction": "BLOCK"
+  }
+]

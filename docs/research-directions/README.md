@@ -137,3 +137,11 @@ encoder lineage changes the interpretation of a comparison with Qwen3.5; archite
 differences will be documented as model-selection context instead.
 
 Recording these directions does not start model runs, GPU rentals, or new spending.
+
+## Teaching series parked for later
+
+The proposed [eight-week student curriculum](STUDENT-CURRICULUM.md) was recorded on
+29 October 2026. It follows governance from organizational intent through
+moderation, language models, labeling, policy authoring, evaluation, and operation.
+The outline includes companion readings, exercises, and a six-week option. The
+articles have not yet been written; the user asked to revisit them later.

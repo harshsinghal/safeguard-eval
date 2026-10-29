@@ -1,0 +1,15 @@
+{
+  "brief": {
+    "original_question_sha256": "efdb1c8ffe877173d48ef1aaf468c8abaa533885287b54b5b55987f5dd87ccf5",
+    "serialized_bytes": 450
+  },
+  "detailed": {
+    "original_question_sha256": "eed2fef272aa7e985c71a1f2a8f5bb744fd5b74657c1a8bdec27e07915567fb7",
+    "serialized_bytes": 2114
+  },
+  "examples": {
+    "original_question_sha256": "0109ef1e0a7a5e6e77c8fd950ccd86d94e941fc446057919860858cb7eacbd9e",
+    "serialized_bytes": 2916,
+    "redacted": true
+  }
+}

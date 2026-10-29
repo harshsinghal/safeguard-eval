@@ -1,0 +1,14 @@
+{
+  "brief": {
+    "original_question_sha256": "3ef5475171cc8957c3a51c587fcfb4b6707e2fe3c6b0355b9d1261b84ed68c19",
+    "serialized_bytes": 523
+  },
+  "detailed": {
+    "original_question_sha256": "cca7391d62d28aa15202a704fff35970866aaaa4db499c0c6f103f2737d752bb",
+    "serialized_bytes": 1950
+  },
+  "examples": {
+    "original_question_sha256": "82df80c9855aed99b17a2668d63b6c7e86b16cb9eace505ee3339a7dd3bf1b35",
+    "serialized_bytes": 2528
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-10-29T15:24:45.295787+00:00",
+  "endpoint": "https://openrouter.ai/api/alpha/decisions",
+  "request": {
+    "model": "typesafe/jev-1.14",
+    "state": {
+      "content": "Thank you for your help with my question."
+    },
+    "questions": {
+      "classification": {
+        "type": "choice",
+        "instructions": "Does this message contain an insult directed at a person?",
+        "criteria": {
+          "ALLOW": "No insult directed at a person.",
+          "BLOCK": "An insult directed at a person."
+        }
+      }
+    }
+  },
+  "cost_reserve_usd": 0.002688,
+  "benchmark_row": false,
+  "status": 200,
+  "response": {
+    "model": "typesafe/jev-1.14-20261014",
+    "answers": {
+      "classification": {
+        "type": "choice",
+        "choice": "ALLOW",
+        "probabilities": {
+          "ALLOW": 1,
+          "BLOCK": 0
+        },
+        "confidence": 1
+      }
+    },
+    "usage": {
+      "input_tokens": 338,
+      "output_tokens": 31,
+      "cost": 1.4196e-05
+    },
+    "id": "gen-dec-1793287485-odFa5xb9CcN0Iu6Rh7YR",
+    "provider": "TypeSafe"
+  },
+  "latency_seconds": 0.812841541
+}

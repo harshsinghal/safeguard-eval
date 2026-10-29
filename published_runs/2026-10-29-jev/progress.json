@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "model": "typesafe/jev-1.14-20261014",
+  "benchmark_requests": 8103,
+  "benchmark_classifications": 22261,
+  "test_rows": {
+    "wildguard": 1699,
+    "hatexplain": 1924
+  },
+  "cost_usd": 0.424208022,
+  "cap_usd": 2,
+  "prior_experiment_subtotal_usd": 12.50119753456,
+  "experiment_subtotal_usd": 12.92540555656,
+  "budget_scope_note": "Skill-agent conversation costs are separately documented; this is an experiment subtotal, not an account-wide bill.",
+  "reproduction": "passed; archived source, CPU only, zero API calls",
+  "new_gpu_instances": 0,
+  "training_policy_edits_after_test": 0,
+  "focused_tests_passed": 11
+}

@@ -1,0 +1,66 @@
+{
+  "wildguard": {
+    "WildGuard-7B": {
+      "path": "published_runs/2026-10-24-wildguard/runs/wildguard-test-p0/predictions.jsonl.gz",
+      "sha256": "3d9020eb3e0eb92158b31d99dd5bbfdd2d763c24b9be77009f2d3559735e89e9",
+      "candidate": null,
+      "evidence_path": "references/wildguard/0.jsonl.gz"
+    },
+    "policylm calibrated": {
+      "path": "published_runs/2026-10-27-ensemble/cohorts/wildguard-specialists/test-predictions.jsonl.gz",
+      "sha256": "1840fc11110c13fa47058ecdc9ef36e34eabcf55e66e02e74a30da643d691f79",
+      "candidate": "single/policylm/logistic-C1",
+      "evidence_path": "references/wildguard/1.jsonl.gz"
+    },
+    "shieldstral calibrated": {
+      "path": "published_runs/2026-10-28-ensemble-logits/cohorts/wildguard-specialists/test-predictions.jsonl.gz",
+      "sha256": "583fd96961c25e309514522a46e449422d4f075cc8248fab648a257ef9753ca0",
+      "candidate": "logit-single/shieldstral/C0.01",
+      "evidence_path": "references/wildguard/2.jsonl.gz"
+    },
+    "cope calibrated": {
+      "path": "published_runs/2026-10-28-ensemble-logits/cohorts/wildguard-specialists/test-predictions.jsonl.gz",
+      "sha256": "583fd96961c25e309514522a46e449422d4f075cc8248fab648a257ef9753ca0",
+      "candidate": "logit-single/cope/C0.01",
+      "evidence_path": "references/wildguard/3.jsonl.gz"
+    },
+    "Log-odds ensemble (specialists)": {
+      "path": "published_runs/2026-10-28-ensemble-logits/cohorts/wildguard-specialists/test-predictions.jsonl.gz",
+      "sha256": "583fd96961c25e309514522a46e449422d4f075cc8248fab648a257ef9753ca0",
+      "candidate": "logit-logistic/C10",
+      "evidence_path": "references/wildguard/4.jsonl.gz"
+    }
+  },
+  "hatexplain": {
+    "policylm calibrated": {
+      "path": "published_runs/2026-10-28-ensemble-logits/cohorts/hatexplain-specialists/test-predictions.jsonl.gz",
+      "sha256": "a6f4e4493f6ac62f83a011f41c981bcd70143bbba53ed322f1d64e7c0636cd39",
+      "candidate": "logit-single/policylm/C0.1",
+      "evidence_path": "references/hatexplain/0.jsonl.gz"
+    },
+    "shieldstral calibrated": {
+      "path": "published_runs/2026-10-27-ensemble/cohorts/hatexplain-specialists/test-predictions.jsonl.gz",
+      "sha256": "bedc445ea827939aa0d7ec5d943ddc5acaf7d87a0f2785837c95c1fc5f84707e",
+      "candidate": "single/shieldstral/logistic-C0.01",
+      "evidence_path": "references/hatexplain/1.jsonl.gz"
+    },
+    "Log-odds ensemble (specialists)": {
+      "path": "published_runs/2026-10-28-ensemble-logits/cohorts/hatexplain-specialists/test-predictions.jsonl.gz",
+      "sha256": "a6f4e4493f6ac62f83a011f41c981bcd70143bbba53ed322f1d64e7c0636cd39",
+      "candidate": "logit-logistic/C1",
+      "evidence_path": "references/hatexplain/2.jsonl.gz"
+    },
+    "qwen-4b calibrated": {
+      "path": "published_runs/2026-10-28-ensemble-logits/cohorts/hatexplain-mixed/test-predictions.jsonl.gz",
+      "sha256": "1967e28f90516ac705422bae5a6a22343f882636b09b16b703955b35223cf312",
+      "candidate": "logit-single/qwen-4b/C0.01",
+      "evidence_path": "references/hatexplain/3.jsonl.gz"
+    },
+    "Log-odds ensemble (specialists + Qwen)": {
+      "path": "published_runs/2026-10-28-ensemble-logits/cohorts/hatexplain-mixed/test-predictions.jsonl.gz",
+      "sha256": "1967e28f90516ac705422bae5a6a22343f882636b09b16b703955b35223cf312",
+      "candidate": "logit-logistic/C0.1",
+      "evidence_path": "references/hatexplain/4.jsonl.gz"
+    }
+  }
+}

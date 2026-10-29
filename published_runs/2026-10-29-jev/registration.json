@@ -1,0 +1,81 @@
+{
+  "created_utc": "2026-10-29T15:34:02.290883+00:00",
+  "model": "typesafe/jev-1.14",
+  "resolved_model": "typesafe/jev-1.14-20261014",
+  "cap_usd": 2.0,
+  "sources": {
+    "evals/jev/api.py": "d368250e8b9a632bc63bb3b5a12fde49500cf99f6e9c26237fbfd7f94af3756b",
+    "evals/jev/study.py": "d9683a7917c86657c1a8d9f6d52e837010130a55b75a5a4ff33d9205c1fd189c",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/wildguard/metrics.py": "8fd93378cb6bbbcbca2e6ed47e3f3ae198da663709d3fa7dbf44b1be41c69da7",
+    "docs/jev/PLAN.md": "d9488998558b89bddbc04785f9697411bde3c3ea93880fe4cb7fa411a6924a0a"
+  },
+  "data": {
+    "wildguard": {
+      "fit": {
+        "sha256": "cc03cd46be158fbe6bf2d9a60b2aca4e07dfd38107f078dc3cbe9508812a8661",
+        "n": 1024,
+        "labels": {
+          "ALLOW": 479,
+          "BLOCK": 545
+        },
+        "groups": 1014
+      },
+      "validation": {
+        "sha256": "c4d61392c20bc491fa3a3ee7df3c861d75ccfd7529f9f32ae9d5a08b2ea14090",
+        "n": 512,
+        "labels": {
+          "ALLOW": 238,
+          "BLOCK": 274
+        },
+        "groups": 495
+      },
+      "test": {
+        "sha256": "a5fe285c83b24f31bbbc7f75d6deaaab6091224418d11efa39de2ddd5d1fe395",
+        "n": 1699,
+        "labels": {
+          "ALLOW": 945,
+          "BLOCK": 754
+        },
+        "groups": 1699
+      }
+    },
+    "hatexplain": {
+      "fit": {
+        "sha256": "4e58221cc65eb26057be03d57df3211e93e05ee565614c39aa11a11018e89151",
+        "n": 1024,
+        "labels": {
+          "ALLOW": 708,
+          "BLOCK": 316
+        },
+        "groups": 1024
+      },
+      "validation": {
+        "sha256": "c3979094db0c88187ef75de86ab8be6081563e411e853cc01f0e363b65efe0ad",
+        "n": 1920,
+        "labels": {
+          "ALLOW": 1327,
+          "BLOCK": 593
+        },
+        "groups": 1919
+      },
+      "test": {
+        "sha256": "2585d43cbc0462291323a10dd3203dac0f814c76511ff90daef8020c68714858",
+        "n": 1924,
+        "labels": {
+          "ALLOW": 1330,
+          "BLOCK": 594
+        },
+        "groups": 1922
+      }
+    }
+  },
+  "initial_policy_hashes": {
+    "wildguard": "e5e9be815a59a969eb805e22cd3d0123cf5b519e8c26c52c80602fc1960409b8",
+    "hatexplain": "5dbd4c68e1a5f105711c6566b9aa6b81fc6aec916bb84d4d3251ba7074db9dd5"
+  },
+  "baseline_policy_sources": {
+    "evals/wildguard/policies/p0.json": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+    "evals/hatexplain/policies/p0.json": "48ff3502bdad0530a0e99792c53f40a0b6a8a534b41266e4ec8bf3c30e512183"
+  }
+}

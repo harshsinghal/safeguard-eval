@@ -49,6 +49,33 @@ The [research directions](docs/research-directions/README.md) record proposed st
 
 The [third study: frontier API models](docs/frontier-api/PLAN.md) completed a 256-observation fitting-only pilot through OpenRouter for **$0.55**, bringing cumulative spend at that stage to **$8.46** within the $20 cap. Read the [pilot findings](docs/frontier-api/READOUT.md) and [reproducible evidence](published_runs/2026-10-25-frontier-pilot/README.md). The full policy search and held-out evaluation have not run; projected API costs exceed the remaining budget.
 
+## Jev: typed decisions still need policy and threshold testing
+
+We added **Jev 1.14 through OpenRouter's Decisions API** on the same 1,699
+WildGuardTest prompts and 1,924 HateXplain posts. Three policy variants compared
+concise criteria, detailed criteria, and four training-derived examples. Validation
+selected the example-bearing policy before test inference.
+
+| Jev configuration | WildGuard accuracy | HateXplain accuracy |
+|---|---:|---:|
+| Concise policy, native choice | 89.35% | 69.33% |
+| Selected policy, native choice | 90.17% | 75.16% |
+| Selected policy, validation-tuned threshold | 89.94% | 80.67% |
+
+The higher HateXplain accuracy came with lower hate-speech recall: 85.19% before
+the cutoff adjustment, 59.93% afterward. The concise policy reached 79.47% when
+its own threshold was tuned, so wording alone did not produce the full gain.
+Jev was competitive, without establishing a general advantage over the earlier
+models. **22,261 classifications cost $0.424208**, including a separate
+connectivity check; no GPU rental or model-weight updates.
+
+Read the [plain-language findings](docs/jev/READOUT.md),
+[exact policy edits](docs/jev/POLICY-CHANGES.md), and
+[reproducible evidence](published_runs/2026-10-29-jev/README.md).
+This new study is separate from the existing v0.5 paper and skill release.
+The proposed [student article series](docs/research-directions/STUDENT-CURRICULUM.md)
+is recorded for later development.
+
 ## HateXplain: policy structure changes decisions
 
 On all **1,924 HateXplain test posts**, removing the same four policy examples raised Shieldstral's accuracy from **52.4% to 61.0%**, while reducing Qwen4B's from **72.5% to 61.8%**. Presenting unchanged clauses as linear text also helped Shieldstral and hurt Qwen. PolicyLM's native field interface was tested for component omissions and wording transfer, with whole-document formatting excluded.
