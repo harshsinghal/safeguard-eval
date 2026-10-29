@@ -1,5 +1,10 @@
 # Jev benchmark extension
 
+Follow-up: the [balanced leaderboard](../leaderboard/README.md) compares the
+archived configurations under common validation objectives. A separate
+[architecture and local-model review](../research-directions/JEV-AND-LOCAL-DECISION-MODELS.md)
+records what is documented about Jev and possible next experiments.
+
 Status: complete. **Jev was competitive, while wording and thresholds still
 changed its mistakes.** The selected policy scored 90.17% on WildGuardTest and
 75.16% on HateXplain using native choices. Validation-selected thresholds changed

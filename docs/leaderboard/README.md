@@ -1,5 +1,9 @@
 # A leaderboard that shows both kinds of mistakes
 
+For future article and paper updates, see the
+[writing handoff and claim ledger](WRITING-NOTES.md). The frozen evidence below
+remains the source of the numbers.
+
 **The comprehensive comparison is complete.** It covers 197 eligible archived
 configurations and produces 18 entries for each benchmark: individual models,
 ensemble methods, and Jev. All calculations used saved outputs. There were no new

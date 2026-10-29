@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-29",
+  "retrieved_at_utc": "2026-10-29T19:27:33.123350+00:00",
+  "scope": "Primary-source documentation review. No inference, training, GPU rental, paid API requests, or verified local deployment. Model cards are publisher claims.",
+  "models": [
+    {
+      "model_id": "jaredpalmer/kev-4b",
+      "reviewed_revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+      "model_card_url": "https://huggingface.co/jaredpalmer/kev-4b/blob/6cfce5c2fa4b4bd64026336ab649c5ca78857d52/README.md",
+      "model_card_sha256": "e423ce0e3caf0a1e6ff996a58522946a97711e0439c5fea332a8861b02498435",
+      "declared_license": "apache-2.0",
+      "weight_or_adapter_files_listed": true,
+      "inference_verified_in_this_review": false,
+      "note": "Documentation revision only; this does not identify the historical checkpoint used in any prior Safeguard Eval experiment. No weight files were downloaded."
+    },
+    {
+      "model_id": "convaiinnovations/laya",
+      "reviewed_revision": "7b928d828b7b0e022f929d9bd2e44165aa270148",
+      "model_card_url": "https://huggingface.co/convaiinnovations/laya/blob/7b928d828b7b0e022f929d9bd2e44165aa270148/README.md",
+      "model_card_sha256": "00355613796b3f5860b0d5b20392381d26580ec242e04a1fd150c7f116858602",
+      "declared_license": "apache-2.0",
+      "weight_or_adapter_files_listed": true,
+      "inference_verified_in_this_review": false,
+      "note": "Documentation revision only; this does not identify the historical checkpoint used in any prior Safeguard Eval experiment. No weight files were downloaded."
+    },
+    {
+      "model_id": "knowledgator/gliclass-v4-edge",
+      "reviewed_revision": "885af1af8a07edf4ed34df83ca0d995ed8201283",
+      "model_card_url": "https://huggingface.co/knowledgator/gliclass-v4-edge/blob/885af1af8a07edf4ed34df83ca0d995ed8201283/README.md",
+      "model_card_sha256": "cddc2dfc06ac15d7bb2a4bc7790db7aa3647d2545e6b8071c034194b35adffc0",
+      "declared_license": "apache-2.0",
+      "weight_or_adapter_files_listed": true,
+      "inference_verified_in_this_review": false,
+      "note": "Documentation revision only; this does not identify the historical checkpoint used in any prior Safeguard Eval experiment. No weight files were downloaded."
+    },
+    {
+      "model_id": "Cloudflare/clef-flash",
+      "reviewed_revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+      "model_card_url": "https://huggingface.co/Cloudflare/clef-flash/blob/f0b7d3cd65296abfe459e6c228b618f5d8b26d2f/README.md",
+      "model_card_sha256": "53a3dc4ac96a1b2f17e6c03d9cf19a50b25ddad8d270fbe655902f6ce68bb4b5",
+      "declared_license": "apache-2.0",
+      "weight_or_adapter_files_listed": true,
+      "inference_verified_in_this_review": false,
+      "note": "Documentation revision only; this does not identify the historical checkpoint used in any prior Safeguard Eval experiment. No weight files were downloaded."
+    },
+    {
+      "model_id": "musubilabs/policylm-1.7b",
+      "reviewed_revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+      "model_card_url": "https://huggingface.co/musubilabs/policylm-1.7b/blob/b3b2cd408a08a68ab6a30c1fc1e440204e44d57e/README.md",
+      "model_card_sha256": "3b9068afe949d5698968ec60fc702375ab01973c4a986b57285fff8701d685fe",
+      "declared_license": "apache-2.0",
+      "weight_or_adapter_files_listed": true,
+      "inference_verified_in_this_review": false,
+      "note": "Documentation revision only; this does not identify the historical checkpoint used in any prior Safeguard Eval experiment. No weight files were downloaded."
+    },
+    {
+      "model_id": "patronus-studio/wolf-defender-jev",
+      "reviewed_revision": "056f3d58bbd27dd96b60432df10535adce582845",
+      "model_card_url": "https://huggingface.co/patronus-studio/wolf-defender-jev/blob/056f3d58bbd27dd96b60432df10535adce582845/README.md",
+      "model_card_sha256": "409b3f650569fa708b0031ed1590d31574c8c4d05a15f5dccd0019ca9e4fec78",
+      "declared_license": "mit",
+      "weight_or_adapter_files_listed": true,
+      "inference_verified_in_this_review": false,
+      "note": "Documentation revision only; this does not identify the historical checkpoint used in any prior Safeguard Eval experiment. No weight files were downloaded."
+    },
+    {
+      "model_id": "loaiabdalslam/VEJI-V2",
+      "reviewed_revision": "cb8b47117db1b8e4f680616dfbb3a7565addaae5",
+      "model_card_url": "https://huggingface.co/loaiabdalslam/VEJI-V2/blob/cb8b47117db1b8e4f680616dfbb3a7565addaae5/README.md",
+      "model_card_sha256": "1e6a138aa4f57bf0f2054c3d3202d4b4b74a9572ac619a132e95223346410139",
+      "declared_license": "mit",
+      "weight_or_adapter_files_listed": true,
+      "inference_verified_in_this_review": false,
+      "note": "Documentation revision only; this does not identify the historical checkpoint used in any prior Safeguard Eval experiment. No weight files were downloaded."
+    }
+  ],
+  "implementation_repositories": [
+    {
+      "repository": "https://github.com/jaredpalmer/kev",
+      "reviewed_revision": "2074cc44256200bb37540103fa4572901faa10f3",
+      "readme_url": "https://github.com/jaredpalmer/kev/blob/2074cc44256200bb37540103fa4572901faa10f3/README.md",
+      "readme_sha256": "0b68530a29d58de5792574ba8cb4afd735d6c98c96de99f30d2de53cf84fbfd4",
+      "inspection": "README/documentation only; code was not executed or audited in full."
+    },
+    {
+      "repository": "https://github.com/NandhaKishorM/laya",
+      "reviewed_revision": "9afa7f3d4af18f8fa0c25517a440a05d10395b99",
+      "readme_url": "https://github.com/NandhaKishorM/laya/blob/9afa7f3d4af18f8fa0c25517a440a05d10395b99/README.md",
+      "readme_sha256": "681efc122f30bd4821ebd0390c9c0166ceb036e69ba370abb84f5d8bb058bdea",
+      "inspection": "README/documentation only; code was not executed or audited in full."
+    }
+  ],
+  "other_sources": [
+    {
+      "title": "TypeSafe launch",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "interpretation_limit": "Provider description; does not publish full architecture or training recipe.",
+      "accessed": "2026-10-29"
+    },
+    {
+      "title": "TypeSafe training overview",
+      "url": "https://docs.typesafe.ai/introduction/machine-learning-primer",
+      "interpretation_limit": "Provider description of RLCD objectives.",
+      "accessed": "2026-10-29"
+    },
+    {
+      "title": "TypeSafe model documentation",
+      "url": "https://docs.typesafe.ai/models",
+      "interpretation_limit": "Public interface, versions and request-level customization.",
+      "accessed": "2026-10-29"
+    },
+    {
+      "title": "TypeSafe confidence",
+      "url": "https://docs.typesafe.ai/confidence",
+      "interpretation_limit": "Confidence is derived from the returned probability distribution.",
+      "accessed": "2026-10-29"
+    },
+    {
+      "title": "TypeSafe 1.14 announcement",
+      "url": "https://typesafe.ai/blog/jev-1-14",
+      "interpretation_limit": "Version-specific provider context; our experiment was text-only.",
+      "accessed": "2026-10-29"
+    },
+    {
+      "title": "Independent Jev evaluation",
+      "url": "https://arxiv.org/html/2609.37647v1",
+      "interpretation_limit": "Preprint; tested Jev 1.13, not our 1.14 revision; not a causal architecture study.",
+      "accessed": "2026-10-29"
+    },
+    {
+      "title": "Paired Jev and Laya evaluation",
+      "url": "https://arxiv.org/abs/2610.02267",
+      "interpretation_limit": "Preprint; results apply to its tasks and tested revisions, not our moderation tasks.",
+      "accessed": "2026-10-29"
+    },
+    {
+      "title": "Narrow Decision Models",
+      "url": "https://arxiv.org/abs/2610.25553",
+      "interpretation_limit": "Architecture proposal and limited evidence, not a validated substitute in our benchmark.",
+      "accessed": "2026-10-29"
+    },
+    {
+      "title": "Calibration of modern neural networks",
+      "url": "https://arxiv.org/abs/1706.04599",
+      "interpretation_limit": "Calibration reference, not evidence that Jev or a local candidate is calibrated on our data.",
+      "accessed": "2026-10-29"
+    },
+    {
+      "title": "Hugging Face text classification",
+      "url": "https://huggingface.co/docs/transformers/tasks/sequence_classification",
+      "interpretation_limit": "Implementation reference for conventional supervised classification.",
+      "accessed": "2026-10-29"
+    },
+    {
+      "title": "SetFit",
+      "url": "https://huggingface.co/docs/setfit/index",
+      "interpretation_limit": "Alternative fixed-task training baseline.",
+      "accessed": "2026-10-29"
+    }
+  ],
+  "research_note": "JEV-AND-LOCAL-DECISION-MODELS.md"
+}

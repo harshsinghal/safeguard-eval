@@ -138,6 +138,19 @@ differences will be documented as model-selection context instead.
 
 Recording these directions does not start model runs, GPU rentals, or new spending.
 
+## Jev and local decision models
+
+The [29 October source review and proposal](JEV-AND-LOCAL-DECISION-MODELS.md)
+separates Jev's documented decision interface from its undisclosed internals,
+identifies local candidates including Kev, Laya, and GLiClass, and proposes
+testing whether models follow changed policies. It distinguishes adapting
+policy text from training model weights. No experiment in this proposal has
+started.
+
+The [leaderboard writing handoff](../leaderboard/WRITING-NOTES.md) records the
+completed comparison, its interpretation limits, and material to carry into
+the research paper, magazine article, media article, and learning skill.
+
 ## Teaching series parked for later
 
 The proposed [eight-week student curriculum](STUDENT-CURRICULUM.md) was recorded on
