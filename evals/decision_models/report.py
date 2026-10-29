@@ -126,7 +126,7 @@ def extend(state, prior, bundle, experiment):
         'No new API calls, GPU rentals, or model fitting were used to build this leaderboard.',
         'This extension adds frozen-weight Kev and Clef inference on a rented GPU. Earlier entries and selections remain unchanged. No model weights or combiners were trained.').replace(
         'ensembles, and Jev.', 'ensembles, Jev, Kev, and Clef.'))
-    shutil.copytree(prior/'source',bundle/'source')
+    shutil.copytree(prior/'source',bundle/'source',ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
     shutil.copy2(prior/'requirements.txt',bundle/'requirements.txt')
     old_results=read(prior/'results.json')
     for ds in DATA:
