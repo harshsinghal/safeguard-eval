@@ -51,23 +51,41 @@ The [third study: frontier API models](docs/frontier-api/PLAN.md) completed a 25
 
 ## A comprehensive leaderboard that balances both kinds of mistakes
 
-The [balanced leaderboard](docs/leaderboard/README.md) compares **197 eligible
-saved configurations**, with **18 entries per benchmark**, covering specialist
-models, all tested Qwen sizes, WildGuard, Jev, and seven ensemble methods.
+The [expanded balanced leaderboard](published_runs/2026-10-29-leaderboard-decision-models/README.md)
+compares **209 eligible saved configurations**, with **20 entries per benchmark**,
+covering specialist models, all tested Qwen sizes, WildGuard, Jev, Kev, Clef,
+and seven ensemble methods.
 Each entry is selected on a common validation set; no test maximum selects the
 policy or cutoff. The report includes balanced accuracy, macro-F1, MCC, false
 blocks, missed violations, uncertainty, and two operating-target views.
 
-Open the [interactive HTML](published_runs/2026-10-29-leaderboard/index.html)
+Open the [interactive HTML](published_runs/2026-10-29-leaderboard-decision-models/index.html)
 (download and open locally from GitHub), read the
-[complete tables](published_runs/2026-10-29-leaderboard/RESULTS.md), or download
-the [CSV](published_runs/2026-10-29-leaderboard/leaderboard.csv).
+[complete tables](published_runs/2026-10-29-leaderboard-decision-models/RESULTS.md), or download
+the [CSV](published_runs/2026-10-29-leaderboard-decision-models/leaderboard.csv).
 The leading observed balanced scores are **91.08% on WildGuard** and **79.35% on
 HateXplain**, both from ensembles; nearby scores often have unresolved uncertainty.
 Several validation operating targets failed on test, so the report displays
 those failures alongside the rankings. Frontier fitting-only pilots are unranked.
-This retrospective reanalysis used **no new inference, fitting, or paid compute**
-and preserves the original experiment results.
+The [original reanalysis](docs/leaderboard/README.md) used no new inference or
+fitting. The extension adds frozen-weight Kev and Clef inference and preserves
+every earlier entry's selection and scores.
+
+## Kev and Clef: policy wording and cutoffs remain coupled
+
+We tested **Kev 4B** and **Clef-Flash 9B** using their native decision heads,
+without additional fine-tuning. Validation selected the brief policy for Kev
+and the policy with examples for Clef on both tasks. Their balanced test scores
+were **86.93% / 75.17%** for Kev and **87.62% / 74.94%** for Clef on
+WildGuard / HateXplain, below Jev's observed **88.69% / 78.40%**.
+
+On HateXplain, fuller policy text hurt Kev. Clef's example policy looked worse
+at its native decision rule but better after its cutoff was selected on
+validation. Read the [findings and policy edits](docs/decision-models/README.md),
+[reproduction guide](docs/decision-models/RUNNING.md), and
+[evidence archive](published_runs/2026-10-29-decision-models/README.md).
+The 44,522 classifications cost **$0.87** on GPU.ai; shutdown was verified,
+and cumulative recorded spending is **$13.80 of $20**. RunPod was not used.
 
 ## Jev: typed decisions still need policy and threshold testing
 

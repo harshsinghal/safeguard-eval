@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-10-29T19:48:17.873197+00:00",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "transformers": "5.17.0",
+    "peft": "0.21.2",
+    "numpy": "2.5.4",
+    "safetensors": "0.8.0",
+    "huggingface_hub": "1.33.0"
+  },
+  "device": "NVIDIA RTX 6000 Ada Generation",
+  "model": {
+    "id": "jaredpalmer/kev-4b",
+    "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+    "code_revision": "2074cc44256200bb37540103fa4572901faa10f3",
+    "dtype": "bfloat16",
+    "base": "Qwen/Qwen3.5-4B-Base",
+    "base_revision": "1001bb4d826a52d1f399e183466143f4da7b741b"
+  },
+  "temperature": 2.406050072164233,
+  "batch_tokens": 8192,
+  "max_batch": 16,
+  "sources": {
+    "docs/decision-models/PLAN.md": "6ba18dc1f5818c1b71b0bc8d90e6ebf5e3c8540ecb2b014b9c6f0338f8754d86",
+    "evals/decision_models/adapters.py": "a8e4540dd1077dc07cf6a8c4d4ece6e48a8d9ddc1b68afadbdbf650cea931f78",
+    "evals/decision_models/infer.py": "588587d24b836d8f83fdd853bbd37766c652b4280bbce5131cc71042a70170ab",
+    "evals/decision_models/study.py": "ac353a7bf1de44ed8d83016e34541d54cd46f3502cb0089f6d30cb4c34a0d49e",
+    "evals/decision_models/vendor-hashes.json": "bc101bd12269214ca4da7c20c4bfd08b69837d9b703b3c82aeed8821e00b17e1",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/jev/api.py": "d368250e8b9a632bc63bb3b5a12fde49500cf99f6e9c26237fbfd7f94af3756b",
+    "evals/jev/study.py": "d9683a7917c86657c1a8d9f6d52e837010130a55b75a5a4ff33d9205c1fd189c",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30"
+  }
+}

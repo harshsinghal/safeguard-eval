@@ -1,0 +1,21 @@
+{
+  "analysis_role": "exploratory extension; previous entries unchanged; public tests reused",
+  "artifact_hashes": {
+    "coverage.json": "ffb6c6c30e93bd82609d10521ce077d6a2d0617c7ff0df957f72f6587fa9d4a7",
+    "registry.json": "280bedbed90576a854bdc69e8b06b05eaee8ad21c3ca925f3332cace2af3814b",
+    "selection.json": "3b403c6d40f7a9fe21012b921d5602333f091cc621c751d980b5615d314e265f",
+    "validation/hatexplain.json.gz": "e101b321693fd7c1fda2037bd4555f1cba9f92854bec8f08aa0e79ac0ee1cee3",
+    "validation/wildguard.json.gz": "6af5fdc81c7a48190cd7ca563ad97fe27b23bef0a81dce7e1f3a6d32838f45ed"
+  },
+  "created_utc": "2026-10-29T20:34:34.413475+00:00",
+  "decision_freeze_sha256": "991fe9b0d0ab2be7f07925567531ea08280ec4d1c3d0740f3a9aae88a529a4b6",
+  "expected_test_n": {
+    "hatexplain": 1924,
+    "wildguard": 1699
+  },
+  "note": "Prior selections copied unchanged. No fitting in this extension.",
+  "primary": "balanced_accuracy",
+  "prior_archive": "2026-10-29-leaderboard",
+  "prior_checksums_sha256": "32450b72d9b59ca22fa144ad6e17c18be9f20615f99a960515543a20c15d2193",
+  "status": "new entries selected before new inference on test"
+}

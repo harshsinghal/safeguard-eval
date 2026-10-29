@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "classifications": 44522,
+  "unresolved": 0,
+  "prediction_files": 32,
+  "max_input_tokens": {
+    "clef": 5077,
+    "kev": 4335
+  },
+  "first_prediction_utc": {
+    "test": "2026-10-29T20:34:58.336241+00:00",
+    "fit": "2026-10-29T19:48:21.192688+00:00",
+    "validation": "2026-10-29T19:51:07.941407+00:00"
+  },
+  "last_prediction_utc": {
+    "test": "2026-10-29T21:04:30.847558+00:00",
+    "fit": "2026-10-29T20:05:39.928168+00:00",
+    "validation": "2026-10-29T20:18:10.625038+00:00"
+  },
+  "selection_freeze_utc": "2026-10-29T20:34:34.413475+00:00",
+  "no_additional_fine_tuning": true,
+  "cost_usd": 0.87,
+  "gpu_termination_verified": true,
+  "runpod_used": false
+}

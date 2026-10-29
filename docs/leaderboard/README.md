@@ -1,5 +1,10 @@
 # A leaderboard that shows both kinds of mistakes
 
+**Latest extension:** [Kev and Clef have now been tested](../decision-models/README.md).
+The [expanded interactive leaderboard](../../published_runs/2026-10-29-leaderboard-decision-models/index.html)
+has 20 entries per benchmark and preserves every earlier selection and score.
+The remainder of this page describes the original 18-entry reanalysis.
+
 For future article and paper updates, see the
 [writing handoff and claim ledger](WRITING-NOTES.md). The frozen evidence below
 remains the source of the numbers.

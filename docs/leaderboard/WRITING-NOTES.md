@@ -1,5 +1,23 @@
 # Findings to carry into the next round of writing
 
+**New evidence:** the [Kev/Clef extension](../decision-models/README.md) adds two
+open decision models with frozen weights, three policy candidates each, and
+validation-selected cutoffs. The main result is not an architecture victory:
+neither exceeded Jev's observed balanced score. Kev selected brief policies;
+Clef selected policies with examples. On HateXplain, Clef's example policy scored
+65.93% balanced accuracy natively but 74.94% with its frozen cutoff, versus
+71.25% for the brief policy with its own cutoff. Kev's brief/detailed equivalents
+were 75.17%/65.93%. Treat these as evidence about the combination of policy,
+interpreter, and decision rule. The [full report](../decision-models/README.md)
+separates native wording effects from policy-plus-cutoff effects and gives
+paired uncertainty. The [expanded leaderboard](../../published_runs/2026-10-29-leaderboard-decision-models/README.md)
+preserves the previous 18 entries and adds the two new ones. Do not describe the
+entire Clef improvement as a wording-only gain, claim that more detail always
+helps, infer Jev's hidden architecture, or imply that these models beat the
+existing specialist/ensemble leaders. The new experiment cost $0.87 and used
+no additional fine-tuning. Paper, magazine, media, and skill-release updates
+remain a separate editorial step.
+
 Recorded 29 October 2026. This is an editorial handoff for the research paper,
 magazine article, media article, and learning skill. It adds no experiment and
 does not change the frozen leaderboard. The current papers have not yet been

@@ -1,0 +1,10 @@
+{
+  "kev": {
+    "sha256": "e423ce0e3caf0a1e6ff996a58522946a97711e0439c5fea332a8861b02498435",
+    "model_card": "https://huggingface.co/jaredpalmer/kev-4b/blob/6cfce5c2fa4b4bd64026336ab649c5ca78857d52/README.md"
+  },
+  "clef": {
+    "sha256": "53a3dc4ac96a1b2f17e6c03d9cf19a50b25ddad8d270fbe655902f6ce68bb4b5",
+    "model_card": "https://huggingface.co/Cloudflare/clef-flash/blob/f0b7d3cd65296abfe459e6c228b618f5d8b26d2f/README.md"
+  }
+}

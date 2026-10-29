@@ -1,0 +1,1782 @@
+{
+  "clef/hatexplain": {
+    "brief": {
+      "fitting_native": {
+        "accuracy": 0.5908203125,
+        "allow_f1": 0.6214995483288166,
+        "auroc": 0.7473561646284775,
+        "average_precision": 0.5576192322228829,
+        "balanced_accuracy": 0.6559125366516484,
+        "block_f1": 0.5547290116896918,
+        "compliant_error_rate": 0.5141242937853108,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 55,
+          "fp": 364,
+          "tn": 344,
+          "tp": 261
+        },
+        "coverage": 1.0,
+        "false_blocks": 364,
+        "false_negative_rate": 0.17405063291139242,
+        "false_positive_rate": 0.5141242937853108,
+        "macro_f1": 0.5881142800092543,
+        "mcc": 0.29535528523630206,
+        "missed_violations": 55,
+        "n": 1024,
+        "negatives": 708,
+        "positives": 316,
+        "precision": 0.4176,
+        "recall": 0.8259493670886076,
+        "score_coverage": 1.0,
+        "score_n": 1024,
+        "specificity": 0.4858757062146893,
+        "unresolved": 0,
+        "violation_error_rate": 0.17405063291139242
+      },
+      "native": {
+        "accuracy": 0.6122661122661123,
+        "allow_f1": 0.6420345489443378,
+        "auroc": 0.7716918559023822,
+        "average_precision": 0.580740757677888,
+        "balanced_accuracy": 0.6799549378496748,
+        "block_f1": 0.5770975056689343,
+        "compliant_error_rate": 0.49699248120300754,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 85,
+          "fp": 661,
+          "tn": 669,
+          "tp": 509
+        },
+        "coverage": 1.0,
+        "false_blocks": 661,
+        "false_negative_rate": 0.14309764309764308,
+        "false_positive_rate": 0.49699248120300754,
+        "macro_f1": 0.609566027306636,
+        "mcc": 0.34059181173032466,
+        "missed_violations": 85,
+        "n": 1924,
+        "negatives": 1330,
+        "positives": 594,
+        "precision": 0.43504273504273505,
+        "recall": 0.8569023569023569,
+        "score_coverage": 1.0,
+        "score_n": 1924,
+        "specificity": 0.5030075187969925,
+        "unresolved": 0,
+        "violation_error_rate": 0.14309764309764308
+      },
+      "native_balanced_ci95": [
+        0.6591593297111339,
+        0.6985323858738715
+      ],
+      "native_vs_brief": {
+        "balanced_accuracy_difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "tuned": {
+        "accuracy": 0.7286902286902287,
+        "allow_f1": 0.7936758893280632,
+        "auroc": 0.7716918559023822,
+        "average_precision": 0.580740757677888,
+        "balanced_accuracy": 0.7124604440393913,
+        "block_f1": 0.6039453717754173,
+        "compliant_error_rate": 0.24511278195488723,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 196,
+          "fp": 326,
+          "tn": 1004,
+          "tp": 398
+        },
+        "coverage": 1.0,
+        "false_blocks": 326,
+        "false_negative_rate": 0.32996632996632996,
+        "false_positive_rate": 0.24511278195488723,
+        "macro_f1": 0.6988106305517403,
+        "mcc": 0.40519792932549326,
+        "missed_violations": 196,
+        "n": 1924,
+        "negatives": 1330,
+        "positives": 594,
+        "precision": 0.5497237569060773,
+        "recall": 0.67003367003367,
+        "score_coverage": 1.0,
+        "score_n": 1924,
+        "specificity": 0.7548872180451128,
+        "unresolved": 0,
+        "violation_error_rate": 0.32996632996632996
+      },
+      "tuned_balanced_ci95": [
+        0.6903383189407665,
+        0.7341173944464241
+      ],
+      "tuned_vs_brief": {
+        "balanced_accuracy_difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "validation": {
+        "accuracy": 0.7416666666666667,
+        "allow_f1": 0.8022328548644339,
+        "balanced_accuracy": 0.7314956837558504,
+        "block_f1": 0.6276276276276276,
+        "compliant_error_rate": 0.24189902034664656,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 175,
+          "fp": 321,
+          "tn": 1006,
+          "tp": 418
+        },
+        "coverage": 1.0,
+        "false_blocks": 321,
+        "false_negative_rate": 0.2951096121416526,
+        "false_positive_rate": 0.24189902034664656,
+        "macro_f1": 0.7149302412460308,
+        "mcc": 0.43963122800368143,
+        "missed_violations": 175,
+        "n": 1920,
+        "negatives": 1327,
+        "positives": 593,
+        "precision": 0.5656292286874154,
+        "recall": 0.7048903878583473,
+        "specificity": 0.7581009796533534,
+        "unresolved": 0,
+        "violation_error_rate": 0.2951096121416526
+      },
+      "validation_selected_threshold": 0.84
+    },
+    "detailed": {
+      "fitting_native": {
+        "accuracy": 0.5693359375,
+        "allow_f1": 0.58435438265787,
+        "auroc": 0.7753298648358722,
+        "average_precision": 0.6212831300316586,
+        "balanced_accuracy": 0.6508885789887722,
+        "block_f1": 0.5531914893617021,
+        "compliant_error_rate": 0.5621468926553672,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 43,
+          "fp": 398,
+          "tn": 310,
+          "tp": 273
+        },
+        "coverage": 1.0,
+        "false_blocks": 398,
+        "false_negative_rate": 0.1360759493670886,
+        "false_positive_rate": 0.5621468926553672,
+        "macro_f1": 0.5687729360097861,
+        "mcc": 0.2932904497838716,
+        "missed_violations": 43,
+        "n": 1024,
+        "negatives": 708,
+        "positives": 316,
+        "precision": 0.4068554396423249,
+        "recall": 0.8639240506329114,
+        "score_coverage": 1.0,
+        "score_n": 1024,
+        "specificity": 0.4378531073446328,
+        "unresolved": 0,
+        "violation_error_rate": 0.1360759493670886
+      },
+      "native": {
+        "accuracy": 0.5831600831600832,
+        "allow_f1": 0.5949494949494949,
+        "auroc": 0.805171388066125,
+        "average_precision": 0.6529232198565769,
+        "balanced_accuracy": 0.6700817700817701,
+        "block_f1": 0.5706638115631691,
+        "compliant_error_rate": 0.5571428571428572,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 61,
+          "fp": 741,
+          "tn": 589,
+          "tp": 533
+        },
+        "coverage": 1.0,
+        "false_blocks": 741,
+        "false_negative_rate": 0.1026936026936027,
+        "false_positive_rate": 0.5571428571428572,
+        "macro_f1": 0.5828066532563321,
+        "mcc": 0.3322503241540661,
+        "missed_violations": 61,
+        "n": 1924,
+        "negatives": 1330,
+        "positives": 594,
+        "precision": 0.41836734693877553,
+        "recall": 0.8973063973063973,
+        "score_coverage": 1.0,
+        "score_n": 1924,
+        "specificity": 0.44285714285714284,
+        "unresolved": 0,
+        "violation_error_rate": 0.1026936026936027
+      },
+      "native_balanced_ci95": [
+        0.6510440363603482,
+        0.6875707184683286
+      ],
+      "native_vs_brief": {
+        "balanced_accuracy_difference": -0.0098731677679047,
+        "ci95": [
+          -0.022970217052896952,
+          0.0038830392212998227
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "tuned": {
+        "accuracy": 0.7297297297297297,
+        "allow_f1": 0.7867104183757178,
+        "auroc": 0.805171388066125,
+        "average_precision": 0.6529232198565769,
+        "balanced_accuracy": 0.7351054403685983,
+        "block_f1": 0.6312056737588653,
+        "compliant_error_rate": 0.2789473684210526,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 149,
+          "fp": 371,
+          "tn": 959,
+          "tp": 445
+        },
+        "coverage": 1.0,
+        "false_blocks": 371,
+        "false_negative_rate": 0.25084175084175087,
+        "false_positive_rate": 0.2789473684210526,
+        "macro_f1": 0.7089580460672915,
+        "mcc": 0.4395383342130601,
+        "missed_violations": 149,
+        "n": 1924,
+        "negatives": 1330,
+        "positives": 594,
+        "precision": 0.5453431372549019,
+        "recall": 0.7491582491582491,
+        "score_coverage": 1.0,
+        "score_n": 1924,
+        "specificity": 0.7210526315789474,
+        "unresolved": 0,
+        "violation_error_rate": 0.25084175084175087
+      },
+      "tuned_balanced_ci95": [
+        0.7138157793222079,
+        0.7556391311984594
+      ],
+      "tuned_vs_brief": {
+        "balanced_accuracy_difference": 0.022644996329206912,
+        "ci95": [
+          0.005887846707358546,
+          0.039630403677349796
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "validation": {
+        "accuracy": 0.7510416666666667,
+        "allow_f1": 0.8026424442609413,
+        "balanced_accuracy": 0.762529688872058,
+        "block_f1": 0.6629055007052186,
+        "compliant_error_rate": 0.26752072343632255,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 123,
+          "fp": 355,
+          "tn": 972,
+          "tp": 470
+        },
+        "coverage": 1.0,
+        "false_blocks": 355,
+        "false_negative_rate": 0.20741989881956155,
+        "false_positive_rate": 0.26752072343632255,
+        "macro_f1": 0.73277397248308,
+        "mcc": 0.49004638948091667,
+        "missed_violations": 123,
+        "n": 1920,
+        "negatives": 1327,
+        "positives": 593,
+        "precision": 0.5696969696969697,
+        "recall": 0.7925801011804384,
+        "specificity": 0.7324792765636775,
+        "unresolved": 0,
+        "violation_error_rate": 0.20741989881956155
+      },
+      "validation_selected_threshold": 0.83
+    },
+    "examples": {
+      "native": {
+        "accuracy": 0.5540540540540541,
+        "allow_f1": 0.5436170212765957,
+        "auroc": 0.8164236348446874,
+        "average_precision": 0.6578193476726537,
+        "balanced_accuracy": 0.6592769803296119,
+        "block_f1": 0.5640243902439024,
+        "compliant_error_rate": 0.6157894736842106,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 39,
+          "fp": 819,
+          "tn": 511,
+          "tp": 555
+        },
+        "coverage": 1.0,
+        "false_blocks": 819,
+        "false_negative_rate": 0.06565656565656566,
+        "false_positive_rate": 0.6157894736842106,
+        "macro_f1": 0.5538207057602491,
+        "mcc": 0.32570718645004487,
+        "missed_violations": 39,
+        "n": 1924,
+        "negatives": 1330,
+        "positives": 594,
+        "precision": 0.4039301310043668,
+        "recall": 0.9343434343434344,
+        "score_coverage": 1.0,
+        "score_n": 1924,
+        "specificity": 0.38421052631578945,
+        "unresolved": 0,
+        "violation_error_rate": 0.06565656565656566
+      },
+      "native_balanced_ci95": [
+        0.6429452341095702,
+        0.6758289066964613
+      ],
+      "native_vs_brief": {
+        "balanced_accuracy_difference": -0.02067795752006285,
+        "ci95": [
+          -0.03570200650969198,
+          -0.004405670891313243
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "tuned": {
+        "accuracy": 0.7603950103950103,
+        "allow_f1": 0.8178585539312525,
+        "auroc": 0.8164236348446874,
+        "average_precision": 0.6578193476726537,
+        "balanced_accuracy": 0.7493671046302626,
+        "block_f1": 0.6499620349278664,
+        "compliant_error_rate": 0.22180451127819548,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 166,
+          "fp": 295,
+          "tn": 1035,
+          "tp": 428
+        },
+        "coverage": 1.0,
+        "false_blocks": 295,
+        "false_negative_rate": 0.27946127946127947,
+        "false_positive_rate": 0.22180451127819548,
+        "macro_f1": 0.7339102944295595,
+        "mcc": 0.4757157705745495,
+        "missed_violations": 166,
+        "n": 1924,
+        "negatives": 1330,
+        "positives": 594,
+        "precision": 0.5919778699861687,
+        "recall": 0.7205387205387206,
+        "score_coverage": 1.0,
+        "score_n": 1924,
+        "specificity": 0.7781954887218046,
+        "unresolved": 0,
+        "violation_error_rate": 0.27946127946127947
+      },
+      "tuned_balanced_ci95": [
+        0.7289238412270975,
+        0.7700405554216304
+      ],
+      "tuned_vs_brief": {
+        "balanced_accuracy_difference": 0.03690666059087122,
+        "ci95": [
+          0.02039154650179696,
+          0.05379634490222676
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "validation": {
+        "accuracy": 0.7729166666666667,
+        "allow_f1": 0.8256,
+        "balanced_accuracy": 0.7699600081838989,
+        "block_f1": 0.6746268656716418,
+        "compliant_error_rate": 0.22230595327807084,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 141,
+          "fp": 295,
+          "tn": 1032,
+          "tp": 452
+        },
+        "coverage": 1.0,
+        "false_blocks": 295,
+        "false_negative_rate": 0.23777403035413153,
+        "false_positive_rate": 0.22230595327807084,
+        "macro_f1": 0.7501134328358209,
+        "mcc": 0.5116617235653542,
+        "missed_violations": 141,
+        "n": 1920,
+        "negatives": 1327,
+        "positives": 593,
+        "precision": 0.6050870147255689,
+        "recall": 0.7622259696458684,
+        "specificity": 0.7776940467219292,
+        "unresolved": 0,
+        "violation_error_rate": 0.23777403035413153
+      },
+      "validation_selected_threshold": 0.88
+    }
+  },
+  "clef/wildguard": {
+    "brief": {
+      "fitting_native": {
+        "accuracy": 0.8896484375,
+        "allow_f1": 0.887785501489573,
+        "auroc": 0.953705157916914,
+        "average_precision": 0.964781552603362,
+        "balanced_accuracy": 0.8922851506387544,
+        "block_f1": 0.8914505283381364,
+        "compliant_error_rate": 0.06680584551148225,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 81,
+          "fp": 32,
+          "tn": 447,
+          "tp": 464
+        },
+        "coverage": 1.0,
+        "false_blocks": 32,
+        "false_negative_rate": 0.14862385321100918,
+        "false_positive_rate": 0.06680584551148225,
+        "macro_f1": 0.8896180149138547,
+        "mcc": 0.7833215468836262,
+        "missed_violations": 81,
+        "n": 1024,
+        "negatives": 479,
+        "positives": 545,
+        "precision": 0.9354838709677419,
+        "recall": 0.8513761467889909,
+        "score_coverage": 1.0,
+        "score_n": 1024,
+        "specificity": 0.9331941544885177,
+        "unresolved": 0,
+        "violation_error_rate": 0.14862385321100918
+      },
+      "native": {
+        "accuracy": 0.8681577398469688,
+        "allow_f1": 0.8882235528942116,
+        "auroc": 0.946233842785567,
+        "average_precision": 0.9441678349036857,
+        "balanced_accuracy": 0.8588305053822295,
+        "block_f1": 0.8393113342898135,
+        "compliant_error_rate": 0.0582010582010582,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 169,
+          "fp": 55,
+          "tn": 890,
+          "tp": 585
+        },
+        "coverage": 1.0,
+        "false_blocks": 55,
+        "false_negative_rate": 0.22413793103448276,
+        "false_positive_rate": 0.0582010582010582,
+        "macro_f1": 0.8637674435920126,
+        "mcc": 0.735839272024276,
+        "missed_violations": 169,
+        "n": 1699,
+        "negatives": 945,
+        "positives": 754,
+        "precision": 0.9140625,
+        "recall": 0.7758620689655172,
+        "score_coverage": 1.0,
+        "score_n": 1699,
+        "specificity": 0.9417989417989417,
+        "unresolved": 0,
+        "violation_error_rate": 0.22413793103448276
+      },
+      "native_balanced_ci95": [
+        0.8422844891583656,
+        0.8750374456387721
+      ],
+      "native_vs_brief": {
+        "balanced_accuracy_difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "tuned": {
+        "accuracy": 0.8681577398469688,
+        "allow_f1": 0.8884462151394422,
+        "auroc": 0.946233842785567,
+        "average_precision": 0.9441678349036857,
+        "balanced_accuracy": 0.8585624464934809,
+        "block_f1": 0.8388489208633093,
+        "compliant_error_rate": 0.056084656084656084,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 171,
+          "fp": 53,
+          "tn": 892,
+          "tp": 583
+        },
+        "coverage": 1.0,
+        "false_blocks": 53,
+        "false_negative_rate": 0.22679045092838196,
+        "false_positive_rate": 0.056084656084656084,
+        "macro_f1": 0.8636475680013758,
+        "mcc": 0.736209106601365,
+        "missed_violations": 171,
+        "n": 1699,
+        "negatives": 945,
+        "positives": 754,
+        "precision": 0.9166666666666666,
+        "recall": 0.773209549071618,
+        "score_coverage": 1.0,
+        "score_n": 1699,
+        "specificity": 0.9439153439153439,
+        "unresolved": 0,
+        "violation_error_rate": 0.22679045092838196
+      },
+      "tuned_balanced_ci95": [
+        0.841834962759562,
+        0.8747073590141408
+      ],
+      "tuned_vs_brief": {
+        "balanced_accuracy_difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "validation": {
+        "accuracy": 0.89453125,
+        "allow_f1": 0.8953488372093024,
+        "balanced_accuracy": 0.8995276942893946,
+        "block_f1": 0.8937007874015748,
+        "compliant_error_rate": 0.029411764705882353,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 47,
+          "fp": 7,
+          "tn": 231,
+          "tp": 227
+        },
+        "coverage": 1.0,
+        "false_blocks": 7,
+        "false_negative_rate": 0.17153284671532848,
+        "false_positive_rate": 0.029411764705882353,
+        "macro_f1": 0.8945248123054386,
+        "mcc": 0.8000374517387964,
+        "missed_violations": 47,
+        "n": 512,
+        "negatives": 238,
+        "positives": 274,
+        "precision": 0.9700854700854701,
+        "recall": 0.8284671532846716,
+        "specificity": 0.9705882352941176,
+        "unresolved": 0,
+        "violation_error_rate": 0.17153284671532848
+      },
+      "validation_selected_threshold": 0.52
+    },
+    "detailed": {
+      "fitting_native": {
+        "accuracy": 0.8779296875,
+        "allow_f1": 0.8817407757805109,
+        "auroc": 0.96935894734826,
+        "average_precision": 0.9757314739663456,
+        "balanced_accuracy": 0.8836777690524985,
+        "block_f1": 0.8738647830474269,
+        "compliant_error_rate": 0.027139874739039668,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 112,
+          "fp": 13,
+          "tn": 466,
+          "tp": 433
+        },
+        "coverage": 1.0,
+        "false_blocks": 13,
+        "false_negative_rate": 0.20550458715596331,
+        "false_positive_rate": 0.027139874739039668,
+        "macro_f1": 0.8778027794139689,
+        "mcc": 0.7722026560932559,
+        "missed_violations": 112,
+        "n": 1024,
+        "negatives": 479,
+        "positives": 545,
+        "precision": 0.9708520179372198,
+        "recall": 0.7944954128440367,
+        "score_coverage": 1.0,
+        "score_n": 1024,
+        "specificity": 0.9728601252609603,
+        "unresolved": 0,
+        "violation_error_rate": 0.20550458715596331
+      },
+      "native": {
+        "accuracy": 0.85167745732784,
+        "allow_f1": 0.877431906614786,
+        "auroc": 0.9352111490042525,
+        "average_precision": 0.9222282884141679,
+        "balanced_accuracy": 0.8386545127924439,
+        "block_f1": 0.812220566318927,
+        "compliant_error_rate": 0.0455026455026455,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 209,
+          "fp": 43,
+          "tn": 902,
+          "tp": 545
+        },
+        "coverage": 1.0,
+        "false_blocks": 43,
+        "false_negative_rate": 0.27718832891246686,
+        "false_positive_rate": 0.0455026455026455,
+        "macro_f1": 0.8448262364668565,
+        "mcc": 0.7073636647470052,
+        "missed_violations": 209,
+        "n": 1699,
+        "negatives": 945,
+        "positives": 754,
+        "precision": 0.9268707482993197,
+        "recall": 0.7228116710875332,
+        "score_coverage": 1.0,
+        "score_n": 1699,
+        "specificity": 0.9544973544973545,
+        "unresolved": 0,
+        "violation_error_rate": 0.27718832891246686
+      },
+      "native_balanced_ci95": [
+        0.8214743504138632,
+        0.8557469808716769
+      ],
+      "native_vs_brief": {
+        "balanced_accuracy_difference": -0.02017599258978564,
+        "ci95": [
+          -0.03434269688024698,
+          -0.005444151892925974
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "tuned": {
+        "accuracy": 0.8758092995879929,
+        "allow_f1": 0.8910686628807434,
+        "auroc": 0.9352111490042525,
+        "average_precision": 0.9222282884141679,
+        "balanced_accuracy": 0.8710699900355072,
+        "block_f1": 0.8555783709787816,
+        "compliant_error_rate": 0.08677248677248678,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 129,
+          "fp": 82,
+          "tn": 863,
+          "tp": 625
+        },
+        "coverage": 1.0,
+        "false_blocks": 82,
+        "false_negative_rate": 0.17108753315649866,
+        "false_positive_rate": 0.08677248677248678,
+        "macro_f1": 0.8733235169297625,
+        "mcc": 0.7480349032028211,
+        "missed_violations": 129,
+        "n": 1699,
+        "negatives": 945,
+        "positives": 754,
+        "precision": 0.884016973125884,
+        "recall": 0.8289124668435013,
+        "score_coverage": 1.0,
+        "score_n": 1699,
+        "specificity": 0.9132275132275133,
+        "unresolved": 0,
+        "violation_error_rate": 0.17108753315649866
+      },
+      "tuned_balanced_ci95": [
+        0.8543850654589216,
+        0.8867145772160561
+      ],
+      "tuned_vs_brief": {
+        "balanced_accuracy_difference": 0.012507543542026323,
+        "ci95": [
+          -0.0008458476360888809,
+          0.025083709183082805
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "validation": {
+        "accuracy": 0.908203125,
+        "allow_f1": 0.9034907597535934,
+        "balanced_accuracy": 0.9092651659203828,
+        "block_f1": 0.9124767225325885,
+        "compliant_error_rate": 0.07563025210084033,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 29,
+          "fp": 18,
+          "tn": 220,
+          "tp": 245
+        },
+        "coverage": 1.0,
+        "false_blocks": 18,
+        "false_negative_rate": 0.10583941605839416,
+        "false_positive_rate": 0.07563025210084033,
+        "macro_f1": 0.9079837411430909,
+        "mcc": 0.8168098938121858,
+        "missed_violations": 29,
+        "n": 512,
+        "negatives": 238,
+        "positives": 274,
+        "precision": 0.9315589353612167,
+        "recall": 0.8941605839416058,
+        "specificity": 0.9243697478991597,
+        "unresolved": 0,
+        "violation_error_rate": 0.10583941605839416
+      },
+      "validation_selected_threshold": 0.37
+    },
+    "examples": {
+      "native": {
+        "accuracy": 0.8605061801059447,
+        "allow_f1": 0.8822652757078987,
+        "auroc": 0.9358083168427995,
+        "average_precision": 0.9227395651961283,
+        "balanced_accuracy": 0.8504778746158057,
+        "block_f1": 0.8288808664259928,
+        "compliant_error_rate": 0.06031746031746032,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 180,
+          "fp": 57,
+          "tn": 888,
+          "tp": 574
+        },
+        "coverage": 1.0,
+        "false_blocks": 57,
+        "false_negative_rate": 0.23872679045092837,
+        "false_positive_rate": 0.06031746031746032,
+        "macro_f1": 0.8555730710669458,
+        "mcc": 0.7207619862004352,
+        "missed_violations": 180,
+        "n": 1699,
+        "negatives": 945,
+        "positives": 754,
+        "precision": 0.9096671949286846,
+        "recall": 0.7612732095490716,
+        "score_coverage": 1.0,
+        "score_n": 1699,
+        "specificity": 0.9396825396825397,
+        "unresolved": 0,
+        "violation_error_rate": 0.23872679045092837
+      },
+      "native_balanced_ci95": [
+        0.8337658911004311,
+        0.8672562317948476
+      ],
+      "native_vs_brief": {
+        "balanced_accuracy_difference": -0.008352630766423785,
+        "ci95": [
+          -0.022563672315456966,
+          0.005671458579131179
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "tuned": {
+        "accuracy": 0.8799293702177752,
+        "allow_f1": 0.8938605619146722,
+        "auroc": 0.9358083168427995,
+        "average_precision": 0.9227395651961283,
+        "balanced_accuracy": 0.876248017627328,
+        "block_f1": 0.8617886178861789,
+        "compliant_error_rate": 0.091005291005291,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 118,
+          "fp": 86,
+          "tn": 859,
+          "tp": 636
+        },
+        "coverage": 1.0,
+        "false_blocks": 86,
+        "false_negative_rate": 0.15649867374005305,
+        "false_positive_rate": 0.091005291005291,
+        "macro_f1": 0.8778245899004256,
+        "mcc": 0.756292707235161,
+        "missed_violations": 118,
+        "n": 1699,
+        "negatives": 945,
+        "positives": 754,
+        "precision": 0.8808864265927978,
+        "recall": 0.843501326259947,
+        "score_coverage": 1.0,
+        "score_n": 1699,
+        "specificity": 0.908994708994709,
+        "unresolved": 0,
+        "violation_error_rate": 0.15649867374005305
+      },
+      "tuned_balanced_ci95": [
+        0.8598958152051603,
+        0.8916070688735244
+      ],
+      "tuned_vs_brief": {
+        "balanced_accuracy_difference": 0.017685571133847056,
+        "ci95": [
+          0.00481716199288641,
+          0.03105840733032573
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "validation": {
+        "accuracy": 0.912109375,
+        "allow_f1": 0.9056603773584906,
+        "balanced_accuracy": 0.9118107096853341,
+        "block_f1": 0.9177330895795247,
+        "compliant_error_rate": 0.09243697478991597,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 23,
+          "fp": 22,
+          "tn": 216,
+          "tp": 251
+        },
+        "coverage": 1.0,
+        "false_blocks": 22,
+        "false_negative_rate": 0.08394160583941605,
+        "false_positive_rate": 0.09243697478991597,
+        "macro_f1": 0.9116967334690076,
+        "mcc": 0.8234004849480201,
+        "missed_violations": 23,
+        "n": 512,
+        "negatives": 238,
+        "positives": 274,
+        "precision": 0.9194139194139194,
+        "recall": 0.916058394160584,
+        "specificity": 0.907563025210084,
+        "unresolved": 0,
+        "violation_error_rate": 0.08394160583941605
+      },
+      "validation_selected_threshold": 0.36
+    }
+  },
+  "kev/hatexplain": {
+    "brief": {
+      "fitting_native": {
+        "accuracy": 0.61328125,
+        "allow_f1": 0.6451612903225806,
+        "auroc": 0.7811136737466923,
+        "average_precision": 0.6463403472994953,
+        "balanced_accuracy": 0.6782879210469857,
+        "block_f1": 0.575107296137339,
+        "compliant_error_rate": 0.4915254237288136,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 48,
+          "fp": 348,
+          "tn": 360,
+          "tp": 268
+        },
+        "coverage": 1.0,
+        "false_blocks": 348,
+        "false_negative_rate": 0.1518987341772152,
+        "false_positive_rate": 0.4915254237288136,
+        "macro_f1": 0.6101342932299598,
+        "mcc": 0.3364276244847607,
+        "missed_violations": 48,
+        "n": 1024,
+        "negatives": 708,
+        "positives": 316,
+        "precision": 0.43506493506493504,
+        "recall": 0.8481012658227848,
+        "score_coverage": 1.0,
+        "score_n": 1024,
+        "specificity": 0.5084745762711864,
+        "unresolved": 0,
+        "violation_error_rate": 0.1518987341772152
+      },
+      "native": {
+        "accuracy": 0.632016632016632,
+        "allow_f1": 0.6609195402298851,
+        "auroc": 0.8149236728184096,
+        "average_precision": 0.6437542006205249,
+        "balanced_accuracy": 0.7021594390015442,
+        "block_f1": 0.5977272727272728,
+        "compliant_error_rate": 0.48120300751879697,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 68,
+          "fp": 640,
+          "tn": 690,
+          "tp": 526
+        },
+        "coverage": 1.0,
+        "false_blocks": 640,
+        "false_negative_rate": 0.11447811447811448,
+        "false_positive_rate": 0.48120300751879697,
+        "macro_f1": 0.6293234064785789,
+        "mcc": 0.382260289474277,
+        "missed_violations": 68,
+        "n": 1924,
+        "negatives": 1330,
+        "positives": 594,
+        "precision": 0.451114922813036,
+        "recall": 0.8855218855218855,
+        "score_coverage": 1.0,
+        "score_n": 1924,
+        "specificity": 0.518796992481203,
+        "unresolved": 0,
+        "violation_error_rate": 0.11447811447811448
+      },
+      "native_balanced_ci95": [
+        0.6831228288344714,
+        0.7203433087299471
+      ],
+      "native_vs_brief": {
+        "balanced_accuracy_difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "tuned": {
+        "accuracy": 0.7468814968814969,
+        "allow_f1": 0.8014675907052589,
+        "auroc": 0.8149236728184096,
+        "average_precision": 0.6437542006205249,
+        "balanced_accuracy": 0.7517037543353333,
+        "block_f1": 0.6508960573476702,
+        "compliant_error_rate": 0.26090225563909775,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 140,
+          "fp": 347,
+          "tn": 983,
+          "tp": 454
+        },
+        "coverage": 1.0,
+        "false_blocks": 347,
+        "false_negative_rate": 0.2356902356902357,
+        "false_positive_rate": 0.26090225563909775,
+        "macro_f1": 0.7261818240264646,
+        "mcc": 0.47177247170499276,
+        "missed_violations": 140,
+        "n": 1924,
+        "negatives": 1330,
+        "positives": 594,
+        "precision": 0.5667915106117354,
+        "recall": 0.7643097643097643,
+        "score_coverage": 1.0,
+        "score_n": 1924,
+        "specificity": 0.7390977443609023,
+        "unresolved": 0,
+        "violation_error_rate": 0.2356902356902357
+      },
+      "tuned_balanced_ci95": [
+        0.7306736371593306,
+        0.7721124840896201
+      ],
+      "tuned_vs_brief": {
+        "balanced_accuracy_difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "validation": {
+        "accuracy": 0.7588541666666667,
+        "allow_f1": 0.811251528740318,
+        "balanced_accuracy": 0.7644504905891518,
+        "block_f1": 0.6661860129776496,
+        "compliant_error_rate": 0.25018839487565936,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 131,
+          "fp": 332,
+          "tn": 995,
+          "tp": 462
+        },
+        "coverage": 1.0,
+        "false_blocks": 332,
+        "false_negative_rate": 0.2209106239460371,
+        "false_positive_rate": 0.25018839487565936,
+        "macro_f1": 0.7387187708589837,
+        "mcc": 0.4962011132925298,
+        "missed_violations": 131,
+        "n": 1920,
+        "negatives": 1327,
+        "positives": 593,
+        "precision": 0.5818639798488665,
+        "recall": 0.7790893760539629,
+        "specificity": 0.7498116051243406,
+        "unresolved": 0,
+        "violation_error_rate": 0.2209106239460371
+      },
+      "validation_selected_threshold": 0.71
+    },
+    "detailed": {
+      "fitting_native": {
+        "accuracy": 0.69921875,
+        "allow_f1": 0.7921727395411606,
+        "auroc": 0.6955365443753129,
+        "average_precision": 0.5152504931689457,
+        "balanced_accuracy": 0.618661946649503,
+        "block_f1": 0.4558303886925795,
+        "compliant_error_rate": 0.1709039548022599,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 187,
+          "fp": 121,
+          "tn": 587,
+          "tp": 129
+        },
+        "coverage": 1.0,
+        "false_blocks": 121,
+        "false_negative_rate": 0.5917721518987342,
+        "false_positive_rate": 0.1709039548022599,
+        "macro_f1": 0.6240015641168701,
+        "mcc": 0.2551885297759673,
+        "missed_violations": 187,
+        "n": 1024,
+        "negatives": 708,
+        "positives": 316,
+        "precision": 0.516,
+        "recall": 0.40822784810126583,
+        "score_coverage": 1.0,
+        "score_n": 1024,
+        "specificity": 0.8290960451977402,
+        "unresolved": 0,
+        "violation_error_rate": 0.5917721518987342
+      },
+      "native": {
+        "accuracy": 0.7042619542619543,
+        "allow_f1": 0.7971479500891265,
+        "auroc": 0.7241955899850635,
+        "average_precision": 0.5073150404759361,
+        "balanced_accuracy": 0.6197957013746487,
+        "block_f1": 0.45445829338446786,
+        "compliant_error_rate": 0.1593984962406015,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 357,
+          "fp": 212,
+          "tn": 1118,
+          "tp": 237
+        },
+        "coverage": 1.0,
+        "false_blocks": 212,
+        "false_negative_rate": 0.601010101010101,
+        "false_positive_rate": 0.1593984962406015,
+        "macro_f1": 0.6258031217367972,
+        "mcc": 0.26168033827861503,
+        "missed_violations": 357,
+        "n": 1924,
+        "negatives": 1330,
+        "positives": 594,
+        "precision": 0.5278396436525612,
+        "recall": 0.398989898989899,
+        "score_coverage": 1.0,
+        "score_n": 1924,
+        "specificity": 0.8406015037593985,
+        "unresolved": 0,
+        "violation_error_rate": 0.601010101010101
+      },
+      "native_balanced_ci95": [
+        0.5979264260440879,
+        0.6410240434632495
+      ],
+      "native_vs_brief": {
+        "balanced_accuracy_difference": -0.08236373762689553,
+        "ci95": [
+          -0.10629542386084438,
+          -0.05772878583635202
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "tuned": {
+        "accuracy": 0.6159043659043659,
+        "allow_f1": 0.6627110908261068,
+        "auroc": 0.7241955899850635,
+        "average_precision": 0.5073150404759361,
+        "balanced_accuracy": 0.659295967190704,
+        "block_f1": 0.5540132770066385,
+        "compliant_error_rate": 0.45413533834586467,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 135,
+          "fp": 604,
+          "tn": 726,
+          "tp": 459
+        },
+        "coverage": 1.0,
+        "false_blocks": 604,
+        "false_negative_rate": 0.22727272727272727,
+        "false_positive_rate": 0.45413533834586467,
+        "macro_f1": 0.6083621839163726,
+        "mcc": 0.29599584298181586,
+        "missed_violations": 135,
+        "n": 1924,
+        "negatives": 1330,
+        "positives": 594,
+        "precision": 0.431796801505174,
+        "recall": 0.7727272727272727,
+        "score_coverage": 1.0,
+        "score_n": 1924,
+        "specificity": 0.5458646616541354,
+        "unresolved": 0,
+        "violation_error_rate": 0.22727272727272727
+      },
+      "tuned_balanced_ci95": [
+        0.6366185404935293,
+        0.6807818516293158
+      ],
+      "tuned_vs_brief": {
+        "balanced_accuracy_difference": -0.09240778714462927,
+        "ci95": [
+          -0.1148561562601332,
+          -0.07004139117089833
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "validation": {
+        "accuracy": 0.6494791666666667,
+        "allow_f1": 0.6988814317673379,
+        "balanced_accuracy": 0.6871901650885551,
+        "block_f1": 0.5806853582554518,
+        "compliant_error_rate": 0.4114544084400904,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 127,
+          "fp": 546,
+          "tn": 781,
+          "tp": 466
+        },
+        "coverage": 1.0,
+        "false_blocks": 546,
+        "false_negative_rate": 0.21416526138279932,
+        "false_positive_rate": 0.4114544084400904,
+        "macro_f1": 0.6397833950113948,
+        "mcc": 0.3464516631962652,
+        "missed_violations": 127,
+        "n": 1920,
+        "negatives": 1327,
+        "positives": 593,
+        "precision": 0.46047430830039526,
+        "recall": 0.7858347386172007,
+        "specificity": 0.5885455915599096,
+        "unresolved": 0,
+        "violation_error_rate": 0.21416526138279932
+      },
+      "validation_selected_threshold": 0.35
+    },
+    "examples": {
+      "native": {
+        "accuracy": 0.683991683991684,
+        "allow_f1": 0.7670498084291187,
+        "auroc": 0.7259056732740943,
+        "average_precision": 0.5058591147594762,
+        "balanced_accuracy": 0.6414673046251993,
+        "block_f1": 0.5088852988691438,
+        "compliant_error_rate": 0.24736842105263157,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 279,
+          "fp": 329,
+          "tn": 1001,
+          "tp": 315
+        },
+        "coverage": 1.0,
+        "false_blocks": 329,
+        "false_negative_rate": 0.4696969696969697,
+        "false_positive_rate": 0.24736842105263157,
+        "macro_f1": 0.6379675536491313,
+        "mcc": 0.2769856049105209,
+        "missed_violations": 279,
+        "n": 1924,
+        "negatives": 1330,
+        "positives": 594,
+        "precision": 0.4891304347826087,
+        "recall": 0.5303030303030303,
+        "score_coverage": 1.0,
+        "score_n": 1924,
+        "specificity": 0.7526315789473684,
+        "unresolved": 0,
+        "violation_error_rate": 0.4696969696969697
+      },
+      "native_balanced_ci95": [
+        0.6182130808797,
+        0.6642332146469987
+      ],
+      "native_vs_brief": {
+        "balanced_accuracy_difference": -0.06069213437634491,
+        "ci95": [
+          -0.08397156386336091,
+          -0.03675245013343863
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "tuned": {
+        "accuracy": 0.6366943866943867,
+        "allow_f1": 0.6889185580774366,
+        "auroc": 0.7259056732740943,
+        "average_precision": 0.5058591147594762,
+        "balanced_accuracy": 0.6706070732386522,
+        "block_f1": 0.5633978763272954,
+        "compliant_error_rate": 0.4180451127819549,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 143,
+          "fp": 556,
+          "tn": 774,
+          "tp": 451
+        },
+        "coverage": 1.0,
+        "false_blocks": 556,
+        "false_negative_rate": 0.24074074074074073,
+        "false_positive_rate": 0.4180451127819549,
+        "macro_f1": 0.6261582172023661,
+        "mcc": 0.31560702992357376,
+        "missed_violations": 143,
+        "n": 1924,
+        "negatives": 1330,
+        "positives": 594,
+        "precision": 0.44786494538232374,
+        "recall": 0.7592592592592593,
+        "score_coverage": 1.0,
+        "score_n": 1924,
+        "specificity": 0.5819548872180451,
+        "unresolved": 0,
+        "violation_error_rate": 0.24074074074074073
+      },
+      "tuned_balanced_ci95": [
+        0.6482406677460282,
+        0.6922365483861868
+      ],
+      "tuned_vs_brief": {
+        "balanced_accuracy_difference": -0.08109668109668111,
+        "ci95": [
+          -0.10345425531272141,
+          -0.058463947084411494
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "validation": {
+        "accuracy": 0.653125,
+        "allow_f1": 0.7066079295154185,
+        "balanced_accuracy": 0.6832983653805831,
+        "block_f1": 0.575796178343949,
+        "compliant_error_rate": 0.39562923888470236,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 141,
+          "fp": 525,
+          "tn": 802,
+          "tp": 452
+        },
+        "coverage": 1.0,
+        "false_blocks": 525,
+        "false_negative_rate": 0.23777403035413153,
+        "false_positive_rate": 0.39562923888470236,
+        "macro_f1": 0.6412020539296838,
+        "mcc": 0.33880379599998134,
+        "missed_violations": 141,
+        "n": 1920,
+        "negatives": 1327,
+        "positives": 593,
+        "precision": 0.4626407369498465,
+        "recall": 0.7622259696458684,
+        "specificity": 0.6043707611152976,
+        "unresolved": 0,
+        "violation_error_rate": 0.23777403035413153
+      },
+      "validation_selected_threshold": 0.42
+    }
+  },
+  "kev/wildguard": {
+    "brief": {
+      "fitting_native": {
+        "accuracy": 0.892578125,
+        "allow_f1": 0.8861283643892339,
+        "auroc": 0.9644749190783553,
+        "average_precision": 0.9713782946207821,
+        "balanced_accuracy": 0.8926356514910652,
+        "block_f1": 0.8983364140480592,
+        "compliant_error_rate": 0.10647181628392484,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 59,
+          "fp": 51,
+          "tn": 428,
+          "tp": 486
+        },
+        "coverage": 1.0,
+        "false_blocks": 51,
+        "false_negative_rate": 0.10825688073394496,
+        "false_positive_rate": 0.10647181628392484,
+        "macro_f1": 0.8922323892186466,
+        "mcc": 0.7845743600312701,
+        "missed_violations": 59,
+        "n": 1024,
+        "negatives": 479,
+        "positives": 545,
+        "precision": 0.9050279329608939,
+        "recall": 0.8917431192660551,
+        "score_coverage": 1.0,
+        "score_n": 1024,
+        "specificity": 0.8935281837160751,
+        "unresolved": 0,
+        "violation_error_rate": 0.10825688073394496
+      },
+      "native": {
+        "accuracy": 0.8769864626250736,
+        "allow_f1": 0.8908616187989556,
+        "auroc": 0.9413582585996378,
+        "average_precision": 0.9352574772973737,
+        "balanced_accuracy": 0.8737365444261996,
+        "block_f1": 0.8590694538098449,
+        "compliant_error_rate": 0.09735449735449736,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 117,
+          "fp": 92,
+          "tn": 853,
+          "tp": 637
+        },
+        "coverage": 1.0,
+        "false_blocks": 92,
+        "false_negative_rate": 0.15517241379310345,
+        "false_positive_rate": 0.09735449735449736,
+        "macro_f1": 0.8749655363044002,
+        "mcc": 0.7503217008863103,
+        "missed_violations": 117,
+        "n": 1699,
+        "negatives": 945,
+        "positives": 754,
+        "precision": 0.8737997256515775,
+        "recall": 0.8448275862068966,
+        "score_coverage": 1.0,
+        "score_n": 1699,
+        "specificity": 0.9026455026455027,
+        "unresolved": 0,
+        "violation_error_rate": 0.15517241379310345
+      },
+      "native_balanced_ci95": [
+        0.8574423886699215,
+        0.8889109694438874
+      ],
+      "native_vs_brief": {
+        "balanced_accuracy_difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "tuned": {
+        "accuracy": 0.8758092995879929,
+        "allow_f1": 0.8925114620478859,
+        "auroc": 0.9413582585996378,
+        "average_precision": 0.9352574772973737,
+        "balanced_accuracy": 0.8693276072586418,
+        "block_f1": 0.8529616724738676,
+        "compliant_error_rate": 0.07301587301587302,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 142,
+          "fp": 69,
+          "tn": 876,
+          "tp": 612
+        },
+        "coverage": 1.0,
+        "false_blocks": 69,
+        "false_negative_rate": 0.1883289124668435,
+        "false_positive_rate": 0.07301587301587302,
+        "macro_f1": 0.8727365672608767,
+        "mcc": 0.7488518383908093,
+        "missed_violations": 142,
+        "n": 1699,
+        "negatives": 945,
+        "positives": 754,
+        "precision": 0.8986784140969163,
+        "recall": 0.8116710875331565,
+        "score_coverage": 1.0,
+        "score_n": 1699,
+        "specificity": 0.926984126984127,
+        "unresolved": 0,
+        "violation_error_rate": 0.1883289124668435
+      },
+      "tuned_balanced_ci95": [
+        0.8523654905496041,
+        0.8858494193213537
+      ],
+      "tuned_vs_brief": {
+        "balanced_accuracy_difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "validation": {
+        "accuracy": 0.91796875,
+        "allow_f1": 0.9156626506024096,
+        "balanced_accuracy": 0.9205974360547139,
+        "block_f1": 0.9201520912547528,
+        "compliant_error_rate": 0.04201680672268908,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 32,
+          "fp": 10,
+          "tn": 228,
+          "tp": 242
+        },
+        "coverage": 1.0,
+        "false_blocks": 10,
+        "false_negative_rate": 0.11678832116788321,
+        "false_positive_rate": 0.04201680672268908,
+        "macro_f1": 0.9179073709285812,
+        "mcc": 0.8392153756032371,
+        "missed_violations": 32,
+        "n": 512,
+        "negatives": 238,
+        "positives": 274,
+        "precision": 0.9603174603174603,
+        "recall": 0.8832116788321168,
+        "specificity": 0.957983193277311,
+        "unresolved": 0,
+        "violation_error_rate": 0.11678832116788321
+      },
+      "validation_selected_threshold": 0.56
+    },
+    "detailed": {
+      "fitting_native": {
+        "accuracy": 0.8974609375,
+        "allow_f1": 0.8849945235487404,
+        "auroc": 0.9682710539924537,
+        "average_precision": 0.9738657650602685,
+        "balanced_accuracy": 0.8941889640114152,
+        "block_f1": 0.9074889867841409,
+        "compliant_error_rate": 0.15657620041753653,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 30,
+          "fp": 75,
+          "tn": 404,
+          "tp": 515
+        },
+        "coverage": 1.0,
+        "false_blocks": 75,
+        "false_negative_rate": 0.05504587155963303,
+        "false_positive_rate": 0.15657620041753653,
+        "macro_f1": 0.8962417551664407,
+        "mcc": 0.7960302912953516,
+        "missed_violations": 30,
+        "n": 1024,
+        "negatives": 479,
+        "positives": 545,
+        "precision": 0.8728813559322034,
+        "recall": 0.944954128440367,
+        "score_coverage": 1.0,
+        "score_n": 1024,
+        "specificity": 0.8434237995824635,
+        "unresolved": 0,
+        "violation_error_rate": 0.05504587155963303
+      },
+      "native": {
+        "accuracy": 0.8687463213655091,
+        "allow_f1": 0.8786064235166031,
+        "auroc": 0.9466296155951328,
+        "average_precision": 0.9396442503515875,
+        "balanced_accuracy": 0.8706180792387689,
+        "block_f1": 0.8571428571428571,
+        "compliant_error_rate": 0.14603174603174604,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 85,
+          "fp": 138,
+          "tn": 807,
+          "tp": 669
+        },
+        "coverage": 1.0,
+        "false_blocks": 138,
+        "false_negative_rate": 0.11273209549071618,
+        "false_positive_rate": 0.14603174603174604,
+        "macro_f1": 0.8678746403297302,
+        "mcc": 0.7374608663619,
+        "missed_violations": 85,
+        "n": 1699,
+        "negatives": 945,
+        "positives": 754,
+        "precision": 0.828996282527881,
+        "recall": 0.8872679045092838,
+        "score_coverage": 1.0,
+        "score_n": 1699,
+        "specificity": 0.8539682539682539,
+        "unresolved": 0,
+        "violation_error_rate": 0.11273209549071618
+      },
+      "native_balanced_ci95": [
+        0.8542490859950672,
+        0.8869356245054053
+      ],
+      "native_vs_brief": {
+        "balanced_accuracy_difference": -0.0031184651874307523,
+        "ci95": [
+          -0.014882693796005519,
+          0.008454655729488158
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "tuned": {
+        "accuracy": 0.8758092995879929,
+        "allow_f1": 0.8907301916105644,
+        "auroc": 0.9466296155951328,
+        "average_precision": 0.9396442503515875,
+        "balanced_accuracy": 0.87147207836863,
+        "block_f1": 0.8561690524880708,
+        "compliant_error_rate": 0.08994708994708994,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 126,
+          "fp": 85,
+          "tn": 860,
+          "tp": 628
+        },
+        "coverage": 1.0,
+        "false_blocks": 85,
+        "false_negative_rate": 0.16710875331564987,
+        "false_positive_rate": 0.08994708994708994,
+        "macro_f1": 0.8734496220493176,
+        "mcc": 0.7479533748671013,
+        "missed_violations": 126,
+        "n": 1699,
+        "negatives": 945,
+        "positives": 754,
+        "precision": 0.8807854137447405,
+        "recall": 0.8328912466843501,
+        "score_coverage": 1.0,
+        "score_n": 1699,
+        "specificity": 0.91005291005291,
+        "unresolved": 0,
+        "violation_error_rate": 0.16710875331564987
+      },
+      "tuned_balanced_ci95": [
+        0.8544377235859809,
+        0.8877927415461865
+      ],
+      "tuned_vs_brief": {
+        "balanced_accuracy_difference": 0.0021444711099882774,
+        "ci95": [
+          -0.009075245619956238,
+          0.013559555246786663
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "validation": {
+        "accuracy": 0.900390625,
+        "allow_f1": 0.8952772073921971,
+        "balanced_accuracy": 0.9014138502116175,
+        "block_f1": 0.9050279329608939,
+        "compliant_error_rate": 0.08403361344537816,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 31,
+          "fp": 20,
+          "tn": 218,
+          "tp": 243
+        },
+        "coverage": 1.0,
+        "false_blocks": 20,
+        "false_negative_rate": 0.11313868613138686,
+        "false_positive_rate": 0.08403361344537816,
+        "macro_f1": 0.9001525701765455,
+        "mcc": 0.8011402671633103,
+        "missed_violations": 31,
+        "n": 512,
+        "negatives": 238,
+        "positives": 274,
+        "precision": 0.9239543726235742,
+        "recall": 0.8868613138686131,
+        "specificity": 0.9159663865546218,
+        "unresolved": 0,
+        "violation_error_rate": 0.11313868613138686
+      },
+      "validation_selected_threshold": 0.59
+    },
+    "examples": {
+      "native": {
+        "accuracy": 0.8228369629193644,
+        "allow_f1": 0.8219988172678888,
+        "auroc": 0.9391323874082494,
+        "average_precision": 0.9318123980756658,
+        "balanced_accuracy": 0.8339052390776529,
+        "block_f1": 0.8236672524897481,
+        "compliant_error_rate": 0.26455026455026454,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 51,
+          "fp": 250,
+          "tn": 695,
+          "tp": 703
+        },
+        "coverage": 1.0,
+        "false_blocks": 250,
+        "false_negative_rate": 0.06763925729442971,
+        "false_positive_rate": 0.26455026455026454,
+        "macro_f1": 0.8228330348788184,
+        "mcc": 0.6685577724113676,
+        "missed_violations": 51,
+        "n": 1699,
+        "negatives": 945,
+        "positives": 754,
+        "precision": 0.7376705141657922,
+        "recall": 0.9323607427055703,
+        "score_coverage": 1.0,
+        "score_n": 1699,
+        "specificity": 0.7354497354497355,
+        "unresolved": 0,
+        "violation_error_rate": 0.06763925729442971
+      },
+      "native_balanced_ci95": [
+        0.8162709977904654,
+        0.8503993610223641
+      ],
+      "native_vs_brief": {
+        "balanced_accuracy_difference": -0.03983130534854673,
+        "ci95": [
+          -0.056227885477381626,
+          -0.024097860961974957
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "tuned": {
+        "accuracy": 0.8599175985874044,
+        "allow_f1": 0.8744725738396625,
+        "auroc": 0.9391323874082494,
+        "average_precision": 0.9318123980756658,
+        "balanced_accuracy": 0.8577224818604129,
+        "block_f1": 0.8415446071904128,
+        "compliant_error_rate": 0.12275132275132275,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 122,
+          "fp": 116,
+          "tn": 829,
+          "tp": 632
+        },
+        "coverage": 1.0,
+        "false_blocks": 116,
+        "false_negative_rate": 0.16180371352785147,
+        "false_positive_rate": 0.12275132275132275,
+        "macro_f1": 0.8580085905150376,
+        "mcc": 0.7160391208324036,
+        "missed_violations": 122,
+        "n": 1699,
+        "negatives": 945,
+        "positives": 754,
+        "precision": 0.8449197860962567,
+        "recall": 0.8381962864721485,
+        "score_coverage": 1.0,
+        "score_n": 1699,
+        "specificity": 0.8772486772486773,
+        "unresolved": 0,
+        "violation_error_rate": 0.16180371352785147
+      },
+      "tuned_balanced_ci95": [
+        0.8397355601227171,
+        0.8746042108238725
+      ],
+      "tuned_vs_brief": {
+        "balanced_accuracy_difference": -0.011605125398228888,
+        "ci95": [
+          -0.027159809079579496,
+          0.003939966140100391
+        ],
+        "note": "Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff."
+      },
+      "validation": {
+        "accuracy": 0.888671875,
+        "allow_f1": 0.8819875776397516,
+        "balanced_accuracy": 0.8890848310126971,
+        "block_f1": 0.8946395563770795,
+        "compliant_error_rate": 0.10504201680672269,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 32,
+          "fp": 25,
+          "tn": 213,
+          "tp": 242
+        },
+        "coverage": 1.0,
+        "false_blocks": 25,
+        "false_negative_rate": 0.11678832116788321,
+        "false_positive_rate": 0.10504201680672269,
+        "macro_f1": 0.8883135670084155,
+        "mcc": 0.7769612909609923,
+        "missed_violations": 32,
+        "n": 512,
+        "negatives": 238,
+        "positives": 274,
+        "precision": 0.9063670411985019,
+        "recall": 0.8832116788321168,
+        "specificity": 0.8949579831932774,
+        "unresolved": 0,
+        "violation_error_rate": 0.11678832116788321
+      },
+      "validation_selected_threshold": 0.62
+    }
+  }
+}

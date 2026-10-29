@@ -13,7 +13,7 @@ from evals.jev.api import hash_value
 from evals.jev.study import DATA, IDS
 from evals.leaderboard.archive import digest, normalize, read, write
 from evals.leaderboard.build import score_bundle, exports
-from evals.leaderboard.metrics import decisions, metrics
+from evals.leaderboard.metrics import bootstrap, decisions, interval, metrics
 from evals.leaderboard.render import render
 
 LABELS={'kev':'Kev 4B','clef':'Clef-Flash 9B'}
@@ -57,6 +57,7 @@ def extend(state, prior, bundle, experiment):
     specs=read(prior/'registry.json'); selection=read(prior/'selection.json'); coverage=read(prior/'coverage.json')
     variants={}
     for ds in DATA:
+        policy_predictions={}
         for split in ('validation','test'):
             data=read(prior/split/(ds+'.json.gz'))
             for slug in MODELS:
@@ -83,12 +84,25 @@ def extend(state, prior, bundle, experiment):
                 variants[slug+'/'+ds][pid]=dict(native=metrics(y,value['prediction'],value['score']),
                     validation_selected_threshold=chosen['threshold'],validation=chosen['metrics'],
                     tuned=metrics(y,decisions(value,chosen['threshold']),value['score']))
+                policy_predictions[slug+'/'+pid+'/native']=np.asarray(value['prediction'])
+                policy_predictions[slug+'/'+pid+'/tuned']=decisions(value,chosen['threshold'])
                 if pid!='examples':
                     fit=predictions(state,slug,ds,'fit',pid)
                     variants[slug+'/'+ds][pid]['fitting_native']=metrics(
                         [int(r['expected']=='BLOCK') for r in fit],
                         [{'ALLOW':0,'BLOCK':1,'ERROR':-1}[r['prediction']] for r in fit],
                         [r['score'] for r in fit])
+        draws=bootstrap(test['metadata'],policy_predictions)
+        for slug in MODELS:
+            for pid in IDS:
+                for mode in ('native','tuned'):
+                    key=slug+'/'+pid+'/'+mode; base=slug+'/brief/'+mode
+                    v=variants[slug+'/'+ds][pid]
+                    v[mode+'_balanced_ci95']=interval(draws[key]['balanced_accuracy'])
+                    v[mode+'_vs_brief']=dict(
+                        balanced_accuracy_difference=v[mode]['balanced_accuracy']-variants[slug+'/'+ds]['brief'][mode]['balanced_accuracy'],
+                        ci95=interval(draws[key]['balanced_accuracy']-draws[base]['balanced_accuracy']),
+                        note='Paired group bootstrap; unadjusted. Tuned contrasts change both policy and validation-selected cutoff.')
     for slug in MODELS:
         coverage['models'].append(dict(model=LABELS[slug],model_id=MODELS[slug]['id'],category='Typed classifier',
             wildguard='full test',hatexplain='full test'))

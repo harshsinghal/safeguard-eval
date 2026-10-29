@@ -1,0 +1,4253 @@
+{
+  "hatexplain": {
+    "clef": {
+      "candidates": 3,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/decision-models/clef/examples",
+          "metrics": {
+            "accuracy": 0.7729166666666667,
+            "allow_f1": 0.8256,
+            "balanced_accuracy": 0.7699600081838989,
+            "block_f1": 0.6746268656716418,
+            "compliant_error_rate": 0.22230595327807084,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 141,
+              "fp": 295,
+              "tn": 1032,
+              "tp": 452
+            },
+            "coverage": 1.0,
+            "false_blocks": 295,
+            "false_negative_rate": 0.23777403035413153,
+            "false_positive_rate": 0.22230595327807084,
+            "macro_f1": 0.7501134328358209,
+            "mcc": 0.5116617235653542,
+            "missed_violations": 141,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.6050870147255689,
+            "recall": 0.7622259696458684,
+            "specificity": 0.7776940467219292,
+            "unresolved": 0,
+            "violation_error_rate": 0.23777403035413153
+          },
+          "threshold": 0.88
+        },
+        "catch_target": {
+          "candidate": "hatexplain/decision-models/clef/examples",
+          "metrics": {
+            "accuracy": 0.6651041666666667,
+            "allow_f1": 0.6979802724283701,
+            "balanced_accuracy": 0.7302077363259631,
+            "block_f1": 0.6241963763880771,
+            "compliant_error_rate": 0.4400904295403165,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 59,
+              "fp": 584,
+              "tn": 743,
+              "tp": 534
+            },
+            "coverage": 1.0,
+            "false_blocks": 584,
+            "false_negative_rate": 0.09949409780775717,
+            "false_positive_rate": 0.4400904295403165,
+            "macro_f1": 0.6610883244082236,
+            "mcc": 0.43132500123603396,
+            "missed_violations": 59,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.4776386404293381,
+            "recall": 0.9005059021922428,
+            "specificity": 0.5599095704596835,
+            "unresolved": 0,
+            "violation_error_rate": 0.09949409780775717
+          },
+          "threshold": 0.68
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/decision-models/clef/detailed",
+          "metrics": {
+            "accuracy": 0.7677083333333333,
+            "allow_f1": 0.8507362784471219,
+            "balanced_accuracy": 0.6500633489683076,
+            "block_f1": 0.4765258215962441,
+            "compliant_error_rate": 0.04220045214770158,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 390,
+              "fp": 56,
+              "tn": 1271,
+              "tp": 203
+            },
+            "coverage": 1.0,
+            "false_blocks": 56,
+            "false_negative_rate": 0.657672849915683,
+            "false_positive_rate": 0.04220045214770158,
+            "macro_f1": 0.663631050021683,
+            "mcc": 0.40591279381266204,
+            "missed_violations": 390,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.7837837837837838,
+            "recall": 0.342327150084317,
+            "specificity": 0.9577995478522984,
+            "unresolved": 0,
+            "violation_error_rate": 0.657672849915683
+          },
+          "threshold": 0.94
+        }
+      }
+    },
+    "hatexplain-mixed/equal-calibrated": {
+      "candidates": 1,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/equal/calibrated",
+          "metrics": {
+            "accuracy": 0.7796875,
+            "allow_f1": 0.8272764393630053,
+            "balanced_accuracy": 0.7897824531617934,
+            "block_f1": 0.6959022286125089,
+            "compliant_error_rate": 0.23662396382818388,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 109,
+              "fp": 314,
+              "tn": 1013,
+              "tp": 484
+            },
+            "coverage": 1.0,
+            "false_blocks": 314,
+            "false_negative_rate": 0.18381112984822934,
+            "false_positive_rate": 0.23662396382818388,
+            "macro_f1": 0.7615893339877571,
+            "mcc": 0.5433341647880096,
+            "missed_violations": 109,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.606516290726817,
+            "recall": 0.8161888701517707,
+            "specificity": 0.7633760361718162,
+            "unresolved": 0,
+            "violation_error_rate": 0.18381112984822934
+          },
+          "threshold": 0.37
+        },
+        "catch_target": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/equal/calibrated",
+          "metrics": {
+            "accuracy": 0.7286458333333333,
+            "allow_f1": 0.7679287305122494,
+            "balanced_accuracy": 0.7775752276941102,
+            "block_f1": 0.6733542319749216,
+            "compliant_error_rate": 0.35041446872645066,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 56,
+              "fp": 465,
+              "tn": 862,
+              "tp": 537
+            },
+            "coverage": 1.0,
+            "false_blocks": 465,
+            "false_negative_rate": 0.09443507588532883,
+            "false_positive_rate": 0.35041446872645066,
+            "macro_f1": 0.7206414812435855,
+            "mcc": 0.5134738219039038,
+            "missed_violations": 56,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5359281437125748,
+            "recall": 0.9055649241146712,
+            "specificity": 0.6495855312735493,
+            "unresolved": 0,
+            "violation_error_rate": 0.09443507588532883
+          },
+          "threshold": 0.27
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/equal/calibrated",
+          "metrics": {
+            "accuracy": 0.7739583333333333,
+            "allow_f1": 0.8534773801485482,
+            "balanced_accuracy": 0.6634460567967662,
+            "block_f1": 0.5056947608200456,
+            "compliant_error_rate": 0.04747550866616428,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 371,
+              "fp": 63,
+              "tn": 1264,
+              "tp": 222
+            },
+            "coverage": 1.0,
+            "false_blocks": 63,
+            "false_negative_rate": 0.6256323777403036,
+            "false_positive_rate": 0.04747550866616428,
+            "macro_f1": 0.6795860704842969,
+            "mcc": 0.4248014033494219,
+            "missed_violations": 371,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.7789473684210526,
+            "recall": 0.37436762225969644,
+            "specificity": 0.9525244913338358,
+            "unresolved": 0,
+            "violation_error_rate": 0.6256323777403036
+          },
+          "threshold": 0.56
+        }
+      }
+    },
+    "hatexplain-mixed/equal-raw": {
+      "candidates": 1,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/equal/raw",
+          "metrics": {
+            "accuracy": 0.7609375,
+            "allow_f1": 0.8088296543107039,
+            "balanced_accuracy": 0.7790163055288337,
+            "block_f1": 0.6810284920083391,
+            "compliant_error_rate": 0.26827430293896004,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 103,
+              "fp": 356,
+              "tn": 971,
+              "tp": 490
+            },
+            "coverage": 1.0,
+            "false_blocks": 356,
+            "false_negative_rate": 0.1736930860033727,
+            "false_positive_rate": 0.26827430293896004,
+            "macro_f1": 0.7449290731595215,
+            "mcc": 0.5193200203909303,
+            "missed_violations": 103,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5791962174940898,
+            "recall": 0.8263069139966274,
+            "specificity": 0.73172569706104,
+            "unresolved": 0,
+            "violation_error_rate": 0.1736930860033727
+          },
+          "threshold": 0.59
+        },
+        "catch_target": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/equal/raw",
+          "metrics": {
+            "accuracy": 0.7171875,
+            "allow_f1": 0.756393001345895,
+            "balanced_accuracy": 0.7678867114578396,
+            "block_f1": 0.6629422718808193,
+            "compliant_error_rate": 0.36473247927656366,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 59,
+              "fp": 484,
+              "tn": 843,
+              "tp": 534
+            },
+            "coverage": 1.0,
+            "false_blocks": 484,
+            "false_negative_rate": 0.09949409780775717,
+            "false_positive_rate": 0.36473247927656366,
+            "macro_f1": 0.7096676366133572,
+            "mcc": 0.495983029458263,
+            "missed_violations": 59,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5245579567779961,
+            "recall": 0.9005059021922428,
+            "specificity": 0.6352675207234363,
+            "unresolved": 0,
+            "violation_error_rate": 0.09949409780775717
+          },
+          "threshold": 0.49
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/equal/raw",
+          "metrics": {
+            "accuracy": 0.7666666666666667,
+            "allow_f1": 0.8494623655913979,
+            "balanced_accuracy": 0.6516416723111,
+            "block_f1": 0.48148148148148145,
+            "compliant_error_rate": 0.04747550866616428,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 385,
+              "fp": 63,
+              "tn": 1264,
+              "tp": 208
+            },
+            "coverage": 1.0,
+            "false_blocks": 63,
+            "false_negative_rate": 0.6492411467116358,
+            "false_positive_rate": 0.04747550866616428,
+            "macro_f1": 0.6654719235364397,
+            "mcc": 0.40245413669167895,
+            "missed_violations": 385,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.7675276752767528,
+            "recall": 0.35075885328836426,
+            "specificity": 0.9525244913338358,
+            "unresolved": 0,
+            "violation_error_rate": 0.6492411467116358
+          },
+          "threshold": 0.88
+        }
+      }
+    },
+    "hatexplain-mixed/forest": {
+      "candidates": 4,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/forest/depth4-leaf20",
+          "metrics": {
+            "accuracy": 0.7885416666666667,
+            "allow_f1": 0.8309741881765196,
+            "balanced_accuracy": 0.811112057144963,
+            "block_f1": 0.717663421418637,
+            "compliant_error_rate": 0.2479276563677468,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 77,
+              "fp": 329,
+              "tn": 998,
+              "tp": 516
+            },
+            "coverage": 1.0,
+            "false_blocks": 329,
+            "false_negative_rate": 0.12984822934232715,
+            "false_positive_rate": 0.2479276563677468,
+            "macro_f1": 0.7743188047975783,
+            "mcc": 0.5791313293925838,
+            "missed_violations": 77,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.6106508875739645,
+            "recall": 0.8701517706576728,
+            "specificity": 0.7520723436322532,
+            "unresolved": 0,
+            "violation_error_rate": 0.12984822934232715
+          },
+          "threshold": 0.26
+        },
+        "catch_target": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/forest/depth4-leaf80",
+          "metrics": {
+            "accuracy": 0.7609375,
+            "allow_f1": 0.8012126461671719,
+            "balanced_accuracy": 0.8004698117067877,
+            "block_f1": 0.7001959503592423,
+            "compliant_error_rate": 0.30293896006028637,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 57,
+              "fp": 402,
+              "tn": 925,
+              "tp": 536
+            },
+            "coverage": 1.0,
+            "false_blocks": 402,
+            "false_negative_rate": 0.09612141652613827,
+            "false_positive_rate": 0.30293896006028637,
+            "macro_f1": 0.7507042982632071,
+            "mcc": 0.5554391472991582,
+            "missed_violations": 57,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5714285714285714,
+            "recall": 0.9038785834738617,
+            "specificity": 0.6970610399397137,
+            "unresolved": 0,
+            "violation_error_rate": 0.09612141652613827
+          },
+          "threshold": 0.22
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/forest/depth4-leaf80",
+          "metrics": {
+            "accuracy": 0.8072916666666666,
+            "allow_f1": 0.8722375690607734,
+            "balanced_accuracy": 0.7178753378717543,
+            "block_f1": 0.6080508474576272,
+            "compliant_error_rate": 0.04822908816880181,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 306,
+              "fp": 64,
+              "tn": 1263,
+              "tp": 287
+            },
+            "coverage": 1.0,
+            "false_blocks": 64,
+            "false_negative_rate": 0.5160202360876898,
+            "false_positive_rate": 0.04822908816880181,
+            "macro_f1": 0.7401442082592002,
+            "mcc": 0.5208777991801128,
+            "missed_violations": 306,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.8176638176638177,
+            "recall": 0.4839797639123103,
+            "specificity": 0.9517709118311982,
+            "unresolved": 0,
+            "violation_error_rate": 0.5160202360876898
+          },
+          "threshold": 0.63
+        }
+      }
+    },
+    "hatexplain-mixed/logistic": {
+      "candidates": 5,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/logistic/C0.1",
+          "metrics": {
+            "accuracy": 0.7791666666666667,
+            "allow_f1": 0.824357912178956,
+            "balanced_accuracy": 0.797334133084936,
+            "block_f1": 0.7026647966339411,
+            "compliant_error_rate": 0.25018839487565936,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 92,
+              "fp": 332,
+              "tn": 995,
+              "tp": 501
+            },
+            "coverage": 1.0,
+            "false_blocks": 332,
+            "false_negative_rate": 0.1551433389544688,
+            "false_positive_rate": 0.25018839487565936,
+            "macro_f1": 0.7635113544064486,
+            "mcc": 0.554370738631586,
+            "missed_violations": 92,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.6014405762304922,
+            "recall": 0.8448566610455311,
+            "specificity": 0.7498116051243406,
+            "unresolved": 0,
+            "violation_error_rate": 0.1551433389544688
+          },
+          "threshold": 0.35
+        },
+        "catch_target": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/logistic/C0.01",
+          "metrics": {
+            "accuracy": 0.7463541666666667,
+            "allow_f1": 0.7868708971553611,
+            "balanced_accuracy": 0.7889869375316904,
+            "block_f1": 0.6868167202572347,
+            "compliant_error_rate": 0.3225320271288621,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 59,
+              "fp": 428,
+              "tn": 899,
+              "tp": 534
+            },
+            "coverage": 1.0,
+            "false_blocks": 428,
+            "false_negative_rate": 0.09949409780775717,
+            "false_positive_rate": 0.3225320271288621,
+            "macro_f1": 0.7368438087062978,
+            "mcc": 0.5340731267934264,
+            "missed_violations": 59,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5550935550935551,
+            "recall": 0.9005059021922428,
+            "specificity": 0.6774679728711379,
+            "unresolved": 0,
+            "violation_error_rate": 0.09949409780775717
+          },
+          "threshold": 0.24
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/logistic/C0.1",
+          "metrics": {
+            "accuracy": 0.7911458333333333,
+            "allow_f1": 0.8629059829059829,
+            "balanced_accuracy": 0.6922034385082938,
+            "block_f1": 0.5617486338797815,
+            "compliant_error_rate": 0.048982667671439335,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 336,
+              "fp": 65,
+              "tn": 1262,
+              "tp": 257
+            },
+            "coverage": 1.0,
+            "false_blocks": 65,
+            "false_negative_rate": 0.5666104553119731,
+            "false_positive_rate": 0.048982667671439335,
+            "macro_f1": 0.7123273083928822,
+            "mcc": 0.4753764174177733,
+            "missed_violations": 336,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.7981366459627329,
+            "recall": 0.433389544688027,
+            "specificity": 0.9510173323285607,
+            "unresolved": 0,
+            "violation_error_rate": 0.5666104553119731
+          },
+          "threshold": 0.64
+        }
+      }
+    },
+    "hatexplain-mixed/logit-equal": {
+      "candidates": 1,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/logits/hatexplain-mixed/logit-equal",
+          "metrics": {
+            "accuracy": 0.7630208333333334,
+            "allow_f1": 0.8100208768267223,
+            "balanced_accuracy": 0.7828553673795384,
+            "block_f1": 0.6851211072664359,
+            "compliant_error_rate": 0.2690278824415976,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 98,
+              "fp": 357,
+              "tn": 970,
+              "tp": 495
+            },
+            "coverage": 1.0,
+            "false_blocks": 357,
+            "false_negative_rate": 0.16526138279932545,
+            "false_positive_rate": 0.2690278824415976,
+            "macro_f1": 0.7475709920465792,
+            "mcc": 0.5260800154114956,
+            "missed_violations": 98,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5809859154929577,
+            "recall": 0.8347386172006745,
+            "specificity": 0.7309721175584024,
+            "unresolved": 0,
+            "violation_error_rate": 0.16526138279932545
+          },
+          "threshold": 0.63
+        },
+        "catch_target": {
+          "candidate": "hatexplain/logits/hatexplain-mixed/logit-equal",
+          "metrics": {
+            "accuracy": 0.6989583333333333,
+            "allow_f1": 0.7363138686131386,
+            "balanced_accuracy": 0.7551654507307688,
+            "block_f1": 0.6492718446601942,
+            "compliant_error_rate": 0.3918613413715147,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 58,
+              "fp": 520,
+              "tn": 807,
+              "tp": 535
+            },
+            "coverage": 1.0,
+            "false_blocks": 520,
+            "false_negative_rate": 0.09780775716694773,
+            "false_positive_rate": 0.3918613413715147,
+            "macro_f1": 0.6927928566366663,
+            "mcc": 0.4738931062207291,
+            "missed_violations": 58,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5071090047393365,
+            "recall": 0.9021922428330523,
+            "specificity": 0.6081386586284853,
+            "unresolved": 0,
+            "violation_error_rate": 0.09780775716694773
+          },
+          "threshold": 0.42
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/logits/hatexplain-mixed/logit-equal",
+          "metrics": {
+            "accuracy": 0.7869791666666667,
+            "allow_f1": 0.8610261637784573,
+            "balanced_accuracy": 0.6831261730996263,
+            "block_f1": 0.5440356744704571,
+            "compliant_error_rate": 0.0452147701582517,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 349,
+              "fp": 60,
+              "tn": 1267,
+              "tp": 244
+            },
+            "coverage": 1.0,
+            "false_blocks": 60,
+            "false_negative_rate": 0.5885328836424958,
+            "false_positive_rate": 0.0452147701582517,
+            "macro_f1": 0.7025309191244572,
+            "mcc": 0.46353843859709504,
+            "missed_violations": 349,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.8026315789473685,
+            "recall": 0.4114671163575042,
+            "specificity": 0.9547852298417483,
+            "unresolved": 0,
+            "violation_error_rate": 0.5885328836424958
+          },
+          "threshold": 0.95
+        }
+      }
+    },
+    "hatexplain-mixed/logit-logistic": {
+      "candidates": 5,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/logits/hatexplain-mixed/logit-logistic/C1",
+          "metrics": {
+            "accuracy": 0.8067708333333333,
+            "allow_f1": 0.8511833132771761,
+            "balanced_accuracy": 0.8112410425067129,
+            "block_f1": 0.7245731254639941,
+            "compliant_error_rate": 0.2004521477015825,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 105,
+              "fp": 266,
+              "tn": 1061,
+              "tp": 488
+            },
+            "coverage": 1.0,
+            "false_blocks": 266,
+            "false_negative_rate": 0.17706576728499157,
+            "false_positive_rate": 0.2004521477015825,
+            "macro_f1": 0.7878782193705851,
+            "mcc": 0.588917848701784,
+            "missed_violations": 105,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.6472148541114059,
+            "recall": 0.8229342327150084,
+            "specificity": 0.7995478522984175,
+            "unresolved": 0,
+            "violation_error_rate": 0.17706576728499157
+          },
+          "threshold": 0.34
+        },
+        "catch_target": {
+          "candidate": "hatexplain/logits/hatexplain-mixed/logit-logistic/C0.01",
+          "metrics": {
+            "accuracy": 0.7515625,
+            "allow_f1": 0.7919755778456171,
+            "balanced_accuracy": 0.793221215613964,
+            "block_f1": 0.691661279896574,
+            "compliant_error_rate": 0.31574981160512433,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 58,
+              "fp": 419,
+              "tn": 908,
+              "tp": 535
+            },
+            "coverage": 1.0,
+            "false_blocks": 419,
+            "false_negative_rate": 0.09780775716694773,
+            "false_positive_rate": 0.31574981160512433,
+            "macro_f1": 0.7418184288710956,
+            "mcc": 0.541907851138887,
+            "missed_violations": 58,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.560796645702306,
+            "recall": 0.9021922428330523,
+            "specificity": 0.6842501883948756,
+            "unresolved": 0,
+            "violation_error_rate": 0.09780775716694773
+          },
+          "threshold": 0.23
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/logits/hatexplain-mixed/logit-logistic/C0.01",
+          "metrics": {
+            "accuracy": 0.8135416666666667,
+            "allow_f1": 0.8757807078417765,
+            "balanced_accuracy": 0.7284597622856969,
+            "block_f1": 0.6263048016701461,
+            "compliant_error_rate": 0.048982667671439335,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 293,
+              "fp": 65,
+              "tn": 1262,
+              "tp": 300
+            },
+            "coverage": 1.0,
+            "false_blocks": 65,
+            "false_negative_rate": 0.49409780775716694,
+            "false_positive_rate": 0.048982667671439335,
+            "macro_f1": 0.7510427547559613,
+            "mcc": 0.5380106782025439,
+            "missed_violations": 293,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.821917808219178,
+            "recall": 0.5059021922428331,
+            "specificity": 0.9510173323285607,
+            "unresolved": 0,
+            "violation_error_rate": 0.49409780775716694
+          },
+          "threshold": 0.61
+        }
+      }
+    },
+    "hatexplain-mixed/weighted": {
+      "candidates": 3,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/weighted/lambda0.01",
+          "metrics": {
+            "accuracy": 0.7796875,
+            "allow_f1": 0.8233820459290188,
+            "balanced_accuracy": 0.8023747285271142,
+            "block_f1": 0.7072664359861591,
+            "compliant_error_rate": 0.2569706103993971,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 82,
+              "fp": 341,
+              "tn": 986,
+              "tp": 511
+            },
+            "coverage": 1.0,
+            "false_blocks": 341,
+            "false_negative_rate": 0.13827993254637436,
+            "false_positive_rate": 0.2569706103993971,
+            "macro_f1": 0.7653242409575889,
+            "mcc": 0.5623838901036117,
+            "missed_violations": 82,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5997652582159625,
+            "recall": 0.8617200674536256,
+            "specificity": 0.7430293896006028,
+            "unresolved": 0,
+            "violation_error_rate": 0.13827993254637436
+          },
+          "threshold": 0.35
+        },
+        "catch_target": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/weighted/lambda0.01",
+          "metrics": {
+            "accuracy": 0.7541666666666667,
+            "allow_f1": 0.7947826086956522,
+            "balanced_accuracy": 0.7946387838014718,
+            "block_f1": 0.6935064935064935,
+            "compliant_error_rate": 0.31122833458929916,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 59,
+              "fp": 413,
+              "tn": 914,
+              "tp": 534
+            },
+            "coverage": 1.0,
+            "false_blocks": 413,
+            "false_negative_rate": 0.09949409780775717,
+            "false_positive_rate": 0.31122833458929916,
+            "macro_f1": 0.7441445511010729,
+            "mcc": 0.5445669839088005,
+            "missed_violations": 59,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5638859556494192,
+            "recall": 0.9005059021922428,
+            "specificity": 0.6887716654107008,
+            "unresolved": 0,
+            "violation_error_rate": 0.09949409780775717
+          },
+          "threshold": 0.27
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/weighted/lambda0",
+          "metrics": {
+            "accuracy": 0.8005208333333333,
+            "allow_f1": 0.8695059625212948,
+            "balanced_accuracy": 0.7008511763083755,
+            "block_f1": 0.5767955801104973,
+            "compliant_error_rate": 0.03843255463451394,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 332,
+              "fp": 51,
+              "tn": 1276,
+              "tp": 261
+            },
+            "coverage": 1.0,
+            "false_blocks": 51,
+            "false_negative_rate": 0.5598650927487352,
+            "false_positive_rate": 0.03843255463451394,
+            "macro_f1": 0.723150771315896,
+            "mcc": 0.50309136606945,
+            "missed_violations": 332,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.8365384615384616,
+            "recall": 0.44013490725126475,
+            "specificity": 0.9615674453654861,
+            "unresolved": 0,
+            "violation_error_rate": 0.5598650927487352
+          },
+          "threshold": 0.6
+        }
+      }
+    },
+    "hatexplain-specialists/equal-calibrated": {
+      "candidates": 1,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/equal/calibrated",
+          "metrics": {
+            "accuracy": 0.7411458333333333,
+            "allow_f1": 0.7882403067746059,
+            "balanced_accuracy": 0.7684293395314084,
+            "block_f1": 0.667113194909578,
+            "compliant_error_rate": 0.30293896006028637,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 95,
+              "fp": 402,
+              "tn": 925,
+              "tp": 498
+            },
+            "coverage": 1.0,
+            "false_blocks": 402,
+            "false_negative_rate": 0.16020236087689713,
+            "false_positive_rate": 0.30293896006028637,
+            "macro_f1": 0.7276767508420919,
+            "mcc": 0.4970515655106168,
+            "missed_violations": 95,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5533333333333333,
+            "recall": 0.8397976391231029,
+            "specificity": 0.6970610399397137,
+            "unresolved": 0,
+            "violation_error_rate": 0.16020236087689713
+          },
+          "threshold": 0.33
+        },
+        "catch_target": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/equal/calibrated",
+          "metrics": {
+            "accuracy": 0.675,
+            "allow_f1": 0.7094972067039106,
+            "balanced_accuracy": 0.7373667416010197,
+            "block_f1": 0.6312056737588653,
+            "compliant_error_rate": 0.42577241899020346,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 59,
+              "fp": 565,
+              "tn": 762,
+              "tp": 534
+            },
+            "coverage": 1.0,
+            "false_blocks": 565,
+            "false_negative_rate": 0.09949409780775717,
+            "false_positive_rate": 0.42577241899020346,
+            "macro_f1": 0.6703514402313879,
+            "mcc": 0.4433454412686769,
+            "missed_violations": 59,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.4858962693357598,
+            "recall": 0.9005059021922428,
+            "specificity": 0.5742275810097965,
+            "unresolved": 0,
+            "violation_error_rate": 0.09949409780775717
+          },
+          "threshold": 0.25
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/equal/calibrated",
+          "metrics": {
+            "accuracy": 0.7380208333333333,
+            "allow_f1": 0.8347025961222477,
+            "balanced_accuracy": 0.6024690212743246,
+            "block_f1": 0.36888331242158096,
+            "compliant_error_rate": 0.04295403165033911,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 446,
+              "fp": 57,
+              "tn": 1270,
+              "tp": 147
+            },
+            "coverage": 1.0,
+            "false_blocks": 57,
+            "false_negative_rate": 0.7521079258010118,
+            "false_positive_rate": 0.04295403165033911,
+            "macro_f1": 0.6017929542719144,
+            "mcc": 0.307263990412656,
+            "missed_violations": 446,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.7205882352941176,
+            "recall": 0.2478920741989882,
+            "specificity": 0.9570459683496609,
+            "unresolved": 0,
+            "violation_error_rate": 0.7521079258010118
+          },
+          "threshold": 0.57
+        }
+      }
+    },
+    "hatexplain-specialists/equal-raw": {
+      "candidates": 1,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/equal/raw",
+          "metrics": {
+            "accuracy": 0.6854166666666667,
+            "allow_f1": 0.7274368231046932,
+            "balanced_accuracy": 0.7337094029693321,
+            "block_f1": 0.6280788177339901,
+            "compliant_error_rate": 0.39261492087415223,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 83,
+              "fp": 521,
+              "tn": 806,
+              "tp": 510
+            },
+            "coverage": 1.0,
+            "false_blocks": 521,
+            "false_negative_rate": 0.1399662731871838,
+            "false_positive_rate": 0.39261492087415223,
+            "macro_f1": 0.6777578204193416,
+            "mcc": 0.4331005912631215,
+            "missed_violations": 83,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.49466537342386036,
+            "recall": 0.8600337268128162,
+            "specificity": 0.6073850791258478,
+            "unresolved": 0,
+            "violation_error_rate": 0.1399662731871838
+          },
+          "threshold": 0.5
+        },
+        "catch_target": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/equal/raw",
+          "metrics": {
+            "accuracy": 0.6375,
+            "allow_f1": 0.6647398843930635,
+            "balanced_accuracy": 0.7102378795060686,
+            "block_f1": 0.6054421768707483,
+            "compliant_error_rate": 0.4800301431801055,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 59,
+              "fp": 637,
+              "tn": 690,
+              "tp": 534
+            },
+            "coverage": 1.0,
+            "false_blocks": 637,
+            "false_negative_rate": 0.09949409780775717,
+            "false_positive_rate": 0.4800301431801055,
+            "macro_f1": 0.635091030631906,
+            "mcc": 0.39827625512208725,
+            "missed_violations": 59,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.4560204953031597,
+            "recall": 0.9005059021922428,
+            "specificity": 0.5199698568198945,
+            "unresolved": 0,
+            "violation_error_rate": 0.09949409780775717
+          },
+          "threshold": 0.45
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/equal/raw",
+          "metrics": {
+            "accuracy": 0.7411458333333333,
+            "allow_f1": 0.8354849387619994,
+            "balanced_accuracy": 0.6112590877494406,
+            "block_f1": 0.39316239316239315,
+            "compliant_error_rate": 0.048982667671439335,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 432,
+              "fp": 65,
+              "tn": 1262,
+              "tp": 161
+            },
+            "coverage": 1.0,
+            "false_blocks": 65,
+            "false_negative_rate": 0.7284991568296796,
+            "false_positive_rate": 0.048982667671439335,
+            "macro_f1": 0.6143236659621962,
+            "mcc": 0.31901960715390437,
+            "missed_violations": 432,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.7123893805309734,
+            "recall": 0.2715008431703204,
+            "specificity": 0.9510173323285607,
+            "unresolved": 0,
+            "violation_error_rate": 0.7284991568296796
+          },
+          "threshold": 0.91
+        }
+      }
+    },
+    "hatexplain-specialists/forest": {
+      "candidates": 4,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/forest/depth4-leaf80",
+          "metrics": {
+            "accuracy": 0.7932291666666667,
+            "allow_f1": 0.8410092110532639,
+            "balanced_accuracy": 0.7944488004361357,
+            "block_f1": 0.7043931496649293,
+            "compliant_error_rate": 0.20874152223059533,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 120,
+              "fp": 277,
+              "tn": 1050,
+              "tp": 473
+            },
+            "coverage": 1.0,
+            "false_blocks": 277,
+            "false_negative_rate": 0.20236087689713322,
+            "false_positive_rate": 0.20874152223059533,
+            "macro_f1": 0.7727011803590966,
+            "mcc": 0.5576722451534548,
+            "missed_violations": 120,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.6306666666666667,
+            "recall": 0.7976391231028668,
+            "specificity": 0.7912584777694047,
+            "unresolved": 0,
+            "violation_error_rate": 0.20236087689713322
+          },
+          "threshold": 0.32
+        },
+        "catch_target": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/forest/depth4-leaf20",
+          "metrics": {
+            "accuracy": 0.7098958333333333,
+            "allow_f1": 0.7473922902494331,
+            "balanced_accuracy": 0.7649435577848067,
+            "block_f1": 0.6593272171253822,
+            "compliant_error_rate": 0.3790504898266767,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 54,
+              "fp": 503,
+              "tn": 824,
+              "tp": 539
+            },
+            "coverage": 1.0,
+            "false_blocks": 503,
+            "false_negative_rate": 0.09106239460370995,
+            "false_positive_rate": 0.3790504898266767,
+            "macro_f1": 0.7033597536874077,
+            "mcc": 0.491433830601449,
+            "missed_violations": 54,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.517274472168906,
+            "recall": 0.9089376053962901,
+            "specificity": 0.6209495101733233,
+            "unresolved": 0,
+            "violation_error_rate": 0.09106239460370995
+          },
+          "threshold": 0.18
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/forest/depth4-leaf20",
+          "metrics": {
+            "accuracy": 0.7729166666666667,
+            "allow_f1": 0.8527027027027027,
+            "balanced_accuracy": 0.6626924772941285,
+            "block_f1": 0.5045454545454545,
+            "compliant_error_rate": 0.048982667671439335,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 371,
+              "fp": 65,
+              "tn": 1262,
+              "tp": 222
+            },
+            "coverage": 1.0,
+            "false_blocks": 65,
+            "false_negative_rate": 0.6256323777403036,
+            "false_positive_rate": 0.048982667671439335,
+            "macro_f1": 0.6786240786240786,
+            "mcc": 0.4216248844605038,
+            "missed_violations": 371,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.7735191637630662,
+            "recall": 0.37436762225969644,
+            "specificity": 0.9510173323285607,
+            "unresolved": 0,
+            "violation_error_rate": 0.6256323777403036
+          },
+          "threshold": 0.67
+        }
+      }
+    },
+    "hatexplain-specialists/logistic": {
+      "candidates": 5,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/logistic/C1",
+          "metrics": {
+            "accuracy": 0.7453125,
+            "allow_f1": 0.7896774193548387,
+            "balanced_accuracy": 0.7784393660782478,
+            "block_f1": 0.6772277227722773,
+            "compliant_error_rate": 0.3082140165787491,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 80,
+              "fp": 409,
+              "tn": 918,
+              "tp": 513
+            },
+            "coverage": 1.0,
+            "false_blocks": 409,
+            "false_negative_rate": 0.13490725126475547,
+            "false_positive_rate": 0.3082140165787491,
+            "macro_f1": 0.733452571063558,
+            "mcc": 0.5149827818985214,
+            "missed_violations": 80,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5563991323210412,
+            "recall": 0.8650927487352446,
+            "specificity": 0.691785983421251,
+            "unresolved": 0,
+            "violation_error_rate": 0.13490725126475547
+          },
+          "threshold": 0.36
+        },
+        "catch_target": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/logistic/C0.1",
+          "metrics": {
+            "accuracy": 0.6833333333333333,
+            "allow_f1": 0.7190388170055453,
+            "balanced_accuracy": 0.7433953776221198,
+            "block_f1": 0.6372315035799523,
+            "compliant_error_rate": 0.413715146948003,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 59,
+              "fp": 549,
+              "tn": 778,
+              "tp": 534
+            },
+            "coverage": 1.0,
+            "false_blocks": 549,
+            "false_negative_rate": 0.09949409780775717,
+            "false_positive_rate": 0.413715146948003,
+            "macro_f1": 0.6781351602927488,
+            "mcc": 0.45355313445919654,
+            "missed_violations": 59,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.4930747922437673,
+            "recall": 0.9005059021922428,
+            "specificity": 0.586284853051997,
+            "unresolved": 0,
+            "violation_error_rate": 0.09949409780775717
+          },
+          "threshold": 0.24
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/logistic/C0.1",
+          "metrics": {
+            "accuracy": 0.7479166666666667,
+            "allow_f1": 0.8389886892880905,
+            "balanced_accuracy": 0.6226866824837879,
+            "block_f1": 0.4196642685851319,
+            "compliant_error_rate": 0.04973624717407687,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 418,
+              "fp": 66,
+              "tn": 1261,
+              "tp": 175
+            },
+            "coverage": 1.0,
+            "false_blocks": 66,
+            "false_negative_rate": 0.7048903878583473,
+            "false_positive_rate": 0.04973624717407687,
+            "macro_f1": 0.6293264789366112,
+            "mcc": 0.3421813674074418,
+            "missed_violations": 418,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.7261410788381742,
+            "recall": 0.2951096121416526,
+            "specificity": 0.9502637528259231,
+            "unresolved": 0,
+            "violation_error_rate": 0.7048903878583473
+          },
+          "threshold": 0.61
+        }
+      }
+    },
+    "hatexplain-specialists/logit-equal": {
+      "candidates": 1,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/logits/hatexplain-specialists/logit-equal",
+          "metrics": {
+            "accuracy": 0.7255208333333333,
+            "allow_f1": 0.7758400680561464,
+            "balanced_accuracy": 0.749197177317384,
+            "block_f1": 0.6460711887172599,
+            "compliant_error_rate": 0.31273549359457425,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 112,
+              "fp": 415,
+              "tn": 912,
+              "tp": 481
+            },
+            "coverage": 1.0,
+            "false_blocks": 415,
+            "false_negative_rate": 0.18887015177065766,
+            "false_positive_rate": 0.31273549359457425,
+            "macro_f1": 0.7109556283867031,
+            "mcc": 0.46156401165860905,
+            "missed_violations": 112,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5368303571428571,
+            "recall": 0.8111298482293423,
+            "specificity": 0.6872645064054258,
+            "unresolved": 0,
+            "violation_error_rate": 0.18887015177065766
+          },
+          "threshold": 0.63
+        },
+        "catch_target": {
+          "candidate": "hatexplain/logits/hatexplain-specialists/logit-equal",
+          "metrics": {
+            "accuracy": 0.6145833333333334,
+            "allow_f1": 0.6354679802955665,
+            "balanced_accuracy": 0.694125511017129,
+            "block_f1": 0.5911602209944752,
+            "compliant_error_rate": 0.5139412207987942,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 58,
+              "fp": 682,
+              "tn": 645,
+              "tp": 535
+            },
+            "coverage": 1.0,
+            "false_blocks": 682,
+            "false_negative_rate": 0.09780775716694773,
+            "false_positive_rate": 0.5139412207987942,
+            "macro_f1": 0.6133141006450209,
+            "mcc": 0.37235094820810105,
+            "missed_violations": 58,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.4396055875102712,
+            "recall": 0.9021922428330523,
+            "specificity": 0.4860587792012057,
+            "unresolved": 0,
+            "violation_error_rate": 0.09780775716694773
+          },
+          "threshold": 0.36
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/logits/hatexplain-specialists/logit-equal",
+          "metrics": {
+            "accuracy": 0.7692708333333333,
+            "allow_f1": 0.8512923799932863,
+            "balanced_accuracy": 0.6539920016367797,
+            "block_f1": 0.48548199767711964,
+            "compliant_error_rate": 0.044461190655614165,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 384,
+              "fp": 59,
+              "tn": 1268,
+              "tp": 209
+            },
+            "coverage": 1.0,
+            "false_blocks": 59,
+            "false_negative_rate": 0.6475548060708263,
+            "false_positive_rate": 0.044461190655614165,
+            "macro_f1": 0.668387188835203,
+            "mcc": 0.41059962593762284,
+            "missed_violations": 384,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.7798507462686567,
+            "recall": 0.3524451939291737,
+            "specificity": 0.9555388093443858,
+            "unresolved": 0,
+            "violation_error_rate": 0.6475548060708263
+          },
+          "threshold": 0.97
+        }
+      }
+    },
+    "hatexplain-specialists/logit-logistic": {
+      "candidates": 5,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/logits/hatexplain-specialists/logit-logistic/C0.1",
+          "metrics": {
+            "accuracy": 0.7979166666666667,
+            "allow_f1": 0.8449240607513989,
+            "balanced_accuracy": 0.7987726693361765,
+            "block_f1": 0.7100149476831091,
+            "compliant_error_rate": 0.20346646571213264,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 118,
+              "fp": 270,
+              "tn": 1057,
+              "tp": 475
+            },
+            "coverage": 1.0,
+            "false_blocks": 270,
+            "false_negative_rate": 0.19898819561551434,
+            "false_positive_rate": 0.20346646571213264,
+            "macro_f1": 0.777469504217254,
+            "mcc": 0.5665478572607038,
+            "missed_violations": 118,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.6375838926174496,
+            "recall": 0.8010118043844857,
+            "specificity": 0.7965335342878673,
+            "unresolved": 0,
+            "violation_error_rate": 0.19898819561551434
+          },
+          "threshold": 0.32
+        },
+        "catch_target": {
+          "candidate": "hatexplain/logits/hatexplain-specialists/logit-logistic/C1",
+          "metrics": {
+            "accuracy": 0.7119791666666667,
+            "allow_f1": 0.750788643533123,
+            "balanced_accuracy": 0.764118813944652,
+            "block_f1": 0.6588525601480567,
+            "compliant_error_rate": 0.37226827430293896,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 59,
+              "fp": 494,
+              "tn": 833,
+              "tp": 534
+            },
+            "coverage": 1.0,
+            "false_blocks": 494,
+            "false_negative_rate": 0.09949409780775717,
+            "false_positive_rate": 0.37226827430293896,
+            "macro_f1": 0.7048206018405898,
+            "mcc": 0.48934274924666854,
+            "missed_violations": 59,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.519455252918288,
+            "recall": 0.9005059021922428,
+            "specificity": 0.627731725697061,
+            "unresolved": 0,
+            "violation_error_rate": 0.09949409780775717
+          },
+          "threshold": 0.18
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/logits/hatexplain-specialists/logit-logistic/C10",
+          "metrics": {
+            "accuracy": 0.7927083333333333,
+            "allow_f1": 0.863791923340178,
+            "balanced_accuracy": 0.694732949469508,
+            "block_f1": 0.5664488017429193,
+            "compliant_error_rate": 0.048982667671439335,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 333,
+              "fp": 65,
+              "tn": 1262,
+              "tp": 260
+            },
+            "coverage": 1.0,
+            "false_blocks": 65,
+            "false_negative_rate": 0.5615514333895447,
+            "false_positive_rate": 0.048982667671439335,
+            "macro_f1": 0.7151203625415486,
+            "mcc": 0.4798552176496966,
+            "missed_violations": 333,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.8,
+            "recall": 0.43844856661045534,
+            "specificity": 0.9510173323285607,
+            "unresolved": 0,
+            "violation_error_rate": 0.5615514333895447
+          },
+          "threshold": 0.66
+        }
+      }
+    },
+    "hatexplain-specialists/weighted": {
+      "candidates": 3,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/weighted/lambda0",
+          "metrics": {
+            "accuracy": 0.7765625,
+            "allow_f1": 0.8242523555919705,
+            "balanced_accuracy": 0.7879880952229668,
+            "block_f1": 0.6933523945675483,
+            "compliant_error_rate": 0.24189902034664656,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 108,
+              "fp": 321,
+              "tn": 1006,
+              "tp": 485
+            },
+            "coverage": 1.0,
+            "false_blocks": 321,
+            "false_negative_rate": 0.1821247892074199,
+            "false_positive_rate": 0.24189902034664656,
+            "macro_f1": 0.7588023750797595,
+            "mcc": 0.53920911222275,
+            "missed_violations": 108,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.6017369727047146,
+            "recall": 0.8178752107925801,
+            "specificity": 0.7581009796533534,
+            "unresolved": 0,
+            "violation_error_rate": 0.1821247892074199
+          },
+          "threshold": 0.44
+        },
+        "catch_target": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/weighted/lambda0",
+          "metrics": {
+            "accuracy": 0.690625,
+            "allow_f1": 0.7272727272727273,
+            "balanced_accuracy": 0.7486704341405825,
+            "block_f1": 0.6425992779783394,
+            "compliant_error_rate": 0.4031650339110776,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 59,
+              "fp": 535,
+              "tn": 792,
+              "tp": 534
+            },
+            "coverage": 1.0,
+            "false_blocks": 535,
+            "false_negative_rate": 0.09949409780775717,
+            "false_positive_rate": 0.4031650339110776,
+            "macro_f1": 0.6849360026255333,
+            "mcc": 0.462554940212398,
+            "missed_violations": 59,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.49953227315247895,
+            "recall": 0.9005059021922428,
+            "specificity": 0.5968349660889224,
+            "unresolved": 0,
+            "violation_error_rate": 0.09949409780775717
+          },
+          "threshold": 0.27
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/ensemble/hatexplain-specialists/weighted/lambda0",
+          "metrics": {
+            "accuracy": 0.759375,
+            "allow_f1": 0.8461025982678214,
+            "balanced_accuracy": 0.6370390044109182,
+            "block_f1": 0.4486873508353222,
+            "compliant_error_rate": 0.04295403165033911,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 405,
+              "fp": 57,
+              "tn": 1270,
+              "tp": 188
+            },
+            "coverage": 1.0,
+            "false_blocks": 57,
+            "false_negative_rate": 0.6829679595278246,
+            "false_positive_rate": 0.04295403165033911,
+            "macro_f1": 0.6473949745515718,
+            "mcc": 0.37953038475454515,
+            "missed_violations": 405,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.7673469387755102,
+            "recall": 0.31703204047217537,
+            "specificity": 0.9570459683496609,
+            "unresolved": 0,
+            "violation_error_rate": 0.6829679595278246
+          },
+          "threshold": 0.55
+        }
+      }
+    },
+    "jev": {
+      "candidates": 3,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/jev/detailed",
+          "metrics": {
+            "accuracy": 0.7994791666666666,
+            "allow_f1": 0.8445700444085588,
+            "balanced_accuracy": 0.8064323665573362,
+            "block_f1": 0.7175348495964784,
+            "compliant_error_rate": 0.21175584024114544,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 104,
+              "fp": 281,
+              "tn": 1046,
+              "tp": 489
+            },
+            "coverage": 1.0,
+            "false_blocks": 281,
+            "false_negative_rate": 0.17537942664418213,
+            "false_positive_rate": 0.21175584024114544,
+            "macro_f1": 0.7810524470025186,
+            "mcc": 0.5777409566849978,
+            "missed_violations": 104,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.6350649350649351,
+            "recall": 0.8246205733558178,
+            "specificity": 0.7882441597588545,
+            "unresolved": 0,
+            "violation_error_rate": 0.17537942664418213
+          },
+          "threshold": 0.75
+        },
+        "catch_target": {
+          "candidate": "hatexplain/jev/examples",
+          "metrics": {
+            "accuracy": 0.7421875,
+            "allow_f1": 0.7822261328640563,
+            "balanced_accuracy": 0.7869053806593123,
+            "block_f1": 0.6841097638800255,
+            "compliant_error_rate": 0.3300678221552374,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 57,
+              "fp": 438,
+              "tn": 889,
+              "tp": 536
+            },
+            "coverage": 1.0,
+            "false_blocks": 438,
+            "false_negative_rate": 0.09612141652613827,
+            "false_positive_rate": 0.3300678221552374,
+            "macro_f1": 0.7331679483720409,
+            "mcc": 0.5302814684719835,
+            "missed_violations": 57,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5503080082135524,
+            "recall": 0.9038785834738617,
+            "specificity": 0.6699321778447627,
+            "unresolved": 0,
+            "violation_error_rate": 0.09612141652613827
+          },
+          "threshold": 0.4
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/jev/brief",
+          "metrics": {
+            "accuracy": 0.7942708333333334,
+            "allow_f1": 0.8659653885307091,
+            "balanced_accuracy": 0.6907331324635188,
+            "block_f1": 0.5576707726763718,
+            "compliant_error_rate": 0.03843255463451394,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 344,
+              "fp": 51,
+              "tn": 1276,
+              "tp": 249
+            },
+            "coverage": 1.0,
+            "false_blocks": 51,
+            "false_negative_rate": 0.5801011804384486,
+            "false_positive_rate": 0.03843255463451394,
+            "macro_f1": 0.7118180806035405,
+            "mcc": 0.48540116073533035,
+            "missed_violations": 344,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.83,
+            "recall": 0.41989881956155145,
+            "specificity": 0.9615674453654861,
+            "unresolved": 0,
+            "violation_error_rate": 0.5801011804384486
+          },
+          "threshold": 1.0
+        }
+      }
+    },
+    "kev": {
+      "candidates": 3,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/decision-models/kev/brief",
+          "metrics": {
+            "accuracy": 0.7588541666666667,
+            "allow_f1": 0.811251528740318,
+            "balanced_accuracy": 0.7644504905891518,
+            "block_f1": 0.6661860129776496,
+            "compliant_error_rate": 0.25018839487565936,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 131,
+              "fp": 332,
+              "tn": 995,
+              "tp": 462
+            },
+            "coverage": 1.0,
+            "false_blocks": 332,
+            "false_negative_rate": 0.2209106239460371,
+            "false_positive_rate": 0.25018839487565936,
+            "macro_f1": 0.7387187708589837,
+            "mcc": 0.4962011132925298,
+            "missed_violations": 131,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5818639798488665,
+            "recall": 0.7790893760539629,
+            "specificity": 0.7498116051243406,
+            "unresolved": 0,
+            "violation_error_rate": 0.2209106239460371
+          },
+          "threshold": 0.71
+        },
+        "catch_target": {
+          "candidate": "hatexplain/decision-models/kev/brief",
+          "metrics": {
+            "accuracy": 0.6604166666666667,
+            "allow_f1": 0.6912878787878788,
+            "balanced_accuracy": 0.7286821508404381,
+            "block_f1": 0.6226851851851852,
+            "compliant_error_rate": 0.44988696307460435,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 55,
+              "fp": 597,
+              "tn": 730,
+              "tp": 538
+            },
+            "coverage": 1.0,
+            "false_blocks": 597,
+            "false_negative_rate": 0.09274873524451939,
+            "false_positive_rate": 0.44988696307460435,
+            "macro_f1": 0.656986531986532,
+            "mcc": 0.4298256344569446,
+            "missed_violations": 55,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.47400881057268723,
+            "recall": 0.9072512647554806,
+            "specificity": 0.5501130369253956,
+            "unresolved": 0,
+            "violation_error_rate": 0.09274873524451939
+          },
+          "threshold": null
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/decision-models/kev/brief",
+          "metrics": {
+            "accuracy": 0.775,
+            "allow_f1": 0.854251012145749,
+            "balanced_accuracy": 0.6641996362994036,
+            "block_f1": 0.5068493150684932,
+            "compliant_error_rate": 0.045968349660889224,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 371,
+              "fp": 61,
+              "tn": 1266,
+              "tp": 222
+            },
+            "coverage": 1.0,
+            "false_blocks": 61,
+            "false_negative_rate": 0.6256323777403036,
+            "false_positive_rate": 0.045968349660889224,
+            "macro_f1": 0.6805501636071211,
+            "mcc": 0.42800361497450345,
+            "missed_violations": 371,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.784452296819788,
+            "recall": 0.37436762225969644,
+            "specificity": 0.9540316503391107,
+            "unresolved": 0,
+            "violation_error_rate": 0.6256323777403036
+          },
+          "threshold": 0.9
+        }
+      }
+    },
+    "policylm": {
+      "candidates": 21,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/policylm/C0.1",
+          "metrics": {
+            "accuracy": 0.7234375,
+            "allow_f1": 0.8031145717463849,
+            "balanced_accuracy": 0.6660734187220665,
+            "block_f1": 0.5354330708661418,
+            "compliant_error_rate": 0.1838733986435569,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 287,
+              "fp": 244,
+              "tn": 1083,
+              "tp": 306
+            },
+            "coverage": 1.0,
+            "false_blocks": 244,
+            "false_negative_rate": 0.4839797639123103,
+            "false_positive_rate": 0.1838733986435569,
+            "macro_f1": 0.6692738213062633,
+            "mcc": 0.33943084197927437,
+            "missed_violations": 287,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5563636363636364,
+            "recall": 0.5160202360876898,
+            "specificity": 0.8161266013564431,
+            "unresolved": 0,
+            "violation_error_rate": 0.4839797639123103
+          },
+          "threshold": 0.41
+        },
+        "catch_target": {
+          "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/policylm/C1",
+          "metrics": {
+            "accuracy": 0.5135416666666667,
+            "allow_f1": 0.4912854030501089,
+            "balanced_accuracy": 0.6210282992612888,
+            "block_f1": 0.5339321357285429,
+            "compliant_error_rate": 0.6601356443104748,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 58,
+              "fp": 876,
+              "tn": 451,
+              "tp": 535
+            },
+            "coverage": 1.0,
+            "false_blocks": 876,
+            "false_negative_rate": 0.09780775716694773,
+            "false_positive_rate": 0.6601356443104748,
+            "macro_f1": 0.512608769389326,
+            "mcc": 0.25337125126733984,
+            "missed_violations": 58,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.37916371367824236,
+            "recall": 0.9021922428330523,
+            "specificity": 0.3398643556895252,
+            "unresolved": 0,
+            "violation_error_rate": 0.09780775716694773
+          },
+          "threshold": 0.18
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/policylm/C10",
+          "metrics": {
+            "accuracy": 0.725,
+            "allow_f1": 0.8275636838667537,
+            "balanced_accuracy": 0.5827889049714644,
+            "block_f1": 0.3213367609254499,
+            "compliant_error_rate": 0.0452147701582517,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 468,
+              "fp": 60,
+              "tn": 1267,
+              "tp": 125
+            },
+            "coverage": 1.0,
+            "false_blocks": 60,
+            "false_negative_rate": 0.7892074198988196,
+            "false_positive_rate": 0.0452147701582517,
+            "macro_f1": 0.5744502223961018,
+            "mcc": 0.25925631174340874,
+            "missed_violations": 468,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.6756756756756757,
+            "recall": 0.21079258010118043,
+            "specificity": 0.9547852298417483,
+            "unresolved": 0,
+            "violation_error_rate": 0.7892074198988196
+          },
+          "threshold": 0.56
+        }
+      }
+    },
+    "qwen-4b": {
+      "candidates": 12,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/ensemble/hatexplain-mixed/single/qwen-4b/logistic-C0.1",
+          "metrics": {
+            "accuracy": 0.7875,
+            "allow_f1": 0.8346839546191248,
+            "balanced_accuracy": 0.7945015382934029,
+            "block_f1": 0.7026239067055393,
+            "compliant_error_rate": 0.22381311228334588,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 111,
+              "fp": 297,
+              "tn": 1030,
+              "tp": 482
+            },
+            "coverage": 1.0,
+            "false_blocks": 297,
+            "false_negative_rate": 0.18718381112984822,
+            "false_positive_rate": 0.22381311228334588,
+            "macro_f1": 0.7686539306623321,
+            "mcc": 0.5542029336182255,
+            "missed_violations": 111,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.6187419768934531,
+            "recall": 0.8128161888701517,
+            "specificity": 0.7761868877166541,
+            "unresolved": 0,
+            "violation_error_rate": 0.18718381112984822
+          },
+          "threshold": 0.42
+        },
+        "catch_target": {
+          "candidate": "hatexplain/hatexplain/qwen-4b--qwen-4b-p1--markdown--validation",
+          "metrics": {
+            "accuracy": 0.7239583333333334,
+            "allow_f1": 0.7636039250669046,
+            "balanced_accuracy": 0.7727849782249835,
+            "block_f1": 0.6683354192740926,
+            "compliant_error_rate": 0.3549359457422758,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 59,
+              "fp": 471,
+              "tn": 856,
+              "tp": 534
+            },
+            "coverage": 1.0,
+            "false_blocks": 471,
+            "false_negative_rate": 0.09949409780775717,
+            "false_positive_rate": 0.3549359457422758,
+            "macro_f1": 0.7159696721704986,
+            "mcc": 0.5046841629087586,
+            "missed_violations": 59,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.5313432835820896,
+            "recall": 0.9005059021922428,
+            "specificity": 0.6450640542577242,
+            "unresolved": 0,
+            "violation_error_rate": 0.09949409780775717
+          },
+          "threshold": 0.4
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/qwen-4b/C0.01",
+          "metrics": {
+            "accuracy": 0.7927083333333333,
+            "allow_f1": 0.864256480218281,
+            "balanced_accuracy": 0.6924010466240782,
+            "block_f1": 0.5616740088105727,
+            "compliant_error_rate": 0.0452147701582517,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 338,
+              "fp": 60,
+              "tn": 1267,
+              "tp": 255
+            },
+            "coverage": 1.0,
+            "false_blocks": 60,
+            "false_negative_rate": 0.5699831365935919,
+            "false_positive_rate": 0.0452147701582517,
+            "macro_f1": 0.7129652445144269,
+            "mcc": 0.4800731739828849,
+            "missed_violations": 338,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.8095238095238095,
+            "recall": 0.4300168634064081,
+            "specificity": 0.9547852298417483,
+            "unresolved": 0,
+            "violation_error_rate": 0.5699831365935919
+          },
+          "threshold": 0.58
+        }
+      }
+    },
+    "shieldstral": {
+      "candidates": 22,
+      "choices": {
+        "balanced": {
+          "candidate": "hatexplain/hatexplain/shieldstral--p0--markdown--validation",
+          "metrics": {
+            "accuracy": 0.7911458333333333,
+            "allow_f1": 0.8387615601125854,
+            "balanced_accuracy": 0.7943407831381186,
+            "block_f1": 0.7036215816703622,
+            "compliant_error_rate": 0.21401657874905802,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 117,
+              "fp": 284,
+              "tn": 1043,
+              "tp": 476
+            },
+            "coverage": 1.0,
+            "false_blocks": 284,
+            "false_negative_rate": 0.1973018549747049,
+            "false_positive_rate": 0.21401657874905802,
+            "macro_f1": 0.7711915708914738,
+            "mcc": 0.5561698654138175,
+            "missed_violations": 117,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.6263157894736842,
+            "recall": 0.8026981450252951,
+            "specificity": 0.785983421250942,
+            "unresolved": 0,
+            "violation_error_rate": 0.1973018549747049
+          },
+          "threshold": 0.95
+        },
+        "catch_target": {
+          "candidate": "hatexplain/hatexplain/shieldstral--p0--markdown--validation",
+          "metrics": {
+            "accuracy": 0.6848958333333334,
+            "allow_f1": 0.7205542725173211,
+            "balanced_accuracy": 0.7449921274451622,
+            "block_f1": 0.6388059701492538,
+            "compliant_error_rate": 0.41220798794272795,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 58,
+              "fp": 547,
+              "tn": 780,
+              "tp": 535
+            },
+            "coverage": 1.0,
+            "false_blocks": 547,
+            "false_negative_rate": 0.09780775716694773,
+            "false_positive_rate": 0.41220798794272795,
+            "macro_f1": 0.6796801213332875,
+            "mcc": 0.4564669023922171,
+            "missed_violations": 58,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.4944547134935305,
+            "recall": 0.9021922428330523,
+            "specificity": 0.587792012057272,
+            "unresolved": 0,
+            "violation_error_rate": 0.09780775716694773
+          },
+          "threshold": 0.8
+        },
+        "false_block_limit": {
+          "candidate": "hatexplain/logits/hatexplain-mixed/logit-single/shieldstral/C0.01",
+          "metrics": {
+            "accuracy": 0.7921875,
+            "allow_f1": 0.8634964078002053,
+            "balanced_accuracy": 0.6938897791491032,
+            "block_f1": 0.5648854961832062,
+            "compliant_error_rate": 0.048982667671439335,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 334,
+              "fp": 65,
+              "tn": 1262,
+              "tp": 259
+            },
+            "coverage": 1.0,
+            "false_blocks": 65,
+            "false_negative_rate": 0.5632377740303541,
+            "false_positive_rate": 0.048982667671439335,
+            "macro_f1": 0.7141909519917058,
+            "mcc": 0.47836431105379557,
+            "missed_violations": 334,
+            "n": 1920,
+            "negatives": 1327,
+            "positives": 593,
+            "precision": 0.7993827160493827,
+            "recall": 0.43676222596964587,
+            "specificity": 0.9510173323285607,
+            "unresolved": 0,
+            "violation_error_rate": 0.5632377740303541
+          },
+          "threshold": 0.6
+        }
+      }
+    }
+  },
+  "wildguard": {
+    "clef": {
+      "candidates": 3,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/decision-models/clef/examples",
+          "metrics": {
+            "accuracy": 0.912109375,
+            "allow_f1": 0.9056603773584906,
+            "balanced_accuracy": 0.9118107096853341,
+            "block_f1": 0.9177330895795247,
+            "compliant_error_rate": 0.09243697478991597,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 23,
+              "fp": 22,
+              "tn": 216,
+              "tp": 251
+            },
+            "coverage": 1.0,
+            "false_blocks": 22,
+            "false_negative_rate": 0.08394160583941605,
+            "false_positive_rate": 0.09243697478991597,
+            "macro_f1": 0.9116967334690076,
+            "mcc": 0.8234004849480201,
+            "missed_violations": 23,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9194139194139194,
+            "recall": 0.916058394160584,
+            "specificity": 0.907563025210084,
+            "unresolved": 0,
+            "violation_error_rate": 0.08394160583941605
+          },
+          "threshold": 0.36
+        },
+        "catch_target": {
+          "candidate": "wildguard/decision-models/clef/detailed",
+          "metrics": {
+            "accuracy": 0.908203125,
+            "allow_f1": 0.9026915113871635,
+            "balanced_accuracy": 0.9087131202846102,
+            "block_f1": 0.9131238447319778,
+            "compliant_error_rate": 0.08403361344537816,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 27,
+              "fp": 20,
+              "tn": 218,
+              "tp": 247
+            },
+            "coverage": 1.0,
+            "false_blocks": 20,
+            "false_negative_rate": 0.09854014598540146,
+            "false_positive_rate": 0.08403361344537816,
+            "macro_f1": 0.9079076780595707,
+            "mcc": 0.8161569104159275,
+            "missed_violations": 27,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9250936329588015,
+            "recall": 0.9014598540145985,
+            "specificity": 0.9159663865546218,
+            "unresolved": 0,
+            "violation_error_rate": 0.09854014598540146
+          },
+          "threshold": 0.36
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/decision-models/clef/brief",
+          "metrics": {
+            "accuracy": 0.890625,
+            "allow_f1": 0.890625,
+            "balanced_accuracy": 0.8950499907992394,
+            "block_f1": 0.890625,
+            "compliant_error_rate": 0.04201680672268908,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 46,
+              "fp": 10,
+              "tn": 228,
+              "tp": 228
+            },
+            "coverage": 1.0,
+            "false_blocks": 10,
+            "false_negative_rate": 0.1678832116788321,
+            "false_positive_rate": 0.04201680672268908,
+            "macro_f1": 0.890625,
+            "mcc": 0.7900999815984788,
+            "missed_violations": 46,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.957983193277311,
+            "recall": 0.8321167883211679,
+            "specificity": 0.957983193277311,
+            "unresolved": 0,
+            "violation_error_rate": 0.1678832116788321
+          },
+          "threshold": 0.48
+        }
+      }
+    },
+    "cope": {
+      "candidates": 13,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/logits/wildguard-specialists/logit-single/cope/C0.01",
+          "metrics": {
+            "accuracy": 0.955078125,
+            "allow_f1": 0.9519832985386222,
+            "balanced_accuracy": 0.9552689689014292,
+            "block_f1": 0.9577981651376147,
+            "compliant_error_rate": 0.04201680672268908,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 13,
+              "fp": 10,
+              "tn": 228,
+              "tp": 261
+            },
+            "coverage": 1.0,
+            "false_blocks": 10,
+            "false_negative_rate": 0.04744525547445255,
+            "false_positive_rate": 0.04201680672268908,
+            "macro_f1": 0.9548907318381185,
+            "mcc": 0.9098475683238143,
+            "missed_violations": 13,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9630996309963099,
+            "recall": 0.9525547445255474,
+            "specificity": 0.957983193277311,
+            "unresolved": 0,
+            "violation_error_rate": 0.04744525547445255
+          },
+          "threshold": 0.39
+        },
+        "catch_target": {
+          "candidate": "wildguard/logits/wildguard-specialists/logit-single/cope/C0.1",
+          "metrics": {
+            "accuracy": 0.943359375,
+            "allow_f1": 0.9418837675350702,
+            "balanced_accuracy": 0.9462522235171441,
+            "block_f1": 0.9447619047619048,
+            "compliant_error_rate": 0.012605042016806723,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 26,
+              "fp": 3,
+              "tn": 235,
+              "tp": 248
+            },
+            "coverage": 1.0,
+            "false_blocks": 3,
+            "false_negative_rate": 0.0948905109489051,
+            "false_positive_rate": 0.012605042016806723,
+            "macro_f1": 0.9433228361484876,
+            "mcc": 0.890465369471827,
+            "missed_violations": 26,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9880478087649402,
+            "recall": 0.9051094890510949,
+            "specificity": 0.9873949579831933,
+            "unresolved": 0,
+            "violation_error_rate": 0.0948905109489051
+          },
+          "threshold": 0.8
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/logits/wildguard-specialists/logit-single/cope/C0.01",
+          "metrics": {
+            "accuracy": 0.955078125,
+            "allow_f1": 0.9519832985386222,
+            "balanced_accuracy": 0.9552689689014292,
+            "block_f1": 0.9577981651376147,
+            "compliant_error_rate": 0.04201680672268908,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 13,
+              "fp": 10,
+              "tn": 228,
+              "tp": 261
+            },
+            "coverage": 1.0,
+            "false_blocks": 10,
+            "false_negative_rate": 0.04744525547445255,
+            "false_positive_rate": 0.04201680672268908,
+            "macro_f1": 0.9548907318381185,
+            "mcc": 0.9098475683238143,
+            "missed_violations": 13,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9630996309963099,
+            "recall": 0.9525547445255474,
+            "specificity": 0.957983193277311,
+            "unresolved": 0,
+            "violation_error_rate": 0.04744525547445255
+          },
+          "threshold": 0.39
+        }
+      }
+    },
+    "jev": {
+      "candidates": 3,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/jev/detailed",
+          "metrics": {
+            "accuracy": 0.931640625,
+            "allow_f1": 0.9295774647887324,
+            "balanced_accuracy": 0.9341992271361099,
+            "block_f1": 0.9335863377609108,
+            "compliant_error_rate": 0.029411764705882353,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 28,
+              "fp": 7,
+              "tn": 231,
+              "tp": 246
+            },
+            "coverage": 1.0,
+            "false_blocks": 7,
+            "false_negative_rate": 0.10218978102189781,
+            "false_positive_rate": 0.029411764705882353,
+            "macro_f1": 0.9315819012748217,
+            "mcc": 0.8663086664657469,
+            "missed_violations": 28,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9723320158102767,
+            "recall": 0.8978102189781022,
+            "specificity": 0.9705882352941176,
+            "unresolved": 0,
+            "violation_error_rate": 0.10218978102189781
+          },
+          "threshold": 0.64
+        },
+        "catch_target": {
+          "candidate": "wildguard/jev/detailed",
+          "metrics": {
+            "accuracy": 0.931640625,
+            "allow_f1": 0.9290060851926978,
+            "balanced_accuracy": 0.9336471815003373,
+            "block_f1": 0.9340866290018832,
+            "compliant_error_rate": 0.037815126050420166,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 26,
+              "fp": 9,
+              "tn": 229,
+              "tp": 248
+            },
+            "coverage": 1.0,
+            "false_blocks": 9,
+            "false_negative_rate": 0.0948905109489051,
+            "false_positive_rate": 0.037815126050420166,
+            "macro_f1": 0.9315463570972905,
+            "mcc": 0.8651544216970994,
+            "missed_violations": 26,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9649805447470817,
+            "recall": 0.9051094890510949,
+            "specificity": 0.9621848739495799,
+            "unresolved": 0,
+            "violation_error_rate": 0.0948905109489051
+          },
+          "threshold": 0.62
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/jev/detailed",
+          "metrics": {
+            "accuracy": 0.931640625,
+            "allow_f1": 0.9290060851926978,
+            "balanced_accuracy": 0.9336471815003373,
+            "block_f1": 0.9340866290018832,
+            "compliant_error_rate": 0.037815126050420166,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 26,
+              "fp": 9,
+              "tn": 229,
+              "tp": 248
+            },
+            "coverage": 1.0,
+            "false_blocks": 9,
+            "false_negative_rate": 0.0948905109489051,
+            "false_positive_rate": 0.037815126050420166,
+            "macro_f1": 0.9315463570972905,
+            "mcc": 0.8651544216970994,
+            "missed_violations": 26,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9649805447470817,
+            "recall": 0.9051094890510949,
+            "specificity": 0.9621848739495799,
+            "unresolved": 0,
+            "violation_error_rate": 0.0948905109489051
+          },
+          "threshold": 0.62
+        }
+      }
+    },
+    "kev": {
+      "candidates": 3,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/decision-models/kev/brief",
+          "metrics": {
+            "accuracy": 0.91796875,
+            "allow_f1": 0.9156626506024096,
+            "balanced_accuracy": 0.9205974360547139,
+            "block_f1": 0.9201520912547528,
+            "compliant_error_rate": 0.04201680672268908,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 32,
+              "fp": 10,
+              "tn": 228,
+              "tp": 242
+            },
+            "coverage": 1.0,
+            "false_blocks": 10,
+            "false_negative_rate": 0.11678832116788321,
+            "false_positive_rate": 0.04201680672268908,
+            "macro_f1": 0.9179073709285812,
+            "mcc": 0.8392153756032371,
+            "missed_violations": 32,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9603174603174603,
+            "recall": 0.8832116788321168,
+            "specificity": 0.957983193277311,
+            "unresolved": 0,
+            "violation_error_rate": 0.11678832116788321
+          },
+          "threshold": 0.56
+        },
+        "catch_target": {
+          "candidate": "wildguard/decision-models/kev/brief",
+          "metrics": {
+            "accuracy": 0.916015625,
+            "allow_f1": 0.9117043121149897,
+            "balanced_accuracy": 0.9171164816291479,
+            "block_f1": 0.9199255121042831,
+            "compliant_error_rate": 0.06722689075630252,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 27,
+              "fp": 16,
+              "tn": 222,
+              "tp": 247
+            },
+            "coverage": 1.0,
+            "false_blocks": 16,
+            "false_negative_rate": 0.09854014598540146,
+            "false_positive_rate": 0.06722689075630252,
+            "macro_f1": 0.9158149121096364,
+            "mcc": 0.8324795204610613,
+            "missed_violations": 27,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9391634980988594,
+            "recall": 0.9014598540145985,
+            "specificity": 0.9327731092436975,
+            "unresolved": 0,
+            "violation_error_rate": 0.09854014598540146
+          },
+          "threshold": 0.54
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/decision-models/kev/brief",
+          "metrics": {
+            "accuracy": 0.91796875,
+            "allow_f1": 0.9156626506024096,
+            "balanced_accuracy": 0.9205974360547139,
+            "block_f1": 0.9201520912547528,
+            "compliant_error_rate": 0.04201680672268908,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 32,
+              "fp": 10,
+              "tn": 228,
+              "tp": 242
+            },
+            "coverage": 1.0,
+            "false_blocks": 10,
+            "false_negative_rate": 0.11678832116788321,
+            "false_positive_rate": 0.04201680672268908,
+            "macro_f1": 0.9179073709285812,
+            "mcc": 0.8392153756032371,
+            "missed_violations": 32,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9603174603174603,
+            "recall": 0.8832116788321168,
+            "specificity": 0.957983193277311,
+            "unresolved": 0,
+            "violation_error_rate": 0.11678832116788321
+          },
+          "threshold": 0.56
+        }
+      }
+    },
+    "policylm": {
+      "candidates": 17,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/logits/wildguard-specialists/logit-single/policylm/C0.01",
+          "metrics": {
+            "accuracy": 0.923828125,
+            "allow_f1": 0.9178947368421052,
+            "balanced_accuracy": 0.9233116604305955,
+            "block_f1": 0.9289617486338798,
+            "compliant_error_rate": 0.08403361344537816,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 19,
+              "fp": 20,
+              "tn": 218,
+              "tp": 255
+            },
+            "coverage": 1.0,
+            "false_blocks": 20,
+            "false_negative_rate": 0.06934306569343066,
+            "false_positive_rate": 0.08403361344537816,
+            "macro_f1": 0.9234282427379925,
+            "mcc": 0.8468636017841333,
+            "missed_violations": 19,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9272727272727272,
+            "recall": 0.9306569343065694,
+            "specificity": 0.9159663865546218,
+            "unresolved": 0,
+            "violation_error_rate": 0.06934306569343066
+          },
+          "threshold": 0.46
+        },
+        "catch_target": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/single/policylm/logistic-C0.01",
+          "metrics": {
+            "accuracy": 0.919921875,
+            "allow_f1": 0.9158110882956879,
+            "balanced_accuracy": 0.9210421394835306,
+            "block_f1": 0.9236499068901304,
+            "compliant_error_rate": 0.06302521008403361,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 26,
+              "fp": 15,
+              "tn": 223,
+              "tp": 248
+            },
+            "coverage": 1.0,
+            "false_blocks": 15,
+            "false_negative_rate": 0.0948905109489051,
+            "false_positive_rate": 0.06302521008403361,
+            "macro_f1": 0.9197304975929091,
+            "mcc": 0.8403143337854991,
+            "missed_violations": 26,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9429657794676806,
+            "recall": 0.9051094890510949,
+            "specificity": 0.9369747899159664,
+            "unresolved": 0,
+            "violation_error_rate": 0.0948905109489051
+          },
+          "threshold": null
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/wildguard/policylm-validation-p2",
+          "metrics": {
+            "accuracy": 0.90625,
+            "allow_f1": 0.9051383399209486,
+            "balanced_accuracy": 0.9099245537631111,
+            "block_f1": 0.9073359073359073,
+            "compliant_error_rate": 0.037815126050420166,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 39,
+              "fp": 9,
+              "tn": 229,
+              "tp": 235
+            },
+            "coverage": 1.0,
+            "false_blocks": 9,
+            "false_negative_rate": 0.14233576642335766,
+            "false_positive_rate": 0.037815126050420166,
+            "macro_f1": 0.9062371236284279,
+            "mcc": 0.8187199592150218,
+            "missed_violations": 39,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9631147540983607,
+            "recall": 0.8576642335766423,
+            "specificity": 0.9621848739495799,
+            "unresolved": 0,
+            "violation_error_rate": 0.14233576642335766
+          },
+          "threshold": 0.66
+        }
+      }
+    },
+    "qwen-27b": {
+      "candidates": 7,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/qwen/qwen-27b-validation-p1",
+          "metrics": {
+            "accuracy": 0.955078125,
+            "allow_f1": 0.9531568228105907,
+            "balanced_accuracy": 0.9569251058087469,
+            "block_f1": 0.9568480300187617,
+            "compliant_error_rate": 0.01680672268907563,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 19,
+              "fp": 4,
+              "tn": 234,
+              "tp": 255
+            },
+            "coverage": 1.0,
+            "false_blocks": 4,
+            "false_negative_rate": 0.06934306569343066,
+            "false_positive_rate": 0.01680672268907563,
+            "macro_f1": 0.9550024264146761,
+            "mcc": 0.9116510448412453,
+            "missed_violations": 19,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9845559845559846,
+            "recall": 0.9306569343065694,
+            "specificity": 0.9831932773109243,
+            "unresolved": 0,
+            "violation_error_rate": 0.06934306569343066
+          },
+          "threshold": 0.96
+        },
+        "catch_target": {
+          "candidate": "wildguard/qwen/qwen-27b-validation-p1",
+          "metrics": {
+            "accuracy": 0.951171875,
+            "allow_f1": 0.9494949494949495,
+            "balanced_accuracy": 0.9535514935901368,
+            "block_f1": 0.9527410207939508,
+            "compliant_error_rate": 0.012605042016806723,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 22,
+              "fp": 3,
+              "tn": 235,
+              "tp": 252
+            },
+            "coverage": 1.0,
+            "false_blocks": 3,
+            "false_negative_rate": 0.08029197080291971,
+            "false_positive_rate": 0.012605042016806723,
+            "macro_f1": 0.9511179851444502,
+            "mcc": 0.9048648230324662,
+            "missed_violations": 22,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9882352941176471,
+            "recall": 0.9197080291970803,
+            "specificity": 0.9873949579831933,
+            "unresolved": 0,
+            "violation_error_rate": 0.08029197080291971
+          },
+          "threshold": 0.97
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/qwen/qwen-27b-validation-p2",
+          "metrics": {
+            "accuracy": 0.955078125,
+            "allow_f1": 0.9517819706498952,
+            "balanced_accuracy": 0.9549929460835429,
+            "block_f1": 0.9579524680073126,
+            "compliant_error_rate": 0.046218487394957986,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 12,
+              "fp": 11,
+              "tn": 227,
+              "tp": 262
+            },
+            "coverage": 1.0,
+            "false_blocks": 11,
+            "false_negative_rate": 0.043795620437956206,
+            "false_positive_rate": 0.046218487394957986,
+            "macro_f1": 0.9548672193286039,
+            "mcc": 0.9097417906867513,
+            "missed_violations": 12,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9597069597069597,
+            "recall": 0.9562043795620438,
+            "specificity": 0.9537815126050421,
+            "unresolved": 0,
+            "violation_error_rate": 0.043795620437956206
+          },
+          "threshold": 0.93
+        }
+      }
+    },
+    "qwen-2b": {
+      "candidates": 6,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/transfer/qwen-2b--transfer-policylm-p2--validation",
+          "metrics": {
+            "accuracy": 0.8984375,
+            "allow_f1": 0.8907563025210085,
+            "balanced_accuracy": 0.8979328957860517,
+            "block_f1": 0.9051094890510949,
+            "compliant_error_rate": 0.1092436974789916,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 26,
+              "fp": 26,
+              "tn": 212,
+              "tp": 248
+            },
+            "coverage": 1.0,
+            "false_blocks": 26,
+            "false_negative_rate": 0.0948905109489051,
+            "false_positive_rate": 0.1092436974789916,
+            "macro_f1": 0.8979328957860517,
+            "mcc": 0.7958657915721032,
+            "missed_violations": 26,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9051094890510949,
+            "recall": 0.9051094890510949,
+            "specificity": 0.8907563025210085,
+            "unresolved": 0,
+            "violation_error_rate": 0.0948905109489051
+          },
+          "threshold": 0.89
+        },
+        "catch_target": {
+          "candidate": "wildguard/transfer/qwen-2b--transfer-policylm-p2--validation",
+          "metrics": {
+            "accuracy": 0.8984375,
+            "allow_f1": 0.8907563025210085,
+            "balanced_accuracy": 0.8979328957860517,
+            "block_f1": 0.9051094890510949,
+            "compliant_error_rate": 0.1092436974789916,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 26,
+              "fp": 26,
+              "tn": 212,
+              "tp": 248
+            },
+            "coverage": 1.0,
+            "false_blocks": 26,
+            "false_negative_rate": 0.0948905109489051,
+            "false_positive_rate": 0.1092436974789916,
+            "macro_f1": 0.8979328957860517,
+            "mcc": 0.7958657915721032,
+            "missed_violations": 26,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9051094890510949,
+            "recall": 0.9051094890510949,
+            "specificity": 0.8907563025210085,
+            "unresolved": 0,
+            "violation_error_rate": 0.0948905109489051
+          },
+          "threshold": 0.89
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/qwen/qwen-2b-validation-p2",
+          "metrics": {
+            "accuracy": 0.857421875,
+            "allow_f1": 0.8614800759013282,
+            "balanced_accuracy": 0.8637520701711342,
+            "block_f1": 0.8531187122736419,
+            "compliant_error_rate": 0.046218487394957986,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 62,
+              "fp": 11,
+              "tn": 227,
+              "tp": 212
+            },
+            "coverage": 1.0,
+            "false_blocks": 11,
+            "false_negative_rate": 0.22627737226277372,
+            "false_positive_rate": 0.046218487394957986,
+            "macro_f1": 0.8572993940874851,
+            "mcc": 0.7318092191866291,
+            "missed_violations": 62,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9506726457399103,
+            "recall": 0.7737226277372263,
+            "specificity": 0.9537815126050421,
+            "unresolved": 0,
+            "violation_error_rate": 0.22627737226277372
+          },
+          "threshold": 0.95
+        }
+      }
+    },
+    "qwen-35b-a3b": {
+      "candidates": 3,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/qwen/qwen-35b-a3b-validation-p2",
+          "metrics": {
+            "accuracy": 0.953125,
+            "allow_f1": 0.950207468879668,
+            "balanced_accuracy": 0.9537201742010673,
+            "block_f1": 0.955719557195572,
+            "compliant_error_rate": 0.037815126050420166,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 15,
+              "fp": 9,
+              "tn": 229,
+              "tp": 259
+            },
+            "coverage": 1.0,
+            "false_blocks": 9,
+            "false_negative_rate": 0.05474452554744526,
+            "false_positive_rate": 0.037815126050420166,
+            "macro_f1": 0.95296351303762,
+            "mcc": 0.906190563865557,
+            "missed_violations": 15,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9664179104477612,
+            "recall": 0.9452554744525548,
+            "specificity": 0.9621848739495799,
+            "unresolved": 0,
+            "violation_error_rate": 0.05474452554744526
+          },
+          "threshold": 0.71
+        },
+        "catch_target": {
+          "candidate": "wildguard/qwen/qwen-35b-a3b-validation-p4",
+          "metrics": {
+            "accuracy": 0.9375,
+            "allow_f1": 0.9357429718875502,
+            "balanced_accuracy": 0.940225725326627,
+            "block_f1": 0.9391634980988594,
+            "compliant_error_rate": 0.02100840336134454,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 27,
+              "fp": 5,
+              "tn": 233,
+              "tp": 247
+            },
+            "coverage": 1.0,
+            "false_blocks": 5,
+            "false_negative_rate": 0.09854014598540146,
+            "false_positive_rate": 0.02100840336134454,
+            "macro_f1": 0.9374532349932048,
+            "mcc": 0.8783795757188906,
+            "missed_violations": 27,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9801587301587301,
+            "recall": 0.9014598540145985,
+            "specificity": 0.9789915966386554,
+            "unresolved": 0,
+            "violation_error_rate": 0.09854014598540146
+          },
+          "threshold": 0.78
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/qwen/qwen-35b-a3b-validation-p2",
+          "metrics": {
+            "accuracy": 0.953125,
+            "allow_f1": 0.9497907949790795,
+            "balanced_accuracy": 0.9531681285652948,
+            "block_f1": 0.9560439560439561,
+            "compliant_error_rate": 0.046218487394957986,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 13,
+              "fp": 11,
+              "tn": 227,
+              "tp": 261
+            },
+            "coverage": 1.0,
+            "false_blocks": 11,
+            "false_negative_rate": 0.04744525547445255,
+            "false_positive_rate": 0.046218487394957986,
+            "macro_f1": 0.9529173755115178,
+            "mcc": 0.9058640840028772,
+            "missed_violations": 13,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9595588235294118,
+            "recall": 0.9525547445255474,
+            "specificity": 0.9537815126050421,
+            "unresolved": 0,
+            "violation_error_rate": 0.04744525547445255
+          },
+          "threshold": 0.66
+        }
+      }
+    },
+    "qwen-4b": {
+      "candidates": 7,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/qwen/qwen-4b-validation-p1",
+          "metrics": {
+            "accuracy": 0.916015625,
+            "allow_f1": 0.9059080962800875,
+            "balanced_accuracy": 0.9129761393608539,
+            "block_f1": 0.9241622574955908,
+            "compliant_error_rate": 0.13025210084033614,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 12,
+              "fp": 31,
+              "tn": 207,
+              "tp": 262
+            },
+            "coverage": 1.0,
+            "false_blocks": 31,
+            "false_negative_rate": 0.043795620437956206,
+            "false_positive_rate": 0.13025210084033614,
+            "macro_f1": 0.9150351768878391,
+            "mcc": 0.8326506933613027,
+            "missed_violations": 12,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.89419795221843,
+            "recall": 0.9562043795620438,
+            "specificity": 0.8697478991596639,
+            "unresolved": 0,
+            "violation_error_rate": 0.043795620437956206
+          },
+          "threshold": 0.43
+        },
+        "catch_target": {
+          "candidate": "wildguard/qwen/qwen-4b-validation-p0",
+          "metrics": {
+            "accuracy": 0.90234375,
+            "allow_f1": 0.8958333333333334,
+            "balanced_accuracy": 0.9024105992762068,
+            "block_f1": 0.9080882352941176,
+            "compliant_error_rate": 0.09663865546218488,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 27,
+              "fp": 23,
+              "tn": 215,
+              "tp": 247
+            },
+            "coverage": 1.0,
+            "false_blocks": 23,
+            "false_negative_rate": 0.09854014598540146,
+            "false_positive_rate": 0.09663865546218488,
+            "macro_f1": 0.9019607843137255,
+            "mcc": 0.8040324962635683,
+            "missed_violations": 27,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9148148148148149,
+            "recall": 0.9014598540145985,
+            "specificity": 0.9033613445378151,
+            "unresolved": 0,
+            "violation_error_rate": 0.09854014598540146
+          },
+          "threshold": 0.57
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/qwen/qwen-4b-validation-p2",
+          "metrics": {
+            "accuracy": 0.8984375,
+            "allow_f1": 0.8972332015810277,
+            "balanced_accuracy": 0.9020732380543459,
+            "block_f1": 0.8996138996138996,
+            "compliant_error_rate": 0.046218487394957986,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 41,
+              "fp": 11,
+              "tn": 227,
+              "tp": 233
+            },
+            "coverage": 1.0,
+            "false_blocks": 11,
+            "false_negative_rate": 0.14963503649635038,
+            "false_positive_rate": 0.046218487394957986,
+            "macro_f1": 0.8984235505974636,
+            "mcc": 0.8030389544597439,
+            "missed_violations": 41,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9549180327868853,
+            "recall": 0.8503649635036497,
+            "specificity": 0.9537815126050421,
+            "unresolved": 0,
+            "violation_error_rate": 0.14963503649635038
+          },
+          "threshold": 0.66
+        }
+      }
+    },
+    "qwen-9b": {
+      "candidates": 3,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/qwen/qwen-9b-validation-p3",
+          "metrics": {
+            "accuracy": 0.94140625,
+            "allow_f1": 0.9372384937238494,
+            "balanced_accuracy": 0.9413911550021468,
+            "block_f1": 0.945054945054945,
+            "compliant_error_rate": 0.058823529411764705,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 16,
+              "fp": 14,
+              "tn": 224,
+              "tp": 258
+            },
+            "coverage": 1.0,
+            "false_blocks": 14,
+            "false_negative_rate": 0.058394160583941604,
+            "false_positive_rate": 0.058823529411764705,
+            "macro_f1": 0.9411467193893972,
+            "mcc": 0.8823224077537499,
+            "missed_violations": 16,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9485294117647058,
+            "recall": 0.9416058394160584,
+            "specificity": 0.9411764705882353,
+            "unresolved": 0,
+            "violation_error_rate": 0.058394160583941604
+          },
+          "threshold": null
+        },
+        "catch_target": {
+          "candidate": "wildguard/qwen/qwen-9b-validation-p3",
+          "metrics": {
+            "accuracy": 0.931640625,
+            "allow_f1": 0.9292929292929293,
+            "balanced_accuracy": 0.9339232043182236,
+            "block_f1": 0.9338374291115312,
+            "compliant_error_rate": 0.03361344537815126,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 27,
+              "fp": 8,
+              "tn": 230,
+              "tp": 247
+            },
+            "coverage": 1.0,
+            "false_blocks": 8,
+            "false_negative_rate": 0.09854014598540146,
+            "false_positive_rate": 0.03361344537815126,
+            "macro_f1": 0.9315651792022303,
+            "mcc": 0.8657051052287147,
+            "missed_violations": 27,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9686274509803922,
+            "recall": 0.9014598540145985,
+            "specificity": 0.9663865546218487,
+            "unresolved": 0,
+            "violation_error_rate": 0.09854014598540146
+          },
+          "threshold": 0.78
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/qwen/qwen-9b-validation-p2",
+          "metrics": {
+            "accuracy": 0.9375,
+            "allow_f1": 0.934156378600823,
+            "balanced_accuracy": 0.9385695884193094,
+            "block_f1": 0.9405204460966543,
+            "compliant_error_rate": 0.046218487394957986,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 21,
+              "fp": 11,
+              "tn": 227,
+              "tp": 253
+            },
+            "coverage": 1.0,
+            "false_blocks": 11,
+            "false_negative_rate": 0.07664233576642336,
+            "false_positive_rate": 0.046218487394957986,
+            "macro_f1": 0.9373384123487387,
+            "mcc": 0.8753958128911102,
+            "missed_violations": 21,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9583333333333334,
+            "recall": 0.9233576642335767,
+            "specificity": 0.9537815126050421,
+            "unresolved": 0,
+            "violation_error_rate": 0.07664233576642336
+          },
+          "threshold": null
+        }
+      }
+    },
+    "safeguard": {
+      "candidates": 2,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/wildguard/safeguard-validation-p2",
+          "metrics": {
+            "accuracy": 0.92578125,
+            "allow_f1": 0.9253112033195021,
+            "balanced_accuracy": 0.9265165920382752,
+            "block_f1": 0.9313543599257885,
+            "compliant_error_rate": 0.06302521008403361,
+            "confusion": {
+              "error_allow": 1,
+              "error_block": 2,
+              "fn": 21,
+              "fp": 14,
+              "tn": 223,
+              "tp": 251
+            },
+            "coverage": 0.994140625,
+            "false_blocks": 14,
+            "false_negative_rate": 0.07664233576642336,
+            "false_positive_rate": 0.058823529411764705,
+            "macro_f1": 0.9283327816226453,
+            "mcc": null,
+            "missed_violations": 21,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9471698113207547,
+            "recall": 0.916058394160584,
+            "specificity": 0.9369747899159664,
+            "unresolved": 3,
+            "violation_error_rate": 0.08394160583941605
+          },
+          "threshold": null
+        },
+        "catch_target": {
+          "candidate": "wildguard/wildguard/safeguard-validation-p2",
+          "metrics": {
+            "accuracy": 0.92578125,
+            "allow_f1": 0.9253112033195021,
+            "balanced_accuracy": 0.9265165920382752,
+            "block_f1": 0.9313543599257885,
+            "compliant_error_rate": 0.06302521008403361,
+            "confusion": {
+              "error_allow": 1,
+              "error_block": 2,
+              "fn": 21,
+              "fp": 14,
+              "tn": 223,
+              "tp": 251
+            },
+            "coverage": 0.994140625,
+            "false_blocks": 14,
+            "false_negative_rate": 0.07664233576642336,
+            "false_positive_rate": 0.058823529411764705,
+            "macro_f1": 0.9283327816226453,
+            "mcc": null,
+            "missed_violations": 21,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9471698113207547,
+            "recall": 0.916058394160584,
+            "specificity": 0.9369747899159664,
+            "unresolved": 3,
+            "violation_error_rate": 0.08394160583941605
+          },
+          "threshold": null
+        },
+        "false_block_limit": null
+      }
+    },
+    "shieldstral": {
+      "candidates": 17,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/transfer/shieldstral--transfer-qwen-2b-p3--validation",
+          "metrics": {
+            "accuracy": 0.98828125,
+            "allow_f1": 0.9873949579831933,
+            "balanced_accuracy": 0.9882230264368521,
+            "block_f1": 0.9890510948905109,
+            "compliant_error_rate": 0.012605042016806723,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 3,
+              "fp": 3,
+              "tn": 235,
+              "tp": 271
+            },
+            "coverage": 1.0,
+            "false_blocks": 3,
+            "false_negative_rate": 0.010948905109489052,
+            "false_positive_rate": 0.012605042016806723,
+            "macro_f1": 0.9882230264368521,
+            "mcc": 0.9764460528737042,
+            "missed_violations": 3,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9890510948905109,
+            "recall": 0.9890510948905109,
+            "specificity": 0.9873949579831933,
+            "unresolved": 0,
+            "violation_error_rate": 0.010948905109489052
+          },
+          "threshold": null
+        },
+        "catch_target": {
+          "candidate": "wildguard/logits/wildguard-specialists/logit-single/shieldstral/C0.01",
+          "metrics": {
+            "accuracy": 0.970703125,
+            "allow_f1": 0.9694501018329938,
+            "balanced_accuracy": 0.9726277372262774,
+            "block_f1": 0.9718574108818011,
+            "compliant_error_rate": 0.0,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 15,
+              "fp": 0,
+              "tn": 238,
+              "tp": 259
+            },
+            "coverage": 1.0,
+            "false_blocks": 0,
+            "false_negative_rate": 0.05474452554744526,
+            "false_positive_rate": 0.0,
+            "macro_f1": 0.9706537563573975,
+            "mcc": 0.9429807313840998,
+            "missed_violations": 15,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 1.0,
+            "recall": 0.9452554744525548,
+            "specificity": 1.0,
+            "unresolved": 0,
+            "violation_error_rate": 0.05474452554744526
+          },
+          "threshold": 0.76
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/transfer/shieldstral--transfer-shieldstral-p3--validation",
+          "metrics": {
+            "accuracy": 0.982421875,
+            "allow_f1": 0.9807280513918629,
+            "balanced_accuracy": 0.98109243697479,
+            "block_f1": 0.9838420107719928,
+            "compliant_error_rate": 0.037815126050420166,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 0,
+              "fp": 9,
+              "tn": 229,
+              "tp": 274
+            },
+            "coverage": 1.0,
+            "false_blocks": 9,
+            "false_negative_rate": 0.0,
+            "false_positive_rate": 0.037815126050420166,
+            "macro_f1": 0.9822850310819279,
+            "mcc": 0.9651866943706034,
+            "missed_violations": 0,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9681978798586572,
+            "recall": 1.0,
+            "specificity": 0.9621848739495799,
+            "unresolved": 0,
+            "violation_error_rate": 0.0
+          },
+          "threshold": 0.1
+        }
+      }
+    },
+    "wildguard": {
+      "candidates": 1,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/wildguard/wildguard-validation-p0",
+          "metrics": {
+            "accuracy": 1.0,
+            "allow_f1": 1.0,
+            "balanced_accuracy": 1.0,
+            "block_f1": 1.0,
+            "compliant_error_rate": 0.0,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 0,
+              "fp": 0,
+              "tn": 238,
+              "tp": 274
+            },
+            "coverage": 1.0,
+            "false_blocks": 0,
+            "false_negative_rate": 0.0,
+            "false_positive_rate": 0.0,
+            "macro_f1": 1.0,
+            "mcc": 1.0,
+            "missed_violations": 0,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "unresolved": 0,
+            "violation_error_rate": 0.0
+          },
+          "threshold": null
+        },
+        "catch_target": {
+          "candidate": "wildguard/wildguard/wildguard-validation-p0",
+          "metrics": {
+            "accuracy": 1.0,
+            "allow_f1": 1.0,
+            "balanced_accuracy": 1.0,
+            "block_f1": 1.0,
+            "compliant_error_rate": 0.0,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 0,
+              "fp": 0,
+              "tn": 238,
+              "tp": 274
+            },
+            "coverage": 1.0,
+            "false_blocks": 0,
+            "false_negative_rate": 0.0,
+            "false_positive_rate": 0.0,
+            "macro_f1": 1.0,
+            "mcc": 1.0,
+            "missed_violations": 0,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "unresolved": 0,
+            "violation_error_rate": 0.0
+          },
+          "threshold": null
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/wildguard/wildguard-validation-p0",
+          "metrics": {
+            "accuracy": 1.0,
+            "allow_f1": 1.0,
+            "balanced_accuracy": 1.0,
+            "block_f1": 1.0,
+            "compliant_error_rate": 0.0,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 0,
+              "fp": 0,
+              "tn": 238,
+              "tp": 274
+            },
+            "coverage": 1.0,
+            "false_blocks": 0,
+            "false_negative_rate": 0.0,
+            "false_positive_rate": 0.0,
+            "macro_f1": 1.0,
+            "mcc": 1.0,
+            "missed_violations": 0,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 1.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "unresolved": 0,
+            "violation_error_rate": 0.0
+          },
+          "threshold": null
+        }
+      }
+    },
+    "wildguard-specialists/equal-calibrated": {
+      "candidates": 1,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/equal/calibrated",
+          "metrics": {
+            "accuracy": 0.974609375,
+            "allow_f1": 0.9730848861283644,
+            "balanced_accuracy": 0.975449303809115,
+            "block_f1": 0.9759704251386322,
+            "compliant_error_rate": 0.012605042016806723,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 10,
+              "fp": 3,
+              "tn": 235,
+              "tp": 264
+            },
+            "coverage": 1.0,
+            "false_blocks": 3,
+            "false_negative_rate": 0.0364963503649635,
+            "false_positive_rate": 0.012605042016806723,
+            "macro_f1": 0.9745276556334983,
+            "mcc": 0.9494220165627071,
+            "missed_violations": 10,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9887640449438202,
+            "recall": 0.9635036496350365,
+            "specificity": 0.9873949579831933,
+            "unresolved": 0,
+            "violation_error_rate": 0.0364963503649635
+          },
+          "threshold": 0.6
+        },
+        "catch_target": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/equal/calibrated",
+          "metrics": {
+            "accuracy": 0.953125,
+            "allow_f1": 0.9518072289156626,
+            "balanced_accuracy": 0.9559283567441575,
+            "block_f1": 0.9543726235741445,
+            "compliant_error_rate": 0.004201680672268907,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 23,
+              "fp": 1,
+              "tn": 237,
+              "tp": 251
+            },
+            "coverage": 1.0,
+            "false_blocks": 1,
+            "false_negative_rate": 0.08394160583941605,
+            "false_positive_rate": 0.004201680672268907,
+            "macro_f1": 0.9530899262449035,
+            "mcc": 0.9097109358114133,
+            "missed_violations": 23,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.996031746031746,
+            "recall": 0.916058394160584,
+            "specificity": 0.9957983193277311,
+            "unresolved": 0,
+            "violation_error_rate": 0.08394160583941605
+          },
+          "threshold": 0.73
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/equal/calibrated",
+          "metrics": {
+            "accuracy": 0.96875,
+            "allow_f1": 0.9659574468085106,
+            "balanced_accuracy": 0.9677666687112801,
+            "block_f1": 0.9711191335740073,
+            "compliant_error_rate": 0.046218487394957986,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 5,
+              "fp": 11,
+              "tn": 227,
+              "tp": 269
+            },
+            "coverage": 1.0,
+            "false_blocks": 11,
+            "false_negative_rate": 0.01824817518248175,
+            "false_positive_rate": 0.046218487394957986,
+            "macro_f1": 0.9685382901912589,
+            "mcc": 0.9373461930438763,
+            "missed_violations": 5,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9607142857142857,
+            "recall": 0.9817518248175182,
+            "specificity": 0.9537815126050421,
+            "unresolved": 0,
+            "violation_error_rate": 0.01824817518248175
+          },
+          "threshold": 0.34
+        }
+      }
+    },
+    "wildguard-specialists/equal-raw": {
+      "candidates": 1,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/equal/raw",
+          "metrics": {
+            "accuracy": 0.9765625,
+            "allow_f1": 0.975103734439834,
+            "balanced_accuracy": 0.977274121327363,
+            "block_f1": 0.977859778597786,
+            "compliant_error_rate": 0.012605042016806723,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 9,
+              "fp": 3,
+              "tn": 235,
+              "tp": 265
+            },
+            "coverage": 1.0,
+            "false_blocks": 3,
+            "false_negative_rate": 0.032846715328467155,
+            "false_positive_rate": 0.012605042016806723,
+            "macro_f1": 0.97648175651881,
+            "mcc": 0.9532335781313909,
+            "missed_violations": 9,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9888059701492538,
+            "recall": 0.9671532846715328,
+            "specificity": 0.9873949579831933,
+            "unresolved": 0,
+            "violation_error_rate": 0.032846715328467155
+          },
+          "threshold": 0.52
+        },
+        "catch_target": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/equal/raw",
+          "metrics": {
+            "accuracy": 0.96484375,
+            "allow_f1": 0.9634146341463414,
+            "balanced_accuracy": 0.9668772618536465,
+            "block_f1": 0.9661654135338346,
+            "compliant_error_rate": 0.004201680672268907,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 17,
+              "fp": 1,
+              "tn": 237,
+              "tp": 257
+            },
+            "coverage": 1.0,
+            "false_blocks": 1,
+            "false_negative_rate": 0.06204379562043796,
+            "false_positive_rate": 0.004201680672268907,
+            "macro_f1": 0.9647900238400879,
+            "mcc": 0.9314719204673129,
+            "missed_violations": 17,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9961240310077519,
+            "recall": 0.9379562043795621,
+            "specificity": 0.9957983193277311,
+            "unresolved": 0,
+            "violation_error_rate": 0.06204379562043796
+          },
+          "threshold": 0.7
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/equal/raw",
+          "metrics": {
+            "accuracy": 0.970703125,
+            "allow_f1": 0.9682875264270613,
+            "balanced_accuracy": 0.9701435318653009,
+            "block_f1": 0.9727767695099818,
+            "compliant_error_rate": 0.037815126050420166,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 6,
+              "fp": 9,
+              "tn": 229,
+              "tp": 268
+            },
+            "coverage": 1.0,
+            "false_blocks": 9,
+            "false_negative_rate": 0.021897810218978103,
+            "false_positive_rate": 0.037815126050420166,
+            "macro_f1": 0.9705321479685216,
+            "mcc": 0.9411317076891836,
+            "missed_violations": 6,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9675090252707581,
+            "recall": 0.9781021897810219,
+            "specificity": 0.9621848739495799,
+            "unresolved": 0,
+            "violation_error_rate": 0.021897810218978103
+          },
+          "threshold": 0.35
+        }
+      }
+    },
+    "wildguard-specialists/forest": {
+      "candidates": 4,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/forest/depth4-leaf20",
+          "metrics": {
+            "accuracy": 0.986328125,
+            "allow_f1": 0.9852631578947368,
+            "balanced_accuracy": 0.9861221861007177,
+            "block_f1": 0.9872495446265938,
+            "compliant_error_rate": 0.01680672268907563,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 3,
+              "fp": 4,
+              "tn": 234,
+              "tp": 271
+            },
+            "coverage": 1.0,
+            "false_blocks": 4,
+            "false_negative_rate": 0.010948905109489052,
+            "false_positive_rate": 0.01680672268907563,
+            "macro_f1": 0.9862563512606652,
+            "mcc": 0.9725203057474664,
+            "missed_violations": 3,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9854545454545455,
+            "recall": 0.9890510948905109,
+            "specificity": 0.9831932773109243,
+            "unresolved": 0,
+            "violation_error_rate": 0.010948905109489052
+          },
+          "threshold": null
+        },
+        "catch_target": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/forest/depth4-leaf80",
+          "metrics": {
+            "accuracy": 0.95703125,
+            "allow_f1": 0.9558232931726908,
+            "balanced_accuracy": 0.9598540145985401,
+            "block_f1": 0.9581749049429658,
+            "compliant_error_rate": 0.0,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 22,
+              "fp": 0,
+              "tn": 238,
+              "tp": 252
+            },
+            "coverage": 1.0,
+            "false_blocks": 0,
+            "false_negative_rate": 0.08029197080291971,
+            "false_positive_rate": 0.0,
+            "macro_f1": 0.9569990990578283,
+            "mcc": 0.917543775834544,
+            "missed_violations": 22,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 1.0,
+            "recall": 0.9197080291970803,
+            "specificity": 1.0,
+            "unresolved": 0,
+            "violation_error_rate": 0.08029197080291971
+          },
+          "threshold": 0.84
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/forest/depth4-leaf20",
+          "metrics": {
+            "accuracy": 0.986328125,
+            "allow_f1": 0.985200845665962,
+            "balanced_accuracy": 0.9858461632828314,
+            "block_f1": 0.9872958257713249,
+            "compliant_error_rate": 0.02100840336134454,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 2,
+              "fp": 5,
+              "tn": 233,
+              "tp": 272
+            },
+            "coverage": 1.0,
+            "false_blocks": 5,
+            "false_negative_rate": 0.0072992700729927005,
+            "false_positive_rate": 0.02100840336134454,
+            "macro_f1": 0.9862483357186435,
+            "mcc": 0.9725651813404353,
+            "missed_violations": 2,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9819494584837545,
+            "recall": 0.9927007299270073,
+            "specificity": 0.9789915966386554,
+            "unresolved": 0,
+            "violation_error_rate": 0.0072992700729927005
+          },
+          "threshold": 0.23
+        }
+      }
+    },
+    "wildguard-specialists/logistic": {
+      "candidates": 5,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/logistic/C10",
+          "metrics": {
+            "accuracy": 0.98828125,
+            "allow_f1": 0.9873417721518988,
+            "balanced_accuracy": 0.9879470036189658,
+            "block_f1": 0.9890909090909091,
+            "compliant_error_rate": 0.01680672268907563,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 2,
+              "fp": 4,
+              "tn": 234,
+              "tp": 272
+            },
+            "coverage": 1.0,
+            "false_blocks": 4,
+            "false_negative_rate": 0.0072992700729927005,
+            "false_positive_rate": 0.01680672268907563,
+            "macro_f1": 0.988216340621404,
+            "mcc": 0.9764631726961107,
+            "missed_violations": 2,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9855072463768116,
+            "recall": 0.9927007299270073,
+            "specificity": 0.9831932773109243,
+            "unresolved": 0,
+            "violation_error_rate": 0.0072992700729927005
+          },
+          "threshold": 0.1
+        },
+        "catch_target": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/logistic/C0.1",
+          "metrics": {
+            "accuracy": 0.96875,
+            "allow_f1": 0.967479674796748,
+            "balanced_accuracy": 0.9708029197080292,
+            "block_f1": 0.9699248120300752,
+            "compliant_error_rate": 0.0,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 16,
+              "fp": 0,
+              "tn": 238,
+              "tp": 258
+            },
+            "coverage": 1.0,
+            "false_blocks": 0,
+            "false_negative_rate": 0.058394160583941604,
+            "false_positive_rate": 0.0,
+            "macro_f1": 0.9687022434134116,
+            "mcc": 0.9393040432959153,
+            "missed_violations": 16,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 1.0,
+            "recall": 0.9416058394160584,
+            "specificity": 1.0,
+            "unresolved": 0,
+            "violation_error_rate": 0.058394160583941604
+          },
+          "threshold": 0.97
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/logistic/C10",
+          "metrics": {
+            "accuracy": 0.98828125,
+            "allow_f1": 0.9873417721518988,
+            "balanced_accuracy": 0.9879470036189658,
+            "block_f1": 0.9890909090909091,
+            "compliant_error_rate": 0.01680672268907563,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 2,
+              "fp": 4,
+              "tn": 234,
+              "tp": 272
+            },
+            "coverage": 1.0,
+            "false_blocks": 4,
+            "false_negative_rate": 0.0072992700729927005,
+            "false_positive_rate": 0.01680672268907563,
+            "macro_f1": 0.988216340621404,
+            "mcc": 0.9764631726961107,
+            "missed_violations": 2,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9855072463768116,
+            "recall": 0.9927007299270073,
+            "specificity": 0.9831932773109243,
+            "unresolved": 0,
+            "violation_error_rate": 0.0072992700729927005
+          },
+          "threshold": 0.1
+        }
+      }
+    },
+    "wildguard-specialists/logit-equal": {
+      "candidates": 1,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/logits/wildguard-specialists/logit-equal",
+          "metrics": {
+            "accuracy": 0.974609375,
+            "allow_f1": 0.9728601252609603,
+            "balanced_accuracy": 0.9748972581733424,
+            "block_f1": 0.9761467889908257,
+            "compliant_error_rate": 0.02100840336134454,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 8,
+              "fp": 5,
+              "tn": 233,
+              "tp": 266
+            },
+            "coverage": 1.0,
+            "false_blocks": 5,
+            "false_negative_rate": 0.029197080291970802,
+            "false_positive_rate": 0.02100840336134454,
+            "macro_f1": 0.974503457125893,
+            "mcc": 0.9490743825464046,
+            "missed_violations": 8,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.981549815498155,
+            "recall": 0.9708029197080292,
+            "specificity": 0.9789915966386554,
+            "unresolved": 0,
+            "violation_error_rate": 0.029197080291970802
+          },
+          "threshold": 0.23
+        },
+        "catch_target": {
+          "candidate": "wildguard/logits/wildguard-specialists/logit-equal",
+          "metrics": {
+            "accuracy": 0.970703125,
+            "allow_f1": 0.9693251533742331,
+            "balanced_accuracy": 0.9723517144083911,
+            "block_f1": 0.9719626168224299,
+            "compliant_error_rate": 0.004201680672268907,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 14,
+              "fp": 1,
+              "tn": 237,
+              "tp": 260
+            },
+            "coverage": 1.0,
+            "false_blocks": 1,
+            "false_negative_rate": 0.051094890510948905,
+            "false_positive_rate": 0.004201680672268907,
+            "macro_f1": 0.9706438850983314,
+            "mcc": 0.9425450938400979,
+            "missed_violations": 14,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9961685823754789,
+            "recall": 0.948905109489051,
+            "specificity": 0.9957983193277311,
+            "unresolved": 0,
+            "violation_error_rate": 0.051094890510948905
+          },
+          "threshold": 0.8
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/logits/wildguard-specialists/logit-equal",
+          "metrics": {
+            "accuracy": 0.97265625,
+            "allow_f1": 0.9705882352941176,
+            "balanced_accuracy": 0.9725203950193215,
+            "block_f1": 0.9744525547445255,
+            "compliant_error_rate": 0.029411764705882353,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 7,
+              "fp": 7,
+              "tn": 231,
+              "tp": 267
+            },
+            "coverage": 1.0,
+            "false_blocks": 7,
+            "false_negative_rate": 0.025547445255474453,
+            "false_positive_rate": 0.029411764705882353,
+            "macro_f1": 0.9725203950193215,
+            "mcc": 0.9450407900386432,
+            "missed_violations": 7,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9744525547445255,
+            "recall": 0.9744525547445255,
+            "specificity": 0.9705882352941176,
+            "unresolved": 0,
+            "violation_error_rate": 0.025547445255474453
+          },
+          "threshold": 0.16
+        }
+      }
+    },
+    "wildguard-specialists/logit-logistic": {
+      "candidates": 5,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/logits/wildguard-specialists/logit-logistic/C10",
+          "metrics": {
+            "accuracy": 0.986328125,
+            "allow_f1": 0.9852631578947368,
+            "balanced_accuracy": 0.9861221861007177,
+            "block_f1": 0.9872495446265938,
+            "compliant_error_rate": 0.01680672268907563,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 3,
+              "fp": 4,
+              "tn": 234,
+              "tp": 271
+            },
+            "coverage": 1.0,
+            "false_blocks": 4,
+            "false_negative_rate": 0.010948905109489052,
+            "false_positive_rate": 0.01680672268907563,
+            "macro_f1": 0.9862563512606652,
+            "mcc": 0.9725203057474664,
+            "missed_violations": 3,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9854545454545455,
+            "recall": 0.9890510948905109,
+            "specificity": 0.9831932773109243,
+            "unresolved": 0,
+            "violation_error_rate": 0.010948905109489052
+          },
+          "threshold": null
+        },
+        "catch_target": {
+          "candidate": "wildguard/logits/wildguard-specialists/logit-logistic/C1",
+          "metrics": {
+            "accuracy": 0.97265625,
+            "allow_f1": 0.9714285714285714,
+            "balanced_accuracy": 0.9744525547445255,
+            "block_f1": 0.9737827715355806,
+            "compliant_error_rate": 0.0,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 14,
+              "fp": 0,
+              "tn": 238,
+              "tp": 260
+            },
+            "coverage": 1.0,
+            "false_blocks": 0,
+            "false_negative_rate": 0.051094890510948905,
+            "false_positive_rate": 0.0,
+            "macro_f1": 0.972605671482076,
+            "mcc": 0.9466721496705612,
+            "missed_violations": 14,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 1.0,
+            "recall": 0.948905109489051,
+            "specificity": 1.0,
+            "unresolved": 0,
+            "violation_error_rate": 0.051094890510948905
+          },
+          "threshold": 0.92
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/logits/wildguard-specialists/logit-logistic/C1",
+          "metrics": {
+            "accuracy": 0.986328125,
+            "allow_f1": 0.985200845665962,
+            "balanced_accuracy": 0.9858461632828314,
+            "block_f1": 0.9872958257713249,
+            "compliant_error_rate": 0.02100840336134454,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 2,
+              "fp": 5,
+              "tn": 233,
+              "tp": 272
+            },
+            "coverage": 1.0,
+            "false_blocks": 5,
+            "false_negative_rate": 0.0072992700729927005,
+            "false_positive_rate": 0.02100840336134454,
+            "macro_f1": 0.9862483357186435,
+            "mcc": 0.9725651813404353,
+            "missed_violations": 2,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9819494584837545,
+            "recall": 0.9927007299270073,
+            "specificity": 0.9789915966386554,
+            "unresolved": 0,
+            "violation_error_rate": 0.0072992700729927005
+          },
+          "threshold": 0.36
+        }
+      }
+    },
+    "wildguard-specialists/weighted": {
+      "candidates": 3,
+      "choices": {
+        "balanced": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/weighted/lambda0",
+          "metrics": {
+            "accuracy": 0.986328125,
+            "allow_f1": 0.9852631578947368,
+            "balanced_accuracy": 0.9861221861007177,
+            "block_f1": 0.9872495446265938,
+            "compliant_error_rate": 0.01680672268907563,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 3,
+              "fp": 4,
+              "tn": 234,
+              "tp": 271
+            },
+            "coverage": 1.0,
+            "false_blocks": 4,
+            "false_negative_rate": 0.010948905109489052,
+            "false_positive_rate": 0.01680672268907563,
+            "macro_f1": 0.9862563512606652,
+            "mcc": 0.9725203057474664,
+            "missed_violations": 3,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9854545454545455,
+            "recall": 0.9890510948905109,
+            "specificity": 0.9831932773109243,
+            "unresolved": 0,
+            "violation_error_rate": 0.010948905109489052
+          },
+          "threshold": null
+        },
+        "catch_target": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/weighted/lambda0.01",
+          "metrics": {
+            "accuracy": 0.958984375,
+            "allow_f1": 0.9577464788732394,
+            "balanced_accuracy": 0.9616788321167884,
+            "block_f1": 0.9601518026565465,
+            "compliant_error_rate": 0.0,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 21,
+              "fp": 0,
+              "tn": 238,
+              "tp": 253
+            },
+            "coverage": 1.0,
+            "false_blocks": 0,
+            "false_negative_rate": 0.07664233576642336,
+            "false_positive_rate": 0.0,
+            "macro_f1": 0.9589491407648929,
+            "mcc": 0.9211356179157423,
+            "missed_violations": 21,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 1.0,
+            "recall": 0.9233576642335767,
+            "specificity": 1.0,
+            "unresolved": 0,
+            "violation_error_rate": 0.07664233576642336
+          },
+          "threshold": 0.98
+        },
+        "false_block_limit": {
+          "candidate": "wildguard/ensemble/wildguard-specialists/weighted/lambda0",
+          "metrics": {
+            "accuracy": 0.986328125,
+            "allow_f1": 0.985200845665962,
+            "balanced_accuracy": 0.9858461632828314,
+            "block_f1": 0.9872958257713249,
+            "compliant_error_rate": 0.02100840336134454,
+            "confusion": {
+              "error_allow": 0,
+              "error_block": 0,
+              "fn": 2,
+              "fp": 5,
+              "tn": 233,
+              "tp": 272
+            },
+            "coverage": 1.0,
+            "false_blocks": 5,
+            "false_negative_rate": 0.0072992700729927005,
+            "false_positive_rate": 0.02100840336134454,
+            "macro_f1": 0.9862483357186435,
+            "mcc": 0.9725651813404353,
+            "missed_violations": 2,
+            "n": 512,
+            "negatives": 238,
+            "positives": 274,
+            "precision": 0.9819494584837545,
+            "recall": 0.9927007299270073,
+            "specificity": 0.9789915966386554,
+            "unresolved": 0,
+            "violation_error_rate": 0.0072992700729927005
+          },
+          "threshold": 0.1
+        }
+      }
+    }
+  }
+}

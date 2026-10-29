@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-10-29T19:51:07.500058+00:00",
+  "sources": {
+    "docs/decision-models/PLAN.md": "6ba18dc1f5818c1b71b0bc8d90e6ebf5e3c8540ecb2b014b9c6f0338f8754d86",
+    "evals/decision_models/adapters.py": "a8e4540dd1077dc07cf6a8c4d4ece6e48a8d9ddc1b68afadbdbf650cea931f78",
+    "evals/decision_models/infer.py": "588587d24b836d8f83fdd853bbd37766c652b4280bbce5131cc71042a70170ab",
+    "evals/decision_models/study.py": "ac353a7bf1de44ed8d83016e34541d54cd46f3502cb0089f6d30cb4c34a0d49e",
+    "evals/decision_models/vendor-hashes.json": "bc101bd12269214ca4da7c20c4bfd08b69837d9b703b3c82aeed8821e00b17e1",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/jev/api.py": "d368250e8b9a632bc63bb3b5a12fde49500cf99f6e9c26237fbfd7f94af3756b",
+    "evals/jev/study.py": "d9683a7917c86657c1a8d9f6d52e837010130a55b75a5a4ff33d9205c1fd189c",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30"
+  },
+  "policies": {
+    "policies/kev/wildguard/final.json": "ea22e0f321cb29a1794db96dcc804e6dc76b7904a6a7d93a72fd5ec472a94556",
+    "policies/kev/hatexplain/final.json": "df495da1de8cb4a5b8874c88437cbcdfa29a02bb9901a85b051ce5748c93e485"
+  },
+  "fitting": {
+    "runs/kev/wildguard/fit/detailed.jsonl": "79a95103d486a56d6336ae46affd6ef4594c94c8250982dd074eb9345e9b7a6f",
+    "runs/kev/hatexplain/fit/detailed.jsonl": "3ba62b07e49e34884ee4a8d5db7da4b45a13957a25bcff7ff90415bebf931dd9"
+  }
+}

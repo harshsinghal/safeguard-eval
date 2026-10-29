@@ -1,0 +1,14 @@
+{
+  "instance": {
+    "id": "gpu-3f6d60a5",
+    "status": "terminated",
+    "created_at": "2026-10-29T19:43:26.979447Z",
+    "terminated_at": "2026-10-29T21:06:06.426158Z",
+    "auto_terminate_hours": 6
+  },
+  "ssh_key_removal": {
+    "status": 204
+  },
+  "temporary_local_keys_absent": true,
+  "active_instances_after_termination": []
+}

@@ -1,5 +1,11 @@
 # Jev benchmark extension
 
+The follow-up [Kev and Clef experiment](../decision-models/README.md) is complete:
+two open decision models, the same benchmark populations, three policy variants
+per model/task, and validation-selected cutoffs. The
+[expanded leaderboard](../../published_runs/2026-10-29-leaderboard-decision-models/README.md)
+keeps Jev's prior results unchanged.
+
 Follow-up: the [balanced leaderboard](../leaderboard/README.md) compares the
 archived configurations under common validation objectives. A separate
 [architecture and local-model review](../research-directions/JEV-AND-LOCAL-DECISION-MODELS.md)

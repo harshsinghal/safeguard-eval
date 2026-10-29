@@ -1,0 +1,9 @@
+{
+  "standalone_cpu_reproduction": "passed",
+  "validation_selection": "exact match",
+  "test_metrics_slices_intervals_pairs": "exact match",
+  "previous_entries": "unchanged except displayed rank",
+  "new_balanced_entries_per_dataset": 20,
+  "candidate_records": 209,
+  "browser_check": "WildGuard and HateXplain render 20 entries; Clef detail shows examples policy and .88 HateXplain cutoff"
+}

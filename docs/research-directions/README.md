@@ -144,8 +144,10 @@ The [29 October source review and proposal](JEV-AND-LOCAL-DECISION-MODELS.md)
 separates Jev's documented decision interface from its undisclosed internals,
 identifies local candidates including Kev, Laya, and GLiClass, and proposes
 testing whether models follow changed policies. It distinguishes adapting
-policy text from training model weights. No experiment in this proposal has
-started.
+policy text from training model weights. The subsequent
+[Kev and Clef comparison](../decision-models/README.md) has now completed with
+frozen weights on WildGuard and HateXplain. The user excluded additional
+fine-tuning from this next step. Other proposed directions remain unrun.
 
 The [leaderboard writing handoff](../leaderboard/WRITING-NOTES.md) records the
 completed comparison, its interpretation limits, and material to carry into

@@ -1,0 +1,154 @@
+{
+  "created_utc": "2026-10-29T19:59:39.637802+00:00",
+  "max_probability_difference": 0.0010110735893249512,
+  "argmax_changes": 0,
+  "n": 6,
+  "single": [
+    {
+      "prediction": "ALLOW",
+      "score": 0.032344330102205276,
+      "probabilities": {
+        "ALLOW": 0.9676556587219238,
+        "BLOCK": 0.032344330102205276
+      },
+      "logits": {
+        "ALLOW": -1.4140625,
+        "BLOCK": -4.8125
+      }
+    },
+    {
+      "prediction": "BLOCK",
+      "score": 0.9549844264984131,
+      "probabilities": {
+        "ALLOW": 0.04501553252339363,
+        "BLOCK": 0.9549844264984131
+      },
+      "logits": {
+        "ALLOW": -4.25,
+        "BLOCK": -1.1953125
+      }
+    },
+    {
+      "prediction": "ALLOW",
+      "score": 0.04240383207798004,
+      "probabilities": {
+        "ALLOW": 0.9575962424278259,
+        "BLOCK": 0.04240383207798004
+      },
+      "logits": {
+        "ALLOW": -1.4765625,
+        "BLOCK": -4.59375
+      }
+    },
+    {
+      "prediction": "BLOCK",
+      "score": 0.9207897186279297,
+      "probabilities": {
+        "ALLOW": 0.0792103260755539,
+        "BLOCK": 0.9207897186279297
+      },
+      "logits": {
+        "ALLOW": -4.0625,
+        "BLOCK": -1.609375
+      }
+    },
+    {
+      "prediction": "BLOCK",
+      "score": 0.9086179733276367,
+      "probabilities": {
+        "ALLOW": 0.09138210862874985,
+        "BLOCK": 0.9086179733276367
+      },
+      "logits": {
+        "ALLOW": -3.828125,
+        "BLOCK": -1.53125
+      }
+    },
+    {
+      "prediction": "BLOCK",
+      "score": 0.930962085723877,
+      "probabilities": {
+        "ALLOW": 0.06903792917728424,
+        "BLOCK": 0.930962085723877
+      },
+      "logits": {
+        "ALLOW": -4.3125,
+        "BLOCK": -1.7109375
+      }
+    }
+  ],
+  "batched": [
+    {
+      "prediction": "ALLOW",
+      "score": 0.032344330102205276,
+      "probabilities": {
+        "ALLOW": 0.9676556587219238,
+        "BLOCK": 0.032344330102205276
+      },
+      "logits": {
+        "ALLOW": -1.4140625,
+        "BLOCK": -4.8125
+      }
+    },
+    {
+      "prediction": "BLOCK",
+      "score": 0.9549844264984131,
+      "probabilities": {
+        "ALLOW": 0.04501553252339363,
+        "BLOCK": 0.9549844264984131
+      },
+      "logits": {
+        "ALLOW": -4.25,
+        "BLOCK": -1.1953125
+      }
+    },
+    {
+      "prediction": "ALLOW",
+      "score": 0.04240383207798004,
+      "probabilities": {
+        "ALLOW": 0.9575962424278259,
+        "BLOCK": 0.04240383207798004
+      },
+      "logits": {
+        "ALLOW": -1.4765625,
+        "BLOCK": -4.59375
+      }
+    },
+    {
+      "prediction": "BLOCK",
+      "score": 0.9207897186279297,
+      "probabilities": {
+        "ALLOW": 0.0792103260755539,
+        "BLOCK": 0.9207897186279297
+      },
+      "logits": {
+        "ALLOW": -4.0625,
+        "BLOCK": -1.609375
+      }
+    },
+    {
+      "prediction": "BLOCK",
+      "score": 0.9086179733276367,
+      "probabilities": {
+        "ALLOW": 0.09138210862874985,
+        "BLOCK": 0.9086179733276367
+      },
+      "logits": {
+        "ALLOW": -3.828125,
+        "BLOCK": -1.53125
+      }
+    },
+    {
+      "prediction": "BLOCK",
+      "score": 0.929951012134552,
+      "probabilities": {
+        "ALLOW": 0.07004895806312561,
+        "BLOCK": 0.929951012134552
+      },
+      "logits": {
+        "ALLOW": -4.3125,
+        "BLOCK": -1.7265625
+      }
+    }
+  ]
+}
