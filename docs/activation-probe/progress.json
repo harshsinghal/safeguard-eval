@@ -1,0 +1,14 @@
+{
+  "status": "registered",
+  "models": [
+    "Qwen3.5-0.8B",
+    "PolicyLM-1.7B"
+  ],
+  "fit_n": 4096,
+  "validation_n": 1536,
+  "test_n": 1699,
+  "unit_tests_passed": 8,
+  "prior_cumulative_usd": 13.79540555656,
+  "cap_usd": 20,
+  "max_rental_usd": 1.95
+}
