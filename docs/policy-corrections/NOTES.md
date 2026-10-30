@@ -32,7 +32,9 @@ insufficient grounds for changing the policy. Every original label remains in
 the experiment. These judgments are agent-assisted authoring decisions, not an
 independent expert adjudication of the dataset.
 
-Four revisions were frozen before new inference: add permitted-case boundaries;
+The original policy here, p0, is the earlier study's selected p4 policy
+(`wg-p4-shieldstral-taxonomy-priority`); the local p0–p4 names restart for this
+experiment. Four revisions were frozen before new inference: add permitted-case boundaries;
 add prohibited-case boundaries; combine both; add two contrastive example pairs
 to the combination. The exact clauses and motivating source IDs are recorded
 in [authoring.json](authoring.json). We preserved the original clauses and did
@@ -75,3 +77,18 @@ scores are also compared with the earlier experiment before selecting a revision
 from errors, but it also defines a particular search procedure. Our experiment
 uses one bounded, agent-assisted authoring round. It is not a ProTeGi replication,
 a new optimization algorithm, or evidence that this set of edits is optimal.
+
+
+## Shieldstral selection, before Qwen inference
+
+Validation selected p1, the permitted-case clarification. Balanced accuracy was
+98.4282%, compared with 98.2922% for the original policy with its selected cutoff
+of 0.51. p1 retains the native 0.5 rule. It has two false blocks and 23 misses on
+validation; the original tuned rule has four and 23. The best discovery result
+was p3, but discovery did not select the revision. The examples in p4 did not
+improve validation. No wording was changed after this feedback.
+
+The fresh original-policy discovery scores exactly match the cached scores
+(maximum absolute difference 0.0). The selection and all supporting scores were
+frozen before Qwen validation. This small validation difference is a selection
+outcome, not yet evidence that the revision improves held-out decisions.

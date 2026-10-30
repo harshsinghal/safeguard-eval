@@ -2,7 +2,8 @@
 
 The starting text was already a tuned policy from the earlier WildGuard work.
 This experiment asks whether one further round of error review helps; it is not
-an untuned-versus-tuned comparison. The model weights and native adapters stay
+an untuned-versus-tuned comparison. Our p0 is the earlier study's selected p4
+(`wg-p4-shieldstral-taxonomy-priority`); candidate numbering restarts here. The model weights and native adapters stay
 fixed. All original clauses remain in every revision.
 
 | Candidate | Change | Added words |
