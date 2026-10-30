@@ -30,7 +30,7 @@ The main comparisons are binary ALLOW/BLOCK tasks. The earlier demonstrations al
 | Decision / “System One” models | Jev 1.14, Kev 4B, Clef-Flash 9B | Native classification interfaces. Jev was accessed by API; Kev and Clef were self-hosted from open weights. |
 | Fixed-task reference | WildGuard 7B | The released fine-tuned model and official inference template; no custom-policy tuning arm. |
 | Ensembles | Averages, learned weights, logistic regression, random forests | Combinations of saved scores from specified component models. |
-| Frozen-representation probes | Qwen3.5 0.8B, PolicyLM 1.7B, and their concatenation | Supervised logistic regression on pooled hidden states under one fixed harmfulness policy; language-model weights stay frozen. |
+| Frozen-representation probes | Qwen3.5 0.8B with PolicyLM 1.7B; Qwen3.5 4B with Shieldstral 3B | Supervised logistic regression on individual or concatenated hidden states under a fixed harmfulness policy within each study; language-model weights stay frozen. |
 
 Not every model has been tested on every dataset. The [interface audit](docs/research-directions/POLICY-INTERFACE-AUDIT.md), [model reference guide](skills/safeguard-eval/references/models.md), and [decision-model study](docs/decision-models/README.md) identify the checkpoints and adapters behind these names. Model size alone does not establish inference cost, speed, or suitability.
 
@@ -152,6 +152,14 @@ Adding Qwen reduced false blocks by 11 but missed 29 more harmful prompts than t
 
 [Readable findings](docs/activation-probe/README.md) · [Protocol and controls](docs/activation-probe/PLAN.md) · [All metrics and settings](docs/activation-probe/RESULTS.md) · [Frozen evidence](published_runs/2026-10-30-activation-probe/README.md)
 
+### 15. Shieldstral representations: does reading inside the model add value?
+
+We repeated the frozen-representation approach with Shieldstral-1.0-3B and Qwen3.5-4B, adding direct output-score and score-combination controls. The same 4,096 fitting, 1,536 validation and 1,699 test populations were used. **Shieldstral's direct score reached 90.53% balanced accuracy**, its learned feature classifier 90.39%, and the combined feature classifier 90.35%. Adding Qwen corrected six mistakes but introduced seven compared with the Shieldstral feature classifier. The primary combination did not establish an improvement.
+
+Choosing an earlier Qwen layer and a different pooling method on validation raised its test balanced accuracy from **83.93% to 88.81%**, but combining the selected representations still reached only 90.14%. Shieldstral's native validation score was 98.73%, falling to 90.53% on test; the gap was present even without a learned feature head. None of the 11 selections under either the 5% false-block profile or the separate 90% recall profile carried its respective target to test. The result supports testing the simplest native-score baseline before adding a learned head or another model. Cost was **$0.37**, and the GPU was terminated.
+
+[Readable findings](docs/shield-probe/README.md) · [Protocol](docs/shield-probe/PLAN.md) · [Full results](docs/shield-probe/RESULTS.md) · [Frozen evidence](published_runs/2026-10-30-shield-probe/README.md) · [Next: corrections from training errors](docs/research-directions/TRAINING-ERROR-CORRECTIONS.md) *(recorded, not started)*
+
 ## What the evidence suggests for moderation teams
 
 - **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. A model replacement requires another evaluation.
@@ -179,7 +187,7 @@ The research archive grows separately from versioned skill releases. New studies
 
 The comparison now includes the **Jev/Kev/Clef score ensembles and decision-only controls**, alongside the earlier policy models, general-purpose LLMs, and specialist ensembles. There are **38 WildGuard entries and 20 HateXplain entries**, drawn from **261 eligible archived candidate records**. These are configured systems and methods, not 261 distinct models or independent experiments. The new decision-model combinations were tested on WildGuard only.
 
-The [frozen-representation study](docs/activation-probe/README.md) above uses a separate 1,536-row validation protocol. Its results are reported separately and have not been inserted into these common-validation tables.
+The [PolicyLM representation study](docs/activation-probe/README.md) and [Shieldstral representation study](docs/shield-probe/README.md) above use a separate 1,536-row validation protocol. Their results are reported separately and have not been inserted into these common-validation tables.
 
 The [integration record](published_runs/2026-10-30-leaderboard-decision-ensembles/README.md) preserves every earlier selection and result. It adds the new study's frozen method selections without refitting or choosing replacements from test scores. Individual calibration controls and “best method” aliases remain in that study's report rather than becoming duplicate leaderboard entries.
 

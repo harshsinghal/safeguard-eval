@@ -256,3 +256,31 @@ probe. Similar native/probe AUROC and unsuccessful transfer of the earlier-layer
 validation gain matter to interpretation. Read its complete evidence before
 using the numbers in a paper, article, slide or skill response. Do not describe
 the experiment as a new policy-authoring-only gain or a new leaderboard winner.
+
+## Shieldstral representation follow-up: no clear gain from the extra head
+
+The [Shieldstral/Qwen study](../shield-probe/README.md) uses the same separate
+1,536-row validation protocol. Shieldstral's direct score reached 90.53% balanced
+accuracy, its feature head 90.39%, the primary combined head 90.35%, and the
+two-score logistic combination 90.39%. Combining features corrected six cases
+and introduced seven relative to the Shieldstral feature head. The paired
+difference was −0.04 points, with a descriptive 95% interval of −0.48 to +0.39.
+
+The validation-selected Qwen layer/pooling change improved its test score from
+83.93% to 88.81%, but the secondary combined result was 90.14%. Layer and pooling
+changed together. This is neither a causal layer interpretation nor a result
+about changing policy wording. The direct-score controls use conditional label
+probabilities, not free-generation performance.
+
+Report the validation-to-test gap (native Shieldstral 98.73% to 90.53%). None of
+11 false-block-limit selections met its 5% limit on test; none of 11 separate
+recall-target selections met 90% test recall. Training and test labels have
+different origins, public tests have been reused, and upstream model exposure
+cannot be fully audited. Do not treat near-perfect validation as deployment
+evidence. The earlier specialist score ensemble remains at 91.08% under its own
+selection history; a numerical comparison does not equalize development budgets.
+
+The practical implication is to retain a native-score baseline and demand a
+measured benefit before maintaining an additional model or classifier. The
+[training-error policy correction study](../research-directions/TRAINING-ERROR-CORRECTIONS.md)
+is the next proposal, not a completed experiment or a remedy demonstrated here.

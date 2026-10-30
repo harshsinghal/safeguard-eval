@@ -1,0 +1,50 @@
+Fetching 14 files:   0%|          | 0/14 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 14 files:  43%|████▎     | 6/14 [00:00<00:00, 42.48it/s]Fetching 14 files:  79%|███████▊  | 11/14 [00:00<00:00, 40.31it/s]Fetching 14 files:  86%|████████▌ | 12/14 [00:20<00:00, 40.31it/s]Fetching 14 files:  93%|█████████▎| 13/14 [00:23<00:02,  2.73s/it]Fetching 14 files: 100%|██████████| 14/14 [00:23<00:00,  2.36s/it]Fetching 14 files: 100%|██████████| 14/14 [00:23<00:00,  1.66s/it]
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 12599.17it/s]
+{"model": "qwen", "split": "fit", "completed": 128, "total": 4096, "seconds": 19.18079125600002}
+{"model": "qwen", "split": "fit", "completed": 256, "total": 4096, "seconds": 33.80912615200003}
+{"model": "qwen", "split": "fit", "completed": 384, "total": 4096, "seconds": 48.30292134100006}
+{"model": "qwen", "split": "fit", "completed": 512, "total": 4096, "seconds": 63.252737017000015}
+{"model": "qwen", "split": "fit", "completed": 640, "total": 4096, "seconds": 78.44546893299997}
+{"model": "qwen", "split": "fit", "completed": 768, "total": 4096, "seconds": 94.47977529600001}
+{"model": "qwen", "split": "fit", "completed": 896, "total": 4096, "seconds": 111.87051020100006}
+{"model": "qwen", "split": "fit", "completed": 1024, "total": 4096, "seconds": 127.80146739100002}
+{"model": "qwen", "split": "fit", "completed": 1152, "total": 4096, "seconds": 143.64488209999996}
+{"model": "qwen", "split": "fit", "completed": 1280, "total": 4096, "seconds": 159.35474974100003}
+{"model": "qwen", "split": "fit", "completed": 1408, "total": 4096, "seconds": 174.77977298900004}
+{"model": "qwen", "split": "fit", "completed": 1536, "total": 4096, "seconds": 189.31945143700005}
+{"model": "qwen", "split": "fit", "completed": 1664, "total": 4096, "seconds": 204.20609002099997}
+{"model": "qwen", "split": "fit", "completed": 1792, "total": 4096, "seconds": 219.903836088}
+{"model": "qwen", "split": "fit", "completed": 1920, "total": 4096, "seconds": 236.48703038900004}
+{"model": "qwen", "split": "fit", "completed": 2048, "total": 4096, "seconds": 252.883271244}
+{"model": "qwen", "split": "fit", "completed": 2176, "total": 4096, "seconds": 269.144875874}
+{"model": "qwen", "split": "fit", "completed": 2304, "total": 4096, "seconds": 285.24277483200007}
+{"model": "qwen", "split": "fit", "completed": 2432, "total": 4096, "seconds": 301.75606366100004}
+{"model": "qwen", "split": "fit", "completed": 2560, "total": 4096, "seconds": 318.68277093}
+{"model": "qwen", "split": "fit", "completed": 2688, "total": 4096, "seconds": 335.142430379}
+{"model": "qwen", "split": "fit", "completed": 2816, "total": 4096, "seconds": 351.768294735}
+{"model": "qwen", "split": "fit", "completed": 2944, "total": 4096, "seconds": 369.529542002}
+{"model": "qwen", "split": "fit", "completed": 3072, "total": 4096, "seconds": 386.32711309999996}
+{"model": "qwen", "split": "fit", "completed": 3200, "total": 4096, "seconds": 402.20600677}
+{"model": "qwen", "split": "fit", "completed": 3328, "total": 4096, "seconds": 417.917924079}
+{"model": "qwen", "split": "fit", "completed": 3456, "total": 4096, "seconds": 433.73157792700005}
+{"model": "qwen", "split": "fit", "completed": 3584, "total": 4096, "seconds": 449.684885402}
+{"model": "qwen", "split": "fit", "completed": 3712, "total": 4096, "seconds": 465.54012641800006}
+{"model": "qwen", "split": "fit", "completed": 3840, "total": 4096, "seconds": 481.32901548}
+{"model": "qwen", "split": "fit", "completed": 3968, "total": 4096, "seconds": 497.017367953}
+{"model": "qwen", "split": "fit", "completed": 4096, "total": 4096, "seconds": 512.2116955859999}
+{"model": "qwen", "split": "fit", "complete": 4096, "seconds": 521.824000871}
+{"model": "qwen", "split": "validation", "completed": 128, "total": 1536, "seconds": 15.430111984000064}
+{"model": "qwen", "split": "validation", "completed": 256, "total": 1536, "seconds": 31.413137807}
+{"model": "qwen", "split": "validation", "completed": 384, "total": 1536, "seconds": 47.84878031599999}
+{"model": "qwen", "split": "validation", "completed": 512, "total": 1536, "seconds": 64.16478329400013}
+{"model": "qwen", "split": "validation", "completed": 640, "total": 1536, "seconds": 79.44218855800011}
+{"model": "qwen", "split": "validation", "completed": 768, "total": 1536, "seconds": 95.66796318200011}
+{"model": "qwen", "split": "validation", "completed": 896, "total": 1536, "seconds": 111.64518839699997}
+{"model": "qwen", "split": "validation", "completed": 1024, "total": 1536, "seconds": 127.53799481699991}
+{"model": "qwen", "split": "validation", "completed": 1152, "total": 1536, "seconds": 143.56232388299998}
+{"model": "qwen", "split": "validation", "completed": 1280, "total": 1536, "seconds": 158.64551396000013}
+{"model": "qwen", "split": "validation", "completed": 1408, "total": 1536, "seconds": 173.5707688189999}
+{"model": "qwen", "split": "validation", "completed": 1536, "total": 1536, "seconds": 188.58741815299993}
+{"model": "qwen", "split": "validation", "complete": 1536, "seconds": 197.77981296299993}

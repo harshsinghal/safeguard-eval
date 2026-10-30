@@ -165,7 +165,9 @@ articles have not yet been written; the user asked to revisit them later.
 
 ## Approved sequence: representations, then corrections
 
-The [Shieldstral/Qwen representation study](../shield-probe/PLAN.md) runs first.
+The [Shieldstral/Qwen representation study](../shield-probe/README.md) is complete.
+It did not establish an advantage from combining hidden representations over
+Shieldstral's direct score; all registered selections and negative findings are recorded.
 The [training-error correction experiment](TRAINING-ERROR-CORRECTIONS.md) is
 recorded as the next study, after reviewing the representation results. It will
 learn policy edits from development errors with an explicit holdout and bounded

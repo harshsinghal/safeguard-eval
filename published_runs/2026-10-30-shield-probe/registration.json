@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-10-30T20:03:12.426987+00:00",
+  "sources": {
+    "docs/shield-probe/PLAN.md": "2f681916df9f0c49e9c284fd8912e090469a83fc453cb4eeb8b15f1e6faa91ee",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30",
+    "evals/qwen_policy/run.py": "837baa4f70eb150062d647e90779f23f13363d90ba71fbf181205ebde59dea16",
+    "evals/run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986",
+    "evals/shield_probe/__init__.py": "766c0ba4a6523e9a24ec8b178dca72dae2c18b5d3f4e6a7d526ee60472b113d9",
+    "evals/shield_probe/common.py": "80638ea38d65b32c8e1bcc226d3c3b81bc0db36c6280973a4b17f4b948d3418e",
+    "evals/shield_probe/extract.py": "213219a68234833f09d69cc699e2befdeb4c8737f420116aa1bdea4e47e60ebb",
+    "evals/shield_probe/prepare.py": "9eb917053ee21b5ea33edf29db1c682488eba1506aece925d9c3e8999228802c",
+    "evals/shield_probe/study.py": "cccb21f3680a66faf37b1bbca1d9f4f67a0dd80d75ab29cc7d39d5b9f03bd10d",
+    "evals/wildguard/metrics.py": "8fd93378cb6bbbcbca2e6ed47e3f3ae198da663709d3fa7dbf44b1be41c69da7",
+    "evals/wildguard/run.py": "a2e35b7a878a729c2f8dfc0340be0b1fd3224c593746deb2f0cecf57658bac1b"
+  },
+  "data_manifest_sha256": "4653c2e6e5d866ce4000ee5c0fa91cc88f08a56ddc72589e002c86a021764d79",
+  "amendment": "Normalize native chat-template BatchEncoding before comparing IDs; pre-fit technical repair."
+}

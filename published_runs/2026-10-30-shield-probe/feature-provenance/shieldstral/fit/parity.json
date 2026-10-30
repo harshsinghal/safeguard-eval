@@ -1,0 +1,11 @@
+{
+  "n": 16,
+  "max_absolute_difference": 0.0,
+  "tolerance": 0.002,
+  "label_token_ids": [
+    13059,
+    2649
+  ],
+  "tokenizer_class": "TokenizersBackend",
+  "model_class": "Mistral3ForConditionalGeneration"
+}

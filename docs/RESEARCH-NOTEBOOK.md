@@ -73,3 +73,24 @@ record the positive result, unsuccessful combination, layer-search regression,
 similar native/probe AUROC, operational-target failures and compute lifecycle.
 The paper, magazine/media articles and pinned skill releases have not yet been
 rewritten to include this study. Preserve those distinctions when updating them.
+
+## Shieldstral representation replication
+
+The [Shieldstral/Qwen follow-up](shield-probe/README.md) is also complete, using
+the same fitting, validation and test populations as the PolicyLM probe study.
+Shieldstral's direct score reached 90.53% balanced accuracy; its feature head
+90.39%; the primary combined head 90.35%. A secondary layer/pooling search helped
+Qwen alone but did not make the combined method better than Shieldstral alone.
+The native-score validation-to-test gap and failures of both operating-target
+profiles must accompany the aggregate scores.
+
+The [full results](shield-probe/RESULTS.md), [notes](shield-probe/NOTES.md) and
+[immutable bundle](../published_runs/2026-10-30-shield-probe/README.md) include all
+75 fitted candidates, frozen selections, paired comparisons, runtime and billing.
+This remains separate from the common-validation leaderboard. It is evidence
+about supervised readouts under a fixed policy, not another policy-editing gain.
+The paper and released skill have not been silently refreshed.
+
+The [next policy-correction experiment](research-directions/TRAINING-ERROR-CORRECTIONS.md)
+has been recorded, not run. It should derive revisions from training errors,
+use validation for bounded selection, and reserve a new project holdout.

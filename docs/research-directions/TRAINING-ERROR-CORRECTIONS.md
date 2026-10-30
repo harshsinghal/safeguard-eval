@@ -56,4 +56,8 @@ groups, metrics and compute cap before running. No spending is booked for this
 study yet, and the existing cumulative $20 cap still applies.
 
 Relevant precedent: [ProTeGi / prompt optimization with textual gradients](https://arxiv.org/abs/2305.03495).
-First study: [Shieldstral representation protocol](../shield-probe/PLAN.md).
+First study: [Shieldstral representation results](../shield-probe/README.md).
+The representation experiment is complete; the correction study remains unrun.
+Its observed validation-to-test gap makes an additional project holdout especially
+important. Do not use the first study's test mistakes to author the corrections
+and then call evaluation on those same examples a held-out improvement.

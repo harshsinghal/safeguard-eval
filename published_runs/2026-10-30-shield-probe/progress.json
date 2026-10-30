@@ -1,0 +1,59 @@
+{
+  "status": "complete",
+  "created_utc": "2026-10-30T19:57:53.219340+00:00",
+  "models": [
+    "Shieldstral-1.0-3B",
+    "Qwen3.5-4B"
+  ],
+  "fit_n": 4096,
+  "validation_n": 1536,
+  "test_n": 1699,
+  "tests_passed": 11,
+  "prior_cumulative_usd": 14.17540555656,
+  "cap_usd": 20,
+  "max_rental_usd": 2.4,
+  "next_study": "Training-error-derived policy corrections; recorded, not started",
+  "protocol_commit": "7e148c7",
+  "instance_id": "gpu-19ad69df",
+  "hourly_usd": 0.8,
+  "auto_terminate_at": "2026-10-30T23:00:18.582386Z",
+  "updated_utc": "2026-10-30T20:34:29.147215+00:00",
+  "shieldstral_development_complete": true,
+  "shieldstral_parity": {
+    "n": 16,
+    "max_absolute_difference": 0.0,
+    "tolerance": 0.002,
+    "label_token_ids": [
+      13059,
+      2649
+    ],
+    "tokenizer_class": "TokenizersBackend",
+    "model_class": "Mistral3ForConditionalGeneration"
+  },
+  "qwen_development_complete": true,
+  "qwen_parity": {
+    "n": 16,
+    "max_absolute_difference": 0.0,
+    "tolerance": 0.002,
+    "label_token_ids": [
+      33,
+      32
+    ],
+    "tokenizer_class": "Qwen2Tokenizer",
+    "model_class": "Qwen3_5ForConditionalGeneration"
+  },
+  "candidate_fits": 75,
+  "invalid_candidates": 0,
+  "primary_stronger_single": "primary-shieldstral",
+  "pre_test_freeze_commit": "adb2aaf",
+  "test_valid_per_model": 1699,
+  "all_test_profiles_verified": true,
+  "coefficient_refit_exact": true,
+  "test_max_validation_score_reproduction_difference": 0.0,
+  "instance_status": "terminated",
+  "actual_cost_usd": 0.37,
+  "cumulative_cost_usd": 14.545405556559999,
+  "remaining_authorized_usd": 5.45459444344,
+  "temporary_ssh_credentials_removed": true,
+  "result": "No clear benefit from combined representations; native Shieldstral remains the simpler baseline."
+}

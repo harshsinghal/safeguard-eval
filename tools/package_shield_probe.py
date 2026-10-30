@@ -43,10 +43,10 @@ def package(state,out):
         if digest(out/'source'/rel)!=h:raise ValueError('Snapshot source differs')
     for sub in ['evals','evals/ensemble','evals/wildguard','evals/qwen_policy','evals/leaderboard']:
         copy(ROOT/sub/'__init__.py',Path('source')/sub/'__init__.py')
-    for name in ['verify_shield_probe.py','restore_shield_probe_inputs.py','plot_shield_probe.py','report_shield_probe.py','package_shield_probe.py']:
+    for name in ['verify_shield_probe.py','restore_shield_probe_inputs.py','plot_shield_probe.py','report_shield_probe.py','summarize_shield_probe_runtime.py','package_shield_probe.py']:
         copy(ROOT/'tools'/name,Path('source/tools')/name)
     copy(ROOT/'tests/test_shield_probe.py','source/tests/test_shield_probe.py')
-    for name in ['setup.sh','development.sh','test.sh']:
+    for name in ['setup.sh','development.sh','test.sh','refit.py']:
         copy(work/name,Path('source/runtime')/name)
     for name in ['PLAN.md','NOTES.md','RUNNING.md','RESULTS.md','progress.json']:
         copy(ROOT/'docs/shield-probe'/name,name)

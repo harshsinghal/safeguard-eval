@@ -1,0 +1,15 @@
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+{"model": "qwen", "split": "test", "completed": 128, "total": 1699, "seconds": 16.82374218399991}
+{"model": "qwen", "split": "test", "completed": 256, "total": 1699, "seconds": 32.88531759700004}
+{"model": "qwen", "split": "test", "completed": 384, "total": 1699, "seconds": 48.83900352499995}
+{"model": "qwen", "split": "test", "completed": 512, "total": 1699, "seconds": 64.4529517389999}
+{"model": "qwen", "split": "test", "completed": 640, "total": 1699, "seconds": 79.85131498400006}
+{"model": "qwen", "split": "test", "completed": 768, "total": 1699, "seconds": 95.31164130899992}
+{"model": "qwen", "split": "test", "completed": 896, "total": 1699, "seconds": 110.95652970299989}
+{"model": "qwen", "split": "test", "completed": 1024, "total": 1699, "seconds": 128.32280780899987}
+{"model": "qwen", "split": "test", "completed": 1152, "total": 1699, "seconds": 144.87853338299988}
+{"model": "qwen", "split": "test", "completed": 1280, "total": 1699, "seconds": 161.70378008199987}
+{"model": "qwen", "split": "test", "completed": 1408, "total": 1699, "seconds": 178.82674829799998}
+{"model": "qwen", "split": "test", "completed": 1536, "total": 1699, "seconds": 196.06789869699992}
+{"model": "qwen", "split": "test", "completed": 1664, "total": 1699, "seconds": 213.386042654}
+{"model": "qwen", "split": "test", "complete": 1699, "seconds": 227.01487473899988}

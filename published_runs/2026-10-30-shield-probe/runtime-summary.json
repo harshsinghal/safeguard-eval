@@ -1,0 +1,93 @@
+{
+  "scope": "One L40S, BF16, batch size one, full pinned checkpoints loaded. Per-row time includes tokenization, validation, forward, pooling and label-score extraction. Split time also includes feature writes; fit split includes 16 native-forward parity checks. Model loading, checkpoint hashing, transfers and setup are not all included. Memory is peak Torch allocation, not minimum serving VRAM. Qwen uses fallback Torch linear attention without optional fla kernels.",
+  "models": {
+    "shieldstral": {
+      "fit": {
+        "n": 4096,
+        "valid": 4096,
+        "split_seconds": 144.58581831299998,
+        "median_row_seconds": 0.03328963850000832,
+        "p95_row_seconds": 0.03921399249999524,
+        "peak_gpu_bytes": 8400381440,
+        "gpu": "NVIDIA L40S",
+        "min_tokens": 553,
+        "max_tokens": 3004,
+        "empty_content": 0,
+        "outer_whitespace_trimmed": 0,
+        "top_token_outside_label_pair": 0
+      },
+      "validation": {
+        "n": 1536,
+        "valid": 1536,
+        "split_seconds": 54.44862128400001,
+        "median_row_seconds": 0.034443215999999666,
+        "p95_row_seconds": 0.03953173499996865,
+        "peak_gpu_bytes": 8449107456,
+        "gpu": "NVIDIA L40S",
+        "min_tokens": 556,
+        "max_tokens": 3227,
+        "empty_content": 0,
+        "outer_whitespace_trimmed": 0,
+        "top_token_outside_label_pair": 0
+      },
+      "test": {
+        "n": 1699,
+        "valid": 1699,
+        "split_seconds": 59.76756560099989,
+        "median_row_seconds": 0.033399841999880664,
+        "p95_row_seconds": 0.039568441099845586,
+        "peak_gpu_bytes": 7995599872,
+        "gpu": "NVIDIA L40S",
+        "min_tokens": 559,
+        "max_tokens": 1232,
+        "empty_content": 0,
+        "outer_whitespace_trimmed": 0,
+        "top_token_outside_label_pair": 0
+      }
+    },
+    "qwen": {
+      "fit": {
+        "n": 4096,
+        "valid": 4096,
+        "split_seconds": 512.6374833130001,
+        "median_row_seconds": 0.12216344350002828,
+        "p95_row_seconds": 0.13936832325001092,
+        "peak_gpu_bytes": 10277751296,
+        "gpu": "NVIDIA L40S",
+        "min_tokens": 533,
+        "max_tokens": 2976,
+        "empty_content": 1,
+        "outer_whitespace_trimmed": 0,
+        "top_token_outside_label_pair": 4
+      },
+      "validation": {
+        "n": 1536,
+        "valid": 1536,
+        "split_seconds": 188.71018960999993,
+        "median_row_seconds": 0.12085567250005624,
+        "p95_row_seconds": 0.13723127575002536,
+        "peak_gpu_bytes": 10271896576,
+        "gpu": "NVIDIA L40S",
+        "min_tokens": 535,
+        "max_tokens": 2951,
+        "empty_content": 0,
+        "outer_whitespace_trimmed": 0,
+        "top_token_outside_label_pair": 0
+      },
+      "test": {
+        "n": 1699,
+        "valid": 1699,
+        "split_seconds": 217.8912554619999,
+        "median_row_seconds": 0.12696079700003793,
+        "p95_row_seconds": 0.14398972470005447,
+        "peak_gpu_bytes": 9620447232,
+        "gpu": "NVIDIA L40S",
+        "min_tokens": 539,
+        "max_tokens": 1163,
+        "empty_content": 0,
+        "outer_whitespace_trimmed": 2,
+        "top_token_outside_label_pair": 0
+      }
+    }
+  }
+}

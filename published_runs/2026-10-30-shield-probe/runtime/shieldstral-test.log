@@ -1,0 +1,14 @@
+{"model": "shieldstral", "split": "test", "completed": 128, "total": 1699, "seconds": 4.746063928000012}
+{"model": "shieldstral", "split": "test", "completed": 256, "total": 1699, "seconds": 8.887661307999906}
+{"model": "shieldstral", "split": "test", "completed": 384, "total": 1699, "seconds": 13.014070244999857}
+{"model": "shieldstral", "split": "test", "completed": 512, "total": 1699, "seconds": 17.12624244499989}
+{"model": "shieldstral", "split": "test", "completed": 640, "total": 1699, "seconds": 21.24079281299987}
+{"model": "shieldstral", "split": "test", "completed": 768, "total": 1699, "seconds": 25.361041946999876}
+{"model": "shieldstral", "split": "test", "completed": 896, "total": 1699, "seconds": 29.53111606199991}
+{"model": "shieldstral", "split": "test", "completed": 1024, "total": 1699, "seconds": 34.306484588999865}
+{"model": "shieldstral", "split": "test", "completed": 1152, "total": 1699, "seconds": 39.05190487200002}
+{"model": "shieldstral", "split": "test", "completed": 1280, "total": 1699, "seconds": 43.800517335999984}
+{"model": "shieldstral", "split": "test", "completed": 1408, "total": 1699, "seconds": 48.60327235999989}
+{"model": "shieldstral", "split": "test", "completed": 1536, "total": 1699, "seconds": 53.512074629999915}
+{"model": "shieldstral", "split": "test", "completed": 1664, "total": 1699, "seconds": 58.433365604999835}
+{"model": "shieldstral", "split": "test", "complete": 1699, "seconds": 67.41258987599986}

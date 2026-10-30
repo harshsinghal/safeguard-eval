@@ -1,0 +1,11 @@
+{
+  "n": 16,
+  "max_absolute_difference": 0.0,
+  "tolerance": 0.002,
+  "label_token_ids": [
+    33,
+    32
+  ],
+  "tokenizer_class": "Qwen2Tokenizer",
+  "model_class": "Qwen3_5ForConditionalGeneration"
+}

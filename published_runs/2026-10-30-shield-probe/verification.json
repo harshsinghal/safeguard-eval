@@ -1,0 +1,16 @@
+{
+  "verified_utc": "2026-10-30T20:30:03.800599+00:00",
+  "selection_groups": 11,
+  "profiles": 3,
+  "paired_comparisons": 30,
+  "candidate_fits": 75,
+  "bootstrap_repetitions": 2000,
+  "additional_descriptive_comparisons": 0,
+  "checks": [
+    "validation grids and selections",
+    "all test operating points",
+    "paired group-bootstrap intervals",
+    "corrected/new error counts",
+    "all slices"
+  ]
+}

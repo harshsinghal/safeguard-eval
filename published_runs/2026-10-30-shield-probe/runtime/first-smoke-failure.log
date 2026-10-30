@@ -1,0 +1,19 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/safeguard-eval/evals/shield_probe/extract.py", line 177, in <module>
+    extract(**vars(p.parse_args()))
+  File "/root/safeguard-eval/evals/shield_probe/extract.py", line 134, in extract
+    write(folder/'parity.json',engine.parity([r['prompt'] for r in cases[:16]]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/safeguard-eval/evals/shield_probe/extract.py", line 89, in parity
+    _,info=self.one(text);enc,_=self.inputs(text)
+           ^^^^^^^^^^^^^^
+  File "/root/safeguard-eval/evals/shield_probe/extract.py", line 68, in one
+    torch=self.torch;enc,mask=self.inputs(text)
+                              ^^^^^^^^^^^^^^^^^
+  File "/root/safeguard-eval/evals/shield_probe/extract.py", line 60, in inputs
+    if enc['input_ids'][0].tolist()!=ids:raise ValueError('Tokenization differs from native template')
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Tokenization differs from native template

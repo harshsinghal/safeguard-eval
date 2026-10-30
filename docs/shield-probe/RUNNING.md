@@ -27,7 +27,7 @@ embeddings private. Register `created_utc`, `sources` from
 ## Frozen feature extraction
 
 The recorded GPU environment and exact dependency versions accompany the results.
-The planned runtime uses Python 3.12, Torch 2.8.0, Transformers 5.10.2, NumPy,
+The extraction runtime used Python 3.12, Torch 2.8.0, Transformers 5.10.2, NumPy,
 SciPy, scikit-learn, threadpoolctl, accelerate, safetensors, Pillow and
 mistral-common. Download only the pinned model revisions specified in the protocol.
 
@@ -49,6 +49,11 @@ development outputs must pass shape, finite-value, identity and hash checks.
 python3 -m evals.shield_probe.study train --state /absolute/path/state
 ```
 
+The original fitting ran locally on CPU with Python 3.9, NumPy 2.0.2,
+SciPy 1.13.1 and scikit-learn 1.6.1. Match the bundle's `requirements.txt` and
+`runtime/cpu-environment.json` for coefficient reproduction; the GPU extraction
+environment's scikit-learn version was not used to fit these classifiers.
+
 This fits scaling and coefficients only on fitting rows and selects regularization,
 representations and cutoffs on validation. It writes all candidates and a freeze.
 Record that freeze in version control before uploading any test inputs. A
@@ -69,6 +74,17 @@ Test evaluation scores only frozen choices. Cached development representations
 allow a full CPU refit with `study reproduce --refit`; this compares coefficient
 arrays exactly and validation scores to a numerical tolerance. Saved predictions
 allow metric reproduction without accessing prompts or paying for another GPU.
+
+Generate human-readable results and the recorded extraction summary with:
+
+```sh
+python3 tools/report_shield_probe.py --state /absolute/path/state --out /absolute/path/RESULTS.md
+python3 tools/summarize_shield_probe_runtime.py --state /absolute/path/state
+python3 tools/plot_shield_probe.py --state /absolute/path/state --out /absolute/path/figures
+```
+
+Plotting additionally requires Matplotlib. The original plot used the local
+Python 3.11 plotting environment; it does not change predictions or selections.
 
 Always download artifacts, terminate paid compute, confirm termination, remove
 temporary credentials and reconcile billing. The current experiment retains the
