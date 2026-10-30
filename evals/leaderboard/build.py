@@ -184,7 +184,7 @@ def exports(bundle, results):
               "false_blocks", "missed_violations", "unresolved", "coverage", "auroc", "average_precision", "score_coverage",
               "threshold", "test_requirement_met", "policy", "candidate", "candidate_count", "validation_rows", "fitting_rows"]
     with open(bundle / "leaderboard.csv", "w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fields)
+        writer = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for dataset, d in results["datasets"].items():
             for profile, view in d["profiles"].items():

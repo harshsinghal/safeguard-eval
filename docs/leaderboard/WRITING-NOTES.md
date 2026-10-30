@@ -1,5 +1,48 @@
 # Findings to carry into the next round of writing
 
+## Decision-score ensembles: what the next revisions should add
+
+The [decision-model ensemble study](../decision-ensemble/README.md) combines
+native BLOCK probabilities from Jev, Kev, and Clef on WildGuard. It fitted small
+combiners on 1,024 examples, selected settings on 512 validation examples, and
+scored 1,699 test prompts. Model weights and policy wording stayed fixed.
+
+- The registered primary probability logistic ensemble reached **89.32% balanced
+  accuracy**, versus **88.69%** for its selected Jev control. It caught 27 more
+  harmful prompts and made 22 more false blocks. The **+0.63-point** difference
+  has a paired 95% interval of **−0.43 to +1.58**; it does not resolve a clear gain.
+- The primary ensemble remained below WildGuard's **89.81%** and the earlier
+  specialist ensemble's **91.08%**. Combining scores also did not establish a
+  clear advantage over the new decision-only controls.
+- The primary open-only Kev/Clef combination reached **87.52%**. A random forest
+  selected as the best open-only score method on validation reached **88.10%**.
+  These are different registered comparisons, not permission to replace the
+  primary result with the largest test score.
+- Equal log-odds averaging of all three decision models observed **89.74%** on
+  test. Keep it as a secondary result. The all-three method selected as best on
+  validation was instead a weighted average, with **89.08%** on test.
+- The ensemble policy pool contained brief and detailed policies. Policies with
+  examples had no fitting scores and were excluded. Earlier individual entries
+  use their earlier candidate pools; do not attribute differences to combination
+  alone. Neither primary ensemble met either validation-selected operational
+  target on test. Two decision-only logistic controls did meet the 5% false-block
+  limit (82.23% catch/4.13% false blocks for all three; 72.28%/4.55% for open-only).
+  Public tests were reused; the analysis remains exploratory.
+
+The [integrated leaderboard](../../published_runs/2026-10-30-leaderboard-decision-ensembles/README.md)
+adds 18 combination/control entries on WildGuard, giving **38 WildGuard and 20
+HateXplain entries from 261 candidate records**. All previous selections and
+results are preserved. Selection aliases and the study's individual calibration
+controls are not counted as additional leaderboard methods. No inference or
+fitting was needed for this integration; additional GPU/API cost was **$0**.
+
+**Editorial status:** paper v0.6 covers through the Kev/Clef study below. It does
+not yet incorporate this later decision-ensemble experiment. The magazine,
+media articles, and pinned skill release need their own reviewed revisions.
+Use this handoff and the source tables when making those updates.
+
+## Earlier addition: open-weight decision models
+
 **New evidence:** the [Kev/Clef extension](../decision-models/README.md) adds two
 open decision models with frozen weights, three policy candidates each, and
 validation-selected cutoffs. The main result is not an architecture victory:
@@ -22,7 +65,8 @@ Recorded 29 October 2026. This is an editorial handoff for the research paper,
 magazine article, media article, and learning skill. It adds no experiment and
 does not change the frozen leaderboard. The research paper now incorporates this handoff in v0.6. The claim ledger below
 retains its original 18-entry scope; use the expanded archive and current paper
-for the later 20-entry comparison.
+for the later 20-entry comparison. The section above records the subsequent
+38-entry WildGuard integration.
 
 ## The message the evidence supports
 
@@ -54,10 +98,9 @@ labeled fitting data.
 - [Jev and local decision models](../research-directions/JEV-AND-LOCAL-DECISION-MODELS.md):
   a separate literature review and proposal. Its proposed experiments are not results.
 
-The leaderboard's implementation and evidence were committed in `0627356` on
-`codex/jev-benchmark`. At the time of this handoff these branch changes are local;
-the `published_runs` directory name does not mean that they have been pushed to
-GitHub or deployed publicly.
+The original leaderboard implementation was committed in `0627356`. That study
+and the later decision-model and decision-ensemble archives are published in the
+GitHub repository. Each archive keeps its original scope and provenance.
 
 ## Claim ledger
 

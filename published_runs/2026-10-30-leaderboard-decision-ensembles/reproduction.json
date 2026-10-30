@@ -1,0 +1,20 @@
+{
+  "checked_utc": "2026-10-30T16:08:50.229165+00:00",
+  "validation_selections": "exact match",
+  "test_metrics_slices_bootstrap_and_pairs": "exact match",
+  "previous_profile_rows_unchanged": 119,
+  "new_profile_rows_match_source": 51,
+  "unit_tests": 14,
+  "new_api_calls": 0,
+  "new_gpu_instances": 0,
+  "new_model_fits": 0,
+  "cost_usd": 0,
+  "environment": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.6.1",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0"
+  }
+}

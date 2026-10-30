@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "published_runs/2026-10-29-leaderboard-decision-models/results.json"
+SOURCE = ROOT / "published_runs/2026-10-30-leaderboard-decision-ensembles/results.json"
 README = ROOT / "README.md"
 BEGIN = "<!-- BEGIN GENERATED LEADERBOARD -->"
 END = "<!-- END GENERATED LEADERBOARD -->"

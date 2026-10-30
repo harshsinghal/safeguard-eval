@@ -66,3 +66,18 @@ records (including repeated individual controls), parameters, validation choices
 test scores, decisions, metrics and uncertainty intervals. Added provider cost
 was zero; no resources or credentials were used. The public test's prior use and
 the available-score policy restriction remain explicit in the readout.
+
+## Integrated leaderboard publication
+
+The decision-model combinations now appear alongside the previous model and
+ensemble results in a [new integrated archive](../../published_runs/2026-10-30-leaderboard-decision-ensembles/README.md).
+It adds 18 WildGuard entries (nine methods for each cohort), from 52 combination
+candidate records. Individual calibration controls and selection aliases remain
+in this experiment instead of becoming duplicate leaderboard entries.
+
+The combined comparison has 38 WildGuard and 20 HateXplain entries, with 261
+candidate records. Every earlier selection and result is unchanged; each added
+method matches this study. The two decision-only logistic controls meet the
+5% test false-block limit, unlike the two primary score ensembles. This result
+is now explicit in the operational-target readout. Integration uses no inference,
+refitting, or paid compute and does not create a new blind test.

@@ -3,6 +3,8 @@
 **Authoring and Evaluating Moderation with Language and Decision Models**
 Harsh Singhal · author review draft **v0.6** · 29 October 2026
 
+Later evidence: the [decision-score ensemble study](../docs/decision-ensemble/README.md) and [current leaderboard](../docs/leaderboard/README.md) extend the experiments beyond this v0.6 draft. They are recorded separately for the next paper revision.
+
 Policy authoring is deeply coupled with AI engineering. This paper follows the work from wording and model choice through transfer, structured documents, calibration, ensembles, and the Jev, Kev, and Clef decision models. The practical recommendation is to maintain an approved policy and representative labeled evaluations, then test the policy, native model interface, and decision rule together as models change.
 
 - [Read the updated paper — PDF, 38 pages](output/pdf/policy-as-interface-review-v0.6.pdf)

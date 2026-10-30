@@ -3,28 +3,29 @@
 New to these measures? Read the [metric guide](METRICS.md) for false blocks,
 misses, balanced accuracy, macro-F1, MCC, uncertainty, and selection rules.
 
-**Latest extension:** [Kev and Clef have now been tested](../decision-models/README.md).
-The [expanded interactive leaderboard](../../published_runs/2026-10-29-leaderboard-decision-models/index.html)
-has 20 entries per benchmark and preserves every earlier selection and score.
-The remainder of this page describes the original 18-entry reanalysis.
+The current comparison brings together **policy models, general-purpose LLMs,
+decision models, and their tested combinations**. It contains **38 WildGuard
+entries and 20 HateXplain entries**, drawn from **261 eligible candidate records**.
+These are configured systems, not 261 unique models or independent experiments.
 
+Open the [interactive leaderboard](../../published_runs/2026-10-30-leaderboard-decision-ensembles/index.html)
+in a browser. On GitHub, download the HTML file and open it locally; it works
+offline. The [full tables](../../published_runs/2026-10-30-leaderboard-decision-ensembles/RESULTS.md)
+and [CSV](../../published_runs/2026-10-30-leaderboard-decision-ensembles/leaderboard.csv)
+are alternatives. The [integration record](../../published_runs/2026-10-30-leaderboard-decision-ensembles/README.md)
+explains exactly what was added and verifies that earlier results are unchanged.
+
+The newest addition is the [decision-score ensemble study](../decision-ensemble/README.md):
+seven score-combination methods and two decision-only controls, tested with
+Jev/Kev/Clef and with open-only Kev/Clef. These 18 new entries concern WildGuard
+only. Individual calibration controls and “best method” selection aliases remain
+in the study report rather than becoming duplicate leaderboard entries.
+
+This integration used saved outputs and frozen selections. It made no API calls,
+rented no GPUs, and fitted no models. The source studies did fit supervised
+calibrators and combiners on labeled examples, with language-model weights fixed.
 For future article and paper updates, see the
-[writing handoff and claim ledger](WRITING-NOTES.md). The frozen evidence below
-remains the source of the numbers.
-
-**The comprehensive comparison is complete.** It covers 197 eligible archived
-configurations and produces 18 entries for each benchmark: individual models,
-ensemble methods, and Jev. All calculations used saved outputs. There were no new
-API calls, GPU rentals, language-model weight updates, or combiner fits.
-
-The 197 count describes archived candidate records, not independent experiments
-or different models. Some individual calibrators are shared across ensemble
-cohorts. The full inventory preserves that provenance.
-
-Open the [interactive leaderboard](../../published_runs/2026-10-29-leaderboard/index.html)
-in a browser. On GitHub, download the HTML file and open it locally; the file works
-offline. The [full tables](../../published_runs/2026-10-29-leaderboard/RESULTS.md)
-and [CSV](../../published_runs/2026-10-29-leaderboard/leaderboard.csv) are alternatives.
+[writing handoff and claim ledger](WRITING-NOTES.md).
 
 The useful change is that we now ask two questions together: how much violating
 content does the system catch, and how much compliant content does it correctly
@@ -40,15 +41,20 @@ reward choosing after seeing the answers.
 Instead, we collected saved configurations with matching validation and full-test
 outputs. For each individual model, we selected its configuration on the same
 validation examples as its competitors. We did the same within each ensemble
-method and component-model combination. We then froze these choices and scored
-the official tests. The scoring objective was balanced accuracy, with two separate
+method and component-model combination. Each source analysis froze its choices
+before its test-scoring stage. The current integration preserves them, even though
+those test results are now known. The scoring objective was balanced accuracy, with two separate
 operating-target views described below.
 
-This was a new selection from existing evidence, not a new policy-writing search.
+The original leaderboard selected configurations from existing evidence; the
+current integration adds the new study's selections without another policy search.
 Eligible candidates include saved authored and transferred policies, native
 decisions, cutoffs, and previously fitted calibrators or combiners. The ensemble
 parameters were applied to the common validation examples without being retrained.
-All 140 calibration and ensemble test replays matched their archived scores and decisions.
+The original analysis verified 140 fitted-candidate test replays. The new
+decision-ensemble study separately reproduced its fits and outputs. This
+integration verifies every earlier result and every added method against its
+source; it does not train or reselect the individual models.
 
 The common validation sets contain **512 WildGuardTrain prompts** and **1,920
 HateXplain posts**. Tests contain **1,699 WildGuardTest prompts** and **1,924
@@ -84,10 +90,40 @@ accuracy points**, with an unadjusted interval of **+0.33 to +2.21**. It missed
 This is encouraging evidence for this configured system on this reused test. It
 does not establish that ensembling generally beats fine-tuning.
 
-The complete table includes GPT-OSS Safeguard 20B, PolicyLM, Shieldstral, all five
-Qwen sizes, and every ensemble family. Safeguard had nine unresolved test outputs;
+The complete table also includes GPT-OSS Safeguard 20B, PolicyLM, Shieldstral,
+all five Qwen sizes, Kev, Clef, and the tested ensemble families. Safeguard had
+nine unresolved test outputs;
 they remain errors rather than being removed. Its binary MCC is left unavailable
 instead of calculating it only on successful responses.
+
+## Decision-score ensembles: more information did not guarantee a gain
+
+The newest study kept native BLOCK scores from Jev, Kev, and Clef and fitted
+small combiners on 1,024 WildGuardTrain prompts. Validation chose the detailed
+policy for Jev and Clef, and the brief policy for Kev. Policies with examples
+lacked fitting scores, so they were excluded from this experiment's feature pool.
+The earlier individual-model leaderboard entries retain their original pools.
+
+| Configuration | Balanced accuracy | False blocks | Missed harmful prompts |
+|---|---:|---:|---:|
+| Jev: selected individual control | 88.69% | 47 | 133 |
+| Jev + Kev + Clef: primary probability logistic ensemble | 89.32% | 69 | 106 |
+| Jev + Kev + Clef: logistic combination of decisions only | 89.05% | 39 | 134 |
+| Kev + Clef: primary probability logistic ensemble | 87.52% | 63 | 138 |
+| Kev + Clef: validation-selected random forest | 88.10% | 102 | 98 |
+
+The primary three-model ensemble caught 27 additional violations but made 22
+additional false blocks compared with Jev. Its **+0.63-point** balanced-accuracy
+difference had a paired 95% interval of **−0.43 to +1.58**. The score-based method
+also did not establish a clear advantage over combining the decisions alone.
+
+All nine method families remain visible for each cohort. Equal log-odds
+averaging of the three models observed **89.74%** on test. It was not the
+registered primary, nor the method selected as best on validation: that selection
+was a weighted average, which reached **89.08%**. Ranking these frozen methods by
+test outcome is descriptive; it does not justify declaring the highest test row
+the preselected winner. The [source report](../decision-ensemble/README.md)
+preserves the primary analysis, individual controls, and paired comparisons.
 
 ## HateXplain: Jev is competitive, and the mixed ensemble leads
 
@@ -153,11 +189,20 @@ hold on test is reported separately.
 
 | Benchmark | 5% false-block limit met on test | 90% catch target met on test |
 |---|---:|---:|
-| WildGuard | 0 of 17 eligible entries | 0 of 18 entries |
-| HateXplain | 16 of 18 entries | 2 of 18 entries |
+| WildGuard | 2 of 35 eligible entries | 0 of 37 eligible entries |
+| HateXplain | 17 of 20 entries | 2 of 20 entries |
 
-Safeguard had no saved validation configuration satisfying the 5% limit, so it
-has a visible gap in that view. We did not substitute a test-selected cutoff.
+WildGuard has three validation gaps for the 5% limit: Safeguard and the two
+fixed majority-vote controls. The three-model majority vote also has no feasible
+90% catch configuration. These are visible gaps; we do not substitute test-chosen
+cutoffs or invent continuous scores for fixed votes.
+
+The two WildGuard entries meeting the 5% limit on test were logistic combinations
+of decisions only. The Jev/Kev/Clef combination caught **82.23%** of violations
+with **4.13%** false blocks; the Kev/Clef combination caught **72.28%** with
+**4.55%** false blocks. Neither primary score ensemble met either operating target.
+The more complex score input was not automatically the more useful operational
+choice.
 
 On HateXplain, the strongest observed catch rate among entries meeting the 5%
 test limit was **43.10%**, from the mixed log-odds logistic ensemble. Conversely,
@@ -168,11 +213,10 @@ WildGuard's results are a warning about development-to-test transfer. The common
 validation sample comes from WildGuardTrain, whose labels are model-generated;
 the official test uses human annotations and a different example mixture.
 WildGuard itself also trained on WildGuardTrain. Validation is therefore not an
-independent measure of its generalization. Our results demonstrate failure of the
-selected operating targets on this test; they do not isolate a single cause.
-They also do not mean no other configuration could meet a target—the decision
-procedure selected one configuration before testing, and that choice is what we
-report.
+independent measure of its generalization. Most selected operating targets
+failed on test, but these results do not isolate a single cause. Other
+configurations may meet a target; we report the configuration chosen by the
+validation procedure.
 
 ## What practitioners should take away
 
@@ -190,12 +234,14 @@ basis across these deployments.
 
 ## Evidence and progress
 
-The [plan](PLAN.md) is preserved as it stood at the selection freeze. Completion
-and verification are recorded in
-[progress.json](../../published_runs/2026-10-29-leaderboard/progress.json).
-The [evidence bundle](../../published_runs/2026-10-29-leaderboard/README.md) provides
-the frozen selection, input hashes, normalized prompt-free outputs, paired
-comparisons, and a CPU-only reproduction command.
+The [original reanalysis plan](PLAN.md) and its
+[original evidence bundle](../../published_runs/2026-10-29-leaderboard/README.md)
+remain unchanged. The [Kev/Clef extension](../../published_runs/2026-10-29-leaderboard-decision-models/README.md)
+added two individual models. The [current integration](../../published_runs/2026-10-30-leaderboard-decision-ensembles/README.md)
+adds decision-model combinations and includes frozen selections, input hashes,
+normalized prompt-free outputs, all paired comparisons, and a CPU-only
+reproduction command. Dates and hashes remain in the archives for provenance;
+study titles describe the questions tested.
 
 The four frontier API models remain visible in the coverage table, but unranked:
 they were evaluated only on 32 fitting examples per reasoning condition, not the

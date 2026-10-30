@@ -1,0 +1,28 @@
+{
+  "analysis_role": "retrospective integration of published results; public tests reused",
+  "artifact_hashes": {
+    "coverage.json": "29bc89e166714b26b7e904a278f0d608989933742886002133d6a0f1b6f2535f",
+    "registry.json": "ac8781fa43b4793d5ee54fffd6c1e862995dce367ed4f49de892eee9c8d9b614",
+    "selection.json": "93c495c73c921e3df4b0340c6431e410e8fc4ab0ca9ac4ec54cc01893bea6910",
+    "test/hatexplain.json.gz": "ae0e3b6359f9138216a6d80d49e9c594fc823caf1eeebe7c191a5bf8d92cb873",
+    "test/wildguard.json.gz": "8de49187045d7ab6e9fa45585c21167c04b8cd4a30d398dc91655321ed5b43d3",
+    "validation-grid.json.gz": "d7eda378b8403cdf00240ec67b884c5cfc72e16fba676498b6e6cc6004bbe169",
+    "validation/hatexplain.json.gz": "a2fdb4b49ba571198fa8711129f9224a4a9ffc7cf1a3f4b57676f44f106f8a6d",
+    "validation/wildguard.json.gz": "8e18419d228bdb1bdcac68f34998c999f6417cbfe029f6a7dd77dfa311e0edcb"
+  },
+  "cost_usd": 0,
+  "created_utc": "2026-10-30T16:01:27.793998+00:00",
+  "expected_test_n": {
+    "hatexplain": 1924,
+    "wildguard": 1699
+  },
+  "input_hashes": {
+    "published_runs/2026-10-29-leaderboard-decision-models/checksums.json": "11ca7d2af04af5f5ed3c9696d8f176f759e799125bd6a227dd52ad28ea73b6c6",
+    "published_runs/2026-10-30-decision-ensemble/checksums.json": "f5557e14b909474d579d8f5ad0fe523767b40c6fc2c5dd09aa7dfb1cef5d57d5"
+  },
+  "no_new_fitting": true,
+  "no_new_inference": true,
+  "note": "Prior individual candidates remain unchanged, including their policy pools. New study controls are not substituted after observing test results.",
+  "primary": "balanced_accuracy",
+  "status": "published selections copied unchanged; not a new pre-test experiment"
+}

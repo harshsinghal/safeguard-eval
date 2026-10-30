@@ -131,6 +131,12 @@ corresponding target on test. The three-model configuration selected for the 5%
 limit actually blocked **7.51%** of benign test prompts. The configuration selected
 for the 90% catch target caught **83.42%** of harmful test prompts.
 
+The decision-only logistic controls did meet the 5% false-block limit: the
+three-model combination caught 82.23% of violations with 4.13% false blocks; the
+open-only combination caught 72.28% with 4.55% false blocks. These are separate
+validation-selected operating points. The [integrated comparison](../leaderboard/README.md)
+shows their targets alongside the earlier models and ensembles.
+
 The models' test scores were strongly correlated, about 0.89–0.90, and their
 native decisions shared 89 errors across all three. Those are descriptive signs
 of overlapping behavior, not an explanation of their internal architectures.
@@ -149,6 +155,7 @@ evaluations for every production input.
 - [Registered protocol](PLAN.md) and [lab notes](NOTES.md).
 - [Full result tables, equations, selected settings, and paired comparisons](../../published_runs/2026-10-30-decision-ensemble/RESULTS.md).
 - [Evidence archive and CPU reproduction](../../published_runs/2026-10-30-decision-ensemble/README.md).
+- [Integrated leaderboard](../../published_runs/2026-10-30-leaderboard-decision-ensembles/README.md): all nine combination methods per cohort alongside the earlier models and ensembles. Individual calibration controls and selection aliases remain in this study.
 - [Metric definitions](../leaderboard/METRICS.md).
 
 The archive retains every registered method, including regressions, plus all

@@ -22,5 +22,14 @@
     "leaderboard_unit_tests": 11,
     "fresh_fit_reproduction": "passed",
     "archived_source_reproduction": "passed"
+  },
+  "leaderboard_integration": {
+    "archive": "published_runs/2026-10-30-leaderboard-decision-ensembles",
+    "wildguard_entries": 38,
+    "hatexplain_entries": 20,
+    "candidate_records": 261,
+    "prior_results_unchanged": true,
+    "source_method_selections_unchanged": true,
+    "additional_provider_cost_usd": 0
   }
 }

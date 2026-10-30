@@ -8,7 +8,7 @@ This repository follows those questions through a growing series of experiments.
 
 The finding running through this work is that **policy authoring is deeply coupled with AI engineering**. A policy is an operational input: its wording, its delivery to the model, and the rule that turns a score into an action all need testing. Policy owners define the intended boundary; engineers help measure and implement it. Neither the model name nor a well-written document is sufficient on its own.
 
-*Maintained by [Harsh Singhal](https://www.linkedin.com/in/harshsinghal). Research updated October 30, 2026; comprehensive leaderboard snapshot October 29. Exploratory studies; the paper is an author-review draft.*
+*Maintained by [Harsh Singhal](https://www.linkedin.com/in/harshsinghal). A growing collection of exploratory studies; the paper is an author-review draft.*
 
 [Experiment log](#experiment-log) · [Current leaderboard](#current-leaderboard) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
 
@@ -35,9 +35,9 @@ Not every model has been tested on every dataset. The [interface audit](docs/res
 
 ## Experiment log
 
-Read this as the development of a research question, rather than a sequence in which every experiment improved the score. Earlier entries report their **original selection objective and metrics**. The leaderboard later in this page uses a common balanced-accuracy procedure; its selected configurations can therefore differ.
+The experiments follow the development of the research question. Each entry is named for what we tested; not every experiment improved the score. Earlier entries report their **original selection objective and metrics**. The leaderboard later in this page uses a common balanced-accuracy procedure; its selected configurations can therefore differ.
 
-### 1. October 21 — Can a model apply a platform's own rule?
+### 1. Custom platform rules: allow, block, or review
 
 The project began with GPT-OSS Safeguard through Groq and a DiffusionDB prompt browser. We then compared four specialists on a fictional image-prompt policy with ALLOW, BLOCK, and REVIEW outcomes. On 48 synthetic test cases, Safeguard agreed with 40 draft labels, PolicyLM with 36, CoPE with 32, and Shieldstral with 19. CoPE matched all 32 clear binary cases but routed none of the ambiguous cases to REVIEW.
 
@@ -45,7 +45,7 @@ This made a practical distinction visible: classifying clear cases and handling 
 
 [Original application and showcase](DEMO.md) · [Evaluation design](evals/README.md) · [Frozen results and predictions](published_runs/2026-10-21/README.md)
 
-### 2. October 24 — Try a different policy: prompt injection
+### 2. Prompt injection: detecting instruction-boundary attacks
 
 We tested instruction-boundary detection on 116 held-out Deepset examples and a separate 80-case synthetic challenge. PolicyLM reached 81.6% macro-F1 on the Deepset test; Safeguard reached 88.7% on the challenge. Those scores describe different populations and should not be averaged into one ranking.
 
@@ -53,7 +53,7 @@ Some public examples lacked the context needed to resolve the written rule. That
 
 [Methods and label provenance](evals/injection/README.md) · [Results, disagreements, and limitations](published_runs/2026-10-24-injection/README.md)
 
-### 3. October 24 — Tune policy text on WildGuard
+### 3. WildGuard: tuning policy text with fixed model weights
 
 We developed policy candidates using WildGuardTrain, selected configurations on validation, and evaluated prompt harmfulness on WildGuardTest. Edits clarified harm categories, allowed discussion, and which instructions took precedence. Model weights stayed fixed.
 
@@ -61,7 +61,7 @@ Shieldstral's ordinary test accuracy rose from **87.93% to 90.82%** with its sel
 
 [Methods](docs/wildguard/METHODS.md) · [Claims and limits](docs/wildguard/CLAIMS.md) · [Policies, selection, and full results](published_runs/2026-10-24-wildguard/README.md)
 
-### 4. October 25 — Does a general-purpose LLM need to be large?
+### 4. General-purpose LLMs: comparing nearby model sizes
 
 We repeated policy-guided classification with five nearby-size Qwen models. The selected Qwen 2B configuration achieved 83.05% ordinary accuracy; Qwen 27B achieved 91.29%. In these studies, the small PolicyLM and Shieldstral specialists exceeded nearby-size Qwen configurations, while a larger Qwen remained competitive.
 
@@ -69,7 +69,7 @@ This supports considering small specialists alongside general models. It does no
 
 [Plain-language readout](docs/qwen-policy/READOUT.md) · [What changed in the prompts](docs/qwen-policy/PROMPT-CHANGES.md) · [Full results](published_runs/2026-10-25-qwen/README.md)
 
-### 5. October 25 — Can a policy travel between models?
+### 5. Policy transfer: when a rule helps one model and hurts another
 
 We developed revisions from each model's training feedback, then applied the selected texts to other models through their native adapters. A Qwen 2B-selected policy raised Shieldstral's ordinary accuracy from **87.82% to 90.76%**. In the other direction, the Shieldstral-selected text reduced Qwen 2B from **80.11% to 75.10%**. It also reduced PolicyLM from 85.05% to 74.57%.
 
@@ -77,7 +77,7 @@ These are comparisons within the transfer study, with its own candidate pool. Th
 
 [Transfer readout](docs/policy-transfer/READOUT.md) · [Exact policy edits](docs/policy-transfer/POLICY-CHANGES.md) · [Complete transfer matrix](published_runs/2026-10-25-policy-transfer/README.md)
 
-### 6. October 25 — Check frontier APIs before scaling an experiment
+### 6. Frontier APIs: checking whether classification requests succeed
 
 A separate pilot tested four frontier APIs with two reasoning settings on 32 fitting prompts: 256 observations. Some requests were filtered or produced unusable outputs. The full policy search and held-out comparison did not run within the available budget.
 
@@ -85,7 +85,7 @@ The lesson is operational: an API's ability to return the required classificatio
 
 [Pilot findings](docs/frontier-api/READOUT.md) · [Requests, failures, and costs](published_runs/2026-10-25-frontier-pilot/README.md)
 
-### 7. October 26 — Test policy structure on HateXplain
+### 7. HateXplain: testing definitions, examples, and document structure
 
 We moved beyond harmful requests to hate-speech classification. A common authoring document contained scope, definitions, blocking rules, permitted cases, exceptions, and examples. Model adapters mapped that content to native inputs: PolicyLM category fields, Shieldstral's prescribed wrapper, or Qwen's system instruction.
 
@@ -95,7 +95,7 @@ This supports testing both structure and substance, while checking which mistake
 
 [Readout](docs/hatexplain/READOUT.md) · [Policy edits and component tests](docs/hatexplain/POLICY-CHANGES.md) · [Native-interface audit](docs/research-directions/POLICY-INTERFACE-AUDIT.md) · [Full results](published_runs/2026-10-26-hatexplain/README.md)
 
-### 8. October 27 — Calibrate scores and combine models
+### 8. Probability ensembles: calibration before combination
 
 We compared probability averages, learned weights, logistic regression, and random forests. Before crediting an ensemble, we tested the individual models' decision settings. On HateXplain, changing Shieldstral's score-to-decision rule raised ordinary accuracy from **53.17% to 79.57%**, with no policy or model-weight change. False blocks fell from 885 to 177, but missed hate posts rose from 16 to 216.
 
@@ -103,7 +103,7 @@ Ensembles did not consistently improve on that calibrated single model. The mixe
 
 [Readout](docs/ensemble/READOUT.md) · [Methods and results](docs/ensemble/RESULTS.md) · [Frozen evidence](published_runs/2026-10-27-ensemble/README.md)
 
-### 9. October 28 — Combine log-odds instead of probabilities
+### 9. Log-odds ensembles: another way to combine scores
 
 We reused the saved binary scores, converted them to log-odds, and fitted new combiners. These are **binary score transformations**, not access to every model's raw vocabulary logits.
 
@@ -111,7 +111,7 @@ The selected mixed logistic ensemble reached 80.82% ordinary accuracy on HateXpl
 
 [Results and error trade-offs](docs/ensemble-logits/RESULTS.md) · [What we can claim](docs/ensemble-logits/CLAIMS.md) · [Reproducible archive](published_runs/2026-10-28-ensemble-logits/README.md)
 
-### 10. October 29 — Add Jev, an API decision model
+### 10. Jev: policy tuning through a decision-model API
 
 We tested Jev 1.14 through its native decision API with a brief policy, a detailed policy, and a detailed policy plus four training examples. It returned usable decisions for all 22,261 recorded classifications.
 
@@ -119,7 +119,7 @@ On HateXplain, ordinary accuracy at its native decision rule rose from **69.33% 
 
 [Jev readout](docs/jev/READOUT.md) · [Policy changes](docs/jev/POLICY-CHANGES.md) · [API evidence and results](published_runs/2026-10-29-jev/README.md)
 
-### 11. October 29 — Revisit “best” with balanced metrics
+### 11. Balanced evaluation: measuring both kinds of mistakes
 
 We assembled the saved outputs into a common comparison, choosing configurations on shared validation examples rather than taking each model's highest observed test accuracy. **Balanced accuracy** gives equal weight to catching violations and correctly allowing compliant content. Separate views ask for a 5% false-block limit or a 90% violation-catch target.
 
@@ -127,7 +127,7 @@ For Jev on HateXplain, the balanced selection caught **79.12%** of hate posts ve
 
 [How selection works](docs/leaderboard/README.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Original reanalysis](published_runs/2026-10-29-leaderboard/README.md)
 
-### 12. October 29 — Add open-weight decision models: Kev and Clef
+### 12. Kev and Clef: testing open-weight decision models
 
 Kev 4B and Clef-Flash 9B were self-hosted and tested with the same three policy types and benchmarks as Jev, without further fine-tuning. Kev selected the brief policy for both tasks; Clef selected the example-bearing policy with task-specific cutoffs.
 
@@ -135,13 +135,13 @@ On HateXplain, expanding Kev's brief policy reduced native balanced accuracy fro
 
 [Study and deployment details](docs/decision-models/README.md) · [Frozen runs](published_runs/2026-10-29-decision-models/README.md) · [Expanded leaderboard](published_runs/2026-10-29-leaderboard-decision-models/README.md)
 
-### 13. October 30 — Combine native scores from decision models
+### 13. Decision-model ensembles: combining Jev, Kev, and Clef scores
 
 We fitted combinations of Jev, Kev, and Clef BLOCK scores on 1,024 WildGuardTrain prompts, selected settings on 512 separate validation prompts, and evaluated frozen choices on 1,699 WildGuardTest prompts. The primary probability logistic ensemble reached **89.32% balanced accuracy**, versus 88.69% for its selected Jev individual and 89.81% for WildGuard. It caught 27 more harmful prompts than Jev but made 22 more false blocks; the gain was uncertain.
 
-We also tested decision-only controls and an open-only Kev/Clef ensemble. Retaining scores did not establish a clear advantage over combining decisions. All scores were cached, so added GPU/API cost was $0. The example-bearing policies lacked fitting scores and were excluded from the new feature pool; no model weights or policy wording changed.
+The primary open-only Kev/Clef combination reached **87.52% balanced accuracy**. We also tested averages, learned weights, random forests, and decision-only controls. Retaining scores did not establish a clear advantage over combining decisions. The current leaderboard includes all nine combination methods for each of the two groups; selection aliases are not counted as additional methods. All scores were cached, so added GPU/API cost was $0. The example-bearing policies lacked fitting scores and were excluded from the new feature pool; no model weights or policy wording changed.
 
-[Findings and error trade-offs](docs/decision-ensemble/README.md) · [Registered plan](docs/decision-ensemble/PLAN.md) · [Full results and reproducible archive](published_runs/2026-10-30-decision-ensemble/README.md)
+[Findings and error trade-offs](docs/decision-ensemble/README.md) · [Registered plan](docs/decision-ensemble/PLAN.md) · [Full results and reproducible archive](published_runs/2026-10-30-decision-ensemble/README.md) · [Combined leaderboard](#current-leaderboard)
 
 ## What the evidence suggests for moderation teams
 
@@ -157,8 +157,8 @@ These experiments support a workflow in which policy owners and engineers test c
 | Start here | What you will find |
 |---|---|
 | [Engineering article](docs/engineering-guardrails/README.md) | A shorter guide to building and evaluating a policy guardrail, with an editable Word version. |
-| [Research paper](research-preprint/README.md) | Review draft v0.6: PDF, extracted text, LaTeX source, methods, citations, and fuller limitations. Not peer reviewed or submitted to arXiv. |
-| [Install the Safeguard Eval skill](skills/safeguard-eval/README.md) | A guided introduction and evidence-based Q&A in Codex, Claude Code, or Pi. The v0.5.0 release pins evidence through October 28; it does not yet include the October 29 decision-model studies. |
+| [Research paper](research-preprint/README.md) | Review draft v0.6: PDF, extracted text, LaTeX source, methods, citations, and fuller limitations. Covers through the Kev/Clef comparison; the later decision-ensemble study is linked above. Not peer reviewed or submitted to arXiv. |
+| [Install the Safeguard Eval skill](skills/safeguard-eval/README.md) | A guided introduction and evidence-based Q&A in Codex, Claude Code, or Pi. The v0.5.0 release covers through the specialist probability/log-odds ensembles. The newer decision-model studies are available in the research log above. |
 | [Published runs](published_runs) | Dated experiment bundles with policies, predictions, selections, analysis, and provenance. Follow each study's reproduction instructions. |
 | [Compute notes](docs/COMPUTE.md) | Recorded GPU/API use and budget controls. The research used GPU.ai and Runpod; these are not provider endorsements. |
 | [Research directions](docs/research-directions/README.md) | Open questions and proposed work, distinguished from completed experiments. |
@@ -168,17 +168,15 @@ The research archive grows separately from versioned skill releases. New studies
 
 ## Current leaderboard
 
-The [October 30 decision-score ensemble extension](docs/decision-ensemble/README.md)
-reports its new combinations separately, including direct comparisons with the
-references below. This comprehensive table retains its frozen October 29 selections.
+The comparison now includes the **Jev/Kev/Clef score ensembles and decision-only controls**, alongside the earlier policy models, general-purpose LLMs, and specialist ensembles. There are **38 WildGuard entries and 20 HateXplain entries**, drawn from **261 eligible archived candidate records**. These are configured systems and methods, not 261 distinct models or independent experiments. The new decision-model combinations were tested on WildGuard only.
 
-**Snapshot: October 29, 2026.** The expanded comparison includes **209 eligible archived candidate records and 20 entries per benchmark**. Entries include model configurations and ensemble methods; this is not a count of unique models or independent experiments.
+The [integration record](published_runs/2026-10-30-leaderboard-decision-ensembles/README.md) preserves every earlier selection and result. It adds the new study's frozen method selections without refitting or choosing replacements from test scores. Individual calibration controls and “best method” aliases remain in that study's report rather than becoming duplicate leaderboard entries.
 
 Each entry's policy and decision rule were selected for balanced accuracy on common validation data: 512 WildGuard prompts or 1,920 HateXplain posts. The tables report those selections on the full test populations. They rank the observed test scores of the frozen selections, not each model's best test result. This is a retrospective comparison on reused public tests, with unequal candidate pools and development histories.
 
 **Reading the columns:** balanced accuracy averages the violation-catch rate and the compliant-content allow rate. A false-block rate is the share of compliant items incorrectly blocked; a miss rate is the share of violations incorrectly allowed. Lower is better for both error rates. Unresolved outputs are counted as errors, not silently discarded or credited as REVIEW. See the [complete metric guide](docs/leaderboard/METRICS.md).
 
-[Full tables, confidence intervals, selected policies, and operating targets](published_runs/2026-10-29-leaderboard-decision-models/RESULTS.md) · [CSV](published_runs/2026-10-29-leaderboard-decision-models/leaderboard.csv) · [Machine-readable results](published_runs/2026-10-29-leaderboard-decision-models/results.json) · [Interactive HTML](published_runs/2026-10-29-leaderboard-decision-models/index.html) *(download and open locally; GitHub displays its source)*
+[Full tables, confidence intervals, selected policies, and operating targets](published_runs/2026-10-30-leaderboard-decision-ensembles/RESULTS.md) · [CSV](published_runs/2026-10-30-leaderboard-decision-ensembles/leaderboard.csv) · [Machine-readable results](published_runs/2026-10-30-leaderboard-decision-ensembles/results.json) · [Interactive HTML](published_runs/2026-10-30-leaderboard-decision-ensembles/index.html) *(download and open locally; GitHub displays its source)*
 
 <!-- BEGIN GENERATED LEADERBOARD -->
 <!-- Generated by tools/update_readme_leaderboard.py; point SOURCE at a reviewed new archive to update. -->
@@ -200,15 +198,33 @@ Each entry's policy and decision rule were selected for balanced accuracy on com
 | 9 | Shieldstral 3B | 90.26% | 90.56% | 5.29% | 14.19% | 0 |
 | 10 | Qwen3.5 27B | 90.16% | 90.58% | 4.02% | 15.65% | 0 |
 | 11 | WildGuard 7B | 89.81% | 90.13% | 5.40% | 14.99% | 0 |
-| 12 | Qwen3.5 35B-A3B | 89.64% | 89.99% | 5.08% | 15.65% | 0 |
-| 13 | Qwen3.5 9B | 89.32% | 89.42% | 8.36% | 13.00% | 0 |
-| 14 | GPT-OSS Safeguard 20B | 89.13% | 89.64% | 6.14% | 14.46% | 9 |
-| 15 | Jev 1.14 | 88.69% | 89.12% | 4.97% | 17.64% | 0 |
-| 16 | Clef-Flash 9B | 87.62% | 87.78% | 9.10% | 15.65% | 0 |
-| 17 | Kev 4B | 86.93% | 87.27% | 7.30% | 18.83% | 0 |
-| 18 | Qwen3.5 4B | 86.81% | 86.64% | 13.65% | 12.73% | 0 |
-| 19 | PolicyLM 1.7B | 86.31% | 86.38% | 11.32% | 16.05% | 0 |
-| 20 | Qwen3.5 2B | 83.41% | 83.42% | 14.60% | 18.57% | 0 |
+| 12 | Equal log-odds average · Jev + Kev + Clef | 89.74% | 89.93% | 6.98% | 13.53% | 0 |
+| 13 | Qwen3.5 35B-A3B | 89.64% | 89.99% | 5.08% | 15.65% | 0 |
+| 14 | Equal probability average · Jev + Kev + Clef | 89.45% | 89.63% | 7.30% | 13.79% | 0 |
+| 15 | Qwen3.5 9B | 89.32% | 89.42% | 8.36% | 13.00% | 0 |
+| 16 | Logistic regression · probabilities · Jev + Kev + Clef | 89.32% | 89.51% | 7.30% | 14.06% | 0 |
+| 17 | Random forest · Jev + Kev + Clef | 89.14% | 89.28% | 7.94% | 13.79% | 0 |
+| 18 | GPT-OSS Safeguard 20B | 89.13% | 89.64% | 6.14% | 14.46% | 9 |
+| 19 | Logistic regression · log-odds · Jev + Kev + Clef | 89.11% | 89.10% | 9.84% | 11.94% | 0 |
+| 20 | Learned weighted average · Jev + Kev + Clef | 89.08% | 89.23% | 8.04% | 13.79% | 0 |
+| 21 | Logistic regression · decisions only · Jev + Kev + Clef | 89.05% | 89.52% | 4.13% | 17.77% | 0 |
+| 22 | Calibrated probability average · Jev + Kev + Clef | 88.76% | 88.92% | 8.15% | 14.32% | 0 |
+| 23 | Majority vote · decisions only · Jev + Kev + Clef | 88.71% | 89.08% | 5.61% | 16.98% | 0 |
+| 24 | Jev 1.14 | 88.69% | 89.12% | 4.97% | 17.64% | 0 |
+| 25 | Random forest · Kev + Clef (open weights) | 88.10% | 88.08% | 10.79% | 13.00% | 0 |
+| 26 | Logistic regression · decisions only · Kev + Clef (open weights) | 88.02% | 88.02% | 10.69% | 13.26% | 0 |
+| 27 | Majority vote · decisions only · Kev + Clef (open weights) | 88.02% | 88.02% | 10.69% | 13.26% | 0 |
+| 28 | Learned weighted average · Kev + Clef (open weights) | 87.88% | 87.89% | 10.58% | 13.66% | 0 |
+| 29 | Calibrated probability average · Kev + Clef (open weights) | 87.72% | 87.98% | 7.72% | 16.84% | 0 |
+| 30 | Equal log-odds average · Kev + Clef (open weights) | 87.64% | 87.83% | 8.68% | 16.05% | 0 |
+| 31 | Clef-Flash 9B | 87.62% | 87.78% | 9.10% | 15.65% | 0 |
+| 32 | Equal probability average · Kev + Clef (open weights) | 87.60% | 87.77% | 8.89% | 15.92% | 0 |
+| 33 | Logistic regression · probabilities · Kev + Clef (open weights) | 87.52% | 87.87% | 6.67% | 18.30% | 0 |
+| 34 | Logistic regression · log-odds · Kev + Clef (open weights) | 87.50% | 87.87% | 6.56% | 18.44% | 0 |
+| 35 | Kev 4B | 86.93% | 87.27% | 7.30% | 18.83% | 0 |
+| 36 | Qwen3.5 4B | 86.81% | 86.64% | 13.65% | 12.73% | 0 |
+| 37 | PolicyLM 1.7B | 86.31% | 86.38% | 11.32% | 16.05% | 0 |
+| 38 | Qwen3.5 2B | 83.41% | 83.42% | 14.60% | 18.57% | 0 |
 
 ### HateXplain: hate versus non-hate
 
@@ -239,13 +255,15 @@ Each entry's policy and decision rule were selected for balanced accuracy on com
 
 <!-- END GENERATED LEADERBOARD -->
 
-The WildGuard specialist ensembles combine **PolicyLM, Shieldstral, and CoPE**. HateXplain specialist ensembles combine **PolicyLM and Shieldstral**; mixed ensembles add **Qwen 4B**. Jev, Kev, Clef, Safeguard, and WildGuard are not components of these ensembles. Models absent from a benchmark were not evaluated there in the eligible studies.
+The WildGuard specialist ensembles combine **PolicyLM, Shieldstral, and CoPE**. HateXplain specialist ensembles combine **PolicyLM and Shieldstral**; mixed ensembles add **Qwen 4B**. The decision-model combinations are labeled **Jev + Kev + Clef** or **Kev + Clef (open weights)**. Safeguard and WildGuard are reference models, not ensemble components. Models or combinations absent from a benchmark were not evaluated there in the eligible studies.
+
+The new study registered **logistic regression on probabilities** as its primary method. Its three-model result is 89.32%; the equal log-odds average observed a higher test score of 89.74%, but was not promoted to the primary result after testing. All methods remain visible, including those that regressed. The open-only cohort uses Kev and Clef; using Jev requires its API.
 
 Safeguard's nine unresolved WildGuard outputs include two compliant and seven violating prompts. They lower balanced accuracy and coverage in addition to the false blocks and misses shown. Binary MCC is unavailable for that row in the full report.
 
 **Small gaps need context.** On WildGuard, the leading ensemble exceeded CoPE by 0.50 balanced-accuracy points, with a paired 95% interval of −0.07 to +1.11; that does not resolve a clear difference. Its lead over WildGuard was 1.27 points (+0.33 to +2.21). On HateXplain, the mixed logistic ensemble led Jev by 0.95 points (−1.03 to +2.94). These unadjusted, exploratory intervals do not account for the full history of policy search and repeated test use.
 
-**An operational target can change the recommendation.** In the separate low-false-block view, the best HateXplain catch rate among configurations that met the 5% test limit was only 43.10%. None of the 19 eligible WildGuard selections for that target met it on test. A useful aggregate score is not evidence that a deployment's error budget has been satisfied.
+**An operational target can change the recommendation.** In the separate low-false-block view, the best HateXplain catch rate among configurations that met the 5% test limit was only 43.10%. On WildGuard, two of 35 eligible selections met that limit: logistic combinations of decisions only. The three-model version caught 82.23% of violations with 4.13% false blocks. Neither primary score ensemble met the limit. A useful aggregate score is not evidence that a deployment's error budget has been satisfied.
 
 ---
 

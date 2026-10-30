@@ -5,7 +5,7 @@ correctly allow compliant content?** A single accuracy score can hide a poor ans
 to either question.
 
 This guide defines the metrics used in the [main README](../../README.md#current-leaderboard)
-and the [expanded results](../../published_runs/2026-10-29-leaderboard-decision-models/RESULTS.md).
+and the [expanded results](../../published_runs/2026-10-30-leaderboard-decision-ensembles/RESULTS.md).
 The exact implementation is in [metrics.py](../../evals/leaderboard/metrics.py);
 the [archived implementation](../../published_runs/2026-10-29-leaderboard/source/evals/leaderboard/metrics.py)
 preserves the procedure used for the original reanalysis.
@@ -86,8 +86,18 @@ entry has a gap in that view. Passing validation does not guarantee passing test
 The common validation populations are 512 WildGuard prompts and 1,920 HateXplain
 posts. Earlier fitting sizes, policy searches, and candidate counts differ by
 study. Previously fitted calibrators and combiners are reused, not retrained for
-this reanalysis. The expanded comparison has 209 eligible candidate records,
-not 209 models or independent experiments.
+this reanalysis. The integrated comparison has **261 eligible candidate records**,
+producing 38 WildGuard entries and 20 HateXplain entries. The 52 newly included
+records cover seven score-combiner families and two decision-only controls for
+each decision-model cohort. They do not represent 52 new models. Their supervised
+combiners were fitted in the source experiment, not during leaderboard integration.
+
+The decision-model study's individual calibration controls and “best method”
+aliases stay in that study's report. They are not extra leaderboard entries, and
+they do not replace earlier individual-model selections. The detailed policy
+without examples was selected for Jev and Clef in the new ensemble study;
+example-bearing policies lacked fitting scores. This pool differs from the
+previous individual comparison, where all three policy versions were eligible.
 
 For scored candidates, the procedure considers the archived native decision and
 cutoffs from 0 to 1 in steps of 0.01, plus a value just above 1. A score at or
@@ -112,7 +122,11 @@ AUROC and AP require numerical scores. We calculate them only for items with a
 finite score and a usable decision, report **score coverage**, and leave them
 unavailable if the valid subset does not contain both classes. Score coverage
 and decision coverage are distinct. We do not invent probabilities for a model
-that supplied only a category.
+that supplied only a category. The majority-vote controls therefore have no
+AUROC or AP. A logistic combiner of decisions does produce a numerical score;
+its ranking metrics describe that fitted combiner, not native confidence from
+its component models. Native probabilities and transformed log-odds are also
+distinct from a model's full vocabulary logits or a calibrated real-world risk.
 
 <details>
 <summary>Exact formulas, including unresolved outputs</summary>

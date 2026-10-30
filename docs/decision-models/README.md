@@ -3,6 +3,8 @@
 Follow-up: the [WildGuard decision-score ensemble study](../decision-ensemble/README.md)
 combines Jev, Kev, and Clef scores, with an open-only Kev/Clef cohort and
 decision-only controls. It reuses these saved outputs and preserves this study.
+The [current integrated leaderboard](../../published_runs/2026-10-30-leaderboard-decision-ensembles/README.md)
+adds those combinations to the comparison.
 
 We tested **Kev 4B** and **Cloudflare Clef-Flash 9B** on the same WildGuard and
 HateXplain examples used for Jev. Both worked as self-hosted classifiers, without
@@ -15,8 +17,8 @@ examples, together with a different decision cutoff for each task.** More detail
 was useful for one model and damaging for the other on HateXplain. A decision
 model's default probability cutoff could also hide the value of a policy edit.
 
-The [expanded leaderboard](../../published_runs/2026-10-29-leaderboard-decision-models/index.html)
-now contains **20 entries per benchmark** and 209 eligible candidate records.
+The [leaderboard accompanying this study](../../published_runs/2026-10-29-leaderboard-decision-models/index.html)
+contains **20 entries per benchmark** and 209 eligible candidate records.
 The previous 18 entries retain their original selections and results. The
 [complete tables](../../published_runs/2026-10-29-leaderboard-decision-models/RESULTS.md)
 include ordinary accuracy, macro-F1, MCC, error rates, and uncertainty.

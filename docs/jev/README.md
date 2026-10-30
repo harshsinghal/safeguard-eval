@@ -1,5 +1,9 @@
 # Jev benchmark extension
 
+Follow-up: the [decision-score ensemble study](../decision-ensemble/README.md)
+combines Jev with Kev and Clef. The [current leaderboard](../leaderboard/README.md)
+includes the combinations alongside the original individual results.
+
 The follow-up [Kev and Clef experiment](../decision-models/README.md) is complete:
 two open decision models, the same benchmark populations, three policy variants
 per model/task, and validation-selected cutoffs. The

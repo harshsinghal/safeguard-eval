@@ -4,6 +4,8 @@ Choosing a model and testing the policy it will enforce
 
 *By Harsh Singhal · 29 October 2026*
 
+Research update: [decision-score ensembles](../decision-ensemble/README.md) and the [current leaderboard](../leaderboard/README.md) add later evidence to this article.
+
 You are adding a policy check to an enterprise AI assistant. Employees can ask it to search documents, summarize conversations or take actions through connected tools. Before a request reaches those systems, you want to decide whether it falls within the company's rules.
 
 Released models can make that decision from written instructions, either self-hosted or through an API. Our experiments suggest treating policy text as part of the implementation: version it, test it against labeled cases and evaluate it again whenever the model changes.
@@ -88,6 +90,6 @@ Start with one policy the business can explain and adjudicate. Ask its owner to 
 
 When a new model arrives, rerun the evaluation against the same requirements. Keep the adjudicated cases and explanations of changed decisions. Policy owners define the boundary; engineers make its interpretation measurable and deployable. Both need to approve the behavior that reaches users.
 
-Further reading in [Safeguard Eval](https://github.com/harshsinghal/safeguard-eval): the [paper](../../research-preprint/README.md), [full leaderboard](../../published_runs/2026-10-29-leaderboard-decision-models/RESULTS.md), [transfer findings](../policy-transfer/READOUT.md), [HateXplain authoring study](../hatexplain/READOUT.md), [Kev and Clef running guide](../decision-models/RUNNING.md) and [earlier model interfaces](../../skills/safeguard-eval/references/models.md).
+Further reading in [Safeguard Eval](https://github.com/harshsinghal/safeguard-eval): the [paper](../../research-preprint/README.md), [full leaderboard](../../published_runs/2026-10-30-leaderboard-decision-ensembles/RESULTS.md), [transfer findings](../policy-transfer/READOUT.md), [HateXplain authoring study](../hatexplain/READOUT.md), [Kev and Clef running guide](../decision-models/RUNNING.md) and [earlier model interfaces](../../skills/safeguard-eval/references/models.md).
 
 [Editable Word version](output/policy-guardrails-engineering.docx)
