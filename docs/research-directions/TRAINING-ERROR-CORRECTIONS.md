@@ -37,6 +37,8 @@ cutoff adjustment so an apparent improvement is not merely a change in strictnes
    once, and report corrected cases alongside newly introduced errors. If test
    findings motivate another revision, that is a new development cycle requiring
    a new holdout; do not advertise the reused test as untouched.
+   Untouched means unused in our development; upstream checkpoint exposure to
+   public datasets may remain unknown.
 
 ## Scope and interpretation
 

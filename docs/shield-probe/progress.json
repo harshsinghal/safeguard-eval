@@ -1,5 +1,5 @@
 {
-  "status": "gpu-setup",
+  "status": "frozen-before-test",
   "created_utc": "2026-10-30T19:57:53.219340+00:00",
   "models": [
     "Shieldstral-1.0-3B",
@@ -17,5 +17,32 @@
   "instance_id": "gpu-19ad69df",
   "hourly_usd": 0.8,
   "auto_terminate_at": "2026-10-30T23:00:18.582386Z",
-  "updated_utc": "2026-10-30T20:01:28.931141+00:00"
+  "updated_utc": "2026-10-30T20:21:36.808680+00:00",
+  "shieldstral_development_complete": true,
+  "shieldstral_parity": {
+    "n": 16,
+    "max_absolute_difference": 0.0,
+    "tolerance": 0.002,
+    "label_token_ids": [
+      13059,
+      2649
+    ],
+    "tokenizer_class": "TokenizersBackend",
+    "model_class": "Mistral3ForConditionalGeneration"
+  },
+  "qwen_development_complete": true,
+  "qwen_parity": {
+    "n": 16,
+    "max_absolute_difference": 0.0,
+    "tolerance": 0.002,
+    "label_token_ids": [
+      33,
+      32
+    ],
+    "tokenizer_class": "Qwen2Tokenizer",
+    "model_class": "Qwen3_5ForConditionalGeneration"
+  },
+  "candidate_fits": 75,
+  "invalid_candidates": 0,
+  "primary_stronger_single": "primary-shieldstral"
 }

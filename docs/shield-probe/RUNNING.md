@@ -17,7 +17,9 @@ python3 -m evals.shield_probe.prepare --state /absolute/path/state \
 For a portable rerun, copy `metadata/`, `data-manifest.json` and `policy.json`
 from the published study into a new state and restore authorized source text
 using the earlier [input restoration instructions](../activation-probe/RUNNING.md).
-The populations and input-file hashes are identical to that study. Keep text and
+Run `tools/restore_shield_probe_inputs.py` with `--state`, `--source` and
+`--stage development` (or `--stage test` after freezing). The populations and
+input-file hashes are identical to that study. Keep text and
 embeddings private. Register `created_utc`, `sources` from
 `evals.shield_probe.common.source_hashes()`, and `data_manifest_sha256` in a fresh
 `registration.json`. Extraction rejects changed source and input hashes.
