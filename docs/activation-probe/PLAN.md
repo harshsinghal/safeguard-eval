@@ -44,6 +44,9 @@ tokenizer, policy, adapter, environment and artifact hashes.
   span, excluding policy, template and padding, or the final input token. Use
   its native chat template with thinking disabled. No truncation: over 8,192
   tokens is an explicit unresolved extraction. Batch size one initially.
+  One fitting record has an empty prompt: represent an empty content mean by a
+  zero vector, while the last-input-token representation is computed normally.
+  This label-independent edge-case convention was added before any fitting.
 * PolicyLM: tuple indices 14, 21 and 28. Pool either the single native category
   `[L]` position, or the mean of content tokens after the compiled policy prefix.
   Preserve upstream cleaning, 2,000-character windowing, and max_batch_rows=1.

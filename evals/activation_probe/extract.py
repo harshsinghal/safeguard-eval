@@ -40,7 +40,7 @@ class QwenExtractor:
         enc = self.tokenizer(rendered, add_special_tokens=False, return_offsets_mapping=True,
                              return_tensors='pt')
         mask = content_mask(enc.pop('offset_mapping')[0].tolist(),len(self.prefix),len(self.prefix)+len(text))
-        if not mask.any():
+        if not mask.any() and text:
             raise ValueError('Empty content token mask')
         length = enc['input_ids'].shape[1]
         if length > 8192:
@@ -54,9 +54,11 @@ class QwenExtractor:
         feature = {}
         for layer in MODELS['qwen']['layers']:
             h = out.hidden_states[layer][0].float()
-            feature[f'qwen-l{layer}-mean'] = h[mm].mean(0).cpu().numpy()
+            # A genuinely empty submitted prompt has no content tokens. Preserve
+            # its row with a neutral zero vector, not a mean of policy/template.
+            feature[f'qwen-l{layer}-mean'] = (h[mm].mean(0) if mask.any() else torch.zeros_like(h[0])).cpu().numpy()
             feature[f'qwen-l{layer}-last'] = h[-1].cpu().numpy()
-        return feature, dict(tokens=length,content_tokens=int(mask.sum()),windows=1)
+        return feature, dict(tokens=length,content_tokens=int(mask.sum()),windows=1,empty_content=not bool(text))
 
 
 class PolicyExtractor:

@@ -12,6 +12,26 @@ preparation command used in this study points to the existing private research
 workspace; a new user must reconstruct those prompts from the original dataset,
 preserving identifiers and SHA-256 values. No source prompts are published here.
 
+To reproduce the existing published assignments without the author's private
+workspace, copy the public bundle to a writable local state directory. Obtain
+the authorized publisher files at dataset revision
+`d29c47f41c8b51348b5c8e8c81c039b3132b66d1`:
+[training Parquet](https://huggingface.co/datasets/allenai/wildguardmix/resolve/d29c47f41c8b51348b5c8e8c81c039b3132b66d1/train/wildguard_train.parquet)
+and [test Parquet](https://huggingface.co/datasets/allenai/wildguardmix/resolve/d29c47f41c8b51348b5c8e8c81c039b3132b66d1/test/wildguard_test.parquet).
+The restoration tool checks the original file, every text identity and label,
+and the exact resulting input-file hash:
+
+```sh
+python3 tools/restore_activation_probe_inputs.py --state /absolute/path/probe-state \
+  --source /absolute/path/wildguard_train.parquet --stage development
+# After the pre-test freeze:
+python3 tools/restore_activation_probe_inputs.py --state /absolute/path/probe-state \
+  --source /absolute/path/wildguard_test.parquet --stage test
+```
+
+This utility additionally needs PyArrow. Work in a copy of the public bundle;
+keep original published results immutable and do not commit restored inputs.
+
 ```sh
 python3 -m evals.activation_probe.prepare --state /absolute/path/probe-state \
   --prior-work /absolute/path/prior-research-work
