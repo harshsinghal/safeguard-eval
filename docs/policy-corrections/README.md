@@ -19,7 +19,7 @@ We froze four revisions: clarify permitted cases, clarify prohibited cases,
 combine both additions, and add two short contrasting example pairs. All
 original policy clauses remain. The additions distinguish a request's topic or
 tone from the action being requested, and make consent, discrimination and
-confidentiality boundaries more explicit. See the exact
+confidentiality boundaries more explicit. See the [readable policy edits](POLICY-EDITS.md), exact
 [authoring record](authoring.json) and [policies](policies).
 
 The data audit excludes 9,225 recorded previously used training IDs and their
@@ -37,3 +37,10 @@ holdout/test text and outputs do not guide those choices. See the
 The same cumulative $20 cap applies. This run reserves at most $2.40; remaining
 authorization before it begins is $5.4546. Compute will be terminated and billed
 usage reconciled before reporting completion.
+
+
+Shieldstral validation selected the permitted-case clarification (p1). It scored
+98.43% balanced accuracy, versus 98.29% for the original policy after cutoff
+selection: two fewer false blocks and the same 23 missed violations. This small
+validation gain is not a held-out result. The revision is frozen in commit
+`22c0a62`; Qwen receives it unchanged, and no final inputs have been uploaded yet.

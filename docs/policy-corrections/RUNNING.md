@@ -15,6 +15,10 @@ test or require source text.
 ## Restore inputs for a new run
 
 Use a new working directory and the recorded source snapshot or full repository.
+Run the commands below from the repository root, or from the bundle's `source/`
+directory. Restoring private input text additionally requires PyArrow (21.0.0
+in the original preparation environment); the CPU
+score-only verification above does not. Plotting additionally requires Matplotlib.
 Copy `data-manifest.json`, `metadata/`, `policies/`, `authoring.json`,
 `error-review.json`, `discovery-errors.jsonl.gz`, `discovery-summary.json` and
 `prior-use-audit.json` into that directory. Obtain the pinned WildGuard Parquet

@@ -1,5 +1,5 @@
 {
-  "status": "shieldstral-revision-frozen",
+  "status": "final-selections-frozen",
   "protocol_commit": "016d671",
   "created_utc": "2026-10-30T21:32:36.711807+00:00",
   "prior_cumulative_usd": 14.54540555656,
@@ -40,7 +40,7 @@
       }
     }
   },
-  "updated_utc": "2026-10-30T21:58:14.073330+00:00",
+  "updated_utc": "2026-10-30T22:06:39.001729+00:00",
   "authoring_commit": "5c347b4",
   "gpu": {
     "provider": "GPU.ai",
@@ -51,5 +51,6 @@
   "candidate_texts_frozen": true,
   "holdout_test_inputs_uploaded": false,
   "selected_revision": "p1",
-  "cached_baseline_max_absolute_difference": 0.0
+  "cached_baseline_max_absolute_difference": 0.0,
+  "shield_selection_commit": "22c0a62"
 }

@@ -92,3 +92,32 @@ The fresh original-policy discovery scores exactly match the cached scores
 (maximum absolute difference 0.0). The selection and all supporting scores were
 frozen before Qwen validation. This small validation difference is a selection
 outcome, not yet evidence that the revision improves held-out decisions.
+
+
+At the fixed 0.5 cutoff, p1 corrected six discovery mistakes and introduced six
+new ones. Only three of the 19 cases that motivated edits became correct under
+p1. The combined p3 revision corrected eight and introduced six; p4 corrected six
+and introduced nine. These are descriptive development checks, not held-out
+improvements. They show why a plausible error explanation is not sufficient to
+establish that a policy edit works.
+
+Every Shieldstral development input was scored without truncation or unresolved
+outputs. All full-forward parity differences were 0.0, and the top vocabulary
+token was always one of the two canonical labels. The longest development input
+was 3,719 tokens, below the registered limit of 8,192.
+
+
+## Final freeze, before holdout/test inference
+
+On Qwen validation, the original policy scored 88.1194% balanced accuracy at
+0.5 and 89.6089% with its selected cutoff of 0.57. The transferred p1 revision
+scored 90.4324% at its native 0.5 cutoff. Compared with the tuned original rule,
+it had nine more false blocks (81 versus 72) and 23 fewer misses (65 versus 88).
+This is a validation tradeoff; it does not yet establish transfer improvement
+on held-out data. Qwen had no separate wording search.
+
+Both models' policy and cutoff choices, including separate false-block and
+recall operating targets, were frozen before uploading final inputs. Restoring
+the 2,048 additional holdout prompts and 1,699 test prompts from the pinned
+Parquet files reproduced the registered input hashes. No held-out example text
+was inspected to alter the policies.

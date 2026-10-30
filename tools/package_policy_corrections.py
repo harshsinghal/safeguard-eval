@@ -33,7 +33,7 @@ def package(state,out):
                  'correction-freeze.txt','gpu-environment.txt']:
         copy(work/name,Path('runtime')/name)
     write(out/'runtime/cpu-environment.json',dict(python=platform.python_version(),platform=platform.platform(),
-        packages={n:importlib.metadata.version(n) for n in ['numpy','scipy','scikit-learn']}))
+        packages={n:importlib.metadata.version(n) for n in ['numpy','scipy','scikit-learn','pyarrow']}))
     rt={}
     for p in sorted((state/'outputs').glob('*/*/*.json')):
         o=read(p);rr=o['records'];valid=[r for r in rr if r['score'] is not None]
