@@ -80,9 +80,13 @@ python3 tools/skill_release.py build
 ```
 
 The refresh regenerates source URLs/hashes, compact numeric anchors, and the package
-manifest. The check fails when a referenced source or dated study inventory differs
-from the evidence pin. It verifies numbers against frozen JSON and checks local
-package links. The ZIP build is deterministic and contains only the skill folder.
+manifest. Refresh requires the working evidence and dated study inventory to match
+the proposed pin, so a new snapshot still needs a review of all included studies.
+Check and build verify source hashes and numeric anchors against the pinned Git
+revision, alongside package hashes and local links. This lets newer studies and
+paper versions coexist with an intact older skill release. The README must disclose
+the release's evidence date; passing these checks does not mean it covers the latest
+research. The ZIP build is deterministic and contains only the skill folder.
 
 ## Review before publishing
 

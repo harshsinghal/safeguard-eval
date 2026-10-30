@@ -148,7 +148,7 @@ class SkillInstallTests(unittest.TestCase):
 
 
 class SkillReleaseTests(unittest.TestCase):
-    def test_evidence_and_numeric_snapshot_are_current(self):
+    def test_evidence_and_numeric_snapshot_match_pinned_revision(self):
         RELEASE["check"]()
 
     def test_zip_is_reproducible_and_installable(self):
@@ -186,14 +186,32 @@ class SkillReleaseTests(unittest.TestCase):
             release = {"evidence_revision": revision, "evidence_through": "2026-01-01",
                        "repository": "https://github.com/harshsinghal/safeguard-eval"}
             with mock.patch.dict(RELEASE["registry"].__globals__, {"ROOT": root, "SOURCES": {"fixture": path}}):
-                RELEASE["registry"](release)
+                snapshot = RELEASE["registry"](release)
                 evidence.write_text("Changed evidence", encoding="utf-8")
                 with self.assertRaisesRegex(ValueError, "Evidence changed"):
                     RELEASE["registry"](release)
+                self.assertEqual(snapshot, RELEASE["registry"](release, require_current_evidence=False))
                 evidence.write_text("Reviewed evidence", encoding="utf-8")
                 (root / "published_runs" / "2026-01-02-new-study").mkdir()
                 with self.assertRaisesRegex(ValueError, "inventory changed"):
                     RELEASE["registry"](release)
+                self.assertEqual(snapshot, RELEASE["registry"](release, require_current_evidence=False))
+                # Snapshot validation still requires actual evidence at the pin.
+                with self.assertRaises(subprocess.CalledProcessError):
+                    RELEASE["registry"]({**release, "evidence_revision": "0" * 40},
+                                        require_current_evidence=False)
+
+    def test_numeric_anchors_read_the_pin_not_changed_working_files(self):
+        release = json.loads((ROOT / "skills/safeguard-eval/release.json").read_text())
+        original = RELEASE["numeric_anchors"](release)
+        with tempfile.TemporaryDirectory() as name:
+            altered = Path(name) / "changed.json"
+            altered.write_text('{"unreviewed": true}', encoding="utf-8")
+            # Only working-file reads are redirected; Git reads must still supply
+            # the committed source used by this released skill.
+            with mock.patch.dict(RELEASE["numeric_anchors"].__globals__,
+                                 {"read_json": lambda path: json.loads(altered.read_text())}):
+                self.assertEqual(original, RELEASE["numeric_anchors"](release))
 
 
 if __name__ == "__main__":

@@ -3,6 +3,8 @@ name: Safeguard Eval skill
 on:
   pull_request:
     paths:
+      - 'README.md'
+      - 'tools/update_readme_leaderboard.py'
       - 'skills/**'
       - 'tools/skill_release.py'
       - 'tools/pi_skill*'
@@ -33,6 +35,8 @@ jobs:
           python-version: '3.11'
       - name: Check evidence and package
         run: python tools/skill_release.py check
+      - name: Check README leaderboard against archived results
+        run: python tools/update_readme_leaderboard.py --check
       - name: Test installation, updates, and reproducible packaging
         run: python -m unittest discover -s tests -p 'test_skill_*.py' -v
       - name: Verify release tag

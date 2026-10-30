@@ -100,14 +100,15 @@ def digest(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
-def registry(release: dict) -> dict:
+def registry(release: dict, *, require_current_evidence: bool = True) -> dict:
+    """Verify a pinned snapshot; refresh additionally requires a current checkout."""
     revision = release["evidence_revision"]
     if not re.fullmatch(r"[0-9a-f]{40}", revision):
         raise ValueError("evidence_revision must be a full commit SHA")
     sources = []
     for source_id, path in SOURCES.items():
         committed = git("show", f"{revision}:{path}")
-        if (ROOT / path).read_bytes() != committed:
+        if require_current_evidence and (ROOT / path).read_bytes() != committed:
             raise ValueError(f"Evidence changed since the pinned revision: {path}. Review the skill and refresh its evidence pin.")
         repository = release["repository"]
         sources.append({"id": source_id, "path": path, "sha256": digest(committed),
@@ -115,10 +116,11 @@ def registry(release: dict) -> dict:
                         "raw_url": f"https://raw.githubusercontent.com/harshsinghal/safeguard-eval/{revision}/{path}"})
     recorded = git("ls-tree", "-d", "--name-only", f"{revision}:published_runs").decode().splitlines()
     recorded = sorted(x for x in recorded if re.match(r"\d{4}-", x))
-    current = sorted(p.name for p in (ROOT / "published_runs").iterdir()
-                     if p.is_dir() and re.match(r"\d{4}-", p.name))
-    if current != recorded:
-        raise ValueError("Published study inventory changed. Review new evidence and update the skill snapshot.")
+    if require_current_evidence:
+        current = sorted(p.name for p in (ROOT / "published_runs").iterdir()
+                         if p.is_dir() and re.match(r"\d{4}-", p.name))
+        if current != recorded:
+            raise ValueError("Published study inventory changed. Review new evidence and update the skill snapshot.")
     covered = {Path(p).parts[1] for p in SOURCES.values() if p.startswith("published_runs/")}
     # The first ensemble is cited through its readout; keep an explicit registry link too.
     if set(recorded) - covered:
@@ -136,7 +138,7 @@ def compact_metrics(metrics: dict) -> dict:
 
 def numeric_anchors(release: dict) -> dict:
     def source(key):
-        return read_json(ROOT / SOURCES[key])
+        return json.loads(git("show", f"{release['evidence_revision']}:{SOURCES[key]}"))
 
     wg = source("wildguard-analysis")
     qwen = source("qwen-analysis")
@@ -203,7 +205,9 @@ def check() -> dict:
     frontmatter = (SKILL / "SKILL.md").read_text(encoding="utf-8").split("---", 2)[1]
     if f'name: {release["name"]}' not in frontmatter or f'version: "{version}"' not in frontmatter:
         raise ValueError("SKILL.md metadata and release.json disagree")
-    if read_json(SKILL / "references" / "sources.json") != registry(release):
+    # A released skill remains reproducible while newer research is added to main.
+    # Refresh still requires reviewed, current evidence; check/build verify the pin.
+    if read_json(SKILL / "references" / "sources.json") != registry(release, require_current_evidence=False):
         raise ValueError("Source registry is stale; review and refresh it")
     if read_json(SKILL / "references" / "results.json") != numeric_anchors(release):
         raise ValueError("Numeric anchors differ from frozen evidence")
