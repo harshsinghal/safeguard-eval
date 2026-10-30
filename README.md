@@ -158,7 +158,7 @@ We repeated the frozen-representation approach with Shieldstral-1.0-3B and Qwen3
 
 Choosing an earlier Qwen layer and a different pooling method on validation raised its test balanced accuracy from **83.93% to 88.81%**, but combining the selected representations still reached only 90.14%. Shieldstral's native validation score was 98.73%, falling to 90.53% on test; the gap was present even without a learned feature head. None of the 11 selections under either the 5% false-block profile or the separate 90% recall profile carried its respective target to test. The result supports testing the simplest native-score baseline before adding a learned head or another model. Cost was **$0.37**, and the GPU was terminated.
 
-[Readable findings](docs/shield-probe/README.md) · [Protocol](docs/shield-probe/PLAN.md) · [Full results](docs/shield-probe/RESULTS.md) · [Frozen evidence](published_runs/2026-10-30-shield-probe/README.md) · [Next: corrections from training errors](docs/research-directions/TRAINING-ERROR-CORRECTIONS.md) *(recorded, not started)*
+[Readable findings](docs/shield-probe/README.md) · [Protocol](docs/shield-probe/PLAN.md) · [Full results](docs/shield-probe/RESULTS.md) · [Frozen evidence](published_runs/2026-10-30-shield-probe/README.md) · [Follow-up: corrections from training errors](docs/policy-corrections/README.md)
 
 ### 16. Policy corrections: learning from training mistakes
 

@@ -169,6 +169,6 @@ The [Shieldstral/Qwen representation study](../shield-probe/README.md) is comple
 It did not establish an advantage from combining hidden representations over
 Shieldstral's direct score; all registered selections and negative findings are recorded.
 The [training-error correction experiment](TRAINING-ERROR-CORRECTIONS.md) is
-recorded as the next study, after reviewing the representation results. It will
-learn policy edits from development errors with an explicit holdout and bounded
-search; it has not started.
+now running under its [registered protocol](../policy-corrections/PLAN.md). It
+learns policy edits from discovery errors, uses fresh validation for a bounded
+selection, and reserves an additional 2,048-example project holdout.

@@ -91,6 +91,7 @@ This remains separate from the common-validation leaderboard. It is evidence
 about supervised readouts under a fixed policy, not another policy-editing gain.
 The paper and released skill have not been silently refreshed.
 
-The [next policy-correction experiment](research-directions/TRAINING-ERROR-CORRECTIONS.md)
-has been recorded, not run. It should derive revisions from training errors,
-use validation for bounded selection, and reserve a new project holdout.
+The [policy-correction experiment](policy-corrections/README.md) is now running.
+Its source-hashed protocol and four candidate revisions were committed before
+inference. A prior-use audit reserved fresh validation and an additional project
+holdout; the reused official test remains a separate historical comparison.

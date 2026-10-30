@@ -52,9 +52,9 @@ to review, but their confidence does not justify automatically reversing labels.
 The key outcome is whether a reproducible policy-authoring process improves the
 complete classifier under an explicit error budget. Improvements are not assumed;
 edits can help one class while hurting another, or fail to transfer between models.
-The final protocol must set models, sample sizes, iteration budget, comparison
-groups, metrics and compute cap before running. No spending is booked for this
-study yet, and the existing cumulative $20 cap still applies.
+The registered protocol fixes models, sample sizes, iteration budget, comparison
+groups, metrics and compute cap. The current rental reserves at most $2.40 within
+the existing cumulative $20 cap; see the study record for actual usage.
 
 Relevant precedent: [ProTeGi / prompt optimization with textual gradients](https://arxiv.org/abs/2305.03495).
 First study: [Shieldstral representation results](../shield-probe/README.md).
