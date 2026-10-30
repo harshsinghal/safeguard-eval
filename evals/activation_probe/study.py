@@ -96,7 +96,7 @@ def train(state):
     chosen['secondary-combined'],grids['secondary-combined']=select(yv,{i:outputs[i] for i in ids})
     records=read(state/'features/policylm/validation/records.json')
     if [r['id'] for r in records]!=[r['id'] for r in valmeta]:raise ValueError('Native score order')
-    native=np.asarray([r['native_score'] for r in records])
+    native=np.asarray([r['native_score'] for r in records],dtype=float)
     outputs['policylm-native']=candidate(native,vv['policylm'])
     chosen['policylm-native'],grids['policylm-native']=select(yv,{'policylm-native':outputs['policylm-native']})
     stronger=min(('primary-qwen','primary-policylm'),
@@ -167,7 +167,7 @@ def evaluate(state):
         if cid=='policylm-native':
             records=read(state/'features/policylm/test/records.json')
             if [r['id'] for r in records]!=[r['id'] for r in meta]:raise ValueError('Native score order')
-            s=np.asarray([r['native_score'] for r in records]);valid=vv['policylm']
+            s=np.asarray([r['native_score'] for r in records],dtype=float);valid=vv['policylm']
         else:
             spec=specs[cid];valid=validity_for(vv,spec['representation'])
             s=np.full(len(y),np.nan)

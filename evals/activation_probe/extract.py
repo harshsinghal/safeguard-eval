@@ -10,6 +10,10 @@ from .common import (MODELS, keys, read, rows, write, digest, now, source_hashes
                      content_mask)
 
 
+class InputLimitError(ValueError):
+    """A documented input limit; retain the case as unresolved."""
+
+
 class QwenExtractor:
     def __init__(self, checkpoint, policy):
         import torch
@@ -40,7 +44,7 @@ class QwenExtractor:
             raise ValueError('Empty content token mask')
         length = enc['input_ids'].shape[1]
         if length > 8192:
-            raise ValueError('Registered token limit exceeded; no truncation')
+            raise InputLimitError('Registered token limit exceeded; no truncation')
         with torch.inference_mode():
             out = self.base(**{k:v.to('cuda') for k,v in enc.items()}, use_cache=False,
                             output_hidden_states=True, return_dict=True)
@@ -172,7 +176,13 @@ def extract(state, model, stage):
         # Fail closed on an implementation failure; no wholesale silent ERROR population.
         for i,case in enumerate(cases):
             tick=time.monotonic()
-            features, info = engine.one(case['prompt'])
+            try:
+                features, info = engine.one(case['prompt'])
+            except InputLimitError:
+                valid.append(False)
+                records.append(dict(id=case['id'],seconds=time.monotonic()-tick,
+                                    error='InputLimitError',native_score=None))
+                continue
             if set(features) != set(arrays):
                 raise ValueError('Missing representation')
             for k,a in features.items():

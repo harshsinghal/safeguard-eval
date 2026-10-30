@@ -17,6 +17,7 @@ PRIMARY = {'qwen': 'qwen-l24-mean', 'policylm': 'policylm-l28-slot'}
 def source_hashes():
     pp = list((ROOT/'evals/activation_probe').glob('*.py'))
     pp += [ROOT/'evals/leaderboard/metrics.py', ROOT/'evals/qwen_policy/run.py',
+           ROOT/'evals/wildguard/run.py', ROOT/'evals/wildguard/metrics.py', ROOT/'evals/run.py',
            ROOT/'evals/ensemble/common.py', ROOT/'docs/activation-probe/PLAN.md']
     return {str(p.relative_to(ROOT)): digest(p) for p in sorted(pp)}
 
