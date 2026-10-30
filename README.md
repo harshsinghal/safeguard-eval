@@ -37,8 +37,9 @@ small Ollama integration test. It does not endorse a GPU provider.
 
 Read the consolidated **[research paper](research-preprint/README.md)** as a PDF,
 agent-readable text, or editable LaTeX source package. This is author review draft
-v0.5, not peer reviewed or submitted to arXiv. The skill can help readers explore
-the paper and find primary sources for questions beyond our experiments.
+v0.6, now including Jev, Kev, Clef, the expanded balanced leaderboard, and stakeholder
+implications. It is not peer reviewed or submitted to arXiv. The installed skill
+release retains its pinned earlier paper snapshot.
 
 The latest [ensemble findings](docs/ensemble/READOUT.md) and
 [log-odds extension](docs/ensemble-logits/RESULTS.md) are included in this release.
@@ -110,7 +111,8 @@ connectivity check; no GPU rental or model-weight updates.
 Read the [plain-language findings](docs/jev/READOUT.md),
 [exact policy edits](docs/jev/POLICY-CHANGES.md), and
 [reproducible evidence](published_runs/2026-10-29-jev/README.md).
-This new study is separate from the existing v0.5 paper and skill release.
+The [v0.6 paper](research-preprint/README.md) now integrates this study and the later
+balanced comparison. The installed skill release retains its earlier snapshot.
 The proposed [student article series](docs/research-directions/STUDENT-CURRICULUM.md)
 is recorded for later development.
 

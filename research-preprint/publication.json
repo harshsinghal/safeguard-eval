@@ -1,24 +1,41 @@
 {
-  "title": "Policy as an Interface: Policy Authoring and Model Choice in LLM Moderation",
+  "title": "Policy as an Interface: Authoring and Evaluating Moderation with Language and Decision Models",
   "author": "Harsh Singhal",
-  "version": "0.5",
-  "date": "2026-10-28",
+  "version": "0.6",
+  "date": "2026-10-29",
   "status": "Author review draft; exploratory; not peer reviewed; not submitted to arXiv",
   "arxiv_id": null,
-  "pdf_pages": 25,
-  "notes": "PDF and portable source archive copied byte for byte from the existing v0.5 review artifacts. Text extracted from that PDF with pdftotext -layout; it is a reading aid, not a separately edited manuscript.",
+  "pdf_pages": 38,
+  "evidence_commit": "12ea770",
+  "notes": "Adds Jev, Kev, Clef, and the 20-entry-per-task balanced leaderboard. Historical accuracy-oriented selections remain separate. No new inference. Text extracted from the verified PDF; source ZIP independently compiled with identical page content and extracted text.",
   "files": {
-    "output/pdf/policy-as-interface-review-v0.5.pdf": {
-      "sha256": "7eadc69bc3a78766566339de951ed8d951e8f8f179bf3951f8fbe99b0d8651fe",
-      "bytes": 196349
+    "output/pdf/policy-as-interface-review-v0.6.pdf": {
+      "sha256": "0a1ad8120b0e8d9667d65a2a778fdfe86958bc28b00e5523b827f67f7146e454",
+      "bytes": 274018
     },
-    "output/policy-as-interface-source-v0.5.zip": {
-      "sha256": "0b3cfa861fc5f60bd7adeca4fbc726c2b5d11c39a93a68853df42e24d1587573",
-      "bytes": 469306
+    "output/text/policy-as-interface-review-v0.6.txt": {
+      "sha256": "ce178c4d51669349463fdedaf26c0ec0c15a7485f211c63fc596f51be463af2a",
+      "bytes": 133070
     },
-    "output/text/policy-as-interface-review-v0.5.txt": {
-      "sha256": "cdd4033cfd0017799332eb7d31822049784ab38c75e9007a43329028e9a80f46",
-      "bytes": 83964
+    "output/policy-as-interface-source-v0.6.zip": {
+      "sha256": "a201f22b96a3195e6aaf9b040132c46ef013407f88dad1c8eaadecf29d751446",
+      "bytes": 937713
+    },
+    "output/source-manifest-v0.6.json": {
+      "sha256": "24855b32b83a7b2ab6a153711f065ce63e6c88326a56d9b8f25b2d8fddf2566e",
+      "bytes": 17768
+    },
+    "output/validation-v0.6.json": {
+      "sha256": "2a8a310c2b64b934d6ba2d153eae82c813176e8a68a29a1968bdd19940d47df7",
+      "bytes": 398
+    },
+    "output/claim-checks-v0.6.json": {
+      "sha256": "21ff387f6e06cb47337fe8f2ae806edb69b2828c2dcdd9532b173a78ad7d7ae6",
+      "bytes": 33926
+    },
+    "REVISION-v0.6.md": {
+      "sha256": "a345bbeb860ea00a98493957def991c6bed8850f39bbc591030387a69c2248b3",
+      "bytes": 3103
     }
   }
 }

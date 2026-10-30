@@ -15,13 +15,14 @@ preserves the previous 18 entries and adds the two new ones. Do not describe the
 entire Clef improvement as a wording-only gain, claim that more detail always
 helps, infer Jev's hidden architecture, or imply that these models beat the
 existing specialist/ensemble leaders. The new experiment cost $0.87 and used
-no additional fine-tuning. Paper, magazine, media, and skill-release updates
-remain a separate editorial step.
+no additional fine-tuning. The [paper revision v0.6](../../research-preprint/README.md) now incorporates this
+evidence. Magazine, media, and skill-release revisions remain separate editorial steps.
 
 Recorded 29 October 2026. This is an editorial handoff for the research paper,
 magazine article, media article, and learning skill. It adds no experiment and
-does not change the frozen leaderboard. The current papers have not yet been
-revised to include this handoff.
+does not change the frozen leaderboard. The research paper now incorporates this handoff in v0.6. The claim ledger below
+retains its original 18-entry scope; use the expanded archive and current paper
+for the later 20-entry comparison.
 
 ## The message the evidence supports
 

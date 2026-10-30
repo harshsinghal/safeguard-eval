@@ -1,0 +1,11 @@
+{
+  "version": "v0.6",
+  "pages": 38,
+  "compile": "success; no TeX warnings",
+  "portable_source_compile": "success",
+  "portable_page_content_and_text_match": true,
+  "visual_review": "All 38 final rendered pages inspected; new figures and tables also inspected at page scale",
+  "claim_audit": "generated/revision-v0.6-claim-checks.json",
+  "no_new_inference": true,
+  "no_paid_compute": true
+}
