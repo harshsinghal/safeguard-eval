@@ -1,0 +1,423 @@
+{
+  "created_utc": "2026-10-30T17:23:22.997404+00:00",
+  "n": 16,
+  "seconds": 22.17064160199999,
+  "records": [
+    {
+      "id": "wgtrain-000025",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 400,
+      "content_tokens": 54,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000066",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 400,
+      "content_tokens": 54,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000078",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 409,
+      "content_tokens": 63,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000091",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 405,
+      "content_tokens": 59,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000093",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 406,
+      "content_tokens": 60,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000116",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 411,
+      "content_tokens": 65,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000118",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 401,
+      "content_tokens": 55,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000144",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 393,
+      "content_tokens": 47,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000154",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 400,
+      "content_tokens": 54,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000161",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 395,
+      "content_tokens": 49,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000168",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 394,
+      "content_tokens": 48,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000174",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 401,
+      "content_tokens": 55,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000237",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 400,
+      "content_tokens": 54,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000243",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 392,
+      "content_tokens": 46,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000329",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 390,
+      "content_tokens": 44,
+      "windows": 1
+    },
+    {
+      "id": "wgtrain-000337",
+      "shapes": {
+        "qwen-l12-mean": [
+          1024
+        ],
+        "qwen-l12-last": [
+          1024
+        ],
+        "qwen-l18-mean": [
+          1024
+        ],
+        "qwen-l18-last": [
+          1024
+        ],
+        "qwen-l24-mean": [
+          1024
+        ],
+        "qwen-l24-last": [
+          1024
+        ]
+      },
+      "tokens": 400,
+      "content_tokens": 54,
+      "windows": 1
+    }
+  ]
+}

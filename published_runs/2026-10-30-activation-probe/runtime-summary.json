@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-10-30T17:58:22.340604+00:00",
+  "models": {
+    "qwen": {
+      "examples": 7331,
+      "total_recorded_extraction_seconds": 1068.8395701710006,
+      "median_example_ms": 143.66080199999942,
+      "p95_example_ms": 165.49128800011204,
+      "peak_allocated_gib": 2.003746509552002,
+      "max_tokens": 2789,
+      "window_total": 7331,
+      "max_windows": 1,
+      "unresolved": 0,
+      "empty_content": 1
+    },
+    "policylm": {
+      "examples": 7331,
+      "total_recorded_extraction_seconds": 278.50438112700016,
+      "median_example_ms": 36.66156300005241,
+      "p95_example_ms": 40.20261499999833,
+      "peak_allocated_gib": 3.370882987976074,
+      "max_tokens": 4860,
+      "window_total": 7432,
+      "max_windows": 9,
+      "unresolved": 0,
+      "empty_content": 0
+    }
+  },
+  "note": "Observed single-row feature extraction, including tokenization/pooling; excludes model loading. Not a production serving comparison. Qwen used Torch fallback kernels; PolicyLM native cleaning/windowing and score head remain active. Peak allocated memory is not total device memory or a minimum hardware requirement."
+}

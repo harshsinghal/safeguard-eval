@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-10-30T17:21:41.059573+00:00",
+  "sources": {
+    "docs/activation-probe/PLAN.md": "a09c222ca70136d195b7c47110e5669c6aa808919237cf490f9c3e858d436d43",
+    "evals/activation_probe/__init__.py": "bb02e97704c663e3ac4513cebe98a537f97938f7bbdfd8446591e5b1218165f2",
+    "evals/activation_probe/common.py": "5b867e83439a28b8ecb1fb75dd7aece45ae2cfd5d2b4a544c8e5d5ed40c1f59f",
+    "evals/activation_probe/extract.py": "1d9b2ad149ab1bd9e535cf9ca62d305447adeb47ce3be1c291e61aa186fd6c58",
+    "evals/activation_probe/prepare.py": "ea97ca2242fa72b4fb26a6f3d1c0f8a1a6b9ecfea30d8c4ee4cd764ea09776af",
+    "evals/activation_probe/study.py": "74748339457c43f9dc908718f810d1940d6f0ed61e909e279b872db0addece75",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30",
+    "evals/qwen_policy/run.py": "837baa4f70eb150062d647e90779f23f13363d90ba71fbf181205ebde59dea16",
+    "evals/run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986",
+    "evals/wildguard/metrics.py": "8fd93378cb6bbbcbca2e6ed47e3f3ae198da663709d3fa7dbf44b1be41c69da7",
+    "evals/wildguard/run.py": "a2e35b7a878a729c2f8dfc0340be0b1fd3224c593746deb2f0cecf57658bac1b"
+  },
+  "data_manifest_sha256": "a42d5a68d69b30f36edd313f9d10729ade3663697799dafe22e9d6d935a9b308",
+  "amendment": "Read-only native block hooks repair upstream hidden-state output bug before fitting."
+}

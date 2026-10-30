@@ -1,0 +1,8 @@
+{
+  "fitting_rows": 4096,
+  "dimensions": 2048,
+  "iterations": 129,
+  "fit_seconds": 0.5109724169999978,
+  "validation_evaluated": false,
+  "artifacts_retained": false
+}

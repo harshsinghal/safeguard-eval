@@ -1,0 +1,51 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/safeguard-eval/evals/activation_probe/extract.py", line 217, in <module>
+    extract(**vars(p.parse_args()))
+  File "/root/safeguard-eval/evals/activation_probe/extract.py", line 174, in extract
+    write(folder/'parity.json',engine.parity([r['prompt'] for r in cases[:16]]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/safeguard-eval/evals/activation_probe/extract.py", line 126, in parity
+    _, info = self.one(text)
+              ^^^^^^^^^^^^^^
+  File "/root/safeguard-eval/evals/activation_probe/extract.py", line 115, in one
+    result = self.native.classify(text,self.policy)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/hub/models--musubilabs--policylm-1.7b/snapshots/b3b2cd408a08a68ab6a30c1fc1e440204e44d57e/inference/policylm_infer.py", line 1856, in classify
+    return self.classify_batch([text], policy, cutoff=cutoff, clean=clean)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/hub/models--musubilabs--policylm-1.7b/snapshots/b3b2cd408a08a68ab6a30c1fc1e440204e44d57e/inference/policylm_infer.py", line 1902, in classify_batch
+    probs = self._forward(rows)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/root/policyenv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/hub/models--musubilabs--policylm-1.7b/snapshots/b3b2cd408a08a68ab6a30c1fc1e440204e44d57e/inference/policylm_infer.py", line 1945, in _forward
+    logits, label_mask = self.model(ids.to(self.device), attn.to(self.device))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/policyenv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/policyenv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/hub/models--musubilabs--policylm-1.7b/snapshots/b3b2cd408a08a68ab6a30c1fc1e440204e44d57e/inference/policylm_infer.py", line 685, in forward
+    out = self.base(input_ids=input_ids, attention_mask=attention_mask)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/policyenv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/policyenv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/root/policyenv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1827, in inner
+    result = forward_call(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/hub/models--musubilabs--policylm-1.7b/snapshots/b3b2cd408a08a68ab6a30c1fc1e440204e44d57e/inference/bidirlm/modeling_bidirlm.py", line 467, in forward
+    hidden_states=tuple(h[:, :-1, :] for h in all_hidden_states) if all_hidden_states is not None else None,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/huggingface/hub/models--musubilabs--policylm-1.7b/snapshots/b3b2cd408a08a68ab6a30c1fc1e440204e44d57e/inference/bidirlm/modeling_bidirlm.py", line 467, in <genexpr>
+    hidden_states=tuple(h[:, :-1, :] for h in all_hidden_states) if all_hidden_states is not None else None,
+                        ~^^^^^^^^^^^
+IndexError: too many indices for tensor of dimension 2

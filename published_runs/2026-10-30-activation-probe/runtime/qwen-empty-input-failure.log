@@ -1,0 +1,18 @@
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+{"model": "qwen", "split": "fit", "completed": 128, "total": 4096, "seconds": 18.18199084799994}
+{"model": "qwen", "split": "fit", "completed": 256, "total": 4096, "seconds": 35.642129951000015}
+{"model": "qwen", "split": "fit", "completed": 384, "total": 4096, "seconds": 53.09589670999992}
+{"model": "qwen", "split": "fit", "completed": 512, "total": 4096, "seconds": 70.56457761499996}
+{"model": "qwen", "split": "fit", "completed": 640, "total": 4096, "seconds": 88.64794799499998}
+{"model": "qwen", "split": "fit", "completed": 768, "total": 4096, "seconds": 107.84679915499999}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/safeguard-eval/evals/activation_probe/extract.py", line 235, in <module>
+    extract(**vars(p.parse_args()))
+  File "/root/safeguard-eval/evals/activation_probe/extract.py", line 198, in extract
+    features, info = engine.one(case['prompt'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/safeguard-eval/evals/activation_probe/extract.py", line 44, in one
+    raise ValueError('Empty content token mask')
+ValueError: Empty content token mask

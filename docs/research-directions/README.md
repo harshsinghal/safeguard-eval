@@ -131,10 +131,12 @@ another workflow.
 
 ## Parked direction
 
-The proposed activation and mechanistic interpretability comparison is parked at
-the user's request. No activation experiments were started. PolicyLM's bidirectional
-encoder lineage changes the interpretation of a comparison with Qwen3.5; architecture
-differences will be documented as model-selection context instead.
+The proposed mechanistic interpretability comparison remains parked at the user's
+request. It was not run. The user later authorized a separate predictive study:
+[frozen Qwen and PolicyLM representations with logistic regression](../activation-probe/README.md).
+That experiment is complete, but it does not locate causal policy reasoning in
+layers. PolicyLM's bidirectional encoder and Qwen3.5's different architecture
+remain important limits on mechanistic comparisons.
 
 Recording these directions does not start model runs, GPU rentals, or new spending.
 

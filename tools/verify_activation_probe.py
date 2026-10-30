@@ -10,7 +10,7 @@ from evals.activation_probe.study import check_freeze, score_metrics
 from evals.leaderboard.metrics import select, decisions, bootstrap
 
 
-def verify(state):
+def verify(state, write_report=False):
     state=Path(state);freeze=check_freeze(state)
     val=read(state/'validation.json');fits=read(state/'fits.json')
     yv=labels(val['metadata']);groups={}
@@ -49,6 +49,15 @@ def verify(state):
             raise ValueError('Corrected case count differs')
         if int(((predictions[g]!=y)&(predictions[o]==y)).sum())!=pair['newly_wrong']:
             raise ValueError('New error count differs')
+    extras=state/'additional-comparisons.json'
+    if extras.exists():
+        for pair in read(extras)['comparisons']:
+            g,o=pair['method'],pair['comparator']
+            interval=[float(v) for v in np.quantile(b[g]['balanced_accuracy']-b[o]['balanced_accuracy'],[.025,.975])]
+            delta=result['profiles']['balanced'][g]['test']['balanced_accuracy']-result['profiles']['balanced'][o]['test']['balanced_accuracy']
+            if interval!=pair['ci95'] or delta!=pair['delta']:raise ValueError('Additional descriptive contrast differs')
+            if int(((predictions[g]==y)&(predictions[o]!=y)).sum())!=pair['corrected']:raise ValueError('Additional corrected count differs')
+            if int(((predictions[g]!=y)&(predictions[o]==y)).sum())!=pair['newly_wrong']:raise ValueError('Additional new-error count differs')
     for field,ss in result['slices'].items():
         for value,rr in ss.items():
             mask=np.asarray([str(r.get(field))==value for r in test['metadata']])
@@ -58,11 +67,14 @@ def verify(state):
     report=dict(verified_utc=now(),selection_groups=len(groups),profiles=len(result['profiles']),
                 paired_comparisons=len(result['paired_differences']),
                 candidate_fits=len(fits),bootstrap_repetitions=2000,
+                additional_descriptive_comparisons=len(read(extras)['comparisons']) if extras.exists() else 0,
                 checks=['validation grids and selections','all test operating points',
                         'paired group-bootstrap intervals','corrected/new error counts','all slices'])
-    write(state/'verification.json',report);print(report)
+    if write_report:write(state/'verification.json',report)
+    print(report)
 
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--state',required=True)
-    verify(p.parse_args().state)
+    p.add_argument('--write-report',action='store_true',help='Save a verification record in a private working state; omit for immutable bundles.')
+    args=p.parse_args();verify(args.state,args.write_report)

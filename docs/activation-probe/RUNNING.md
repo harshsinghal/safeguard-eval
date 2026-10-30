@@ -12,8 +12,11 @@ preparation command used in this study points to the existing private research
 workspace; a new user must reconstruct those prompts from the original dataset,
 preserving identifiers and SHA-256 values. No source prompts are published here.
 
-To reproduce the existing published assignments without the author's private
-workspace, copy the public bundle to a writable local state directory. Obtain
+To repeat fitting without the author's private workspace, create a fresh state
+directory and copy only `metadata/`, `data-manifest.json` and `policy.json` from
+the public bundle. Register the pinned source as described below. Keep old fits,
+freeze and test results in the original bundle; new fitting creates its own
+freeze before test extraction. Obtain
 the authorized publisher files at dataset revision
 `d29c47f41c8b51348b5c8e8c81c039b3132b66d1`:
 [training Parquet](https://huggingface.co/datasets/allenai/wildguardmix/resolve/d29c47f41c8b51348b5c8e8c81c039b3132b66d1/train/wildguard_train.parquet)
@@ -29,8 +32,9 @@ python3 tools/restore_activation_probe_inputs.py --state /absolute/path/probe-st
   --source /absolute/path/wildguard_test.parquet --stage test
 ```
 
-This utility additionally needs PyArrow. Work in a copy of the public bundle;
-keep original published results immutable and do not commit restored inputs.
+This utility additionally needs PyArrow. Keep original published results
+immutable and do not commit restored inputs. To check saved metrics alone,
+use the public bundle's README commands; no restoration or GPU is required.
 
 ```sh
 python3 -m evals.activation_probe.prepare --state /absolute/path/probe-state \

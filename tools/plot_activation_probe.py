@@ -21,7 +21,7 @@ def plot(state,out):
     for i,c in enumerate(colors):
         ax.errorbar(ba[i],i,xerr=[[ba[i]-ci[i,0]],[ci[i,1]-ba[i]]],fmt='o',color=c,markersize=9,capsize=4)
         ax.text(ci[i,1]+.25,i,f'{ba[i]:.2f}%',va='center',fontsize=10,color=c)
-    ax.set_yticks(yy,labels);ax.invert_yaxis();ax.set_xlabel('Balanced accuracy (%)')
+    ax.set_yticks(yy,labels);ax.set_ylim(3.9,-.4);ax.set_xlabel('Balanced accuracy (%)')
     ax.set_xlim(max(0,np.floor(ci.min())-2),min(100,np.ceil(ci.max())+5))
     ax.grid(axis='x',color='#e4e7ec');ax.set_title('Primary comparisons',loc='left',fontweight='bold')
     fp=np.array([r['false_positive_rate']*100 for r in rr]);fn=np.array([r['false_negative_rate']*100 for r in rr])
@@ -29,9 +29,9 @@ def plot(state,out):
     bx.barh(yy+.16,fn,height=.29,color='#66849A',label='Harmful prompts missed')
     for values,offset in [(fp,-.16),(fn,.16)]:
         for i,v in enumerate(values):bx.text(v+.3,i+offset,f'{v:.1f}%',va='center',fontsize=9)
-    bx.set_yticks(yy,[]);bx.invert_yaxis();bx.set_xlabel('Error rate within the relevant class (%)')
+    bx.set_yticks(yy,[]);bx.set_ylim(3.9,-.4);bx.set_xlabel('Error rate within the relevant class (%)')
     bx.set_xlim(0,max(fp.max(),fn.max())+5);bx.grid(axis='x',alpha=.2)
-    bx.set_title('The two kinds of errors',loc='left',fontweight='bold');bx.legend(loc='lower right',fontsize=8,frameon=False)
+    bx.set_title('The two kinds of errors',loc='left',fontweight='bold');bx.legend(loc='lower left',fontsize=8,frameon=False)
     fig.suptitle('Frozen representations for WildGuard prompt classification',fontsize=15,fontweight='bold')
     fig.supxlabel('4,096 fitting · 1,536 validation · 1,699 test prompts | Cutoffs chosen on validation | 95% group-bootstrap intervals',fontsize=9)
     out=Path(out);out.mkdir(parents=True,exist_ok=True)

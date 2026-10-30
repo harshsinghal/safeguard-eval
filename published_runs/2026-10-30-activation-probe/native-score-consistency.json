@@ -1,0 +1,14 @@
+{
+  "fit": {
+    "n": 4096,
+    "max_absolute_difference": 0.06177860498428345,
+    "mean_absolute_difference": 0.0032804167453051036,
+    "changed_decisions_at_half": 12
+  },
+  "validation": {
+    "n": 1536,
+    "max_absolute_difference": 0.05827760696411133,
+    "mean_absolute_difference": 0.0035563788133382936,
+    "changed_decisions_at_half": 3
+  }
+}

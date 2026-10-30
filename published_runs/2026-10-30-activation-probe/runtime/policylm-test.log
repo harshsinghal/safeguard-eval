@@ -1,0 +1,14 @@
+{"model": "policylm", "split": "test", "completed": 128, "total": 1699, "seconds": 5.121257031000141}
+{"model": "policylm", "split": "test", "completed": 256, "total": 1699, "seconds": 9.825090747000104}
+{"model": "policylm", "split": "test", "completed": 384, "total": 1699, "seconds": 14.489992585999971}
+{"model": "policylm", "split": "test", "completed": 512, "total": 1699, "seconds": 19.150815325000167}
+{"model": "policylm", "split": "test", "completed": 640, "total": 1699, "seconds": 23.846187967000105}
+{"model": "policylm", "split": "test", "completed": 768, "total": 1699, "seconds": 28.519126014999983}
+{"model": "policylm", "split": "test", "completed": 896, "total": 1699, "seconds": 33.192331158000115}
+{"model": "policylm", "split": "test", "completed": 1024, "total": 1699, "seconds": 37.95049382000002}
+{"model": "policylm", "split": "test", "completed": 1152, "total": 1699, "seconds": 42.688052765000066}
+{"model": "policylm", "split": "test", "completed": 1280, "total": 1699, "seconds": 47.48304244099995}
+{"model": "policylm", "split": "test", "completed": 1408, "total": 1699, "seconds": 52.25255473900006}
+{"model": "policylm", "split": "test", "completed": 1536, "total": 1699, "seconds": 57.15354097900013}
+{"model": "policylm", "split": "test", "completed": 1664, "total": 1699, "seconds": 61.94319925400009}
+{"model": "policylm", "split": "test", "complete": 1699, "seconds": 67.59225292200017}

@@ -54,5 +54,55 @@ Technical amendments before extraction/fitting:
   native scores as the in-study control; do not attribute cross-runtime changes
   to representation learning.
 
-Execution outcomes, any further repairs, billing and interpretation are appended
-after they are observed. They are never assumed from the hypothesis.
+## Completion record
+
+* All 7,331 fitting/validation/test messages were extracted successfully for each
+  model. The empty Qwen fitting case has zero mean vectors and nonzero final-input
+  vectors as specified. No records were dropped. PolicyLM used 7,432 native
+  windows/variants, up to nine for one message; they stayed one message per row.
+* All 70 registered fits converged. Pre-test choices and source/feature/parameter
+  hashes were frozen and committed as `f2162df` before test input upload.
+* Primary balanced accuracies: Qwen features 82.4383%, PolicyLM features
+  88.4319%, combined features 87.0908%, native PolicyLM score 86.1807%.
+* The primary combined classifier fell behind the validation-selected stronger
+  single probe, PolicyLM, by 1.3411 points (paired interval −2.2057 to −0.4862).
+  Combining features corrected 17 of that single probe's errors but introduced
+  35 new errors. This does not support a gain from combination for this registered pilot,
+  not all possible models, representations or ensembles.
+* The PolicyLM feature probe reduced native-score false blocks from 97 to 72 and
+  misses from 131 to 117. Its 2.2511-point gain has a descriptive interval of
+  +1.2069 to +3.3454. This secondary explanatory contrast is saved separately from
+  the pre-registered combined-method contrasts; no choices were changed.
+* Native-score AUROC (0.9418) was slightly higher than the PolicyLM probe's
+  (0.9403). Do not claim that this study established a more informative ranking
+  hidden inside the network. The practical gain is at the selected decision rule.
+* Layer search selected Qwen layer 12 mean and PolicyLM layer 21 category slot.
+  Their individual test balanced accuracies were 83.1113% and 86.7987%; combining
+  them reached 86.8509%. A higher validation score did not guarantee a higher
+  test score. No other cached test layers were searched.
+* All 70 fits were repeated with identical parameter arrays and validation
+  probabilities. All three operating profiles, validation grids, test metrics,
+  slices, 2,000-draw intervals and 18 primary combined-method contrasts were
+  independently recomputed from saved outputs.
+* Historical controls use the same test prompts but prior validation choices:
+  WildGuard 89.8082%, specialist equal-log-odds ensemble 91.0816%. The new probes
+  did not exceed either. Do not mix this separately selected follow-up into the
+  common-validation leaderboard without a separately documented integration.
+* GPU.ai instance `gpu-bdc4ea4b` was terminated after artifact download. The API
+  billed 2,098 GPU-seconds at $0.65/hour, rounded to $0.38. Cumulative recorded
+  spending is $14.17540555656 of $20. Temporary local/provider SSH keys were
+  removed. No RunPod or paid classification-API resources were used.
+
+## Implications and next questions
+
+The strongest new result is a task-specific PolicyLM readout with frozen base
+weights. It still needs labeled data, training, versioning and validation. Editing
+the policy after fitting could change its feature distribution and behavior;
+policy-switching was not tested. This extends the research into supervised
+adaptation rather than proving policy authoring alone is sufficient.
+
+A useful next replication would test the same four controls on HateXplain under
+its hate-versus-non-hate policy. That experiment has not been run here. Another
+separate study could examine whether a fitted readout follows a changed policy,
+and whether gains persist across training sample sizes or independent evaluation
+sets. These are future questions, not explanations established by this pilot.

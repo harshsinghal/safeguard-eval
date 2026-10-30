@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-10-30T17:30:00.949554+00:00",
+  "sources": {
+    "docs/activation-probe/PLAN.md": "b45c50fd7c6e039531b1a43a27a777464a848206e349320a5134ba5ac3328716",
+    "evals/activation_probe/__init__.py": "bb02e97704c663e3ac4513cebe98a537f97938f7bbdfd8446591e5b1218165f2",
+    "evals/activation_probe/common.py": "5b867e83439a28b8ecb1fb75dd7aece45ae2cfd5d2b4a544c8e5d5ed40c1f59f",
+    "evals/activation_probe/extract.py": "44423049be8e083b65879071d10c51a0f264381ad5ce67a70f91c24912b0b0ec",
+    "evals/activation_probe/prepare.py": "ea97ca2242fa72b4fb26a6f3d1c0f8a1a6b9ecfea30d8c4ee4cd764ea09776af",
+    "evals/activation_probe/study.py": "74748339457c43f9dc908718f810d1940d6f0ed61e909e279b872db0addece75",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30",
+    "evals/qwen_policy/run.py": "837baa4f70eb150062d647e90779f23f13363d90ba71fbf181205ebde59dea16",
+    "evals/run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986",
+    "evals/wildguard/metrics.py": "8fd93378cb6bbbcbca2e6ed47e3f3ae198da663709d3fa7dbf44b1be41c69da7",
+    "evals/wildguard/run.py": "a2e35b7a878a729c2f8dfc0340be0b1fd3224c593746deb2f0cecf57658bac1b"
+  },
+  "data_manifest_sha256": "ffb3cd1ab0d5596a3988db894c35446976b535b3ca1985486cfaa8427a0fceaa",
+  "amendment": "Label-independent zero vector for one empty fitting prompt; PolicyLM path unchanged."
+}

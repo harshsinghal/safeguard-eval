@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-10-30T17:55:16.200629+00:00",
+  "scope": "Descriptive comparisons to explain the frozen primary controls and layer-search outcomes; no reselection or additional inference.",
+  "repetitions": 2000,
+  "comparisons": [
+    {
+      "method": "primary-policylm",
+      "comparator": "policylm-native",
+      "delta": 0.02251133285616047,
+      "ci95": [
+        0.012069053406243915,
+        0.03345409007558475
+      ],
+      "corrected": 67,
+      "newly_wrong": 28
+    },
+    {
+      "method": "primary-policylm",
+      "comparator": "historical-wildguard",
+      "delta": -0.013763631005010213,
+      "ci95": [
+        -0.024696505343696232,
+        -0.0033911787664889655
+      ],
+      "corrected": 31,
+      "newly_wrong": 56
+    },
+    {
+      "method": "primary-policylm",
+      "comparator": "historical-specialist-equal-logodds",
+      "delta": -0.026497129945405762,
+      "ci95": [
+        -0.03940362103629209,
+        -0.015008626398222915
+      ],
+      "corrected": 31,
+      "newly_wrong": 75
+    },
+    {
+      "method": "secondary-policylm",
+      "comparator": "primary-policylm",
+      "delta": -0.01633124219331117,
+      "ci95": [
+        -0.026592016929576127,
+        -0.006646696933728388
+      ],
+      "corrected": 25,
+      "newly_wrong": 47
+    },
+    {
+      "method": "secondary-qwen",
+      "comparator": "primary-qwen",
+      "delta": 0.00673024293713953,
+      "ci95": [
+        -0.00705717375105066,
+        0.021142219138785872
+      ],
+      "corrected": 72,
+      "newly_wrong": 57
+    }
+  ]
+}

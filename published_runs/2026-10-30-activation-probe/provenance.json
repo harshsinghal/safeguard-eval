@@ -1,0 +1,13 @@
+{
+  "packaged_utc": "2026-10-30T18:08:38.609826+00:00",
+  "protocol_commit": "7161578",
+  "pre_test_freeze_commit": "f2162df",
+  "current_commit": "f2162df5d94f7e666a60f2cfa59fae73297d1a34",
+  "source_root": "source",
+  "private_artifacts_excluded": [
+    "source prompt text",
+    "pooled feature vectors",
+    "API and SSH credentials"
+  ],
+  "note": "70 candidates; same frozen model/policy weights; one fixed harmfulness task. Historical controls used a different validation population."
+}

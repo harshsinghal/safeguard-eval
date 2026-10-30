@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-10-30T17:11:52.367959+00:00",
+  "models": {
+    "qwen": {
+      "model": "Qwen/Qwen3.5-0.8B",
+      "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+      "layers": [
+        12,
+        18,
+        24
+      ],
+      "poolings": [
+        "mean",
+        "last"
+      ],
+      "width": 1024
+    },
+    "policylm": {
+      "model": "musubilabs/policylm-1.7b",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+      "layers": [
+        14,
+        21,
+        28
+      ],
+      "poolings": [
+        "slot",
+        "mean"
+      ],
+      "width": 2048
+    }
+  },
+  "policy_sha256": "ad0ceb520f16254b6f8e444be008349d04d26baf70492e770cb1daf59f4da0f2",
+  "source_hashes": {
+    "published_runs/2026-10-27-ensemble/scores/wildguard/policylm/fit.jsonl.gz": "fa87137349de47d265fdd3938a78d8e761febf26719dbd297c98e574c4be69ee",
+    "published_runs/2026-10-27-ensemble/scores/wildguard/policylm/validation.jsonl.gz": "c8e235750070512f762f3d8b1d1f18b862752f78767da8800b0991934d855e97",
+    "published_runs/2026-10-27-ensemble/scores/wildguard/policylm/test.jsonl.gz": "f14a65d4fd49ae0bb5ebbd5d8232be960c9bf19db5d5fea7598cb14944a1c7c3"
+  },
+  "protocol_sha256": "b45c50fd7c6e039531b1a43a27a777464a848206e349320a5134ba5ac3328716",
+  "counts": {
+    "fit": {
+      "n": 4096,
+      "groups": 3823,
+      "labels": {
+        "ALLOW": 1916,
+        "BLOCK": 2180
+      }
+    },
+    "validation": {
+      "n": 1536,
+      "groups": 1424,
+      "labels": {
+        "ALLOW": 718,
+        "BLOCK": 818
+      }
+    },
+    "test": {
+      "n": 1699,
+      "groups": 1699,
+      "labels": {
+        "ALLOW": 945,
+        "BLOCK": 754
+      }
+    }
+  },
+  "hashes": {
+    "inputs/fit.jsonl": "cd6f82e77a376c0dafb436c022997732257b8b7b15f6a7e47b6d763078c130ba",
+    "inputs/test.jsonl": "09a58a739923884a43dfa23937e8bf24c8e6fb07851fed6822560551361292d3",
+    "inputs/validation.jsonl": "0904a29a385efc6e18d1a6f4e61e497e177a769ea9b049851364b5a21ce3de75",
+    "metadata/fit.jsonl.gz": "f6e4ac53f162812a760e95bff038ad165832e74e9178fbc076da261f99fc38d1",
+    "metadata/test.jsonl.gz": "5ec8cef60b7dbc7868448b872ee79cc6ea4b91c147d46840f3d71eed982d258c",
+    "metadata/validation.jsonl.gz": "8c3c1eed0eb8924f67fa46c4607d9decdead443f965a77f1e1fc83d65ddc1fc0",
+    "native-archive/fit.jsonl.gz": "df772a718d77f9e44e4cefc3ebcbb8238c2a0ffa5c63f42a9f1189d7c93452a9",
+    "native-archive/test.jsonl.gz": "f14a65d4fd49ae0bb5ebbd5d8232be960c9bf19db5d5fea7598cb14944a1c7c3",
+    "native-archive/validation.jsonl.gz": "4a9a2cd2cca861b9386c0c8a81cf397b662f9d8e32953f3623fbdadea34254d4"
+  },
+  "technical_amendment_utc": "2026-10-30T17:21:41.059193+00:00",
+  "empty_input_amendment_utc": "2026-10-30T17:30:00.949282+00:00"
+}

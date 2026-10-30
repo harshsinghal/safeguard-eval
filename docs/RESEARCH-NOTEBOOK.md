@@ -56,3 +56,20 @@ and route readers to newer studies directly. Package checks validate the
 skill against its pinned Git revision; preparing a new evidence snapshot requires
 a separate review and refresh. Follow the [skill maintenance guide](skill/MAINTAINING.md)
 when making a new release. Do not move existing tags or silently replace a release.
+
+## Frozen-representation follow-up
+
+The [representation-probe study](activation-probe/README.md) is complete and
+recorded separately from the common-validation leaderboard. It uses 4,096
+fitting and 1,536 validation examples, with the same 1,699 WildGuardTest prompts.
+Its primary combined classifier did not beat the PolicyLM-only feature probe.
+The useful improvement was a supervised task-specific readout with frozen base
+weights, not a new policy-text optimization result.
+
+The [writing notes and limitations](activation-probe/NOTES.md),
+[complete metrics](activation-probe/RESULTS.md), and
+[immutable evidence](../published_runs/2026-10-30-activation-probe/README.md)
+record the positive result, unsuccessful combination, layer-search regression,
+similar native/probe AUROC, operational-target failures and compute lifecycle.
+The paper, magazine/media articles and pinned skill releases have not yet been
+rewritten to include this study. Preserve those distinctions when updating them.

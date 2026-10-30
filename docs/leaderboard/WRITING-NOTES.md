@@ -241,3 +241,18 @@ natural-language policy is an operational artifact that requires versioning,
 tests, and accountable decisions about mistakes. Use a small number of supporting
 figures with their task and metric; link to the detailed archive for the rest.
 Do not describe untested local decision models as validated replacements.
+
+## Representation probes: separate validation protocol
+
+The later [frozen-representation study](../activation-probe/README.md) reports
+88.43% balanced accuracy for a PolicyLM feature probe, 87.09% for combined
+PolicyLM/Qwen features, and 86.18% for its native-score control. Its 1,536-row
+validation population differs from this leaderboard's 512-row WildGuard
+population. It has not been integrated into the common-selection tables.
+
+These classifiers were trained with labels while base language-model weights
+stayed fixed. The primary combination failed to improve on the stronger single
+probe. Similar native/probe AUROC and unsuccessful transfer of the earlier-layer
+validation gain matter to interpretation. Read its complete evidence before
+using the numbers in a paper, article, slide or skill response. Do not describe
+the experiment as a new policy-authoring-only gain or a new leaderboard winner.
