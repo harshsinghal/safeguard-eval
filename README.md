@@ -10,7 +10,71 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 *Maintained by [Harsh Singhal](https://www.linkedin.com/in/harshsinghal). A growing collection of exploratory studies; the paper is an author-review draft.*
 
-[Experiment log](#experiment-log) · [Current leaderboard](#current-leaderboard) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
+[Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
+
+## Experiment map
+
+We started by asking whether a model could apply a platform's written rules. That led to three branches: **change the policy, change how scores become decisions, or learn a classifier from the model's internal features**. The map shows how the questions connect; it is not one shared pipeline. Numbers refer to the entries in the [experiment log](#experiment-log).
+
+```mermaid
+flowchart TB
+    START["1–2 · Demo + injection<br/>Then benchmark moderation:<br/>WildGuard and HateXplain"]
+
+    subgraph POLICY["Policy text and format"]
+        P1["3–4 · Tune policies<br/>Specialists and Qwen<br/>WildGuard reference"]
+        P2["5, 7 · Transfer + structure<br/>Model adapters<br/>Sections and examples"]
+        P3["16 · Training-error edits<br/>Shieldstral → Qwen"]
+        P1 --> P2 --> P3
+    end
+
+    subgraph SCORES["Scores and decisions"]
+        S1["8–9 · Combine scores<br/>Calibration and cutoffs<br/>Probabilities / log-odds"]
+        S2["10, 12 · Decision models<br/>Jev API · Kev · Clef<br/>Policy and cutoff tuning"]
+        S3["13 · Decision ensembles<br/>Scores versus labels<br/>API + open / open-only"]
+        S1 --> S2 --> S3
+    end
+
+    subgraph FEATURES["Internal representations"]
+        F1["14 · PolicyLM + Qwen 0.8B<br/>Frozen representations"]
+        F2["15 · Shieldstral + Qwen 4B<br/>Repeat with larger models"]
+        F3["Both studies tested<br/>Layers, pooling, trained heads<br/>Single / combined features"]
+        F1 --> F2 --> F3
+    end
+
+    START --> P1
+    START --> S1
+    START --> F1
+    P3 --> EVIDENCE
+    S3 --> EVIDENCE
+    F3 --> EVIDENCE
+    EVIDENCE["11 · Balanced evaluation<br/>False blocks + missed violations<br/>Validate → freeze → test"]
+    EVIDENCE -.-> NEXT["PROPOSED · Not started<br/>Mixed signals · Policy + cutoff<br/>Targeted second pass"]
+
+    classDef neutral fill:#f1f5f9,stroke:#64748b,color:#172c49;
+    classDef policy fill:#eef4ff,stroke:#526b91,color:#172c49;
+    classDef scores fill:#e9f5ef,stroke:#367556,color:#153e2b;
+    classDef features fill:#f4efff,stroke:#7b63a8,color:#3d2c60;
+    classDef proposed fill:#fff6e5,stroke:#a36e16,color:#61420f,stroke-dasharray:6 4;
+    class START,EVIDENCE neutral;
+    class P1,P2,P3 policy;
+    class S1,S2,S3 scores;
+    class F1,F2,F3 features;
+    class NEXT proposed;
+    style POLICY fill:#f8fafc,stroke:#cbd5e1
+    style SCORES fill:#f8fafc,stroke:#cbd5e1
+    style FEATURES fill:#f8fafc,stroke:#cbd5e1
+```
+
+**How to read the map:** solid boxes describe completed work; the dashed box is future work awaiting authorization. The separate **frontier-API pilot (6)** checked whether requests returned usable classifications; its full held-out experiment did not run. Not every branch covers both benchmarks: decision-model ensembles, representation classifiers, and training-error corrections were tested on WildGuard only. The representation and correction studies use separate validation protocols and are **not merged into the common leaderboard**.
+
+| Follow a branch | Where to start |
+|---|---|
+| Policy wording, transfer, and structure | [WildGuard tuning](docs/wildguard/METHODS.md) → [Qwen comparison](docs/qwen-policy/READOUT.md) → [policy transfer](docs/policy-transfer/READOUT.md) → [HateXplain structure tests](docs/hatexplain/READOUT.md) → [training-error corrections](docs/policy-corrections/README.md) |
+| Scores, calibration, cutoffs, and combinations | [Probability ensembles](docs/ensemble/READOUT.md) → [log-odds ensembles](docs/ensemble-logits/RESULTS.md) → [Jev](docs/jev/READOUT.md) → [Kev / Clef](docs/decision-models/README.md) → [decision-model ensembles](docs/decision-ensemble/README.md) |
+| Frozen internal features and trained classifiers | [PolicyLM / Qwen](docs/activation-probe/README.md) → [Shieldstral / Qwen](docs/shield-probe/README.md) |
+| Compare outcomes and see what is proposed | [Balanced metric guide](docs/leaderboard/METRICS.md) · [leaderboard](#current-leaderboard) · [next steps: reducing moderation errors](docs/research-directions/REDUCING-MODERATION-ERRORS.md) |
+
+The next question is how these pieces can produce a complete classifier with fewer errors on unseen examples. The [recorded proposal](docs/research-directions/REDUCING-MODERATION-ERRORS.md) prioritizes checking which models make different mistakes, then combining useful signals. **Those experiments have not started; no new runs or spending are authorized by recording them.**
 
 ## What we are testing
 

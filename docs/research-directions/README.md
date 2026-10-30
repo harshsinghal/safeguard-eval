@@ -1,6 +1,22 @@
 # Research directions for choosing policy models
 
-Recorded 25 October 2026. Status: research proposals; experiments have not started.
+The original directions were recorded on 25 October 2026. This index distinguishes
+proposals from the later completed studies linked below.
+
+## Current next steps: reduce errors in the complete system
+
+The [next-step proposal](REDUCING-MODERATION-ERRORS.md) records three priorities:
+combine complementary model scores and representation classifiers, optimize policy
+and cutoff together for each model, and test a targeted second pass for difficult
+cases. The goal is fewer false blocks and missed violations on unseen examples.
+
+**These next experiments have not started. The user will say when to run them.**
+The proposal records controls, data separation, fresh-test requirements, and a
+pending checklist. It does not authorize compute or spending. The
+[README experiment map](../../README.md#experiment-map) shows how the completed
+studies led to these questions.
+
+## Broader research agenda
 
 The next research question is how a team chooses a model for its policies, content,
 and operating constraints. The unit of evaluation is the model together with its

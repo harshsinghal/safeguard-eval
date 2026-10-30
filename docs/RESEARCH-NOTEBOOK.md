@@ -5,6 +5,13 @@ It should explain what question each experiment addressed, what changed, what
 happened, and what a practitioner can learn. Detailed methods and evidence live
 in linked study folders; the original application lives in [DEMO.md](../DEMO.md).
 
+The [experiment map](../README.md#experiment-map) is the visual entry point. Keep
+its branch labels and log numbers aligned with completed studies. Its arrows
+connect research questions; they do not imply a common validation population or
+a single inference pipeline. Show proposals separately and retain their execution
+status. The current [next-step proposal](research-directions/REDUCING-MODERATION-ERRORS.md)
+is recorded for later; the user has not authorized those runs.
+
 ## Adding a completed experiment
 
 1. Publish a dated evidence bundle under `published_runs/`. Include the exact
