@@ -41,6 +41,12 @@ v0.6, now including Jev, Kev, Clef, the expanded balanced leaderboard, and stake
 implications. It is not peer reviewed or submitted to arXiv. The installed skill
 release retains its pinned earlier paper snapshot.
 
+For a shorter deployment-oriented introduction, read **[Building policy guardrails
+for enterprise AI](docs/engineering-guardrails/README.md)**. This engineering
+article covers native model interfaces, open weights versus APIs, a compact
+balanced comparison, and how to version and test a policy with its model and
+decision settings. An editable Word version accompanies the article.
+
 The latest [ensemble findings](docs/ensemble/READOUT.md) and
 [log-odds extension](docs/ensemble-logits/RESULTS.md) are included in this release.
 The [maintenance guide](docs/skill/MAINTAINING.md) explains how new evidence becomes

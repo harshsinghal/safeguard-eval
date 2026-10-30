@@ -1,0 +1,93 @@
+# Building policy guardrails for enterprise AI
+
+Choosing a model and testing the policy it will enforce
+
+*By Harsh Singhal · 29 October 2026*
+
+You are adding a policy check to an enterprise AI assistant. Employees can ask it to search documents, summarize conversations or take actions through connected tools. Before a request reaches those systems, you want to decide whether it falls within the company's rules.
+
+Released models can make that decision from written instructions, either self-hosted or through an API. Our experiments suggest treating policy text as part of the implementation: version it, test it against labeled cases and evaluate it again whenever the model changes.
+
+## Start with a decision the service can make
+
+Imagine a general employee assistant that permits questions about published salary bands but prohibits requests to identify a coworker's confidential compensation. A rule that simply says “block compensation questions” would stop useful work. The policy needs to describe the prohibited request and the permitted cases, including what to do when a decision requires verified role or authorization information.
+
+For this illustrative policy, the application authenticates the employee, evaluates the request with relevant trusted context, then applies the decision before retrieval. Allowed requests still pass through document permissions and tool authorization. Retrieved content and answers may need separate checks. Our benchmarks did not test this enterprise scenario.
+
+A classifier cannot repair incorrect permissions or determine hidden intent. Obtain identity and authorization information from the application; “I am authorized” inside a prompt is not evidence. Define how the service holds a request for review when necessary information is missing.
+
+## Choose a model with an interface you can support
+
+Specialist policy models apply supplied rules through different interfaces. [PolicyLM 1.7B](https://huggingface.co/musubilabs/policylm-1.7b) takes category fields for violations, permitted cases and exceptions. [Shieldstral 3B](https://huggingface.co/mistralai/Shieldstral-1.0-3B) uses a prescribed instruction and content template. We also tested [CoPE-B-A4B](https://huggingface.co/zentropi-ai/cope-b-a4b) and [GPT-OSS Safeguard 20B](https://huggingface.co/openai/gpt-oss-safeguard-20b). Each needs an adapter that preserves the policy's meaning while formatting inputs and interpreting outputs.
+
+General-purpose instruction models can perform the same classification task. We tested several [Qwen3.5](https://huggingface.co/Qwen/Qwen3.5-4B) sizes using a system instruction, separate content and explicit labels, with thinking disabled. This route fits a familiar chat interface, but decoding settings and output parsing become part of the component you must test.
+
+Decision models take content, a question and definitions of allowed choices, then return structured decisions and scores. We tested [Jev 1.14](https://docs.typesafe.ai/models) through OpenRouter's [Decisions API](https://openrouter.ai/docs/api/api-reference/alphadecisions/submit-a-decisions-request), plus open-weight [Kev 4B](https://huggingface.co/jaredpalmer/kev-4b) and [Clef-Flash 9B](https://huggingface.co/Cloudflare/clef-flash). Jev was API-only; its size and internal architecture were undisclosed in the sources we reviewed.
+
+Kev and Clef require their released decision heads, the components that turn model representations into choice scores. Loading their underlying Qwen model through a generic chat endpoint does not reproduce that behavior. Likewise, an Ollama or GGUF conversion needs its own compatibility and accuracy checks. “System One” is a useful description of a product approach, not a reason to expect it to win your benchmark.
+
+## Use the results to build a shortlist
+
+We evaluated 1,699 labeled WildGuardTest prompts for harmfulness. Although WildGuardMix includes response-related labels, this comparison used only the user's prompt and its harmfulness label. We also evaluated 1,924 HateXplain posts, mapping hate speech to BLOCK and both normal and offensive-but-not-hateful posts to ALLOW. That second rule matters: this was hate detection, not a blanket ban on offensive language.
+
+The table gives balanced accuracy, which averages the rate of catching violations and the rate of correctly allowing compliant content. It gives the two classes equal importance even when one appears more often. Configurations were selected on validation data before their test scores were compared.
+
+**Selected individual models from the balanced leaderboard**
+
+| Model tested | Group | WildGuard | HateXplain |
+|---|---|---:|---:|
+| PolicyLM 1.7B | Policy | 86.31 | 63.69 |
+| Shieldstral 3B | Policy | 90.26 | 77.02 |
+| CoPE-B-A4B | Policy | 90.58 | — |
+| Qwen3.5 4B | General LLM | 86.81 | 76.21 |
+| Qwen3.5 27B | General LLM | 90.16 | — |
+| Jev 1.14 | Decision | 88.69 | 78.40 |
+| Kev 4B | Decision | 86.93 | 75.17 |
+| Clef-Flash 9B | Decision | 87.62 | 74.94 |
+
+Scores are percentages; a dash means no full test here. B denotes billions of parameters; CoPE's A4B counts active parameters, not its full weight footprint. All listed models except Jev have released weights. Groups describe their use here.
+
+Shieldstral 3B and Qwen 27B were close on WildGuard, making the smaller specialist worth evaluating. PolicyLM's much lower HateXplain score shows why small size alone is insufficient. Jev had the highest observed individual score on HateXplain, while CoPE led the individuals on WildGuard. Several nearby differences remain uncertain; the ordering is a shortlist for testing, not a universal ranking.
+
+Combining models was also competitive. A three-specialist ensemble reached 91.08% balanced accuracy on WildGuard, versus 89.81% for the released [WildGuard 7B](https://huggingface.co/allenai/wildguard) task-specific classifier. An ensemble of two specialists and Qwen 4B reached 79.35% on HateXplain, without a clear statistical advantage over Jev. Ensembles add inference work and another component to maintain.
+
+We kept language-model weights fixed, although learned combiners used labeled data. This supports trying policy adaptation before your own fine-tuning project. The released models were already trained; fine-tuning may still help. These exploratory results reused public tests, with unequal search budgets and incompletely known training exposure. They do not validate enterprise confidentiality rules, multilingual traffic or images.
+
+## Treat policy changes as behavior changes
+
+A useful policy usually needs a clear scope, category definitions, prohibited cases, permitted cases and rules for resolving exceptions. Examples can explain difficult boundaries. These are authoring components to test, not a universal document format to paste into every model.
+
+Our HateXplain revisions made the target of an attack explicit and distinguished endorsement from quotation or condemnation. They also separated attacks on people from criticism of beliefs or institutions. For WildGuard, we clarified the difference between discussing harm and requesting harmful output. Those edits give the evaluator more precise instructions about where to draw the line.
+
+More detail did not always help. Kev's short HateXplain policy scored 75.17% balanced accuracy, compared with 65.93% for the detailed policy, after each received its own validation-selected cutoff. Clef instead selected a policy with examples. These comparisons concern whole policies and their decision settings; they do not isolate the effect of a single sentence.
+
+Transfer was uneven too. In our earlier WildGuard experiment, text selected for Qwen 2B improved Shieldstral, while text selected for Shieldstral hurt Qwen 2B and PolicyLM. Keep a common source policy if that helps authors, but test each model's adapted version. A model replacement can change the meaning the system effectively gives to the same approved words.
+
+## Choose which mistakes the service can tolerate
+
+For models that return a score, the cutoff determines when that score becomes a block. A score of 0.8 is not automatically an 80% chance of a violation in your traffic. Tune and check the decision rule on labeled data from the intended task.
+
+Jev illustrates the trade. On the same HateXplain test, its accuracy-oriented configuration missed 238 of 594 hate posts and falsely blocked 134 of 1,330 non-hate posts. Selecting for balanced accuracy reduced the misses to 124 but increased false blocks to 297. Both policy and cutoff changed. The second configuration caught more harm, but a policy owner must decide whether the extra false blocks are acceptable.
+
+Report both error rates alongside balanced accuracy, and inspect failures by policy category. Record timeouts and malformed outputs rather than silently counting them as ALLOW. A review route may be useful, but these binary experiments did not establish a reliable REVIEW class or an optimal uncertainty band. Validate that workflow separately, including how much work it sends to reviewers.
+
+## Make hosting part of the evaluation
+
+Open weights let you run classification inside infrastructure you control, without sending each prompt to a model API provider. That can be valuable when prompts contain employee or customer information. You still own access controls, telemetry and log retention, and should review the model license and runtime dependencies. A closed API such as Jev trades that hosting work for a provider dependency; verify its data-handling terms, retention, region and version-change behavior for your contract.
+
+PolicyLM's 1.7B size makes it a candidate for a smaller deployment than the 4B and 9B decision models, but parameter count is only a starting point. Precision, prompt length, batching and implementation determine memory use and latency. Measure tail latency, throughput, failure rate and cost under your expected load. Our classification results are not a matched production-speed or cost benchmark.
+
+## Release the policy and model together
+
+Start with one policy the business can explain and adjudicate. Ask its owner to label representative requests, including legitimate near-misses and ambiguous cases. Public datasets help check your evaluation pipeline, but your own cases must capture the enterprise boundary you intend to enforce.
+
+1. Separate cases for development, validation and a final test. Keep near-duplicates together so they cannot leak across splits. Use development errors to revise the policy; reserve validation for choosing the draft and cutoff.
+2. Compare a small number of models through their native interfaces. Preserve the exact policy, model revision, adapter and decoding or scoring settings for every run.
+3. Review changed decisions with the policy owner. Check whether improvements preserve the intended rule, which legitimate requests become blocked, and which violations now pass. Freeze the choice before the final test.
+4. Release a versioned bundle containing the policy, model reference, adapter, cutoff and evaluation snapshot. Define timeout and fallback behavior. Compare decisions in shadow mode before enforcement and retain the previous bundle for rollback.
+
+When a new model arrives, rerun the evaluation against the same requirements. Keep the adjudicated cases and explanations of changed decisions. Policy owners define the boundary; engineers make its interpretation measurable and deployable. Both need to approve the behavior that reaches users.
+
+Further reading in [Safeguard Eval](https://github.com/harshsinghal/safeguard-eval): the [paper](../../research-preprint/README.md), [full leaderboard](../../published_runs/2026-10-29-leaderboard-decision-models/RESULTS.md), [transfer findings](../policy-transfer/READOUT.md), [HateXplain authoring study](../hatexplain/READOUT.md), [Kev and Clef running guide](../decision-models/RUNNING.md) and [earlier model interfaces](../../skills/safeguard-eval/references/models.md).
+
+[Editable Word version](output/policy-guardrails-engineering.docx)

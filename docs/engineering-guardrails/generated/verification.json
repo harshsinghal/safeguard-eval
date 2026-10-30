@@ -1,0 +1,17 @@
+{
+  "reviewed_date": "2026-10-29",
+  "article_sha256": "1ce31e722f6ce445d06c2f3ac8fc7b7e31bff6191972746b33a9499487dbf3c4",
+  "docx_sha256": "aa6f26a6b772601f75923f55133362f407ce601f94fb6f49f57bd4a1cd2700c7",
+  "pages": 4,
+  "pages_visually_reviewed": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "layout": "pass; readable text, complete table, no clipping or overlap",
+  "metrics": "table values recomputed from archived confusion counts; prose ensemble values, sample sizes, Kev contrast and Jev error counts checked against archived JSON",
+  "links": "repository-relative targets exist; provider model cards and native Decisions API reviewed",
+  "scope": "English binary text benchmarks; illustrative enterprise workflow; no new inference",
+  "source_results_sha256": "c042ba60ed578fb94547fbe8340af257b6449a3f9f7a6873b7f5cb26c74bef7f"
+}
