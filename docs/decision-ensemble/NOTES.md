@@ -29,8 +29,8 @@ choice changed and no test scores were loaded by that failed preparation.
 - [x] Audit native score availability and register the bounded plan.
 - [x] Implement and test score alignment, fitting-only transforms, and freeze checks.
 - [x] Fit on training, select on validation, and freeze all choices.
-- [ ] Evaluate the frozen test population and paired uncertainty.
-- [ ] Reproduce on CPU and document findings, limitations, and costs.
+- [x] Evaluate the frozen test population and paired uncertainty.
+- [x] Reproduce on CPU and document findings, limitations, and costs.
 
 ## Development freeze
 
@@ -46,3 +46,23 @@ method selected weighted averaging (regularization 0.1) for all three models and
 a forest (depth 4, minimum leaf 80) for the open-only cohort. No test files were
 present in the new bundle when these choices were frozen. All grids, parameters,
 models, and source/input hashes are retained in the freeze.
+
+## Test results and reproduction
+
+The all-three primary scored 89.32% balanced accuracy (69 false blocks, 106 misses),
+versus the chosen Jev individual's 88.69% (47 false blocks, 133 misses). The paired
+difference is +0.63 points, interval −0.43 to +1.58. WildGuard's earlier frozen
+configuration scored 89.81%; the previous specialist ensemble scored 91.08%.
+The secondary validation-selected weighted average scored 89.08%; the highest
+observed new test score, equal log-odds at 89.74%, was not promoted after test.
+
+The open-only primary scored 87.52%, versus its chosen Kev individual's 86.91%.
+The open-only validation-selected forest scored 88.10%. All test scores were
+usable. Neither primary met either of its separately selected operational targets
+on test. These negative and inconclusive results are retained.
+
+Fresh CPU refits reproduced the policy selections, all 107 cohort candidate
+records (including repeated individual controls), parameters, validation choices,
+test scores, decisions, metrics and uncertainty intervals. Added provider cost
+was zero; no resources or credentials were used. The public test's prior use and
+the available-score policy restriction remain explicit in the readout.

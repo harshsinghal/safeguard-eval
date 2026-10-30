@@ -8,7 +8,7 @@ This repository follows those questions through a growing series of experiments.
 
 The finding running through this work is that **policy authoring is deeply coupled with AI engineering**. A policy is an operational input: its wording, its delivery to the model, and the rule that turns a score into an action all need testing. Policy owners define the intended boundary; engineers help measure and implement it. Neither the model name nor a well-written document is sufficient on its own.
 
-*Maintained by [Harsh Singhal](https://www.linkedin.com/in/harshsinghal). Research and leaderboard updated October 29, 2026. Exploratory studies; the paper is an author-review draft.*
+*Maintained by [Harsh Singhal](https://www.linkedin.com/in/harshsinghal). Research updated October 30, 2026; comprehensive leaderboard snapshot October 29. Exploratory studies; the paper is an author-review draft.*
 
 [Experiment log](#experiment-log) · [Current leaderboard](#current-leaderboard) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
 
@@ -135,6 +135,14 @@ On HateXplain, expanding Kev's brief policy reduced native balanced accuracy fro
 
 [Study and deployment details](docs/decision-models/README.md) · [Frozen runs](published_runs/2026-10-29-decision-models/README.md) · [Expanded leaderboard](published_runs/2026-10-29-leaderboard-decision-models/README.md)
 
+### 13. October 30 — Combine native scores from decision models
+
+We fitted combinations of Jev, Kev, and Clef BLOCK scores on 1,024 WildGuardTrain prompts, selected settings on 512 separate validation prompts, and evaluated frozen choices on 1,699 WildGuardTest prompts. The primary probability logistic ensemble reached **89.32% balanced accuracy**, versus 88.69% for its selected Jev individual and 89.81% for WildGuard. It caught 27 more harmful prompts than Jev but made 22 more false blocks; the gain was uncertain.
+
+We also tested decision-only controls and an open-only Kev/Clef ensemble. Retaining scores did not establish a clear advantage over combining decisions. All scores were cached, so added GPU/API cost was $0. The example-bearing policies lacked fitting scores and were excluded from the new feature pool; no model weights or policy wording changed.
+
+[Findings and error trade-offs](docs/decision-ensemble/README.md) · [Registered plan](docs/decision-ensemble/PLAN.md) · [Full results and reproducible archive](published_runs/2026-10-30-decision-ensemble/README.md)
+
 ## What the evidence suggests for moderation teams
 
 - **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. A model replacement requires another evaluation.
@@ -159,6 +167,10 @@ These experiments support a workflow in which policy owners and engineers test c
 The research archive grows separately from versioned skill releases. New studies should preserve older records, describe what changed, and report failures alongside successes. See [how to update this notebook](docs/RESEARCH-NOTEBOOK.md).
 
 ## Current leaderboard
+
+The [October 30 decision-score ensemble extension](docs/decision-ensemble/README.md)
+reports its new combinations separately, including direct comparisons with the
+references below. This comprehensive table retains its frozen October 29 selections.
 
 **Snapshot: October 29, 2026.** The expanded comparison includes **209 eligible archived candidate records and 20 entries per benchmark**. Entries include model configurations and ensemble methods; this is not a count of unique models or independent experiments.
 

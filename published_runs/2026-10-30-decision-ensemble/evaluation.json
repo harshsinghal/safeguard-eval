@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-10-30T15:23:07.054076+00:00",
+  "freeze_sha256": "7cf7d43a2028295dc46df02b71e5755fde1544ebfb62bf2d69744d8986da4fd0",
+  "test_input_hashes": {
+    "inputs/jev/test/brief.jsonl.gz": "a1df0105a320321d075ba93331ece3a09aa8b04e58e6e62c8be925472e617808",
+    "inputs/jev/test/detailed.jsonl.gz": "6f1bb1ab34bf6ea855d388795d43ca2f397019290a22721f5eddbb14ae00a694",
+    "inputs/kev/test/brief.jsonl.gz": "7efb6ef60863a9b2a3f3f140d6702ec5735ca6715ca63cf65976ec57e71fb97f",
+    "inputs/kev/test/detailed.jsonl.gz": "7eee6c5b202994ebbd2821a9985ff67854f848cb5a8feec1e04fa32752a24ace",
+    "inputs/clef/test/brief.jsonl.gz": "22f4c2943da2892e0226a4ddbc8ca9e15445397bec3d79036ca9f3236f18ffdf",
+    "inputs/clef/test/detailed.jsonl.gz": "ff4f68773a3006323f6b108b1168268f05e660447bcc5991d1372000f2ade136"
+  },
+  "reference_test_sha256": "0c2cf6aec70c14edf29f878e7733d88d1e7c3f32eef7781322eaa3ed8f694738"
+}

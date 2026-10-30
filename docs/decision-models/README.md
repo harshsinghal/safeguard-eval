@@ -1,5 +1,9 @@
 # Kev and Clef: open decision models still need policy and cutoff testing
 
+Follow-up: the [WildGuard decision-score ensemble study](../decision-ensemble/README.md)
+combines Jev, Kev, and Clef scores, with an open-only Kev/Clef cohort and
+decision-only controls. It reuses these saved outputs and preserves this study.
+
 We tested **Kev 4B** and **Cloudflare Clef-Flash 9B** on the same WildGuard and
 HateXplain examples used for Jev. Both worked as self-hosted classifiers, without
 any additional fine-tuning. Their observed balanced scores were below Jev's in

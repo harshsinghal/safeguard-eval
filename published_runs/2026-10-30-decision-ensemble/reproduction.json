@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-10-30T15:29:43.780133+00:00",
+  "policies_matched": true,
+  "refitted_models_matched": true,
+  "validation_selections_matched": true,
+  "test_outputs_matched": true,
+  "metrics_and_intervals_matched": true,
+  "added_provider_cost_usd": 0
+}

@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-30T15:29:57.255538+00:00",
+  "protocol_commit": "b749b67",
+  "pre_test_freeze_commit": "877587a",
+  "fitting_n": 1024,
+  "validation_n": 512,
+  "test_n": 1699,
+  "cohorts": [
+    "all-three",
+    "open-only"
+  ],
+  "candidate_records": 107,
+  "new_language_model_inference": false,
+  "language_model_weights_updated": false,
+  "paid_provider_cost_usd": 0,
+  "cumulative_paid_provider_cost_usd": 13.79540555656,
+  "cap_usd": 20,
+  "resources_started": 0,
+  "checks": {
+    "new_experiment_unit_tests": 10,
+    "leaderboard_unit_tests": 11,
+    "fresh_fit_reproduction": "passed",
+    "archived_source_reproduction": "passed"
+  }
+}
