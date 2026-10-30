@@ -21,8 +21,28 @@ a combination remains useful without an API-only component.
 
 ## Progress
 
+Preparation initially stopped before fitting because the two source archives use
+different checksum-manifest shapes (a flat map versus a `sha256` wrapper). The
+loader now accepts both while verifying the same file hashes. No experiment
+choice changed and no test scores were loaded by that failed preparation.
+
 - [x] Audit native score availability and register the bounded plan.
-- [ ] Implement and test score alignment, fitting-only transforms, and freeze checks.
-- [ ] Fit on training, select on validation, and freeze all choices.
+- [x] Implement and test score alignment, fitting-only transforms, and freeze checks.
+- [x] Fit on training, select on validation, and freeze all choices.
 - [ ] Evaluate the frozen test population and paired uncertainty.
 - [ ] Reproduce on CPU and document findings, limitations, and costs.
+
+## Development freeze
+
+Ten new experiment tests and eleven existing leaderboard tests passed. Both policy
+variants align across all three models. No unresolved development outputs occurred;
+fitting has 1,024 rows in 1,014 duplicate groups, validation 512 rows in 495 groups.
+The two development populations are disjoint by ID, content hash and group.
+
+The eligible-policy selection chose Jev detailed, Kev brief, and Clef detailed.
+The primary three-model probability logistic selected C=10 and cutoff 0.56;
+the open-only primary selected C=0.1 and cutoff 0.63. The secondary best score
+method selected weighted averaging (regularization 0.1) for all three models and
+a forest (depth 4, minimum leaf 80) for the open-only cohort. No test files were
+present in the new bundle when these choices were frozen. All grids, parameters,
+models, and source/input hashes are retained in the freeze.

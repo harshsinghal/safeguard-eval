@@ -1,0 +1,219 @@
+{
+  "created_utc": "2026-10-30T15:22:04.472555+00:00",
+  "protocol_sha256": "6ec36da994ed6c7caa55836a5519fc02352778951b52eda6837ff8ca77b5fa49",
+  "source_hashes": {
+    "docs/decision-ensemble/PLAN.md": "6ec36da994ed6c7caa55836a5519fc02352778951b52eda6837ff8ca77b5fa49",
+    "evals/__init__.py": "66c37e63f59414f9de8d81133ff4f94673aa0631497dfda0bf222f83603fa495",
+    "evals/decision_ensemble/__init__.py": "d1b16d20458bdc6cb9db8add231672fefed2ee2e71cb7e3791e1203f0b2d37e8",
+    "evals/decision_ensemble/learn.py": "f0c4ff13bfcc3b2c257cf8245d98a9ca534e5d12912cda7d9da19f2e76285a54",
+    "evals/decision_ensemble/report.py": "a12a757149a52cdc2c45e632c7777d1e45c6069ebea5e4b20b2173b60d265dfd",
+    "evals/decision_ensemble/study.py": "7f2873fa1fb861738910200c2e74625a28528186040cd5d5db4031cf0fdbca86",
+    "evals/ensemble/__init__.py": "1f7868973b56d068d70877dc12733ca5c3daf731f734be509c75d2d96016b5ff",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/ensemble/learn.py": "a4dc29d099781020a3fe376aca071bf96e18182f9d4e0a597a1573c49c30e986",
+    "evals/leaderboard/__init__.py": "63bb282c4c066a1e9e4a52355713f9e4499845522050c655bceb2a8fddd3bf86",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30",
+    "tests/test_decision_ensemble.py": "8dfc0572e68d4411f53c4245fd130941f7aec666d1f007f6f82694be98e2edf6"
+  },
+  "original_hashes": {
+    "published_runs/2026-10-29-jev/predictions/wildguard/fit/brief.jsonl.gz": "b005498e02ae2c86d9a40fcf15633ba5b0eb86b52460ef2b38570f61f2a2c5d5",
+    "published_runs/2026-10-29-jev/predictions/wildguard/fit/detailed.jsonl.gz": "f96083a4d3bc3ade8d43d1da6842b28f1ff7ab7d20bbd25d449a5294eed72393",
+    "published_runs/2026-10-29-jev/predictions/wildguard/validation/brief.jsonl.gz": "a47fc339d8a1247e6245c64da84ccdc7d7010580d90e02c083713b45c3668369",
+    "published_runs/2026-10-29-jev/predictions/wildguard/validation/detailed.jsonl.gz": "dea3816402fc4c43eaf296e68ea60bd020dbce7d8b3ca3cf107616a6b870a720",
+    "published_runs/2026-10-29-jev/predictions/wildguard/test/brief.jsonl.gz": "a1df0105a320321d075ba93331ece3a09aa8b04e58e6e62c8be925472e617808",
+    "published_runs/2026-10-29-jev/predictions/wildguard/test/detailed.jsonl.gz": "6f1bb1ab34bf6ea855d388795d43ca2f397019290a22721f5eddbb14ae00a694",
+    "published_runs/2026-10-29-decision-models/predictions/kev/wildguard/fit/brief.jsonl.gz": "fe33a687dbd59ebb500693f4521a87b7a75778156b871b4290d2b64c6aeef78e",
+    "published_runs/2026-10-29-decision-models/predictions/kev/wildguard/fit/detailed.jsonl.gz": "f8635e09c7f39aa22339a66a2baaa690f4d0306930c558b5a00b268e07a9ee95",
+    "published_runs/2026-10-29-decision-models/predictions/kev/wildguard/validation/brief.jsonl.gz": "854ecc1c0fe6882bf35dedb6b031f4ac74bc63c194630dee341f05b22fcd2c4e",
+    "published_runs/2026-10-29-decision-models/predictions/kev/wildguard/validation/detailed.jsonl.gz": "1cc2d68820558b16c28aa8676ff69664b94caff250f41221515d758e3e9fa7ec",
+    "published_runs/2026-10-29-decision-models/predictions/kev/wildguard/test/brief.jsonl.gz": "7efb6ef60863a9b2a3f3f140d6702ec5735ca6715ca63cf65976ec57e71fb97f",
+    "published_runs/2026-10-29-decision-models/predictions/kev/wildguard/test/detailed.jsonl.gz": "7eee6c5b202994ebbd2821a9985ff67854f848cb5a8feec1e04fa32752a24ace",
+    "published_runs/2026-10-29-decision-models/predictions/clef/wildguard/fit/brief.jsonl.gz": "0fd5d3294ed64985f0c11d5a47ffbd463e6807d42ddee1a70a0162e639ea9506",
+    "published_runs/2026-10-29-decision-models/predictions/clef/wildguard/fit/detailed.jsonl.gz": "a45af12a502cee4a5c5215da57e154bfbf307137ec2c06b41d1be13b38d3f684",
+    "published_runs/2026-10-29-decision-models/predictions/clef/wildguard/validation/brief.jsonl.gz": "a19ff83a2d723854a62bac86c0889281f9f580b2047dced878d9e2ae9f239087",
+    "published_runs/2026-10-29-decision-models/predictions/clef/wildguard/validation/detailed.jsonl.gz": "4dccca3a0c848156f3e21d0268019ffffc6d6d67678ba26a59e5d2c871857628",
+    "published_runs/2026-10-29-decision-models/predictions/clef/wildguard/test/brief.jsonl.gz": "22f4c2943da2892e0226a4ddbc8ca9e15445397bec3d79036ca9f3236f18ffdf",
+    "published_runs/2026-10-29-decision-models/predictions/clef/wildguard/test/detailed.jsonl.gz": "ff4f68773a3006323f6b108b1168268f05e660447bcc5991d1372000f2ade136",
+    "published_runs/2026-10-29-jev/policies/wildguard/initial.json": "e5e9be815a59a969eb805e22cd3d0123cf5b519e8c26c52c80602fc1960409b8",
+    "published_runs/2026-10-29-leaderboard-decision-models/test/wildguard.json.gz": "eb0b551c058cd64b2e42541e51b460d78142265a4076507d40d4f022b0b6847b",
+    "published_runs/2026-10-29-leaderboard-decision-models/selection.json": "3b403c6d40f7a9fe21012b921d5602333f091cc621c751d980b5615d314e265f",
+    "published_runs/2026-10-29-leaderboard-decision-models/registry.json": "280bedbed90576a854bdc69e8b06b05eaee8ad21c3ca925f3332cace2af3814b"
+  },
+  "development_hashes": {
+    "inputs/jev/fit/brief.jsonl.gz": "b005498e02ae2c86d9a40fcf15633ba5b0eb86b52460ef2b38570f61f2a2c5d5",
+    "inputs/jev/fit/detailed.jsonl.gz": "f96083a4d3bc3ade8d43d1da6842b28f1ff7ab7d20bbd25d449a5294eed72393",
+    "inputs/jev/validation/brief.jsonl.gz": "a47fc339d8a1247e6245c64da84ccdc7d7010580d90e02c083713b45c3668369",
+    "inputs/jev/validation/detailed.jsonl.gz": "dea3816402fc4c43eaf296e68ea60bd020dbce7d8b3ca3cf107616a6b870a720",
+    "inputs/kev/fit/brief.jsonl.gz": "fe33a687dbd59ebb500693f4521a87b7a75778156b871b4290d2b64c6aeef78e",
+    "inputs/kev/fit/detailed.jsonl.gz": "f8635e09c7f39aa22339a66a2baaa690f4d0306930c558b5a00b268e07a9ee95",
+    "inputs/kev/validation/brief.jsonl.gz": "854ecc1c0fe6882bf35dedb6b031f4ac74bc63c194630dee341f05b22fcd2c4e",
+    "inputs/kev/validation/detailed.jsonl.gz": "1cc2d68820558b16c28aa8676ff69664b94caff250f41221515d758e3e9fa7ec",
+    "inputs/clef/fit/brief.jsonl.gz": "0fd5d3294ed64985f0c11d5a47ffbd463e6807d42ddee1a70a0162e639ea9506",
+    "inputs/clef/fit/detailed.jsonl.gz": "a45af12a502cee4a5c5215da57e154bfbf307137ec2c06b41d1be13b38d3f684",
+    "inputs/clef/validation/brief.jsonl.gz": "a19ff83a2d723854a62bac86c0889281f9f580b2047dced878d9e2ae9f239087",
+    "inputs/clef/validation/detailed.jsonl.gz": "4dccca3a0c848156f3e21d0268019ffffc6d6d67678ba26a59e5d2c871857628",
+    "policies.json": "e5e9be815a59a969eb805e22cd3d0123cf5b519e8c26c52c80602fc1960409b8",
+    "reference-selections.json": "b768d34f71f78f568515bc00478e4d2d1a8b5f9b48ada6c2d914afa62c21f67e"
+  },
+  "held_out_sources": {
+    "inputs/jev/test/brief.jsonl.gz": {
+      "source": "published_runs/2026-10-29-jev/predictions/wildguard/test/brief.jsonl.gz",
+      "sha256": "a1df0105a320321d075ba93331ece3a09aa8b04e58e6e62c8be925472e617808"
+    },
+    "inputs/jev/test/detailed.jsonl.gz": {
+      "source": "published_runs/2026-10-29-jev/predictions/wildguard/test/detailed.jsonl.gz",
+      "sha256": "6f1bb1ab34bf6ea855d388795d43ca2f397019290a22721f5eddbb14ae00a694"
+    },
+    "inputs/kev/test/brief.jsonl.gz": {
+      "source": "published_runs/2026-10-29-decision-models/predictions/kev/wildguard/test/brief.jsonl.gz",
+      "sha256": "7efb6ef60863a9b2a3f3f140d6702ec5735ca6715ca63cf65976ec57e71fb97f"
+    },
+    "inputs/kev/test/detailed.jsonl.gz": {
+      "source": "published_runs/2026-10-29-decision-models/predictions/kev/wildguard/test/detailed.jsonl.gz",
+      "sha256": "7eee6c5b202994ebbd2821a9985ff67854f848cb5a8feec1e04fa32752a24ace"
+    },
+    "inputs/clef/test/brief.jsonl.gz": {
+      "source": "published_runs/2026-10-29-decision-models/predictions/clef/wildguard/test/brief.jsonl.gz",
+      "sha256": "22f4c2943da2892e0226a4ddbc8ca9e15445397bec3d79036ca9f3236f18ffdf"
+    },
+    "inputs/clef/test/detailed.jsonl.gz": {
+      "source": "published_runs/2026-10-29-decision-models/predictions/clef/wildguard/test/detailed.jsonl.gz",
+      "sha256": "ff4f68773a3006323f6b108b1168268f05e660447bcc5991d1372000f2ade136"
+    }
+  },
+  "reference_test": "published_runs/2026-10-29-leaderboard-decision-models/test/wildguard.json.gz",
+  "data_summary": {
+    "brief": {
+      "fit": {
+        "n": 1024,
+        "labels": {
+          "ALLOW": 479,
+          "BLOCK": 545
+        },
+        "groups": 1014,
+        "unresolved": 0,
+        "score_ranges": {
+          "jev": [
+            0.0,
+            1.0
+          ],
+          "kev": [
+            0.04187609627842903,
+            0.9945118427276611
+          ],
+          "clef": [
+            0.015306354500353336,
+            0.9671630263328552
+          ]
+        }
+      },
+      "validation": {
+        "n": 512,
+        "labels": {
+          "ALLOW": 238,
+          "BLOCK": 274
+        },
+        "groups": 495,
+        "unresolved": 0,
+        "score_ranges": {
+          "jev": [
+            0.0,
+            1.0
+          ],
+          "kev": [
+            0.041441839188337326,
+            0.9913982152938843
+          ],
+          "clef": [
+            0.01615283451974392,
+            0.966156005859375
+          ]
+        }
+      }
+    },
+    "detailed": {
+      "fit": {
+        "n": 1024,
+        "labels": {
+          "ALLOW": 479,
+          "BLOCK": 545
+        },
+        "groups": 1014,
+        "unresolved": 0,
+        "score_ranges": {
+          "jev": [
+            0.0,
+            1.0
+          ],
+          "kev": [
+            0.04854664206504822,
+            0.9786964654922485
+          ],
+          "clef": [
+            0.0534033328294754,
+            0.8940516710281372
+          ]
+        }
+      },
+      "validation": {
+        "n": 512,
+        "labels": {
+          "ALLOW": 238,
+          "BLOCK": 274
+        },
+        "groups": 495,
+        "unresolved": 0,
+        "score_ranges": {
+          "jev": [
+            0.0,
+            1.0
+          ],
+          "kev": [
+            0.0562288835644722,
+            0.9685425162315369
+          ],
+          "clef": [
+            0.03649376705288887,
+            0.859663724899292
+          ]
+        }
+      }
+    }
+  },
+  "models": {
+    "jev": "typesafe/jev-1.14-20261014",
+    "kev": {
+      "id": "jaredpalmer/kev-4b",
+      "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+      "code_revision": "2074cc44256200bb37540103fa4572901faa10f3",
+      "dtype": "bfloat16",
+      "base": "Qwen/Qwen3.5-4B-Base",
+      "base_revision": "1001bb4d826a52d1f399e183466143f4da7b741b"
+    },
+    "clef": {
+      "id": "Cloudflare/clef-flash",
+      "revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+      "dtype": "bfloat16"
+    }
+  },
+  "no_new_inference": true,
+  "no_new_policy_text": true,
+  "counts": {
+    "fit": 1024,
+    "validation": 512,
+    "test": 1699
+  },
+  "environment": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "sklearn": "1.6.1",
+    "joblib": "1.5.3"
+  },
+  "cost": {
+    "added_provider_cost_usd": 0,
+    "cumulative_cost_usd": 13.795405556559999,
+    "cumulative_cap_usd": 20,
+    "resources_started": 0
+  }
+}

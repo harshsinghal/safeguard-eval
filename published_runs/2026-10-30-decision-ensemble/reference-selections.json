@@ -1,0 +1,432 @@
+{
+  "jev": {
+    "choice": {
+      "candidate": "wildguard/jev/detailed",
+      "metrics": {
+        "accuracy": 0.931640625,
+        "allow_f1": 0.9295774647887324,
+        "balanced_accuracy": 0.9341992271361099,
+        "block_f1": 0.9335863377609108,
+        "compliant_error_rate": 0.029411764705882353,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 28,
+          "fp": 7,
+          "tn": 231,
+          "tp": 246
+        },
+        "coverage": 1.0,
+        "false_blocks": 7,
+        "false_negative_rate": 0.10218978102189781,
+        "false_positive_rate": 0.029411764705882353,
+        "macro_f1": 0.9315819012748217,
+        "mcc": 0.8663086664657469,
+        "missed_violations": 28,
+        "n": 512,
+        "negatives": 238,
+        "positives": 274,
+        "precision": 0.9723320158102767,
+        "recall": 0.8978102189781022,
+        "specificity": 0.9705882352941176,
+        "unresolved": 0,
+        "violation_error_rate": 0.10218978102189781
+      },
+      "threshold": 0.64
+    },
+    "spec": {
+      "adapter": "OpenRouter Decisions Choice",
+      "category": "Typed classifier",
+      "dataset": "wildguard",
+      "fitting_rows": 1024,
+      "group": "jev",
+      "id": "wildguard/jev/detailed",
+      "kind": "raw",
+      "label": "Jev 1.14",
+      "model": "jev",
+      "model_id": "typesafe/jev-1.14-20261014",
+      "policy": "detailed",
+      "policy_interface": {
+        "brief": {
+          "original_question_sha256": "efdb1c8ffe877173d48ef1aaf468c8abaa533885287b54b5b55987f5dd87ccf5",
+          "serialized_bytes": 450
+        },
+        "detailed": {
+          "original_question_sha256": "eed2fef272aa7e985c71a1f2a8f5bb744fd5b74657c1a8bdec27e07915567fb7",
+          "serialized_bytes": 2114
+        },
+        "examples": {
+          "original_question_sha256": "0109ef1e0a7a5e6e77c8fd950ccd86d94e941fc446057919860858cb7eacbd9e",
+          "redacted": true,
+          "serialized_bytes": 2916
+        }
+      },
+      "revision": "20261014",
+      "source_archive": "2026-10-29-jev",
+      "test": "published_runs/2026-10-29-jev/predictions/wildguard/test/detailed.jsonl.gz",
+      "validation": "published_runs/2026-10-29-jev/predictions/wildguard/validation/detailed.jsonl.gz",
+      "validation_rows": 512,
+      "variant": "native instructions + criteria"
+    }
+  },
+  "kev": {
+    "choice": {
+      "candidate": "wildguard/decision-models/kev/brief",
+      "metrics": {
+        "accuracy": 0.91796875,
+        "allow_f1": 0.9156626506024096,
+        "balanced_accuracy": 0.9205974360547139,
+        "block_f1": 0.9201520912547528,
+        "compliant_error_rate": 0.04201680672268908,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 32,
+          "fp": 10,
+          "tn": 228,
+          "tp": 242
+        },
+        "coverage": 1.0,
+        "false_blocks": 10,
+        "false_negative_rate": 0.11678832116788321,
+        "false_positive_rate": 0.04201680672268908,
+        "macro_f1": 0.9179073709285812,
+        "mcc": 0.8392153756032371,
+        "missed_violations": 32,
+        "n": 512,
+        "negatives": 238,
+        "positives": 274,
+        "precision": 0.9603174603174603,
+        "recall": 0.8832116788321168,
+        "specificity": 0.957983193277311,
+        "unresolved": 0,
+        "violation_error_rate": 0.11678832116788321
+      },
+      "threshold": 0.56
+    },
+    "spec": {
+      "adapter": "Native Choice / released decision head",
+      "category": "Typed classifier",
+      "dataset": "wildguard",
+      "fitting_rows": 1024,
+      "group": "kev",
+      "id": "wildguard/decision-models/kev/brief",
+      "kind": "raw",
+      "label": "Kev 4B",
+      "model": "kev",
+      "model_id": "jaredpalmer/kev-4b",
+      "policy": "brief",
+      "policy_sha256": "efdb1c8ffe877173d48ef1aaf468c8abaa533885287b54b5b55987f5dd87ccf5",
+      "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+      "source_archive": "2026-10-29-decision-models",
+      "validation_rows": 512,
+      "variant": "BF16; instructions + criteria"
+    }
+  },
+  "clef": {
+    "choice": {
+      "candidate": "wildguard/decision-models/clef/examples",
+      "metrics": {
+        "accuracy": 0.912109375,
+        "allow_f1": 0.9056603773584906,
+        "balanced_accuracy": 0.9118107096853341,
+        "block_f1": 0.9177330895795247,
+        "compliant_error_rate": 0.09243697478991597,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 23,
+          "fp": 22,
+          "tn": 216,
+          "tp": 251
+        },
+        "coverage": 1.0,
+        "false_blocks": 22,
+        "false_negative_rate": 0.08394160583941605,
+        "false_positive_rate": 0.09243697478991597,
+        "macro_f1": 0.9116967334690076,
+        "mcc": 0.8234004849480201,
+        "missed_violations": 23,
+        "n": 512,
+        "negatives": 238,
+        "positives": 274,
+        "precision": 0.9194139194139194,
+        "recall": 0.916058394160584,
+        "specificity": 0.907563025210084,
+        "unresolved": 0,
+        "violation_error_rate": 0.08394160583941605
+      },
+      "threshold": 0.36
+    },
+    "spec": {
+      "adapter": "Native Choice / released decision head",
+      "category": "Typed classifier",
+      "dataset": "wildguard",
+      "fitting_rows": 1024,
+      "group": "clef",
+      "id": "wildguard/decision-models/clef/examples",
+      "kind": "raw",
+      "label": "Clef-Flash 9B",
+      "model": "clef",
+      "model_id": "Cloudflare/clef-flash",
+      "policy": "examples",
+      "policy_sha256": "085f4057e9db8468f3af09dc09e15982424e4582c2be7d539a161f77762f761b",
+      "revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+      "source_archive": "2026-10-29-decision-models",
+      "validation_rows": 512,
+      "variant": "BF16; instructions + criteria"
+    }
+  },
+  "wildguard": {
+    "choice": {
+      "candidate": "wildguard/wildguard/wildguard-validation-p0",
+      "metrics": {
+        "accuracy": 1.0,
+        "allow_f1": 1.0,
+        "balanced_accuracy": 1.0,
+        "block_f1": 1.0,
+        "compliant_error_rate": 0.0,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 238,
+          "tp": 274
+        },
+        "coverage": 1.0,
+        "false_blocks": 0,
+        "false_negative_rate": 0.0,
+        "false_positive_rate": 0.0,
+        "macro_f1": 1.0,
+        "mcc": 1.0,
+        "missed_violations": 0,
+        "n": 512,
+        "negatives": 238,
+        "positives": 274,
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "unresolved": 0,
+        "violation_error_rate": 0.0
+      },
+      "threshold": null
+    },
+    "spec": {
+      "adapter": "wildguard",
+      "category": "Task-specific",
+      "dataset": "wildguard",
+      "fitting_rows": null,
+      "group": "wildguard",
+      "id": "wildguard/wildguard/wildguard-validation-p0",
+      "kind": "raw",
+      "label": "WildGuard 7B",
+      "model": "wildguard",
+      "model_id": "allenai/wildguard",
+      "policy": "wildguard-official",
+      "policy_sha256": null,
+      "revision": "cbba4823f3e8020e5a74a5e29bf85072def6f2ff",
+      "source_archive": "2026-10-24-wildguard",
+      "test": "published_runs/2026-10-24-wildguard/runs/wildguard-test-p0/predictions.jsonl.gz",
+      "test_manifest": "published_runs/2026-10-24-wildguard/runs/wildguard-test-p0/manifest.json",
+      "validation": "published_runs/2026-10-24-wildguard/runs/wildguard-validation-p0/predictions.jsonl.gz",
+      "validation_manifest": "published_runs/2026-10-24-wildguard/runs/wildguard-validation-p0/manifest.json",
+      "validation_rows": 512,
+      "variant": "original"
+    }
+  },
+  "cope": {
+    "choice": {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-single/cope/C0.01",
+      "metrics": {
+        "accuracy": 0.955078125,
+        "allow_f1": 0.9519832985386222,
+        "balanced_accuracy": 0.9552689689014292,
+        "block_f1": 0.9577981651376147,
+        "compliant_error_rate": 0.04201680672268908,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 13,
+          "fp": 10,
+          "tn": 228,
+          "tp": 261
+        },
+        "coverage": 1.0,
+        "false_blocks": 10,
+        "false_negative_rate": 0.04744525547445255,
+        "false_positive_rate": 0.04201680672268908,
+        "macro_f1": 0.9548907318381185,
+        "mcc": 0.9098475683238143,
+        "missed_violations": 13,
+        "n": 512,
+        "negatives": 238,
+        "positives": 274,
+        "precision": 0.9630996309963099,
+        "recall": 0.9525547445255474,
+        "specificity": 0.957983193277311,
+        "unresolved": 0,
+        "violation_error_rate": 0.04744525547445255
+      },
+      "threshold": 0.39
+    },
+    "spec": {
+      "archived_test": "published_runs/2026-10-28-ensemble-logits/cohorts/wildguard-specialists/test-predictions.jsonl.gz",
+      "base_candidates": {
+        "cope": "wildguard/wildguard/cope-validation-p3",
+        "policylm": "wildguard/wildguard/policylm-validation-p4",
+        "shieldstral": "wildguard/wildguard/shieldstral-validation-p4"
+      },
+      "category": "Specialist",
+      "cohort": "wildguard-specialists",
+      "dataset": "wildguard",
+      "family": "single",
+      "features": [
+        "policylm",
+        "shieldstral",
+        "cope"
+      ],
+      "fitted_id": "logit-single/cope/C0.01",
+      "fitted_kind": "single-logit",
+      "fitting_rows": 4096,
+      "group": "cope",
+      "id": "wildguard/logits/wildguard-specialists/logit-single/cope/C0.01",
+      "kind": "fitted",
+      "label": "CoPE",
+      "model": "cope",
+      "model_file": "published_runs/2026-10-28-ensemble-logits/cohorts/wildguard-specialists/models.joblib",
+      "model_id": "zentropi-ai/cope-b-a4b",
+      "original_threshold": 0.49,
+      "original_validation_rows": 1536,
+      "policy": "wg-p3-cope-social-and-deception",
+      "source_archive": "2026-10-28-ensemble-logits",
+      "validation_rows": 512
+    }
+  },
+  "qwen-27b": {
+    "choice": {
+      "candidate": "wildguard/qwen/qwen-27b-validation-p1",
+      "metrics": {
+        "accuracy": 0.955078125,
+        "allow_f1": 0.9531568228105907,
+        "balanced_accuracy": 0.9569251058087469,
+        "block_f1": 0.9568480300187617,
+        "compliant_error_rate": 0.01680672268907563,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 19,
+          "fp": 4,
+          "tn": 234,
+          "tp": 255
+        },
+        "coverage": 1.0,
+        "false_blocks": 4,
+        "false_negative_rate": 0.06934306569343066,
+        "false_positive_rate": 0.01680672268907563,
+        "macro_f1": 0.9550024264146761,
+        "mcc": 0.9116510448412453,
+        "missed_violations": 19,
+        "n": 512,
+        "negatives": 238,
+        "positives": 274,
+        "precision": 0.9845559845559846,
+        "recall": 0.9306569343065694,
+        "specificity": 0.9831932773109243,
+        "unresolved": 0,
+        "violation_error_rate": 0.06934306569343066
+      },
+      "threshold": 0.96
+    },
+    "spec": {
+      "adapter": "qwen",
+      "category": "General-purpose",
+      "dataset": "wildguard",
+      "fitting_rows": null,
+      "group": "qwen-27b",
+      "id": "wildguard/qwen/qwen-27b-validation-p1",
+      "kind": "raw",
+      "label": "Qwen3.5 27B",
+      "model": "qwen-27b",
+      "model_id": "Qwen/Qwen3.5-27B",
+      "policy": "wg-p1-concrete-harm",
+      "policy_sha256": "50d71245c23ebefc12acd98b86f21d75204a3723a50eaa06b9ad3c97c15d4adb",
+      "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+      "source_archive": "2026-10-25-qwen",
+      "test": "published_runs/2026-10-25-qwen/runs/qwen-27b-test-p1/predictions.jsonl.gz",
+      "test_manifest": "published_runs/2026-10-25-qwen/runs/qwen-27b-test-p1/manifest.json",
+      "validation": "published_runs/2026-10-25-qwen/runs/qwen-27b-validation-p1/predictions.jsonl.gz",
+      "validation_manifest": "published_runs/2026-10-25-qwen/runs/qwen-27b-validation-p1/manifest.json",
+      "validation_rows": 512,
+      "variant": "original"
+    }
+  },
+  "wildguard-specialists/logit-equal": {
+    "choice": {
+      "candidate": "wildguard/logits/wildguard-specialists/logit-equal",
+      "metrics": {
+        "accuracy": 0.974609375,
+        "allow_f1": 0.9728601252609603,
+        "balanced_accuracy": 0.9748972581733424,
+        "block_f1": 0.9761467889908257,
+        "compliant_error_rate": 0.02100840336134454,
+        "confusion": {
+          "error_allow": 0,
+          "error_block": 0,
+          "fn": 8,
+          "fp": 5,
+          "tn": 233,
+          "tp": 266
+        },
+        "coverage": 1.0,
+        "false_blocks": 5,
+        "false_negative_rate": 0.029197080291970802,
+        "false_positive_rate": 0.02100840336134454,
+        "macro_f1": 0.974503457125893,
+        "mcc": 0.9490743825464046,
+        "missed_violations": 8,
+        "n": 512,
+        "negatives": 238,
+        "positives": 274,
+        "precision": 0.981549815498155,
+        "recall": 0.9708029197080292,
+        "specificity": 0.9789915966386554,
+        "unresolved": 0,
+        "violation_error_rate": 0.029197080291970802
+      },
+      "threshold": 0.23
+    },
+    "spec": {
+      "archived_test": "published_runs/2026-10-28-ensemble-logits/cohorts/wildguard-specialists/test-predictions.jsonl.gz",
+      "base_candidates": {
+        "cope": "wildguard/wildguard/cope-validation-p3",
+        "policylm": "wildguard/wildguard/policylm-validation-p4",
+        "shieldstral": "wildguard/wildguard/shieldstral-validation-p4"
+      },
+      "category": "Ensemble",
+      "cohort": "wildguard-specialists",
+      "dataset": "wildguard",
+      "family": "logit-equal",
+      "features": [
+        "policylm",
+        "shieldstral",
+        "cope"
+      ],
+      "fitted_id": "logit-equal",
+      "fitted_kind": "logit-equal",
+      "fitting_rows": 4096,
+      "group": "wildguard-specialists/logit-equal",
+      "id": "wildguard/logits/wildguard-specialists/logit-equal",
+      "kind": "fitted",
+      "label": "Equal log-odds average · specialists",
+      "model": null,
+      "model_file": "published_runs/2026-10-28-ensemble-logits/cohorts/wildguard-specialists/models.joblib",
+      "model_id": "musubilabs/policylm-1.7b+mistralai/Shieldstral-1.0-3B+zentropi-ai/cope-b-a4b",
+      "original_threshold": 0.06,
+      "original_validation_rows": 1536,
+      "policy": "wg-p4-policylm-compact; wg-p4-shieldstral-taxonomy-priority; wg-p3-cope-social-and-deception",
+      "source_archive": "2026-10-28-ensemble-logits",
+      "validation_rows": 512
+    }
+  }
+}

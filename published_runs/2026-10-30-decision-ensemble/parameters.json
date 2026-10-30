@@ -1,0 +1,2581 @@
+{
+  "all-three": {
+    "single/jev/raw": {
+      "id": "single/jev/raw",
+      "family": "single",
+      "kind": "raw",
+      "column": 0
+    },
+    "single/jev/probability/C0.01": {
+      "id": "single/jev/probability/C0.01",
+      "family": "single",
+      "kind": "probability",
+      "column": 0,
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.518291015625
+        ],
+        "feature_scales": [
+          0.4476748842951277
+        ],
+        "standardized_coefficients": [
+          1.4406968287422124
+        ],
+        "standardized_intercept": 0.18711093482623617,
+        "coefficients": [
+          3.2181765814506567
+        ],
+        "intercept": -1.4808410740344153
+      }
+    },
+    "single/jev/probability/C0.1": {
+      "id": "single/jev/probability/C0.1",
+      "family": "single",
+      "kind": "probability",
+      "column": 0,
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.518291015625
+        ],
+        "feature_scales": [
+          0.4476748842951277
+        ],
+        "standardized_coefficients": [
+          2.6574297269622864
+        ],
+        "standardized_intercept": 0.33290317459235286,
+        "coefficients": [
+          5.936070617735141
+        ],
+        "intercept": -2.7437088946953145
+      }
+    },
+    "single/jev/probability/C1": {
+      "id": "single/jev/probability/C1",
+      "family": "single",
+      "kind": "probability",
+      "column": 0,
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.518291015625
+        ],
+        "feature_scales": [
+          0.4476748842951277
+        ],
+        "standardized_coefficients": [
+          3.1975284166115614
+        ],
+        "standardized_intercept": 0.43342344450598747,
+        "coefficients": [
+          7.142523578570034
+        ],
+        "intercept": -3.268482355156585
+      }
+    },
+    "single/jev/probability/C10": {
+      "id": "single/jev/probability/C10",
+      "family": "single",
+      "kind": "probability",
+      "column": 0,
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.518291015625
+        ],
+        "feature_scales": [
+          0.4476748842951277
+        ],
+        "standardized_coefficients": [
+          3.2867614036759525
+        ],
+        "standardized_intercept": 0.4521847506066482,
+        "coefficients": [
+          7.3418490046655585
+        ],
+        "intercept": -3.3530296265868595
+      }
+    },
+    "single/jev/probability/C100": {
+      "id": "single/jev/probability/C100",
+      "family": "single",
+      "kind": "probability",
+      "column": 0,
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.518291015625
+        ],
+        "feature_scales": [
+          0.4476748842951277
+        ],
+        "standardized_coefficients": [
+          3.2963822885552383
+        ],
+        "standardized_intercept": 0.4542443858046696,
+        "coefficients": [
+          7.363339790092207
+        ],
+        "intercept": -3.3621084723941945
+      }
+    },
+    "single/jev/logodds/C0.01": {
+      "id": "single/jev/logodds/C0.01",
+      "family": "single",
+      "kind": "logodds",
+      "column": 0,
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.31048235034685434
+        ],
+        "feature_scales": [
+          9.23980839075527
+        ],
+        "standardized_coefficients": [
+          1.3130192912816214
+        ],
+        "standardized_intercept": 0.1690843027051405,
+        "coefficients": [
+          0.14210460171396413
+        ],
+        "intercept": 0.12496333196988528
+      }
+    },
+    "single/jev/logodds/C0.1": {
+      "id": "single/jev/logodds/C0.1",
+      "family": "single",
+      "kind": "logodds",
+      "column": 0,
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.31048235034685434
+        ],
+        "feature_scales": [
+          9.23980839075527
+        ],
+        "standardized_coefficients": [
+          3.1920732280704325
+        ],
+        "standardized_intercept": 0.2555057380735325,
+        "coefficients": [
+          0.34546963455045304
+        ],
+        "intercept": 0.14824351396483898
+      }
+    },
+    "single/jev/logodds/C1": {
+      "id": "single/jev/logodds/C1",
+      "family": "single",
+      "kind": "logodds",
+      "column": 0,
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.31048235034685434
+        ],
+        "feature_scales": [
+          9.23980839075527
+        ],
+        "standardized_coefficients": [
+          5.752765497648273
+        ],
+        "standardized_intercept": 0.379893343969846,
+        "coefficients": [
+          0.622606579526487
+        ],
+        "intercept": 0.1865849898170466
+      }
+    },
+    "single/jev/logodds/C10": {
+      "id": "single/jev/logodds/C10",
+      "family": "single",
+      "kind": "logodds",
+      "column": 0,
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.31048235034685434
+        ],
+        "feature_scales": [
+          9.23980839075527
+        ],
+        "standardized_coefficients": [
+          6.829058714950067
+        ],
+        "standardized_intercept": 0.44133085749270384,
+        "coefficients": [
+          0.7390909449792015
+        ],
+        "intercept": 0.21185616377548377
+      }
+    },
+    "single/jev/logodds/C100": {
+      "id": "single/jev/logodds/C100",
+      "family": "single",
+      "kind": "logodds",
+      "column": 0,
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.31048235034685434
+        ],
+        "feature_scales": [
+          9.23980839075527
+        ],
+        "standardized_coefficients": [
+          6.9883525624641285
+        ],
+        "standardized_intercept": 0.45085901691990615,
+        "coefficients": [
+          0.7563308963696913
+        ],
+        "intercept": 0.21603162257510128
+      }
+    },
+    "single/kev/raw": {
+      "id": "single/kev/raw",
+      "family": "single",
+      "kind": "raw",
+      "column": 1
+    },
+    "single/kev/probability/C0.01": {
+      "id": "single/kev/probability/C0.01",
+      "family": "single",
+      "kind": "probability",
+      "column": 1,
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105
+        ],
+        "feature_scales": [
+          0.3175313697338557
+        ],
+        "standardized_coefficients": [
+          1.3617600799355414
+        ],
+        "standardized_intercept": 0.18968546632343203,
+        "coefficients": [
+          4.288584403729697
+        ],
+        "intercept": -2.1386589135498544
+      }
+    },
+    "single/kev/probability/C0.1": {
+      "id": "single/kev/probability/C0.1",
+      "family": "single",
+      "kind": "probability",
+      "column": 1,
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105
+        ],
+        "feature_scales": [
+          0.3175313697338557
+        ],
+        "standardized_coefficients": [
+          2.632342701689262
+        ],
+        "standardized_intercept": 0.35842441049322943,
+        "coefficients": [
+          8.290024081386367
+        ],
+        "intercept": -4.142368662886313
+      }
+    },
+    "single/kev/probability/C1": {
+      "id": "single/kev/probability/C1",
+      "family": "single",
+      "kind": "probability",
+      "column": 1,
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105
+        ],
+        "feature_scales": [
+          0.3175313697338557
+        ],
+        "standardized_coefficients": [
+          3.279420498560026
+        ],
+        "standardized_intercept": 0.4790377178432236,
+        "coefficients": [
+          10.327863043291527
+        ],
+        "intercept": -5.128132296587599
+      }
+    },
+    "single/kev/probability/C10": {
+      "id": "single/kev/probability/C10",
+      "family": "single",
+      "kind": "probability",
+      "column": 1,
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105
+        ],
+        "feature_scales": [
+          0.3175313697338557
+        ],
+        "standardized_coefficients": [
+          3.396011456793711
+        ],
+        "standardized_intercept": 0.5023224199174279,
+        "coefficients": [
+          10.695042381608266
+        ],
+        "intercept": -5.304195413815229
+      }
+    },
+    "single/kev/probability/C100": {
+      "id": "single/kev/probability/C100",
+      "family": "single",
+      "kind": "probability",
+      "column": 1,
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105
+        ],
+        "feature_scales": [
+          0.3175313697338557
+        ],
+        "standardized_coefficients": [
+          3.4087854487558613
+        ],
+        "standardized_intercept": 0.5048906812396177,
+        "coefficients": [
+          10.735271452433164
+        ],
+        "intercept": -5.3234681895684
+      }
+    },
+    "single/kev/logodds/C0.01": {
+      "id": "single/kev/logodds/C0.01",
+      "family": "single",
+      "kind": "logodds",
+      "column": 1,
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892873
+        ],
+        "feature_scales": [
+          1.9025526620814404
+        ],
+        "standardized_coefficients": [
+          1.3392838994821523
+        ],
+        "standardized_intercept": 0.22419828959585192,
+        "coefficients": [
+          0.70394051432823
+        ],
+        "intercept": -0.05462981914149578
+      }
+    },
+    "single/kev/logodds/C0.1": {
+      "id": "single/kev/logodds/C0.1",
+      "family": "single",
+      "kind": "logodds",
+      "column": 1,
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892873
+        ],
+        "feature_scales": [
+          1.9025526620814404
+        ],
+        "standardized_coefficients": [
+          2.910366989196482
+        ],
+        "standardized_intercept": 0.5493872899691067,
+        "coefficients": [
+          1.5297169151746197
+        ],
+        "intercept": -0.05652764983046488
+      }
+    },
+    "single/kev/logodds/C1": {
+      "id": "single/kev/logodds/C1",
+      "family": "single",
+      "kind": "logodds",
+      "column": 1,
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892873
+        ],
+        "feature_scales": [
+          1.9025526620814404
+        ],
+        "standardized_coefficients": [
+          4.059377026220224
+        ],
+        "standardized_intercept": 0.8412348917042779,
+        "coefficients": [
+          2.1336476551346357
+        ],
+        "intercept": -0.0038946729163915617
+      }
+    },
+    "single/kev/logodds/C10": {
+      "id": "single/kev/logodds/C10",
+      "family": "single",
+      "kind": "logodds",
+      "column": 1,
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892873
+        ],
+        "feature_scales": [
+          1.9025526620814404
+        ],
+        "standardized_coefficients": [
+          4.335529646255658
+        ],
+        "standardized_intercept": 0.9127332298306203,
+        "coefficients": [
+          2.2787961314629155
+        ],
+        "intercept": 0.010110916437927386
+      }
+    },
+    "single/kev/logodds/C100": {
+      "id": "single/kev/logodds/C100",
+      "family": "single",
+      "kind": "logodds",
+      "column": 1,
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892873
+        ],
+        "feature_scales": [
+          1.9025526620814404
+        ],
+        "standardized_coefficients": [
+          4.368143505621097
+        ],
+        "standardized_intercept": 0.9211658427084815,
+        "coefficients": [
+          2.29593829000362
+        ],
+        "intercept": 0.011753586773354252
+      }
+    },
+    "single/clef/raw": {
+      "id": "single/clef/raw",
+      "family": "single",
+      "kind": "raw",
+      "column": 2
+    },
+    "single/clef/probability/C0.01": {
+      "id": "single/clef/probability/C0.01",
+      "family": "single",
+      "kind": "probability",
+      "column": 2,
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.25654269369011556
+        ],
+        "standardized_coefficients": [
+          1.3925832995956786
+        ],
+        "standardized_intercept": 0.21822037816101972,
+        "coefficients": [
+          5.428271137114571
+        ],
+        "intercept": -2.1059432746079825
+      }
+    },
+    "single/clef/probability/C0.1": {
+      "id": "single/clef/probability/C0.1",
+      "family": "single",
+      "kind": "probability",
+      "column": 2,
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.25654269369011556
+        ],
+        "standardized_coefficients": [
+          2.7386207443162998
+        ],
+        "standardized_intercept": 0.5026878130433374,
+        "coefficients": [
+          10.675107152435022
+        ],
+        "intercept": -4.067956395103597
+      }
+    },
+    "single/clef/probability/C1": {
+      "id": "single/clef/probability/C1",
+      "family": "single",
+      "kind": "probability",
+      "column": 2,
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.25654269369011556
+        ],
+        "standardized_coefficients": [
+          3.459602764146958
+        ],
+        "standardized_intercept": 0.7122548218392816,
+        "coefficients": [
+          13.485485454229696
+        ],
+        "intercept": -5.061678414171847
+      }
+    },
+    "single/clef/probability/C10": {
+      "id": "single/clef/probability/C10",
+      "family": "single",
+      "kind": "probability",
+      "column": 2,
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.25654269369011556
+        ],
+        "standardized_coefficients": [
+          3.593799794194247
+        ],
+        "standardized_intercept": 0.753805556555516,
+        "coefficients": [
+          14.00858368835594
+        ],
+        "intercept": -5.244096945521071
+      }
+    },
+    "single/clef/probability/C100": {
+      "id": "single/clef/probability/C100",
+      "family": "single",
+      "kind": "probability",
+      "column": 2,
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.25654269369011556
+        ],
+        "standardized_coefficients": [
+          3.6086351962529393
+        ],
+        "standardized_intercept": 0.7584351525422753,
+        "coefficients": [
+          14.066411887808044
+        ],
+        "intercept": -5.264227019027
+      }
+    },
+    "single/clef/logodds/C0.01": {
+      "id": "single/clef/logodds/C0.01",
+      "family": "single",
+      "kind": "logodds",
+      "column": 2,
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          -0.39569854097217494
+        ],
+        "feature_scales": [
+          1.2459439895803204
+        ],
+        "standardized_coefficients": [
+          1.3890694908365089
+        ],
+        "standardized_intercept": 0.1921065268894212,
+        "coefficients": [
+          1.1148731423347518
+        ],
+        "intercept": 0.6332602026803464
+      }
+    },
+    "single/clef/logodds/C0.1": {
+      "id": "single/clef/logodds/C0.1",
+      "family": "single",
+      "kind": "logodds",
+      "column": 2,
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          -0.39569854097217494
+        ],
+        "feature_scales": [
+          1.2459439895803204
+        ],
+        "standardized_coefficients": [
+          2.7782048865794513
+        ],
+        "standardized_intercept": 0.36558933850455877,
+        "coefficients": [
+          2.2297991802306076
+        ],
+        "intercept": 1.2479176207827618
+      }
+    },
+    "single/clef/logodds/C1": {
+      "id": "single/clef/logodds/C1",
+      "family": "single",
+      "kind": "logodds",
+      "column": 2,
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          -0.39569854097217494
+        ],
+        "feature_scales": [
+          1.2459439895803204
+        ],
+        "standardized_coefficients": [
+          3.5531169121365074
+        ],
+        "standardized_intercept": 0.49248310602790746,
+        "coefficients": [
+          2.8517469018276875
+        ],
+        "intercept": 1.6209151943030435
+      }
+    },
+    "single/clef/logodds/C10": {
+      "id": "single/clef/logodds/C10",
+      "family": "single",
+      "kind": "logodds",
+      "column": 2,
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          -0.39569854097217494
+        ],
+        "feature_scales": [
+          1.2459439895803204
+        ],
+        "standardized_coefficients": [
+          3.7021771156568093
+        ],
+        "standardized_intercept": 0.5183973093794034,
+        "coefficients": [
+          2.9713832617017064
+        ],
+        "intercept": 1.694169330703911
+      }
+    },
+    "single/clef/logodds/C100": {
+      "id": "single/clef/logodds/C100",
+      "family": "single",
+      "kind": "logodds",
+      "column": 2,
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          -0.39569854097217494
+        ],
+        "feature_scales": [
+          1.2459439895803204
+        ],
+        "standardized_coefficients": [
+          3.718798736081084
+        ],
+        "standardized_intercept": 0.5213122853973776,
+        "coefficients": [
+          2.9847238456792202
+        ],
+        "intercept": 1.702363156337504
+      }
+    },
+    "equal-probability": {
+      "id": "equal-probability",
+      "family": "equal-probability",
+      "kind": "equal-probability"
+    },
+    "equal-calibrated": {
+      "id": "equal-calibrated",
+      "family": "equal-calibrated",
+      "kind": "equal-calibrated",
+      "calibrators": [
+        {
+          "feature_means": [
+            0.518291015625
+          ],
+          "feature_scales": [
+            0.4476748842951277
+          ],
+          "standardized_coefficients": [
+            3.1975284166115614
+          ],
+          "standardized_intercept": 0.43342344450598747,
+          "coefficients": [
+            7.142523578570034
+          ],
+          "intercept": -3.268482355156585
+        },
+        {
+          "feature_means": [
+            0.5429167670918105
+          ],
+          "feature_scales": [
+            0.3175313697338557
+          ],
+          "standardized_coefficients": [
+            3.279420498560026
+          ],
+          "standardized_intercept": 0.4790377178432236,
+          "coefficients": [
+            10.327863043291527
+          ],
+          "intercept": -5.128132296587599
+        },
+        {
+          "feature_means": [
+            0.4281590941318427
+          ],
+          "feature_scales": [
+            0.25654269369011556
+          ],
+          "standardized_coefficients": [
+            3.459602764146958
+          ],
+          "standardized_intercept": 0.7122548218392816,
+          "coefficients": [
+            13.485485454229696
+          ],
+          "intercept": -5.061678414171847
+        }
+      ]
+    },
+    "equal-logodds": {
+      "id": "equal-logodds",
+      "family": "equal-logodds",
+      "kind": "equal-logodds"
+    },
+    "weighted/lambda0": {
+      "id": "weighted/lambda0",
+      "family": "weighted",
+      "kind": "weighted",
+      "strength": 0.0,
+      "optimization": {
+        "training_objective": 0.17641637561583184,
+        "iterations": 13
+      },
+      "weights": [
+        0.6046298470512981,
+        0.10648684557972159,
+        0.2888833073689802
+      ],
+      "calibrators": [
+        {
+          "feature_means": [
+            0.518291015625
+          ],
+          "feature_scales": [
+            0.4476748842951277
+          ],
+          "standardized_coefficients": [
+            3.1975284166115614
+          ],
+          "standardized_intercept": 0.43342344450598747,
+          "coefficients": [
+            7.142523578570034
+          ],
+          "intercept": -3.268482355156585
+        },
+        {
+          "feature_means": [
+            0.5429167670918105
+          ],
+          "feature_scales": [
+            0.3175313697338557
+          ],
+          "standardized_coefficients": [
+            3.279420498560026
+          ],
+          "standardized_intercept": 0.4790377178432236,
+          "coefficients": [
+            10.327863043291527
+          ],
+          "intercept": -5.128132296587599
+        },
+        {
+          "feature_means": [
+            0.4281590941318427
+          ],
+          "feature_scales": [
+            0.25654269369011556
+          ],
+          "standardized_coefficients": [
+            3.459602764146958
+          ],
+          "standardized_intercept": 0.7122548218392816,
+          "coefficients": [
+            13.485485454229696
+          ],
+          "intercept": -5.061678414171847
+        }
+      ]
+    },
+    "weighted/lambda0.01": {
+      "id": "weighted/lambda0.01",
+      "family": "weighted",
+      "kind": "weighted",
+      "strength": 0.01,
+      "optimization": {
+        "training_objective": 0.17749228574125878,
+        "iterations": 11
+      },
+      "weights": [
+        0.5613134593106935,
+        0.13976612884052328,
+        0.29892041184878315
+      ],
+      "calibrators": [
+        {
+          "feature_means": [
+            0.518291015625
+          ],
+          "feature_scales": [
+            0.4476748842951277
+          ],
+          "standardized_coefficients": [
+            3.1975284166115614
+          ],
+          "standardized_intercept": 0.43342344450598747,
+          "coefficients": [
+            7.142523578570034
+          ],
+          "intercept": -3.268482355156585
+        },
+        {
+          "feature_means": [
+            0.5429167670918105
+          ],
+          "feature_scales": [
+            0.3175313697338557
+          ],
+          "standardized_coefficients": [
+            3.279420498560026
+          ],
+          "standardized_intercept": 0.4790377178432236,
+          "coefficients": [
+            10.327863043291527
+          ],
+          "intercept": -5.128132296587599
+        },
+        {
+          "feature_means": [
+            0.4281590941318427
+          ],
+          "feature_scales": [
+            0.25654269369011556
+          ],
+          "standardized_coefficients": [
+            3.459602764146958
+          ],
+          "standardized_intercept": 0.7122548218392816,
+          "coefficients": [
+            13.485485454229696
+          ],
+          "intercept": -5.061678414171847
+        }
+      ]
+    },
+    "weighted/lambda0.1": {
+      "id": "weighted/lambda0.1",
+      "family": "weighted",
+      "kind": "weighted",
+      "strength": 0.1,
+      "optimization": {
+        "training_objective": 0.18067869126485858,
+        "iterations": 7
+      },
+      "weights": [
+        0.4203831840675639,
+        0.257807016925173,
+        0.3218097990072631
+      ],
+      "calibrators": [
+        {
+          "feature_means": [
+            0.518291015625
+          ],
+          "feature_scales": [
+            0.4476748842951277
+          ],
+          "standardized_coefficients": [
+            3.1975284166115614
+          ],
+          "standardized_intercept": 0.43342344450598747,
+          "coefficients": [
+            7.142523578570034
+          ],
+          "intercept": -3.268482355156585
+        },
+        {
+          "feature_means": [
+            0.5429167670918105
+          ],
+          "feature_scales": [
+            0.3175313697338557
+          ],
+          "standardized_coefficients": [
+            3.279420498560026
+          ],
+          "standardized_intercept": 0.4790377178432236,
+          "coefficients": [
+            10.327863043291527
+          ],
+          "intercept": -5.128132296587599
+        },
+        {
+          "feature_means": [
+            0.4281590941318427
+          ],
+          "feature_scales": [
+            0.25654269369011556
+          ],
+          "standardized_coefficients": [
+            3.459602764146958
+          ],
+          "standardized_intercept": 0.7122548218392816,
+          "coefficients": [
+            13.485485454229696
+          ],
+          "intercept": -5.061678414171847
+        }
+      ]
+    },
+    "probability-logistic/C0.01": {
+      "id": "probability-logistic/C0.01",
+      "family": "probability-logistic",
+      "kind": "probability-logistic",
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.518291015625001,
+          0.5429167670918105,
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.44767488429512586,
+          0.3175313697338556,
+          0.2565426936901156
+        ],
+        "standardized_coefficients": [
+          0.8451889985270411,
+          0.6774217190283935,
+          0.693616233056421
+        ],
+        "standardized_intercept": 0.2894770973476201,
+        "coefficients": [
+          1.8879526821295998,
+          2.133400928532467,
+          2.703706829765565
+        ],
+        "intercept": -3.004907617785289
+      }
+    },
+    "probability-logistic/C0.1": {
+      "id": "probability-logistic/C0.1",
+      "family": "probability-logistic",
+      "kind": "probability-logistic",
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.518291015625001,
+          0.5429167670918105,
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.44767488429512586,
+          0.3175313697338556,
+          0.2565426936901156
+        ],
+        "standardized_coefficients": [
+          1.4865303053091572,
+          1.125725895729614,
+          1.09577519161035
+        ],
+        "standardized_intercept": 0.5689959872707019,
+        "coefficients": [
+          3.320557747280669,
+          3.5452430941647135,
+          4.271317088975313
+        ],
+        "intercept": -4.905594434812865
+      }
+    },
+    "probability-logistic/C1": {
+      "id": "probability-logistic/C1",
+      "family": "probability-logistic",
+      "kind": "probability-logistic",
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.518291015625001,
+          0.5429167670918105,
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.44767488429512586,
+          0.3175313697338556,
+          0.2565426936901156
+        ],
+        "standardized_coefficients": [
+          1.7680798745825186,
+          1.3964867343367628,
+          1.2535843799935515
+        ],
+        "standardized_intercept": 0.7243246296526982,
+        "coefficients": [
+          3.949473014029813,
+          4.397948887718566,
+          4.886455201518183
+        ],
+        "intercept": -5.802552174525391
+      }
+    },
+    "probability-logistic/C10": {
+      "id": "probability-logistic/C10",
+      "family": "probability-logistic",
+      "kind": "probability-logistic",
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.518291015625001,
+          0.5429167670918105,
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.44767488429512586,
+          0.3175313697338556,
+          0.2565426936901156
+        ],
+        "standardized_coefficients": [
+          1.8127257289556349,
+          1.4502400300482359,
+          1.2796117693216298
+        ],
+        "standardized_intercept": 0.7504703850219072,
+        "coefficients": [
+          4.049201312264395,
+          4.56723388074627,
+          4.987909618144514
+        ],
+        "intercept": -5.963440992384902
+      }
+    },
+    "probability-logistic/C100": {
+      "id": "probability-logistic/C100",
+      "family": "probability-logistic",
+      "kind": "probability-logistic",
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.518291015625001,
+          0.5429167670918105,
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.44767488429512586,
+          0.3175313697338556,
+          0.2565426936901156
+        ],
+        "standardized_coefficients": [
+          1.8175579947133356,
+          1.4559566131438155,
+          1.2824590134885774
+        ],
+        "standardized_intercept": 0.7535418582359321,
+        "coefficients": [
+          4.059995453117995,
+          4.58523708811558,
+          4.999008137950294
+        ],
+        "intercept": -5.980490200725164
+      }
+    },
+    "logodds-logistic/C0.01": {
+      "id": "logodds-logistic/C0.01",
+      "family": "logodds-logistic",
+      "kind": "logodds-logistic",
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.31048235034684607,
+          0.39609612326892857,
+          -0.39569854097217416
+        ],
+        "feature_scales": [
+          9.239808390755258,
+          1.9025526620814408,
+          1.2459439895803197
+        ],
+        "standardized_coefficients": [
+          0.6706186027248084,
+          0.7108301418249618,
+          0.8251771473899421
+        ],
+        "standardized_intercept": 0.2858098713093393,
+        "coefficients": [
+          0.07257927592911831,
+          0.373619167548979,
+          0.6622907243750921
+        ],
+        "intercept": 0.3773536566219078
+      }
+    },
+    "logodds-logistic/C0.1": {
+      "id": "logodds-logistic/C0.1",
+      "family": "logodds-logistic",
+      "kind": "logodds-logistic",
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.31048235034684607,
+          0.39609612326892857,
+          -0.39569854097217416
+        ],
+        "feature_scales": [
+          9.239808390755258,
+          1.9025526620814408,
+          1.2459439895803197
+        ],
+        "standardized_coefficients": [
+          1.38842767312996,
+          1.3638806495167364,
+          1.4523436126618035
+        ],
+        "standardized_intercept": 0.5822580945284778,
+        "coefficients": [
+          0.15026585123985137,
+          0.7168688030031276,
+          1.1656572244078218
+        ],
+        "intercept": 0.7129031090685324
+      }
+    },
+    "logodds-logistic/C1": {
+      "id": "logodds-logistic/C1",
+      "family": "logodds-logistic",
+      "kind": "logodds-logistic",
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.31048235034684607,
+          0.39609612326892857,
+          -0.39569854097217416
+        ],
+        "feature_scales": [
+          9.239808390755258,
+          1.9025526620814408,
+          1.2459439895803197
+        ],
+        "standardized_coefficients": [
+          2.5599952389954033,
+          1.805652298322347,
+          1.5202744426852952
+        ],
+        "standardized_intercept": 0.7943073156374525,
+        "coefficients": [
+          0.27706150720146594,
+          0.9490682356970439,
+          1.2201788004911682
+        ],
+        "intercept": 0.8151853298931537
+      }
+    },
+    "logodds-logistic/C10": {
+      "id": "logodds-logistic/C10",
+      "family": "logodds-logistic",
+      "kind": "logodds-logistic",
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.31048235034684607,
+          0.39609612326892857,
+          -0.39569854097217416
+        ],
+        "feature_scales": [
+          9.239808390755258,
+          1.9025526620814408,
+          1.2459439895803197
+        ],
+        "standardized_coefficients": [
+          3.152413948873633,
+          1.8832469933595606,
+          1.439960743285919
+        ],
+        "standardized_intercept": 0.8417366226356268,
+        "coefficients": [
+          0.3411774157598041,
+          0.9898527546140251,
+          1.1557186802361408
+        ],
+        "intercept": 0.8010464135393018
+      }
+    },
+    "logodds-logistic/C100": {
+      "id": "logodds-logistic/C100",
+      "family": "logodds-logistic",
+      "kind": "logodds-logistic",
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.31048235034684607,
+          0.39609612326892857,
+          -0.39569854097217416
+        ],
+        "feature_scales": [
+          9.239808390755258,
+          1.9025526620814408,
+          1.2459439895803197
+        ],
+        "standardized_coefficients": [
+          3.242847144484127,
+          1.8906979757594895,
+          1.4266101271170042
+        ],
+        "standardized_intercept": 0.8473751801785626,
+        "coefficients": [
+          0.3509647611013997,
+          0.9937690627133643,
+          1.1450034183298556
+        ],
+        "intercept": 0.7978549251387962
+      }
+    },
+    "decision-logistic/C0.01": {
+      "id": "decision-logistic/C0.01",
+      "family": "decision-logistic",
+      "kind": "decision-logistic",
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.5146484375,
+          0.5244140625,
+          0.435546875
+        ],
+        "feature_scales": [
+          0.49978537721586913,
+          0.4994035978567296,
+          0.4958283923674948
+        ],
+        "standardized_coefficients": [
+          0.8797062053030211,
+          0.642503281045472,
+          0.6155557436974806
+        ],
+        "standardized_intercept": 0.294040894249046,
+        "coefficients": [
+          1.7601679549000795,
+          1.28654115389412,
+          1.2414693332874875
+        ],
+        "intercept": -1.8272251550866019
+      }
+    },
+    "decision-logistic/C0.1": {
+      "id": "decision-logistic/C0.1",
+      "family": "decision-logistic",
+      "kind": "decision-logistic",
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.5146484375,
+          0.5244140625,
+          0.435546875
+        ],
+        "feature_scales": [
+          0.49978537721586913,
+          0.4994035978567296,
+          0.4958283923674948
+        ],
+        "standardized_coefficients": [
+          1.4891617657366965,
+          0.9041416595268842,
+          0.8959260346541159
+        ],
+        "standardized_intercept": 0.5759299053812529,
+        "coefficients": [
+          2.979602512647128,
+          1.810442823013596,
+          1.806927655708105
+        ],
+        "intercept": -2.6939412416589352
+      }
+    },
+    "decision-logistic/C1": {
+      "id": "decision-logistic/C1",
+      "family": "decision-logistic",
+      "kind": "decision-logistic",
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5146484375,
+          0.5244140625,
+          0.435546875
+        ],
+        "feature_scales": [
+          0.49978537721586913,
+          0.4994035978567296,
+          0.4958283923674948
+        ],
+        "standardized_coefficients": [
+          1.6846205260427805,
+          0.9839603060586639,
+          1.0100840552325636
+        ],
+        "standardized_intercept": 0.7110617174002972,
+        "coefficients": [
+          3.3706879049307457,
+          1.9702707595249351,
+          2.0371646133646903
+        ],
+        "intercept": -2.9441759206114657
+      }
+    },
+    "decision-logistic/C10": {
+      "id": "decision-logistic/C10",
+      "family": "decision-logistic",
+      "kind": "decision-logistic",
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5146484375,
+          0.5244140625,
+          0.435546875
+        ],
+        "feature_scales": [
+          0.49978537721586913,
+          0.4994035978567296,
+          0.4958283923674948
+        ],
+        "standardized_coefficients": [
+          1.7120056925136884,
+          0.994690261903658,
+          1.027714886106898
+        ],
+        "standardized_intercept": 0.7300408501434843,
+        "coefficients": [
+          3.425481757891113,
+          1.9917562992588165,
+          2.0727229459364707
+        ],
+        "intercept": -2.9801509984876353
+      }
+    },
+    "decision-logistic/C100": {
+      "id": "decision-logistic/C100",
+      "family": "decision-logistic",
+      "kind": "decision-logistic",
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5146484375,
+          0.5244140625,
+          0.435546875
+        ],
+        "feature_scales": [
+          0.49978537721586913,
+          0.4994035978567296,
+          0.4958283923674948
+        ],
+        "standardized_coefficients": [
+          1.7147058363459118,
+          0.9958324275735139,
+          1.0296340334989518
+        ],
+        "standardized_intercept": 0.7322268817615527,
+        "coefficients": [
+          3.430884364600547,
+          1.994043358612729,
+          2.0765935338689006
+        ],
+        "intercept": -2.983630598536351
+      }
+    },
+    "forest/depth2-leaf20": {
+      "id": "forest/depth2-leaf20",
+      "family": "forest",
+      "kind": "forest",
+      "depth": 2,
+      "leaf": 20,
+      "feature_importances": [
+        0.3598994591527886,
+        0.3262737510324184,
+        0.31382678981479295
+      ]
+    },
+    "forest/depth2-leaf80": {
+      "id": "forest/depth2-leaf80",
+      "family": "forest",
+      "kind": "forest",
+      "depth": 2,
+      "leaf": 80,
+      "feature_importances": [
+        0.3525635838640647,
+        0.33500548651622786,
+        0.31243092961970753
+      ]
+    },
+    "forest/depth4-leaf20": {
+      "id": "forest/depth4-leaf20",
+      "family": "forest",
+      "kind": "forest",
+      "depth": 4,
+      "leaf": 20,
+      "feature_importances": [
+        0.3682620427973103,
+        0.31943027484890363,
+        0.31230768235378614
+      ]
+    },
+    "forest/depth4-leaf80": {
+      "id": "forest/depth4-leaf80",
+      "family": "forest",
+      "kind": "forest",
+      "depth": 4,
+      "leaf": 80,
+      "feature_importances": [
+        0.3528322290233344,
+        0.33391612338453985,
+        0.31325164759212576
+      ]
+    },
+    "majority": {
+      "id": "majority",
+      "family": "majority",
+      "kind": "majority"
+    }
+  },
+  "open-only": {
+    "single/kev/raw": {
+      "id": "single/kev/raw",
+      "family": "single",
+      "kind": "raw",
+      "column": 0
+    },
+    "single/kev/probability/C0.01": {
+      "id": "single/kev/probability/C0.01",
+      "family": "single",
+      "kind": "probability",
+      "column": 0,
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105
+        ],
+        "feature_scales": [
+          0.3175313697338557
+        ],
+        "standardized_coefficients": [
+          1.3617600799355414
+        ],
+        "standardized_intercept": 0.18968546632343203,
+        "coefficients": [
+          4.288584403729697
+        ],
+        "intercept": -2.1386589135498544
+      }
+    },
+    "single/kev/probability/C0.1": {
+      "id": "single/kev/probability/C0.1",
+      "family": "single",
+      "kind": "probability",
+      "column": 0,
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105
+        ],
+        "feature_scales": [
+          0.3175313697338557
+        ],
+        "standardized_coefficients": [
+          2.632342701689262
+        ],
+        "standardized_intercept": 0.35842441049322943,
+        "coefficients": [
+          8.290024081386367
+        ],
+        "intercept": -4.142368662886313
+      }
+    },
+    "single/kev/probability/C1": {
+      "id": "single/kev/probability/C1",
+      "family": "single",
+      "kind": "probability",
+      "column": 0,
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105
+        ],
+        "feature_scales": [
+          0.3175313697338557
+        ],
+        "standardized_coefficients": [
+          3.279420498560026
+        ],
+        "standardized_intercept": 0.4790377178432236,
+        "coefficients": [
+          10.327863043291527
+        ],
+        "intercept": -5.128132296587599
+      }
+    },
+    "single/kev/probability/C10": {
+      "id": "single/kev/probability/C10",
+      "family": "single",
+      "kind": "probability",
+      "column": 0,
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105
+        ],
+        "feature_scales": [
+          0.3175313697338557
+        ],
+        "standardized_coefficients": [
+          3.396011456793711
+        ],
+        "standardized_intercept": 0.5023224199174279,
+        "coefficients": [
+          10.695042381608266
+        ],
+        "intercept": -5.304195413815229
+      }
+    },
+    "single/kev/probability/C100": {
+      "id": "single/kev/probability/C100",
+      "family": "single",
+      "kind": "probability",
+      "column": 0,
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105
+        ],
+        "feature_scales": [
+          0.3175313697338557
+        ],
+        "standardized_coefficients": [
+          3.4087854487558613
+        ],
+        "standardized_intercept": 0.5048906812396177,
+        "coefficients": [
+          10.735271452433164
+        ],
+        "intercept": -5.3234681895684
+      }
+    },
+    "single/kev/logodds/C0.01": {
+      "id": "single/kev/logodds/C0.01",
+      "family": "single",
+      "kind": "logodds",
+      "column": 0,
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892873
+        ],
+        "feature_scales": [
+          1.9025526620814404
+        ],
+        "standardized_coefficients": [
+          1.3392838994821523
+        ],
+        "standardized_intercept": 0.22419828959585192,
+        "coefficients": [
+          0.70394051432823
+        ],
+        "intercept": -0.05462981914149578
+      }
+    },
+    "single/kev/logodds/C0.1": {
+      "id": "single/kev/logodds/C0.1",
+      "family": "single",
+      "kind": "logodds",
+      "column": 0,
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892873
+        ],
+        "feature_scales": [
+          1.9025526620814404
+        ],
+        "standardized_coefficients": [
+          2.910366989196482
+        ],
+        "standardized_intercept": 0.5493872899691067,
+        "coefficients": [
+          1.5297169151746197
+        ],
+        "intercept": -0.05652764983046488
+      }
+    },
+    "single/kev/logodds/C1": {
+      "id": "single/kev/logodds/C1",
+      "family": "single",
+      "kind": "logodds",
+      "column": 0,
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892873
+        ],
+        "feature_scales": [
+          1.9025526620814404
+        ],
+        "standardized_coefficients": [
+          4.059377026220224
+        ],
+        "standardized_intercept": 0.8412348917042779,
+        "coefficients": [
+          2.1336476551346357
+        ],
+        "intercept": -0.0038946729163915617
+      }
+    },
+    "single/kev/logodds/C10": {
+      "id": "single/kev/logodds/C10",
+      "family": "single",
+      "kind": "logodds",
+      "column": 0,
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892873
+        ],
+        "feature_scales": [
+          1.9025526620814404
+        ],
+        "standardized_coefficients": [
+          4.335529646255658
+        ],
+        "standardized_intercept": 0.9127332298306203,
+        "coefficients": [
+          2.2787961314629155
+        ],
+        "intercept": 0.010110916437927386
+      }
+    },
+    "single/kev/logodds/C100": {
+      "id": "single/kev/logodds/C100",
+      "family": "single",
+      "kind": "logodds",
+      "column": 0,
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892873
+        ],
+        "feature_scales": [
+          1.9025526620814404
+        ],
+        "standardized_coefficients": [
+          4.368143505621097
+        ],
+        "standardized_intercept": 0.9211658427084815,
+        "coefficients": [
+          2.29593829000362
+        ],
+        "intercept": 0.011753586773354252
+      }
+    },
+    "single/clef/raw": {
+      "id": "single/clef/raw",
+      "family": "single",
+      "kind": "raw",
+      "column": 1
+    },
+    "single/clef/probability/C0.01": {
+      "id": "single/clef/probability/C0.01",
+      "family": "single",
+      "kind": "probability",
+      "column": 1,
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.25654269369011556
+        ],
+        "standardized_coefficients": [
+          1.3925832995956786
+        ],
+        "standardized_intercept": 0.21822037816101972,
+        "coefficients": [
+          5.428271137114571
+        ],
+        "intercept": -2.1059432746079825
+      }
+    },
+    "single/clef/probability/C0.1": {
+      "id": "single/clef/probability/C0.1",
+      "family": "single",
+      "kind": "probability",
+      "column": 1,
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.25654269369011556
+        ],
+        "standardized_coefficients": [
+          2.7386207443162998
+        ],
+        "standardized_intercept": 0.5026878130433374,
+        "coefficients": [
+          10.675107152435022
+        ],
+        "intercept": -4.067956395103597
+      }
+    },
+    "single/clef/probability/C1": {
+      "id": "single/clef/probability/C1",
+      "family": "single",
+      "kind": "probability",
+      "column": 1,
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.25654269369011556
+        ],
+        "standardized_coefficients": [
+          3.459602764146958
+        ],
+        "standardized_intercept": 0.7122548218392816,
+        "coefficients": [
+          13.485485454229696
+        ],
+        "intercept": -5.061678414171847
+      }
+    },
+    "single/clef/probability/C10": {
+      "id": "single/clef/probability/C10",
+      "family": "single",
+      "kind": "probability",
+      "column": 1,
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.25654269369011556
+        ],
+        "standardized_coefficients": [
+          3.593799794194247
+        ],
+        "standardized_intercept": 0.753805556555516,
+        "coefficients": [
+          14.00858368835594
+        ],
+        "intercept": -5.244096945521071
+      }
+    },
+    "single/clef/probability/C100": {
+      "id": "single/clef/probability/C100",
+      "family": "single",
+      "kind": "probability",
+      "column": 1,
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.25654269369011556
+        ],
+        "standardized_coefficients": [
+          3.6086351962529393
+        ],
+        "standardized_intercept": 0.7584351525422753,
+        "coefficients": [
+          14.066411887808044
+        ],
+        "intercept": -5.264227019027
+      }
+    },
+    "single/clef/logodds/C0.01": {
+      "id": "single/clef/logodds/C0.01",
+      "family": "single",
+      "kind": "logodds",
+      "column": 1,
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          -0.39569854097217494
+        ],
+        "feature_scales": [
+          1.2459439895803204
+        ],
+        "standardized_coefficients": [
+          1.3890694908365089
+        ],
+        "standardized_intercept": 0.1921065268894212,
+        "coefficients": [
+          1.1148731423347518
+        ],
+        "intercept": 0.6332602026803464
+      }
+    },
+    "single/clef/logodds/C0.1": {
+      "id": "single/clef/logodds/C0.1",
+      "family": "single",
+      "kind": "logodds",
+      "column": 1,
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          -0.39569854097217494
+        ],
+        "feature_scales": [
+          1.2459439895803204
+        ],
+        "standardized_coefficients": [
+          2.7782048865794513
+        ],
+        "standardized_intercept": 0.36558933850455877,
+        "coefficients": [
+          2.2297991802306076
+        ],
+        "intercept": 1.2479176207827618
+      }
+    },
+    "single/clef/logodds/C1": {
+      "id": "single/clef/logodds/C1",
+      "family": "single",
+      "kind": "logodds",
+      "column": 1,
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          -0.39569854097217494
+        ],
+        "feature_scales": [
+          1.2459439895803204
+        ],
+        "standardized_coefficients": [
+          3.5531169121365074
+        ],
+        "standardized_intercept": 0.49248310602790746,
+        "coefficients": [
+          2.8517469018276875
+        ],
+        "intercept": 1.6209151943030435
+      }
+    },
+    "single/clef/logodds/C10": {
+      "id": "single/clef/logodds/C10",
+      "family": "single",
+      "kind": "logodds",
+      "column": 1,
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          -0.39569854097217494
+        ],
+        "feature_scales": [
+          1.2459439895803204
+        ],
+        "standardized_coefficients": [
+          3.7021771156568093
+        ],
+        "standardized_intercept": 0.5183973093794034,
+        "coefficients": [
+          2.9713832617017064
+        ],
+        "intercept": 1.694169330703911
+      }
+    },
+    "single/clef/logodds/C100": {
+      "id": "single/clef/logodds/C100",
+      "family": "single",
+      "kind": "logodds",
+      "column": 1,
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          -0.39569854097217494
+        ],
+        "feature_scales": [
+          1.2459439895803204
+        ],
+        "standardized_coefficients": [
+          3.718798736081084
+        ],
+        "standardized_intercept": 0.5213122853973776,
+        "coefficients": [
+          2.9847238456792202
+        ],
+        "intercept": 1.702363156337504
+      }
+    },
+    "equal-probability": {
+      "id": "equal-probability",
+      "family": "equal-probability",
+      "kind": "equal-probability"
+    },
+    "equal-calibrated": {
+      "id": "equal-calibrated",
+      "family": "equal-calibrated",
+      "kind": "equal-calibrated",
+      "calibrators": [
+        {
+          "feature_means": [
+            0.5429167670918105
+          ],
+          "feature_scales": [
+            0.3175313697338557
+          ],
+          "standardized_coefficients": [
+            3.279420498560026
+          ],
+          "standardized_intercept": 0.4790377178432236,
+          "coefficients": [
+            10.327863043291527
+          ],
+          "intercept": -5.128132296587599
+        },
+        {
+          "feature_means": [
+            0.4281590941318427
+          ],
+          "feature_scales": [
+            0.25654269369011556
+          ],
+          "standardized_coefficients": [
+            3.459602764146958
+          ],
+          "standardized_intercept": 0.7122548218392816,
+          "coefficients": [
+            13.485485454229696
+          ],
+          "intercept": -5.061678414171847
+        }
+      ]
+    },
+    "equal-logodds": {
+      "id": "equal-logodds",
+      "family": "equal-logodds",
+      "kind": "equal-logodds"
+    },
+    "weighted/lambda0": {
+      "id": "weighted/lambda0",
+      "family": "weighted",
+      "kind": "weighted",
+      "strength": 0.0,
+      "optimization": {
+        "training_objective": 0.20221730015426426,
+        "iterations": 6
+      },
+      "weights": [
+        0.36239006321065426,
+        0.6376099367893457
+      ],
+      "calibrators": [
+        {
+          "feature_means": [
+            0.5429167670918105
+          ],
+          "feature_scales": [
+            0.3175313697338557
+          ],
+          "standardized_coefficients": [
+            3.279420498560026
+          ],
+          "standardized_intercept": 0.4790377178432236,
+          "coefficients": [
+            10.327863043291527
+          ],
+          "intercept": -5.128132296587599
+        },
+        {
+          "feature_means": [
+            0.4281590941318427
+          ],
+          "feature_scales": [
+            0.25654269369011556
+          ],
+          "standardized_coefficients": [
+            3.459602764146958
+          ],
+          "standardized_intercept": 0.7122548218392816,
+          "coefficients": [
+            13.485485454229696
+          ],
+          "intercept": -5.061678414171847
+        }
+      ]
+    },
+    "weighted/lambda0.01": {
+      "id": "weighted/lambda0.01",
+      "family": "weighted",
+      "kind": "weighted",
+      "strength": 0.01,
+      "optimization": {
+        "training_objective": 0.2025275382688571,
+        "iterations": 6
+      },
+      "weights": [
+        0.3873864832777442,
+        0.6126135167222558
+      ],
+      "calibrators": [
+        {
+          "feature_means": [
+            0.5429167670918105
+          ],
+          "feature_scales": [
+            0.3175313697338557
+          ],
+          "standardized_coefficients": [
+            3.279420498560026
+          ],
+          "standardized_intercept": 0.4790377178432236,
+          "coefficients": [
+            10.327863043291527
+          ],
+          "intercept": -5.128132296587599
+        },
+        {
+          "feature_means": [
+            0.4281590941318427
+          ],
+          "feature_scales": [
+            0.25654269369011556
+          ],
+          "standardized_coefficients": [
+            3.459602764146958
+          ],
+          "standardized_intercept": 0.7122548218392816,
+          "coefficients": [
+            13.485485454229696
+          ],
+          "intercept": -5.061678414171847
+        }
+      ]
+    },
+    "weighted/lambda0.1": {
+      "id": "weighted/lambda0.1",
+      "family": "weighted",
+      "kind": "weighted",
+      "strength": 0.1,
+      "optimization": {
+        "training_objective": 0.20337755125145837,
+        "iterations": 4
+      },
+      "weights": [
+        0.4582508877687221,
+        0.5417491122312779
+      ],
+      "calibrators": [
+        {
+          "feature_means": [
+            0.5429167670918105
+          ],
+          "feature_scales": [
+            0.3175313697338557
+          ],
+          "standardized_coefficients": [
+            3.279420498560026
+          ],
+          "standardized_intercept": 0.4790377178432236,
+          "coefficients": [
+            10.327863043291527
+          ],
+          "intercept": -5.128132296587599
+        },
+        {
+          "feature_means": [
+            0.4281590941318427
+          ],
+          "feature_scales": [
+            0.25654269369011556
+          ],
+          "standardized_coefficients": [
+            3.459602764146958
+          ],
+          "standardized_intercept": 0.7122548218392816,
+          "coefficients": [
+            13.485485454229696
+          ],
+          "intercept": -5.061678414171847
+        }
+      ]
+    },
+    "probability-logistic/C0.01": {
+      "id": "probability-logistic/C0.01",
+      "family": "probability-logistic",
+      "kind": "probability-logistic",
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105,
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.3175313697338556,
+          0.2565426936901156
+        ],
+        "standardized_coefficients": [
+          0.9110134674879659,
+          0.9658865497811036
+        ],
+        "standardized_intercept": 0.2657694827160797,
+        "coefficients": [
+          2.8690502870678496,
+          3.765012894687316
+        ],
+        "intercept": -2.903910534146656
+      }
+    },
+    "probability-logistic/C0.1": {
+      "id": "probability-logistic/C0.1",
+      "family": "probability-logistic",
+      "kind": "probability-logistic",
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105,
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.3175313697338556,
+          0.2565426936901156
+        ],
+        "standardized_coefficients": [
+          1.5765384036908474,
+          1.7900152313877213
+        ],
+        "standardized_intercept": 0.5742247693217044,
+        "coefficients": [
+          4.964984735247577,
+          6.977455509023094
+        ],
+        "intercept": -5.108809721887662
+      }
+    },
+    "probability-logistic/C1": {
+      "id": "probability-logistic/C1",
+      "family": "probability-logistic",
+      "kind": "probability-logistic",
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105,
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.3175313697338556,
+          0.2565426936901156
+        ],
+        "standardized_coefficients": [
+          1.9029306539986195,
+          2.228459178238094
+        ],
+        "standardized_intercept": 0.772929640388384,
+        "coefficients": [
+          5.992890263389075,
+          8.686504168892473
+        ],
+        "intercept": -6.199916723072278
+      }
+    },
+    "probability-logistic/C10": {
+      "id": "probability-logistic/C10",
+      "family": "probability-logistic",
+      "kind": "probability-logistic",
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105,
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.3175313697338556,
+          0.2565426936901156
+        ],
+        "standardized_coefficients": [
+          1.9624346692063628,
+          2.3052810642583412
+        ],
+        "standardized_intercept": 0.8097054577814355,
+        "coefficients": [
+          6.180285969386935,
+          8.985954856476827
+        ],
+        "intercept": -6.393093711679747
+      }
+    },
+    "probability-logistic/C100": {
+      "id": "probability-logistic/C100",
+      "family": "probability-logistic",
+      "kind": "probability-logistic",
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5429167670918105,
+          0.4281590941318427
+        ],
+        "feature_scales": [
+          0.3175313697338556,
+          0.2565426936901156
+        ],
+        "standardized_coefficients": [
+          1.9688696932558722,
+          2.313816099417339
+        ],
+        "standardized_intercept": 0.81371517932987,
+        "coefficients": [
+          6.200551759361963,
+          9.019224309744933
+        ],
+        "intercept": -6.414331246280649
+      }
+    },
+    "logodds-logistic/C0.01": {
+      "id": "logodds-logistic/C0.01",
+      "family": "logodds-logistic",
+      "kind": "logodds-logistic",
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892857,
+          -0.39569854097217416
+        ],
+        "feature_scales": [
+          1.9025526620814408,
+          1.2459439895803197
+        ],
+        "standardized_coefficients": [
+          0.872264378581661,
+          1.0068209696018542
+        ],
+        "standardized_intercept": 0.26904498922449027,
+        "coefficients": [
+          0.45847055693448274,
+          0.8080788366265076
+        ],
+        "intercept": 0.407202195633396
+      }
+    },
+    "logodds-logistic/C0.1": {
+      "id": "logodds-logistic/C0.1",
+      "family": "logodds-logistic",
+      "kind": "logodds-logistic",
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892857,
+          -0.39569854097217416
+        ],
+        "feature_scales": [
+          1.9025526620814408,
+          1.2459439895803197
+        ],
+        "standardized_coefficients": [
+          1.6922748046565195,
+          1.8744807885429182
+        ],
+        "standardized_intercept": 0.5864272415465205,
+        "coefficients": [
+          0.8894759332470346,
+          1.5044663357413948
+        ],
+        "intercept": 0.8294244066409808
+      }
+    },
+    "logodds-logistic/C1": {
+      "id": "logodds-logistic/C1",
+      "family": "logodds-logistic",
+      "kind": "logodds-logistic",
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892857,
+          -0.39569854097217416
+        ],
+        "feature_scales": [
+          1.9025526620814408,
+          1.2459439895803197
+        ],
+        "standardized_coefficients": [
+          2.352604221272926,
+          2.2684817507715147
+        ],
+        "standardized_intercept": 0.8315544679260757,
+        "coefficients": [
+          1.2365514333249086,
+          1.820693201092951
+        ],
+        "intercept": 1.0622068821938804
+      }
+    },
+    "logodds-logistic/C10": {
+      "id": "logodds-logistic/C10",
+      "family": "logodds-logistic",
+      "kind": "logodds-logistic",
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892857,
+          -0.39569854097217416
+        ],
+        "feature_scales": [
+          1.9025526620814408,
+          1.2459439895803197
+        ],
+        "standardized_coefficients": [
+          2.519803696825733,
+          2.3291184483085363
+        ],
+        "standardized_intercept": 0.8876983317729183,
+        "coefficients": [
+          1.3244330877385566,
+          1.869360475098941
+        ],
+        "intercept": 1.1027987327382807
+      }
+    },
+    "logodds-logistic/C100": {
+      "id": "logodds-logistic/C100",
+      "family": "logodds-logistic",
+      "kind": "logodds-logistic",
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.39609612326892857,
+          -0.39569854097217416
+        ],
+        "feature_scales": [
+          1.9025526620814408,
+          1.2459439895803197
+        ],
+        "standardized_coefficients": [
+          2.539703826543281,
+          2.3355254265619383
+        ],
+        "standardized_intercept": 0.8942593029201841,
+        "coefficients": [
+          1.3348927875482726,
+          1.8745027433766346
+        ],
+        "intercept": 1.1072514453951319
+      }
+    },
+    "decision-logistic/C0.01": {
+      "id": "decision-logistic/C0.01",
+      "family": "decision-logistic",
+      "kind": "decision-logistic",
+      "C": 0.01,
+      "linear_parameters": {
+        "feature_means": [
+          0.5244140625,
+          0.435546875
+        ],
+        "feature_scales": [
+          0.4994035978567296,
+          0.4958283923674948
+        ],
+        "standardized_coefficients": [
+          0.8732819034645805,
+          0.8728816438676418
+        ],
+        "standardized_intercept": 0.2545850538219283,
+        "coefficients": [
+          1.748649603672079,
+          1.7604511103121443
+        ],
+        "intercept": -1.429190368415496
+      }
+    },
+    "decision-logistic/C0.1": {
+      "id": "decision-logistic/C0.1",
+      "family": "decision-logistic",
+      "kind": "decision-logistic",
+      "C": 0.1,
+      "linear_parameters": {
+        "feature_means": [
+          0.5244140625,
+          0.435546875
+        ],
+        "feature_scales": [
+          0.4994035978567296,
+          0.4958283923674948
+        ],
+        "standardized_coefficients": [
+          1.2834008128886574,
+          1.4621494605363505
+        ],
+        "standardized_intercept": 0.5183914859139566,
+        "coefficients": [
+          2.5698669741198845,
+          2.948902247317544
+        ],
+        "intercept": -2.1136680525684683
+      }
+    },
+    "decision-logistic/C1": {
+      "id": "decision-logistic/C1",
+      "family": "decision-logistic",
+      "kind": "decision-logistic",
+      "C": 1.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5244140625,
+          0.435546875
+        ],
+        "feature_scales": [
+          0.4994035978567296,
+          0.4958283923674948
+        ],
+        "standardized_coefficients": [
+          1.3792610002742294,
+          1.6924665804873305
+        ],
+        "standardized_intercept": 0.6524880866697746,
+        "coefficients": [
+          2.761816306877941,
+          3.4134119920121866
+        ],
+        "intercept": -2.2825481489072663
+      }
+    },
+    "decision-logistic/C10": {
+      "id": "decision-logistic/C10",
+      "family": "decision-logistic",
+      "kind": "decision-logistic",
+      "C": 10.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5244140625,
+          0.435546875
+        ],
+        "feature_scales": [
+          0.4994035978567296,
+          0.4958283923674948
+        ],
+        "standardized_coefficients": [
+          1.3906664652381844,
+          1.7263449026647986
+        ],
+        "standardized_intercept": 0.6733070306221701,
+        "coefficients": [
+          2.78465447827459,
+          3.481738700806947
+        ],
+        "intercept": -2.3034653476916516
+      }
+    },
+    "decision-logistic/C100": {
+      "id": "decision-logistic/C100",
+      "family": "decision-logistic",
+      "kind": "decision-logistic",
+      "C": 100.0,
+      "linear_parameters": {
+        "feature_means": [
+          0.5244140625,
+          0.435546875
+        ],
+        "feature_scales": [
+          0.4994035978567296,
+          0.4958283923674948
+        ],
+        "standardized_coefficients": [
+          1.391874453136478,
+          1.7297597536332097
+        ],
+        "standardized_intercept": 0.6756988622628295,
+        "coefficients": [
+          2.787073339298975,
+          3.4886258638274144
+        ],
+        "intercept": -2.305341683118593
+      }
+    },
+    "forest/depth2-leaf20": {
+      "id": "forest/depth2-leaf20",
+      "family": "forest",
+      "kind": "forest",
+      "depth": 2,
+      "leaf": 20,
+      "feature_importances": [
+        0.46229011165068745,
+        0.5377098883493125
+      ]
+    },
+    "forest/depth2-leaf80": {
+      "id": "forest/depth2-leaf80",
+      "family": "forest",
+      "kind": "forest",
+      "depth": 2,
+      "leaf": 80,
+      "feature_importances": [
+        0.4696839934700212,
+        0.5303160065299787
+      ]
+    },
+    "forest/depth4-leaf20": {
+      "id": "forest/depth4-leaf20",
+      "family": "forest",
+      "kind": "forest",
+      "depth": 4,
+      "leaf": 20,
+      "feature_importances": [
+        0.4594923566559019,
+        0.5405076433440982
+      ]
+    },
+    "forest/depth4-leaf80": {
+      "id": "forest/depth4-leaf80",
+      "family": "forest",
+      "kind": "forest",
+      "depth": 4,
+      "leaf": 80,
+      "feature_importances": [
+        0.4702257670240315,
+        0.5297742329759685
+      ]
+    },
+    "majority": {
+      "id": "majority",
+      "family": "majority",
+      "kind": "majority"
+    }
+  }
+}

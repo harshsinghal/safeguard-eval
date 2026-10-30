@@ -1,0 +1,30 @@
+{
+  "all-three": {
+    "fitting_rows": 1024,
+    "excluded_fitting_rows": 0,
+    "feature_names": [
+      "jev",
+      "kev",
+      "clef"
+    ],
+    "calibration_folds": 5,
+    "clipped_logodds_counts": {
+      "jev": 427,
+      "kev": 0,
+      "clef": 0
+    }
+  },
+  "open-only": {
+    "fitting_rows": 1024,
+    "excluded_fitting_rows": 0,
+    "feature_names": [
+      "kev",
+      "clef"
+    ],
+    "calibration_folds": 5,
+    "clipped_logodds_counts": {
+      "kev": 0,
+      "clef": 0
+    }
+  }
+}

@@ -125,6 +125,7 @@ def prepare(bundle):
     original_hashes, inputs, held = {}, {}, {}
     for model in MODELS:
         checks = read(ROOT / ARCHIVES[model] / "checksums.json")
+        checks = checks.get("sha256", checks)
         for split in COUNTS:
             for policy in POLICIES:
                 rel = original(model, split, policy)
