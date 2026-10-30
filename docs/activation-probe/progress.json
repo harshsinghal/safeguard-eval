@@ -1,5 +1,5 @@
 {
-  "status": "extracting-development",
+  "status": "frozen-before-test",
   "models": [
     "Qwen3.5-0.8B",
     "PolicyLM-1.7B"
@@ -7,14 +7,23 @@
   "fit_n": 4096,
   "validation_n": 1536,
   "test_n": 1699,
-  "unit_tests_passed": 8,
+  "unit_tests_passed": 9,
   "prior_cumulative_usd": 13.79540555656,
   "cap_usd": 20,
   "max_rental_usd": 1.95,
   "protocol_commit": "7161578",
-  "implementation_commit": "b5fd782",
+  "implementation_commit": "d223aa2",
   "instance_id": "gpu-bdc4ea4b",
   "hourly_usd": 0.65,
   "auto_terminate_at": "2026-10-30T20:18:22.409095Z",
-  "updated_utc": "2026-10-30T17:19:24.614100+00:00"
+  "updated_utc": "2026-10-30T17:46:26.669221+00:00",
+  "policylm_development_complete": true,
+  "policylm_hook_parity_max_difference": 0.0,
+  "qwen_smoke_examples": 16,
+  "portable_input_restoration": "exact hashes verified for fitting and validation",
+  "qwen_development_complete": true,
+  "probe_fits": 70,
+  "invalid_candidates": 0,
+  "empty_input_check": "passed",
+  "primary_stronger_single": "primary-policylm"
 }

@@ -99,6 +99,8 @@ class ActivationProbeTests(unittest.TestCase):
                 frozen=common.digest(root/'freeze.json')
                 study.evaluate(root)
                 study.reproduce(root)
+                from tools.verify_activation_probe import verify
+                verify(root)
             self.assertEqual(frozen,common.digest(root/'freeze.json'))
             result=common.read(root/'test-results.json')
             self.assertEqual(result['profiles']['balanced']['primary-combined']['test']['n'],20)
