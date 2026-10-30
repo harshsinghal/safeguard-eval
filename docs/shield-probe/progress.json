@@ -1,5 +1,5 @@
 {
-  "status": "implementation-tested",
+  "status": "gpu-setup",
   "created_utc": "2026-10-30T19:57:53.219340+00:00",
   "models": [
     "Shieldstral-1.0-3B",
@@ -12,5 +12,10 @@
   "prior_cumulative_usd": 14.17540555656,
   "cap_usd": 20,
   "max_rental_usd": 2.4,
-  "next_study": "Training-error-derived policy corrections; recorded, not started"
+  "next_study": "Training-error-derived policy corrections; recorded, not started",
+  "protocol_commit": "7e148c7",
+  "instance_id": "gpu-19ad69df",
+  "hourly_usd": 0.8,
+  "auto_terminate_at": "2026-10-30T23:00:18.582386Z",
+  "updated_utc": "2026-10-30T20:01:28.931141+00:00"
 }

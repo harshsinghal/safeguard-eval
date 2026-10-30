@@ -57,6 +57,7 @@ class Extractor:
         if not mask.any() and serial:raise ValueError('Empty content mask for nonempty text')
         ids=self.tokenizer.apply_chat_template(self.messages(text),tokenize=True,
                       add_generation_prompt=True,**self.template_kwargs)
+        if hasattr(ids,'keys'):ids=ids['input_ids']
         if enc['input_ids'][0].tolist()!=ids:raise ValueError('Tokenization differs from native template')
         if enc['input_ids'].shape[1]>8192:raise InputLimitError('Token limit; no truncation')
         return {k:v.to('cuda') for k,v in enc.items()},mask
