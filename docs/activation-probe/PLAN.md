@@ -53,6 +53,10 @@ tokenizer, policy, adapter, environment and artifact hashes.
 * Intermediate indices are outputs after that many blocks; final output includes
   final normalization. Layer numbers are architectural locations, not equivalent
   computations between these different model architectures.
+  PolicyLM uses read-only block hooks at the same depths because its released
+  optional hidden-state path fails on a batch-dimension bug. Match its native
+  MNTP output alignment exactly, including its shifted positions; do not change
+  the pretrained head's slot alignment. This technical amendment preceded fitting.
 * Concatenate per-example vectors; never average coordinates from different models
   or average all positive/negative examples into class centroids.
 

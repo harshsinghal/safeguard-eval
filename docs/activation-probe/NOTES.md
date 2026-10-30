@@ -30,6 +30,15 @@ Technical amendments before extraction/fitting:
 * Over-limit Qwen input is explicitly unresolved rather than truncated; other
   implementation errors abort the job for investigation rather than silently
   turning an entire run into failed predictions.
+* First GPU smoke check failed before any complete feature cache or classifier
+  fit. In pinned `inference/bidirlm/modeling_bidirlm.py`, the optional hidden-state
+  path takes `[0]` from an already batched reconstruction (line 439), then indexes
+  the resulting 2-D tensors as 3-D at line 467. No upstream weights or files were
+  edited. Read-only hooks capture outputs of blocks 14 and 21, while block 28's
+  normalized output comes from the ordinary encoder result. Packed single-row
+  intermediate states are aligned with the release's existing MNTP shift and
+  final-position removal. The native classifier computation remains intact and
+  must pass the same score-parity check. This repair does not add candidates.
 
 Execution outcomes, any further repairs, billing and interpretation are appended
 after they are observed. They are never assumed from the hypothesis.

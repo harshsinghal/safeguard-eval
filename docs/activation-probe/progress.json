@@ -1,5 +1,5 @@
 {
-  "status": "registered",
+  "status": "extracting-development",
   "models": [
     "Qwen3.5-0.8B",
     "PolicyLM-1.7B"
@@ -10,5 +10,11 @@
   "unit_tests_passed": 8,
   "prior_cumulative_usd": 13.79540555656,
   "cap_usd": 20,
-  "max_rental_usd": 1.95
+  "max_rental_usd": 1.95,
+  "protocol_commit": "7161578",
+  "implementation_commit": "b5fd782",
+  "instance_id": "gpu-bdc4ea4b",
+  "hourly_usd": 0.65,
+  "auto_terminate_at": "2026-10-30T20:18:22.409095Z",
+  "updated_utc": "2026-10-30T17:19:24.614100+00:00"
 }

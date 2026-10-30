@@ -80,34 +80,52 @@ class PolicyExtractor:
         self.captured = []
         self.native.model.base.register_forward_pre_hook(self.pre, with_kwargs=True)
         self.native.model.base.register_forward_hook(self.post, with_kwargs=True)
+        for layer in MODELS['policylm']['layers'][:-1]:
+            self.native.model.base.layers[layer-1].register_forward_hook(self.layer_hook(layer))
 
     def pre(self, module, args, kwargs):
         if self.active:
-            kwargs['output_hidden_states'] = True
+            self.current_ids = kwargs['input_ids']
+            self.current_attention = kwargs['attention_mask']
+            self.current_features = {}
+            # The release's optional hidden-state path removes a batch dimension
+            # before slicing it as 3-D. Preserve native forward and observe blocks.
+            kwargs['output_hidden_states'] = False
         return args, kwargs
 
-    def post(self, module, args, kwargs, out):
-        if not self.active:
-            return
+    def layer_hook(self, layer):
+        def observe(module, args, out):
+            if self.active:
+                h = out[0] if isinstance(out,tuple) else out
+                if h.ndim!=2 or h.shape[0]!=self.current_ids.shape[1]+1:
+                    raise ValueError('Unexpected packed native representation')
+                # Exactly the upstream MNTP output alignment: prepend one token,
+                # then drop the final position. Do not independently shift slots.
+                self.pool(h.unsqueeze(0)[:,:-1,:],layer)
+        return observe
+
+    def pool(self, hidden, layer):
         torch = self.torch
-        ids = kwargs['input_ids']
-        if ids.shape[0] != 1 or len(out.hidden_states) != 29:
-            raise ValueError('Changed native batching or depth')
-        if out.last_hidden_state.shape[:2] != ids.shape or not torch.equal(out.hidden_states[-1],out.last_hidden_state):
+        ids = self.current_ids
+        if ids.shape[0] != 1 or hidden.shape[:2] != ids.shape:
             raise ValueError('Native hidden-state alignment changed')
         slot = (ids[0] == self.native.model.label_token_id)
         if int(slot.sum()) != 1:
             raise ValueError('Expected exactly one category slot')
-        attention = kwargs['attention_mask'][0].bool()
+        attention = self.current_attention[0].bool()
         content = attention.clone(); content[:self.prefix_length] = False
         if not content.any():
             raise ValueError('Empty native content')
-        features = {}
-        for layer in MODELS['policylm']['layers']:
-            h = out.hidden_states[layer][0].float()
-            features[f'policylm-l{layer}-slot'] = h[slot][0].cpu().numpy()
-            features[f'policylm-l{layer}-mean'] = h[content].mean(0).cpu().numpy()
-        self.captured.append((features,int(attention.sum()),int(content.sum())))
+        h = hidden[0].float()
+        self.current_features[f'policylm-l{layer}-slot'] = h[slot][0].cpu().numpy()
+        self.current_features[f'policylm-l{layer}-mean'] = h[content].mean(0).cpu().numpy()
+
+    def post(self, module, args, kwargs, out):
+        if not self.active:return
+        self.pool(out.last_hidden_state,28)
+        if len(self.current_features)!=6:raise ValueError('Missing layer capture')
+        tokens=int(self.current_attention.sum())
+        self.captured.append((self.current_features,tokens,tokens-self.prefix_length))
 
     def one(self, text):
         self.captured = []

@@ -1,5 +1,7 @@
 import tempfile
 import unittest
+import contextlib
+import io
 from pathlib import Path
 from unittest import mock
 import numpy as np
@@ -69,6 +71,38 @@ class ActivationProbeTests(unittest.TestCase):
                 study.check_freeze(root)
                 common.write(root/'fits.json',{'coefficient':2})
                 with self.assertRaisesRegex(ValueError,'artifact changed'):study.check_freeze(root)
+
+    def test_complete_train_freeze_test_pipeline_with_synthetic_features(self):
+        rng=np.random.default_rng(7)
+        small={k:{**v,'width':2} for k,v in common.MODELS.items()}
+        with tempfile.TemporaryDirectory() as t, mock.patch.dict(common.MODELS,small), \
+                mock.patch.object(study,'historical_controls',return_value={}):
+            root=Path(t);common.write(root/'data-manifest.json',{})
+            common.write(root/'policy.json',{'id':'synthetic-test'})
+            for split,n in [('fit',40),('validation',20),('test',20)]:
+                y=np.arange(n)%2
+                meta=[dict(id=f'{split}-{i}',group=f'{split}-{i}',expected='BLOCK' if yy else 'ALLOW',
+                           prompt_sha256=f'{split}-{i}',subcategory='test',adversarial=False)
+                      for i,yy in enumerate(y)]
+                meta_path=root/'metadata'/(split+'.jsonl.gz');common.write_rows(meta_path,meta)
+                for model in common.MODELS:
+                    folder=root/'features'/model/split;folder.mkdir(parents=True)
+                    for key in common.keys(model):
+                        a=rng.normal(size=(n,2));a[:,0]+=y*1.5
+                        np.save(folder/(key+'.npy'),a)
+                    common.write(folder/'records.json',[dict(id=r['id'],native_score=float(.2+.6*yy)) for r,yy in zip(meta,y)])
+                    common.write(folder/'manifest.json',dict(ids=[r['id'] for r in meta],
+                        metadata_sha256=common.digest(meta_path),valid=[True]*n,
+                        artifacts={p.name:common.digest(p) for p in folder.glob('*.npy')}))
+            with contextlib.redirect_stdout(io.StringIO()):
+                study.train(root)
+                frozen=common.digest(root/'freeze.json')
+                study.evaluate(root)
+                study.reproduce(root)
+            self.assertEqual(frozen,common.digest(root/'freeze.json'))
+            result=common.read(root/'test-results.json')
+            self.assertEqual(result['profiles']['balanced']['primary-combined']['test']['n'],20)
+            self.assertEqual(len(result['paired_differences']),14)
 
 
 if __name__=='__main__':unittest.main()
