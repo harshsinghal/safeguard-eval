@@ -162,3 +162,11 @@ The proposed [eight-week student curriculum](STUDENT-CURRICULUM.md) was recorded
 moderation, language models, labeling, policy authoring, evaluation, and operation.
 The outline includes companion readings, exercises, and a six-week option. The
 articles have not yet been written; the user asked to revisit them later.
+
+## Approved sequence: representations, then corrections
+
+The [Shieldstral/Qwen representation study](../shield-probe/PLAN.md) runs first.
+The [training-error correction experiment](TRAINING-ERROR-CORRECTIONS.md) is
+recorded as the next study, after reviewing the representation results. It will
+learn policy edits from development errors with an explicit holdout and bounded
+search; it has not started.

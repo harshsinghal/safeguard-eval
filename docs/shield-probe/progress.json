@@ -1,0 +1,16 @@
+{
+  "status": "implementation-tested",
+  "created_utc": "2026-10-30T19:57:53.219340+00:00",
+  "models": [
+    "Shieldstral-1.0-3B",
+    "Qwen3.5-4B"
+  ],
+  "fit_n": 4096,
+  "validation_n": 1536,
+  "test_n": 1699,
+  "tests_passed": 11,
+  "prior_cumulative_usd": 14.17540555656,
+  "cap_usd": 20,
+  "max_rental_usd": 2.4,
+  "next_study": "Training-error-derived policy corrections; recorded, not started"
+}
