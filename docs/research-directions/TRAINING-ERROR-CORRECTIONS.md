@@ -1,8 +1,10 @@
-# Next experiment: improve policy text using training errors
+# Research proposal: improve policy text using training errors
 
-Status: execution authorized after review of the Shieldstral representation
-results. The [concrete registered protocol](../policy-corrections/PLAN.md) and
-[study record](../policy-corrections/README.md) now track this experiment.
+Status: completed as the [policy-correction study](../policy-corrections/README.md).
+The original proposed approach is preserved below. The [registered protocol](../policy-corrections/PLAN.md)
+sets the concrete design; the [results](../policy-corrections/RESULTS.md) show no
+Shieldstral improvement and a modest Qwen transfer gain on the additional holdout,
+with an uncertain gain on reused WildGuardTest.
 
 Question: can a small, auditable set of policy revisions derived from training
 mistakes reduce false blocks and missed harmful requests on held-out content,
@@ -53,12 +55,12 @@ The key outcome is whether a reproducible policy-authoring process improves the
 complete classifier under an explicit error budget. Improvements are not assumed;
 edits can help one class while hurting another, or fail to transfer between models.
 The registered protocol fixes models, sample sizes, iteration budget, comparison
-groups, metrics and compute cap. The current rental reserves at most $2.40 within
-the existing cumulative $20 cap; see the study record for actual usage.
+groups, metrics and compute cap. The rental reserved at most $2.40 within
+the existing cumulative $20 cap. Actual cost was $0.72; compute was terminated.
 
 Relevant precedent: [ProTeGi / prompt optimization with textual gradients](https://arxiv.org/abs/2305.03495).
 First study: [Shieldstral representation results](../shield-probe/README.md).
-The representation experiment is complete; the correction study is now starting.
-Its observed validation-to-test gap makes an additional project holdout especially
+Both studies are complete. The representation study's
+observed validation-to-test gap makes an additional project holdout especially
 important. Do not use the first study's test mistakes to author the corrections
 and then call evaluation on those same examples a held-out improvement.

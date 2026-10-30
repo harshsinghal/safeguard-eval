@@ -1,0 +1,57 @@
+{
+  "created_utc": "2026-10-30T21:24:53.242446+00:00",
+  "counts": {
+    "discovery": {
+      "n": 4096,
+      "groups": 3823,
+      "labels": {
+        "ALLOW": 1916,
+        "BLOCK": 2180
+      }
+    },
+    "validation": {
+      "n": 1536,
+      "groups": 1536,
+      "labels": {
+        "ALLOW": 735,
+        "BLOCK": 801
+      }
+    },
+    "holdout": {
+      "n": 2048,
+      "groups": 2048,
+      "labels": {
+        "ALLOW": 992,
+        "BLOCK": 1056
+      }
+    },
+    "test": {
+      "n": 1699,
+      "groups": 1699,
+      "labels": {
+        "ALLOW": 945,
+        "BLOCK": 754
+      }
+    }
+  },
+  "hashes": {
+    "metadata/discovery.jsonl.gz": "66bf9ace1fcf5905154cac987a96ef86881b02eb5453bced7db2190b6bc872d6",
+    "inputs/discovery.jsonl": "cd6f82e77a376c0dafb436c022997732257b8b7b15f6a7e47b6d763078c130ba",
+    "metadata/validation.jsonl.gz": "efad538b5c189a1d7aa91adc533a8187c880875e1eda3fc568901576c7b0c98e",
+    "inputs/validation.jsonl": "5469ae91ba57a8f6c25dfd70591a3c47e6c7bdfe05ea2b44b6ec30b5fe46938d",
+    "metadata/holdout.jsonl.gz": "fc31a5072f1144b826b0c41ffd779686dfab72a8b0872e0ac99ef94041ef9aa1",
+    "sealed-inputs/holdout.jsonl": "595584af1ccdcd53f4ba73f5b46358482a0a8f64095d9f0fd5aee5961fe730d9",
+    "metadata/test.jsonl.gz": "5ec8cef60b7dbc7868448b872ee79cc6ea4b91c147d46840f3d71eed982d258c",
+    "sealed-inputs/test.jsonl": "09a58a739923884a43dfa23937e8bf24c8e6fb07851fed6822560551361292d3",
+    "prior-use-audit.json": "9877cd93e1dea5440d1d5e279fa35555b24b95ba482239d87755e37ce6006e77",
+    "discovery-errors.jsonl.gz": "ea8d4033c4dcb680822d77cfb55bcdad65323d53a29d99ac7446303a6d3d7c2d",
+    "discovery-summary.json": "92c3e42106899d713e3a645f45cfe8809fd074875c502c48f48d56360f3b78e4",
+    "policies/p0.json": "c52970c306ee4b66901c0ba9b1e057b0cfeca7d300771a652fe79a3bdbddeaca"
+  },
+  "source_train_sha256": "02ecea8a724a9146a1e473a95a7cdf262adfe9c7d5408953ca86d2fcfbdc8953",
+  "source_test_sha256": "6ccc2909c1ae6d41424fac69f1fc32535b1de39cb8f80407d81e8bc64a0bebca",
+  "source_assignments_sha256": "605afb9e96f8ee16353bea2e2303a3ba73acb60eb7d33170e61933ef0a4252cd",
+  "seed": 20261030,
+  "test_role": "historical reused public test",
+  "holdout_role": "previously unevaluated recorded project audit groups"
+}

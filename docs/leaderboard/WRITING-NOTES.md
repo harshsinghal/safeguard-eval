@@ -283,4 +283,39 @@ selection history; a numerical comparison does not equalize development budgets.
 The practical implication is to retain a native-score baseline and demand a
 measured benefit before maintaining an additional model or classifier. The
 [training-error policy correction study](../research-directions/TRAINING-ERROR-CORRECTIONS.md)
-is the next proposal, not a completed experiment or a remedy demonstrated here.
+is now completed separately; it does not turn this representation result into a successful policy intervention.
+
+
+## Training-error corrections: keep the model and population qualifications
+
+The [correction study](../policy-corrections/README.md) uses newly reserved
+validation and an additional project holdout. Do not insert its results into
+this common-validation leaderboard or describe its holdout as a new independent
+human-labeled benchmark. The additional holdout comes from WildGuardTrain;
+the official test is reused and upstream checkpoint exposure remains unknown.
+
+The Shieldstral-selected p1 clarification did not improve Shieldstral. Against
+the separately tuned original policy, its paired balanced-accuracy change was
+−0.10 points on the additional holdout (interval −0.29 to +0.09) and −0.13 on
+the reused test (−0.43 to +0.14). The small validation win did not generalize.
+
+Transferred to Qwen without a wording search, p1 improved the additional holdout
+by +0.92 points (+0.17 to +1.70), with 30 fewer misses and 10 more false blocks.
+The reused-test change was +0.81 points (−0.04 to +1.63), so it remains uncertain.
+At fixed cutoff 0.5, Qwen's changes were +1.04 points on the additional holdout
+and +0.35 on reused test. Explain which comparator a claim uses: the error
+tradeoff changes when the baseline's cutoff changes.
+
+These are descriptive, unadjusted intervals. One bounded authoring round and one
+transfer check do not establish an optimal policy, a general algorithmic gain,
+or that Qwen has caught up with Shieldstral. All original labels remain, including
+39 discovery errors judged insufficiently clear to motivate an edit. None of
+eight separate operating-target selections met its respective target on the
+reused test. Four Qwen score records had a top token outside the canonical label
+pair; conditional scoring remained defined, while free-generation validity was
+not evaluated. No new language-model weights or classifier heads were trained.
+
+The [full tables](../policy-corrections/RESULTS.md), [policy edits](../policy-corrections/POLICY-EDITS.md)
+and [immutable evidence](../../published_runs/2026-10-30-policy-corrections/README.md)
+are the sources for a later article or paper update. Keep negative and uncertain
+findings alongside the gains.

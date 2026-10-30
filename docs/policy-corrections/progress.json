@@ -1,5 +1,5 @@
 {
-  "status": "final-selections-frozen",
+  "status": "completed-and-locally-reproduced",
   "protocol_commit": "016d671",
   "created_utc": "2026-10-30T21:32:36.711807+00:00",
   "prior_cumulative_usd": 14.54540555656,
@@ -40,7 +40,7 @@
       }
     }
   },
-  "updated_utc": "2026-10-30T22:06:39.001729+00:00",
+  "updated_utc": "2026-10-30T22:30:38.397374+00:00",
   "authoring_commit": "5c347b4",
   "gpu": {
     "provider": "GPU.ai",
@@ -49,8 +49,16 @@
     "auto_termination_hours": 3
   },
   "candidate_texts_frozen": true,
-  "holdout_test_inputs_uploaded": false,
+  "holdout_test_inputs_uploaded": true,
   "selected_revision": "p1",
   "cached_baseline_max_absolute_difference": 0.0,
-  "shield_selection_commit": "22c0a62"
+  "shield_selection_commit": "22c0a62",
+  "final_freeze_commit": "fb0e8e1",
+  "cost_usd": 0.72,
+  "cumulative_cost_usd": 15.265405556560001,
+  "remaining_authorized_usd": 4.73459444344,
+  "gpu_status": "terminated",
+  "cpu_results_reproduced": true,
+  "prediction_records": 46220,
+  "source_input_hashes_restored": true
 }

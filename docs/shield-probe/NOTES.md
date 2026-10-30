@@ -90,7 +90,8 @@ was terminated and temporary provider/local SSH keys removed. Cumulative spend
 is $14.54540555656 of the $20 cap. No RunPod resources were used. Source and
 runtime records include the failed first smoke check and its repair.
 
-The next policy-correction experiment is recorded but unrun. This study trained
+At this study's completion, policy corrections were recorded but unrun. The
+[follow-up is now complete](../policy-corrections/README.md). This study trained
 new heads while keeping the language-model weights and policy fixed. It must
 not be described as policy tuning alone, training-free moderation, or proof that
 the learned head will follow future policy edits.

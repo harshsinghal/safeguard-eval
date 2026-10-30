@@ -1,0 +1,15 @@
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+{"model": "qwen", "policy": "p0", "split": "validation", "completed": 256, "total": 1536, "seconds": 35.15060637500005}
+{"model": "qwen", "policy": "p0", "split": "validation", "completed": 512, "total": 1536, "seconds": 69.66982556200014}
+{"model": "qwen", "policy": "p0", "split": "validation", "completed": 768, "total": 1536, "seconds": 104.90623475100006}
+{"model": "qwen", "policy": "p0", "split": "validation", "completed": 1024, "total": 1536, "seconds": 139.720333449}
+{"model": "qwen", "policy": "p0", "split": "validation", "completed": 1280, "total": 1536, "seconds": 174.27840662099993}
+{"model": "qwen", "policy": "p0", "split": "validation", "completed": 1536, "total": 1536, "seconds": 206.98807549000003}
+COMPLETE qwen p0 validation 1536
+{"model": "qwen", "policy": "p1", "split": "validation", "completed": 256, "total": 1536, "seconds": 37.00125679100006}
+{"model": "qwen", "policy": "p1", "split": "validation", "completed": 512, "total": 1536, "seconds": 73.87037605800015}
+{"model": "qwen", "policy": "p1", "split": "validation", "completed": 768, "total": 1536, "seconds": 111.37707950100003}
+{"model": "qwen", "policy": "p1", "split": "validation", "completed": 1024, "total": 1536, "seconds": 148.544336917}
+{"model": "qwen", "policy": "p1", "split": "validation", "completed": 1280, "total": 1536, "seconds": 185.4480795300001}
+{"model": "qwen", "policy": "p1", "split": "validation", "completed": 1536, "total": 1536, "seconds": 220.456892207}
+COMPLETE qwen p1 validation 1536

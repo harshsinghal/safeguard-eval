@@ -64,7 +64,7 @@ def package(state,out):
     for name in ['PLAN.md','RUNNING.md']:
         p=out/name;t=p.read_text().replace('../shield-probe/','../../docs/shield-probe/').replace('../research-directions/','../../docs/research-directions/')
         p.write_text(t)
-    t=(ROOT/'docs/policy-corrections/README.md').read_text().replace('../leaderboard/','../../docs/leaderboard/').replace('../shield-probe/','../../docs/shield-probe/')
+    t=(ROOT/'docs/policy-corrections/README.md').read_text().replace('../leaderboard/','../../docs/leaderboard/').replace('../shield-probe/','../../docs/shield-probe/').replace('(final-selection.json)','(freeze.json)')
     (out/'READOUT.md').write_text(t)
     for p in (ROOT/'docs/policy-corrections/figures').glob('*'):copy(p,Path('figures')/p.name)
     r=read(state/'results.json');columns=['dataset','model','configuration','policy','threshold','n','balanced_accuracy','accuracy','macro_f1','mcc','false_blocks','missed_violations','unresolved','recall','specificity','auroc','brier','log_loss']
@@ -79,7 +79,7 @@ def package(state,out):
         current_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         progress=read(ROOT/'docs/policy-corrections/progress.json'),
         exclusions=['source prompts','provider/SSH credentials','private discovery-error text'],
-        note='One agent-assisted revision round; original labels retained. Public test is reused; additional holdout is unused in recorded project development, not necessarily upstream checkpoint training.'))
+        note='current_commit is Git HEAD before packaging; included file hashes define the exact snapshot. One agent-assisted revision round; original labels retained. Public test is reused; additional holdout is unused in recorded project development, not necessarily upstream checkpoint training.'))
     (out/'requirements.txt').write_text(''.join(n+'=='+importlib.metadata.version(n)+'\n' for n in ['numpy','scipy','scikit-learn']))
     (out/'README.md').write_text('''# Training-error-derived policy corrections
 

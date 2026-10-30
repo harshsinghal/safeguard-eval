@@ -1,0 +1,121 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 256, "total": 4096, "seconds": 9.120383591999996}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 512, "total": 4096, "seconds": 17.448546091999987}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 768, "total": 4096, "seconds": 26.580798017000006}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 1024, "total": 4096, "seconds": 36.113916827}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 1280, "total": 4096, "seconds": 45.78577372999999}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 1536, "total": 4096, "seconds": 54.647879356000004}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 1792, "total": 4096, "seconds": 63.338542294999996}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 2048, "total": 4096, "seconds": 72.89283359800001}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 2304, "total": 4096, "seconds": 82.460969595}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 2560, "total": 4096, "seconds": 92.13482732899999}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 2816, "total": 4096, "seconds": 101.89563972799999}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 3072, "total": 4096, "seconds": 111.51825279799999}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 3328, "total": 4096, "seconds": 120.006023917}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 3584, "total": 4096, "seconds": 128.508843244}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 3840, "total": 4096, "seconds": 137.01679362800002}
+{"model": "shieldstral", "policy": "p0", "split": "discovery", "completed": 4096, "total": 4096, "seconds": 145.52767415}
+COMPLETE shieldstral p0 discovery 4096
+{"model": "shieldstral", "policy": "p0", "split": "validation", "completed": 256, "total": 1536, "seconds": 9.007904560999975}
+{"model": "shieldstral", "policy": "p0", "split": "validation", "completed": 512, "total": 1536, "seconds": 18.562987555999996}
+{"model": "shieldstral", "policy": "p0", "split": "validation", "completed": 768, "total": 1536, "seconds": 28.335663511999996}
+{"model": "shieldstral", "policy": "p0", "split": "validation", "completed": 1024, "total": 1536, "seconds": 37.98792952399998}
+{"model": "shieldstral", "policy": "p0", "split": "validation", "completed": 1280, "total": 1536, "seconds": 47.456372982999994}
+{"model": "shieldstral", "policy": "p0", "split": "validation", "completed": 1536, "total": 1536, "seconds": 55.986581237999985}
+COMPLETE shieldstral p0 validation 1536
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 256, "total": 4096, "seconds": 10.141325034000033}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 512, "total": 4096, "seconds": 19.709382816000016}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 768, "total": 4096, "seconds": 30.418092200000046}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 1024, "total": 4096, "seconds": 41.59915329300003}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 1280, "total": 4096, "seconds": 52.86884171700001}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 1536, "total": 4096, "seconds": 63.023691980000024}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 1792, "total": 4096, "seconds": 72.94856052600005}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 2048, "total": 4096, "seconds": 83.84649539200001}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 2304, "total": 4096, "seconds": 94.84229999900003}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 2560, "total": 4096, "seconds": 105.99249500900004}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 2816, "total": 4096, "seconds": 117.198719412}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 3072, "total": 4096, "seconds": 128.270006431}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 3328, "total": 4096, "seconds": 137.85106621700004}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 3584, "total": 4096, "seconds": 147.44300108200002}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 3840, "total": 4096, "seconds": 157.03956175300004}
+{"model": "shieldstral", "policy": "p1", "split": "discovery", "completed": 4096, "total": 4096, "seconds": 166.64028496100002}
+COMPLETE shieldstral p1 discovery 4096
+{"model": "shieldstral", "policy": "p1", "split": "validation", "completed": 256, "total": 1536, "seconds": 10.161187915999903}
+{"model": "shieldstral", "policy": "p1", "split": "validation", "completed": 512, "total": 1536, "seconds": 21.04393181899991}
+{"model": "shieldstral", "policy": "p1", "split": "validation", "completed": 768, "total": 1536, "seconds": 32.265444111999955}
+{"model": "shieldstral", "policy": "p1", "split": "validation", "completed": 1024, "total": 1536, "seconds": 43.20170366599996}
+{"model": "shieldstral", "policy": "p1", "split": "validation", "completed": 1280, "total": 1536, "seconds": 54.04157066899995}
+{"model": "shieldstral", "policy": "p1", "split": "validation", "completed": 1536, "total": 1536, "seconds": 63.6397334159999}
+COMPLETE shieldstral p1 validation 1536
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 256, "total": 4096, "seconds": 10.06057208599998}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 512, "total": 4096, "seconds": 19.550571246999993}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 768, "total": 4096, "seconds": 30.15266313899997}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 1024, "total": 4096, "seconds": 41.21737739899993}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 1280, "total": 4096, "seconds": 52.35315905899995}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 1536, "total": 4096, "seconds": 62.47561550099999}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 1792, "total": 4096, "seconds": 72.35078170099996}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 2048, "total": 4096, "seconds": 83.20769816300003}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 2304, "total": 4096, "seconds": 94.06736352600001}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 2560, "total": 4096, "seconds": 105.11153540800001}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 2816, "total": 4096, "seconds": 116.21286265999993}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 3072, "total": 4096, "seconds": 127.19868228600001}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 3328, "total": 4096, "seconds": 136.69740522999996}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 3584, "total": 4096, "seconds": 146.24845537800002}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 3840, "total": 4096, "seconds": 155.85120890199994}
+{"model": "shieldstral", "policy": "p2", "split": "discovery", "completed": 4096, "total": 4096, "seconds": 165.56723993799994}
+COMPLETE shieldstral p2 discovery 4096
+{"model": "shieldstral", "policy": "p2", "split": "validation", "completed": 256, "total": 1536, "seconds": 10.221505976999993}
+{"model": "shieldstral", "policy": "p2", "split": "validation", "completed": 512, "total": 1536, "seconds": 21.078530627999953}
+{"model": "shieldstral", "policy": "p2", "split": "validation", "completed": 768, "total": 1536, "seconds": 32.220993926000006}
+{"model": "shieldstral", "policy": "p2", "split": "validation", "completed": 1024, "total": 1536, "seconds": 43.25393989199995}
+{"model": "shieldstral", "policy": "p2", "split": "validation", "completed": 1280, "total": 1536, "seconds": 54.110122804999946}
+{"model": "shieldstral", "policy": "p2", "split": "validation", "completed": 1536, "total": 1536, "seconds": 63.79559847299993}
+COMPLETE shieldstral p2 validation 1536
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 256, "total": 4096, "seconds": 11.449488234}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 512, "total": 4096, "seconds": 22.168094937999967}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 768, "total": 4096, "seconds": 34.58694216699996}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 1024, "total": 4096, "seconds": 47.68211456000006}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 1280, "total": 4096, "seconds": 60.92004291500007}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 1536, "total": 4096, "seconds": 72.43040411599998}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 1792, "total": 4096, "seconds": 83.58520031800003}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 2048, "total": 4096, "seconds": 96.37468224200006}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 2304, "total": 4096, "seconds": 109.34048258000007}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 2560, "total": 4096, "seconds": 122.453558198}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 2816, "total": 4096, "seconds": 135.64436661399998}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 3072, "total": 4096, "seconds": 148.499523803}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 3328, "total": 4096, "seconds": 159.01155951199996}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 3584, "total": 4096, "seconds": 169.54190888799997}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 3840, "total": 4096, "seconds": 180.08101434800005}
+{"model": "shieldstral", "policy": "p3", "split": "discovery", "completed": 4096, "total": 4096, "seconds": 190.63089443499996}
+COMPLETE shieldstral p3 discovery 4096
+{"model": "shieldstral", "policy": "p3", "split": "validation", "completed": 256, "total": 1536, "seconds": 11.15657713600001}
+{"model": "shieldstral", "policy": "p3", "split": "validation", "completed": 512, "total": 1536, "seconds": 23.69218735800007}
+{"model": "shieldstral", "policy": "p3", "split": "validation", "completed": 768, "total": 1536, "seconds": 36.79150466699991}
+{"model": "shieldstral", "policy": "p3", "split": "validation", "completed": 1024, "total": 1536, "seconds": 49.21535207199997}
+{"model": "shieldstral", "policy": "p3", "split": "validation", "completed": 1280, "total": 1536, "seconds": 61.69012123499999}
+{"model": "shieldstral", "policy": "p3", "split": "validation", "completed": 1536, "total": 1536, "seconds": 72.22416384899986}
+COMPLETE shieldstral p3 validation 1536
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 256, "total": 4096, "seconds": 13.049235059000011}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 512, "total": 4096, "seconds": 25.347911257000078}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 768, "total": 4096, "seconds": 38.75233877599999}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 1024, "total": 4096, "seconds": 52.728621399000076}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 1280, "total": 4096, "seconds": 66.907275088}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 1536, "total": 4096, "seconds": 79.93020344500019}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 1792, "total": 4096, "seconds": 92.72439490400006}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 2048, "total": 4096, "seconds": 106.64121330400008}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 2304, "total": 4096, "seconds": 120.55946203899998}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 2560, "total": 4096, "seconds": 134.41787279300002}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 2816, "total": 4096, "seconds": 148.447019468}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 3072, "total": 4096, "seconds": 162.22331707700005}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 3328, "total": 4096, "seconds": 174.5243271490001}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 3584, "total": 4096, "seconds": 186.840220907}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 3840, "total": 4096, "seconds": 199.1713405580001}
+{"model": "shieldstral", "policy": "p4", "split": "discovery", "completed": 4096, "total": 4096, "seconds": 211.5017935420001}
+COMPLETE shieldstral p4 discovery 4096
+{"model": "shieldstral", "policy": "p4", "split": "validation", "completed": 256, "total": 1536, "seconds": 13.042645599000025}
+{"model": "shieldstral", "policy": "p4", "split": "validation", "completed": 512, "total": 1536, "seconds": 26.599198284000067}
+{"model": "shieldstral", "policy": "p4", "split": "validation", "completed": 768, "total": 1536, "seconds": 40.45874647400001}
+{"model": "shieldstral", "policy": "p4", "split": "validation", "completed": 1024, "total": 1536, "seconds": 54.075187970000115}
+{"model": "shieldstral", "policy": "p4", "split": "validation", "completed": 1280, "total": 1536, "seconds": 67.61704403900012}
+{"model": "shieldstral", "policy": "p4", "split": "validation", "completed": 1536, "total": 1536, "seconds": 79.953402246}
+COMPLETE shieldstral p4 validation 1536

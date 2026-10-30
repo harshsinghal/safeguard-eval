@@ -168,7 +168,9 @@ articles have not yet been written; the user asked to revisit them later.
 The [Shieldstral/Qwen representation study](../shield-probe/README.md) is complete.
 It did not establish an advantage from combining hidden representations over
 Shieldstral's direct score; all registered selections and negative findings are recorded.
-The [training-error correction experiment](TRAINING-ERROR-CORRECTIONS.md) is
-now running under its [registered protocol](../policy-corrections/PLAN.md). It
-learns policy edits from discovery errors, uses fresh validation for a bounded
-selection, and reserves an additional 2,048-example project holdout.
+The [training-error correction experiment](../policy-corrections/README.md) is
+also complete. Its selected clarification did not improve Shieldstral. It helped
+Qwen on an additional project holdout, while its reused-WildGuardTest gain remained
+uncertain. The [original proposal](TRAINING-ERROR-CORRECTIONS.md) and
+[registered protocol](../policy-corrections/PLAN.md) explain the boundary between
+discovery, validation and final evaluation. No further correction round is running.

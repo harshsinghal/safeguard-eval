@@ -1,0 +1,76 @@
+{
+  "packaged_utc": "2026-10-30T22:34:13.605623+00:00",
+  "protocol_commit": "016d671",
+  "authoring_commit": "5c347b4",
+  "current_commit": "fb0e8e1421570a57d7cbbbba9132c4deb75d6b7a",
+  "progress": {
+    "status": "completed-and-locally-reproduced",
+    "protocol_commit": "016d671",
+    "created_utc": "2026-10-30T21:32:36.711807+00:00",
+    "prior_cumulative_usd": 14.54540555656,
+    "cap_usd": 20,
+    "max_rental_usd": 2.4,
+    "tests_passed": 4,
+    "counts": {
+      "discovery": {
+        "n": 4096,
+        "groups": 3823,
+        "labels": {
+          "ALLOW": 1916,
+          "BLOCK": 2180
+        }
+      },
+      "validation": {
+        "n": 1536,
+        "groups": 1536,
+        "labels": {
+          "ALLOW": 735,
+          "BLOCK": 801
+        }
+      },
+      "holdout": {
+        "n": 2048,
+        "groups": 2048,
+        "labels": {
+          "ALLOW": 992,
+          "BLOCK": 1056
+        }
+      },
+      "test": {
+        "n": 1699,
+        "groups": 1699,
+        "labels": {
+          "ALLOW": 945,
+          "BLOCK": 754
+        }
+      }
+    },
+    "updated_utc": "2026-10-30T22:30:38.397374+00:00",
+    "authoring_commit": "5c347b4",
+    "gpu": {
+      "provider": "GPU.ai",
+      "model": "L40S",
+      "rate_usd_hour": 0.8,
+      "auto_termination_hours": 3
+    },
+    "candidate_texts_frozen": true,
+    "holdout_test_inputs_uploaded": true,
+    "selected_revision": "p1",
+    "cached_baseline_max_absolute_difference": 0.0,
+    "shield_selection_commit": "22c0a62",
+    "final_freeze_commit": "fb0e8e1",
+    "cost_usd": 0.72,
+    "cumulative_cost_usd": 15.265405556560001,
+    "remaining_authorized_usd": 4.73459444344,
+    "gpu_status": "terminated",
+    "cpu_results_reproduced": true,
+    "prediction_records": 46220,
+    "source_input_hashes_restored": true
+  },
+  "exclusions": [
+    "source prompts",
+    "provider/SSH credentials",
+    "private discovery-error text"
+  ],
+  "note": "current_commit is Git HEAD before packaging; included file hashes define the exact snapshot. One agent-assisted revision round; original labels retained. Public test is reused; additional holdout is unused in recorded project development, not necessarily upstream checkpoint training."
+}

@@ -91,7 +91,30 @@ This remains separate from the common-validation leaderboard. It is evidence
 about supervised readouts under a fixed policy, not another policy-editing gain.
 The paper and released skill have not been silently refreshed.
 
-The [policy-correction experiment](policy-corrections/README.md) is now running.
-Its source-hashed protocol and four candidate revisions were committed before
-inference. A prior-use audit reserved fresh validation and an additional project
-holdout; the reused official test remains a separate historical comparison.
+## Training-error policy corrections and transfer
+
+The [policy-correction experiment](policy-corrections/README.md) is complete.
+One agent-assisted round produced four revisions from 58 discovery mistakes.
+The selected permitted-case clarification did not improve Shieldstral: 98.23%
+to 98.13% balanced accuracy on the additional project holdout, and 90.29% to
+90.15% on reused WildGuardTest, comparing separately selected cutoffs.
+
+The same text helped Qwen on the additional holdout: 88.85% to 89.77%, with
+30 fewer misses and 10 more false blocks. The paired change was +0.92 points
+(interval +0.17 to +1.70). Its reused-test change was +0.81 points, with an
+interval including zero. Fixed-cutoff controls and all unsuccessful candidates
+are retained. This is a model-dependent transfer result, not proof that policy
+corrections reliably improve the originating model.
+
+The new 1,536-row validation and 2,048-row holdout populations exclude recorded
+prior-use groups. They come from WildGuardTrain's model-derived labels and must
+remain distinct from the reused human-labeled test. None of eight operating-target
+selections met its respective target on WildGuardTest. Labels were never changed,
+and the 39 discovery errors with insufficient basis for an edit stayed in the study.
+
+The [full results](policy-corrections/RESULTS.md), [exact edits](policy-corrections/POLICY-EDITS.md),
+[notes](policy-corrections/NOTES.md) and [evidence bundle](../published_runs/2026-10-30-policy-corrections/README.md)
+preserve the data audit, staged freezes, 46,220 score records, paired uncertainty,
+source, runtime and the $0.72 reconciled bill. Both populations reproduce locally.
+The paper, articles and installed skill have not been silently rewritten; this
+record is material for their next explicit revision.

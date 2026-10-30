@@ -1,0 +1,24 @@
+{
+  "verified_utc": "2026-10-30T22:30:38.389120+00:00",
+  "status": "passed",
+  "registered_source_and_artifact_hashes": true,
+  "staged_freezes": true,
+  "restored_input_hashes": [
+    "discovery",
+    "validation",
+    "holdout",
+    "test"
+  ],
+  "cpu_reproduction": "Both dataset results, validation selections, operating profiles, slices and all 12 paired bootstrap contrasts exactly reproduced.",
+  "focused_tests_passed": 4,
+  "prediction_records": 46220,
+  "outputs": 20,
+  "native_parity_checks": 192,
+  "max_native_parity_difference": 0.0,
+  "unresolved": 0,
+  "top_token_outside_pair": 4,
+  "maximum_input_tokens": 3719,
+  "freeze_sha256": "e03a7f9e5c4aafa1d1070666a890cd550d10014a699035c05b1d6b54dc52148f",
+  "results_sha256": "68ecb63de8b6032d79e2cb014233ceac3bc204e5f45b2a62ca3ac32e57a4bed2",
+  "gpu_status": "terminated"
+}

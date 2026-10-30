@@ -1,0 +1,225 @@
+{
+  "measurements": {
+    "qwen/p0/holdout.json": {
+      "n": 2048,
+      "valid": 2048,
+      "seconds": 257.6267571369999,
+      "median_seconds": 0.12508313400007864,
+      "p95_seconds": 0.13733257189981032,
+      "peak_gpu_bytes": 9927090688,
+      "max_tokens": 3449,
+      "top_token_outside_pair": 2,
+      "parity_max_difference": null
+    },
+    "qwen/p0/test.json": {
+      "n": 1699,
+      "valid": 1699,
+      "seconds": 211.60094334500036,
+      "median_seconds": 0.12300829300011173,
+      "p95_seconds": 0.1345171219000349,
+      "peak_gpu_bytes": 9449903104,
+      "max_tokens": 1163,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": null
+    },
+    "qwen/p0/validation.json": {
+      "n": 1536,
+      "valid": 1536,
+      "seconds": 206.99070148200008,
+      "median_seconds": 0.1309082095000349,
+      "p95_seconds": 0.14684849124989796,
+      "peak_gpu_bytes": 9818122752,
+      "max_tokens": 2936,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": 0.0
+    },
+    "qwen/p1/holdout.json": {
+      "n": 2048,
+      "valid": 2048,
+      "seconds": 271.94041726299974,
+      "median_seconds": 0.13061533950008197,
+      "p95_seconds": 0.1449787813498915,
+      "peak_gpu_bytes": 9969382912,
+      "max_tokens": 3591,
+      "top_token_outside_pair": 2,
+      "parity_max_difference": null
+    },
+    "qwen/p1/test.json": {
+      "n": 1699,
+      "valid": 1699,
+      "seconds": 224.53600056599998,
+      "median_seconds": 0.13063840099994195,
+      "p95_seconds": 0.14214942269977654,
+      "peak_gpu_bytes": 9476081664,
+      "max_tokens": 1305,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": null
+    },
+    "qwen/p1/validation.json": {
+      "n": 1536,
+      "valid": 1536,
+      "seconds": 220.45911280100017,
+      "median_seconds": 0.14039407600000686,
+      "p95_seconds": 0.15617063625001038,
+      "peak_gpu_bytes": 9859999744,
+      "max_tokens": 3078,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": 0.0
+    },
+    "shieldstral/p0/discovery.json": {
+      "n": 4096,
+      "valid": 4096,
+      "seconds": 145.532028227,
+      "median_seconds": 0.033659274999990885,
+      "p95_seconds": 0.040031273499998576,
+      "peak_gpu_bytes": 7955752448,
+      "max_tokens": 3004,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": 0.0
+    },
+    "shieldstral/p0/holdout.json": {
+      "n": 2048,
+      "valid": 2048,
+      "seconds": 72.90231545499978,
+      "median_seconds": 0.0339280289999806,
+      "p95_seconds": 0.0401070814999457,
+      "peak_gpu_bytes": 7997630464,
+      "max_tokens": 3530,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": null
+    },
+    "shieldstral/p0/test.json": {
+      "n": 1699,
+      "valid": 1699,
+      "seconds": 60.070985960000144,
+      "median_seconds": 0.03373700599968288,
+      "p95_seconds": 0.039782730500110115,
+      "peak_gpu_bytes": 7812852736,
+      "max_tokens": 1232,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": null
+    },
+    "shieldstral/p0/validation.json": {
+      "n": 1536,
+      "valid": 1536,
+      "seconds": 55.98870953199997,
+      "median_seconds": 0.03471891000000937,
+      "p95_seconds": 0.041472864250010844,
+      "peak_gpu_bytes": 7987693056,
+      "max_tokens": 3370,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": 0.0
+    },
+    "shieldstral/p1/discovery.json": {
+      "n": 4096,
+      "valid": 4096,
+      "seconds": 166.644302519,
+      "median_seconds": 0.03838607099999081,
+      "p95_seconds": 0.05068545099997834,
+      "peak_gpu_bytes": 7967236096,
+      "max_tokens": 3152,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": 0.0
+    },
+    "shieldstral/p1/holdout.json": {
+      "n": 2048,
+      "valid": 2048,
+      "seconds": 82.9328960329999,
+      "median_seconds": 0.03867664849985886,
+      "p95_seconds": 0.05368688700004895,
+      "peak_gpu_bytes": 8009530368,
+      "max_tokens": 3678,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": null
+    },
+    "shieldstral/p1/test.json": {
+      "n": 1699,
+      "valid": 1699,
+      "seconds": 68.00359415599996,
+      "median_seconds": 0.03772006600001987,
+      "p95_seconds": 0.049799869199978274,
+      "peak_gpu_bytes": 7824752640,
+      "max_tokens": 1380,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": null
+    },
+    "shieldstral/p1/validation.json": {
+      "n": 1536,
+      "valid": 1536,
+      "seconds": 63.6419011989999,
+      "median_seconds": 0.039245973000049617,
+      "p95_seconds": 0.054614714499933825,
+      "peak_gpu_bytes": 7997168128,
+      "max_tokens": 3518,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": 0.0
+    },
+    "shieldstral/p2/discovery.json": {
+      "n": 4096,
+      "valid": 4096,
+      "seconds": 165.57238430199993,
+      "median_seconds": 0.03852987950000397,
+      "p95_seconds": 0.05038233999999875,
+      "peak_gpu_bytes": 7966352384,
+      "max_tokens": 3141,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": 0.0
+    },
+    "shieldstral/p2/validation.json": {
+      "n": 1536,
+      "valid": 1536,
+      "seconds": 63.79830922499991,
+      "median_seconds": 0.03932743199993638,
+      "p95_seconds": 0.051987964750026094,
+      "peak_gpu_bytes": 7996892672,
+      "max_tokens": 3507,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": 0.0
+    },
+    "shieldstral/p3/discovery.json": {
+      "n": 4096,
+      "valid": 4096,
+      "seconds": 190.63486170300007,
+      "median_seconds": 0.04254461799996534,
+      "p95_seconds": 0.056600340999978016,
+      "peak_gpu_bytes": 7979780096,
+      "max_tokens": 3289,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": 0.0
+    },
+    "shieldstral/p3/validation.json": {
+      "n": 1536,
+      "valid": 1536,
+      "seconds": 72.22635473399998,
+      "median_seconds": 0.04802162150002687,
+      "p95_seconds": 0.05681674075000842,
+      "peak_gpu_bytes": 8008906752,
+      "max_tokens": 3655,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": 0.0
+    },
+    "shieldstral/p4/discovery.json": {
+      "n": 4096,
+      "valid": 4096,
+      "seconds": 211.5057503800001,
+      "median_seconds": 0.049398592999978064,
+      "p95_seconds": 0.05785230275017739,
+      "peak_gpu_bytes": 7984139776,
+      "max_tokens": 3353,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": 0.0
+    },
+    "shieldstral/p4/validation.json": {
+      "n": 1536,
+      "valid": 1536,
+      "seconds": 79.95562524800016,
+      "median_seconds": 0.04930174749995331,
+      "p95_seconds": 0.057975710250047996,
+      "peak_gpu_bytes": 8015238656,
+      "max_tokens": 3719,
+      "top_token_outside_pair": 0,
+      "parity_max_difference": 0.0
+    }
+  },
+  "note": "Instrumented single-example scoring, including tokenization and development parity checks. Qwen used fallback Torch linear attention. Not a production-serving benchmark."
+}

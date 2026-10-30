@@ -133,18 +133,20 @@ representations, other heads, or other datasets cannot help.
 
 The next question concerns **policy text**: can training mistakes guide a small
 set of better definitions, exceptions, or examples? The
-[training-error correction experiment](../research-directions/TRAINING-ERROR-CORRECTIONS.md)
-is recorded and has not started. It will separate error discovery, validation
-selection and an additional untouched holdout. Mistakes from this test will not
-be recycled into claimed blind-test improvements. A classifier learned under
-one fixed policy also needs reevaluation when that policy changes.
+[training-error correction experiment](../policy-corrections/README.md) is now
+complete. It used fresh validation and an additional project holdout, keeping
+this reused public test as a separate historical comparison. Its selected edit
+did not improve Shieldstral, but helped Qwen on the additional holdout. A
+classifier learned under one fixed policy also needs reevaluation when that
+policy changes.
 
 ## Compute and evidence
 
 One GPU.ai L40S run cost **$0.37**, including setup and the recorded pre-fit
 tokenizer-container repair. The GPU was terminated, billing reconciled and
-temporary SSH credentials removed. Cumulative recorded spend is **$14.5454 of
-the $20 cap**. RunPod was not needed.
+temporary SSH credentials removed. Cumulative recorded spend after this study was **$14.5454 of
+the $20 cap**. See the [current compute ledger](../COMPUTE.md) for later runs.
+RunPod was not needed.
 
 The [evidence bundle](../../published_runs/2026-10-30-shield-probe/README.md)
 contains the policy, pinned model revisions, selections, fitted coefficients,

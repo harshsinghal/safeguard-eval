@@ -121,3 +121,91 @@ recall operating targets, were frozen before uploading final inputs. Restoring
 the 2,048 additional holdout prompts and 1,699 test prompts from the pinned
 Parquet files reproduced the registered input hashes. No held-out example text
 was inspected to alter the policies.
+
+
+## Shieldstral final scores, after all choices were frozen
+
+The original policy with its selected cutoff reached 98.2267% balanced accuracy
+on the additional project holdout; the revised policy reached 98.1290%. The
+revision corrected one case and introduced three errors: false blocks increased
+from seven to eight and misses from 30 to 31. The paired difference was −0.0978
+percentage points, with a descriptive 95% interval of −0.2936 to +0.0903.
+
+On reused WildGuardTest, the tuned original scored 90.2865% and the revision
+90.1539%. Both had 57 false blocks, while misses rose from 101 to 103. The
+revision corrected two cases and introduced four; the difference was −0.1326
+points, interval −0.4305 to +0.1382. At a fixed cutoff of 0.5, neither population
+showed an improvement either. These small differences do not establish that the
+revision is systematically worse, but they do not support replacing the original
+policy on the basis of this authoring round.
+
+These scores were read while Qwen's final inference continued. All Qwen choices
+were already frozen, and no change was made in response to these outcomes.
+The full joint evaluation and reproduction check remain the final authority.
+
+
+For clarity, Qwen's validation tradeoff depends on the comparator. At the common
+0.5 cutoff, p1 reduced false blocks from 115 to 81 while keeping misses at 65.
+Against the original policy's separately selected 0.57 cutoff, p1 instead had
+more false blocks and fewer misses. This is why the full tables retain both
+fixed-cutoff and independently tuned comparisons.
+
+
+The secondary operating targets show a distribution gap. Both Shieldstral
+policies met their separately selected 5% false-block target and 90% recall
+target on the additional project holdout. On reused WildGuardTest, the
+false-block-target choices instead produced 8.47% and 8.78% false blocks. The
+separate recall-target choices reached only 82.23% and 82.76% harmful recall.
+These are separate operating points, not a requirement that one threshold meet
+both constraints simultaneously. Validation targets are not deployment guarantees.
+
+
+## Qwen additional-holdout transfer result
+
+The transferred revision reached 89.7681% balanced accuracy on the additional
+project holdout, compared with 88.8517% for the original policy with its selected
+cutoff. The difference was +0.9164 percentage points (descriptive 95% interval
++0.1737 to +1.7016). It corrected 42 cases and introduced 22. False blocks rose
+from 100 to 110, while misses fell from 129 to 99.
+
+At the same 0.5 cutoff, the comparison is different: false blocks fell from 140
+to 110 while misses increased from 89 to 99. Balanced accuracy rose from 88.7295%
+to 89.7681%, a +1.0386-point change (interval +0.3625 to +1.7292). Thus the
+observed wording effect survives a fixed-cutoff comparison on this population,
+but its error tradeoff depends on the baseline operating point.
+
+This is transfer of one Shieldstral-selected revision, not a fresh Qwen policy
+search or a measurement of Qwen's best achievable performance. Qwen's remaining
+WildGuardTest batch was still running when these held-out results were recorded;
+no model, text or cutoff was changed.
+
+
+## Final Qwen comparison and verification
+
+On reused WildGuardTest, the tuned original Qwen rule reached 86.0114% balanced
+accuracy and the revision 86.8219%. The difference was +0.8105 points, with a
+descriptive 95% interval of −0.04 to +1.63 after rounding. The revision corrected
+31 cases and introduced 21. False blocks increased from 119 to 130; misses fell
+from 116 to 95. At a fixed 0.5 cutoff, the change was only +0.3541 points, also
+with an interval including zero. The test result is suggestive, not a clear gain.
+
+Local CPU reproduction matched all final metrics, validation selections, slices,
+operating profiles and twelve paired bootstrap contrasts. Every one of 46,220
+prediction records was resolved; no input was truncated. All 192 development
+full-forward parity checks had difference 0.0. Four final Qwen records had a top vocabulary token outside the canonical pair.
+They retain their conditional two-label scores under the registered protocol.
+This is not free-generation behavior or a count of free-generated valid answers.
+
+Qwen used the fallback Torch linear-attention implementation. Runtime records
+are from instrumented, single-example scoring and include setup/parity overhead
+where applicable; they are not a production-serving throughput comparison.
+The original L40S rental was terminated after evidence collection. GPU.ai billed
+3,229 GPU-seconds, $0.72 at $0.80/hour. The cumulative ledger is now
+$15.26540555656 of $20, with $4.73459444344 remaining. Temporary local/provider
+SSH keys were removed. RunPod was not used.
+
+No policy revision followed final evaluation. The source-hashed inference and
+selection code and registered protocol remained unchanged throughout the run.
+Reporting tools and explanatory notes were developed alongside execution. A
+future correction round needs a new development/evaluation boundary; these
+results must not become a new tuning set while still being called untouched.

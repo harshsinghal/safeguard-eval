@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from evals.policy_corrections.common import load_output,labels
-from evals.leaderboard.metrics import decisions
+from evals.leaderboard.metrics import decisions,metrics
 
 
 def pct(v):return '—' if v is None else f'{100*v:.2f}%'
@@ -44,6 +44,15 @@ def report(state,out):
         corrected=old_wrong&(pred==y);introduced=(~old_wrong)&(pred!=y)
         count=sum(bool(corrected[i]) for i,row in enumerate(meta) if row['id'] in motivated)
         text.append(f"| {pid} | {int((corrected&(y==0)).sum())} | {int((corrected&(y==1)).sum())} | {int((introduced&(y==0)).sum())} | {int((introduced&(y==1)).sum())} | {count} |")
+    text+=['','### Qwen transfer validation','',
+        'Qwen receives the Shieldstral-selected revision without a wording search. '
+        'Each row also shows a separate cutoff-only selection on the same validation population.','',
+        '| Policy | BA at 0.5 | FP / FN at 0.5 | BA with selected cutoff | Selected cutoff | FP / FN with selected cutoff |',
+        '|---|---:|---:|---:|---:|---:|']
+    for pid in ['p0',f['selected_revision']]:
+        qm,qc=load_output(state,'qwen',pid,'validation');native=metrics(labels(qm),decisions(qc,.5),qc['score'])
+        choice=f['models']['qwen']['validation']['per_policy'][pid]['choices']['balanced'];best=choice['metrics']
+        text.append(f"| {pid} | {pct(native['balanced_accuracy'])} | {native['false_blocks']} / {native['missed_violations']} | {pct(best['balanced_accuracy'])} | {threshold(choice['threshold'])} | {best['false_blocks']} / {best['missed_violations']} |")
     text+=['']
     for split,data in r['datasets'].items():
         text+=['## '+('Additional project holdout' if split=='holdout' else 'Reused WildGuardTest'),'',
