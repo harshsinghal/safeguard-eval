@@ -160,6 +160,12 @@ Choosing an earlier Qwen layer and a different pooling method on validation rais
 
 [Readable findings](docs/shield-probe/README.md) · [Protocol](docs/shield-probe/PLAN.md) · [Full results](docs/shield-probe/RESULTS.md) · [Frozen evidence](published_runs/2026-10-30-shield-probe/README.md) · [Next: corrections from training errors](docs/research-directions/TRAINING-ERROR-CORRECTIONS.md) *(recorded, not started)*
 
+### 16. Policy corrections: learning from training mistakes
+
+*In progress.* We are testing whether a single bounded round of policy revisions, motivated by Shieldstral's training errors, improves classification beyond cutoff adjustment alone. Qwen 4B provides a transfer check using the exact Shieldstral-selected revision. The study reserves fresh validation examples and an additional 2,048-example project holdout after excluding recorded prior-use duplicate groups. The reused WildGuardTest remains a separate historical comparison.
+
+[Study and exact edits](docs/policy-corrections/README.md) · [Registered protocol](docs/policy-corrections/PLAN.md) · [Progress](docs/policy-corrections/progress.json)
+
 ## What the evidence suggests for moderation teams
 
 - **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. A model replacement requires another evaluation.

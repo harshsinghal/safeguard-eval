@@ -1,7 +1,8 @@
 # Next experiment: improve policy text using training errors
 
-Status: approved as the next direction, recorded before the Shieldstral probe
-study. Do not execute until that first study's results have been presented.
+Status: execution authorized after review of the Shieldstral representation
+results. The [concrete registered protocol](../policy-corrections/PLAN.md) and
+[study record](../policy-corrections/README.md) now track this experiment.
 
 Question: can a small, auditable set of policy revisions derived from training
 mistakes reduce false blocks and missed harmful requests on held-out content,
@@ -57,7 +58,7 @@ study yet, and the existing cumulative $20 cap still applies.
 
 Relevant precedent: [ProTeGi / prompt optimization with textual gradients](https://arxiv.org/abs/2305.03495).
 First study: [Shieldstral representation results](../shield-probe/README.md).
-The representation experiment is complete; the correction study remains unrun.
+The representation experiment is complete; the correction study is now starting.
 Its observed validation-to-test gap makes an additional project holdout especially
 important. Do not use the first study's test mistakes to author the corrections
 and then call evaluation on those same examples a held-out improvement.
