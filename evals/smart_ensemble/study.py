@@ -50,6 +50,8 @@ def fit(state):
  for p in sorted((state/'metadata').rglob('*.gz')):artifacts[str(p.relative_to(state))]=digest(p)
  for p in sorted((state/'scores').rglob('*.gz')):
   if p.name in ['fit.jsonl.gz','validation.jsonl.gz']:artifacts[str(p.relative_to(state))]=digest(p)
+ for p in sorted((state/'runtime').rglob('*')):
+  if p.is_file():artifacts[str(p.relative_to(state))]=digest(p)
  for rel in ['registration.json','PLAN.md','AMENDMENTS.md','models.joblib','fitting.json','selection.json','validation-predictions.json.gz','jev-refresh-required.json']:
   artifacts[rel]=digest(state/rel)
  ss=sources();ss['docs/smart-ensemble/AMENDMENTS.md']=digest(ROOT/'docs/smart-ensemble/AMENDMENTS.md')
@@ -150,7 +152,7 @@ def export(state,dest):
  dest.mkdir(parents=True)
  for name in ['PLAN.md','AMENDMENTS.md','registration.json','registration-v1.json','registration-v2.json','registration-v3.json','registration-v4.json','freeze.json','models.joblib','fitting.json','selection.json','validation-predictions.json.gz','test-predictions.json.gz','results.json','results.csv','RESULTS.md','reproduction.json','evaluation.json','requirements.txt','jev-refresh-required.json','api-billing.json','billing.json','gpu-billing.json','transport-reconciliation.json','RUN-LOG.md']:
   if (state/name).exists():shutil.copy2(state/name,dest/name)
- for name in ['scores','metadata']:
+ for name in ['scores','metadata','runtime']:
   shutil.copytree(state/name,dest/name)
  # Public policy versions redact restricted in-context examples. Hashes in the
  # registration identify exact private payloads and earlier frozen provenance.
