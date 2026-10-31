@@ -63,7 +63,14 @@ def prepare(state,work):
    p=ROOT/archived_rows(ds,model,'test');test_sources[f'{ds}/{model}']=dict(path=str(p.relative_to(ROOT)),sha256=checked_archive(p,orig))
    if model in ['jev','kev','clef']:
     p=(ROOT/JEV/'policies'/ds/'final.json') if model=='jev' else (ROOT/DEC/'policies'/model/ds/'final.json')
-    checked_archive(p,orig);pack=read(p);policy=pack[POLICY_IDS[model]]
+    checked_archive(p,orig)
+    prior=work/('jev-run' if model=='jev' else 'decision-models-run/state')
+    rel=f'policies/{ds}/final.json' if model=='jev' else f'policies/{model}/{ds}/final.json'
+    private=prior/rel
+    old_freeze=read(prior/('policies-freeze.json' if model=='jev' else model+'/policies-freeze.json'))
+    expected=old_freeze['policy_hashes'][ds] if model=='jev' else old_freeze['policies'][rel]
+    if digest(private)!=expected:raise ValueError('Original private policy pack changed')
+    pack=read(private);policy=pack[POLICY_IDS[model]]
     add(f'policies/{ds}/{model}.json',policy)
     if model=='jev':add(f'policies/{ds}/jev-pack.json',pack)
     configs[ds][model]=dict(policy=POLICY_IDS[model],policy_sha256=digest(state/f'policies/{ds}/{model}.json'),archive=str(p.relative_to(ROOT)))

@@ -10,9 +10,12 @@ from .common import *
 
 
 def cases(state,ds,split):
- rr=rows(state/f'inputs/{ds}/{split}.jsonl')
+ rr=rows(state/f"{'sealed-inputs' if split=='test' else 'inputs'}/{ds}/{split}.jsonl")
  if any(set(r)!={'id','prompt','prompt_sha256'} for r in rr):raise ValueError('Labels or metadata in model input')
  return rr
+
+def empty_result(r,model):
+ return dict(id=r['id'],prompt_sha256=r['prompt_sha256'],score=None,prediction='ERROR',model=model,error_type='empty_content')
 
 def check_canary(state,ds,model,rr):
  old={r['id']:r for r in rows(state/f'canary-reference/{ds}/{model}.jsonl.gz')}
@@ -21,7 +24,11 @@ def check_canary(state,ds,model,rr):
  flips=sum(r['prediction']!=old[r['id']]['prediction'] for r in rr)
  result=dict(n=len(rr),max_score_difference=delta,native_decision_changes=flips,tolerance=.02)
  write(state/f'new-runs/{model}/{ds}/canary-check.json',result)
- if delta>.02 or flips:raise ValueError('New scoring differs from archive; stop before bulk inference: '+str(result))
+ if delta>.02 or flips:
+  if model=='jev' and (state/'jev-refresh-required.json').exists():
+   result['historical_parity_passed']=False;result['action']='Recollect all Jev development and test outputs under amendment 2'
+   write(state/f'new-runs/{model}/{ds}/canary-check.json',result)
+  else:raise ValueError('New scoring differs from archive; stop before bulk inference: '+str(result))
  return result
 
 def native(state,model,vendor):
@@ -36,9 +43,11 @@ def native(state,model,vendor):
    if len(seen)!=len(existing) or not seen<=set(byid):raise ValueError('Bad resume output')
    for r in existing:
     if r['prompt_sha256']!=byid[r['id']]['prompt_sha256'] or r['policy_sha256']!=digest(state/f'policies/{ds}/{model}.json'):raise ValueError('Changed resume policy/content')
-   encoded=[]
+   encoded=[];empty=[]
    for r in todo:
-    if r['id'] not in seen:encoded.append((r,engine.encode(r['prompt'],policy)))
+    if r['id'] not in seen:
+     if not r['prompt'].strip():empty.append(r)
+     else:encoded.append((r,engine.encode(r['prompt'],policy)))
    encoded.sort(key=lambda t:(t[1][2],t[0]['id']))
    dest.parent.mkdir(parents=True,exist_ok=True);start=time.monotonic();done=len(existing)
    def forward(part):
@@ -48,6 +57,8 @@ def native(state,model,vendor):
      if len(part)==1:raise
      k=len(part)//2;return forward(part[:k])+forward(part[k:])
    with dest.open('a') as f:
+    for r in empty:
+     f.write(json.dumps(dict(**empty_result(r,model),policy_sha256=digest(state/f'policies/{ds}/{model}.json'),input_tokens=0))+'\n');f.flush();done+=1
     i=0
     while i<len(encoded):
      j=i+1
@@ -66,16 +77,23 @@ def native(state,model,vendor):
    write(dest.with_suffix('.manifest.json'),dict(created_utc=now(),model=model,split=split,dataset=ds,n=len(rr),sha256=digest(dest),gpu=engine.torch.cuda.get_device_name(),torch=engine.torch.__version__,seconds=time.monotonic()-start,registration_sha256=digest(state/'registration.json')))
  print('NATIVE_COMPLETE',model,flush=True)
 
-def jev(state,keyfile):
+def jev(state,keyfile,stage='development'):
  from evals.jev.api import Ledger,read_key,payload,post,parse,billed_cost,hash_value,RESERVE,save
  state=Path(state);verify(state);ledger=Ledger(state/'billing.sqlite',0.,cap=1.0);ledger.assert_no_pending();key=read_key(keyfile)
  abort=threading.Event()
+ if stage=='test':
+  from .study import check_freeze
+  check_freeze(state)
+  reg=read(state/'registration.json')
+  for rel,h in reg['sealed_test_input_hashes'].items():
+   if digest(state/rel)!=h:raise ValueError('Changed sealed test input')
  for ds in POOL:
   policies=read(state/f'policies/{ds}/jev-pack.json')
-  for split in ['canary','fit','validation']:
+  for split in (['test'] if stage=='test' else ['canary','fit','validation']):
    rr=cases(state,ds,split);raw=state/f'private-responses/{ds}/{split}';raw.mkdir(parents=True,exist_ok=True)
    def one(r):
     if abort.is_set():raise RuntimeError('Stopped after provider error')
+    if not r['prompt'].strip():return empty_result(r,'typesafe/jev-1.14-20261014')
     body=payload(r['prompt'],policies);h=hash_value(body);uid=hash_value([ds,split,r['id'],h]);cache=raw/(uid+'.json')
     if cache.exists():record=read(cache);response=record['response']
     else:
@@ -104,6 +122,6 @@ def jev(state,keyfile):
  ledger.assert_no_pending();write(state/'api-billing.json',ledger.totals());print('JEV_COMPLETE',flush=True)
 
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--state',required=True);p.add_argument('--model',choices=['kev','clef','jev'],required=True);p.add_argument('--vendor');p.add_argument('--keyfile');a=p.parse_args()
- if a.model=='jev':jev(a.state,a.keyfile)
+ p=argparse.ArgumentParser();p.add_argument('--state',required=True);p.add_argument('--model',choices=['kev','clef','jev'],required=True);p.add_argument('--vendor');p.add_argument('--keyfile');p.add_argument('--stage',choices=['development','test'],default='development');a=p.parse_args()
+ if a.model=='jev':jev(a.state,a.keyfile,a.stage)
  else:native(a.state,a.model,a.vendor)
