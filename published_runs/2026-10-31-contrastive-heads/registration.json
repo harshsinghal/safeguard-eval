@@ -1,0 +1,110 @@
+{
+  "created_utc": "2026-10-31T21:35:14.520308+00:00",
+  "sources": {
+    "docs/contrastive-heads/PLAN.md": "9c3f4d023bb9d175a065555f69fb9c8d237c64ff5c3d4d87828eefebd85e7e33",
+    "evals/activation_probe/common.py": "5b867e83439a28b8ecb1fb75dd7aece45ae2cfd5d2b4a544c8e5d5ed40c1f59f",
+    "evals/activation_probe/extract.py": "44423049be8e083b65879071d10c51a0f264381ad5ce67a70f91c24912b0b0ec",
+    "evals/contrastive_heads/__init__.py": "dd39d15ea813632ea614e2925cfec2661a5053fa414c22f0ef95520278b9f97b",
+    "evals/contrastive_heads/common.py": "a53c49574622c706fa89ba9c35f9d8bdced9261623495d9352f445484e333d73",
+    "evals/contrastive_heads/extract.py": "a859c70301edb618a11976a84a4e8815a8dd25b714dc8550ea0a3ed170b6067f",
+    "evals/contrastive_heads/learn.py": "41a6a9692bd4007cf6e9c69fc3c842bd4e507a9f0ccb6f927ba5af70f3b0cfd1",
+    "evals/contrastive_heads/prepare.py": "de9968eacecbbdb1585f60d525634a15fb417a05bc3b780fce0c996f0e56366f",
+    "evals/contrastive_heads/study.py": "a7aa7fc70d185dd5ae3e987e2f251c3405b279d26211dbbc3c410eea7a9339a6",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/hatexplain/policy.py": "1997e56d6a7c459b30e0bd1dbfc95d2f275cf6c3d19526c1effdffca6cc188e3",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30"
+  },
+  "data_hashes": {
+    "metadata/wildguard/fit.jsonl.gz": "98573adc9cefa171c4ccab9d1631eccd192ee81578c3900d3aa8795f06d38756",
+    "inputs/wildguard/fit.jsonl": "cd6f82e77a376c0dafb436c022997732257b8b7b15f6a7e47b6d763078c130ba",
+    "metadata/wildguard/validation.jsonl.gz": "004d9dc401dd2906d1a60fd0d36259b3938c2a972b141efee62f0b65f64e64ae",
+    "inputs/wildguard/validation.jsonl": "0904a29a385efc6e18d1a6f4e61e497e177a769ea9b049851364b5a21ce3de75",
+    "metadata/wildguard/test.jsonl.gz": "ad95f0be7676defcb64c3c4fa0541ad29dbddbbf902ce982e73d0b4acbc69640",
+    "inputs/wildguard/test.jsonl": "09a58a739923884a43dfa23937e8bf24c8e6fb07851fed6822560551361292d3",
+    "policies/wildguard/policylm.json": "ad0ceb520f16254b6f8e444be008349d04d26baf70492e770cb1daf59f4da0f2",
+    "metadata/hatexplain/fit.jsonl.gz": "9414a0834619069cdb0786e25bdd3a091d7500d1a0044e77aa0fe8b9b56f6393",
+    "inputs/hatexplain/fit.jsonl": "e1d3c31408306cc8bdf110d918a4682def3ca6a266ba16a68bc12cddd4aac2e9",
+    "metadata/hatexplain/validation.jsonl.gz": "7d3932bf2c91e46f88bfcc04e6bda708118d97270f5a03ffdc66749a7106035b",
+    "inputs/hatexplain/validation.jsonl": "1c89c336da0a0aed2260140d549125d50f3e93573f247d451252db8ecef2040d",
+    "metadata/hatexplain/test.jsonl.gz": "2261f73b4223f3201e9d205cba9c5dc9ec40b1e5115fcaa614871b36fd66817a",
+    "inputs/hatexplain/test.jsonl": "b06c073d9c942ca06bf60101aeb7a0b4e22d2e812b666a524abdc0a585dd9238",
+    "policies/hatexplain/policylm.json": "48ff3502bdad0530a0e99792c53f40a0b6a8a534b41266e4ec8bf3c30e512183"
+  },
+  "populations": {
+    "wildguard": {
+      "fit": {
+        "n": 4096,
+        "groups": 3823,
+        "labels": {
+          "ALLOW": 1916,
+          "BLOCK": 2180
+        }
+      },
+      "validation": {
+        "n": 1536,
+        "groups": 1424,
+        "labels": {
+          "ALLOW": 718,
+          "BLOCK": 818
+        }
+      },
+      "test": {
+        "n": 1699,
+        "groups": 1699,
+        "labels": {
+          "ALLOW": 945,
+          "BLOCK": 754
+        }
+      }
+    },
+    "hatexplain": {
+      "fit": {
+        "n": 4096,
+        "groups": 4090,
+        "labels": {
+          "BLOCK": 1267,
+          "ALLOW": 2829
+        }
+      },
+      "validation": {
+        "n": 1536,
+        "groups": 1535,
+        "labels": {
+          "BLOCK": 475,
+          "ALLOW": 1061
+        }
+      },
+      "test": {
+        "n": 1924,
+        "groups": 1922,
+        "labels": {
+          "ALLOW": 1330,
+          "BLOCK": 594
+        }
+      }
+    }
+  },
+  "models": {
+    "policylm": {
+      "model": "musubilabs/policylm-1.7b",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+      "width": 2048
+    },
+    "modernbert": {
+      "model": "answerdotai/ModernBERT-base",
+      "revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8",
+      "width": 768
+    }
+  },
+  "seeds": [
+    20261031,
+    20261101,
+    20261102
+  ],
+  "prior_accounted_usd": 16.69001787256,
+  "max_new_gpu_usd": 1.6,
+  "total_cap_usd": 20,
+  "prior_smart_freeze_sha256": "6a74f96b88188c420bd455bb03272cd7346a7fd96460032e8a48575ad12f1ec0",
+  "amended_utc": "2026-10-31T21:40:01.224916+00:00",
+  "amendment": "ModernBERT native fast-tokenizer special-mask interface; identical content pooling and complete overflow windows."
+}

@@ -31,7 +31,8 @@ def verify(state,refit=False,validation_only=False):
                     if c['head']!='lr':continue
                     clf,s=linear(x,yy,xv,c['C']);d=float(np.max(np.abs(s-np.asarray(c['scores'][0]))));maxdiff=max(maxdiff,d)
                     params=np.load(state/c['parameters'][0],allow_pickle=False)
-                    if not np.allclose(clf.coef_[0],params['coef'],atol=1e-9,rtol=1e-9) or d>1e-9:raise ValueError('LR refit differs')
+                    if not np.array_equal(clf.coef_[0],params['coef']) or clf.intercept_[0]!=params['intercept'] or d!=0:
+                        raise ValueError('LR refit differs')
                     refits+=1
                 for head in ['mlp','contrastive']:
                     for decay in DECAYS:

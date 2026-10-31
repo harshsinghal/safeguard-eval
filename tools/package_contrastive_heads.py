@@ -43,8 +43,15 @@ def package(state,out):
     copy(ROOT/'tests/test_contrastive_heads.py','source/tests/test_contrastive_heads.py')
     for p in (state/'runtime').iterdir():
         if p.is_file():copy(p,Path('runtime')/p.name)
-    for name in ['RESULTS.md','results.csv','RUNNING.md']:
+    for name in ['RESULTS.md','results.csv','RUNNING.md','METHODS.md']:
         copy(ROOT/'docs/contrastive-heads'/name,name)
+    copy(ROOT/'docs/contrastive-heads/README.md','READOUT.md')
+    for name in ['RUNNING.md','METHODS.md','READOUT.md']:
+        p=out/name;s=p.read_text()
+        for folder in ['activation-probe','hatexplain','leaderboard']:
+            s=s.replace('../'+folder+'/', '../../docs/'+folder+'/')
+        s=s.replace('../../published_runs/2026-10-31-contrastive-heads/README.md','README.md')
+        p.write_text(s)
     for p in (ROOT/'docs/contrastive-heads/figures').iterdir():copy(p,Path('figures')/p.name)
     cpu=dict(python=platform.python_version(),platform=platform.platform(),packages={n:importlib.metadata.version(n) for n in ['torch','numpy','scipy','scikit-learn','threadpoolctl']})
     write(out/'runtime/cpu-environment.json',cpu)
@@ -56,7 +63,7 @@ def package(state,out):
         verification='All 164 candidate checkpoints independently refitted; published metric/selection verification requires no GPU.'))
     (out/'README.md').write_text('''# Frozen features and contrastive task classifiers
 
-[Readable study](../../docs/contrastive-heads/README.md) · [All results](RESULTS.md) ·
+[Readable study](READOUT.md) · [All results](RESULTS.md) ·
 [CSV](results.csv) · [Protocol](PLAN.md) · [Amendment](AMENDMENTS.md) · [Reproduction](RUNNING.md)
 
 PolicyLM 1.7B and ModernBERT-base representations are frozen. Small logistic,
@@ -81,10 +88,7 @@ The verifier writes a fresh verification.json; use a copy to preserve the origin
 checksums. requirements.txt records the CPU runtime. Independent refitting also
 requires the private feature arrays or reproducing their extraction.
 
-The generic RUNNING.md links point into the repository docs directory; consult
-the live [reproduction guide](../../docs/contrastive-heads/RUNNING.md) for those
-parent-study and dataset links. All package files except checksums.json itself
-are listed in checksums.json.
+All package files except checksums.json itself are listed in checksums.json.
 ''')
     write(out/'checksums.json',{str(p.relative_to(out)):digest(p) for p in sorted(out.rglob('*')) if p.is_file()})
     print('PACKAGED',out,flush=True)

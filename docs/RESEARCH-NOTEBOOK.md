@@ -157,3 +157,33 @@ This study remains separate from the common-validation leaderboard. The papers,
 articles and pinned skill release are unchanged; the new evidence is ready for
 their next explicit update. Representation-score stacking, broader policy search
 and a targeted second pass remain proposed work.
+
+## Task-specific neural and contrastive heads
+
+The [contrastive-head study](contrastive-heads/README.md) is complete. It compares
+linear classifiers using logistic regression, ordinary small neural heads, and matched heads
+with supervised contrastive loss on frozen PolicyLM and ModernBERT features.
+Both benchmarks use the same 4,096 fitting / 1,536 validation populations as the
+smart-ensemble study. Three neural seeds inform validation selection; no best
+seed or test-based replacement is selected. This is supervised task training,
+not backbone fine-tuning or a new test of policy-text optimization.
+
+WildGuard validation selected PolicyLM's contrastive head, whose primary test
+balanced accuracy was 84.78%, below the linear control's 88.37%. The other two
+contrastive seeds also stayed below linear. HateXplain selected linear at 78.01%;
+the contrastive head's primary 78.21% was uncertain, and its three-seed mean was
+78.01%. ModernBERT's balanced-profile results were lower. These outcomes do not
+establish that the model architectures themselves caused the difference.
+
+The separately frozen accuracy goal selected a HateXplain linear configuration
+at 80.46% accuracy, with 140 false blocks and 236 missed hate posts. Its balanced
+selection made 332 false blocks and 113 misses. Preserve the change in objective,
+regularization and cutoff rather than describing this as a free accuracy gain.
+All four operating profiles, seeds, paired intervals and failed hypotheses are
+recorded. All 164 candidate checkpoints reproduced exactly, and public metric
+verification needs no GPU. Cost was $0.11; the GPU and temporary keys were removed.
+
+The [evidence bundle](../published_runs/2026-10-31-contrastive-heads/README.md)
+preserves the protocol, tokenizer repair, freeze, parameters/hashes, predictions,
+source, provenance and billing. No fresh independent test was introduced. The
+paper, articles and pinned skill remain prior snapshots awaiting explicit revision.

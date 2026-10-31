@@ -193,3 +193,13 @@ Qwen on an additional project holdout, while its reused-WildGuardTest gain remai
 uncertain. The [original proposal](TRAINING-ERROR-CORRECTIONS.md) and
 [registered protocol](../policy-corrections/PLAN.md) explain the boundary between
 discovery, validation and final evaluation. No further correction round is running.
+
+## Completed: contrastive task classifiers on frozen features
+
+The [PolicyLM/ModernBERT classifier study](../contrastive-heads/README.md) now tests
+linear, ordinary neural and contrastive neural heads on both benchmarks. It did
+not establish a consistent advantage for contrastive training. It is distinct
+from the still-proposed stacking of learned representation scores into an ensemble.
+The study does not authorize backbone fine-tuning, another hyperparameter search,
+or further paid inference. Its labeled training requirements and accuracy/error
+tradeoffs are documented alongside the results.

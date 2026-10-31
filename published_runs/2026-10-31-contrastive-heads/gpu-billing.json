@@ -1,0 +1,18 @@
+{
+  "provider": "GPU.ai",
+  "instance_id": "gpu-c3df4537",
+  "status": "terminated",
+  "cost_usd": 0.11,
+  "gpu_seconds": 513,
+  "price_per_hour_usd": 0.8,
+  "server_auto_terminate_hours": 2,
+  "usage": [
+    {
+      "bucket_start": "2026-10-31T00:00:00Z",
+      "instance_id": "gpu-c3df4537",
+      "gpu_seconds": 513,
+      "cost_cents": 11
+    }
+  ],
+  "runpod_resources_used": false
+}

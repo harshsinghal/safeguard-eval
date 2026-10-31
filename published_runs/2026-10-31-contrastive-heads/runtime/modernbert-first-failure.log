@@ -1,0 +1,19 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/safeguard-eval/evals/contrastive_heads/extract.py", line 83, in <module>
+    extract(**vars(p.parse_args()))
+  File "/root/safeguard-eval/evals/contrastive_heads/extract.py", line 62, in extract
+    if backend=='modernbert':features,records=modernbert(checkpoint,cases)
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/safeguard-eval/evals/contrastive_heads/extract.py", line 20, in modernbert
+    enc=tokenizer.prepare_for_model(chunk,add_special_tokens=True,return_special_tokens_mask=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/featureenv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 3754, in prepare_for_model
+    encoded_inputs["special_tokens_mask"] = self.get_special_tokens_mask(ids, pair_ids)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/featureenv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 4098, in get_special_tokens_mask
+    assert already_has_special_tokens and token_ids_1 is None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: You cannot use ``already_has_special_tokens=False`` with this tokenizer. Please use a slow (full python) tokenizer to activate this argument. Or set `return_special_tokens_mask=True` when calling the encoding method to get the special tokens mask in any tokenizer. 

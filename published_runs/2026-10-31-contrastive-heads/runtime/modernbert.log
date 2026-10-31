@@ -1,0 +1,134 @@
+Fetching 16 files:   0%|          | 0/16 [00:00<?, ?it/s]Fetching 16 files: 100%|██████████| 16/16 [00:00<00:00, 3913.28it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+You're using a PreTrainedTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{"completed_windows": 128, "total_windows": 4095, "seconds": 4.679664687000013}
+{"completed_windows": 256, "total_windows": 4095, "seconds": 4.749888939000016}
+{"completed_windows": 384, "total_windows": 4095, "seconds": 4.819788719000002}
+{"completed_windows": 512, "total_windows": 4095, "seconds": 4.8895946810000055}
+{"completed_windows": 640, "total_windows": 4095, "seconds": 4.959678976000021}
+{"completed_windows": 768, "total_windows": 4095, "seconds": 5.028947541000008}
+{"completed_windows": 896, "total_windows": 4095, "seconds": 5.098133458000007}
+{"completed_windows": 1024, "total_windows": 4095, "seconds": 5.16845540700001}
+{"completed_windows": 1152, "total_windows": 4095, "seconds": 5.23930620500002}
+{"completed_windows": 1280, "total_windows": 4095, "seconds": 5.309506727000013}
+{"completed_windows": 1408, "total_windows": 4095, "seconds": 5.379419315999996}
+{"completed_windows": 1536, "total_windows": 4095, "seconds": 5.448715090000007}
+{"completed_windows": 1664, "total_windows": 4095, "seconds": 5.519332442999996}
+{"completed_windows": 1792, "total_windows": 4095, "seconds": 5.589186874000006}
+{"completed_windows": 1920, "total_windows": 4095, "seconds": 5.660870369999998}
+{"completed_windows": 2048, "total_windows": 4095, "seconds": 5.733281222000016}
+{"completed_windows": 2176, "total_windows": 4095, "seconds": 5.807452301000012}
+{"completed_windows": 2304, "total_windows": 4095, "seconds": 5.886203942999998}
+{"completed_windows": 2432, "total_windows": 4095, "seconds": 5.965474281000013}
+{"completed_windows": 2560, "total_windows": 4095, "seconds": 6.045147690000022}
+{"completed_windows": 2688, "total_windows": 4095, "seconds": 6.124622924000022}
+{"completed_windows": 2816, "total_windows": 4095, "seconds": 6.203709946000004}
+{"completed_windows": 2944, "total_windows": 4095, "seconds": 6.283881934000021}
+{"completed_windows": 3072, "total_windows": 4095, "seconds": 6.364674065000003}
+{"completed_windows": 3200, "total_windows": 4095, "seconds": 6.446846705000013}
+{"completed_windows": 3328, "total_windows": 4095, "seconds": 6.529865553000008}
+{"completed_windows": 3456, "total_windows": 4095, "seconds": 6.613518617000011}
+{"completed_windows": 3584, "total_windows": 4095, "seconds": 6.698038010999994}
+{"completed_windows": 3712, "total_windows": 4095, "seconds": 6.784992313000004}
+{"completed_windows": 3862, "total_windows": 4095, "seconds": 6.911155632000003}
+{"completed_windows": 3987, "total_windows": 4095, "seconds": 7.031635184999999}
+{"completed_windows": 4095, "total_windows": 4095, "seconds": 7.238038064000023}
+{"dataset": "wildguard", "backend": "modernbert", "split": "fit", "n": 4096, "seconds": 13.107344875999985}
+You're using a PreTrainedTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{"completed_windows": 128, "total_windows": 1536, "seconds": 0.06980905700001472}
+{"completed_windows": 256, "total_windows": 1536, "seconds": 0.13739703499999223}
+{"completed_windows": 384, "total_windows": 1536, "seconds": 0.2062334940000028}
+{"completed_windows": 512, "total_windows": 1536, "seconds": 0.2743472610000026}
+{"completed_windows": 640, "total_windows": 1536, "seconds": 0.34393797300000983}
+{"completed_windows": 768, "total_windows": 1536, "seconds": 0.41641477699999996}
+{"completed_windows": 896, "total_windows": 1536, "seconds": 0.4936450030000117}
+{"completed_windows": 1024, "total_windows": 1536, "seconds": 0.5715086959999951}
+{"completed_windows": 1152, "total_windows": 1536, "seconds": 0.649669571000004}
+{"completed_windows": 1280, "total_windows": 1536, "seconds": 0.732205926000006}
+{"completed_windows": 1435, "total_windows": 1536, "seconds": 0.8464194539999994}
+{"completed_windows": 1536, "total_windows": 1536, "seconds": 2.1794085820000078}
+{"dataset": "wildguard", "backend": "modernbert", "split": "validation", "n": 1536, "seconds": 3.1455219150000175}
+You're using a PreTrainedTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{"completed_windows": 128, "total_windows": 1699, "seconds": 0.07134321099999852}
+{"completed_windows": 256, "total_windows": 1699, "seconds": 0.1407149469999922}
+{"completed_windows": 384, "total_windows": 1699, "seconds": 0.20985493800000654}
+{"completed_windows": 512, "total_windows": 1699, "seconds": 0.2794760669999903}
+{"completed_windows": 640, "total_windows": 1699, "seconds": 0.3482768329999999}
+{"completed_windows": 768, "total_windows": 1699, "seconds": 0.41942752799999994}
+{"completed_windows": 896, "total_windows": 1699, "seconds": 0.492263486000013}
+{"completed_windows": 1024, "total_windows": 1699, "seconds": 0.5703224760000012}
+{"completed_windows": 1152, "total_windows": 1699, "seconds": 0.6488610890000075}
+{"completed_windows": 1280, "total_windows": 1699, "seconds": 0.7293103270000074}
+{"completed_windows": 1408, "total_windows": 1699, "seconds": 0.8116051949999985}
+{"completed_windows": 1536, "total_windows": 1699, "seconds": 0.8964964150000014}
+{"completed_windows": 1670, "total_windows": 1699, "seconds": 1.018545472999989}
+{"completed_windows": 1689, "total_windows": 1699, "seconds": 1.0455184760000122}
+{"completed_windows": 1699, "total_windows": 1699, "seconds": 1.0864289499999984}
+{"dataset": "wildguard", "backend": "modernbert", "split": "test", "n": 1699, "seconds": 2.070315660999995}
+You're using a PreTrainedTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{"completed_windows": 128, "total_windows": 4096, "seconds": 0.07147928599999887}
+{"completed_windows": 256, "total_windows": 4096, "seconds": 0.14199514199998475}
+{"completed_windows": 384, "total_windows": 4096, "seconds": 0.21354372499999386}
+{"completed_windows": 512, "total_windows": 4096, "seconds": 0.2846452960000079}
+{"completed_windows": 640, "total_windows": 4096, "seconds": 0.3552757779999922}
+{"completed_windows": 768, "total_windows": 4096, "seconds": 0.4255831760000035}
+{"completed_windows": 896, "total_windows": 4096, "seconds": 0.49522995000000947}
+{"completed_windows": 1024, "total_windows": 4096, "seconds": 0.5669048089999933}
+{"completed_windows": 1152, "total_windows": 4096, "seconds": 0.637987231000011}
+{"completed_windows": 1280, "total_windows": 4096, "seconds": 0.7094451749999848}
+{"completed_windows": 1408, "total_windows": 4096, "seconds": 0.7809783269999855}
+{"completed_windows": 1536, "total_windows": 4096, "seconds": 0.8523772329999986}
+{"completed_windows": 1664, "total_windows": 4096, "seconds": 0.9230755629999976}
+{"completed_windows": 1792, "total_windows": 4096, "seconds": 0.9930024100000026}
+{"completed_windows": 1920, "total_windows": 4096, "seconds": 1.0646738700000071}
+{"completed_windows": 2048, "total_windows": 4096, "seconds": 1.136031585000012}
+{"completed_windows": 2176, "total_windows": 4096, "seconds": 1.2070623939999905}
+{"completed_windows": 2304, "total_windows": 4096, "seconds": 1.278691011999996}
+{"completed_windows": 2432, "total_windows": 4096, "seconds": 1.3492288429999917}
+{"completed_windows": 2560, "total_windows": 4096, "seconds": 1.420103656000009}
+{"completed_windows": 2688, "total_windows": 4096, "seconds": 1.4917776730000014}
+{"completed_windows": 2816, "total_windows": 4096, "seconds": 1.5639038200000073}
+{"completed_windows": 2944, "total_windows": 4096, "seconds": 1.6349337099999843}
+{"completed_windows": 3072, "total_windows": 4096, "seconds": 1.7070019880000018}
+{"completed_windows": 3200, "total_windows": 4096, "seconds": 1.778657724999988}
+{"completed_windows": 3328, "total_windows": 4096, "seconds": 1.8492357050000123}
+{"completed_windows": 3456, "total_windows": 4096, "seconds": 1.9218699109999875}
+{"completed_windows": 3584, "total_windows": 4096, "seconds": 1.993941038999992}
+{"completed_windows": 3712, "total_windows": 4096, "seconds": 2.0657726419999847}
+{"completed_windows": 3840, "total_windows": 4096, "seconds": 2.138494556000012}
+{"completed_windows": 3968, "total_windows": 4096, "seconds": 2.2116839070000083}
+{"completed_windows": 4096, "total_windows": 4096, "seconds": 2.2852268700000025}
+{"dataset": "hatexplain", "backend": "modernbert", "split": "fit", "n": 4096, "seconds": 3.281880545000007}
+You're using a PreTrainedTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{"completed_windows": 128, "total_windows": 1536, "seconds": 0.07064659499999948}
+{"completed_windows": 256, "total_windows": 1536, "seconds": 0.14046466700000337}
+{"completed_windows": 384, "total_windows": 1536, "seconds": 0.20960954400001697}
+{"completed_windows": 512, "total_windows": 1536, "seconds": 0.2799700449999989}
+{"completed_windows": 640, "total_windows": 1536, "seconds": 0.34965804300000514}
+{"completed_windows": 768, "total_windows": 1536, "seconds": 0.41955798000000755}
+{"completed_windows": 896, "total_windows": 1536, "seconds": 0.48986067800001365}
+{"completed_windows": 1024, "total_windows": 1536, "seconds": 0.5604752289999908}
+{"completed_windows": 1152, "total_windows": 1536, "seconds": 0.6310215530000107}
+{"completed_windows": 1280, "total_windows": 1536, "seconds": 0.7021233440000003}
+{"completed_windows": 1408, "total_windows": 1536, "seconds": 0.7737186349999945}
+{"completed_windows": 1536, "total_windows": 1536, "seconds": 0.8480780579999987}
+{"dataset": "hatexplain", "backend": "modernbert", "split": "validation", "n": 1536, "seconds": 1.3713859510000077}
+You're using a PreTrainedTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{"completed_windows": 128, "total_windows": 1924, "seconds": 0.06863470900000834}
+{"completed_windows": 256, "total_windows": 1924, "seconds": 0.13668449900001178}
+{"completed_windows": 384, "total_windows": 1924, "seconds": 0.20617838900000152}
+{"completed_windows": 512, "total_windows": 1924, "seconds": 0.27450649299998986}
+{"completed_windows": 640, "total_windows": 1924, "seconds": 0.3434457749999922}
+{"completed_windows": 768, "total_windows": 1924, "seconds": 0.41246736600001555}
+{"completed_windows": 896, "total_windows": 1924, "seconds": 0.48066978200000676}
+{"completed_windows": 1024, "total_windows": 1924, "seconds": 0.5499790570000016}
+{"completed_windows": 1152, "total_windows": 1924, "seconds": 0.6192286920000072}
+{"completed_windows": 1280, "total_windows": 1924, "seconds": 0.6895710750000035}
+{"completed_windows": 1408, "total_windows": 1924, "seconds": 0.7592539400000078}
+{"completed_windows": 1536, "total_windows": 1924, "seconds": 0.8301247830000023}
+{"completed_windows": 1664, "total_windows": 1924, "seconds": 0.9006235820000086}
+{"completed_windows": 1792, "total_windows": 1924, "seconds": 0.9725433680000037}
+{"completed_windows": 1920, "total_windows": 1924, "seconds": 1.045058320999999}
+{"completed_windows": 1924, "total_windows": 1924, "seconds": 1.0608456470000078}
+{"dataset": "hatexplain", "backend": "modernbert", "split": "test", "n": 1924, "seconds": 1.6510215469999991}
+COMPLETE modernbert 24.676039607999996

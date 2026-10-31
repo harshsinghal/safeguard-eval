@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-31T21:53:02.147458+00:00",
+  "validation_groups": 4,
+  "refit_candidates": 0,
+  "maximum_validation_score_difference": 0.0,
+  "verified_test_metric_rows": 112,
+  "verified_paired_intervals": 12,
+  "feature_refitting": false,
+  "validation_only": false
+}

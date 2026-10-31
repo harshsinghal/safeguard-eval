@@ -1,0 +1,14 @@
+VERIFIED validation wildguard policylm
+VERIFIED validation wildguard modernbert
+VERIFIED validation hatexplain policylm
+VERIFIED validation hatexplain modernbert
+{
+  "created_utc": "2026-10-31T21:48:43.088930+00:00",
+  "validation_groups": 4,
+  "refit_candidates": 164,
+  "maximum_validation_score_difference": 0.0,
+  "verified_test_metric_rows": 112,
+  "verified_paired_intervals": 12,
+  "feature_refitting": true,
+  "validation_only": false
+}

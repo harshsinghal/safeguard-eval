@@ -1,0 +1,13 @@
+TRAINED wildguard modernbert mlp 0.001 20261031 1.7
+TRAINED wildguard modernbert mlp 0.001 20261101 2.3
+TRAINED wildguard modernbert mlp 0.001 20261102 2.9
+TRAINED wildguard modernbert mlp 0.01 20261031 3.5
+TRAINED wildguard modernbert mlp 0.01 20261101 4.1
+TRAINED wildguard modernbert mlp 0.01 20261102 4.7
+TRAINED wildguard modernbert contrastive 0.001 20261031 5.5
+TRAINED wildguard modernbert contrastive 0.001 20261101 6.3
+TRAINED wildguard modernbert contrastive 0.001 20261102 7.0
+TRAINED wildguard modernbert contrastive 0.01 20261031 7.9
+TRAINED wildguard modernbert contrastive 0.01 20261101 8.7
+TRAINED wildguard modernbert contrastive 0.01 20261102 9.5
+SELECTED wildguard modernbert {'lr': {'balanced': ('lr-c0.01', 0.55, 0.8666), 'accuracy': ('lr-c0.01', 0.51, 0.8663), 'false_block_limit': ('lr-c0.01', 0.69, 0.8479), 'catch_target': ('lr-c0.001', 0.41, 0.8501)}, 'mlp': {'balanced': ('mlp-wd0.01-e20', 0.83, 0.8682), 'accuracy': ('mlp-wd0.01-e20', 0.81, 0.8681), 'false_block_limit': ('mlp-wd0.001-e05', 0.96, 0.8461), 'catch_target': ('mlp-wd0.01-e10', 0.17, 0.8533)}, 'contrastive': {'balanced': ('contrastive-wd0.01-e20', 0.93, 0.8724), 'accuracy': ('contrastive-wd0.01-e20', 0.91, 0.8722), 'false_block_limit': ('contrastive-wd0.001-e10', 0.99, 0.8464), 'catch_target': ('contrastive-wd0.01-e20', 0.15, 0.8583)}}

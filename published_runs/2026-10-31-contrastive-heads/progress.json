@@ -1,0 +1,10 @@
+{
+  "prepared": true,
+  "extracted": true,
+  "trained": true,
+  "frozen": true,
+  "evaluated": true,
+  "published": true,
+  "pre_test_freeze_commit": "fae8fd8579817e5f741555d925aaaeed7e0c1699",
+  "verified": true
+}

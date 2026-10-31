@@ -39,7 +39,8 @@ flowchart TB
         F1["14 · PolicyLM + Qwen 0.8B<br/>Frozen representations"]
         F2["15 · Shieldstral + Qwen 4B<br/>Repeat with larger models"]
         F3["Both studies tested<br/>Layers, pooling, trained heads<br/>Single / combined features"]
-        F1 --> F2 --> F3
+        F4["18 · Task-specific classifiers<br/>PolicyLM + ModernBERT<br/>Linear / neural / contrastive"]
+        F1 --> F2 --> F3 --> F4
     end
 
     START --> P1
@@ -47,7 +48,7 @@ flowchart TB
     START --> F1
     P3 --> EVIDENCE
     S4 --> EVIDENCE
-    F3 --> EVIDENCE
+    F4 --> EVIDENCE
     EVIDENCE["11 · Balanced evaluation<br/>False blocks + missed violations<br/>Validate → freeze → test"]
     EVIDENCE -.-> NEXT["PROPOSED · Not started<br/>Add trained feature heads<br/>Policy + cutoff · Second pass"]
 
@@ -59,20 +60,20 @@ flowchart TB
     class START,EVIDENCE neutral;
     class P1,P2,P3 policy;
     class S1,S2,S3,S4 scores;
-    class F1,F2,F3 features;
+    class F1,F2,F3,F4 features;
     class NEXT proposed;
     style POLICY fill:#f8fafc,stroke:#cbd5e1
     style SCORES fill:#f8fafc,stroke:#cbd5e1
     style FEATURES fill:#f8fafc,stroke:#cbd5e1
 ```
 
-**How to read the map:** solid boxes describe completed work; the dashed box is future work awaiting authorization. The separate **frontier-API pilot (6)** checked whether requests returned usable classifications; its full held-out experiment did not run. Not every branch covers both benchmarks: the first decision-model ensemble, representation classifiers, and training-error corrections were tested on WildGuard only. The smart ensemble covers both benchmarks. The representation, correction, and smart-ensemble studies use separate validation protocols and are **not merged into the common leaderboard**.
+**How to read the map:** solid boxes describe completed work; the dashed box is future work awaiting authorization. The separate **frontier-API pilot (6)** checked whether requests returned usable classifications; its full held-out experiment did not run. Not every branch covers both benchmarks: the first decision-model ensemble, the first two representation studies, and training-error corrections were tested on WildGuard only. The smart ensemble and task-specific contrastive-head study cover both benchmarks. The representation, correction, smart-ensemble, and contrastive-head studies use separate validation protocols and are **not merged into the common leaderboard**.
 
 | Follow a branch | Where to start |
 |---|---|
 | Policy wording, transfer, and structure | [WildGuard tuning](docs/wildguard/METHODS.md) → [Qwen comparison](docs/qwen-policy/READOUT.md) → [policy transfer](docs/policy-transfer/READOUT.md) → [HateXplain structure tests](docs/hatexplain/READOUT.md) → [training-error corrections](docs/policy-corrections/README.md) |
 | Scores, calibration, cutoffs, and combinations | [Probability ensembles](docs/ensemble/READOUT.md) → [log-odds ensembles](docs/ensemble-logits/RESULTS.md) → [Jev](docs/jev/READOUT.md) → [Kev / Clef](docs/decision-models/README.md) → [decision-model ensembles](docs/decision-ensemble/README.md) → [smart ensemble](docs/smart-ensemble/README.md) |
-| Frozen internal features and trained classifiers | [PolicyLM / Qwen](docs/activation-probe/README.md) → [Shieldstral / Qwen](docs/shield-probe/README.md) |
+| Frozen internal features and trained classifiers | [PolicyLM / Qwen](docs/activation-probe/README.md) → [Shieldstral / Qwen](docs/shield-probe/README.md) → [linear, neural and contrastive task classifiers](docs/contrastive-heads/README.md) |
 | Compare outcomes and see what is proposed | [Balanced metric guide](docs/leaderboard/METRICS.md) · [leaderboard](#current-leaderboard) · [next steps: reducing moderation errors](docs/research-directions/REDUCING-MODERATION-ERRORS.md) |
 
 The [smart-ensemble study](docs/smart-ensemble/README.md) takes the next step: learn which native model scores help each other, then test the frozen combination. Adding trained representation heads to that combination, broader policy-and-cutoff optimization, and a targeted second pass remain [proposed work](docs/research-directions/REDUCING-MODERATION-ERRORS.md), awaiting separate authorization.
@@ -96,6 +97,7 @@ The main comparisons are binary ALLOW/BLOCK tasks. The earlier demonstrations al
 | Fixed-task reference | WildGuard 7B | The released fine-tuned model and official inference template; no custom-policy tuning arm. |
 | Ensembles | Averages, learned weights, logistic regression, random forests, shallow gradient boosting | Combinations of specified component scores; the smart-ensemble study also selects a small subset using training folds. |
 | Frozen-representation probes | Qwen3.5 0.8B with PolicyLM 1.7B; Qwen3.5 4B with Shieldstral 3B | Supervised logistic regression on individual or concatenated hidden states under a fixed harmfulness policy within each study; language-model weights stay frozen. |
+| Task-specific classifiers | PolicyLM 1.7B and ModernBERT-base 149M | Matched linear, neural and contrastive heads on frozen features; separately trained on WildGuard and HateXplain with three neural seeds. |
 
 Not every model has been tested on every dataset. The [interface audit](docs/research-directions/POLICY-INTERFACE-AUDIT.md), [model reference guide](skills/safeguard-eval/references/models.md), and [decision-model study](docs/decision-models/README.md) identify the checkpoints and adapters behind these names. Model size alone does not establish inference cost, speed, or suitability.
 
@@ -247,6 +249,16 @@ The evidence includes all coefficients, rejected additions, component-removal ch
 
 [Readable findings and chart](docs/smart-ensemble/README.md) · [How selection works](docs/smart-ensemble/METHODS.md) · [Registered plan](docs/smart-ensemble/PLAN.md) · [Full results](docs/smart-ensemble/RESULTS.md) · [Frozen evidence and reproduction](published_runs/2026-10-31-smart-ensemble/README.md)
 
+### 18. Task-specific classifiers: does contrastive learning improve frozen features?
+
+We trained logistic regression, a small neural network, and the same network with supervised contrastive loss on frozen PolicyLM and ModernBERT features. Each task used 4,096 fitting and 1,536 validation examples; neural settings were selected across three seeds. No backbone weights changed. **Contrastive training did not establish a consistent gain.**
+
+On WildGuard, validation selected PolicyLM's contrastive head, but its primary test balanced accuracy was **84.78%**, versus **88.37%** for the linear control. It made 10 fewer false blocks but missed 62 more harmful prompts. All three contrastive seeds remained below the linear control. On HateXplain, validation selected PolicyLM's linear head at **78.01% balanced accuracy**; the contrastive head's primary 78.21% was an uncertain difference, and its three-seed mean was also 78.01%.
+
+A separate accuracy-optimized HateXplain linear configuration reached **80.46% accuracy**, but missed 236 hate posts versus 113 at the balanced setting. This change includes regularization and cutoff selection. The task-specific heads require labeled data and have not been shown to follow newly edited policies without retraining. All 164 checkpoints reproduced exactly; extraction cost **$0.11**, and the GPU was terminated. These reused-test results remain separate from the common leaderboard.
+
+[Readable results and all backends](docs/contrastive-heads/README.md) · [Methods](docs/contrastive-heads/METHODS.md) · [All seeds and operating profiles](docs/contrastive-heads/RESULTS.md) · [Frozen evidence](published_runs/2026-10-31-contrastive-heads/README.md)
+
 ## What the evidence suggests for moderation teams
 
 - **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. A model replacement requires another evaluation.
@@ -274,7 +286,7 @@ The research archive grows separately from versioned skill releases. New studies
 
 The comparison now includes the **Jev/Kev/Clef score ensembles and decision-only controls**, alongside the earlier policy models, general-purpose LLMs, and specialist ensembles. There are **38 WildGuard entries and 20 HateXplain entries**, drawn from **261 eligible archived candidate records**. These are configured systems and methods, not 261 distinct models or independent experiments. The new decision-model combinations were tested on WildGuard only.
 
-The [PolicyLM representation study](docs/activation-probe/README.md), [Shieldstral representation study](docs/shield-probe/README.md), and [smart-ensemble study](docs/smart-ensemble/README.md) use a separate 1,536-row validation protocol. The [training-error policy-correction study](docs/policy-corrections/README.md) uses a newly reserved validation population and additional project holdout. Their results are reported separately and have not been inserted into these common-validation tables.
+The [PolicyLM representation study](docs/activation-probe/README.md), [Shieldstral representation study](docs/shield-probe/README.md), [smart-ensemble study](docs/smart-ensemble/README.md), and [contrastive-head study](docs/contrastive-heads/README.md) use separate 1,536-row validation protocols. The [training-error policy-correction study](docs/policy-corrections/README.md) uses a newly reserved validation population and additional project holdout. Their results are reported separately and have not been inserted into these common-validation tables.
 
 The [integration record](published_runs/2026-10-30-leaderboard-decision-ensembles/README.md) preserves every earlier selection and result. It adds the new study's frozen method selections without refitting or choosing replacements from test scores. Individual calibration controls and “best method” aliases remain in that study's report rather than becoming duplicate leaderboard entries.
 

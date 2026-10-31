@@ -1,0 +1,34 @@
+Fetching 19 files:   0%|          | 0/19 [00:00<?, ?it/s]Fetching 19 files:  42%|████▏     | 8/19 [00:00<00:00, 53.71it/s]Fetching 19 files:  84%|████████▍ | 16/19 [00:00<00:00, 51.36it/s]Fetching 19 files:  95%|█████████▍| 18/19 [00:20<00:01,  1.11s/it]Fetching 19 files: 100%|██████████| 19/19 [00:56<00:00,  2.95s/it]Fetching 19 files: 100%|██████████| 19/19 [00:56<00:00,  2.95s/it]
+{"dataset": "hatexplain", "split": "fit", "completed": 256, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 512, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 768, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 1024, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 1280, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 1536, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 1792, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 2048, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 2304, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 2560, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 2816, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 3072, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 3328, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 3584, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 3840, "total": 4096}
+{"dataset": "hatexplain", "split": "fit", "completed": 4096, "total": 4096}
+{"dataset": "hatexplain", "backend": "policylm", "split": "fit", "n": 4096, "seconds": 143.15981038299998}
+{"dataset": "hatexplain", "split": "validation", "completed": 256, "total": 1536}
+{"dataset": "hatexplain", "split": "validation", "completed": 512, "total": 1536}
+{"dataset": "hatexplain", "split": "validation", "completed": 768, "total": 1536}
+{"dataset": "hatexplain", "split": "validation", "completed": 1024, "total": 1536}
+{"dataset": "hatexplain", "split": "validation", "completed": 1280, "total": 1536}
+{"dataset": "hatexplain", "split": "validation", "completed": 1536, "total": 1536}
+{"dataset": "hatexplain", "backend": "policylm", "split": "validation", "n": 1536, "seconds": 57.09809117399999}
+{"dataset": "hatexplain", "split": "test", "completed": 256, "total": 1924}
+{"dataset": "hatexplain", "split": "test", "completed": 512, "total": 1924}
+{"dataset": "hatexplain", "split": "test", "completed": 768, "total": 1924}
+{"dataset": "hatexplain", "split": "test", "completed": 1024, "total": 1924}
+{"dataset": "hatexplain", "split": "test", "completed": 1280, "total": 1924}
+{"dataset": "hatexplain", "split": "test", "completed": 1536, "total": 1924}
+{"dataset": "hatexplain", "split": "test", "completed": 1792, "total": 1924}
+{"dataset": "hatexplain", "backend": "policylm", "split": "test", "n": 1924, "seconds": 67.00240729400002}
+COMPLETE policylm 272.898653721

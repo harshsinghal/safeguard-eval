@@ -1,0 +1,15 @@
+{
+  "status": "terminated",
+  "provider": "GPU.ai",
+  "new_gpu_usd": 0.11,
+  "new_api_usd": 0,
+  "new_total_usd": 0.11,
+  "prior_accounted_usd": 16.69001787256,
+  "cumulative_accounted_usd": 16.800017872559998,
+  "authorized_cap_usd": 20,
+  "remaining_usd": 3.1999821274400015,
+  "runpod_used": false,
+  "temporary_credentials_removed": true,
+  "instance_id": "gpu-c3df4537",
+  "note": "Prior cumulative amount includes conservative allowances for earlier API transport failures. No new API inference charges; local CPU training unbilled."
+}

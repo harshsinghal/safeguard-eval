@@ -1,0 +1,13 @@
+TRAINED hatexplain modernbert mlp 0.001 20261031 1.8
+TRAINED hatexplain modernbert mlp 0.001 20261101 2.4
+TRAINED hatexplain modernbert mlp 0.001 20261102 2.9
+TRAINED hatexplain modernbert mlp 0.01 20261031 3.5
+TRAINED hatexplain modernbert mlp 0.01 20261101 4.1
+TRAINED hatexplain modernbert mlp 0.01 20261102 4.7
+TRAINED hatexplain modernbert contrastive 0.001 20261031 5.5
+TRAINED hatexplain modernbert contrastive 0.001 20261101 6.2
+TRAINED hatexplain modernbert contrastive 0.001 20261102 7.0
+TRAINED hatexplain modernbert contrastive 0.01 20261031 7.8
+TRAINED hatexplain modernbert contrastive 0.01 20261101 8.6
+TRAINED hatexplain modernbert contrastive 0.01 20261102 9.3
+SELECTED hatexplain modernbert {'lr': {'balanced': ('lr-c0.01', 0.45, 0.7286), 'accuracy': ('lr-c0.01', 0.78, 0.6774), 'false_block_limit': ('lr-c0.01', 0.81, 0.6587), 'catch_target': ('lr-c0.001', 0.3, 0.6781)}, 'mlp': {'balanced': ('mlp-wd0.001-e05', 0.38, 0.7257), 'accuracy': ('mlp-wd0.001-e05', 0.79, 0.694), 'false_block_limit': ('mlp-wd0.01-e05', 0.95, 0.6257), 'catch_target': ('mlp-wd0.001-e05', 0.04, 0.6584)}, 'contrastive': {'balanced': ('contrastive-wd0.001-e05', 0.49, 0.7199), 'accuracy': ('contrastive-wd0.001-e10', 0.82, 0.6908), 'false_block_limit': ('contrastive-wd0.001-e10', 0.99, 0.6287), 'catch_target': ('contrastive-wd0.001-e05', 0.03, 0.6347)}}

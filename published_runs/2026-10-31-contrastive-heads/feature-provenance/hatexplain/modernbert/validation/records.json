@@ -1,0 +1,9218 @@
+[
+  {
+    "id": "10064546_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10126246_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10152846_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10161076_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10312454_gab",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10340381_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10380188_gab",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10474766_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10488234_gab",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10526545_gab",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10528805_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10563603_gab",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10581023_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10607707_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10631912_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10636259_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10639368_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10653957_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10674503_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10681793_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10714486_gab",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10750547_gab",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1075505872770617344_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1076084250544201728_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10761182_gab",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1076809235990757376_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10777127_gab",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1077719367524052997_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1078129846138490880_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1080940449257455616_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1081317974378729472_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1081597281441382400_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1081685508626022400_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1081849002621054976_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1081991697045831686_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1082195418585489408_twitter",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1082310443161403392_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1082345595610820609_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1082397210845872130_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1082463145191530496_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1082679634511056897_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1082785825585274881_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1082827818948382720_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1083168216095051776_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1083279218337665024_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1084104267303022594_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1084561299642695680_twitter",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1084699485148798977_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1084798764357804032_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1084856717026963457_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1085130085009711104_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1086483150707048454_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1086628953081741312_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1086836550153973760_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1086851431557148672_twitter",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1087086480332210176_twitter",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1087267628123533313_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1087406191179911169_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10877140_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1087735037200646145_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1087911902586523648_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1088129465350270977_twitter",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1089219921479909376_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1089542761248899073_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1089588241714634752_twitter",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1089648520628449280_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1089986187266310145_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10904633_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1090779325933240320_twitter",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1090802012520964096_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1090805892679778304_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1091151952107364353_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1091344265152774145_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1091439421331656705_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1092232643876474880_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1092544184228241408_twitter",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1092895603984601088_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1093584132536291328_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1094393196988252163_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1094696319321550851_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1094959_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "10959978_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1096036294629773312_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1097116575352598529_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1097125282711027712_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1097306577311125505_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1097835177055801350_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1097848326228271105_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1099127429531090946_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1099348020594909184_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1100426090907082752_twitter",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1103453694735966213_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1103471143040794624_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11040017_gab",
+    "content_tokens": 64,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1104439037396430849_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1104453528750309377_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1104749977945948160_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1104863207393501185_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1105049342203887618_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1105268381341675520_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1105345640412798976_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1105577547675459586_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1105741490423242752_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1105749417674473472_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1105907073156550656_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1105969576704126976_twitter",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1106169456231747585_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1106214175917920262_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1106397055977689088_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1106683061373153281_twitter",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1106711846881357824_twitter",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1109531446757281793_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1109927053518884866_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1110023098869399553_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1113180197631782912_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1114166509176098816_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1114599869098991617_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1116052167599767553_twitter",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1116784484005941249_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1117155026277949440_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1117155139545128965_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11172995_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1117348610184753152_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1117424980080386048_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1118063663536070656_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1118313782453780480_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1118521140471898112_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11199283_gab",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1120044327143653377_twitter",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1120393066739830785_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1121073521235562497_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1121682517394776065_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1121989408876482561_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1122150832445775874_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1122212018931609600_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1122287684163076096_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1122361671706505216_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11225265_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1122551954671058944_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1122609546671853569_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1122625380182102018_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1122687137118326785_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1123306795202744321_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1123647477549125632_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1124050621454270464_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1124724953398632448_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1124797920581160966_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1124862194103885824_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11249326_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1125257188493209602_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1125850263087190018_twitter",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11265165_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1126660652964175878_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1126676847171907585_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11280734_gab",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11288242_gab",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11305089_gab",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1132538_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11326528_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11334455_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11368611_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11368631_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1139081664821432322_twitter",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1142565348874452992_twitter",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1142676661487333377_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1142817141332291587_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1143143974070132736_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1143201658324881408_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1143832054444056577_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1144419935868710913_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1144847733884194816_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1144910151822073861_twitter",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1145350924543692800_twitter",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1145823765240020992_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11460658_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1146263848380489729_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11474597_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11522021_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1154520_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11574290_gab",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1159079342917292032_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1159201816606846976_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1159348235552600064_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11599253_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1159943346695135232_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1160522024101535744_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1160538553861980160_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1160549203191275520_twitter",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1160613216688463872_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1162419187496738816_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1162443468310028289_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1162589602063900673_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1162594605868576768_twitter",
+    "content_tokens": 4,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1162788017817493506_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1162954569422237696_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1163177001747771392_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1163204898089029632_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1163342806783365121_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11637902_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1164270020597297154_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1164645687633633287_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1164948545759264769_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1165052589660147717_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1165349655452012544_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1165536042658648065_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1165573249045909509_twitter",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1165783283545858049_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1165966377515012097_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1166377767438626816_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1166400416676032512_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1166827421833793538_twitter",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1166889472509861888_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1166905431819804672_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1167604341303402496_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1167756665845948416_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1167858843264569345_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1167982348769660928_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11684343_gab",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1168559371804139520_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1168991213086752768_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1169318641415917568_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1170210040071901184_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1170317229721817088_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1170429494462533632_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1170740787312766976_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1171166211348094976_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1171441328325971971_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11725542_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1172615062395260929_twitter",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1173691933136510976_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1173788183693266944_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1174317394816360448_twitter",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1174860386538909697_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1175064716252631040_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1175927568492630017_twitter",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1176161132488339456_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1176201397831983105_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1176246016825339907_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1177377576999895040_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1177466295920422914_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1177610924775088135_twitter",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1177634700527099904_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1177915545108307968_twitter",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1177948831767355393_twitter",
+    "content_tokens": 63,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1177964576173957125_twitter",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178094473064177664_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178121636568014848_twitter",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178141043105120257_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178179417585147904_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178185856063946753_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178242529927614464_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178245926223110145_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178250528456724480_twitter",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178302810007293952_twitter",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178303521592135680_twitter",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178323876603924480_twitter",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178324084100390912_twitter",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178324785211658240_twitter",
+    "content_tokens": 72,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178331851242426368_twitter",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178361487527747585_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178365934119145472_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178387837500018689_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178388442977320968_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178394632620855297_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178395438250115073_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178416456238866437_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178421242149425153_twitter",
+    "content_tokens": 61,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178426476338671616_twitter",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178439258756927488_twitter",
+    "content_tokens": 113,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178457058049441792_twitter",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178457629754118144_twitter",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178490066735288321_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178493677234262016_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178500001556774914_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178501732474724352_twitter",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178503567474397184_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178505280155291648_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178517325420679168_twitter",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178518008366604291_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178518926952718336_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178522483651014656_twitter",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178539471068897281_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178541457327689728_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178572230189572096_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178573414929518592_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178575273014497280_twitter",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178582515457708032_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178589596231225344_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178590458638938112_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178607326833577985_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178610756574699521_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178639116688384000_twitter",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178644582353051649_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178649928920391685_twitter",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178650031076909056_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178665276876959746_twitter",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178666980414496768_twitter",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178669378700812294_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178675122682642433_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178675336332152833_twitter",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178679137357180928_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178680324722700288_twitter",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178681122911330304_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178682183109812224_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178682700447793155_twitter",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178691072303812608_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178699187480924161_twitter",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178702446039830528_twitter",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178702576726024193_twitter",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178707071895773185_twitter",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178711410706173952_twitter",
+    "content_tokens": 71,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178718171714457601_twitter",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178720386642522112_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178725414883205121_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178728995967291392_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178733988552200192_twitter",
+    "content_tokens": 74,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178737746447228928_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178739085378293760_twitter",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178739925073747974_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178747464171556864_twitter",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178747940329971712_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178749207898836992_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178752360291520512_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178752480768925696_twitter",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178754764043165699_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178756694031130625_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178757318743351296_twitter",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178757488914681857_twitter",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178758216383107074_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178758813446545408_twitter",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178758896544079877_twitter",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178762531999043584_twitter",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178762592946442245_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178763977175818242_twitter",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178764934294970368_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178765570285690887_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178770890944897024_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178770901237678080_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178771601824915456_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178771954796568577_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178772644273020935_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178775312366276609_twitter",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178776763779944451_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178776961461686274_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178779834039853056_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178781108403675136_twitter",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178781894856577025_twitter",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178781915505188865_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178782405492170754_twitter",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178782596064407552_twitter",
+    "content_tokens": 4,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178786478870142976_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178788279891546112_twitter",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178789174519959552_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178789610320740352_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178790611236900865_twitter",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178792663744679936_twitter",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178793288892964864_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178794848054398977_twitter",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178796509447512065_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178799138537967620_twitter",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178799429236789248_twitter",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178800349534199809_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178800417947303936_twitter",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178808881956261890_twitter",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178811599118692352_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178813149178400768_twitter",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178815350999265280_twitter",
+    "content_tokens": 62,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178819404466999297_twitter",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178819638504775681_twitter",
+    "content_tokens": 68,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178820639886626817_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178823681029689344_twitter",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178824831560802304_twitter",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178829526970830848_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178830935736717312_twitter",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178833059946418177_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178833740413440000_twitter",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178835527992303617_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178835548259012608_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178835948450267137_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178836489486118923_twitter",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178837672426704896_twitter",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178839328979656704_twitter",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178841596558823424_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178842469858824192_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178848978626068481_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178850695212142592_twitter",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178855276574724096_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178855380572442624_twitter",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178856898650488832_twitter",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178856921316675584_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178859594329841665_twitter",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178860682936082432_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178864245007511553_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178865033687773184_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178867530363998211_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178868092857913346_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178874018016956418_twitter",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178874580217278464_twitter",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178875361750405125_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178875621021274113_twitter",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178880742107095040_twitter",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178881031136403456_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178883925533310978_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178886113907400705_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178887881500299266_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178888446737174529_twitter",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178888593747664897_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178891809176449024_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178893441687678976_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178894468423933952_twitter",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178896988567408640_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178899742769778688_twitter",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178907417305845760_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178908372483002369_twitter",
+    "content_tokens": 59,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178910878906740736_twitter",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178911310068760576_twitter",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178911850806693888_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178912010760704000_twitter",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178918143718297601_twitter",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178918644547489792_twitter",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178921589963919360_twitter",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178923049820643328_twitter",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178933706951729153_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178941286323109888_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178942716459151360_twitter",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178949657197760513_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178951617984548864_twitter",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178957475879325696_twitter",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178958645138264071_twitter",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178959013842694144_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178959862547378176_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178964195510906880_twitter",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178970303491461120_twitter",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178971871011672064_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178976991988654082_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178977811853389826_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178978947448676352_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178980197263138826_twitter",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178980496572895232_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178981128931172357_twitter",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178981554581856257_twitter",
+    "content_tokens": 66,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178984855817916417_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178987654047649792_twitter",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178991139187085313_twitter",
+    "content_tokens": 70,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178991165670137856_twitter",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178992202342494208_twitter",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178996349385097217_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178998773814632448_twitter",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1178999227558645760_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179000400810168320_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179000546583285763_twitter",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179001808116736000_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179003943466291200_twitter",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179004775293046784_twitter",
+    "content_tokens": 64,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179007069015248896_twitter",
+    "content_tokens": 69,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179007149902577665_twitter",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179007582012395521_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179008086532509696_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179008229872939008_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179008614184312835_twitter",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179009306684878850_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179009825432358913_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179010384641982464_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179011312766128129_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179011901629587467_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179012978445713411_twitter",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179014410964213760_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179014680494428161_twitter",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179016455796531200_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179016598574600192_twitter",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179017612703014912_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179019613394198528_twitter",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179019685771333634_twitter",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179024656780681216_twitter",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179025539757215746_twitter",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179026065869754369_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179026753974616071_twitter",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179027656785969152_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179028372413980674_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179029931998756864_twitter",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179032123413426177_twitter",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179032657797275648_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179033768004186113_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179034997023531008_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179035468823842818_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179037837041098753_twitter",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179038976671240194_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179039195228065794_twitter",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179040188061777921_twitter",
+    "content_tokens": 68,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179040376042266630_twitter",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179041541136031745_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179041708236886016_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179042041549983745_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179045055136444421_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179045425829105664_twitter",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179045683841703938_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179047552404070404_twitter",
+    "content_tokens": 62,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179050016616468481_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179050229170991104_twitter",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179050447082004480_twitter",
+    "content_tokens": 3,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179050693673533440_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179050937148678144_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179051003603107841_twitter",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179051864161173504_twitter",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179052732658995200_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179053376350367744_twitter",
+    "content_tokens": 61,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179054865370222593_twitter",
+    "content_tokens": 59,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179055250373795841_twitter",
+    "content_tokens": 141,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179055795385831424_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179057199865315328_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179057662165684224_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179059868784844800_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179062413691252736_twitter",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179062846346452992_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179063229907177474_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179063343568449536_twitter",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179063615468576768_twitter",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179064127458889728_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179064190822170624_twitter",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179065638154883072_twitter",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179066330860986368_twitter",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179066933494206465_twitter",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179068531188621318_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179068602034479104_twitter",
+    "content_tokens": 4,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179068819534426120_twitter",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179069105795502080_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179069502480244741_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179071905657217024_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179072232921821184_twitter",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179072928484352006_twitter",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179072979793252352_twitter",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179073382375182337_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179073562910625793_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179074290077110273_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179074681804070918_twitter",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179075112684806144_twitter",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179076992861261824_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179078045132414976_twitter",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179078745715597315_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179078971687874566_twitter",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179079276928389120_twitter",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179080024302899200_twitter",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179080121271177224_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179080198202912769_twitter",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179080238439043074_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179080727280967681_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179081685146701830_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179081958485217280_twitter",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179082498304888833_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179082507062562817_twitter",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179082611169345536_twitter",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179082934357118976_twitter",
+    "content_tokens": 62,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179083088858451968_twitter",
+    "content_tokens": 70,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179085128120721408_twitter",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179085198903914499_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179085658222141446_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179085877546496001_twitter",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179087306369703939_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179087428243480576_twitter",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179087477375676416_twitter",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179088137022083073_twitter",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179088146912301056_twitter",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179088569153069056_twitter",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179088638623260673_twitter",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179088797964763136_twitter",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179089934298185730_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179090003873456129_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179091617225023488_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179092084864753667_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179092556790956034_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179092969531596800_twitter",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179093240433250307_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179093472931807232_twitter",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179093737818996737_twitter",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179093793330651136_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179094143907311617_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179094257245851649_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179094652139556864_twitter",
+    "content_tokens": 65,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179094819408359426_twitter",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179095095225851904_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179096453223874560_twitter",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179097178037469185_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179097679596572672_twitter",
+    "content_tokens": 61,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179097928503365632_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179098124821901312_twitter",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179098334100938752_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179098360541827072_twitter",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179099013724999682_twitter",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179099203701743616_twitter",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179099313630113792_twitter",
+    "content_tokens": 69,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179099704698605573_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179100350982307840_twitter",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179100409836781570_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179100720458584066_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179100846841311232_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179101057084866560_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179101319606521858_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179101364430880769_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179101583193321472_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179102625360486400_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179103012075126785_twitter",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179103212663693319_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179103502439714817_twitter",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179103637756243968_twitter",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179103946037530624_twitter",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179103988219879424_twitter",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179104025150554112_twitter",
+    "content_tokens": 59,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179104200342622222_twitter",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179104283201081346_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179104378206248961_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179104437396267008_twitter",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179104659685937152_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179105076637552641_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179105659716956160_twitter",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179105754005082112_twitter",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11794553_gab",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1179694233835495424_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1180222635596292096_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1180496713611481093_twitter",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11805489_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1180638015129038853_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1180794675000696838_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1180840067348205571_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1180885235828789249_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1181274861500538883_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1181559612773781504_twitter",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1182486444906037249_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11826052_gab",
+    "content_tokens": 59,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1182819011295236098_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11833146_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1183579_gab",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1183950575764815873_twitter",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11841833_gab",
+    "content_tokens": 59,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1184291221008769024_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1184377522357714944_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1184594565011070978_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1184750798653267968_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1184938221127585793_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1185065618912890880_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1185143079323357184_twitter",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1185218477478465536_twitter",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1185219554068369408_twitter",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1185430926005886977_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1185540112148566016_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1186022851352186885_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1186068758013599744_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1186194671032295424_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1186658804336910336_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1187204382619619334_twitter",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1187305859602407424_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1187825768753221633_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1187888012203454464_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1187999652009762817_twitter",
+    "content_tokens": 63,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1188033047074967553_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1188989583268167680_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1189161444853665792_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1189793119606312962_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1190366183167528960_twitter",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1190458445276893184_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1190825749105848320_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1191806356191186944_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11922177_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1192858488948453377_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1192979935029268480_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11940648_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1194611917719003136_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11962572_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11966722_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11968013_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11982645_gab",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1198265466889785344_twitter",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "11983258_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1198656401213677573_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1200417140647636994_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1200751988713099266_twitter",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1202892680914554880_twitter",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1203708372094267392_twitter",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12040186_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1204043863054311424_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1204565911308587008_twitter",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1205736059214000128_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1205744091297984512_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1206023608109273088_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12070898_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1207874025248174080_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1207888286611582977_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1209176435111399425_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1210046029501829122_twitter",
+    "content_tokens": 4,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12100510_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1210379841335369729_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12112693_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1211387569277165570_twitter",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1211595304757268480_twitter",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12116409_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12122233_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1212594168834351105_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1212900245006405634_twitter",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12131802_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1213395976792264704_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1213753110587310080_twitter",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1215480324970491904_twitter",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1215677411121074176_twitter",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1215921170354016256_twitter",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1216273333626400769_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12168663_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1216977427269935104_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1217092303673651201_twitter",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1217250434500517888_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12175596_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1217656413763383297_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12179276_gab",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1218458486314586112_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1218608923415957504_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1218994988127866883_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1219227969165512705_twitter",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1219420538029764608_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12199801_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1220060460529176577_twitter",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1220505344436129792_twitter",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12211234_gab",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1221202118981193729_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1221348915452080130_twitter",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12213672_gab",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1221530327463542784_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1223173513177001989_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1224107043587489803_twitter",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1224229701826285568_twitter",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1225091849406308357_twitter",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1226390967969865728_twitter",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1227920812235051008_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1228535784027746304_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1228951207135174656_twitter",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1229382840485400576_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1230779917039628290_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1231732175030116352_twitter",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1232677504046911489_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12334077_gab",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1233736075065069568_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1234156512110632965_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12351677_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1235806261876109312_twitter",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1236084948207009793_twitter",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1237862838208581636_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1240177997526810624_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12414572_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1241814287796056064_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1243195077859606535_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12437441_gab",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12441225_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1246127173171384320_twitter",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1246693051885449216_twitter",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1246864747506683907_twitter",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12475012_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1248722979044786176_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12503777_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1251605712876101632_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1252705297266769921_twitter",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1253392970159702016_twitter",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12544784_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1255658624149487622_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1257376380385464320_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1258261495953018881_twitter",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1258917258610515968_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12594244_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1262058851043426305_twitter",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1262358122997448704_twitter",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12635997_gab",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1264161_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1266350773241360384_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1266414967085031432_twitter",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1266788079777480706_twitter",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1266917331458023426_twitter",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1267304578967465984_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1268038905137369088_twitter",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12695004_gab",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1269683063908425734_twitter",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1270186359404273669_twitter",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1272542497105776640_twitter",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12726876_gab",
+    "content_tokens": 63,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1273717816563294208_twitter",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1276192910002839557_twitter",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12789757_gab",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12815732_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12818270_gab",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12819333_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12848829_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12864080_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12935986_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12959137_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12971835_gab",
+    "content_tokens": 62,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12977068_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12978177_gab",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "12983751_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13000374_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13031638_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13031679_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13033382_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13057219_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13068135_gab",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13078627_gab",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13099204_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13126780_gab",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13158240_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13163179_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1317411_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13245701_gab",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13253575_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13264549_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13271333_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13295800_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13298171_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13301890_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13328036_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13359587_gab",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13363438_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13365673_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13405539_gab",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13430167_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13450400_gab",
+    "content_tokens": 70,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13461617_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13468249_gab",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13503227_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1351619_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13517786_gab",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13553900_gab",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13656466_gab",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13664763_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13699384_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13711310_gab",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13714660_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13740267_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13756324_gab",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13771543_gab",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13779143_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13798918_gab",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13801330_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13828645_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1383292_gab",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13844176_gab",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13872329_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13884037_gab",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13885644_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13896957_gab",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13909327_gab",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13918213_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13937879_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13958256_gab",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13964687_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13968899_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "13980938_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14008592_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14010801_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14017693_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14040494_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14046032_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14166472_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14265702_gab",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14287638_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14288558_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14304544_gab",
+    "content_tokens": 68,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14335849_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14336212_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14337574_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14362769_gab",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14375763_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14402041_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14416339_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14418334_gab",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14496091_gab",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14528716_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14528971_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14588809_gab",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14640028_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14699497_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14715730_gab",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14755285_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1477840_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14823147_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14840198_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14892008_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14899318_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "14913457_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15078260_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15120713_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15122698_gab",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15127744_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15136724_gab",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15204821_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15213423_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15293224_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15315340_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15330010_gab",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15333251_gab",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15354084_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15380388_gab",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15383715_gab",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15413395_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15419940_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15447888_gab",
+    "content_tokens": 4,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15451081_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15455648_gab",
+    "content_tokens": 69,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15466207_gab",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15467195_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15483686_gab",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15544666_gab",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15575558_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15609772_gab",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15610072_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15728706_gab",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15735261_gab",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15756443_gab",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15764545_gab",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15780683_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15868188_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15894296_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15895678_gab",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15900511_gab",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15949439_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "15979959_gab",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16024348_gab",
+    "content_tokens": 71,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16047951_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16055615_gab",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16057476_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16059383_gab",
+    "content_tokens": 63,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16061965_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16062403_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16072473_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16074606_gab",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16129041_gab",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16130542_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16139700_gab",
+    "content_tokens": 4,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16145658_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16147211_gab",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16161881_gab",
+    "content_tokens": 71,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16163482_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16171813_gab",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16183383_gab",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16222828_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16275795_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16277244_gab",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16305704_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16317886_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16361344_gab",
+    "content_tokens": 62,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16362387_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16377782_gab",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16382456_gab",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16393544_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16404357_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16451937_gab",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16457193_gab",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16460038_gab",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16525124_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16560202_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16587698_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16591657_gab",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16639230_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16644279_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16647204_gab",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16652611_gab",
+    "content_tokens": 62,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16713260_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16728755_gab",
+    "content_tokens": 66,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16744089_gab",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16771777_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16812150_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16833426_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16871630_gab",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16878430_gab",
+    "content_tokens": 66,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16878503_gab",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16886957_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16928175_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16941475_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "16954192_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17027156_gab",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17040268_gab",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17057680_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17077636_gab",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17096206_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17099836_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17115597_gab",
+    "content_tokens": 71,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17178016_gab",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17179582_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17206779_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17303590_gab",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17305159_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17311329_gab",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17318303_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17330056_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17335154_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17337071_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17341831_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17361501_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17361780_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17373244_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17379077_gab",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1738721_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17404475_gab",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17408390_gab",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17413110_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17426587_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17428728_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17431759_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17435869_gab",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17483019_gab",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17519843_gab",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17529758_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17539922_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17590482_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17618487_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17622816_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17631430_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17639966_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17682825_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17683055_gab",
+    "content_tokens": 94,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17683307_gab",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17727937_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17732164_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17738714_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17743487_gab",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17841657_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17845901_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17857551_gab",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17920249_gab",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17929821_gab",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17965117_gab",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17973156_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17988573_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17991896_gab",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "17999921_gab",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18033237_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18048815_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18089083_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18165276_gab",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18202714_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18229178_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18304251_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18416152_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18418884_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18420909_gab",
+    "content_tokens": 63,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18447213_gab",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18460967_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18485393_gab",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18505037_gab",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18507564_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18513292_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18523973_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18532486_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18535967_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18572524_gab",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18585453_gab",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18605730_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18618174_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18638764_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18646532_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "1867181_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18677828_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18698736_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18706002_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18798062_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18827367_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18905987_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18937485_gab",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18942889_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18961002_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18964489_gab",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18971905_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "18974594_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19018059_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19044567_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19062595_gab",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19068637_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19090207_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19102984_gab",
+    "content_tokens": 64,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19106937_gab",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19134180_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19156304_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19166924_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19264885_gab",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19269291_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19323003_gab",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19377557_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19429534_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19451128_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19460638_gab",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19465642_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19566624_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19573156_gab",
+    "content_tokens": 69,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19603490_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19607538_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19661304_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19666137_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19687649_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19700689_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19789502_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19795578_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19817414_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19838534_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19941799_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19978395_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "19981958_gab",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20009211_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20044841_gab",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20055204_gab",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20120250_gab",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20135819_gab",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20147902_gab",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20203772_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20215097_gab",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "2023318_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20236732_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20310954_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20317531_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20317635_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20366024_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20387264_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20427548_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20548043_gab",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20563689_gab",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20585273_gab",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20595346_gab",
+    "content_tokens": 61,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20619733_gab",
+    "content_tokens": 63,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20628487_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20651138_gab",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20653561_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20704125_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20705945_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20741822_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20752861_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20753511_gab",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20773704_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20864492_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20872620_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20915407_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "20972048_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21015843_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21022041_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21037896_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21040032_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21059247_gab",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21078205_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21106674_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21125123_gab",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21134961_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "2115930_gab",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21171131_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21199755_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21201098_gab",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21203323_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21206689_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21263421_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21382647_gab",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21391351_gab",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21413441_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21423631_gab",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21492048_gab",
+    "content_tokens": 4,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21515474_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21527223_gab",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21530730_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21562353_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21596006_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21614722_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21623835_gab",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21624055_gab",
+    "content_tokens": 69,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21628603_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21644405_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21649243_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21716968_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21771383_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21777801_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21787587_gab",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21803415_gab",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21820994_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21826700_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21835416_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21839700_gab",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21844534_gab",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21871789_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21872587_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21884077_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21900869_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "21935031_gab",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22032466_gab",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22066859_gab",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22145477_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22151178_gab",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22161097_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22223010_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22248290_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22249295_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22278716_gab",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22315744_gab",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22341093_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22346884_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22358829_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22368593_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22373929_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22387373_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22389888_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22401639_gab",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22427081_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22541540_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22583434_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22603612_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22641941_gab",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22666457_gab",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22730844_gab",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22804233_gab",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22816151_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22835920_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22876409_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22877427_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22919778_gab",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22953083_gab",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "22984646_gab",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23013042_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23069507_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23114637_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23130509_gab",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23150585_gab",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23150596_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23154870_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23192171_gab",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23202178_gab",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23218081_gab",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23237197_gab",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23238254_gab",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23269504_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23278682_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23288834_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23300157_gab",
+    "content_tokens": 10,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23332289_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23338410_gab",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23347534_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23400679_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23403189_gab",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23427031_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23450643_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23463064_gab",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23590591_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23593460_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "2362186_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23631407_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23639002_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23739163_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23744765_gab",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23776541_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23793423_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23800765_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "2380519_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23807855_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23838734_gab",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23857799_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23860882_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23862875_gab",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23889016_gab",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23909056_gab",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "23923843_gab",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "2395752_gab",
+    "content_tokens": 63,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24002178_gab",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24141943_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24171592_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24176160_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24188178_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24198611_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24198815_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24218254_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24218631_gab",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24221461_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24270070_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24368323_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24388114_gab",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24416711_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24462652_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24476033_gab",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24563208_gab",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24606990_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24649974_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24682477_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24725915_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24756474_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24765972_gab",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24770559_gab",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24795919_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24832446_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24868439_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24877549_gab",
+    "content_tokens": 64,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24889680_gab",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24903668_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24910842_gab",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24922629_gab",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24925738_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24927974_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24957895_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "24977552_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25022755_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25052977_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25118354_gab",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25187579_gab",
+    "content_tokens": 73,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25227528_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25271148_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25287801_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25318650_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25331279_gab",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25346126_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25382001_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25446854_gab",
+    "content_tokens": 66,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25456358_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25460998_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "2551865_gab",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25559889_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25593863_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25606574_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25621523_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25647426_gab",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25798952_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25803928_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25813111_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25820735_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25867889_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25888564_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25891034_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25920492_gab",
+    "content_tokens": 64,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25936705_gab",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25952742_gab",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25983525_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25989799_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "25997755_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26015173_gab",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26030631_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26052738_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26054970_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26099353_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26190379_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26214428_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26272412_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26281745_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26284145_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26346955_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26361552_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26386955_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26403158_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26404891_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26418398_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "2642618_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26426645_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26441748_gab",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26535745_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26539825_gab",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26559678_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26582599_gab",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26725075_gab",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26740383_gab",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26842382_gab",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26852395_gab",
+    "content_tokens": 6,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26967982_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "26995288_gab",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27033114_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27035202_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27072762_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27088183_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27107089_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27108627_gab",
+    "content_tokens": 70,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27162746_gab",
+    "content_tokens": 23,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27186678_gab",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27318602_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27337945_gab",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27372541_gab",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27387938_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27480049_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27489452_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27551024_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27658950_gab",
+    "content_tokens": 61,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27666647_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27704439_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "2778451_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27789937_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27822098_gab",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27823607_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27841553_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27849570_gab",
+    "content_tokens": 63,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27891415_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "27970724_gab",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "2956214_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "2977535_gab",
+    "content_tokens": 64,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "2994138_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3035774_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3130374_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3174384_gab",
+    "content_tokens": 65,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3188045_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3280112_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3317439_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3336024_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3343907_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3389354_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3486061_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3495354_gab",
+    "content_tokens": 59,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3694770_gab",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3713159_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3732912_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3734130_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3764425_gab",
+    "content_tokens": 74,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3789793_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3862208_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3894337_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3952477_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3LEG2HW4UFO0MSYCHN08VXVNNHG2F9_nf_1",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "3M7OI89LVYPH1HX3DNMAD4RW6BM6CJ_nf_6",
+    "content_tokens": 11,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4035593_gab",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4088371_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4120510_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4234170_gab",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4267797_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4294338_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4305867_gab",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4309014_gab",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4320108_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4326564_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4333143_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4347712_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4463291_gab",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4561266_gab",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4565612_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4565674_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4569323_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4579758_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4655378_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4665932_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4735350_gab",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4762904_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4795586_gab",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4845272_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4847499_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4873015_gab",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4873802_gab",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4912499_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "4998410_gab",
+    "content_tokens": 42,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5162821_gab",
+    "content_tokens": 38,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5244548_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5256848_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5362935_gab",
+    "content_tokens": 43,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5390438_gab",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5411660_gab",
+    "content_tokens": 60,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5415934_gab",
+    "content_tokens": 35,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5417114_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5440440_gab",
+    "content_tokens": 61,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5457483_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5510996_gab",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5613562_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5617428_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5624720_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5625921_gab",
+    "content_tokens": 5,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5747853_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5776881_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5840261_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5863477_gab",
+    "content_tokens": 31,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5905441_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "5972464_gab",
+    "content_tokens": 18,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6025349_gab",
+    "content_tokens": 45,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6042008_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6062932_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6063175_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6353337_gab",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6397210_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6557827_gab",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6581617_gab",
+    "content_tokens": 57,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6586152_gab",
+    "content_tokens": 72,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6647002_gab",
+    "content_tokens": 47,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6685680_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6699296_gab",
+    "content_tokens": 36,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6722856_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6867013_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6951192_gab",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "6967780_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7121532_gab",
+    "content_tokens": 68,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7224808_gab",
+    "content_tokens": 62,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7387686_gab",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7465877_gab",
+    "content_tokens": 52,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7497339_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7543907_gab",
+    "content_tokens": 51,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7573904_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7599031_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7603245_gab",
+    "content_tokens": 49,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7609979_gab",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7643218_gab",
+    "content_tokens": 32,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7644439_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7727242_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7756008_gab",
+    "content_tokens": 27,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7787743_gab",
+    "content_tokens": 16,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "7923742_gab",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8046583_gab",
+    "content_tokens": 20,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8046981_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8067816_gab",
+    "content_tokens": 59,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8124272_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8156107_gab",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8158630_gab",
+    "content_tokens": 50,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8175382_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8176903_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8211565_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8213875_gab",
+    "content_tokens": 61,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8214804_gab",
+    "content_tokens": 29,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8271175_gab",
+    "content_tokens": 14,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8431209_gab",
+    "content_tokens": 48,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8435905_gab",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8444792_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8451723_gab",
+    "content_tokens": 41,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8499516_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8524204_gab",
+    "content_tokens": 9,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8525524_gab",
+    "content_tokens": 39,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8536582_gab",
+    "content_tokens": 46,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8576663_gab",
+    "content_tokens": 58,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8618585_gab",
+    "content_tokens": 56,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8621354_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8648168_gab",
+    "content_tokens": 21,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8725240_gab",
+    "content_tokens": 33,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8847756_gab",
+    "content_tokens": 40,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8951884_gab",
+    "content_tokens": 26,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "8968547_gab",
+    "content_tokens": 8,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9043080_gab",
+    "content_tokens": 28,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9048176_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9055125_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9085488_gab",
+    "content_tokens": 30,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9094154_gab",
+    "content_tokens": 24,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9107268_gab",
+    "content_tokens": 54,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9130264_gab",
+    "content_tokens": 25,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9309074_gab",
+    "content_tokens": 12,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9489892_gab",
+    "content_tokens": 44,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9570429_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9622487_gab",
+    "content_tokens": 55,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9656232_gab",
+    "content_tokens": 34,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9656529_gab",
+    "content_tokens": 15,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9685619_gab",
+    "content_tokens": 19,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9779478_gab",
+    "content_tokens": 7,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9782695_gab",
+    "content_tokens": 17,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9827555_gab",
+    "content_tokens": 13,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9839066_gab",
+    "content_tokens": 37,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9880300_gab",
+    "content_tokens": 53,
+    "windows": 1,
+    "empty": false
+  },
+  {
+    "id": "9981575_gab",
+    "content_tokens": 22,
+    "windows": 1,
+    "empty": false
+  }
+]

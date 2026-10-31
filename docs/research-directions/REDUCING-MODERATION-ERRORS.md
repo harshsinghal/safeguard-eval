@@ -8,6 +8,8 @@ a targeted second pass remain proposals awaiting separate authorization. This
 agenda is not blanket authorization for further compute or spending; the executed
 study has its own [frozen protocol](../smart-ensemble/PLAN.md).
 
+The separately authorized [contrastive-head study](../contrastive-heads/README.md) is also complete on both tasks. It trained linear, neural and contrastive classifiers on frozen PolicyLM/ModernBERT features; it did not stack those learned scores into the mixed ensemble. That proposed integration remains unrun.
+
 ## The question we want to answer
 
 Given labeled examples and a fixed development budget, what complete system makes

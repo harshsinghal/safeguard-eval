@@ -1,0 +1,12 @@
+wildguard policylm/lr accuracy 88.817 BA 88.366 FP 72 FN 118
+wildguard policylm/mlp accuracy 86.698 BA 85.643 FP 47 FN 179
+wildguard policylm/contrastive accuracy 85.756 BA 84.783 FP 62 FN 180
+wildguard modernbert/lr accuracy 80.165 BA 78.899 FP 93 FN 244
+wildguard modernbert/mlp accuracy 80.4 BA 79.218 FP 97 FN 236
+wildguard modernbert/contrastive accuracy 80.165 BA 78.752 FP 82 FN 255
+hatexplain policylm/lr accuracy 76.871 BA 78.007 FP 332 FN 113
+hatexplain policylm/mlp accuracy 76.715 BA 77.754 FP 332 FN 116
+hatexplain policylm/contrastive accuracy 77.339 BA 78.206 FP 320 FN 116
+hatexplain modernbert/lr accuracy 71.622 BA 71.881 FP 383 FN 163
+hatexplain modernbert/mlp accuracy 70.582 BA 71.968 FP 421 FN 145
+hatexplain modernbert/contrastive accuracy 71.778 BA 72.227 FP 385 FN 158
