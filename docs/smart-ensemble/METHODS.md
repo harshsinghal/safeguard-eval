@@ -8,6 +8,12 @@ model out. It does not read the content itself.
 The experiment asks whether the combination makes fewer moderation mistakes,
 not whether every family deserves a place in the system.
 
+The learned coefficients belong to these particular policies, model revisions
+and score-extraction rules. Editing a policy or replacing a model requires a new
+development evaluation; an old coefficient is not a portable measure of that
+model's trustworthiness. Deployment needs only the retained components, but this
+study does not establish their combined latency or serving cost.
+
 ## Three separate stages
 
 1. **Fit and choose components on 4,096 training examples.** Split duplicate

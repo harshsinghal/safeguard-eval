@@ -1,0 +1,893 @@
+{
+  "frozen_utc": "2026-10-31T17:16:24.559316+00:00",
+  "test_outputs_accessed": false,
+  "datasets": {
+    "wildguard": {
+      "primary": {
+        "kind": "logistic",
+        "names": [
+          "shieldstral"
+        ],
+        "columns": [
+          1
+        ],
+        "C": 0.01,
+        "excluded_fit_rows": 0,
+        "standardized_coefficients": {
+          "shieldstral": 2.612532443521133
+        },
+        "logodds_coefficients": {
+          "shieldstral": 0.3741566716313689
+        },
+        "logodds_intercept": 0.23314407675982135,
+        "scaler_mean": [
+          -0.18890380715883026
+        ],
+        "scaler_scale": [
+          6.982455857676336
+        ],
+        "clip": 1e-06
+      },
+      "primary_selection_path": [
+        {
+          "step": 1,
+          "accepted": true,
+          "names": [
+            "shieldstral"
+          ],
+          "C": 0.01,
+          "oof": {
+            "n": 4096,
+            "positives": 2180,
+            "negatives": 1916,
+            "confusion": {
+              "tp": 2140,
+              "tn": 1900,
+              "fp": 16,
+              "fn": 40,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.9866503227289268,
+            "accuracy": 0.986328125,
+            "recall": 0.981651376146789,
+            "specificity": 0.9916492693110647,
+            "false_positive_rate": 0.008350730688935281,
+            "false_negative_rate": 0.01834862385321101,
+            "compliant_error_rate": 0.008350730688935281,
+            "violation_error_rate": 0.01834862385321101,
+            "precision": 0.9925788497217068,
+            "macro_f1": 0.9862810246359726,
+            "block_f1": 0.9870848708487084,
+            "allow_f1": 0.9854771784232366,
+            "mcc": 0.9726302383518767,
+            "false_blocks": 16,
+            "missed_violations": 40,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        },
+        {
+          "step": 2,
+          "accepted": false,
+          "names": [
+            "clef",
+            "shieldstral"
+          ],
+          "C": 10.0,
+          "gain": 0.0,
+          "oof": {
+            "n": 4096,
+            "positives": 2180,
+            "negatives": 1916,
+            "confusion": {
+              "tp": 2140,
+              "tn": 1900,
+              "fp": 16,
+              "fn": 39,
+              "error_allow": 0,
+              "error_block": 1
+            },
+            "balanced_accuracy": 0.9866503227289268,
+            "accuracy": 0.986328125,
+            "recall": 0.981651376146789,
+            "specificity": 0.9916492693110647,
+            "false_positive_rate": 0.008350730688935281,
+            "false_negative_rate": 0.017889908256880735,
+            "compliant_error_rate": 0.008350730688935281,
+            "violation_error_rate": 0.01834862385321101,
+            "precision": 0.9925788497217068,
+            "macro_f1": 0.9864088426876487,
+            "block_f1": 0.9870848708487084,
+            "allow_f1": 0.9857328145265889,
+            "mcc": null,
+            "false_blocks": 16,
+            "missed_violations": 39,
+            "unresolved": 1,
+            "coverage": 0.999755859375
+          },
+          "alternatives": [
+            {
+              "names": [
+                "clef",
+                "shieldstral"
+              ],
+              "C": 10.0,
+              "balanced_accuracy": 0.9866503227289268
+            },
+            {
+              "names": [
+                "cope",
+                "shieldstral"
+              ],
+              "C": 10.0,
+              "balanced_accuracy": 0.9860886594778878
+            },
+            {
+              "names": [
+                "jev",
+                "shieldstral"
+              ],
+              "C": 1.0,
+              "balanced_accuracy": 0.9864841700024899
+            },
+            {
+              "names": [
+                "kev",
+                "shieldstral"
+              ],
+              "C": 1.0,
+              "balanced_accuracy": 0.9864209649307617
+            },
+            {
+              "names": [
+                "policylm",
+                "shieldstral"
+              ],
+              "C": 1.0,
+              "balanced_accuracy": 0.9862945547873053
+            },
+            {
+              "names": [
+                "qwen-4b",
+                "shieldstral"
+              ],
+              "C": 10.0,
+              "balanced_accuracy": 0.9861600045967325
+            }
+          ]
+        }
+      ],
+      "operating_points": {
+        "balanced": {
+          "candidate": "primary",
+          "threshold": 0.49,
+          "metrics": {
+            "n": 1536,
+            "positives": 818,
+            "negatives": 718,
+            "confusion": {
+              "tp": 803,
+              "tn": 713,
+              "fp": 5,
+              "fn": 15,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.987349401693103,
+            "accuracy": 0.9869791666666666,
+            "recall": 0.9816625916870416,
+            "specificity": 0.9930362116991643,
+            "false_positive_rate": 0.006963788300835654,
+            "false_negative_rate": 0.018337408312958436,
+            "compliant_error_rate": 0.006963788300835654,
+            "violation_error_rate": 0.018337408312958436,
+            "precision": 0.9938118811881188,
+            "macro_f1": 0.9869343091771167,
+            "block_f1": 0.9876998769987699,
+            "allow_f1": 0.9861687413554634,
+            "mcc": 0.9739528590465522,
+            "false_blocks": 5,
+            "missed_violations": 15,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        },
+        "false_block_limit": {
+          "candidate": "primary",
+          "threshold": 0.37,
+          "metrics": {
+            "n": 1536,
+            "positives": 818,
+            "negatives": 718,
+            "confusion": {
+              "tp": 807,
+              "tn": 702,
+              "fp": 16,
+              "fn": 11,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.9821342223372449,
+            "accuracy": 0.982421875,
+            "recall": 0.9865525672371638,
+            "specificity": 0.9777158774373259,
+            "false_positive_rate": 0.022284122562674095,
+            "false_negative_rate": 0.013447432762836185,
+            "compliant_error_rate": 0.022284122562674095,
+            "violation_error_rate": 0.013447432762836185,
+            "precision": 0.9805589307411907,
+            "macro_f1": 0.9823393466938015,
+            "block_f1": 0.9835466179159049,
+            "allow_f1": 0.9811320754716981,
+            "mcc": 0.9646997062756457,
+            "false_blocks": 16,
+            "missed_violations": 11,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        },
+        "catch_target": {
+          "candidate": "primary",
+          "threshold": 0.73,
+          "metrics": {
+            "n": 1536,
+            "positives": 818,
+            "negatives": 718,
+            "confusion": {
+              "tp": 761,
+              "tn": 717,
+              "fp": 1,
+              "fn": 57,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.9644625453752954,
+            "accuracy": 0.9622395833333334,
+            "recall": 0.9303178484107579,
+            "specificity": 0.9986072423398329,
+            "false_positive_rate": 0.001392757660167131,
+            "false_negative_rate": 0.06968215158924206,
+            "compliant_error_rate": 0.001392757660167131,
+            "violation_error_rate": 0.06968215158924206,
+            "precision": 0.9986876640419947,
+            "macro_f1": 0.9622085723012184,
+            "block_f1": 0.9632911392405064,
+            "allow_f1": 0.9611260053619303,
+            "mcc": 0.9269826410684106,
+            "false_blocks": 1,
+            "missed_violations": 57,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        }
+      },
+      "validation_best_individual": {
+        "balanced": {
+          "candidate": "single/shieldstral/calibrated",
+          "threshold": 0.49,
+          "metrics": {
+            "n": 1536,
+            "positives": 818,
+            "negatives": 718,
+            "confusion": {
+              "tp": 803,
+              "tn": 713,
+              "fp": 5,
+              "fn": 15,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.987349401693103,
+            "accuracy": 0.9869791666666666,
+            "recall": 0.9816625916870416,
+            "specificity": 0.9930362116991643,
+            "false_positive_rate": 0.006963788300835654,
+            "false_negative_rate": 0.018337408312958436,
+            "compliant_error_rate": 0.006963788300835654,
+            "violation_error_rate": 0.018337408312958436,
+            "precision": 0.9938118811881188,
+            "macro_f1": 0.9869343091771167,
+            "block_f1": 0.9876998769987699,
+            "allow_f1": 0.9861687413554634,
+            "mcc": 0.9739528590465522,
+            "false_blocks": 5,
+            "missed_violations": 15,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        },
+        "false_block_limit": {
+          "candidate": "single/shieldstral/calibrated",
+          "threshold": 0.37,
+          "metrics": {
+            "n": 1536,
+            "positives": 818,
+            "negatives": 718,
+            "confusion": {
+              "tp": 807,
+              "tn": 702,
+              "fp": 16,
+              "fn": 11,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.9821342223372449,
+            "accuracy": 0.982421875,
+            "recall": 0.9865525672371638,
+            "specificity": 0.9777158774373259,
+            "false_positive_rate": 0.022284122562674095,
+            "false_negative_rate": 0.013447432762836185,
+            "compliant_error_rate": 0.022284122562674095,
+            "violation_error_rate": 0.013447432762836185,
+            "precision": 0.9805589307411907,
+            "macro_f1": 0.9823393466938015,
+            "block_f1": 0.9835466179159049,
+            "allow_f1": 0.9811320754716981,
+            "mcc": 0.9646997062756457,
+            "false_blocks": 16,
+            "missed_violations": 11,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        },
+        "catch_target": {
+          "candidate": "single/shieldstral/calibrated",
+          "threshold": 0.73,
+          "metrics": {
+            "n": 1536,
+            "positives": 818,
+            "negatives": 718,
+            "confusion": {
+              "tp": 761,
+              "tn": 717,
+              "fp": 1,
+              "fn": 57,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.9644625453752954,
+            "accuracy": 0.9622395833333334,
+            "recall": 0.9303178484107579,
+            "specificity": 0.9986072423398329,
+            "false_positive_rate": 0.001392757660167131,
+            "false_negative_rate": 0.06968215158924206,
+            "compliant_error_rate": 0.001392757660167131,
+            "violation_error_rate": 0.06968215158924206,
+            "precision": 0.9986876640419947,
+            "macro_f1": 0.9622085723012184,
+            "block_f1": 0.9632911392405064,
+            "allow_f1": 0.9611260053619303,
+            "mcc": 0.9269826410684106,
+            "false_blocks": 1,
+            "missed_violations": 57,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        }
+      }
+    },
+    "hatexplain": {
+      "primary": {
+        "kind": "logistic",
+        "names": [
+          "jev",
+          "kev",
+          "shieldstral"
+        ],
+        "columns": [
+          3,
+          4,
+          1
+        ],
+        "C": 10.0,
+        "excluded_fit_rows": 0,
+        "standardized_coefficients": {
+          "jev": 1.2996233079087456,
+          "kev": 0.0660141053026691,
+          "shieldstral": 0.9307091347639651
+        },
+        "logodds_coefficients": {
+          "jev": 0.20390086868142,
+          "kev": 0.04570578399647963,
+          "shieldstral": 0.29890909539866833
+        },
+        "logodds_intercept": -1.1415494576713088,
+        "scaler_mean": [
+          0.0013069877488939923,
+          0.5008287061695073,
+          2.1293334972089597
+        ],
+        "scaler_scale": [
+          6.373799760212453,
+          1.4443271623511298,
+          3.113686231336109
+        ],
+        "clip": 1e-06
+      },
+      "primary_selection_path": [
+        {
+          "step": 1,
+          "accepted": true,
+          "names": [
+            "jev"
+          ],
+          "C": 1.0,
+          "oof": {
+            "n": 4096,
+            "positives": 1267,
+            "negatives": 2829,
+            "confusion": {
+              "tp": 1000,
+              "tn": 2261,
+              "fp": 568,
+              "fn": 267,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.794244161342818,
+            "accuracy": 0.796142578125,
+            "recall": 0.7892659826361483,
+            "specificity": 0.7992223400494874,
+            "false_positive_rate": 0.20077765995051255,
+            "false_negative_rate": 0.2107340173638516,
+            "compliant_error_rate": 0.20077765995051255,
+            "violation_error_rate": 0.2107340173638516,
+            "precision": 0.6377551020408163,
+            "macro_f1": 0.7747982744560431,
+            "block_f1": 0.7054673721340388,
+            "allow_f1": 0.8441291767780474,
+            "mcc": 0.5596043307217903,
+            "false_blocks": 568,
+            "missed_violations": 267,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        },
+        {
+          "step": 2,
+          "accepted": true,
+          "names": [
+            "jev",
+            "shieldstral"
+          ],
+          "C": 10.0,
+          "gain": 0.0032953040487475604,
+          "oof": {
+            "n": 4096,
+            "positives": 1267,
+            "negatives": 2829,
+            "confusion": {
+              "tp": 977,
+              "tn": 2331,
+              "fp": 498,
+              "fn": 290,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.7975394653915655,
+            "accuracy": 0.8076171875,
+            "recall": 0.771112865035517,
+            "specificity": 0.823966065747614,
+            "false_positive_rate": 0.176033934252386,
+            "false_negative_rate": 0.22888713496448304,
+            "compliant_error_rate": 0.176033934252386,
+            "violation_error_rate": 0.22888713496448304,
+            "precision": 0.6623728813559322,
+            "macro_f1": 0.7840156853298001,
+            "block_f1": 0.712618526622903,
+            "allow_f1": 0.8554128440366973,
+            "mcc": 0.5729936836116125,
+            "false_blocks": 498,
+            "missed_violations": 290,
+            "unresolved": 0,
+            "coverage": 1.0
+          },
+          "alternatives": [
+            {
+              "names": [
+                "clef",
+                "jev"
+              ],
+              "C": 10.0,
+              "balanced_accuracy": 0.7906175552953498
+            },
+            {
+              "names": [
+                "jev",
+                "kev"
+              ],
+              "C": 0.1,
+              "balanced_accuracy": 0.7957767992627938
+            },
+            {
+              "names": [
+                "jev",
+                "policylm"
+              ],
+              "C": 1.0,
+              "balanced_accuracy": 0.7924139793540964
+            },
+            {
+              "names": [
+                "jev",
+                "qwen-4b"
+              ],
+              "C": 0.1,
+              "balanced_accuracy": 0.7952782420655613
+            },
+            {
+              "names": [
+                "jev",
+                "shieldstral"
+              ],
+              "C": 10.0,
+              "balanced_accuracy": 0.7975394653915655
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "accepted": true,
+          "names": [
+            "jev",
+            "kev",
+            "shieldstral"
+          ],
+          "C": 10.0,
+          "gain": 0.002408949143539063,
+          "oof": {
+            "n": 4096,
+            "positives": 1267,
+            "negatives": 2829,
+            "confusion": {
+              "tp": 984,
+              "tn": 2329,
+              "fp": 500,
+              "fn": 283,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.7999484145351046,
+            "accuracy": 0.808837890625,
+            "recall": 0.77663772691397,
+            "specificity": 0.823259102156239,
+            "false_positive_rate": 0.17674089784376104,
+            "false_negative_rate": 0.22336227308603,
+            "compliant_error_rate": 0.17674089784376104,
+            "violation_error_rate": 0.22336227308603,
+            "precision": 0.6630727762803235,
+            "macro_f1": 0.7857344284289264,
+            "block_f1": 0.7153762268266085,
+            "allow_f1": 0.8560926300312443,
+            "mcc": 0.5768698095175897,
+            "false_blocks": 500,
+            "missed_violations": 283,
+            "unresolved": 0,
+            "coverage": 1.0
+          },
+          "alternatives": [
+            {
+              "names": [
+                "clef",
+                "jev",
+                "shieldstral"
+              ],
+              "C": 1.0,
+              "balanced_accuracy": 0.7979921285435017
+            },
+            {
+              "names": [
+                "jev",
+                "kev",
+                "shieldstral"
+              ],
+              "C": 10.0,
+              "balanced_accuracy": 0.7999484145351046
+            },
+            {
+              "names": [
+                "jev",
+                "policylm",
+                "shieldstral"
+              ],
+              "C": 1.0,
+              "balanced_accuracy": 0.7987186215158538
+            },
+            {
+              "names": [
+                "jev",
+                "qwen-4b",
+                "shieldstral"
+              ],
+              "C": 1.0,
+              "balanced_accuracy": 0.7953484083415008
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "accepted": false,
+          "names": [
+            "clef",
+            "jev",
+            "kev",
+            "shieldstral"
+          ],
+          "C": 1.0,
+          "gain": 0.00067529809507616,
+          "oof": {
+            "n": 4096,
+            "positives": 1267,
+            "negatives": 2829,
+            "confusion": {
+              "tp": 1009,
+              "tn": 2277,
+              "fp": 552,
+              "fn": 258,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.8006237126301807,
+            "accuracy": 0.80224609375,
+            "recall": 0.7963693764798737,
+            "specificity": 0.8048780487804879,
+            "false_positive_rate": 0.1951219512195122,
+            "false_negative_rate": 0.20363062352012629,
+            "compliant_error_rate": 0.1951219512195122,
+            "violation_error_rate": 0.20363062352012629,
+            "precision": 0.6463805253042921,
+            "macro_f1": 0.7812858946489089,
+            "block_f1": 0.7135785007072136,
+            "allow_f1": 0.8489932885906041,
+            "mcc": 0.5722259876393639,
+            "false_blocks": 552,
+            "missed_violations": 258,
+            "unresolved": 0,
+            "coverage": 1.0
+          },
+          "alternatives": [
+            {
+              "names": [
+                "clef",
+                "jev",
+                "kev",
+                "shieldstral"
+              ],
+              "C": 1.0,
+              "balanced_accuracy": 0.8006237126301807
+            },
+            {
+              "names": [
+                "jev",
+                "kev",
+                "policylm",
+                "shieldstral"
+              ],
+              "C": 1.0,
+              "balanced_accuracy": 0.8003963348373746
+            },
+            {
+              "names": [
+                "jev",
+                "kev",
+                "qwen-4b",
+                "shieldstral"
+              ],
+              "C": 10.0,
+              "balanced_accuracy": 0.7954233174671063
+            }
+          ]
+        }
+      ],
+      "operating_points": {
+        "balanced": {
+          "candidate": "primary",
+          "threshold": 0.48,
+          "metrics": {
+            "n": 1536,
+            "positives": 475,
+            "negatives": 1061,
+            "confusion": {
+              "tp": 392,
+              "tn": 834,
+              "fp": 227,
+              "fn": 83,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.8056570266382261,
+            "accuracy": 0.7981770833333334,
+            "recall": 0.8252631578947368,
+            "specificity": 0.7860508953817154,
+            "false_positive_rate": 0.21394910461828465,
+            "false_negative_rate": 0.17473684210526316,
+            "compliant_error_rate": 0.21394910461828465,
+            "violation_error_rate": 0.17473684210526316,
+            "precision": 0.6332794830371568,
+            "macro_f1": 0.7799561169204947,
+            "block_f1": 0.716636197440585,
+            "allow_f1": 0.8432760364004045,
+            "mcc": 0.5760217525283781,
+            "false_blocks": 227,
+            "missed_violations": 83,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        },
+        "false_block_limit": {
+          "candidate": "primary",
+          "threshold": 0.82,
+          "metrics": {
+            "n": 1536,
+            "positives": 475,
+            "negatives": 1061,
+            "confusion": {
+              "tp": 184,
+              "tn": 1008,
+              "fp": 53,
+              "fn": 291,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.6687077732030359,
+            "accuracy": 0.7760416666666666,
+            "recall": 0.3873684210526316,
+            "specificity": 0.9500471253534402,
+            "false_positive_rate": 0.04995287464655985,
+            "false_negative_rate": 0.6126315789473684,
+            "compliant_error_rate": 0.04995287464655985,
+            "violation_error_rate": 0.6126315789473684,
+            "precision": 0.7763713080168776,
+            "macro_f1": 0.6855456103599314,
+            "block_f1": 0.5168539325842697,
+            "allow_f1": 0.8542372881355932,
+            "mcc": 0.43170873596451,
+            "false_blocks": 53,
+            "missed_violations": 291,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        },
+        "catch_target": {
+          "candidate": "primary",
+          "threshold": 0.33,
+          "metrics": {
+            "n": 1536,
+            "positives": 475,
+            "negatives": 1061,
+            "confusion": {
+              "tp": 429,
+              "tn": 679,
+              "fp": 382,
+              "fn": 46,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.771560097227045,
+            "accuracy": 0.7213541666666666,
+            "recall": 0.9031578947368422,
+            "specificity": 0.6399622997172478,
+            "false_positive_rate": 0.3600377002827521,
+            "false_negative_rate": 0.0968421052631579,
+            "compliant_error_rate": 0.3600377002827521,
+            "violation_error_rate": 0.0968421052631579,
+            "precision": 0.528976572133169,
+            "macro_f1": 0.7137717063248108,
+            "block_f1": 0.6671850699844479,
+            "allow_f1": 0.7603583426651735,
+            "mcc": 0.5028298109645459,
+            "false_blocks": 382,
+            "missed_violations": 46,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        }
+      },
+      "validation_best_individual": {
+        "balanced": {
+          "candidate": "single/jev/raw",
+          "threshold": 0.64,
+          "metrics": {
+            "n": 1536,
+            "positives": 475,
+            "negatives": 1061,
+            "confusion": {
+              "tp": 409,
+              "tn": 782,
+              "fp": 279,
+              "fn": 66,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.799046579691453,
+            "accuracy": 0.775390625,
+            "recall": 0.8610526315789474,
+            "specificity": 0.7370405278039586,
+            "false_positive_rate": 0.2629594721960415,
+            "false_negative_rate": 0.13894736842105262,
+            "compliant_error_rate": 0.2629594721960415,
+            "violation_error_rate": 0.13894736842105262,
+            "precision": 0.5944767441860465,
+            "macro_f1": 0.7613152524111925,
+            "block_f1": 0.70335339638865,
+            "allow_f1": 0.8192771084337349,
+            "mcc": 0.5558801765374968,
+            "false_blocks": 279,
+            "missed_violations": 66,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        },
+        "false_block_limit": {
+          "candidate": "single/shieldstral/calibrated",
+          "threshold": 0.78,
+          "metrics": {
+            "n": 1536,
+            "positives": 475,
+            "negatives": 1061,
+            "confusion": {
+              "tp": 181,
+              "tn": 1011,
+              "fp": 50,
+              "fn": 294,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.6669636390693983,
+            "accuracy": 0.7760416666666666,
+            "recall": 0.38105263157894737,
+            "specificity": 0.9528746465598492,
+            "false_positive_rate": 0.0471253534401508,
+            "false_negative_rate": 0.6189473684210526,
+            "compliant_error_rate": 0.0471253534401508,
+            "violation_error_rate": 0.6189473684210526,
+            "precision": 0.7835497835497836,
+            "macro_f1": 0.6836774034420581,
+            "block_f1": 0.5127478753541076,
+            "allow_f1": 0.8546069315300084,
+            "mcc": 0.4317627274457413,
+            "false_blocks": 50,
+            "missed_violations": 294,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        },
+        "catch_target": {
+          "candidate": "single/jev/raw",
+          "threshold": 0.49,
+          "metrics": {
+            "n": 1536,
+            "positives": 475,
+            "negatives": 1061,
+            "confusion": {
+              "tp": 429,
+              "tn": 720,
+              "fp": 341,
+              "fn": 46,
+              "error_allow": 0,
+              "error_block": 0
+            },
+            "balanced_accuracy": 0.7908814921375069,
+            "accuracy": 0.748046875,
+            "recall": 0.9031578947368422,
+            "specificity": 0.6786050895381716,
+            "false_positive_rate": 0.32139491046182844,
+            "false_negative_rate": 0.0968421052631579,
+            "compliant_error_rate": 0.32139491046182844,
+            "violation_error_rate": 0.0968421052631579,
+            "precision": 0.5571428571428572,
+            "macro_f1": 0.7386669832037509,
+            "block_f1": 0.689156626506024,
+            "allow_f1": 0.7881773399014779,
+            "mcc": 0.5377628965578855,
+            "false_blocks": 341,
+            "missed_violations": 46,
+            "unresolved": 0,
+            "coverage": 1.0
+          }
+        }
+      }
+    }
+  }
+}
