@@ -42,6 +42,7 @@ def package(state,out):
     for name in ['READOUT.md','RUNNING.md']:
         p=out/name;s=p.read_text()
         s=s.replace('../../published_runs/2026-10-31-liquid-finetune/README.md','README.md')
+        s=s.replace('../COMPUTE.md','../../docs/COMPUTE.md')
         for folder in ['contrastive-heads','activation-probe','leaderboard']:
             s=s.replace('../'+folder+'/', '../../docs/'+folder+'/')
         p.write_text(s)
@@ -50,6 +51,9 @@ def package(state,out):
     write(out/'runtime/cpu-environment.json',cpu)
     (out/'requirements-cpu.txt').write_text(''.join(k+'=='+v+'\n' for k,v in cpu['packages'].items()))
     progress=read(state/'progress.json')
+    public_progress={k:v for k,v in progress.items() if k!='published'}
+    public_progress['publication_note']='Prepared before Git publication; the containing repository commit is the publication record.'
+    write(out/'progress.json',public_progress)
     write(out/'provenance.json',dict(packaged_utc=now(),protocol_commit='164afe0',
         pre_test_freeze_commit=progress['pre_test_freeze_commit'],
         model=MODEL,revision=REVISION,retained_weights=read(state/'checkpoint-inventory.json'),

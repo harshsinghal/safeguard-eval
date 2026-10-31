@@ -4,7 +4,7 @@
 
 A moderation team writes a rule. A model interprets it. What happens when the team changes a definition, removes an example, switches models, or combines their decisions?
 
-This repository follows those questions through a growing series of experiments. We test specialist policy models, general-purpose language models, and decision models sometimes called “System One” models. We change policy text, examine model-specific input formats, transfer policies between models, combine model scores, and train lightweight classifiers on frozen representations. The records include improvements, regressions, and inconclusive results.
+This repository follows those questions through a growing series of experiments. We test specialist policy models, general-purpose language models, and decision models sometimes called “System One” models. We change policy text, examine model-specific input formats, transfer policies between models, combine model scores, train classifiers on frozen representations, and fine-tune a compact encoder for a fixed task. The records include improvements, regressions, and inconclusive results.
 
 The finding running through this work is that **policy authoring is deeply coupled with AI engineering**. A policy is an operational input: its wording, its delivery to the model, and the rule that turns a score into an action all need testing. Policy owners define the intended boundary; engineers help measure and implement it. Neither the model name nor a well-written document is sufficient on its own.
 
@@ -35,12 +35,13 @@ flowchart TB
         S1 --> S2 --> S3 --> S4
     end
 
-    subgraph FEATURES["Internal representations"]
+    subgraph FEATURES["Representations and task classifiers"]
         F1["14 · PolicyLM + Qwen 0.8B<br/>Frozen representations"]
         F2["15 · Shieldstral + Qwen 4B<br/>Repeat with larger models"]
         F3["Both studies tested<br/>Layers, pooling, trained heads<br/>Single / combined features"]
         F4["18 · Task-specific classifiers<br/>PolicyLM + ModernBERT<br/>Linear / neural / contrastive"]
-        F1 --> F2 --> F3 --> F4
+        F5["19 · Liquid encoder 350M<br/>Frozen linear control<br/>Fine-tune encoder + head"]
+        F1 --> F2 --> F3 --> F4 --> F5
     end
 
     START --> P1
@@ -48,7 +49,7 @@ flowchart TB
     START --> F1
     P3 --> EVIDENCE
     S4 --> EVIDENCE
-    F4 --> EVIDENCE
+    F5 --> EVIDENCE
     EVIDENCE["11 · Balanced evaluation<br/>False blocks + missed violations<br/>Validate → freeze → test"]
     EVIDENCE -.-> NEXT["PROPOSED · Not started<br/>Add trained feature heads<br/>Policy + cutoff · Second pass"]
 
@@ -60,27 +61,27 @@ flowchart TB
     class START,EVIDENCE neutral;
     class P1,P2,P3 policy;
     class S1,S2,S3,S4 scores;
-    class F1,F2,F3,F4 features;
+    class F1,F2,F3,F4,F5 features;
     class NEXT proposed;
     style POLICY fill:#f8fafc,stroke:#cbd5e1
     style SCORES fill:#f8fafc,stroke:#cbd5e1
     style FEATURES fill:#f8fafc,stroke:#cbd5e1
 ```
 
-**How to read the map:** solid boxes describe completed work; the dashed box is future work awaiting authorization. The separate **frontier-API pilot (6)** checked whether requests returned usable classifications; its full held-out experiment did not run. Not every branch covers both benchmarks: the first decision-model ensemble, the first two representation studies, and training-error corrections were tested on WildGuard only. The smart ensemble and task-specific contrastive-head study cover both benchmarks. The representation, correction, smart-ensemble, and contrastive-head studies use separate validation protocols and are **not merged into the common leaderboard**.
+**How to read the map:** solid boxes describe completed work; the dashed box is future work awaiting authorization. The separate **frontier-API pilot (6)** checked whether requests returned usable classifications; its full held-out experiment did not run. Not every branch covers both benchmarks: the first decision-model ensemble, the first two representation studies, training-error corrections, and Liquid fine-tuning were tested on WildGuard only. The smart ensemble and task-specific contrastive-head study cover both benchmarks. The representation, correction, smart-ensemble, contrastive-head, and Liquid studies use separate validation protocols and are **not merged into the common leaderboard**.
 
 | Follow a branch | Where to start |
 |---|---|
 | Policy wording, transfer, and structure | [WildGuard tuning](docs/wildguard/METHODS.md) → [Qwen comparison](docs/qwen-policy/READOUT.md) → [policy transfer](docs/policy-transfer/READOUT.md) → [HateXplain structure tests](docs/hatexplain/READOUT.md) → [training-error corrections](docs/policy-corrections/README.md) |
 | Scores, calibration, cutoffs, and combinations | [Probability ensembles](docs/ensemble/READOUT.md) → [log-odds ensembles](docs/ensemble-logits/RESULTS.md) → [Jev](docs/jev/READOUT.md) → [Kev / Clef](docs/decision-models/README.md) → [decision-model ensembles](docs/decision-ensemble/README.md) → [smart ensemble](docs/smart-ensemble/README.md) |
-| Frozen internal features and trained classifiers | [PolicyLM / Qwen](docs/activation-probe/README.md) → [Shieldstral / Qwen](docs/shield-probe/README.md) → [linear, neural and contrastive task classifiers](docs/contrastive-heads/README.md) |
+| Representations and task-specific training | [PolicyLM / Qwen](docs/activation-probe/README.md) → [Shieldstral / Qwen](docs/shield-probe/README.md) → [linear, neural and contrastive task classifiers](docs/contrastive-heads/README.md) → [Liquid encoder fine-tuning](docs/liquid-finetune/README.md) |
 | Compare outcomes and see what is proposed | [Balanced metric guide](docs/leaderboard/METRICS.md) · [leaderboard](#current-leaderboard) · [next steps: reducing moderation errors](docs/research-directions/REDUCING-MODERATION-ERRORS.md) |
 
 The [smart-ensemble study](docs/smart-ensemble/README.md) takes the next step: learn which native model scores help each other, then test the frozen combination. Adding trained representation heads to that combination, broader policy-and-cutoff optimization, and a targeted second pass remain [proposed work](docs/research-directions/REDUCING-MODERATION-ERRORS.md), awaiting separate authorization.
 
 ## What we are testing
 
-The main studies ask whether we can improve classification by changing the **policy, model interface, decision cutoff, or combination of models**, without further fine-tuning the language models. Some experiments fit calibrators, ensemble classifiers, or classifiers on hidden representations using labeled data. “No additional language-model fine-tuning” does not mean “no training data” or “no learned components.”
+The main studies ask whether we can improve classification by changing the **policy, model interface, decision cutoff, or combination of models**, without further fine-tuning the language models. Some experiments fit calibrators, ensemble classifiers, or classifiers on hidden representations using labeled data. “No additional language-model fine-tuning” does not mean “no training data” or “no learned components.” A separate [Liquid encoder study](docs/liquid-finetune/README.md) now tests **end-to-end supervised fine-tuning** against a frozen-encoder control, using prompts and labels rather than a policy document at inference time.
 
 | Benchmark | Our decision task | Final test population |
 |---|---|---|
@@ -98,6 +99,7 @@ The main comparisons are binary ALLOW/BLOCK tasks. The earlier demonstrations al
 | Ensembles | Averages, learned weights, logistic regression, random forests, shallow gradient boosting | Combinations of specified component scores; the smart-ensemble study also selects a small subset using training folds. |
 | Frozen-representation probes | Qwen3.5 0.8B with PolicyLM 1.7B; Qwen3.5 4B with Shieldstral 3B | Supervised logistic regression on individual or concatenated hidden states under a fixed harmfulness policy within each study; language-model weights stay frozen. |
 | Task-specific classifiers | PolicyLM 1.7B and ModernBERT-base 149M | Matched linear, neural and contrastive heads on frozen features; separately trained on WildGuard and HateXplain with three neural seeds. |
+| Supervised encoder fine-tuning | Liquid LFM2.5-Encoder-350M | Frozen encoder with logistic regression versus updating the encoder and a binary head; WildGuard only, three fine-tuning seeds. |
 
 Not every model has been tested on every dataset. The [interface audit](docs/research-directions/POLICY-INTERFACE-AUDIT.md), [model reference guide](skills/safeguard-eval/references/models.md), and [decision-model study](docs/decision-models/README.md) identify the checkpoints and adapters behind these names. Model size alone does not establish inference cost, speed, or suitability.
 
@@ -259,6 +261,16 @@ A separate accuracy-optimized HateXplain linear configuration reached **80.46% a
 
 [Readable results and all backends](docs/contrastive-heads/README.md) · [Methods](docs/contrastive-heads/METHODS.md) · [All seeds and operating profiles](docs/contrastive-heads/RESULTS.md) · [Frozen evidence](published_runs/2026-10-31-contrastive-heads/README.md)
 
+### 19. Fine-tuning a Liquid encoder: learning a fixed moderation boundary
+
+We fine-tuned Liquid's 350M encoder and a binary head on 4,096 WildGuard prompts, with 1,536 separate validation prompts. The control trained logistic regression on the same encoder's frozen features. Validation selected learning rate, epoch and cutoff across three seeds before the test prompts were uploaded. This time the encoder weights changed; no policy document was supplied at inference.
+
+The primary fine-tuned run reached **86.40% test accuracy**, versus **82.22%** for the frozen control. It made **71 fewer errors**: eight fewer false blocks and 63 fewer missed harmful prompts. Across all three fine-tuning seeds, accuracy averaged **86.23%** (85.52–86.76%). The improvement over the frozen control was supported by a paired interval, but this bounded run remained below our earlier PolicyLM linear-head and released WildGuard results. It is a separate protocol, not an addition to the common leaderboard.
+
+Validation accuracy was about 94%; test accuracy was lower. The validation-selected 5% false-block and 90% harmful-recall targets also failed on test. Fine-tuning improved this task-specific pipeline, but the labeling boundary, validation setting and deployment benchmark still matter. The readout includes default-cutoff controls and every seed, without substituting the best observed test result for the preselected result.
+
+[Readable findings](docs/liquid-finetune/README.md) · [All seeds and operating points](docs/liquid-finetune/RESULTS.md) · [Registered plan](docs/liquid-finetune/PLAN.md) · [Evidence and reproduction](published_runs/2026-10-31-liquid-finetune/README.md)
+
 ## What the evidence suggests for moderation teams
 
 - **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. A model replacement requires another evaluation.
@@ -286,7 +298,7 @@ The research archive grows separately from versioned skill releases. New studies
 
 The comparison now includes the **Jev/Kev/Clef score ensembles and decision-only controls**, alongside the earlier policy models, general-purpose LLMs, and specialist ensembles. There are **38 WildGuard entries and 20 HateXplain entries**, drawn from **261 eligible archived candidate records**. These are configured systems and methods, not 261 distinct models or independent experiments. The new decision-model combinations were tested on WildGuard only.
 
-The [PolicyLM representation study](docs/activation-probe/README.md), [Shieldstral representation study](docs/shield-probe/README.md), [smart-ensemble study](docs/smart-ensemble/README.md), and [contrastive-head study](docs/contrastive-heads/README.md) use separate 1,536-row validation protocols. The [training-error policy-correction study](docs/policy-corrections/README.md) uses a newly reserved validation population and additional project holdout. Their results are reported separately and have not been inserted into these common-validation tables.
+The [PolicyLM representation study](docs/activation-probe/README.md), [Shieldstral representation study](docs/shield-probe/README.md), [smart-ensemble study](docs/smart-ensemble/README.md), [contrastive-head study](docs/contrastive-heads/README.md), and [Liquid fine-tuning study](docs/liquid-finetune/README.md) use separate 1,536-row validation protocols. The [training-error policy-correction study](docs/policy-corrections/README.md) uses a newly reserved validation population and additional project holdout. Their results are reported separately and have not been inserted into these common-validation tables.
 
 The [integration record](published_runs/2026-10-30-leaderboard-decision-ensembles/README.md) preserves every earlier selection and result. It adds the new study's frozen method selections without refitting or choosing replacements from test scores. Individual calibration controls and “best method” aliases remain in that study's report rather than becoming duplicate leaderboard entries.
 

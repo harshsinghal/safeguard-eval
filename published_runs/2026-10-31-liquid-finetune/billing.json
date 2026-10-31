@@ -1,0 +1,16 @@
+{
+  "status": "terminated",
+  "provider": "GPU.ai",
+  "new_gpu_usd": 0.29,
+  "new_api_usd": 0,
+  "new_total_usd": 0.29,
+  "prior_accounted_usd": 16.80001787256,
+  "cumulative_accounted_usd": 17.09001787256,
+  "authorized_cap_usd": 20,
+  "remaining_usd": 2.9099821274399984,
+  "runpod_used": false,
+  "temporary_credentials_removed": true,
+  "instance_id": "gpu-b1d222a4",
+  "provider_instances_remaining": 0,
+  "note": "Prior total includes conservative allowances for earlier API transport failures. Local CPU work and electricity are not provider charges."
+}

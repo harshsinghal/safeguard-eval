@@ -187,3 +187,43 @@ The [evidence bundle](../published_runs/2026-10-31-contrastive-heads/README.md)
 preserves the protocol, tokenizer repair, freeze, parameters/hashes, predictions,
 source, provenance and billing. No fresh independent test was introduced. The
 paper, articles and pinned skill remain prior snapshots awaiting explicit revision.
+
+## Supervised Liquid encoder fine-tuning
+
+The [Liquid study](liquid-finetune/README.md) implements the newly authorized
+backbone fine-tune on WildGuard prompt harmfulness. It uses the same 4,096 fitting,
+1,536 validation and 1,699 test populations as the earlier head study, with
+LiquidAI/LFM2.5-Encoder-350M at revision
+`b886781f7c6f10ca9b7096e21b83e30a073c2f39`. Prompt text only enters a mean-pooled
+encoder and binary linear head. No policy text or generated answer is used.
+
+Two learning rates, three epochs and three seeds yielded 18 fine-tuned
+checkpoints; a frozen-encoder logistic control tried five C values. Validation
+selected epoch 3 at learning rate 5e-5 for every fine-tuning profile, with different
+cutoffs. Primary ordinary-accuracy cutoff was 0.68; the balanced cutoff was 0.86.
+The choices were committed in `317e792` before uploading test inputs. Test labels
+stayed local. Every selected checkpoint exactly replayed its validation scores.
+
+Primary test accuracy was 86.40% (balanced 85.49%), versus frozen 82.22%
+(balanced 80.88%). False blocks fell from 68 to 60, missed harmful prompts from 234
+to 171. The paired accuracy gain was 4.18 points, 95% CI [2.71, 5.65]. Three-seed mean
+accuracy was 86.23%, range 85.52–86.76%; all seeds improved accuracy, although one
+made two more false blocks than the frozen control. These results remain below
+the earlier PolicyLM linear-head and released WildGuard reference results under
+their original protocols. They do not establish an architecture-wide ranking.
+
+Do not hide the default-cutoff control: the same primary fine-tuned checkpoint
+at 0.5 scored 86.93%, with 70 false blocks and 152 misses. It is supplementary, not a
+test-selected replacement. Mean validation accuracy 93.99% exceeded mean
+test 86.23%. The separately validation-selected 5% false-block and 90% recall
+targets failed on test. Fine-tuning improved this bounded task pipeline; it did
+not remove the need for a representative benchmark or a tested operating point.
+
+The [evidence bundle](../published_runs/2026-10-31-liquid-finetune/README.md)
+contains all validation outputs, seeds, settings, test scores, uncertainty,
+source, environment, hashes and billing. No test prompt was truncated or dropped.
+Exact input restoration succeeded for all three splits. Public verification
+recomputes selections and metrics; it does not claim an independent GPU refit.
+Large weights and features stay local. The public test is reused, and this
+fine-tuning study remains separate from the common leaderboard. The paper,
+articles and released skill were not rewritten in this turn.

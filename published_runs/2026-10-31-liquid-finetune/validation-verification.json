@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-31T23:02:29.819054+00:00",
+  "validation_candidates": 11,
+  "validation_profiles": 8,
+  "verified_metric_rows": 0,
+  "verified_paired_profiles": 0,
+  "full_gpu_refit": false,
+  "checkpoint_validation_replay": "Recorded in test-output/scores.json",
+  "validation_only": true
+}

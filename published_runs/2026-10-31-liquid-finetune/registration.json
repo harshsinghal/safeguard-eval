@@ -1,0 +1,63 @@
+{
+  "created_utc": "2026-10-31T22:46:20.653628+00:00",
+  "sources": {
+    "docs/liquid-finetune/PLAN.md": "68eeda5ed09b742d21463cde0d9f93d8409a4c72dbac0031a63831e106bc2fbe",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30",
+    "evals/liquid_finetune/__init__.py": "0da33f916b29264c6fa6b3fb04be4e652e0ef7b422168b9a38e7bed133b2e3d0",
+    "evals/liquid_finetune/common.py": "ab95c0fc1c7713ae633cee22fca29b0eee96ecfa0780d042db1ca741a8e3ae93",
+    "evals/liquid_finetune/prepare.py": "4d07d6d1f2daf8e820d4b5d1682a30dff6f72cb597754d596b59d72681879ab8",
+    "evals/liquid_finetune/runner.py": "f73410c7d855af5db18098d99747e16b1ccfaedc6b340376997148ec09f3b191",
+    "evals/liquid_finetune/study.py": "ea249f2c46b84054e646f7879aa03c5214a76452b174fbc75f390fe41abacddd"
+  },
+  "data_hashes": {
+    "inputs/fit.jsonl": "cd6f82e77a376c0dafb436c022997732257b8b7b15f6a7e47b6d763078c130ba",
+    "metadata/fit.jsonl.gz": "98573adc9cefa171c4ccab9d1631eccd192ee81578c3900d3aa8795f06d38756",
+    "inputs/validation.jsonl": "0904a29a385efc6e18d1a6f4e61e497e177a769ea9b049851364b5a21ce3de75",
+    "metadata/validation.jsonl.gz": "004d9dc401dd2906d1a60fd0d36259b3938c2a972b141efee62f0b65f64e64ae",
+    "inputs/test.jsonl": "09a58a739923884a43dfa23937e8bf24c8e6fb07851fed6822560551361292d3",
+    "metadata/test.jsonl.gz": "ad95f0be7676defcb64c3c4fa0541ad29dbddbbf902ce982e73d0b4acbc69640"
+  },
+  "populations": {
+    "fit": {
+      "n": 4096,
+      "labels": {
+        "ALLOW": 1916,
+        "BLOCK": 2180
+      },
+      "groups": 3823
+    },
+    "validation": {
+      "n": 1536,
+      "labels": {
+        "ALLOW": 718,
+        "BLOCK": 818
+      },
+      "groups": 1424
+    },
+    "test": {
+      "n": 1699,
+      "labels": {
+        "ALLOW": 945,
+        "BLOCK": 754
+      },
+      "groups": 1699
+    }
+  },
+  "model": "LiquidAI/LFM2.5-Encoder-350M",
+  "revision": "b886781f7c6f10ca9b7096e21b83e30a073c2f39",
+  "seeds": [
+    20261031,
+    20261101,
+    20261102
+  ],
+  "rates": [
+    2e-05,
+    5e-05
+  ],
+  "epochs": 3,
+  "prior_registration_sha256": "6eb29c9994fb294abc69ce1c9868245beba86cfb675af704c45807cffb7341b1",
+  "prior_accounted_usd": 16.80001787256,
+  "max_new_gpu_usd": 1.6,
+  "total_cap_usd": 20
+}

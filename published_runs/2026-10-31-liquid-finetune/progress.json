@@ -1,0 +1,9 @@
+{
+  "pre_test_freeze_commit": "317e7925506e4f9be5a8e798f198f438296bc8ab",
+  "trained": true,
+  "frozen": true,
+  "test_scored": true,
+  "verified": true,
+  "gpu_terminated": true,
+  "publication_note": "Prepared before Git publication; the containing repository commit is the publication record."
+}

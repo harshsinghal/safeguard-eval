@@ -1,0 +1,4 @@
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 13704.76it/s]
+TEST INFERENCE fits/ft-lr5e-05-s20261031/epoch-3.pt 1.64
+TEST INFERENCE fits/ft-lr5e-05-s20261101/epoch-3.pt 1.67
+TEST INFERENCE fits/ft-lr5e-05-s20261102/epoch-3.pt 1.67

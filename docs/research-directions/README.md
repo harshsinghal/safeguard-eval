@@ -200,6 +200,22 @@ The [PolicyLM/ModernBERT classifier study](../contrastive-heads/README.md) now t
 linear, ordinary neural and contrastive neural heads on both benchmarks. It did
 not establish a consistent advantage for contrastive training. It is distinct
 from the still-proposed stacking of learned representation scores into an ensemble.
-The study does not authorize backbone fine-tuning, another hyperparameter search,
+That study did not itself authorize backbone fine-tuning, another hyperparameter search,
 or further paid inference. Its labeled training requirements and accuracy/error
 tradeoffs are documented alongside the results.
+
+
+## Completed: Liquid encoder fine-tuning on WildGuard
+
+The user subsequently authorized a separate [Liquid encoder fine-tune](../liquid-finetune/README.md).
+It updated a 350M encoder and binary head on the same 4,096 fitting prompts,
+with three seeds and validation-only selection. Primary test accuracy improved
+from 82.22% for a frozen-encoder linear control to 86.40%; the three-seed mean
+was 86.23%. This did not surpass the earlier PolicyLM linear-head or released
+WildGuard results under their original protocols. Validation operating targets
+also failed to transfer to test. The study used no policy text at inference.
+
+This completes the bounded WildGuard fine-tune, not a full-dataset learning
+curve, HateXplain fine-tuning, tuning other backbones, or integration into a new
+ensemble. Those remain separate possible experiments requiring their own
+protocols and authorization.

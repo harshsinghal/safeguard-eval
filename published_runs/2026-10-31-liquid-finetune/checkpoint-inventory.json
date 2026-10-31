@@ -1,0 +1,28 @@
+{
+  "retention_decided_before_test_scoring": true,
+  "selection_basis": "Primary seed accuracy/balanced, then other accuracy/balanced seeds, then constrained profiles; disk reserve2GiB.",
+  "retained": {
+    "fits/ft-lr5e-05-s20261031/epoch-3.pt": {
+      "sha256": "190ac9c58b89c393e7c9936920ac0a61af6044edd4a87fd1281bac8111b2332c",
+      "bytes": 1417987475,
+      "local_archive": "retained-checkpoints/fits__ft-lr5e-05-s20261031__epoch-3.pt.gz",
+      "gzip_sha256": "6621da980cd560cc5a8ceeef6cc398140c99096de0300c0828514bd6689deeb5",
+      "gzip_bytes": 1319847121
+    },
+    "fits/ft-lr5e-05-s20261101/epoch-3.pt": {
+      "sha256": "7c8810799ae6bf84746c14b38d3ca013413692217a1afd3e2661855fa339dc78",
+      "bytes": 1417987475,
+      "local_archive": "retained-checkpoints/fits__ft-lr5e-05-s20261101__epoch-3.pt.gz",
+      "gzip_sha256": "cb6090be69888af3655f7a63201d39a1b1bc4cb68df6129a37d5c28ba9dbf80f",
+      "gzip_bytes": 1319841589
+    },
+    "fits/ft-lr5e-05-s20261102/epoch-3.pt": {
+      "sha256": "cd7d63e1938e189bbc8cb1bc400967c37b686cf1f94c69af89d871ae384697a4",
+      "bytes": 1417987475,
+      "local_archive": "retained-checkpoints/fits__ft-lr5e-05-s20261102__epoch-3.pt.gz",
+      "gzip_sha256": "daa6644cb0657d14f7723d715ce313127fb409e8554b2803ce6fb68e63718f71",
+      "gzip_bytes": 1319845768
+    }
+  },
+  "not_retained": {}
+}

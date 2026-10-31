@@ -1,0 +1,22 @@
+{
+  "model": "LiquidAI/LFM2.5-Encoder-350M",
+  "revision": "b886781f7c6f10ca9b7096e21b83e30a073c2f39",
+  "model_card_url": "https://huggingface.co/LiquidAI/LFM2.5-Encoder-350M",
+  "provider_tutorial": "https://github.com/Liquid4All/cookbook/tree/main/examples/lfm-encoder-classification",
+  "latest_tutorial_path_commit_at_inspection": "e568a95ecc44416a773b0152262f591c35135e96",
+  "downloaded_reference_sha256": {
+    "tutorial-predict.py": "63fcfb8ad08d54ff536ca2d25cb18dfe425f8f4d9d52a0a420c2c669688c82f7",
+    "tutorial-config.ecthr-a.yaml": "0bb1c58633d4bbf9c0d70b18100175ba1101c68e0aaf5f364b687ed00de4458b",
+    "README.md": "1e8659cbe458ef9250ad6b0e4f3792ae78d02ed69df2b92c60fee1dc77fab846",
+    "tutorial-config.yaml": "a03ff98d7647bf93fd6902f7d49890477ee80692037f1d688900a519b366d372",
+    "tutorial-pyproject.toml": "b1ff1ffa3a856b216e8006ffab9ab8fe9853721bb9f3bcf5c1c26a032aa9dbef",
+    "modeling_lfm2_bidirectional.py": "f171f518be2a07da48b17fdea5655cad0a2452ab548e90e8ae903143686647e2",
+    "tutorial-README.md": "64ee01c6b3a8830f8a8f6edf46fe391bd342322e68c3c8a2348f3201bfbd8478",
+    "tutorial-train.py": "87ab0aa41096fb0653685d0f4281db35885d3aee2716b6ce00ace00aa648f5fb"
+  },
+  "dataset_revision": "d29c47f41c8b51348b5c8e8c81c039b3132b66d1",
+  "dataset_source_parquet_sha256": {
+    "train": "02ecea8a724a9146a1e473a95a7cdf262adfe9c7d5408953ca86d2fcfbdc8953",
+    "test": "6ccc2909c1ae6d41424fac69f1fc32535b1de39cb8f80407d81e8bc64a0bebca"
+  }
+}

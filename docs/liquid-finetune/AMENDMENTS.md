@@ -22,3 +22,10 @@ This is a storage change, not a change to training, model selection, test
 coverage or seed reporting. The other large weight files are removed when the
 temporary GPU instance is terminated. They can be recreated by rerunning the
 registered training procedure, subject to the recorded reproducibility limits.
+
+Final retention outcome: all four profiles selected the same epoch/rate, so
+there were only three distinct selected checkpoints. All three were retained
+locally as lossless gzip archives; their decompressed hashes exactly matched
+the original FP32 weight files. No selected weights were discarded. The other
+15, unselected checkpoint files were removed with the GPU; all their hashes
+and validation scores remain in the record.

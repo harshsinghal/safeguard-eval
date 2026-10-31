@@ -1,0 +1,18 @@
+{
+  "provider": "GPU.ai",
+  "instance_id": "gpu-b1d222a4",
+  "status": "terminated",
+  "cost_usd": 0.29,
+  "gpu_seconds": 1299,
+  "price_per_hour_usd": 0.8,
+  "server_auto_terminate_hours": 2,
+  "usage": [
+    {
+      "bucket_start": "2026-10-31T00:00:00Z",
+      "instance_id": "gpu-b1d222a4",
+      "gpu_seconds": 1299,
+      "cost_cents": 29
+    }
+  ],
+  "runpod_resources_used": false
+}
