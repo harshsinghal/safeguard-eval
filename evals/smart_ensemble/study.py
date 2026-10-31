@@ -148,7 +148,7 @@ def export(state,dest):
  state=Path(state);dest=Path(dest);check_freeze(state)
  if dest.exists():raise ValueError('Archive exists')
  dest.mkdir(parents=True)
- for name in ['PLAN.md','AMENDMENTS.md','registration.json','registration-v1.json','registration-v2.json','registration-v3.json','freeze.json','models.joblib','fitting.json','selection.json','validation-predictions.json.gz','test-predictions.json.gz','results.json','results.csv','RESULTS.md','reproduction.json','evaluation.json','requirements.txt','jev-refresh-required.json','api-billing.json','billing.json','RUN-LOG.md']:
+ for name in ['PLAN.md','AMENDMENTS.md','registration.json','registration-v1.json','registration-v2.json','registration-v3.json','registration-v4.json','freeze.json','models.joblib','fitting.json','selection.json','validation-predictions.json.gz','test-predictions.json.gz','results.json','results.csv','RESULTS.md','reproduction.json','evaluation.json','requirements.txt','jev-refresh-required.json','api-billing.json','billing.json','gpu-billing.json','transport-reconciliation.json','RUN-LOG.md']:
   if (state/name).exists():shutil.copy2(state/name,dest/name)
  for name in ['scores','metadata']:
   shutil.copytree(state/name,dest/name)

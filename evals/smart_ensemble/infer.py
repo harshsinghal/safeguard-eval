@@ -17,6 +17,13 @@ def cases(state,ds,split):
 def empty_result(r,model):
  return dict(id=r['id'],prompt_sha256=r['prompt_sha256'],score=None,prediction='ERROR',model=model,error_type='empty_content')
 
+def attempt_id(ledger,uid):
+ with ledger.connect() as db:
+  previous=db.execute('SELECT status FROM requests WHERE id=? OR id LIKE ?', (uid,uid+'-retry-%')).fetchall()
+ if any(r[0]=='pending' for r in previous):raise RuntimeError('Reconcile prior attempt before retrying')
+ if len(previous)>=3:raise RuntimeError('Three-attempt limit reached')
+ return uid if not previous else uid+'-retry-'+str(len(previous))
+
 def check_canary(state,ds,model,rr):
  old={r['id']:r for r in rows(state/f'canary-reference/{ds}/{model}.jsonl.gz')}
  if len(rr)!=16 or set(old)!={r['id'] for r in rr}:raise ValueError('Canary population mismatch')
@@ -97,14 +104,14 @@ def jev(state,keyfile,stage='development'):
     body=payload(r['prompt'],policies);h=hash_value(body);uid=hash_value([ds,split,r['id'],h]);cache=raw/(uid+'.json')
     if cache.exists():record=read(cache);response=record['response']
     else:
-     ledger.reserve(uid);start=time.monotonic()
+     aid=attempt_id(ledger,uid);ledger.reserve(aid);start=time.monotonic()
      try:response=post(body,key)
      except urllib.error.HTTPError as e:
-      ledger.settle(uid,RESERVE,'error_upper_bound');abort.set();save(raw/(uid+'.error.json'),dict(http_status=e.code,request_sha256=h));raise RuntimeError('Jev HTTP '+str(e.code)) from None
+      ledger.settle(aid,RESERVE,'error_upper_bound');abort.set();save(raw/(aid+'.error.json'),dict(http_status=e.code,request_sha256=h));raise RuntimeError('Jev HTTP '+str(e.code)) from None
      except Exception as e:
-      abort.set();save(raw/(uid+'.error.json'),dict(error_type=type(e).__name__,request_sha256=h));raise RuntimeError('Jev transport failed; reservation retained') from None
-     record=dict(id=r['id'],request_sha256=h,response=response,latency_seconds=time.monotonic()-start);save(cache,record)
-     try:ledger.settle(uid,billed_cost(response))
+      abort.set();save(raw/(aid+'.error.json'),dict(error_type=type(e).__name__,request_sha256=h));raise RuntimeError('Jev transport failed; reservation retained') from None
+     record=dict(id=r['id'],request_sha256=h,response=response,attempt_id=aid,latency_seconds=time.monotonic()-start);save(cache,record)
+     try:ledger.settle(aid,billed_cost(response))
      except Exception:abort.set();raise
     try:out=parse(response,policies)['detailed']
     except Exception:abort.set();raise

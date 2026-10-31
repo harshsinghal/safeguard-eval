@@ -7,7 +7,8 @@ import numpy as np
 from scipy.special import expit
 
 from evals.smart_ensemble.common import align_scores, digest, write
-from evals.smart_ensemble.infer import empty_result
+from evals.smart_ensemble.infer import empty_result, attempt_id
+from evals.jev.api import Ledger, RESERVE
 from evals.smart_ensemble.learn import Search, describe, logistic, logodds, predict
 from evals.smart_ensemble.study import check_freeze
 
@@ -55,6 +56,20 @@ class SmartEnsembleTests(unittest.TestCase):
         result = empty_result(dict(id='empty', prompt_sha256='h'), 'jev')
         self.assertIsNone(result['score'])
         self.assertEqual(result['prediction'], 'ERROR')
+
+    def test_retries_preserve_charges_and_require_reconciliation(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            ledger = Ledger(Path(tmp)/'billing.sqlite', 0., cap=.02)
+            for index in range(3):
+                aid = attempt_id(ledger, 'request')
+                self.assertEqual(aid, 'request' if index == 0 else f'request-retry-{index}')
+                ledger.reserve(aid)
+                with self.assertRaises(RuntimeError):
+                    attempt_id(ledger, 'request')
+                ledger.settle(aid, RESERVE, 'transport_upper_bound')
+            with self.assertRaises(RuntimeError):
+                attempt_id(ledger, 'request')
+            self.assertAlmostEqual(ledger.totals()['total_accounted_usd'], 3*RESERVE)
 
     def test_freeze_detects_changed_artifact(self):
         with tempfile.TemporaryDirectory() as tmp:

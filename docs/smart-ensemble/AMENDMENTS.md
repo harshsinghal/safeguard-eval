@@ -54,3 +54,17 @@ to test without consulting its labels. No test outcome motivated this correction
 The interrupted Jev pass completed its other queued requests; resume from their
 request-hash caches, preserving every billed call. Kev stopped before bulk scoring.
 This changes input-error handling only, not policies or selection rules.
+
+## Amendment 4: separately account for transport retries
+
+Four HateXplain validation requests failed with transport errors (`URLError`)
+before returning responses. Their
+full per-request cost reservations remain charged as conservative upper bounds;
+no model score was available from those attempts. Retry missing responses with
+separate ledger IDs and retain the first valid returned response, with a limit of
+three total attempts per request. Never retry a valid response to seek a different
+score. The same rule is frozen for final test requests. Retries remain within the
+$1 API cap, and transport failures still stop the run for reconciliation.
+
+This is an operational recovery before model fitting or test scoring, not a
+change to the component pool, policy payloads, selection rules or score semantics.
