@@ -1,0 +1,103 @@
+{
+  "created_utc": "2026-10-31T23:28:36.558088+00:00",
+  "models": {
+    "shieldstral": {
+      "model": "mistralai/Shieldstral-1.0-3B",
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+      "adapter": "shieldstral",
+      "policy_sha256": "153eac556b8e3ff707e0b1b03305bca487c7c931c925b1f1d51eac4957e9e390",
+      "policy_origin": "published_runs/2026-10-25-policy-transfer/policies/transfer-qwen-2b-p3.json",
+      "backend": "vllm",
+      "threshold": 0.5
+    },
+    "qwen-4b": {
+      "model": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "adapter": "qwen",
+      "policy_sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+      "policy_origin": "published_runs/2026-10-25-policy-transfer/baseline/runs/qwen-4b-validation/policy.json",
+      "backend": "vllm",
+      "threshold": 0.5
+    },
+    "policylm": {
+      "model": "musubilabs/policylm-1.7b",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+      "adapter": "policylm",
+      "policy_sha256": "96778b35c35c99c0771b2c62d177c681c5e0737b3c97f605948e1af700446e65",
+      "policy_origin": "published_runs/2026-10-25-policy-transfer/policies/transfer-policylm-p2.json",
+      "backend": "native",
+      "threshold": 0.5
+    },
+    "kev": {
+      "model": "jaredpalmer/kev-4b",
+      "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+      "backend": "native",
+      "adapter": "kev",
+      "threshold": 0.56,
+      "policy_sha256": "86656221662bb616d2156881e15e4413ec8ba2587bf3139a674a9a29f96a9732",
+      "policy_origin": "../work/decision-models-run/state/policies/kev/wildguard/final.json",
+      "policy_id": "brief"
+    },
+    "clef": {
+      "model": "Cloudflare/clef-flash",
+      "revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+      "backend": "native",
+      "adapter": "clef",
+      "threshold": 0.36,
+      "policy_sha256": "06d0d249b636803ab57dd972b5911e4bfcaa181b4c97c3f977e65c8ca16ce56d",
+      "policy_origin": "../work/decision-models-run/state/policies/clef/wildguard/final.json",
+      "policy_id": "examples"
+    },
+    "wildguard": {
+      "model": "allenai/wildguard",
+      "revision": "cbba4823f3e8020e5a74a5e29bf85072def6f2ff",
+      "backend": "vllm",
+      "adapter": "wildguard",
+      "threshold": null
+    },
+    "liquid": {
+      "model": "LiquidAI/LFM2.5-Encoder-350M",
+      "revision": "b886781f7c6f10ca9b7096e21b83e30a073c2f39",
+      "backend": "native",
+      "adapter": "liquid",
+      "threshold": 0.68,
+      "checkpoint_sha256": "190ac9c58b89c393e7c9936920ac0a61af6044edd4a87fd1281bac8111b2332c"
+    }
+  },
+  "vllm_version": "0.32.0",
+  "workload": "WildGuard prompt harmfulness, unique requests, historical policies, no policy/threshold fitting",
+  "tuning_count": 96,
+  "measurement_count": 384,
+  "concurrency": [
+    1,
+    8,
+    32,
+    64
+  ],
+  "repeats": 3,
+  "tuning_vllm_token_budgets": [
+    2048,
+    8192
+  ],
+  "tuning_native_max_batches": [
+    8,
+    32
+  ],
+  "native_batch_wait_ms": 2,
+  "vllm_prefix_cache_primary": false,
+  "secondary_shared_prefix_cache": true,
+  "prior_cumulative_usd": 17.09001787256,
+  "new_study_cap_usd": 5,
+  "cumulative_cap_usd": 22.09001787256,
+  "inputs": {
+    "tune": "0ed7f1d5afb4e630bd33396f71199e9e7b9ecd714905c8ea582eec43671f76ae",
+    "measure": "c1c7eef508c1b1e490492d2475416cdf9b916cba5119616fd49193af10e21224"
+  },
+  "source_hashes": {
+    "evals/serving/__init__.py": "301d73033e19b3df642750f9628ea7ac9629c19cd5eb5ad55a1c3736e0444d85",
+    "evals/serving/client.py": "4c84c1d4ebfa9a2b2fbf6bd5e398336634af314449ac2f049e147e2431b048a9",
+    "evals/serving/native.py": "cf8b3b8851ed46203c1506263ada4840cad47acfc7b768f6db8663798956c536",
+    "evals/serving/study.py": "dce29d4536d54875f1a92db4f547954b33c57195f0d83c79d8697c208f7d7db4"
+  },
+  "plan_sha256": "bdd40b5680db1478099f21c4a3878e72a6664cd2a57293141fe2399bd2a156af"
+}
