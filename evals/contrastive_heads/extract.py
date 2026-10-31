@@ -14,12 +14,19 @@ def modernbert(checkpoint, cases):
     windows=[];records=[]
     for i,case in enumerate(cases):
         ids=tokenizer(case['prompt'],add_special_tokens=False,truncation=False)['input_ids']
-        records.append(dict(id=case['id'],content_tokens=len(ids),windows=(len(ids)+8189)//8190,empty=not bool(ids)))
-        for start in range(0,len(ids),8190):
-            chunk=ids[start:start+8190]
-            enc=tokenizer.prepare_for_model(chunk,add_special_tokens=True,return_special_tokens_mask=True,
-                                            return_attention_mask=True,truncation=False)
-            windows.append((len(enc['input_ids']),i,len(chunk),enc))
+        # Fast tokenizers supply their own special-token mask through __call__.
+        # Overflow windows retain the complete input; truncation here is windowing,
+        # not discarding a suffix. Verify every original content token is retained.
+        encoded=tokenizer(case['prompt'],add_special_tokens=True,return_special_tokens_mask=True,
+            return_overflowing_tokens=True,max_length=8192,truncation=True,stride=0)
+        retained=0;window_count=0
+        for j,token_ids in enumerate(encoded['input_ids']):
+            enc={k:encoded[k][j] for k in ['input_ids','attention_mask','special_tokens_mask']}
+            n=sum(1-v for v in enc['special_tokens_mask'])
+            if n:
+                windows.append((len(token_ids),i,n,enc));retained+=n;window_count+=1
+        if retained!=len(ids):raise ValueError('Tokenizer windowing lost content')
+        records.append(dict(id=case['id'],content_tokens=len(ids),windows=window_count,empty=not bool(ids)))
     windows.sort(key=lambda v:(v[0],v[1]));at=0;tick=time.monotonic()
     while at<len(windows):
         end=at+1
