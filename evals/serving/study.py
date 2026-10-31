@@ -65,6 +65,16 @@ def run(state,slug):
                     client=Client(state,slug)
                     client.run(tune[:32],1,directory/f'parity-p{value}',seed=41)
                     result=client.run(tune,32,directory/f'tune-p{value}',seed=42)
+                    reference=rows(directory/f'parity-p{value}.jsonl')
+                    batched={r['id']:r for r in rows(directory/f'tune-p{value}.jsonl')}
+                    differences=[abs(r['score']-batched[r['id']]['score']) for r in reference
+                                 if r.get('score') is not None and batched[r['id']].get('score') is not None]
+                    parity=dict(n=len(reference),decision_changes=sum(r['prediction']!=batched[r['id']]['prediction'] for r in reference),
+                                max_score_difference=max(differences,default=0.))
+                    write(directory/f'parity-check-p{value}.json',parity)
+                    if parity['max_score_difference']>.02 or parity['decision_changes']>1:
+                        raise RuntimeError('Batch parity needs investigation')
+                    result['parity']=parity
                     tuning.append(dict(parameter=value,**result))
             except Exception as exc:
                 write(directory/f'failed-p{value}.json',dict(error=str(exc),created_utc=now()))
@@ -90,4 +100,15 @@ def run(state,slug):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--state',required=True);p.add_argument('--model',required=True)
-    a=p.parse_args();run(a.state,a.model)
+    a=p.parse_args()
+    def stop(signum,frame):raise KeyboardInterrupt('Bounded serving deadline')
+    signal.signal(signal.SIGTERM,stop);signal.signal(signal.SIGALRM,stop)
+    signal.alarm(5*3600)
+    if a.model=='all':
+        for slug in ['shieldstral','qwen-4b','wildguard','policylm','liquid','kev','clef']:
+            try:run(a.state,slug)
+            except Exception as exc:
+                write(Path(a.state)/slug/'failed.json',dict(error=str(exc),created_utc=now()))
+                print(slug+' FAILED: '+str(exc),flush=True)
+        print('ALL_ATTEMPTED',flush=True)
+    else:run(a.state,a.model)

@@ -95,9 +95,9 @@
   },
   "source_hashes": {
     "evals/serving/__init__.py": "301d73033e19b3df642750f9628ea7ac9629c19cd5eb5ad55a1c3736e0444d85",
-    "evals/serving/client.py": "4c84c1d4ebfa9a2b2fbf6bd5e398336634af314449ac2f049e147e2431b048a9",
+    "evals/serving/client.py": "3f4b8ca600895317d2ddc2a97aacb8eb3a3f64a32233b3cdc630422f93df5559",
     "evals/serving/native.py": "cf8b3b8851ed46203c1506263ada4840cad47acfc7b768f6db8663798956c536",
-    "evals/serving/study.py": "dce29d4536d54875f1a92db4f547954b33c57195f0d83c79d8697c208f7d7db4"
+    "evals/serving/study.py": "51838900b95bc170eb3fba3fb69066d9f025821be99b4beac22c7057a5f032e7"
   },
-  "plan_sha256": "bdd40b5680db1478099f21c4a3878e72a6664cd2a57293141fe2399bd2a156af"
+  "plan_sha256": "eae2cefb8926d877fc49faa6686f33f65fb342d8d160548113730d21672ec4d8"
 }

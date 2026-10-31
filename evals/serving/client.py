@@ -8,6 +8,7 @@ import random
 import time
 import urllib.request
 import numpy as np
+import httpx
 
 from evals.ensemble.common import read, rows, write, write_rows
 from evals.wildguard import run as specialist
@@ -29,6 +30,7 @@ class Client:
     def __init__(self, state, slug, base='http://127.0.0.1:8000'):
         self.state=Path(state); self.slug=slug; self.base=base
         self.spec=read(self.state/'registration.json')['models'][slug]
+        self.http=httpx.Client(timeout=600,limits=httpx.Limits(max_connections=64,max_keepalive_connections=64))
         self.policy=read(self.state/'policies'/(slug+'.json')) if (self.state/'policies'/(slug+'.json')).exists() else None
         self.ids=[]; self.tok=None
         if slug=='shieldstral': self.ids=specialist.score_ids(base,self.spec['model'],'shieldstral')
@@ -55,7 +57,8 @@ class Client:
                     req['prompt']=self.tok(req['prompt'],add_special_tokens=True)['input_ids']
                     req['add_special_tokens']=False
                 else:req['logprob_token_ids']=self.ids
-            resp=specialist.post(self.base,endpoint,req)
+            response=self.http.post(self.base+endpoint,json=req)
+            response.raise_for_status();resp=response.json()
             if self.spec['backend']=='native': result.update(resp)
             else:
                 result.update(general.parse(resp) if self.slug=='qwen-4b' else specialist.parse(resp,self.slug))

@@ -59,7 +59,9 @@ Record tuning outcomes before final measurement. Failed configurations remain in
 the record. Any runtime compatibility changes require an amendment. Compare
 batch and concurrency scores/decisions with single-request references; record
 numerical differences and errors rather than treating response HTTP 200 as proof
-of correctness. Audit against cached historical predictions where populations
+of correctness. Before final timing, a 32-input batch parity gate flags any score
+change over 0.02 or more than one decision change for investigation; smaller
+differences are still reported. Audit against cached historical predictions where populations
 overlap. No measurement-based changes to policies, thresholds or weights.
 
 ## Metrics and interpretation
