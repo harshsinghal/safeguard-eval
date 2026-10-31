@@ -193,4 +193,3 @@ The OOF values were used to search subsets and regularization; they are not inde
 ## Limits
 
 This is a bounded configured-system comparison, not an architecture or training-data causal study. Different families are not guaranteed to make complementary errors. Scores are not interchangeable calibrated probabilities. The same public tests and development histories have informed earlier research; no fresh independently labeled test was created. WildGuardTrain model-derived labels differ from the human-labeled test. Jev canary scores varied even for identical requests, so all new Jev development and test outputs were collected in this study; intervals do not capture API variability. No policy optimization, new representation head, second-pass routing, or backbone fine-tuning was performed.
-

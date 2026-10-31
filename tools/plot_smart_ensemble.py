@@ -47,6 +47,8 @@ def plot(source, output):
     output = Path(output)
     output.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(output, bbox_inches='tight')
+    if output.suffix == '.svg':
+        output.write_text('\n'.join(line.rstrip() for line in output.read_text().splitlines()) + '\n')
     plt.close(fig)
 
 
