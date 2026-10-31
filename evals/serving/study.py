@@ -19,11 +19,12 @@ def server(state,slug,parameter,cache=False):
     start=time.perf_counter();env=os.environ.copy();env['TOKENIZERS_PARALLELISM']='false'
     if spec['backend']=='vllm':
         env['CUDA_HOME']='/root/vllmenv/lib/python3.12/site-packages/nvidia/cu13'
+        env['PATH']='/root/vllmenv/bin:'+env.get('PATH','')
         command=['/root/vllmenv/bin/vllm','serve',spec['model'],'--revision',spec['revision'],
             '--host','127.0.0.1','--port','8000','--dtype','bfloat16','--max-model-len','8192',
             '--gpu-memory-utilization','.85','--max-num-seqs','64','--max-num-batched-tokens',str(parameter),
             '--enable-prefix-caching' if cache else '--no-enable-prefix-caching']
-        if slug=='qwen-4b':command+=['--language-model-only']
+        if slug in ('qwen-4b','shieldstral'):command+=['--language-model-only']
         if slug=='wildguard':command+=['--tokenizer-mode','slow']
     else:
         command=['/root/'+ENVS[slug]+'/bin/python','-m','evals.serving.native','--state',str(state),'--model',slug,'--max-batch',str(parameter)]
