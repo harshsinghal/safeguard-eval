@@ -9,8 +9,9 @@ The [experiment map](../README.md#experiment-map) is the visual entry point. Kee
 its branch labels and log numbers aligned with completed studies. Its arrows
 connect research questions; they do not imply a common validation population or
 a single inference pipeline. Show proposals separately and retain their execution
-status. The current [next-step proposal](research-directions/REDUCING-MODERATION-ERRORS.md)
-is recorded for later; the user has not authorized those runs.
+status. The [next-step proposal](research-directions/REDUCING-MODERATION-ERRORS.md)
+now distinguishes the completed native-score smart ensemble from the remaining
+representation-score, policy-optimization and second-pass proposals.
 
 ## Adding a completed experiment
 
@@ -125,3 +126,34 @@ preserve the data audit, staged freezes, 46,220 score records, paired uncertaint
 source, runtime and the $0.72 reconciled bill. Both populations reproduce locally.
 The paper, articles and installed skill have not been silently rewritten; this
 record is material for their next explicit revision.
+
+## Smart ensembles across model families
+
+The [smart-ensemble study](smart-ensemble/README.md) is complete on both benchmarks.
+It aligned seven WildGuard and six HateXplain score sources on 4,096 fitting and
+1,536 validation examples. A bounded fitting-fold search selected components;
+validation selected cutoffs. The freeze was published before final test scoring.
+Policies and language-model weights stayed fixed; the combiner was supervised.
+
+WildGuard selection retained Shieldstral alone at 90.53% balanced accuracy.
+The all-model logistic control reached 90.43%; equal log-odds averaging reached
+90.91%, with an uncertain gain. HateXplain selected Jev/Kev/Shieldstral at 79.97%.
+It reduced both errors versus equal averaging, but traded 86 fewer false blocks
+for 20 more misses versus its selected Jev individual. That individual comparison's
+paired interval included zero. All-model learned controls reached about 81%; they
+were not substituted for the primary after test evaluation.
+
+Preserve these distinctions in future writing: complementarity versus a simple
+average is different from beating a strong individual; passing a training addition
+rule does not prove a component's test contribution; and aggregate gains can hide
+operational tradeoffs. The test sets are reused. Jev scores were refreshed after
+development canaries varied for identical requests; intervals do not cover that
+API variability. The new result is not a policy-editing or fine-tuning gain.
+
+The [full results](smart-ensemble/RESULTS.md) and
+[frozen bundle](../published_runs/2026-10-31-smart-ensemble/README.md) preserve all
+controls, coefficients, search paths, paired intervals, cost and CPU reproduction.
+This study remains separate from the common-validation leaderboard. The papers,
+articles and pinned skill release are unchanged; the new evidence is ready for
+their next explicit update. Representation-score stacking, broader policy search
+and a targeted second pass remain proposed work.

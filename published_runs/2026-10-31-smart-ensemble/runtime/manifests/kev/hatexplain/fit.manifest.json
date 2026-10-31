@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-31T16:51:09.422551+00:00",
+  "model": "kev",
+  "split": "fit",
+  "dataset": "hatexplain",
+  "n": 4096,
+  "sha256": "d4b7ffc64ade04e853b9b1ed4c03df5009f06e8fcf2b35af9a9413e92964d4c3",
+  "gpu": "NVIDIA L40S",
+  "torch": "2.8.0+cu128",
+  "seconds": 57.63645922499995,
+  "registration_sha256": "80bb9c13cd9d4eabc52eeec1acf51a746a670921cb89faa3a293fe006f49755d"
+}

@@ -1,9 +1,12 @@
 # Next steps: reducing moderation errors on unseen examples
 
-**Status: recorded proposal; not started.** The user asked to retain these ideas
-and will say when to run them. This document does not authorize model inference,
-GPU rentals, API spending, or a new evaluation. It is a research agenda, not a
-frozen experimental protocol.
+**Status: the bounded native-score ensemble branch has been executed.** Following
+the user's instruction, the [smart-ensemble study](../smart-ensemble/README.md)
+combines specialist, general-purpose and decision-model scores on both benchmarks.
+Adding trained representation heads, broader policy-and-cutoff optimization, and
+a targeted second pass remain proposals awaiting separate authorization. This
+agenda is not blanket authorization for further compute or spending; the executed
+study has its own [frozen protocol](../smart-ensemble/PLAN.md).
 
 ## The question we want to answer
 
@@ -39,6 +42,15 @@ validation populations. Their headline results motivate candidates; they are not
 a substitute for comparing all new arms under one registered protocol.
 
 ## First priority: combine complementary signals
+
+The completed first step uses native scores only. It selects components and
+regularization on fitting folds, chooses cutoffs on validation, and preserves
+open-only, family-specific, equal-weight, all-model and nonlinear controls. It
+does not stack the previously trained representation classifiers. Its official
+test populations are reused; no new independently labeled holdout was created.
+See the [study readout](../smart-ensemble/README.md) for outcomes and tradeoffs.
+The broader proposal below remains useful for a subsequent representation-score
+extension, which would require additional out-of-fold component predictions.
 
 Start with an error-complementarity audit on eligible development examples. When
 one component is wrong, how often is another right? Examine both error types and
@@ -147,17 +159,18 @@ simply be counted as correct classifications.
   Record total compute, API cost, latency, and operational failures; compare an
   open-weight configuration with any API-dependent arm where appropriate.
 
-## Restart checklist — all pending
+## Progress and remaining decisions
 
-- [ ] Receive the user's instruction to begin; confirm the applicable compute budget.
-- [ ] Audit eligible development predictions and prior-use records.
-- [ ] Identify the fresh final evaluation population and its labeling process.
-- [ ] Select a small component pool using development errors.
-- [ ] Register splits, candidate search limits, metrics, controls, and stopping rules.
-- [ ] Run the mixed-signal comparison; retain unsuccessful combinations.
+- [x] Receive authorization for the bounded native-score ensemble within the existing $20 cumulative cap.
+- [x] Audit eligible native-score predictions and prior-use records.
+- [ ] Commission a fresh independently labeled final evaluation population; the current study explicitly reuses public tests.
+- [x] Select a small native-score combination using fitting-fold predictions.
+- [x] Register splits, candidate search limits, metrics, controls, and stopping rules.
+- [x] Run the cross-family native-score comparison; retain unsuccessful combinations.
+- [ ] Add trained representation scores with correctly nested out-of-fold predictions.
 - [ ] Consider policy optimization and a targeted second pass using development evidence.
-- [ ] Freeze all final choices before accessing the new test labels.
-- [ ] Publish all registered results, uncertainty, cost, and reproducible evidence.
+- [x] Freeze the new ensemble's final choices before scoring its test outcomes.
+- [x] Publish the registered native-score results, uncertainty, cost, and reproducible evidence.
 
-No items have been executed for this proposed program. The immediate next action
-is documentation only; execution waits for the user.
+The unchecked items remain future work. Results from the completed bounded study
+do not authorize further experiments or remove the need for fresh evaluation data.

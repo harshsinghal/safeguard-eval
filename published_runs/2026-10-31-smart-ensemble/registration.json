@@ -1,0 +1,348 @@
+{
+  "created_utc": "2026-10-31T16:31:41.424486+00:00",
+  "protocol_sha256": "8a154891de13f2120ba9e1d7425c36e8dfc278d56edce18cb83c9d59b6eceae7",
+  "inference_sources": {
+    "docs/smart-ensemble/PLAN.md": "8a154891de13f2120ba9e1d7425c36e8dfc278d56edce18cb83c9d59b6eceae7",
+    "evals/decision_models/adapters.py": "a8e4540dd1077dc07cf6a8c4d4ece6e48a8d9ddc1b68afadbdbf650cea931f78",
+    "evals/decision_models/study.py": "ac353a7bf1de44ed8d83016e34541d54cd46f3502cb0089f6d30cb4c34a0d49e",
+    "evals/decision_models/vendor-hashes.json": "bc101bd12269214ca4da7c20c4bfd08b69837d9b703b3c82aeed8821e00b17e1",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/jev/api.py": "d368250e8b9a632bc63bb3b5a12fde49500cf99f6e9c26237fbfd7f94af3756b",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30",
+    "evals/smart_ensemble/common.py": "951bb2a08ec0725d8cb8c362bf8cab0d6967c71c4ca7d7607fff0f2b722a29cf",
+    "evals/smart_ensemble/infer.py": "fda62ec69e773574a9c8e273fbd9022748bb974e8ecc27925366cb38e3c55545",
+    "evals/smart_ensemble/prepare.py": "51bc13421472c0cc180f63d52ff3e7c95dc34ec4bee8594b886af823e9abbe9d"
+  },
+  "data_hashes": {
+    "metadata/wildguard/fit.jsonl.gz": "98573adc9cefa171c4ccab9d1631eccd192ee81578c3900d3aa8795f06d38756",
+    "inputs/wildguard/fit.jsonl": "cd6f82e77a376c0dafb436c022997732257b8b7b15f6a7e47b6d763078c130ba",
+    "scores/wildguard/policylm/fit.jsonl.gz": "58b1f7880169ed07c08ddec1b67e1c438cc8ed4010ad4e801e716dbc0f93e29a",
+    "scores/wildguard/shieldstral/fit.jsonl.gz": "87b98d3d20b1e363d151ce05784bb6a17ff7c5925c131dbe3b8626a24aad485b",
+    "scores/wildguard/cope/fit.jsonl.gz": "91470b667a33962458fff230916818808f726de69161bda7ec491255af80b185",
+    "scores/wildguard/qwen-4b/fit.jsonl.gz": "7c69a756ace37ad8399bcbe243c32c2db15aaebf7161e02564f43680a978e808",
+    "metadata/wildguard/validation.jsonl.gz": "004d9dc401dd2906d1a60fd0d36259b3938c2a972b141efee62f0b65f64e64ae",
+    "inputs/wildguard/validation.jsonl": "0904a29a385efc6e18d1a6f4e61e497e177a769ea9b049851364b5a21ce3de75",
+    "scores/wildguard/policylm/validation.jsonl.gz": "eb185846c96113c4f20a912072f3c985b4bbaea0b07ee79b5826280d03233b37",
+    "scores/wildguard/shieldstral/validation.jsonl.gz": "2db072d6fea9613ef7b71fe86f2d45269077a034019554aaddfdd557faf87445",
+    "scores/wildguard/cope/validation.jsonl.gz": "ece3f74585cfe3895eaebb57a067f21946131aaa2673333538da1f91c46ee392",
+    "scores/wildguard/qwen-4b/validation.jsonl.gz": "b75928d931069ba42afe6091ea33b906a1cf9160512e674ca149e9c6e6d1a236",
+    "metadata/wildguard/test.jsonl.gz": "ad95f0be7676defcb64c3c4fa0541ad29dbddbbf902ce982e73d0b4acbc69640",
+    "policies/wildguard/policylm.json": "ad0ceb520f16254b6f8e444be008349d04d26baf70492e770cb1daf59f4da0f2",
+    "policies/wildguard/shieldstral.json": "c52970c306ee4b66901c0ba9b1e057b0cfeca7d300771a652fe79a3bdbddeaca",
+    "policies/wildguard/cope.json": "8af17e18ab7f9888c54e53c06d44346f888869ac780643fc335518af896261cb",
+    "policies/wildguard/qwen-4b.json": "c52970c306ee4b66901c0ba9b1e057b0cfeca7d300771a652fe79a3bdbddeaca",
+    "policies/wildguard/jev.json": "b9cdb564de4e6020c05d6e9c407fdb19ec9de54cbcf8894084f3d986337ff9db",
+    "policies/wildguard/jev-pack.json": "0babb326ab47f8fc111ae9a819c1d3621f60105841c338cec7c7287258be5c81",
+    "policies/wildguard/kev.json": "86656221662bb616d2156881e15e4413ec8ba2587bf3139a674a9a29f96a9732",
+    "policies/wildguard/clef.json": "06d0d249b636803ab57dd972b5911e4bfcaa181b4c97c3f977e65c8ca16ce56d",
+    "inputs/wildguard/canary.jsonl": "d22612138da4edca3e6b57a54a5c0b876c186ec7bf6c01c798de1946bc4fdf23",
+    "metadata/wildguard/canary.jsonl.gz": "59eee6e693aa6a62bdfdf7e77a4a7c71303c7dec7ba0b18c22cb1a397df4756f",
+    "canary-reference/wildguard/jev.jsonl.gz": "1c42c5c9586de867c60d223f5fdeef13043439ab773b8621cfc94ed147607b0e",
+    "canary-reference/wildguard/kev.jsonl.gz": "bcb14618bad1d4f3131ef776ad7771f99f42da47827d417d2dc96f3eeb6adb98",
+    "canary-reference/wildguard/clef.jsonl.gz": "036047cf57705d42a5b99ce95762103e59d8498fe803e36f4289b1e8b10f13eb",
+    "metadata/hatexplain/fit.jsonl.gz": "9414a0834619069cdb0786e25bdd3a091d7500d1a0044e77aa0fe8b9b56f6393",
+    "inputs/hatexplain/fit.jsonl": "e1d3c31408306cc8bdf110d918a4682def3ca6a266ba16a68bc12cddd4aac2e9",
+    "scores/hatexplain/policylm/fit.jsonl.gz": "e13ea122f12527aeca1dc59b7fbc81ddc9eec708ed1fcc015410837d8100b180",
+    "scores/hatexplain/shieldstral/fit.jsonl.gz": "dc76f32e50eb728c74221a68d7b7c4c3ead442baa2e78c5b3127e7d28e5e95e7",
+    "scores/hatexplain/qwen-4b/fit.jsonl.gz": "8d18c83b0f27e91f7fd5377d27d18283ff09dfd56ed33738b418be907a1f4e1f",
+    "metadata/hatexplain/validation.jsonl.gz": "7d3932bf2c91e46f88bfcc04e6bda708118d97270f5a03ffdc66749a7106035b",
+    "inputs/hatexplain/validation.jsonl": "1c89c336da0a0aed2260140d549125d50f3e93573f247d451252db8ecef2040d",
+    "scores/hatexplain/policylm/validation.jsonl.gz": "a781889c05e46e9ac95b92b6b4b557d21696039277ae877b9ccbfa9e785f6106",
+    "scores/hatexplain/shieldstral/validation.jsonl.gz": "0537ac45bafe23358d47d4d1f6873747e3a760414c317bd5caba61182259a212",
+    "scores/hatexplain/qwen-4b/validation.jsonl.gz": "7697d352c4f62340d6a14c4c9319e108da8a11105e343e0af54142490f29c178",
+    "metadata/hatexplain/test.jsonl.gz": "2261f73b4223f3201e9d205cba9c5dc9ec40b1e5115fcaa614871b36fd66817a",
+    "policies/hatexplain/policylm.json": "48ff3502bdad0530a0e99792c53f40a0b6a8a534b41266e4ec8bf3c30e512183",
+    "policies/hatexplain/shieldstral.json": "de63b5dfcda53af29c08da0d8235bef54ec982d7485f8e2c7a3bcd02ddee4771",
+    "policies/hatexplain/qwen-4b.json": "f8a6fe582b6489f6164945e0b626ca9b8a251a8f90285c4617a025a1db6c703e",
+    "policies/hatexplain/jev.json": "9dcc59bed7985e2cbfc11c09457af6fb6f0cdb31fabbc9da435aad1faea1d6ea",
+    "policies/hatexplain/jev-pack.json": "f5829030267a3b101bc39dbedd0bfaba23f44c96d638f8676c8961ea0e4a0a9f",
+    "policies/hatexplain/kev.json": "ffbb9a95aae12ee293404081db16624bd2b9ed420ad5aa7e1732f413b76ab820",
+    "policies/hatexplain/clef.json": "2ab558ce41c2632f145e78db6920bd1aa767e177701d4169b4f1b7d28b3a2797",
+    "inputs/hatexplain/canary.jsonl": "bfbb89ea24fed0b49dc4e2cde3cf51e3213956e0155849ef3075e6879ae981a0",
+    "metadata/hatexplain/canary.jsonl.gz": "4c450d7cf4cc36c3e810263668b6584c63978ac2bc33b6dbad2c6a02faa56c5a",
+    "canary-reference/hatexplain/jev.jsonl.gz": "07a9bf6fa6d01b9bb94cafff433532fa38dc83812c5a9e8cba420bcade5ae9b1",
+    "canary-reference/hatexplain/kev.jsonl.gz": "50bebdb9fa6ffebfa5e89ee48fc5c742c84aee7e00cafa31c935601be481143f",
+    "canary-reference/hatexplain/clef.jsonl.gz": "612ea93cc3da35974c53c99fdb21143587a679c8764b51a6ee2d78fc5e51291a"
+  },
+  "original_hashes": {
+    "published_runs/2026-10-27-ensemble/scores/wildguard/policylm/fit.jsonl.gz": "fa87137349de47d265fdd3938a78d8e761febf26719dbd297c98e574c4be69ee",
+    "published_runs/2026-10-27-ensemble/scores/wildguard/shieldstral/fit.jsonl.gz": "819624f45a906cfc778275c68f9f096523b7e0b119af31ae9edfbbb18c79eaa7",
+    "published_runs/2026-10-27-ensemble/scores/wildguard/cope/fit.jsonl.gz": "5677ba6f75de127f9feae36acc12046d37da68c17c8b1c90c1f5b10f26c4206a",
+    "published_runs/2026-10-30-shield-probe/feature-provenance/qwen/fit/records.json": "02392b4a363a5577b71e7cede14b0fc017da00a0e07f025c01952e1f43073336",
+    "published_runs/2026-10-27-ensemble/scores/wildguard/policylm/validation.jsonl.gz": "c8e235750070512f762f3d8b1d1f18b862752f78767da8800b0991934d855e97",
+    "published_runs/2026-10-27-ensemble/scores/wildguard/shieldstral/validation.jsonl.gz": "e3b271070ad6862e97b3a3ba17d7b298c48f9d937b35fe3e4a6207fe83778f53",
+    "published_runs/2026-10-27-ensemble/scores/wildguard/cope/validation.jsonl.gz": "f43501b5a5966d72138ac1925eda4a5fa58cc7321bf73854c61fb0a417d74b71",
+    "published_runs/2026-10-30-shield-probe/feature-provenance/qwen/validation/records.json": "1788a0e786c06b6ac1485b95460649a71526e2e023267b7a50f2d612b975c480",
+    "published_runs/2026-10-29-jev/predictions/wildguard/fit/brief.jsonl.gz": "b005498e02ae2c86d9a40fcf15633ba5b0eb86b52460ef2b38570f61f2a2c5d5",
+    "published_runs/2026-10-29-jev/predictions/wildguard/validation/brief.jsonl.gz": "a47fc339d8a1247e6245c64da84ccdc7d7010580d90e02c083713b45c3668369",
+    "published_runs/2026-10-27-ensemble/scores/wildguard/policylm/test.jsonl.gz": "f14a65d4fd49ae0bb5ebbd5d8232be960c9bf19db5d5fea7598cb14944a1c7c3",
+    "published_runs/2026-10-27-ensemble/policies/wildguard/policylm.json": "ad0ceb520f16254b6f8e444be008349d04d26baf70492e770cb1daf59f4da0f2",
+    "published_runs/2026-10-27-ensemble/scores/wildguard/shieldstral/test.jsonl.gz": "8215dc2c46fd5ba2dd5f78b67c73fce5bd60d4ed9623edc0ef1dc45584e5ca7c",
+    "published_runs/2026-10-27-ensemble/policies/wildguard/shieldstral.json": "c52970c306ee4b66901c0ba9b1e057b0cfeca7d300771a652fe79a3bdbddeaca",
+    "published_runs/2026-10-27-ensemble/scores/wildguard/cope/test.jsonl.gz": "77a9678ae16106982eb57c364ad44b97ee7f27721cb1014435320a2b50bc3114",
+    "published_runs/2026-10-27-ensemble/policies/wildguard/cope.json": "8af17e18ab7f9888c54e53c06d44346f888869ac780643fc335518af896261cb",
+    "published_runs/2026-10-30-shield-probe/feature-provenance/qwen/test/records.json": "712230904d0c55f8a9e2c9a30005d7b8814386aacf64af2900bdd7c29d6b00cd",
+    "published_runs/2026-10-30-shield-probe/policy.json": "c52970c306ee4b66901c0ba9b1e057b0cfeca7d300771a652fe79a3bdbddeaca",
+    "published_runs/2026-10-29-jev/predictions/wildguard/test/detailed.jsonl.gz": "6f1bb1ab34bf6ea855d388795d43ca2f397019290a22721f5eddbb14ae00a694",
+    "published_runs/2026-10-29-jev/policies/wildguard/final.json": "c70fa83e8edc38d3283fefc042c044f2ad093f1fe42837e417ddb1633da25c1e",
+    "published_runs/2026-10-29-decision-models/predictions/kev/wildguard/test/brief.jsonl.gz": "7efb6ef60863a9b2a3f3f140d6702ec5735ca6715ca63cf65976ec57e71fb97f",
+    "published_runs/2026-10-29-decision-models/policies/kev/wildguard/final.json": "ea22e0f321cb29a1794db96dcc804e6dc76b7904a6a7d93a72fd5ec472a94556",
+    "published_runs/2026-10-29-decision-models/predictions/clef/wildguard/test/examples.jsonl.gz": "40de8fb6e811eab0404f0bf9040dcb85a10b43f34b09011374874428f9e9a878",
+    "published_runs/2026-10-29-decision-models/policies/clef/wildguard/final.json": "ccf60ce31a27560ad367dae029e2f7c3e68491aa60a0689435352e19676fbb51",
+    "published_runs/2026-10-29-jev/predictions/wildguard/validation/detailed.jsonl.gz": "dea3816402fc4c43eaf296e68ea60bd020dbce7d8b3ca3cf107616a6b870a720",
+    "published_runs/2026-10-29-decision-models/predictions/kev/wildguard/validation/brief.jsonl.gz": "854ecc1c0fe6882bf35dedb6b031f4ac74bc63c194630dee341f05b22fcd2c4e",
+    "published_runs/2026-10-29-decision-models/predictions/clef/wildguard/validation/examples.jsonl.gz": "01425d06e8881d8a684adfc083a9ddcf498895c878642fbe7131a6f413a2911d",
+    "published_runs/2026-10-27-ensemble/scores/hatexplain/policylm/fit.jsonl.gz": "9d707a0d5992f2573232a271b861d76b4830412a20b6ffa5c256469329ddd298",
+    "published_runs/2026-10-27-ensemble/scores/hatexplain/shieldstral/fit.jsonl.gz": "05b314cc4e8a8dc09e951e14e8b1210ca0aa49628253bb3fb5868ede90f4742a",
+    "published_runs/2026-10-27-ensemble/scores/hatexplain/qwen-4b/fit.jsonl.gz": "9261e2b9f94a3d6d4265a64c688b242d6a0d281b52cd3e73479ad222b38fca54",
+    "published_runs/2026-10-27-ensemble/scores/hatexplain/policylm/validation.jsonl.gz": "7dd587f1bc6d7d9a2f6b1f86207fd2715d712cfbf64c2e9b922bcf92e5085c0b",
+    "published_runs/2026-10-27-ensemble/scores/hatexplain/shieldstral/validation.jsonl.gz": "d50374c3faea9707e5c06adacdba6fc8aab3ea2257ddfda70566720a2df1f152",
+    "published_runs/2026-10-27-ensemble/scores/hatexplain/qwen-4b/validation.jsonl.gz": "1b97fe2ad93b04c6758ad3a9479d3898b3bf85a826bf34f6722b7c03feeb0ffd",
+    "published_runs/2026-10-29-jev/predictions/hatexplain/fit/brief.jsonl.gz": "84a882c520f3c0bd04286c3700d3ce2d89250bae01d3ee56eecbc9ebea7d7557",
+    "published_runs/2026-10-29-jev/predictions/hatexplain/validation/brief.jsonl.gz": "4162c4ee2fe3142eeb7e241e905757f6bcd2dfde9caa5a43a6f9acfd5dd9ffe3",
+    "published_runs/2026-10-27-ensemble/scores/hatexplain/policylm/test.jsonl.gz": "8059855d1b919172bb6ec9bae8287cefdec1dd37daa7b996503d4ee80154d1d1",
+    "published_runs/2026-10-27-ensemble/policies/hatexplain/p0.json": "48ff3502bdad0530a0e99792c53f40a0b6a8a534b41266e4ec8bf3c30e512183",
+    "published_runs/2026-10-27-ensemble/scores/hatexplain/shieldstral/test.jsonl.gz": "c6109273fe732d1d16a8f4517d8664fa51ef024d5c0e39e6e991bc6df27b9527",
+    "published_runs/2026-10-27-ensemble/policies/hatexplain/shieldstral-p2.json": "de63b5dfcda53af29c08da0d8235bef54ec982d7485f8e2c7a3bcd02ddee4771",
+    "published_runs/2026-10-27-ensemble/scores/hatexplain/qwen-4b/test.jsonl.gz": "d9e20770acf92bca665f9cf2248e8d47b223ac8444a67dbbdae2ac7181d7b926",
+    "published_runs/2026-10-27-ensemble/policies/hatexplain/qwen-4b-p1.json": "f8a6fe582b6489f6164945e0b626ca9b8a251a8f90285c4617a025a1db6c703e",
+    "published_runs/2026-10-29-jev/predictions/hatexplain/test/detailed.jsonl.gz": "4920cd6fd4d1770dd77c9523311c6ab43c4d472ef73bec52ef0dc546377016cc",
+    "published_runs/2026-10-29-jev/policies/hatexplain/final.json": "f5829030267a3b101bc39dbedd0bfaba23f44c96d638f8676c8961ea0e4a0a9f",
+    "published_runs/2026-10-29-decision-models/predictions/kev/hatexplain/test/brief.jsonl.gz": "ec950fd4e4941233c415b71d06b8515bb75866be8c5c072ae75517e74ca5369e",
+    "published_runs/2026-10-29-decision-models/policies/kev/hatexplain/final.json": "df495da1de8cb4a5b8874c88437cbcdfa29a02bb9901a85b051ce5748c93e485",
+    "published_runs/2026-10-29-decision-models/predictions/clef/hatexplain/test/examples.jsonl.gz": "b655ca87159d9c448f23c09ce8a7a4baaaf290079ff71c8d1494afd70a349faf",
+    "published_runs/2026-10-29-decision-models/policies/clef/hatexplain/final.json": "fed94c6b9e666f2412b54383cbaa562338cf44490c78bf9d4f0ae3f25a237713",
+    "published_runs/2026-10-29-jev/predictions/hatexplain/validation/detailed.jsonl.gz": "06acc28c74ba4f334db3384a745a9386704a02f9e04f627be7fc5145ef375544",
+    "published_runs/2026-10-29-decision-models/predictions/kev/hatexplain/validation/brief.jsonl.gz": "8d038905ccb73fa4a7527256527ca529be2fea450752833a34fc91550c1de616",
+    "published_runs/2026-10-29-decision-models/predictions/clef/hatexplain/validation/examples.jsonl.gz": "ab5c3c2bcc3c92370fcdb6ed9137be68e77f99c5f415b153d6868e20400e7540"
+  },
+  "test_sources": {
+    "wildguard/policylm": {
+      "path": "published_runs/2026-10-27-ensemble/scores/wildguard/policylm/test.jsonl.gz",
+      "sha256": "f14a65d4fd49ae0bb5ebbd5d8232be960c9bf19db5d5fea7598cb14944a1c7c3"
+    },
+    "wildguard/shieldstral": {
+      "path": "published_runs/2026-10-27-ensemble/scores/wildguard/shieldstral/test.jsonl.gz",
+      "sha256": "8215dc2c46fd5ba2dd5f78b67c73fce5bd60d4ed9623edc0ef1dc45584e5ca7c"
+    },
+    "wildguard/cope": {
+      "path": "published_runs/2026-10-27-ensemble/scores/wildguard/cope/test.jsonl.gz",
+      "sha256": "77a9678ae16106982eb57c364ad44b97ee7f27721cb1014435320a2b50bc3114"
+    },
+    "wildguard/qwen-4b": {
+      "path": "published_runs/2026-10-30-shield-probe/feature-provenance/qwen/test/records.json",
+      "sha256": "712230904d0c55f8a9e2c9a30005d7b8814386aacf64af2900bdd7c29d6b00cd"
+    },
+    "wildguard/jev": {
+      "path": "published_runs/2026-10-29-jev/predictions/wildguard/test/detailed.jsonl.gz",
+      "sha256": "6f1bb1ab34bf6ea855d388795d43ca2f397019290a22721f5eddbb14ae00a694"
+    },
+    "wildguard/kev": {
+      "path": "published_runs/2026-10-29-decision-models/predictions/kev/wildguard/test/brief.jsonl.gz",
+      "sha256": "7efb6ef60863a9b2a3f3f140d6702ec5735ca6715ca63cf65976ec57e71fb97f"
+    },
+    "wildguard/clef": {
+      "path": "published_runs/2026-10-29-decision-models/predictions/clef/wildguard/test/examples.jsonl.gz",
+      "sha256": "40de8fb6e811eab0404f0bf9040dcb85a10b43f34b09011374874428f9e9a878"
+    },
+    "hatexplain/policylm": {
+      "path": "published_runs/2026-10-27-ensemble/scores/hatexplain/policylm/test.jsonl.gz",
+      "sha256": "8059855d1b919172bb6ec9bae8287cefdec1dd37daa7b996503d4ee80154d1d1"
+    },
+    "hatexplain/shieldstral": {
+      "path": "published_runs/2026-10-27-ensemble/scores/hatexplain/shieldstral/test.jsonl.gz",
+      "sha256": "c6109273fe732d1d16a8f4517d8664fa51ef024d5c0e39e6e991bc6df27b9527"
+    },
+    "hatexplain/qwen-4b": {
+      "path": "published_runs/2026-10-27-ensemble/scores/hatexplain/qwen-4b/test.jsonl.gz",
+      "sha256": "d9e20770acf92bca665f9cf2248e8d47b223ac8444a67dbbdae2ac7181d7b926"
+    },
+    "hatexplain/jev": {
+      "path": "published_runs/2026-10-29-jev/predictions/hatexplain/test/detailed.jsonl.gz",
+      "sha256": "4920cd6fd4d1770dd77c9523311c6ab43c4d472ef73bec52ef0dc546377016cc"
+    },
+    "hatexplain/kev": {
+      "path": "published_runs/2026-10-29-decision-models/predictions/kev/hatexplain/test/brief.jsonl.gz",
+      "sha256": "ec950fd4e4941233c415b71d06b8515bb75866be8c5c072ae75517e74ca5369e"
+    },
+    "hatexplain/clef": {
+      "path": "published_runs/2026-10-29-decision-models/predictions/clef/hatexplain/test/examples.jsonl.gz",
+      "sha256": "b655ca87159d9c448f23c09ce8a7a4baaaf290079ff71c8d1494afd70a349faf"
+    }
+  },
+  "populations": {
+    "wildguard": {
+      "fit": {
+        "n": 4096,
+        "groups": 3823,
+        "labels": {
+          "ALLOW": 1916,
+          "BLOCK": 2180
+        }
+      },
+      "validation": {
+        "n": 1536,
+        "groups": 1424,
+        "labels": {
+          "ALLOW": 718,
+          "BLOCK": 818
+        }
+      },
+      "prior_decision_development_groups_excluded": 1509,
+      "test": {
+        "n": 1699,
+        "groups": 1699,
+        "labels": {
+          "ALLOW": 945,
+          "BLOCK": 754
+        }
+      }
+    },
+    "hatexplain": {
+      "fit": {
+        "n": 4096,
+        "groups": 4090,
+        "labels": {
+          "BLOCK": 1267,
+          "ALLOW": 2829
+        }
+      },
+      "validation": {
+        "n": 1536,
+        "groups": 1535,
+        "labels": {
+          "BLOCK": 475,
+          "ALLOW": 1061
+        }
+      },
+      "prior_decision_development_groups_excluded": 2943,
+      "test": {
+        "n": 1924,
+        "groups": 1922,
+        "labels": {
+          "ALLOW": 1330,
+          "BLOCK": 594
+        }
+      }
+    }
+  },
+  "components": {
+    "wildguard": {
+      "policylm": {
+        "policy_id": "wg-p4-policylm-compact",
+        "sha256": "ad0ceb520f16254b6f8e444be008349d04d26baf70492e770cb1daf59f4da0f2",
+        "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e"
+      },
+      "shieldstral": {
+        "policy_id": "wg-p4-shieldstral-taxonomy-priority",
+        "sha256": "c52970c306ee4b66901c0ba9b1e057b0cfeca7d300771a652fe79a3bdbddeaca",
+        "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5"
+      },
+      "cope": {
+        "policy_id": "wg-p3-cope-social-and-deception",
+        "sha256": "8af17e18ab7f9888c54e53c06d44346f888869ac780643fc335518af896261cb",
+        "revision": "b28a1c734eff80d82e5df7964c7dfd0de8509900"
+      },
+      "qwen-4b": {
+        "policy": "wg-p4-shieldstral-taxonomy-priority",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "adapter": "HF frozen native conditional B/A; no representation classifier",
+        "policy_sha256": "c52970c306ee4b66901c0ba9b1e057b0cfeca7d300771a652fe79a3bdbddeaca"
+      },
+      "jev": {
+        "policy": "detailed",
+        "policy_sha256": "b9cdb564de4e6020c05d6e9c407fdb19ec9de54cbcf8894084f3d986337ff9db",
+        "archive": "published_runs/2026-10-29-jev/policies/wildguard/final.json",
+        "original_private_pack_sha256": "0babb326ab47f8fc111ae9a819c1d3621f60105841c338cec7c7287258be5c81"
+      },
+      "kev": {
+        "policy": "brief",
+        "policy_sha256": "86656221662bb616d2156881e15e4413ec8ba2587bf3139a674a9a29f96a9732",
+        "archive": "published_runs/2026-10-29-decision-models/policies/kev/wildguard/final.json",
+        "original_private_pack_sha256": "ea22e0f321cb29a1794db96dcc804e6dc76b7904a6a7d93a72fd5ec472a94556"
+      },
+      "clef": {
+        "policy": "examples",
+        "policy_sha256": "06d0d249b636803ab57dd972b5911e4bfcaa181b4c97c3f977e65c8ca16ce56d",
+        "archive": "published_runs/2026-10-29-decision-models/policies/clef/wildguard/final.json",
+        "original_private_pack_sha256": "ccf60ce31a27560ad367dae029e2f7c3e68491aa60a0689435352e19676fbb51"
+      }
+    },
+    "hatexplain": {
+      "policylm": {
+        "policy_id": "p0",
+        "sha256": "48ff3502bdad0530a0e99792c53f40a0b6a8a534b41266e4ec8bf3c30e512183",
+        "model": "musubilabs/policylm-1.7b",
+        "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+        "adapter": "policylm"
+      },
+      "shieldstral": {
+        "policy_id": "shieldstral-p2",
+        "sha256": "de63b5dfcda53af29c08da0d8235bef54ec982d7485f8e2c7a3bcd02ddee4771",
+        "model": "mistralai/Shieldstral-1.0-3B",
+        "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+        "adapter": "shieldstral"
+      },
+      "qwen-4b": {
+        "policy_id": "qwen-4b-p1",
+        "sha256": "f8a6fe582b6489f6164945e0b626ca9b8a251a8f90285c4617a025a1db6c703e",
+        "model": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "adapter": "qwen"
+      },
+      "jev": {
+        "policy": "detailed",
+        "policy_sha256": "9dcc59bed7985e2cbfc11c09457af6fb6f0cdb31fabbc9da435aad1faea1d6ea",
+        "archive": "published_runs/2026-10-29-jev/policies/hatexplain/final.json",
+        "original_private_pack_sha256": "f5829030267a3b101bc39dbedd0bfaba23f44c96d638f8676c8961ea0e4a0a9f"
+      },
+      "kev": {
+        "policy": "brief",
+        "policy_sha256": "ffbb9a95aae12ee293404081db16624bd2b9ed420ad5aa7e1732f413b76ab820",
+        "archive": "published_runs/2026-10-29-decision-models/policies/kev/hatexplain/final.json",
+        "original_private_pack_sha256": "df495da1de8cb4a5b8874c88437cbcdfa29a02bb9901a85b051ce5748c93e485"
+      },
+      "clef": {
+        "policy": "examples",
+        "policy_sha256": "2ab558ce41c2632f145e78db6920bd1aa767e177701d4169b4f1b7d28b3a2797",
+        "archive": "published_runs/2026-10-29-decision-models/policies/clef/hatexplain/final.json",
+        "original_private_pack_sha256": "fed94c6b9e666f2412b54383cbaa562338cf44490c78bf9d4f0ae3f25a237713"
+      }
+    }
+  },
+  "pool": {
+    "wildguard": [
+      "policylm",
+      "shieldstral",
+      "cope",
+      "qwen-4b",
+      "jev",
+      "kev",
+      "clef"
+    ],
+    "hatexplain": [
+      "policylm",
+      "shieldstral",
+      "qwen-4b",
+      "jev",
+      "kev",
+      "clef"
+    ]
+  },
+  "seed": 20261031,
+  "prior_spend_usd": 15.26540555656,
+  "max_new_api_usd": 1,
+  "max_new_gpu_usd": 2.4,
+  "cumulative_cap_usd": 20,
+  "prior_data_manifest_sha256": "b59e0fd9fe0061a7d80d461be58f443b7b96905d1bab68a8db4a6960bf72363d",
+  "amendment_sha256": "1f7e3214a8a8aa52b877e688a6e50a118e63d77ecbb181e1776685f869cbc2ea",
+  "sealed_test_input_hashes": {
+    "sealed-inputs/wildguard/test.jsonl": "09a58a739923884a43dfa23937e8bf24c8e6fb07851fed6822560551361292d3",
+    "sealed-inputs/hatexplain/test.jsonl": "b06c073d9c942ca06bf60101aeb7a0b4e22d2e812b666a524abdc0a585dd9238"
+  },
+  "jev_test_source": "fresh API after freeze; historical Jev test scores excluded",
+  "amendments_sha256": "50a6e8b0979511b50fa08e53b411af811815eb4c8385691c71064d0f902924d1",
+  "amendment3_utc": "2026-10-31T16:48:03.926460+00:00",
+  "empty_input_handling": "Retain ERROR/null score, no substitute text or label",
+  "amendment4_utc": "2026-10-31T16:54:58.157291+00:00"
+}

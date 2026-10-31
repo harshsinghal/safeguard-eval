@@ -1,0 +1,23 @@
+{
+  "kind": "Supplemental release audit; no score or selection changes",
+  "checks": {
+    "fit": {
+      "n": 4096,
+      "identity_label_group_content_match": true,
+      "archived_metadata_sha256": "f6e4ac53f162812a760e95bff038ad165832e74e9178fbc076da261f99fc38d1",
+      "score_records_sha256": "02392b4a363a5577b71e7cede14b0fc017da00a0e07f025c01952e1f43073336"
+    },
+    "validation": {
+      "n": 1536,
+      "identity_label_group_content_match": true,
+      "archived_metadata_sha256": "8c3c1eed0eb8924f67fa46c4607d9decdead443f965a77f1e1fc83d65ddc1fc0",
+      "score_records_sha256": "1788a0e786c06b6ac1485b95460649a71526e2e023267b7a50f2d612b975c480"
+    },
+    "test": {
+      "n": 1699,
+      "identity_label_group_content_match": true,
+      "archived_metadata_sha256": "5ec8cef60b7dbc7868448b872ee79cc6ea4b91c147d46840f3d71eed982d258c",
+      "score_records_sha256": "712230904d0c55f8a9e2c9a30005d7b8814386aacf64af2900bdd7c29d6b00cd"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "provider": "GPU.ai",
+  "instance_id": "gpu-6ee319a7",
+  "status": "terminated",
+  "cost_usd": 0.54,
+  "gpu_seconds": 2447,
+  "price_per_hour_usd": 0.8,
+  "server_auto_terminate_hours": 3,
+  "usage": [
+    {
+      "bucket_start": "2026-10-31T00:00:00Z",
+      "instance_id": "gpu-6ee319a7",
+      "gpu_seconds": 2447,
+      "cost_cents": 54
+    }
+  ],
+  "runpod_resources_used": false
+}

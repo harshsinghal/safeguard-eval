@@ -31,7 +31,8 @@ flowchart TB
         S1["8–9 · Combine scores<br/>Calibration and cutoffs<br/>Probabilities / log-odds"]
         S2["10, 12 · Decision models<br/>Jev API · Kev · Clef<br/>Policy and cutoff tuning"]
         S3["13 · Decision ensembles<br/>Scores versus labels<br/>API + open / open-only"]
-        S1 --> S2 --> S3
+        S4["17 · Smart score ensemble<br/>Select complementary models<br/>Learn weights across families"]
+        S1 --> S2 --> S3 --> S4
     end
 
     subgraph FEATURES["Internal representations"]
@@ -45,10 +46,10 @@ flowchart TB
     START --> S1
     START --> F1
     P3 --> EVIDENCE
-    S3 --> EVIDENCE
+    S4 --> EVIDENCE
     F3 --> EVIDENCE
     EVIDENCE["11 · Balanced evaluation<br/>False blocks + missed violations<br/>Validate → freeze → test"]
-    EVIDENCE -.-> NEXT["PROPOSED · Not started<br/>Mixed signals · Policy + cutoff<br/>Targeted second pass"]
+    EVIDENCE -.-> NEXT["PROPOSED · Not started<br/>Add trained feature heads<br/>Policy + cutoff · Second pass"]
 
     classDef neutral fill:#f1f5f9,stroke:#64748b,color:#172c49;
     classDef policy fill:#eef4ff,stroke:#526b91,color:#172c49;
@@ -57,7 +58,7 @@ flowchart TB
     classDef proposed fill:#fff6e5,stroke:#a36e16,color:#61420f,stroke-dasharray:6 4;
     class START,EVIDENCE neutral;
     class P1,P2,P3 policy;
-    class S1,S2,S3 scores;
+    class S1,S2,S3,S4 scores;
     class F1,F2,F3 features;
     class NEXT proposed;
     style POLICY fill:#f8fafc,stroke:#cbd5e1
@@ -65,16 +66,16 @@ flowchart TB
     style FEATURES fill:#f8fafc,stroke:#cbd5e1
 ```
 
-**How to read the map:** solid boxes describe completed work; the dashed box is future work awaiting authorization. The separate **frontier-API pilot (6)** checked whether requests returned usable classifications; its full held-out experiment did not run. Not every branch covers both benchmarks: decision-model ensembles, representation classifiers, and training-error corrections were tested on WildGuard only. The representation and correction studies use separate validation protocols and are **not merged into the common leaderboard**.
+**How to read the map:** solid boxes describe completed work; the dashed box is future work awaiting authorization. The separate **frontier-API pilot (6)** checked whether requests returned usable classifications; its full held-out experiment did not run. Not every branch covers both benchmarks: the first decision-model ensemble, representation classifiers, and training-error corrections were tested on WildGuard only. The smart ensemble covers both benchmarks. The representation, correction, and smart-ensemble studies use separate validation protocols and are **not merged into the common leaderboard**.
 
 | Follow a branch | Where to start |
 |---|---|
 | Policy wording, transfer, and structure | [WildGuard tuning](docs/wildguard/METHODS.md) → [Qwen comparison](docs/qwen-policy/READOUT.md) → [policy transfer](docs/policy-transfer/READOUT.md) → [HateXplain structure tests](docs/hatexplain/READOUT.md) → [training-error corrections](docs/policy-corrections/README.md) |
-| Scores, calibration, cutoffs, and combinations | [Probability ensembles](docs/ensemble/READOUT.md) → [log-odds ensembles](docs/ensemble-logits/RESULTS.md) → [Jev](docs/jev/READOUT.md) → [Kev / Clef](docs/decision-models/README.md) → [decision-model ensembles](docs/decision-ensemble/README.md) |
+| Scores, calibration, cutoffs, and combinations | [Probability ensembles](docs/ensemble/READOUT.md) → [log-odds ensembles](docs/ensemble-logits/RESULTS.md) → [Jev](docs/jev/READOUT.md) → [Kev / Clef](docs/decision-models/README.md) → [decision-model ensembles](docs/decision-ensemble/README.md) → [smart ensemble](docs/smart-ensemble/README.md) |
 | Frozen internal features and trained classifiers | [PolicyLM / Qwen](docs/activation-probe/README.md) → [Shieldstral / Qwen](docs/shield-probe/README.md) |
 | Compare outcomes and see what is proposed | [Balanced metric guide](docs/leaderboard/METRICS.md) · [leaderboard](#current-leaderboard) · [next steps: reducing moderation errors](docs/research-directions/REDUCING-MODERATION-ERRORS.md) |
 
-The next question is how these pieces can produce a complete classifier with fewer errors on unseen examples. The [recorded proposal](docs/research-directions/REDUCING-MODERATION-ERRORS.md) prioritizes checking which models make different mistakes, then combining useful signals. **Those experiments have not started; no new runs or spending are authorized by recording them.**
+The [smart-ensemble study](docs/smart-ensemble/README.md) takes the next step: learn which native model scores help each other, then test the frozen combination. Adding trained representation heads to that combination, broader policy-and-cutoff optimization, and a targeted second pass remain [proposed work](docs/research-directions/REDUCING-MODERATION-ERRORS.md), awaiting separate authorization.
 
 ## What we are testing
 
@@ -93,7 +94,7 @@ The main comparisons are binary ALLOW/BLOCK tasks. The earlier demonstrations al
 | General-purpose LLMs | Qwen3.5 2B, 4B, 9B, 27B, and 35B-A3B | Classification instructions and policy text; thinking disabled in these comparisons. |
 | Decision / “System One” models | Jev 1.14, Kev 4B, Clef-Flash 9B | Native classification interfaces. Jev was accessed by API; Kev and Clef were self-hosted from open weights. |
 | Fixed-task reference | WildGuard 7B | The released fine-tuned model and official inference template; no custom-policy tuning arm. |
-| Ensembles | Averages, learned weights, logistic regression, random forests | Combinations of saved scores from specified component models. |
+| Ensembles | Averages, learned weights, logistic regression, random forests, shallow gradient boosting | Combinations of specified component scores; the smart-ensemble study also selects a small subset using training folds. |
 | Frozen-representation probes | Qwen3.5 0.8B with PolicyLM 1.7B; Qwen3.5 4B with Shieldstral 3B | Supervised logistic regression on individual or concatenated hidden states under a fixed harmfulness policy within each study; language-model weights stay frozen. |
 
 Not every model has been tested on every dataset. The [interface audit](docs/research-directions/POLICY-INTERFACE-AUDIT.md), [model reference guide](skills/safeguard-eval/references/models.md), and [decision-model study](docs/decision-models/README.md) identify the checkpoints and adapters behind these names. Model size alone does not establish inference cost, speed, or suitability.
@@ -234,6 +235,18 @@ The useful finding is that a plausible correction can fail on its source model a
 
 [Readable findings](docs/policy-corrections/README.md) · [Exact policy edits](docs/policy-corrections/POLICY-EDITS.md) · [Registered protocol](docs/policy-corrections/PLAN.md) · [Full results](docs/policy-corrections/RESULTS.md) · [Frozen evidence](published_runs/2026-10-30-policy-corrections/README.md)
 
+### 17. Smart ensembles: learn which models help each other
+
+We aligned seven native score sources on WildGuard and six on HateXplain, spanning specialists, Qwen and decision models. Five fitting folds selected a small combination and learned its coefficients; separate validation chose the decision cutoffs. Policies and backbone weights stayed fixed. We froze the choices before scoring the reused public tests and retained individual, equal-average, all-model, open-only and nonlinear controls.
+
+On **HateXplain**, selection retained **Jev + Kev + Shieldstral**, reaching **79.97% balanced accuracy**. Compared with simply averaging all six models' log-odds, it made **48 fewer false blocks and four fewer misses**: a +2.14-point change (paired 95% interval +1.00 to +3.29). Against the validation-selected Jev individual at 78.42%, it made **86 fewer false blocks but 20 more misses**; that +1.55-point gain remained uncertain (−0.04 to +3.14). The predeclared all-model logistic and shallow gradient-boosting controls reached 81.03% and 81.08%, respectively; neither replaced the primary after testing.
+
+On **WildGuard**, no added model met the fitting-fold improvement rule, so selection retained **Shieldstral alone at 90.53%**. The all-model logistic combination reached 90.43%. An equal log-odds average reached 90.91%, with seven fewer errors than Shieldstral, but the gain was uncertain. This supports measuring useful complementarity rather than assuming more model families will help. The low-false-block and high-recall profiles both missed their respective targets on WildGuardTest. On HateXplain, they met the targets with substantial tradeoffs.
+
+The evidence includes all coefficients, rejected additions, component-removal checks, both error types and paired intervals. Accounted GPU/API cost was **$1.42**; the GPU was terminated. Both datasets reproduce on CPU from the published scores. These results use a separate validation protocol and remain outside the common leaderboard below.
+
+[Readable findings and chart](docs/smart-ensemble/README.md) · [How selection works](docs/smart-ensemble/METHODS.md) · [Registered plan](docs/smart-ensemble/PLAN.md) · [Full results](docs/smart-ensemble/RESULTS.md) · [Frozen evidence and reproduction](published_runs/2026-10-31-smart-ensemble/README.md)
+
 ## What the evidence suggests for moderation teams
 
 - **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. A model replacement requires another evaluation.
@@ -248,7 +261,7 @@ These experiments support a workflow in which policy owners and engineers test c
 | Start here | What you will find |
 |---|---|
 | [Engineering article](docs/engineering-guardrails/README.md) | A shorter guide to building and evaluating a policy guardrail, with an editable Word version. |
-| [Research paper](research-preprint/README.md) | Review draft v0.6: PDF, extracted text, LaTeX source, methods, citations, and fuller limitations. Covers through the Kev/Clef comparison; later decision-ensemble, representation-probe and policy-correction studies are linked above. Not peer reviewed or submitted to arXiv. |
+| [Research paper](research-preprint/README.md) | Review draft v0.6: PDF, extracted text, LaTeX source, methods, citations, and fuller limitations. Covers through the Kev/Clef comparison; later ensemble, representation-probe and policy-correction studies are linked above. Not peer reviewed or submitted to arXiv. |
 | [Install the Safeguard Eval skill](skills/safeguard-eval/README.md) | A guided introduction and evidence-based Q&A in Codex, Claude Code, or Pi. The v0.5.0 release covers through the specialist probability/log-odds ensembles. The newer decision-model, representation and policy-correction studies are available in the research log above. |
 | [Published runs](published_runs) | Dated experiment bundles with policies, predictions, selections, analysis, and provenance. Follow each study's reproduction instructions. |
 | [Compute notes](docs/COMPUTE.md) | Recorded GPU/API use and budget controls. The research used GPU.ai and Runpod; these are not provider endorsements. |
@@ -261,7 +274,7 @@ The research archive grows separately from versioned skill releases. New studies
 
 The comparison now includes the **Jev/Kev/Clef score ensembles and decision-only controls**, alongside the earlier policy models, general-purpose LLMs, and specialist ensembles. There are **38 WildGuard entries and 20 HateXplain entries**, drawn from **261 eligible archived candidate records**. These are configured systems and methods, not 261 distinct models or independent experiments. The new decision-model combinations were tested on WildGuard only.
 
-The [PolicyLM representation study](docs/activation-probe/README.md) and [Shieldstral representation study](docs/shield-probe/README.md) use a separate 1,536-row validation protocol. The [training-error policy-correction study](docs/policy-corrections/README.md) uses a newly reserved validation population and additional project holdout. Their results are reported separately and have not been inserted into these common-validation tables.
+The [PolicyLM representation study](docs/activation-probe/README.md), [Shieldstral representation study](docs/shield-probe/README.md), and [smart-ensemble study](docs/smart-ensemble/README.md) use a separate 1,536-row validation protocol. The [training-error policy-correction study](docs/policy-corrections/README.md) uses a newly reserved validation population and additional project holdout. Their results are reported separately and have not been inserted into these common-validation tables.
 
 The [integration record](published_runs/2026-10-30-leaderboard-decision-ensembles/README.md) preserves every earlier selection and result. It adds the new study's frozen method selections without refitting or choosing replacements from test scores. Individual calibration controls and “best method” aliases remain in that study's report rather than becoming duplicate leaderboard entries.
 

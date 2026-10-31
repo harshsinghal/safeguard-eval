@@ -10,9 +10,12 @@ combine complementary model scores and representation classifiers, optimize poli
 and cutoff together for each model, and test a targeted second pass for difficult
 cases. The goal is fewer false blocks and missed violations on unseen examples.
 
-**These next experiments have not started. The user will say when to run them.**
-The proposal records controls, data separation, fresh-test requirements, and a
-pending checklist. It does not authorize compute or spending. The
+**The native-score smart-ensemble branch is now complete**, following the user's
+authorization; see its [readout](../smart-ensemble/README.md) and
+[registered protocol](../smart-ensemble/PLAN.md). Adding trained representation
+scores, broader policy-and-cutoff optimization, and a targeted second pass remain
+pending. The proposal retains the fresh-test requirement; the bounded ensemble
+study explicitly reused the official tests. It does not authorize further spending. The
 [README experiment map](../../README.md#experiment-map) shows how the completed
 studies led to these questions.
 

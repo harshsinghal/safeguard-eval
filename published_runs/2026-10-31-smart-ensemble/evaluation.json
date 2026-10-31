@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-10-31T17:20:33.237273+00:00",
+  "freeze_sha256": "6a74f96b88188c420bd455bb03272cd7346a7fd96460032e8a48575ad12f1ec0",
+  "test_hashes": {
+    "scores/wildguard/clef/test.jsonl.gz": "5a154b9f440a1e170a4f579bf5e99cc66a81bd957f88194c12d1edb0fad753fe",
+    "scores/wildguard/policylm/test.jsonl.gz": "d0a69d2131a65fbb56575e678a28e65bc20a1fc39b558078bd20e5999eeabf9d",
+    "scores/wildguard/shieldstral/test.jsonl.gz": "c46e7c06a4c19fc8a573e9bc20be3fb7115458af712e8f53aad2001eedba1ed6",
+    "scores/wildguard/kev/test.jsonl.gz": "8e8f0b66056d1297adce7c615489fa7aa6f6690188e902e41d7b40799410e294",
+    "scores/wildguard/qwen-4b/test.jsonl.gz": "24cfb36e5dccfb19a9e8a6e2c4b97bceadbb70e367e5ecddd29841981b86149d",
+    "scores/wildguard/jev/test.jsonl.gz": "91dc3cb218bc729649cd4523cd76a38457cb8e4726fb7c23a9f912b648860223",
+    "scores/wildguard/cope/test.jsonl.gz": "47fc18b6f5b8760e2a80fb19f8bb20284be7fb7cd0a36381b3813a08b44076e7",
+    "scores/hatexplain/clef/test.jsonl.gz": "1fc21cba94a1eaa3d9406340d2b8b801b5f93537b65915066a00765e98307835",
+    "scores/hatexplain/policylm/test.jsonl.gz": "70907cc4caf00b082fbd58528817961afca830cefc9b22afb58b13189b2d4a4b",
+    "scores/hatexplain/shieldstral/test.jsonl.gz": "9e77d523a0ef5926c4a3129faf1b4ce80dbe013f22c2633b282423a9b7a704e8",
+    "scores/hatexplain/kev/test.jsonl.gz": "26742387ff389f6ed57161878b7de94186b0a6d357cf64ae34c63c0788690e5b",
+    "scores/hatexplain/qwen-4b/test.jsonl.gz": "244eddcbf5a3041bbd31b619a2417ec65edd27e1e0f192ef8216059a43dd7bfe",
+    "scores/hatexplain/jev/test.jsonl.gz": "a50b55234f373310e50a4b5cdea0503d5ee9be566543d38c20c4cf4219612c99"
+  },
+  "results_sha256": "d490a57fb223bda86e2b1c22d6f0d1c88d5c5fde2d9bf60e739c476d1a3be79e"
+}

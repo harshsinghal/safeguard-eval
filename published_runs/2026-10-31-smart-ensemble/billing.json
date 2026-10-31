@@ -1,0 +1,15 @@
+{
+  "prior_cumulative_usd": 15.26540555656,
+  "new_gpu_usd": 0.54,
+  "new_api_reported_usd": 0.873602268,
+  "new_api_transport_upper_bound_usd": 0.011010048000000001,
+  "new_total_accounted_usd": 1.4246123160000002,
+  "cumulative_accounted_usd": 16.69001787256,
+  "cap_usd": 20.0,
+  "remaining_authorized_usd": 3.3099821274400014,
+  "gpu_terminated": true,
+  "gpu_seconds": 2447,
+  "instance_id": "gpu-6ee319a7",
+  "runpod_resources_used": false,
+  "note": "Includes conservative upper-bound charges for four transport failures, not a claim of exact provider billing for those failed calls."
+}

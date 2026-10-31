@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-31T16:54:58.154660+00:00",
+  "attempts": [
+    {
+      "attempt_id": "7f6c19a10b701791f84350e2846858088f64c68dbe6878fd8fda62693de8e77f",
+      "error_type": "URLError",
+      "request_sha256": "b2f1be8130cadd30b588d791aac8ee9b8128f215976cf71027ae26230a61d671",
+      "accounted_usd": 0.0027525120000000004
+    },
+    {
+      "attempt_id": "f2c5057011cc1298ca42cb0cd9a7b76382f773e65e0fe0c32bfe4a38d39c3fc2",
+      "error_type": "URLError",
+      "request_sha256": "c41dd5a5cd60b0c1f08aa68666b16b812fb360699f0ea84ad8fc97a645e33f16",
+      "accounted_usd": 0.0027525120000000004
+    },
+    {
+      "attempt_id": "1457742e48fa4b2c61eb1f82a38786fa58bbeed5dd06f02a9f553f4468e8b980",
+      "error_type": "URLError",
+      "request_sha256": "5fb2509690d7405cb8fd6b096a1fc0701ff3f39f59e20952175c00c9c229e17e",
+      "accounted_usd": 0.0027525120000000004
+    },
+    {
+      "attempt_id": "9bb9d32b2dd68e244284dfc636d73859439537cef370dd1e7e53edae5e8b8263",
+      "error_type": "URLError",
+      "request_sha256": "4d9cd2e37c1053c3ffe4e503993234700d84015dc38d5150ae4d44eb8072ef4a",
+      "accounted_usd": 0.0027525120000000004
+    }
+  ],
+  "reported_cost_unknown": true,
+  "rule": "Charge maximum reserved request cost; keep first valid response on a separately billed retry"
+}

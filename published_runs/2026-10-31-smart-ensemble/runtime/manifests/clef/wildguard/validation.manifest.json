@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-31T17:04:36.826471+00:00",
+  "model": "clef",
+  "split": "validation",
+  "dataset": "wildguard",
+  "n": 1536,
+  "sha256": "588cefec8693e2a11e1e1d3cef4f9d5b336e61e60f32804ff97d82bf7796d6b9",
+  "gpu": "NVIDIA L40S",
+  "torch": "2.11.0+cu128",
+  "seconds": 183.5283399519999,
+  "registration_sha256": "80bb9c13cd9d4eabc52eeec1acf51a746a670921cb89faa3a293fe006f49755d"
+}

@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-10-31T17:25:23.953004+00:00",
+  "checks": {
+    "wildguard": {
+      "selected_components": [
+        "shieldstral"
+      ],
+      "max_score_difference": 0.0,
+      "all_selections_metrics_intervals_equal": true
+    },
+    "hatexplain": {
+      "selected_components": [
+        "jev",
+        "kev",
+        "shieldstral"
+      ],
+      "max_score_difference": 0.0,
+      "all_selections_metrics_intervals_equal": true
+    }
+  },
+  "no_inference": true
+}

@@ -1,0 +1,5 @@
+{
+  "reason": "Exact request hashes but historical scores vary by up to .05; refresh all stages",
+  "amendment_sha256": "1f7e3214a8a8aa52b877e688a6e50a118e63d77ecbb181e1776685f869cbc2ea",
+  "created_utc": "2026-10-31T16:37:43.530508+00:00"
+}

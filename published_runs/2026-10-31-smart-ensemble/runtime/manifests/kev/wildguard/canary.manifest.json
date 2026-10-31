@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-31T16:48:13.192434+00:00",
+  "model": "kev",
+  "split": "canary",
+  "dataset": "wildguard",
+  "n": 16,
+  "sha256": "c5ad515393b3be4d4d3ce4e4484badeecf6e4e30269f22739394f0fee3bfdc02",
+  "gpu": "NVIDIA L40S",
+  "torch": "2.8.0+cu128",
+  "seconds": 0.001412566999988485,
+  "registration_sha256": "80bb9c13cd9d4eabc52eeec1acf51a746a670921cb89faa3a293fe006f49755d"
+}

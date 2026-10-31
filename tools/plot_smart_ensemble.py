@@ -11,20 +11,21 @@ import numpy as np
 
 def plot(source, output):
     results = json.loads(Path(source).read_text())['datasets']
-    methods = ['best-individual', 'specialist-equal-logodds', 'primary',
-               'all-logistic', 'open-only']
-    labels = ['Best individual\n(selected on validation)', 'Specialists: equal average',
-              'Selected mixed ensemble', 'All-model logistic', 'Open-only selection']
+    methods = ['best-individual', 'equal-logodds', 'primary',
+               'all-logistic', 'nonlinear', 'open-only']
+    labels = ['Best individual\n(selected on validation)', 'All models: equal log-odds',
+              'Training-selected system', 'All-model logistic',
+              'Shallow gradient boosting', 'Open-only selection']
     plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10,
                          'svg.fonttype': 'none', 'axes.spines.top': False,
                          'axes.spines.right': False})
-    fig, axes = plt.subplots(1, 2, figsize=(12, 4.9), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5.4), sharey=True)
     for ax, (ds, title) in zip(axes, [('wildguard', 'WildGuardTest · 1,699 prompts'),
                                     ('hatexplain', 'HateXplain · 1,924 posts')]):
         rows = [results[ds]['methods'][m]['balanced']['metrics'] for m in methods]
         ax.axhspan(1.55, 2.45, color='#f0f5f8', zorder=0)
         y = np.arange(len(methods))
-        for offset, key, color, label in [(-.18, 'false_positive_rate', '#206c83', 'False blocks / benign cases'),
+        for offset, key, color, label in [(-.18, 'false_positive_rate', '#206c83', 'False blocks / compliant cases'),
                                           (.18, 'false_negative_rate', '#c37a27', 'Misses / violation cases')]:
             values = [100*r[key] for r in rows]
             ax.barh(y+offset, values, height=.31, color=color, label=label)

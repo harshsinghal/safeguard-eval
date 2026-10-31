@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-31T17:12:01.026781+00:00",
+  "model": "clef",
+  "split": "fit",
+  "dataset": "hatexplain",
+  "n": 4096,
+  "sha256": "c6d2fd9d03a57f44b4c09db9ec541dd389051269de265e2ad2db37800bdfd330",
+  "gpu": "NVIDIA L40S",
+  "torch": "2.11.0+cu128",
+  "seconds": 437.01481635000005,
+  "registration_sha256": "80bb9c13cd9d4eabc52eeec1acf51a746a670921cb89faa3a293fe006f49755d"
+}
