@@ -80,7 +80,7 @@ class Search:
 def predict(c,x,valid,native):
  cols=c['columns'];good=valid[:,cols].all(1);z=x[:,cols];kind=c['kind']
  if kind=='logistic':s=c['model'].predict_proba(logodds(z))[:,1]
- elif kind=='forest':s=c['model'].predict_proba(z)[:,1]
+ elif kind=='hist-gradient-boosting':s=c['model'].predict_proba(z)[:,1]
  elif kind=='mean-probability':s=z.mean(1)
  elif kind=='mean-logodds':s=expit(logodds(z).mean(1))
  elif kind=='raw':return as_output(z[:,0],good,native[:,cols[0]])
@@ -124,7 +124,7 @@ def fit_methods(names,x,y,valid,native,groups):
   models[key]=dict(kind=kind,names=list(pool),columns=[names.index(n) for n in pool])
  good=valid.all(1)
  h=HistGradientBoostingClassifier(max_depth=2,max_iter=100,learning_rate=.05,min_samples_leaf=40,l2_regularization=1,class_weight='balanced',early_stopping=False,random_state=SEED).fit(x[good],y[good])
- models['nonlinear']=dict(kind='forest',names=list(names),columns=list(range(len(names))),model=h,excluded_fit_rows=int((~good).sum()))
+ models['nonlinear']=dict(kind='hist-gradient-boosting',names=list(names),columns=list(range(len(names))),model=h,excluded_fit_rows=int((~good).sum()))
  for n in models['primary']['names']:
   others=[m for m in models['primary']['names'] if m!=n]
   if others:models['without/'+n]=search.subset(others)
