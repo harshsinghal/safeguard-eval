@@ -103,7 +103,14 @@ def diagnostics(search,x,y):
   pa,pb=preds[a],preds[b];wa=pa!=y;wb=pb!=y
   pairs.append(dict(a=a,b=b,both_wrong=int((wa&wb).sum()),a_wrong_b_right=int((wa&~wb).sum()),b_wrong_a_right=int((wb&~wa).sum()),disagree=int((pa!=pb).sum()),a_rescues_b_false_blocks=int(((y==0)&wb&~wa).sum()),a_rescues_b_misses=int(((y==1)&wb&~wa).sum()),b_rescues_a_false_blocks=int(((y==0)&wa&~wb).sum()),b_rescues_a_misses=int(((y==1)&wa&~wb).sum())))
  oracle=np.any(np.stack([p==y for p in preds.values()]),axis=0)
- return dict(note='Fitting OOF diagnostics after bounded tuning; not an unbiased test result',single_oof={n:r['choice'] for n,r in outputs.items()},pairs=pairs,score_correlation=np.corrcoef(x.T).tolist(),feature_order=search.names,oracle_only_diagnostic=dict(accuracy=float(oracle.mean()),remaining_errors=int((~oracle).sum())))
+ corr=[];counts=[]
+ for i in range(x.shape[1]):
+  line=[];nn=[]
+  for j in range(x.shape[1]):
+   ok=search.valid[:,i]&search.valid[:,j];nn.append(int(ok.sum()))
+   line.append(float(np.corrcoef(x[ok,i],x[ok,j])[0,1]) if ok.sum()>1 and np.std(x[ok,i])>0 and np.std(x[ok,j])>0 else None)
+  corr.append(line);counts.append(nn)
+ return dict(note='Fitting OOF diagnostics after bounded tuning; not an unbiased test result; correlations use pairwise valid scores',single_oof={n:r['choice'] for n,r in outputs.items()},pairs=pairs,score_correlation=corr,score_correlation_n=counts,feature_order=search.names,oracle_only_diagnostic=dict(accuracy=float(oracle.mean()),remaining_errors=int((~oracle).sum())))
 
 def fit_methods(names,x,y,valid,native,groups):
  search=Search(names,x,y,valid,groups);models={};paths={}
