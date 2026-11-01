@@ -10,7 +10,7 @@
     "evals/retrieval_optimization/__init__.py": "da5bc2ba5f7d7d199144e31f1fcb32d157376327a4496709fc8c5a4e41ccdfa0",
     "evals/retrieval_optimization/common.py": "b4f66ee8f2f8a250741eb216e13be481e7bcfd2e87c1aa5ef2d19692a665ca83",
     "evals/retrieval_optimization/features.py": "e1b3b9f5b1770aff80dcccc56d14cf019a5b7b0bf2149f972741d94ab8dfbc35",
-    "evals/retrieval_optimization/infer.py": "01cc567eba69624cca490416c5760bac05cf5e6fb124e9e926c6910a8d1230f3",
+    "evals/retrieval_optimization/infer.py": "e3e844fed2de164e007b6a21c07927f80a8014e74a681374047c2de2ef5a463c",
     "evals/retrieval_optimization/study.py": "0ef2d2fc0126af91ea0abd824db0f035f0d1c60f3194a4ecb7df8a3da2ea45e5",
     "evals/retrieved_examples/common.py": "e07870d64555b1430a5923278a9dcb67b4d1456a29085921e70de63d815e8e50",
     "evals/retrieved_examples/native.py": "cfde9c9199d56d8268669dc3fc8c8aac59b97d1b6923711d169ba3130aa0db24",
@@ -118,6 +118,13 @@
   "decision_rules": "unchanged: PolicyLM/Shieldstral >=0.5; Kev/Jev native Choice argmax",
   "test_status": "reused public benchmark; exploratory",
   "amendments": [
-    "amendments/cache-variation/record.json"
-  ]
+    "amendments/cache-variation/record.json",
+    "amendments/api-retries/record.json",
+    "amendments/kev-serial/record.json"
+  ],
+  "native_batch_sizes": {
+    "policylm": 1,
+    "shieldstral": 1,
+    "kev": 1
+  }
 }

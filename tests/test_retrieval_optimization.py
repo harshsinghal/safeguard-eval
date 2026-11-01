@@ -4,6 +4,7 @@ import pytest
 from evals.retrieval_optimization.common import BM25, choose, config, ranked, render
 from evals.retrieved_examples.common import augmented_policy
 from evals.retrieval_optimization.infer import load_cache
+from evals.retrieval_optimization.infer import fetch_api
 from evals.retrieval_optimization.common import write_rows, read, MODELS
 
 
@@ -76,3 +77,41 @@ def test_varying_api_cache_keeps_first_without_consulting_labels(tmp_path):
     assert got['query', 'same']['prediction'] == 'ALLOW'
     note = read(tmp_path / 'runtime/jev-cache-variation.json')
     assert len(note['varying_duplicates']) == 1
+
+
+def test_transport_retry_accounts_unknown_bill_before_retry(tmp_path, monkeypatch):
+    import threading
+    from evals.jev import api
+    calls = []
+    def post(body, key):
+        calls.append(body)
+        if len(calls) == 1:
+            raise TimeoutError('simulated lost response')
+        return {'usage': {'cost': .00001, 'input_tokens': 10, 'output_tokens': 1}}
+    monkeypatch.setattr(api, 'post', post)
+    monkeypatch.setattr('evals.retrieval_optimization.infer.time.sleep', lambda seconds: None)
+    ledger = api.Ledger(tmp_path / 'cost.sqlite', cap=.1)
+    fetch_api({'test': True}, 'dummy', 'request', tmp_path / 'response.json', ledger, threading.Event())
+    total = ledger.totals()
+    assert total['statuses']['transport_upper_bound']['requests'] == 1
+    assert total['statuses']['reported']['requests'] == 1
+    assert total['total_accounted_usd'] == pytest.approx(api.RESERVE + .00001)
+    ledger.assert_no_pending()
+
+
+def test_uncovered_api_bill_stops_with_reservation_intact(tmp_path, monkeypatch):
+    import threading
+    from evals.jev import api
+    monkeypatch.setattr(api, 'post', lambda body, key: {'usage': {'cost': 10, 'input_tokens': 10, 'output_tokens': 1}})
+    ledger = api.Ledger(tmp_path / 'cost.sqlite', cap=.1)
+    with pytest.raises(ValueError):
+        fetch_api({}, 'dummy', 'request', tmp_path / 'response.json', ledger, threading.Event())
+    assert ledger.totals()['statuses']['pending']['requests'] == 1
+
+
+def test_kev_excludes_earlier_batched_cache(tmp_path):
+    record = {'id': 'query', 'request_sha256': 'same', 'model': MODELS['kev'], 'prediction': 'ALLOW', 'score': .2}
+    write_rows(tmp_path / 'cache/kev/validation.jsonl.gz', [record])
+    assert not load_cache(tmp_path, 'kev')
+    write_rows(tmp_path / 'predictions/kev/format-validation.jsonl', [record])
+    assert load_cache(tmp_path, 'kev')['query', 'same']['prediction'] == 'ALLOW'

@@ -8,10 +8,51 @@ import urllib.error
 from .common import *
 
 
+def fetch_api(body, api_key, uid, target, ledger, abort):
+    from evals.jev import api
+    if target.exists():
+        return read(target)
+    for attempt in range(3):
+        attempt_id = uid if attempt == 0 else uid + '-retry' + str(attempt)
+        with ledger.connect() as db:
+            previous = db.execute('SELECT status FROM requests WHERE id=?', (attempt_id,)).fetchone()
+        if previous:
+            if previous[0] not in ('transport_upper_bound', 'retryable_http_upper_bound'):
+                raise RuntimeError('Prior API attempt requires reconciliation before retry')
+            continue
+        if abort.is_set():
+            raise RuntimeError('Aborted')
+        ledger.reserve(attempt_id)
+        try:
+            response = api.post(body, api_key)
+        except urllib.error.HTTPError as exc:
+            retryable = exc.code in (408, 429, 500, 502, 503, 504)
+            ledger.settle(attempt_id, api.RESERVE, 'retryable_http_upper_bound' if retryable else 'error_upper_bound')
+            api.save(target.parent / (attempt_id + '.error.json'), {'http_status': exc.code, 'retryable': retryable})
+            if not retryable:
+                abort.set()
+                raise RuntimeError('Jev HTTP ' + str(exc.code)) from None
+        except Exception as exc:
+            # A lost response can still be billed. Account the full reserved cost
+            # before another separately reserved attempt; never assume it was free.
+            ledger.settle(attempt_id, api.RESERVE, 'transport_upper_bound')
+            api.save(target.parent / (attempt_id + '.error.json'), {'kind': 'transport', 'exception_type': type(exc).__name__})
+        else:
+            api.save(target, response)
+            ledger.settle(attempt_id, api.billed_cost(response))
+            return response
+        if attempt < 2:
+            time.sleep(2 ** attempt)
+    abort.set()
+    raise RuntimeError('Jev request exhausted three bounded attempts; partial results preserved')
+
+
 def load_cache(state, model):
     cache = {}
     differences = []
-    paths = sorted((state / f'cache/{model}').glob('*.jsonl*'))
+    # Kev's earlier cache used batch eight. After the fitting parity rejection,
+    # recompute its controls serially and cache only this study's serial outputs.
+    paths = [] if model == 'kev' else sorted((state / f'cache/{model}').glob('*.jsonl*'))
     paths += sorted((state / f'predictions/{model}').glob('*.jsonl'))
     for path in paths:
         for r in rows(path):
@@ -87,7 +128,7 @@ def infer(state, model, stage, split, vendor=None, keyfile=None, cap=2.0):
         print(canonical({'model': model, 'stage': stage, 'split': split, 'jobs': len(jobs),
                          'cached_rows': cached_rows, 'new_unique_requests': len(pending)}), flush=True)
         if pending and model == 'jev':
-            from evals.jev.api import Ledger, RESERVE, read_key, post, parse, billed_cost, save
+            from evals.jev.api import Ledger, read_key, parse
             ledger = Ledger(state / 'jev-billing.sqlite', cap=cap)
             ledger.assert_no_pending()
             api_key = read_key(keyfile)
@@ -104,22 +145,7 @@ def infer(state, model, stage, split, vendor=None, keyfile=None, cap=2.0):
                     raise ValueError('Request bound exceeded')
                 uid = hash_value([stage, split, key, body])
                 target = raw / (uid + '.json')
-                if target.exists():
-                    response = read(target)
-                else:
-                    ledger.reserve(uid)
-                    try:
-                        response = post(body, api_key)
-                    except urllib.error.HTTPError as exc:
-                        ledger.settle(uid, RESERVE, 'error_upper_bound')
-                        abort.set()
-                        save(raw / (uid + '.error.json'), {'http_status': exc.code})
-                        raise RuntimeError('Jev HTTP ' + str(exc.code)) from None
-                    except Exception:
-                        abort.set()
-                        raise RuntimeError('Transport error; cost reservation retained') from None
-                    save(target, response)
-                    ledger.settle(uid, billed_cost(response))
+                response = fetch_api(body, api_key, uid, target, ledger, abort)
                 result = parse(response, ['moderation'])['moderation']
                 result.update({'response_id': response['id'], 'provider': response['provider'], 'api_request_sha256': hash_value(body)})
                 return key, result
@@ -144,7 +170,7 @@ def infer(state, model, stage, split, vendor=None, keyfile=None, cap=2.0):
         elif pending:
             from evals.retrieved_examples.native import Engine
             engine = Engine(model, vendor)
-            batch_size = 8 if model == 'kev' else 1
+            batch_size = 1
             todo = list(pending.items())
             if split == 'smoke':
                 sample = [j for _, j in sorted(todo, key=lambda p: -len(canonical(p[1]['body'])))[:16]]

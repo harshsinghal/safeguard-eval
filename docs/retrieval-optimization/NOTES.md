@@ -78,3 +78,31 @@ registration. Their duplicate responses were identical, and this cache change
 does not alter their inputs, decisions or selection rules. Keep those results,
 the failed Jev attempt and the original source/registration. Update the source
 hashes before further stages; no native run is repeated to improve a result.
+
+## Transport failure and bounded retries
+
+A Jev validation request lost its response after 2,380 successful smoke/validation
+requests had been billed. Preserve those responses and partial predictions. Count
+the missing response at its full $0.002752512 reservation, an upper bound rather
+than a known billed amount. Before resuming, register at most three separately
+reserved attempts per request for transport failures and retryable HTTP statuses.
+Use the first successful response; never retry because of its classification.
+Invalid pricing or an unresolved reservation still stops the run. The $2 API cap
+is unchanged. Unit checks cover unknown-charge accounting and stop-on-invalid-bill.
+
+## Kev batch parity amendment
+
+The new fitting-only format check found a maximum score difference of
+0.0063854456 between batch eight and serial inference, exceeding the registered
+0.005 tolerance, with zero decisions changed across 16 examples. Before any new
+Kev validation classification, switch Kev to batch one for this study. Preserve
+the rejected parity record and partial smoke file, which contained only cached
+older predictions.
+
+Disable the earlier batch-eight Kev cache and recompute its controls serially
+alongside every new condition, including final test controls. Reuse only new
+serial results for identical requests. This keeps within-study comparisons at
+the same execution setting. It may produce a slightly different baseline than
+the preceding study; report the new control and do not attribute cross-study
+numerical differences to policy or retrieval. Other models' runtimes and caches
+are unchanged. No output cutoff or selection rule is altered.
