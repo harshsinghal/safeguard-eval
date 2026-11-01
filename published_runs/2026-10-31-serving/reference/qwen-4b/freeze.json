@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-11-01T00:28:25.161748+00:00",
+  "parameter": 2048,
+  "tuning": [
+    {
+      "parameter": 2048,
+      "requests": 96,
+      "valid": 96,
+      "errors": 0,
+      "wall_seconds": 2.205760418999944,
+      "requests_per_second": 43.522405775838905,
+      "p50_ms": 671.4952590000394,
+      "p95_ms": 798.7211222501855,
+      "gpu_usd_per_million": 5.105926895833204,
+      "model": "qwen-4b",
+      "concurrency": 32,
+      "seed": 42,
+      "cache": false,
+      "parity": {
+        "n": 32,
+        "decision_changes": 0,
+        "max_score_difference": 0.031209373373756233
+      }
+    },
+    {
+      "parameter": 8192,
+      "requests": 96,
+      "valid": 96,
+      "errors": 0,
+      "wall_seconds": 2.3392984389997764,
+      "requests_per_second": 41.03794471005894,
+      "p50_ms": 760.6448239998826,
+      "p95_ms": 809.0949902500597,
+      "gpu_usd_per_million": 5.415042682869853,
+      "model": "qwen-4b",
+      "concurrency": 32,
+      "seed": 42,
+      "cache": false,
+      "parity": {
+        "n": 32,
+        "decision_changes": 0,
+        "max_score_difference": 0.031209373373756233
+      }
+    }
+  ],
+  "criterion": "highest valid tuning requests/sec, no errors",
+  "measurement_input_hash": "c1c7eef508c1b1e490492d2475416cdf9b916cba5119616fd49193af10e21224"
+}

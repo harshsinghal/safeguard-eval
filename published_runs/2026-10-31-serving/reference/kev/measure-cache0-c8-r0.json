@@ -1,0 +1,14 @@
+{
+  "requests": 384,
+  "valid": 384,
+  "errors": 0,
+  "wall_seconds": 11.688988666999649,
+  "requests_per_second": 32.85143060187138,
+  "p50_ms": 234.2979049999485,
+  "p95_ms": 408.62921344987626,
+  "gpu_usd_per_million": 6.764461034143316,
+  "model": "kev",
+  "concurrency": 8,
+  "seed": 100,
+  "cache": false
+}

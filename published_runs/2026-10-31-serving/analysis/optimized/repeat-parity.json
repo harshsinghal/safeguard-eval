@@ -1,0 +1,168 @@
+{
+  "kev": {
+    "complete": true,
+    "reference": "measure-cache0-c1-r0",
+    "runs": [
+      {
+        "run": "measure-cache0-c1-r0",
+        "decision_changes": 0,
+        "max_score_difference": 0.0,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c1-r1",
+        "decision_changes": 0,
+        "max_score_difference": 0.0,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c1-r2",
+        "decision_changes": 0,
+        "max_score_difference": 0.0,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c32-r0",
+        "decision_changes": 0,
+        "max_score_difference": 0.012711167335510254,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c32-r1",
+        "decision_changes": 0,
+        "max_score_difference": 0.009329944849014282,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c32-r2",
+        "decision_changes": 0,
+        "max_score_difference": 0.009589612483978271,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c64-r0",
+        "decision_changes": 0,
+        "max_score_difference": 0.0138779878616333,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c64-r1",
+        "decision_changes": 0,
+        "max_score_difference": 0.009329944849014282,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c64-r2",
+        "decision_changes": 0,
+        "max_score_difference": 0.009589612483978271,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c8-r0",
+        "decision_changes": 0,
+        "max_score_difference": 0.009589612483978271,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c8-r1",
+        "decision_changes": 1,
+        "max_score_difference": 0.007259398698806763,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c8-r2",
+        "decision_changes": 0,
+        "max_score_difference": 0.008182257413864136,
+        "errors": 0
+      }
+    ],
+    "historical": {
+      "matched": 384,
+      "decision_changes": 1,
+      "max_score_difference": 0.012117952108383179
+    }
+  },
+  "clef": {
+    "complete": true,
+    "reference": "measure-cache0-c1-r0",
+    "runs": [
+      {
+        "run": "measure-cache0-c1-r0",
+        "decision_changes": 0,
+        "max_score_difference": 0.0,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c1-r1",
+        "decision_changes": 0,
+        "max_score_difference": 0.0,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c1-r2",
+        "decision_changes": 0,
+        "max_score_difference": 0.0,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c32-r0",
+        "decision_changes": 0,
+        "max_score_difference": 0.013652205467224121,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c32-r1",
+        "decision_changes": 1,
+        "max_score_difference": 0.013540983200073242,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c32-r2",
+        "decision_changes": 1,
+        "max_score_difference": 0.011838138103485107,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c64-r0",
+        "decision_changes": 1,
+        "max_score_difference": 0.013652205467224121,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c64-r1",
+        "decision_changes": 1,
+        "max_score_difference": 0.013540983200073242,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c64-r2",
+        "decision_changes": 1,
+        "max_score_difference": 0.013652205467224121,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c8-r0",
+        "decision_changes": 2,
+        "max_score_difference": 0.01130068302154541,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c8-r1",
+        "decision_changes": 1,
+        "max_score_difference": 0.013652205467224121,
+        "errors": 0
+      },
+      {
+        "run": "measure-cache0-c8-r2",
+        "decision_changes": 2,
+        "max_score_difference": 0.012911558151245117,
+        "errors": 0
+      }
+    ],
+    "historical": {
+      "matched": 384,
+      "decision_changes": 1,
+      "max_score_difference": 0.014742165803909302
+    }
+  }
+}

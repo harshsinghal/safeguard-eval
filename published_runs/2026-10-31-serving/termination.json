@@ -1,0 +1,11 @@
+{
+  "id": "gpu-ab3bd266",
+  "status": "terminated",
+  "created_at": "2026-10-31T23:31:15.62479Z",
+  "ready_at": "2026-10-31T23:33:16.96295Z",
+  "terminated_at": "2026-11-01T01:37:10.716504Z",
+  "auto_terminate_at": "2026-11-01T05:33:16.96295Z",
+  "temporary_provider_ssh_key_removed": true,
+  "temporary_local_ssh_key_removed": true,
+  "remaining_active_instances": 0
+}

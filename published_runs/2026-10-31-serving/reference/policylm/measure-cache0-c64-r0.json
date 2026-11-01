@@ -1,0 +1,14 @@
+{
+  "requests": 384,
+  "valid": 384,
+  "errors": 0,
+  "wall_seconds": 12.2239771630002,
+  "requests_per_second": 31.41367125278175,
+  "p50_ms": 2029.3550060000598,
+  "p95_ms": 2138.504330549995,
+  "gpu_usd_per_million": 7.074060858217709,
+  "model": "policylm",
+  "concurrency": 64,
+  "seed": 100,
+  "cache": false
+}

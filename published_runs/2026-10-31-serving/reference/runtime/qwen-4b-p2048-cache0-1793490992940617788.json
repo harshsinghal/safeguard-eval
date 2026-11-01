@@ -1,0 +1,28 @@
+{
+  "model": "qwen-4b",
+  "command": [
+    "/root/vllmenv/bin/vllm",
+    "serve",
+    "Qwen/Qwen3.5-4B",
+    "--revision",
+    "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8000",
+    "--dtype",
+    "bfloat16",
+    "--max-model-len",
+    "8192",
+    "--gpu-memory-utilization",
+    ".85",
+    "--max-num-seqs",
+    "64",
+    "--max-num-batched-tokens",
+    "2048",
+    "--no-enable-prefix-caching",
+    "--language-model-only"
+  ],
+  "ready_seconds": 74.02873377700007,
+  "created_utc": "2026-10-31T23:57:46.969281+00:00"
+}

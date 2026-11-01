@@ -1,0 +1,16 @@
+{
+  "model": "clef",
+  "command": [
+    "/root/clefenvfast/bin/python",
+    "-m",
+    "evals.serving.native",
+    "--state",
+    "/root/serving-fast-state",
+    "--model",
+    "clef",
+    "--max-batch",
+    "8"
+  ],
+  "ready_seconds": 12.005639055000756,
+  "created_utc": "2026-11-01T01:20:19.524475+00:00"
+}

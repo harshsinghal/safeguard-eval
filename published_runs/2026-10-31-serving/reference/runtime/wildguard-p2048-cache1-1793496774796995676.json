@@ -1,0 +1,27 @@
+{
+  "model": "wildguard",
+  "command": [
+    "/root/vllmenv/bin/vllm",
+    "serve",
+    "allenai/wildguard",
+    "--revision",
+    "cbba4823f3e8020e5a74a5e29bf85072def6f2ff",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8000",
+    "--dtype",
+    "bfloat16",
+    "--max-model-len",
+    "8192",
+    "--gpu-memory-utilization",
+    ".85",
+    "--max-num-seqs",
+    "64",
+    "--max-num-batched-tokens",
+    "2048",
+    "--enable-prefix-caching"
+  ],
+  "ready_seconds": 48.01657261499986,
+  "created_utc": "2026-11-01T01:33:42.813522+00:00"
+}

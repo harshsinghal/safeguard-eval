@@ -1,0 +1,28 @@
+{
+  "model": "shieldstral",
+  "command": [
+    "/root/vllmenv/bin/vllm",
+    "serve",
+    "mistralai/Shieldstral-1.0-3B",
+    "--revision",
+    "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8000",
+    "--dtype",
+    "bfloat16",
+    "--max-model-len",
+    "8192",
+    "--gpu-memory-utilization",
+    ".85",
+    "--max-num-seqs",
+    "64",
+    "--max-num-batched-tokens",
+    "2048",
+    "--no-enable-prefix-caching",
+    "--language-model-only"
+  ],
+  "ready_seconds": 34.01390073199991,
+  "created_utc": "2026-10-31T23:51:26.940950+00:00"
+}

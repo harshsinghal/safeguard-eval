@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-01T00:41:47.754421+00:00",
+  "client_environment": "/root/policyenv",
+  "transformers": "4.57.6",
+  "vllm_server": "0.32.0",
+  "model": "wildguard",
+  "client_sha256": "4ab9013a582bee0a12d03b891de144705ec10097dac2c4838c434d2dba1e6da8",
+  "reason": "Transformers 5.17 ignored use_fast=False; fail-closed tokenizer verification before accepting timings"
+}

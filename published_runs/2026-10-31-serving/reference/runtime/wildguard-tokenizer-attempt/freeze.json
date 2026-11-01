@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-11-01T00:40:55.882393+00:00",
+  "parameter": 2048,
+  "tuning": [
+    {
+      "parameter": 2048,
+      "requests": 96,
+      "valid": 96,
+      "errors": 0,
+      "wall_seconds": 3.0246884620000856,
+      "requests_per_second": 31.738805898879143,
+      "p50_ms": 984.9740560000555,
+      "p95_ms": 1019.2522085002338,
+      "gpu_usd_per_million": 7.001593662037235,
+      "model": "wildguard",
+      "concurrency": 32,
+      "seed": 42,
+      "cache": false,
+      "parity": {
+        "n": 32,
+        "decision_changes": 0,
+        "max_score_difference": 0.0
+      }
+    },
+    {
+      "parameter": 8192,
+      "requests": 96,
+      "valid": 96,
+      "errors": 0,
+      "wall_seconds": 3.0893134650004868,
+      "requests_per_second": 31.074865366562882,
+      "p50_ms": 1021.9391345003714,
+      "p95_ms": 1035.8998287506438,
+      "gpu_usd_per_million": 7.151188576390016,
+      "model": "wildguard",
+      "concurrency": 32,
+      "seed": 42,
+      "cache": false,
+      "parity": {
+        "n": 32,
+        "decision_changes": 0,
+        "max_score_difference": 0.0
+      }
+    }
+  ],
+  "criterion": "highest valid tuning requests/sec, no errors",
+  "measurement_input_hash": "c1c7eef508c1b1e490492d2475416cdf9b916cba5119616fd49193af10e21224"
+}

@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-01T01:36:27.361071+00:00",
+  "parameter": 2048,
+  "additional_concurrency": [
+    8,
+    64
+  ],
+  "note": "No retuning; fills the frozen cached throughput/latency curve"
+}

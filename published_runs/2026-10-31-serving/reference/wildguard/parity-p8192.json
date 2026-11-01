@@ -1,0 +1,14 @@
+{
+  "requests": 32,
+  "valid": 32,
+  "errors": 0,
+  "wall_seconds": 16.280159334000018,
+  "requests_per_second": 1.965582728245795,
+  "p50_ms": 506.41383050015065,
+  "p95_ms": 514.123598699689,
+  "gpu_usd_per_million": 113.05666204166681,
+  "model": "wildguard",
+  "concurrency": 1,
+  "seed": 41,
+  "cache": false
+}

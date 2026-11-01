@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "measured_passes": 144,
+  "measured_requests": 55296,
+  "unique_measurement_prompts": 384,
+  "fitting_prompts": 96,
+  "checksummed_files": 667,
+  "rejected_extensions": [
+    "policy-batching/policylm"
+  ],
+  "paid_inference_calls": 0,
+  "checks": [
+    "All accepted conditions present with three repetitions",
+    "Every saved metric recomputed from individual traces",
+    "Prompt IDs/hashes and frozen fitting selections verified",
+    "Published policy hashes checked",
+    "Cross-runtime score/decision comparisons reproduced",
+    "Actual billing and termination recorded",
+    "Exact workload restoration verified locally",
+    "28 serving and skill tests passed",
+    "Pinned skill package and unchanged README leaderboard checks passed",
+    "Plots rendered and visually inspected",
+    "Compressed artifact scan found no credential patterns or measurement prompt text"
+  ],
+  "note": "Recomputes saved evidence; does not repeat GPU inference or assert classification accuracy."
+}

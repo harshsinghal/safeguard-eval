@@ -1,0 +1,14 @@
+{
+  "requests": 96,
+  "valid": 96,
+  "errors": 0,
+  "wall_seconds": 0.3208425420000367,
+  "requests_per_second": 299.21219113140245,
+  "p50_ms": 96.6874944998608,
+  "p95_ms": 124.55447724988744,
+  "gpu_usd_per_million": 0.7426910694445295,
+  "model": "liquid",
+  "concurrency": 32,
+  "seed": 42,
+  "cache": false
+}

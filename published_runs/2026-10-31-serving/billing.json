@@ -1,0 +1,21 @@
+{
+  "status": "terminated",
+  "provider": "GPU.ai",
+  "gpu": "NVIDIA L40S",
+  "price_per_hour_usd": 0.8,
+  "gpu_seconds": 7434,
+  "new_gpu_usd": 1.65,
+  "new_api_usd": 0,
+  "new_total_usd": 1.65,
+  "prior_accounted_usd": 17.09001787256,
+  "cumulative_accounted_usd": 18.74001787256,
+  "authorized_study_cap_usd": 5,
+  "authorized_cap_usd": 22.09001787256,
+  "authorization_scope": "This serving pilot only; user authorized a few extra dollars.",
+  "remaining_original_20_usd": 1.25998212744,
+  "runpod_used": false,
+  "temporary_credentials_removed": true,
+  "instance_id": "gpu-ab3bd266",
+  "provider_instances_remaining": 0,
+  "note": "Includes setup, downloads, repairs, compilation, warm-up, inference and collection. Prior total includes conservative allowances for earlier API transport failures. No new paid inference API use."
+}

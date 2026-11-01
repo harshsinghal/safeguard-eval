@@ -1,0 +1,49 @@
+{
+  "order": [
+    {
+      "overlay": "source-phase1.tar.gz",
+      "sha256": "a13599f9381639155ee822b37a16b888da97f3f02367f3061bbbbfaa5f89d34f",
+      "effective_serving_sources": {
+        "evals/serving/client.py": "3f4b8ca600895317d2ddc2a97aacb8eb3a3f64a32233b3cdc630422f93df5559",
+        "evals/serving/__init__.py": "301d73033e19b3df642750f9628ea7ac9629c19cd5eb5ad55a1c3736e0444d85",
+        "evals/serving/native.py": "cf8b3b8851ed46203c1506263ada4840cad47acfc7b768f6db8663798956c536",
+        "evals/serving/study.py": "723e22123bd8de29d3ea6e17f3d9719d5cf80453ce4a962f614a3b3e20838ec3"
+      }
+    },
+    {
+      "overlay": "phase2-source.tar.gz",
+      "sha256": "2c62a33341bcd41576f8a0a32e74725655a806b38039d5f2bb98e1780a67bf28",
+      "effective_serving_sources": {
+        "evals/serving/client.py": "d95aeb317c952ee781eb813bccd04633b93a2291952583c56bd7743ad99b8ded",
+        "evals/serving/__init__.py": "301d73033e19b3df642750f9628ea7ac9629c19cd5eb5ad55a1c3736e0444d85",
+        "evals/serving/native.py": "609cbd80218f6ed62a65e5b9f7c40c7d03d6b4237c9d22ef4ee7899a32eb9ebe",
+        "evals/serving/study.py": "72f8f2744cfc79dc1780530b9826d6e06a91fd522b892dc46385f4f531952839",
+        "evals/decision_models/adapters.py": "7c969011aea177639c13572711ae7c21cf2e5748169ec72d86d61aa97e00e541"
+      }
+    },
+    {
+      "overlay": "tokenizer-repair-source.tar.gz",
+      "sha256": "f20cdf61b2cb8f0efdff315d40d16fa77aff17997da4b115429fb04ed8a3cfcb",
+      "effective_serving_sources": {
+        "evals/serving/client.py": "4ab9013a582bee0a12d03b891de144705ec10097dac2c4838c434d2dba1e6da8",
+        "evals/serving/__init__.py": "301d73033e19b3df642750f9628ea7ac9629c19cd5eb5ad55a1c3736e0444d85",
+        "evals/serving/native.py": "609cbd80218f6ed62a65e5b9f7c40c7d03d6b4237c9d22ef4ee7899a32eb9ebe",
+        "evals/serving/study.py": "72f8f2744cfc79dc1780530b9826d6e06a91fd522b892dc46385f4f531952839",
+        "evals/decision_models/adapters.py": "7c969011aea177639c13572711ae7c21cf2e5748169ec72d86d61aa97e00e541"
+      }
+    },
+    {
+      "overlay": "phase3-source.tar.gz",
+      "sha256": "d24ef912977e7543b74ac808c15970d0882640a11c63b0db0d7c45d566797ae3",
+      "effective_serving_sources": {
+        "evals/serving/client.py": "4ab9013a582bee0a12d03b891de144705ec10097dac2c4838c434d2dba1e6da8",
+        "evals/serving/__init__.py": "301d73033e19b3df642750f9628ea7ac9629c19cd5eb5ad55a1c3736e0444d85",
+        "evals/serving/native.py": "966f63bc26d49c8d3746fc8d1d1fabdb35305ca1050974c38fb5518f06738ec1",
+        "evals/serving/study.py": "72f8f2744cfc79dc1780530b9826d6e06a91fd522b892dc46385f4f531952839",
+        "evals/decision_models/adapters.py": "7c969011aea177639c13572711ae7c21cf2e5748169ec72d86d61aa97e00e541",
+        "evals/serving/cached_sweep.py": "d0de5cf74256e5d54bcea5522aaf801dffe09958453e296fe8fb8e20ef69b84a"
+      }
+    }
+  ],
+  "note": "Base evaluation dependencies precede these overlays. Registrations keep their phase hashes; tokenizer and batch changes are separately recorded."
+}

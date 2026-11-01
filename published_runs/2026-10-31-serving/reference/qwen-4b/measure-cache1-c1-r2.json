@@ -1,0 +1,14 @@
+{
+  "requests": 384,
+  "valid": 384,
+  "errors": 0,
+  "wall_seconds": 28.271946878000108,
+  "requests_per_second": 13.582368474907211,
+  "p50_ms": 64.26410950007266,
+  "p95_ms": 99.11471789985171,
+  "gpu_usd_per_million": 16.361080369213024,
+  "model": "qwen-4b",
+  "concurrency": 1,
+  "seed": 102,
+  "cache": true
+}

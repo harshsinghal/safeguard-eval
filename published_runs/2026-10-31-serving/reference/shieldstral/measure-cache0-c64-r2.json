@@ -1,0 +1,14 @@
+{
+  "requests": 384,
+  "valid": 384,
+  "errors": 0,
+  "wall_seconds": 10.879739069999914,
+  "requests_per_second": 35.29496410983347,
+  "p50_ms": 1751.8164529999467,
+  "p95_ms": 2037.4953092000396,
+  "gpu_usd_per_million": 6.29614529513884,
+  "model": "shieldstral",
+  "concurrency": 64,
+  "seed": 102,
+  "cache": false
+}

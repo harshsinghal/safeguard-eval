@@ -227,3 +227,49 @@ recomputes selections and metrics; it does not claim an independent GPU refit.
 Large weights and features stay local. The public test is reused, and this
 fine-tuning study remains separate from the common leaderboard. The paper,
 articles and released skill were not rewritten in this turn.
+
+
+## Serving moderation models: capacity, waiting time and GPU cost
+
+The [serving study](serving/README.md) adds operational measurements to the
+classification experiments. Seven pinned systems ran serially on one L40S at
+$0.80/hour: three through vLLM 0.32.0 and four through native classification heads.
+The historical policies, weights and cutoffs were fixed. Ninety-six unlabeled
+WildGuardTrain inputs selected bounded serving settings; 384 separate
+WildGuardTest inputs were measured at concurrency 1, 8, 32 and 64, with three
+repeats. Labels were not used to select a runtime or change a classifier.
+
+At concurrency 32, shared-policy caching raised Shieldstral from 35.9 to 237.0
+valid classifications/second. Qwen had zero cache hits under the recorded hybrid
+cache layout and remained about 42/second. WildGuard's cached profile reached
+51.5/second at concurrency 64, with p95 latency about 1.37 seconds. The complete
+curves show how queueing and batching alter the waiting-time/capacity tradeoff.
+These are loopback closed-loop pilots, not production arrival-rate or p99 tests.
+
+A separately registered native-kernel extension raised Kev from 29.0 to 61.2/s
+and Clef from 7.1 to 10.8/s at concurrency 32. Clef retained its reference
+convolution and its best observed throughput was at concurrency 1. PolicyLM's
+32,768-token internal batch budget was rejected: its eight-row candidate was
+slower and exceeded the fitting score-drift gate, while 32 rows ran out of memory.
+Its original 1,024-token profile remains the accepted result. The fine-tuned
+Liquid encoder reached 358.4/s at concurrency 32, but uses a fixed learned
+boundary rather than a policy document. Different output contracts and backends
+prevent treating this table as a causal architecture or equal-quality ranking.
+
+The consistency checks also matter. A newer Transformers version silently
+returned a fast tokenizer for WildGuard despite use_fast=False; all 480 token
+sequences differed. Those fitting attempts were discarded, the original slow
+client tokenizer was pinned, and WildGuard selection was restarted before any
+accepted measurements. Some accepted runtime/batch conditions changed a few
+labels relative to single-request or historical outputs. Report those differences
+and revalidate quality before replacing a production inference configuration.
+
+The [evidence bundle](../published_runs/2026-10-31-serving/README.md) contains
+144 accepted timed passes, 55,296 valid responses, frozen settings, fitting
+failures, policy/source hashes, environment records and per-request traces.
+“Valid” means a parsed classification, not a correct answer. GPU-only dollars
+per million assume sustained measured traffic; a GPU kept on for 30 days at this
+rate costs $576 even when idle. Actual experiment cost was $1.65, with termination
+and key removal confirmed. No paid inference API or RunPod resource was used.
+The quality leaderboard, papers, articles and released skill remain separate
+snapshots; this study does not silently revise their accuracy claims.

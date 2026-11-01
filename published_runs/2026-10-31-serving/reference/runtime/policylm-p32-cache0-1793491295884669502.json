@@ -1,0 +1,16 @@
+{
+  "model": "policylm",
+  "command": [
+    "/root/policyenv/bin/python",
+    "-m",
+    "evals.serving.native",
+    "--state",
+    "/root/serving-state",
+    "--model",
+    "policylm",
+    "--max-batch",
+    "32"
+  ],
+  "ready_seconds": 10.00928193499999,
+  "created_utc": "2026-11-01T00:01:45.893864+00:00"
+}

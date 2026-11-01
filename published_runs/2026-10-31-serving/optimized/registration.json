@@ -1,0 +1,73 @@
+{
+  "created_utc": "2026-10-31T23:28:36.558088+00:00",
+  "models": {
+    "kev": {
+      "model": "jaredpalmer/kev-4b",
+      "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+      "backend": "native",
+      "adapter": "kev",
+      "threshold": 0.56,
+      "policy_sha256": "86656221662bb616d2156881e15e4413ec8ba2587bf3139a674a9a29f96a9732",
+      "policy_origin": "../work/decision-models-run/state/policies/kev/wildguard/final.json",
+      "policy_id": "brief",
+      "native_environment": "kevenvfast",
+      "serving_fused": true,
+      "flash_linear_attention": "0.5.2",
+      "causal_conv1d": "1.7.0"
+    },
+    "clef": {
+      "model": "Cloudflare/clef-flash",
+      "revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+      "backend": "native",
+      "adapter": "clef",
+      "threshold": 0.36,
+      "policy_sha256": "06d0d249b636803ab57dd972b5911e4bfcaa181b4c97c3f977e65c8ca16ce56d",
+      "policy_origin": "../work/decision-models-run/state/policies/clef/wildguard/final.json",
+      "policy_id": "examples",
+      "native_environment": "clefenvfast",
+      "flash_linear_attention": "0.6.0",
+      "causal_conv1d": null
+    }
+  },
+  "vllm_version": "0.32.0",
+  "workload": "WildGuard prompt harmfulness, unique requests, historical policies, no policy/threshold fitting",
+  "tuning_count": 96,
+  "measurement_count": 384,
+  "concurrency": [
+    1,
+    8,
+    32,
+    64
+  ],
+  "repeats": 3,
+  "tuning_vllm_token_budgets": [
+    2048,
+    8192
+  ],
+  "tuning_native_max_batches": [
+    8,
+    32
+  ],
+  "native_batch_wait_ms": 2,
+  "vllm_prefix_cache_primary": false,
+  "secondary_shared_prefix_cache": true,
+  "prior_cumulative_usd": 17.09001787256,
+  "new_study_cap_usd": 5,
+  "cumulative_cap_usd": 22.09001787256,
+  "inputs": {
+    "tune": "0ed7f1d5afb4e630bd33396f71199e9e7b9ecd714905c8ea582eec43671f76ae",
+    "measure": "c1c7eef508c1b1e490492d2475416cdf9b916cba5119616fd49193af10e21224"
+  },
+  "source_hashes": {
+    "evals/serving/__init__.py": "301d73033e19b3df642750f9628ea7ac9629c19cd5eb5ad55a1c3736e0444d85",
+    "evals/serving/client.py": "d95aeb317c952ee781eb813bccd04633b93a2291952583c56bd7743ad99b8ded",
+    "evals/serving/native.py": "609cbd80218f6ed62a65e5b9f7c40c7d03d6b4237c9d22ef4ee7899a32eb9ebe",
+    "evals/serving/study.py": "72f8f2744cfc79dc1780530b9826d6e06a91fd522b892dc46385f4f531952839",
+    "evals/decision_models/adapters.py": "7c969011aea177639c13572711ae7c21cf2e5748169ec72d86d61aa97e00e541"
+  },
+  "plan_sha256": "eae2cefb8926d877fc49faa6686f33f65fb342d8d160548113730d21672ec4d8",
+  "amendments_sha256": "d115bb5ae202d68f94c91fde19cb1c2c0407439b85e3671b4dc990a14be87982",
+  "runtime_variant": "optimized native kernels; separate from reference-runtime measurements",
+  "extension_registered_utc": "2026-11-01T00:14:21.443000+00:00",
+  "warmup_matching_concurrency": true
+}

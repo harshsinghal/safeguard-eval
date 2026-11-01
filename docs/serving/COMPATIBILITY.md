@@ -36,3 +36,37 @@ Publisher interfaces: [PolicyLM](https://huggingface.co/musubilabs/policylm-1.7b
 [Kev](https://huggingface.co/jaredpalmer/kev-4b),
 [Clef-Flash](https://huggingface.co/Cloudflare/clef-flash), and
 [Liquid encoder](https://huggingface.co/LiquidAI/LFM2.5-Encoder-350M).
+
+## Native-runtime optimization controls
+
+The reference decision runtimes lacked optional linear-attention kernels. A
+separate extension preserves those measurements and tests Kev's pinned fused
+implementation with flash-linear-attention 0.5.2, and Clef's linear-attention
+kernels with version 0.6.0. Clef retains its reference convolution; these are
+bounded implementations, not maximum-performance claims. The
+[kernel registration](KERNEL-EXTENSION.json) records the separate environments.
+
+PolicyLM's outer HTTP batch size and its internal model batch are different
+controls. Its publisher helper defaults to 1,024 packed tokens per GPU forward
+pass. The [token-budget extension](POLICY-BATCH-EXTENSION.json) tests 32,768
+with unchanged native cleaning, windowing and category scoring. This illustrates
+why an API named `classify_batch` does not by itself establish efficient GPU
+batching for a particular policy length.
+
+Neither larger-token-budget candidate was accepted. The eight-row candidate
+changed no labels in the 32-input fitting gate but exceeded its 0.02 score-drift
+limit (maximum 0.02951); fitting throughput was also lower. The 32-row candidate
+ran out of memory during fitting-only warm-up. No final measurement inputs were
+timed under this extension. The reported PolicyLM profile retains the original
+1,024-token budget; the failed extension remains available for inspection.
+
+## Cache behavior depends on architecture and workload
+
+Qwen's hybrid runtime reported a 528-token cache-block grid and zero prefix-cache
+hits in its initial cached measurement passes. Its median complete input was
+433 tokens, including the shared policy. That is consistent with the common
+prefix ending before a reusable state boundary. The pinned vLLM
+[hybrid-cache documentation](https://docs.vllm.ai/en/v0.32.0/features/automatic_prefix_caching/)
+explains this block alignment. Its optional shared-prefix checkpoint path has
+additional speculative-decoding requirements; that path was not tested here.
+Do not generalize this result to all Qwen deployments or all cache settings.

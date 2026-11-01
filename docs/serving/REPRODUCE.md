@@ -5,6 +5,15 @@
 From the repository root, with Python, NumPy and HTTPX installed:
 
 ```sh
+python tools/verify_serving.py
+```
+
+This checks complete condition coverage, frozen selections, policy hashes,
+request identities, trace-derived metrics, cross-runtime output agreement,
+published checksums and recorded termination/billing. It makes no inference
+calls. To regenerate an individual summary in another directory:
+
+```sh
 python tools/report_serving.py \
   --state published_runs/2026-10-31-serving/reference \
   --output /tmp/serving-reference
@@ -19,6 +28,10 @@ checks decisions and scores against a single-request reference. Gzipped traces
 are supported. The historical comparison reapplies the registered cutoff where
 appropriate; Qwen uses its generated label and WildGuard its official output.
 It is an agreement check, not a new accuracy evaluation.
+
+The separate PolicyLM token-budget extension is under `policy-batching/`; pass
+that directory to the same reporting command. `tools/compare_serving_runtimes.py`
+compares matching request IDs between `reference/` and either extension.
 
 The archive includes failed setup attempts. A model's `complete.json` identifies
 finished measurements; a leftover failure file is not the final status. The
@@ -55,6 +68,10 @@ the machine. The published bill is historical, not a promise of future prices.
 
 1. Reproduce the recorded environments on a compatible Linux NVIDIA GPU. The
    archive includes installation scripts and exact installed-package inventories.
+   Use the Transformers 4.57.6 client environment for WildGuard's actual slow
+   LlamaTokenizer. Transformers 5.17 returned a different fast backend despite
+   `use_fast=False`; the harness now rejects that client. The vLLM server still
+   runs in its own vLLM 0.32.0 environment.
    These paths assume environments under `/root`; adapt them in `study.py` for a
    different layout. Compilation requires a C++ compiler and matching CUDA
    headers, compiler and runtime. Read [the implementation notes](AMENDMENTS.md)
@@ -64,7 +81,8 @@ the machine. The published bill is historical, not a promise of future prices.
    Record any change of GPU, model revision, precision, adapter or software.
 3. For Kev and Clef, retrieve the publisher sources at the revisions recorded in
    `evals/decision_models/study.py`; verify every file in
-   `evals/decision_models/vendor-hashes.json`. The wrappers expect these under
+   `evals/decision_models/vendor-hashes.json`. The existing fetch command is
+   `python -m evals.decision_models.fetch_sources --destination /root/decision-vendor`. The wrappers expect these under
    `/root/decision-vendor`. Do not silently use a newly released native head.
 4. For Liquid, supply the study's selected fine-tuned encoder/head checkpoint,
    whose SHA-256 is in the registration. Its 1.4 GB FP32 weights were retained
@@ -75,7 +93,7 @@ the machine. The published bill is historical, not a promise of future prices.
    a fitting-only smoke run before the complete sweep. A full invocation is:
 
 ```sh
-/root/vllmenv/bin/python -m evals.serving.study \
+/root/policyenv/bin/python -m evals.serving.study \
   --state /root/serving-new-run --model all
 ```
 
@@ -84,6 +102,19 @@ selects on fitting throughput, and then measures the frozen choice. It resumes
 from completed passes; use a new directory for a genuinely new experiment.
 The native-kernel extension also needs the 32 fitting reference outputs under
 `runtime-reference/` and its separately pinned environments.
+
+The original sweep includes prefix-cache concurrency 1 and 32. After it
+finishes, reproduce the separately registered cached concurrency 8 and 64 with:
+
+```sh
+/root/policyenv/bin/python -m evals.serving.cached_sweep \
+  --state /root/serving-new-run
+```
+
+For each native extension, create another state directory with the same inputs,
+policies and fitting reference outputs, and use that extension's registration as
+`registration.json`. Run `evals.serving.study` there. Never mix its traces with
+the reference runtime or use measurement outcomes to select the serving setting.
 
 The controller stops its child server on exit and has a five-hour alarm. This
 **does not terminate a rented GPU**. The provider deadline is a backstop; the

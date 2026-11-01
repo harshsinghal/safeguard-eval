@@ -1,0 +1,16 @@
+{
+  "model": "liquid",
+  "command": [
+    "/root/liquidenv/bin/python",
+    "-m",
+    "evals.serving.native",
+    "--state",
+    "/root/serving-state",
+    "--model",
+    "liquid",
+    "--max-batch",
+    "8"
+  ],
+  "ready_seconds": 28.011532277000015,
+  "created_utc": "2026-11-01T00:05:17.606865+00:00"
+}

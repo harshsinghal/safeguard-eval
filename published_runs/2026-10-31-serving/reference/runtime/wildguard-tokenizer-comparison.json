@@ -1,0 +1,6 @@
+{
+  "total": 480,
+  "different_tokenizations": 480,
+  "fast_class": "TokenizersBackend",
+  "slow_class": "LlamaTokenizer"
+}

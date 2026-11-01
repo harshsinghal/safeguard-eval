@@ -1,0 +1,16 @@
+{
+  "model": "kev",
+  "command": [
+    "/root/kevenvfast/bin/python",
+    "-m",
+    "evals.serving.native",
+    "--state",
+    "/root/serving-fast-state",
+    "--model",
+    "kev",
+    "--max-batch",
+    "32"
+  ],
+  "ready_seconds": 12.00696009800049,
+  "created_utc": "2026-11-01T01:13:13.436722+00:00"
+}

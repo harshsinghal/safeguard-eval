@@ -1,0 +1,7 @@
+{
+  "path": "published_runs/2026-10-31-liquid-finetune/test-predictions.json",
+  "sha256": "5a5d91a6dd942850a69ddbb1c5814b155d0fff8837f8d787f941fe96ae786305",
+  "selection": "finetuned accuracy primary seed 20261031",
+  "threshold": 0.68,
+  "equivalence_verified": true
+}

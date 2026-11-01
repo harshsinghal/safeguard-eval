@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-11-01T00:05:37.670887+00:00",
+  "parameter": 8,
+  "tuning": [
+    {
+      "parameter": 8,
+      "requests": 96,
+      "valid": 96,
+      "errors": 0,
+      "wall_seconds": 0.2773820249999517,
+      "requests_per_second": 346.09308227530863,
+      "p50_ms": 77.03876349989969,
+      "p95_ms": 97.74516024998547,
+      "gpu_usd_per_million": 0.6420880208332216,
+      "model": "liquid",
+      "concurrency": 32,
+      "seed": 42,
+      "cache": false,
+      "parity": {
+        "n": 32,
+        "decision_changes": 0,
+        "max_score_difference": 0.0003231111913919449
+      }
+    },
+    {
+      "parameter": 32,
+      "requests": 96,
+      "valid": 96,
+      "errors": 0,
+      "wall_seconds": 0.3208425420000367,
+      "requests_per_second": 299.21219113140245,
+      "p50_ms": 96.6874944998608,
+      "p95_ms": 124.55447724988744,
+      "gpu_usd_per_million": 0.7426910694445295,
+      "model": "liquid",
+      "concurrency": 32,
+      "seed": 42,
+      "cache": false,
+      "parity": {
+        "n": 32,
+        "decision_changes": 0,
+        "max_score_difference": 0.00032798200845718384
+      }
+    }
+  ],
+  "criterion": "highest valid tuning requests/sec, no errors",
+  "measurement_input_hash": "c1c7eef508c1b1e490492d2475416cdf9b916cba5119616fd49193af10e21224"
+}

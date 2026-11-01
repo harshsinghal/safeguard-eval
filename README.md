@@ -4,7 +4,7 @@
 
 A moderation team writes a rule. A model interprets it. What happens when the team changes a definition, removes an example, switches models, or combines their decisions?
 
-This repository follows those questions through a growing series of experiments. We test specialist policy models, general-purpose language models, and decision models sometimes called “System One” models. We change policy text, examine model-specific input formats, transfer policies between models, combine model scores, train classifiers on frozen representations, and fine-tune a compact encoder for a fixed task. The records include improvements, regressions, and inconclusive results.
+This repository follows those questions through a growing series of experiments. We test specialist policy models, general-purpose language models, and decision models sometimes called “System One” models. We change policy text, examine model-specific input formats, transfer policies between models, combine model scores, train classifiers on frozen representations, and fine-tune a compact encoder for a fixed task, and measure serving latency, throughput and GPU cost. The records include improvements, regressions, and inconclusive results.
 
 The finding running through this work is that **policy authoring is deeply coupled with AI engineering**. A policy is an operational input: its wording, its delivery to the model, and the rule that turns a score into an action all need testing. Policy owners define the intended boundary; engineers help measure and implement it. Neither the model name nor a well-written document is sufficient on its own.
 
@@ -14,7 +14,7 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 ## Experiment map
 
-We started by asking whether a model could apply a platform's written rules. That led to three branches: **change the policy, change how scores become decisions, or learn a classifier from the model's internal features**. The map shows how the questions connect; it is not one shared pipeline. Numbers refer to the entries in the [experiment log](#experiment-log).
+We started by asking whether a model could apply a platform's written rules. That led to three branches: **change the policy, change how scores become decisions, or learn a classifier from the model's internal features**. We also measure what it takes to serve representative systems. The map shows how the questions connect; it is not one shared pipeline. Numbers refer to the entries in the [experiment log](#experiment-log).
 
 ```mermaid
 flowchart TB
@@ -51,6 +51,7 @@ flowchart TB
     S4 --> EVIDENCE
     F5 --> EVIDENCE
     EVIDENCE["11 · Balanced evaluation<br/>False blocks + missed violations<br/>Validate → freeze → test"]
+    EVIDENCE --> SERVING["20 · Serving performance<br/>vLLM + native runtimes<br/>Batching · Caching · GPU cost"]
     EVIDENCE -.-> NEXT["PROPOSED · Not started<br/>Add trained feature heads<br/>Policy + cutoff · Second pass"]
 
     classDef neutral fill:#f1f5f9,stroke:#64748b,color:#172c49;
@@ -58,7 +59,7 @@ flowchart TB
     classDef scores fill:#e9f5ef,stroke:#367556,color:#153e2b;
     classDef features fill:#f4efff,stroke:#7b63a8,color:#3d2c60;
     classDef proposed fill:#fff6e5,stroke:#a36e16,color:#61420f,stroke-dasharray:6 4;
-    class START,EVIDENCE neutral;
+    class START,EVIDENCE,SERVING neutral;
     class P1,P2,P3 policy;
     class S1,S2,S3,S4 scores;
     class F1,F2,F3,F4,F5 features;
@@ -75,6 +76,7 @@ flowchart TB
 | Policy wording, transfer, and structure | [WildGuard tuning](docs/wildguard/METHODS.md) → [Qwen comparison](docs/qwen-policy/READOUT.md) → [policy transfer](docs/policy-transfer/READOUT.md) → [HateXplain structure tests](docs/hatexplain/READOUT.md) → [training-error corrections](docs/policy-corrections/README.md) |
 | Scores, calibration, cutoffs, and combinations | [Probability ensembles](docs/ensemble/READOUT.md) → [log-odds ensembles](docs/ensemble-logits/RESULTS.md) → [Jev](docs/jev/READOUT.md) → [Kev / Clef](docs/decision-models/README.md) → [decision-model ensembles](docs/decision-ensemble/README.md) → [smart ensemble](docs/smart-ensemble/README.md) |
 | Representations and task-specific training | [PolicyLM / Qwen](docs/activation-probe/README.md) → [Shieldstral / Qwen](docs/shield-probe/README.md) → [linear, neural and contrastive task classifiers](docs/contrastive-heads/README.md) → [Liquid encoder fine-tuning](docs/liquid-finetune/README.md) |
+| Deploy and operate | [Serving latency, throughput, batching and GPU cost](docs/serving/README.md) |
 | Compare outcomes and see what is proposed | [Balanced metric guide](docs/leaderboard/METRICS.md) · [leaderboard](#current-leaderboard) · [next steps: reducing moderation errors](docs/research-directions/REDUCING-MODERATION-ERRORS.md) |
 
 The [smart-ensemble study](docs/smart-ensemble/README.md) takes the next step: learn which native model scores help each other, then test the frozen combination. Adding trained representation heads to that combination, broader policy-and-cutoff optimization, and a targeted second pass remain [proposed work](docs/research-directions/REDUCING-MODERATION-ERRORS.md), awaiting separate authorization.
@@ -271,11 +273,22 @@ Validation accuracy was about 94%; test accuracy was lower. The validation-selec
 
 [Readable findings](docs/liquid-finetune/README.md) · [All seeds and operating points](docs/liquid-finetune/RESULTS.md) · [Registered plan](docs/liquid-finetune/PLAN.md) · [Evidence and reproduction](published_runs/2026-10-31-liquid-finetune/README.md)
 
+### 20. Serving moderation: latency, batching and GPU cost
+
+We served seven previously studied systems on one L40S: Shieldstral, Qwen and WildGuard through **vLLM 0.32.0**, and PolicyLM, Kev, Clef-Flash and the fine-tuned Liquid encoder through their native scoring implementations. We selected serving settings on 96 fitting prompts, then measured 384 separate WildGuardTest prompts three times at each load. Policies, weights and decision cutoffs stayed fixed.
+
+At 32 requests in flight, shared-policy caching raised Shieldstral from **35.9 to 237.0 classifications/second**; Qwen had no prefix-cache hits and little change. Kev's optimized native runtime rose from **29.0 to 61.2/second**. The fine-tuned 350M Liquid classifier reached **358.4/second**, but it has a fixed learned boundary and no policy document at inference. Larger PolicyLM batches were rejected after score drift and an out-of-memory failure. Higher concurrency often increased waiting time, and some runtime changes shifted decisions near a cutoff.
+
+These are deployment profiles, not an equal-accuracy model ranking. The readout explains latency, batching, sustained-load GPU cost and why an idle GPU changes the economics. The experiment cost **$1.65**; the GPU was terminated. The classification leaderboard below is unchanged.
+
+[Plain-language findings and curves](docs/serving/README.md) · [All operating profiles](docs/serving/RESULTS.md) · [Plan and limits](docs/serving/PLAN.md) · [Evidence and reproduction](published_runs/2026-10-31-serving/README.md)
+
 ## What the evidence suggests for moderation teams
 
 - **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. A model replacement requires another evaluation.
 - **Review meaning as well as scores.** Definitions, exceptions, and examples express a policy owner's intent. A higher aggregate score does not justify silently narrowing that intent or ignoring a costly type of error.
 - **Build a benchmark for the boundary you care about.** Include compliant lookalikes and difficult violations. Use training examples for authoring, validation for selection, and a separate test for the final assessment. Inspect errors by category as well as in aggregate.
+- **Test the serving configuration as well as the classifier.** Batching and shared-policy caching change throughput and waiting time. Changes to kernels or batch composition can also shift scores near a cutoff. A fast response and a correct response are separate requirements.
 - **Consider specialists, general LLMs, and decision models.** Different configured systems led on different tasks. Small models can be useful; neither size nor family guarantees the outcome. Ensembles add inference and maintenance requirements that a quality-only table does not price.
 
 These experiments support a workflow in which policy owners and engineers test changes together. They do **not** show that policies never transfer, that specialists always win, or that fine-tuning is unnecessary. Our public tests have been examined repeatedly, model-development budgets differ, and prior training exposure is not fully known. The studies establish no enterprise-data, multilingual, or image-moderation benchmark. Proposed enterprise applications remain a [research direction](docs/research-directions/ENTERPRISE-AI-GOVERNANCE.md), not a validated capability.

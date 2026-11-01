@@ -1,0 +1,204 @@
+{
+  "kev": {
+    "complete": true,
+    "runs": [
+      {
+        "run": "measure-cache0-c1-r0",
+        "n": 384,
+        "decision_changes": 1,
+        "max_score_difference": 0.009375661611557007,
+        "median_score_difference": 0.0013077817857265472,
+        "throughput_ratio": 1.114448669827992
+      },
+      {
+        "run": "measure-cache0-c1-r1",
+        "n": 384,
+        "decision_changes": 1,
+        "max_score_difference": 0.009375661611557007,
+        "median_score_difference": 0.0013077817857265472,
+        "throughput_ratio": 1.0074900731927563
+      },
+      {
+        "run": "measure-cache0-c1-r2",
+        "n": 384,
+        "decision_changes": 1,
+        "max_score_difference": 0.009375661611557007,
+        "median_score_difference": 0.0013077817857265472,
+        "throughput_ratio": 0.9936346405476486
+      },
+      {
+        "run": "measure-cache0-c32-r0",
+        "n": 384,
+        "decision_changes": 0,
+        "max_score_difference": 0.011901378631591797,
+        "median_score_difference": 0.0011560358107089996,
+        "throughput_ratio": 2.1300817789329107
+      },
+      {
+        "run": "measure-cache0-c32-r1",
+        "n": 384,
+        "decision_changes": 0,
+        "max_score_difference": 0.010355383157730103,
+        "median_score_difference": 0.0012250468134880066,
+        "throughput_ratio": 2.0863832398103646
+      },
+      {
+        "run": "measure-cache0-c32-r2",
+        "n": 384,
+        "decision_changes": 0,
+        "max_score_difference": 0.008743584156036377,
+        "median_score_difference": 0.0012011900544166565,
+        "throughput_ratio": 2.1089274491822514
+      },
+      {
+        "run": "measure-cache0-c64-r0",
+        "n": 384,
+        "decision_changes": 0,
+        "max_score_difference": 0.013007014989852905,
+        "median_score_difference": 0.0012688171118497849,
+        "throughput_ratio": 2.1061634494945602
+      },
+      {
+        "run": "measure-cache0-c64-r1",
+        "n": 384,
+        "decision_changes": 0,
+        "max_score_difference": 0.010355383157730103,
+        "median_score_difference": 0.0012167394161224365,
+        "throughput_ratio": 2.100869758126807
+      },
+      {
+        "run": "measure-cache0-c64-r2",
+        "n": 384,
+        "decision_changes": 0,
+        "max_score_difference": 0.008990585803985596,
+        "median_score_difference": 0.0012389421463012695,
+        "throughput_ratio": 2.0815011921822255
+      },
+      {
+        "run": "measure-cache0-c8-r0",
+        "n": 384,
+        "decision_changes": 0,
+        "max_score_difference": 0.01090291142463684,
+        "median_score_difference": 0.0012608468532562256,
+        "throughput_ratio": 1.6206988376528029
+      },
+      {
+        "run": "measure-cache0-c8-r1",
+        "n": 384,
+        "decision_changes": 1,
+        "max_score_difference": 0.010207444429397583,
+        "median_score_difference": 0.0012469738721847534,
+        "throughput_ratio": 1.7213048972050944
+      },
+      {
+        "run": "measure-cache0-c8-r2",
+        "n": 384,
+        "decision_changes": 0,
+        "max_score_difference": 0.008877575397491455,
+        "median_score_difference": 0.0012789219617843628,
+        "throughput_ratio": 1.7667877149043616
+      }
+    ]
+  },
+  "clef": {
+    "complete": true,
+    "runs": [
+      {
+        "run": "measure-cache0-c1-r0",
+        "n": 384,
+        "decision_changes": 2,
+        "max_score_difference": 0.015604406595230103,
+        "median_score_difference": 0.0014647170901298523,
+        "throughput_ratio": 2.1902796315112947
+      },
+      {
+        "run": "measure-cache0-c1-r1",
+        "n": 384,
+        "decision_changes": 2,
+        "max_score_difference": 0.015604406595230103,
+        "median_score_difference": 0.0014647170901298523,
+        "throughput_ratio": 2.2350273628886974
+      },
+      {
+        "run": "measure-cache0-c1-r2",
+        "n": 384,
+        "decision_changes": 2,
+        "max_score_difference": 0.015604406595230103,
+        "median_score_difference": 0.0014647170901298523,
+        "throughput_ratio": 2.336051690166743
+      },
+      {
+        "run": "measure-cache0-c32-r0",
+        "n": 384,
+        "decision_changes": 0,
+        "max_score_difference": 0.019509702920913696,
+        "median_score_difference": 0.001399122178554535,
+        "throughput_ratio": 1.5152239305797703
+      },
+      {
+        "run": "measure-cache0-c32-r1",
+        "n": 384,
+        "decision_changes": 0,
+        "max_score_difference": 0.019509702920913696,
+        "median_score_difference": 0.0014271605759859085,
+        "throughput_ratio": 1.5247237208937614
+      },
+      {
+        "run": "measure-cache0-c32-r2",
+        "n": 384,
+        "decision_changes": 1,
+        "max_score_difference": 0.019509702920913696,
+        "median_score_difference": 0.0015594270080327988,
+        "throughput_ratio": 1.5324038609278379
+      },
+      {
+        "run": "measure-cache0-c64-r0",
+        "n": 384,
+        "decision_changes": 1,
+        "max_score_difference": 0.015604406595230103,
+        "median_score_difference": 0.0015052556991577148,
+        "throughput_ratio": 1.522216869033344
+      },
+      {
+        "run": "measure-cache0-c64-r1",
+        "n": 384,
+        "decision_changes": 1,
+        "max_score_difference": 0.019509702920913696,
+        "median_score_difference": 0.0015052556991577148,
+        "throughput_ratio": 1.5299574520109533
+      },
+      {
+        "run": "measure-cache0-c64-r2",
+        "n": 384,
+        "decision_changes": 1,
+        "max_score_difference": 0.019509702920913696,
+        "median_score_difference": 0.0014937743544578552,
+        "throughput_ratio": 1.51572017989786
+      },
+      {
+        "run": "measure-cache0-c8-r0",
+        "n": 384,
+        "decision_changes": 1,
+        "max_score_difference": 0.012693643569946289,
+        "median_score_difference": 0.0014653690159320831,
+        "throughput_ratio": 1.172183033707456
+      },
+      {
+        "run": "measure-cache0-c8-r1",
+        "n": 384,
+        "decision_changes": 0,
+        "max_score_difference": 0.012935161590576172,
+        "median_score_difference": 0.0014560166746377945,
+        "throughput_ratio": 1.465790430303372
+      },
+      {
+        "run": "measure-cache0-c8-r2",
+        "n": 384,
+        "decision_changes": 2,
+        "max_score_difference": 0.013453096151351929,
+        "median_score_difference": 0.0014183223247528076,
+        "throughput_ratio": 1.5346199136271466
+      }
+    ]
+  }
+}
