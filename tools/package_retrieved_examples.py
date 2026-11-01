@@ -52,6 +52,8 @@ def package(state,output):
         'PolicyLM, Shieldstral, Kev and Jev, plus a shared nearest-neighbor vote. No calibration.\n\n'
         'See [results](RESULTS.md), [protocol](PLAN.md), [research notes](NOTES.md), '
         '[costs](billing.json), and [cleanup](cleanup.json). Source prompts and embeddings are excluded.\n\n'
+        'PLAN.md preserves the initial registration. Subsequent budget authorization and '
+        'technical amendments are recorded in NOTES.md and the registration history.\n\n'
         'Reproduce on CPU from a checkout of the repository:\n\n```bash\n'
         'python3 tools/verify_retrieved_examples.py --archive '+str(output.relative_to(ROOT))+'\n```\n\n'
         'The verifier checks all hashes, restores compressed predictions in a temporary folder, '

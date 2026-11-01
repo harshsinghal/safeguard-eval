@@ -1,0 +1,14 @@
+{
+  "torch": "2.8.0",
+  "transformers": "4.57.3",
+  "huggingface_hub": "0.36.0",
+  "numpy": "2.0.2",
+  "scipy": "1.13.1",
+  "scikit-learn": "1.6.1",
+  "python": "3.9.6",
+  "system": "Darwin",
+  "machine": "arm64",
+  "device": "cpu",
+  "dtype": "float32",
+  "torch_threads": 4
+}

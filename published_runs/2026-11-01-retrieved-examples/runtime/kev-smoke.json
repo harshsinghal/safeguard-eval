@@ -1,0 +1,9 @@
+{
+  "n": 128,
+  "torch": "2.8.0+cu128",
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "batch_size": 8,
+  "seconds": 4.302889175000018,
+  "prediction_sha256": "2f115c8a59d49e456e38f0309c5f09d257b4d52d625452b6d8cbd755b341065a",
+  "created_utc": "2026-11-01T17:06:45.520193+00:00"
+}

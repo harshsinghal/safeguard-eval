@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-11-01T17:23:23.987247+00:00",
+  "checks": {
+    "policylm": {
+      "predictions": 6144,
+      "request_mapping_verified": true
+    },
+    "shieldstral": {
+      "predictions": 6144,
+      "request_mapping_verified": true
+    },
+    "kev": {
+      "predictions": 6144,
+      "request_mapping_verified": true
+    },
+    "jev": {
+      "predictions": 6144,
+      "request_mapping_verified": true
+    }
+  }
+}

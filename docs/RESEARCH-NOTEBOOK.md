@@ -332,3 +332,33 @@ The [deployment guide](cloud-serving/DEPLOYMENT.md) connects these findings to
 prompt limits, cache behavior, model adapters, release checks and cloud planning.
 The common quality leaderboard, reviewed articles and pinned skill remain
 separate snapshots.
+
+## Retrieved labeled examples with fixed decisions
+
+The [retrieved-example study](retrieved-examples/README.md) is complete on
+WildGuard. It uses the existing 4,096 fitting and 1,536 validation populations,
+with an eligible bank of 1,814 distinct fitting groups, and the 1,699 labeled
+official test prompts. PolicyLM, Shieldstral, Kev and Jev each receive policy-only,
+fixed-four, nearest-four and two-per-class conditions. A shared neighbor-voting
+control is also scored. No model weights or output cutoffs are fitted.
+
+Four nearest examples reduced ordinary accuracy for PolicyLM and Shieldstral,
+and slightly increased it for Kev and Jev; the latter gains versus policy-only
+have intervals including zero. Validation nominated policy-only for the two
+specialists and balanced examples for the two decision models. Their frozen
+test accuracies are 86.70%, 90.82%, 88.11% and 89.76%, respectively. The neighbor
+vote scored 70.04%. Error counts reveal different false-block/miss trades.
+
+The [complete comparison](retrieved-examples/RESULTS.md),
+[technical amendments](retrieved-examples/NOTES.md), and
+[immutable bundle](../published_runs/2026-11-01-retrieved-examples/README.md)
+include the pre-test freeze, prompt-free predictions, source snapshots, grouped
+paired intervals, independent metric checks, a $0.874933148 reconciled bill, and
+verified termination. Native PolicyLM required single-line category fields;
+Shieldstral used single-request execution after a batch-score consistency check.
+These repairs preceded final testing and remain documented.
+
+Keep this fixed-decision, accuracy-nominated study separate from the common
+calibrated leaderboard. It is exploratory evidence on a reused benchmark and
+particular example wrappers, not a general model-family or retrieval claim.
+Papers, articles and versioned skill releases have not been rewritten.

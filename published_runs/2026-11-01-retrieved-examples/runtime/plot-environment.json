@@ -1,0 +1,7 @@
+{
+  "python": "3.9.6",
+  "matplotlib": "3.9.4",
+  "numpy": "2.0.2",
+  "device": "local CPU",
+  "purpose": "figure rendering only"
+}

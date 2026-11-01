@@ -1,5 +1,5 @@
 {
-  "status": "frozen_before_test",
+  "status": "complete",
   "data_verified": true,
   "retrieval_smoke_prepared": true,
   "retrieval_validation_prepared": true,
@@ -16,15 +16,15 @@
   "calibration": false,
   "latency_study": false,
   "paid_classification_started": true,
-  "test_retrieval_started": false,
-  "test_scored": false,
-  "new_paid_cost_usd": null,
+  "test_retrieval_started": true,
+  "test_scored": true,
+  "new_paid_cost_usd": 0.874933148,
   "prior_cumulative_usd": 19.36001787256,
   "existing_cumulative_cap_usd": 20,
-  "gpu_resources_running": true,
+  "gpu_resources_running": false,
   "experiment_budget_usd": 20,
   "new_budget_separate_from_prior": true,
-  "cost_status": "API ledger tracked; GPU usage reconciled at termination",
+  "cost_status": "reconciled; resources terminated",
   "jev_validation_completed": true,
   "policylm_single_line_amendment_recorded": true,
   "all_native_compatibility_checks_passed": true,
@@ -45,5 +45,13 @@
     "kev": "balanced_nearest",
     "jev": "balanced_nearest"
   },
-  "freeze_sha256": "eaa10e9c0a31155a43905bf29a9e1767a8e170dfadbf8604c4618017b0319373"
+  "freeze_sha256": "eaa10e9c0a31155a43905bf29a9e1767a8e170dfadbf8604c4618017b0319373",
+  "test_inference_started": true,
+  "freeze_commit": "78e2768",
+  "model_test_classifications": 27184,
+  "test_conditions_with_knn": 17,
+  "independent_metric_checks_passed": 17,
+  "public_cpu_reproduction": "exact",
+  "public_archive": "published_runs/2026-11-01-retrieved-examples",
+  "public_file_audit": "passed"
 }

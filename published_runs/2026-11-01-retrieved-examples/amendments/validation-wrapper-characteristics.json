@@ -1,0 +1,70 @@
+{
+  "policylm": {
+    "policy_only": {
+      "windows": {
+        "1": 1516,
+        "2": 17,
+        "3": 1,
+        "4": 1,
+        "6": 1
+      },
+      "variants": {
+        "1": 1536
+      },
+      "cleaned": 2
+    },
+    "fixed_four": {
+      "windows": {
+        "1": 1516,
+        "2": 17,
+        "3": 1,
+        "4": 1,
+        "6": 1
+      },
+      "variants": {
+        "1": 1536
+      },
+      "cleaned": 2
+    },
+    "nearest_four": {
+      "windows": {
+        "1": 1516,
+        "2": 17,
+        "3": 1,
+        "4": 1,
+        "6": 1
+      },
+      "variants": {
+        "1": 1536
+      },
+      "cleaned": 2
+    },
+    "balanced_nearest": {
+      "windows": {
+        "1": 1516,
+        "2": 17,
+        "3": 1,
+        "4": 1,
+        "6": 1
+      },
+      "variants": {
+        "1": 1536
+      },
+      "cleaned": 2
+    }
+  },
+  "shieldstral": {
+    "policy_only": {
+      "top_vocabulary_token_not_yes_or_no": 0
+    },
+    "fixed_four": {
+      "top_vocabulary_token_not_yes_or_no": 0
+    },
+    "nearest_four": {
+      "top_vocabulary_token_not_yes_or_no": 0
+    },
+    "balanced_nearest": {
+      "top_vocabulary_token_not_yes_or_no": 0
+    }
+  }
+}

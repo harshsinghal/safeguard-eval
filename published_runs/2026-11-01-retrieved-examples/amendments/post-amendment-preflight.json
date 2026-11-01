@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-11-01T17:08:53.039038+00:00",
+  "registration_sha256": "85a85bd7c5372c4917f217cd125c54b17f7e3958695aa43b40f6857af85355a5",
+  "checks": {
+    "smoke": {
+      "queries": 32,
+      "jobs_each_model": 128,
+      "target_and_example_mapping_verified": true
+    },
+    "validation": {
+      "queries": 1536,
+      "jobs_each_model": 6144,
+      "target_and_example_mapping_verified": true
+    }
+  }
+}

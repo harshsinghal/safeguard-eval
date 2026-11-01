@@ -1,0 +1,5 @@
+{
+  "created_utc": "2026-11-01T17:03:09.736196+00:00",
+  "reason": "Shieldstral batch-8 fitting smoke changed scores by max 0.015082955360412598 (>0.005 gate), with 0/16 decision changes. Use batch size 1 for Shieldstral smoke, validation and test; no policy, data, cutoff or score calibration changes. Before native validation/test.",
+  "registration_before_sha256": "48d45a8c0b04a8970de1ff4c5432a6ed87187b9224f9979f62ee32f331603107"
+}

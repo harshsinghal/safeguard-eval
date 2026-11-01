@@ -109,3 +109,46 @@ The freeze SHA-256 is
 The public registration and validation freeze are committed before creating test
 retrieval jobs or starting test inference. No base policy, model weights,
 retrieval choices, example counts or output cutoffs are revised after this freeze.
+
+## Frozen test inputs and runtime diagnostics
+
+The freeze was published in commit `78e2768` before test retrieval and inference.
+All 1,699 targets passed the input audit. The E5 retriever used one window for
+1,695 targets and two for four targets, with no clipped query. Bank and test
+duplicate groups are disjoint; only training labels enter demonstration text.
+
+On validation, PolicyLM used identical native message-window counts in every
+condition (1,516 single-window targets; 20 multi-window targets). The same two
+targets triggered its native cleaning in every condition. Shieldstral's top
+vocabulary token was yes or no for all validation classifications. These are
+interface diagnostics, not evidence about a causal mechanism for accuracy.
+
+Jev completed all 13,068 API classifications across smoke, validation and test.
+The reported API total is $0.344933148, with no unresolved cost reservations.
+GPU usage was reconciled after all test outputs were collected: $0.53 for 2,929
+billed seconds, making the complete experiment $0.874933148. The provider confirmed
+termination, listed zero active instances, and temporary SSH keys were removed.
+
+## Completed comparison
+
+All 52,272 model result records (smoke, validation and test) are retained, plus
+separate fitting-only parity diagnostics. All 27,184 final model decisions and
+1,699 neighbor-control predictions are present. Input and request hashes match;
+no example, cutoff or selection changed after the freeze. Independent scikit-learn
+checks matched accuracy, balanced accuracy, macro-F1 and confusion counts for all
+17 test conditions.
+
+Four nearest examples changed accuracy by −2.35 points for PolicyLM, −1.12 for
+Shieldstral, +0.65 for Kev and +0.18 for Jev. The Kev/Jev gains versus policy-only
+have intervals including zero. Kev nearest versus fixed examples gained 1.06
+points (unadjusted interval +0.18 to +2.00), but that does not establish a gain
+over its policy-only control. The frozen balanced selections improved Kev by
+10 and Jev by eight test decisions, with uncertainty including no gain. The
+neighbor-only control scored 70.04%.
+
+PolicyLM fixed examples were slightly better on test but were not the validation
+nomination. Kev nearest examples exceeded its balanced nomination by only one
+test decision. Neither result replaces the frozen selection. Results support
+model-specific evaluation of example conditioning, not a general retrieval gain
+or an architectural explanation. Exact policies, inputs, outputs, amendments and
+bootstrap comparisons remain traceable through hashes and the public archive.

@@ -4,7 +4,7 @@
 
 A moderation team writes a rule. A model interprets it. What happens when the team changes a definition, removes an example, switches models, or combines their decisions?
 
-This repository follows those questions through a growing series of experiments. We test specialist policy models, general-purpose language models, and decision models sometimes called “System One” models. We change policy text, examine model-specific input formats, transfer policies between models, combine model scores, train classifiers on frozen representations, and fine-tune a compact encoder for a fixed task. We also measure serving latency, throughput and GPU cost, including how prompt length and inference engines affect deployment. The records include improvements, regressions, and inconclusive results.
+This repository follows those questions through a growing series of experiments. We test specialist policy models, general-purpose language models, and decision models sometimes called “System One” models. We change policy text, examine model-specific input formats, transfer policies between models, retrieve labeled examples, combine model scores, train classifiers on frozen representations, and fine-tune a compact encoder for a fixed task. We also measure serving latency, throughput and GPU cost, including how prompt length and inference engines affect deployment. The records include improvements, regressions, and inconclusive results.
 
 The finding running through this work is that **policy authoring is deeply coupled with AI engineering**. A policy is an operational input: its wording, its delivery to the model, and the rule that turns a score into an action all need testing. Policy owners define the intended boundary; engineers help measure and implement it. Neither the model name nor a well-written document is sufficient on its own.
 
@@ -12,7 +12,7 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 [Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
 
-**In preparation:** [Relevant labeled examples with fixed decision rules](docs/retrieved-examples/README.md) compares policy-only, fixed examples, retrieved examples and nearest-neighbor voting on WildGuard. It covers PolicyLM, Shieldstral, Kev and Jev, with no calibration. No new accuracy results are claimed yet.
+**Latest experiment:** [Relevant labeled examples with fixed decision rules](docs/retrieved-examples/README.md) found modest, uncertain accuracy gains for Kev and Jev, and regressions for PolicyLM and Shieldstral. Policy-only Shieldstral remained strongest at 90.82%. The study compares fixed examples, retrieved examples and neighbor voting on WildGuard, with no new calibration.
 
 ## Experiment map
 
@@ -26,7 +26,9 @@ flowchart TB
         P1["3–4 · Tune policies<br/>Specialists and Qwen<br/>WildGuard reference"]
         P2["5, 7 · Transfer + structure<br/>Model adapters<br/>Sections and examples"]
         P3["16 · Training-error edits<br/>Shieldstral → Qwen"]
+        P4["22 · Relevant training examples<br/>Fixed / nearest / balanced<br/>Policy-only + neighbor-vote controls"]
         P1 --> P2 --> P3
+        P2 --> P4
     end
 
     subgraph SCORES["Scores and decisions"]
@@ -50,6 +52,7 @@ flowchart TB
     START --> S1
     START --> F1
     P3 --> EVIDENCE
+    P4 --> EVIDENCE
     S4 --> EVIDENCE
     F5 --> EVIDENCE
     EVIDENCE["11 · Balanced evaluation<br/>False blocks + missed violations<br/>Validate → freeze → test"]
@@ -63,7 +66,7 @@ flowchart TB
     classDef features fill:#f4efff,stroke:#7b63a8,color:#3d2c60;
     classDef proposed fill:#fff6e5,stroke:#a36e16,color:#61420f,stroke-dasharray:6 4;
     class START,EVIDENCE,SERVING,CLOUD neutral;
-    class P1,P2,P3 policy;
+    class P1,P2,P3,P4 policy;
     class S1,S2,S3,S4 scores;
     class F1,F2,F3,F4,F5 features;
     class NEXT proposed;
@@ -72,11 +75,11 @@ flowchart TB
     style FEATURES fill:#f8fafc,stroke:#cbd5e1
 ```
 
-**How to read the map:** solid boxes describe completed work; the dashed box is future work awaiting authorization. The separate **frontier-API pilot (6)** checked whether requests returned usable classifications; its full held-out experiment did not run. Not every branch covers both benchmarks: the first decision-model ensemble, the first two representation studies, training-error corrections, and Liquid fine-tuning were tested on WildGuard only. The smart ensemble and task-specific contrastive-head study cover both benchmarks. The representation, correction, smart-ensemble, contrastive-head, and Liquid studies use separate validation protocols and are **not merged into the common leaderboard**.
+**How to read the map:** solid boxes describe completed work; the dashed box is future work awaiting authorization. The separate **frontier-API pilot (6)** checked whether requests returned usable classifications; its full held-out experiment did not run. Not every branch covers both benchmarks: the first decision-model ensemble, the first two representation studies, training-error corrections, Liquid fine-tuning, and retrieved examples were tested on WildGuard only. The smart ensemble and task-specific contrastive-head study cover both benchmarks. The representation, correction, smart-ensemble, contrastive-head, Liquid, and retrieved-example studies use separate validation protocols and are **not merged into the common leaderboard**.
 
 | Follow a branch | Where to start |
 |---|---|
-| Policy wording, transfer, and structure | [WildGuard tuning](docs/wildguard/METHODS.md) → [Qwen comparison](docs/qwen-policy/READOUT.md) → [policy transfer](docs/policy-transfer/READOUT.md) → [HateXplain structure tests](docs/hatexplain/READOUT.md) → [training-error corrections](docs/policy-corrections/README.md) |
+| Policy wording, transfer, structure, and examples | [WildGuard tuning](docs/wildguard/METHODS.md) → [Qwen comparison](docs/qwen-policy/READOUT.md) → [policy transfer](docs/policy-transfer/READOUT.md) → [HateXplain structure tests](docs/hatexplain/READOUT.md) → [training-error corrections](docs/policy-corrections/README.md) → [retrieved examples](docs/retrieved-examples/README.md) |
 | Scores, calibration, cutoffs, and combinations | [Probability ensembles](docs/ensemble/READOUT.md) → [log-odds ensembles](docs/ensemble-logits/RESULTS.md) → [Jev](docs/jev/READOUT.md) → [Kev / Clef](docs/decision-models/README.md) → [decision-model ensembles](docs/decision-ensemble/README.md) → [smart ensemble](docs/smart-ensemble/README.md) |
 | Representations and task-specific training | [PolicyLM / Qwen](docs/activation-probe/README.md) → [Shieldstral / Qwen](docs/shield-probe/README.md) → [linear, neural and contrastive task classifiers](docs/contrastive-heads/README.md) → [Liquid encoder fine-tuning](docs/liquid-finetune/README.md) |
 | Deploy and operate | [Seven-model serving study](docs/serving/README.md) → [L4: prompt length and vLLM/SGLang](docs/cloud-serving/README.md) · [Self-hosting implications](docs/cloud-serving/DEPLOYMENT.md) |
@@ -296,9 +299,19 @@ A separate **Shieldstral 3B compatibility check** initially failed on SGLang's t
 
 [Findings and length curves](docs/cloud-serving/README.md) · [Deployment implications](docs/cloud-serving/DEPLOYMENT.md) · [All operating profiles](docs/cloud-serving/RESULTS.md) · [Plan and amendments](docs/cloud-serving/PLAN.md) · [Frozen evidence and reproduction](published_runs/2026-11-01-cloud-serving/README.md)
 
+### 22. Relevant examples: does retrieval improve a fixed policy?
+
+We gave PolicyLM, Shieldstral, Kev and Jev either their existing policy, four fixed training examples, four nearest examples, or two nearest examples per class. A frozen E5 encoder searched 1,814 eligible training groups. Validation nominated a condition before all four were tested on the same 1,699 WildGuardTest prompts. Model weights and native decision rules stayed fixed; there was no new calibration or latency benchmark.
+
+**Retrieval had different effects on different models.** Four nearest examples reduced ordinary accuracy from 86.70% to 84.34% for PolicyLM and from 90.82% to 89.70% for Shieldstral. It raised Kev from 87.52% to 88.17% and Jev from 89.29% to 89.46%, but those gains versus policy-only were uncertain. Validation selected policy-only for the specialists and balanced examples for the decision models; those balanced selections scored 88.11% for Kev and 89.76% for Jev, with intervals for their gains including zero. Neighbor voting alone scored 70.04%.
+
+The errors explain more than accuracy alone. PolicyLM's nearest examples caught 57 more harmful prompts but created 97 more false blocks. Kev's selected balanced examples reduced misses by 36 while adding 26 false blocks. Jev's balanced examples reduced both errors, by only eight cases overall. The example library and retrieval rule need evaluation alongside the policy and its interpreter. This exploratory study cost **$0.875 of a fresh $20 allowance**; the GPU was terminated and temporary access keys removed.
+
+[Findings and accuracy chart](docs/retrieved-examples/README.md) · [All conditions and error counts](docs/retrieved-examples/RESULTS.md) · [Plan and amendments](docs/retrieved-examples/NOTES.md) · [Frozen evidence and CPU reproduction](published_runs/2026-11-01-retrieved-examples/README.md)
+
 ## What the evidence suggests for moderation teams
 
-- **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. A model replacement requires another evaluation.
+- **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. If examples are retrieved, include the labeled library, encoder and selection rule. A model replacement requires another evaluation.
 - **Review meaning as well as scores.** Definitions, exceptions, and examples express a policy owner's intent. A higher aggregate score does not justify silently narrowing that intent or ignoring a costly type of error.
 - **Build a benchmark for the boundary you care about.** Include compliant lookalikes and difficult violations. Use training examples for authoring, validation for selection, and a separate test for the final assessment. Inspect errors by category as well as in aggregate.
 - **Test the serving configuration as well as the classifier.** Batching and shared-policy caching change throughput and waiting time. Changes to kernels or batch composition can also shift scores near a cutoff. A fast response and a correct response are separate requirements.
@@ -325,7 +338,7 @@ The research archive grows separately from versioned skill releases. New studies
 
 The comparison now includes the **Jev/Kev/Clef score ensembles and decision-only controls**, alongside the earlier policy models, general-purpose LLMs, and specialist ensembles. There are **38 WildGuard entries and 20 HateXplain entries**, drawn from **261 eligible archived candidate records**. These are configured systems and methods, not 261 distinct models or independent experiments. The new decision-model combinations were tested on WildGuard only.
 
-The [PolicyLM representation study](docs/activation-probe/README.md), [Shieldstral representation study](docs/shield-probe/README.md), [smart-ensemble study](docs/smart-ensemble/README.md), [contrastive-head study](docs/contrastive-heads/README.md), and [Liquid fine-tuning study](docs/liquid-finetune/README.md) use separate 1,536-row validation protocols. The [training-error policy-correction study](docs/policy-corrections/README.md) uses a newly reserved validation population and additional project holdout. Their results are reported separately and have not been inserted into these common-validation tables.
+The [PolicyLM representation study](docs/activation-probe/README.md), [Shieldstral representation study](docs/shield-probe/README.md), [smart-ensemble study](docs/smart-ensemble/README.md), [contrastive-head study](docs/contrastive-heads/README.md), [Liquid fine-tuning study](docs/liquid-finetune/README.md), and [retrieved-example study](docs/retrieved-examples/README.md) use separate 1,536-row validation protocols. The retrieved-example study keeps native cutoffs fixed and nominates conditions by ordinary accuracy. The [training-error policy-correction study](docs/policy-corrections/README.md) uses a newly reserved validation population and additional project holdout. Their results are reported separately and have not been inserted into these common-validation tables.
 
 The [integration record](published_runs/2026-10-30-leaderboard-decision-ensembles/README.md) preserves every earlier selection and result. It adds the new study's frozen method selections without refitting or choosing replacements from test scores. Individual calibration controls and “best method” aliases remain in that study's report rather than becoming duplicate leaderboard entries.
 

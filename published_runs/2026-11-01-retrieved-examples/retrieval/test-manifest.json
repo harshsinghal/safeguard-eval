@@ -1,0 +1,20 @@
+{
+  "encoder": {
+    "model": "intfloat/e5-small-v2",
+    "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52"
+  },
+  "retrieval_sha256": "5d782c4903e9abf127a8d9cd411e0c462bd741c7ca781d07669470d57e5536eb",
+  "input_sha256": "09a58a739923884a43dfa23937e8bf24c8e6fb07851fed6822560551361292d3",
+  "bank_sha256": "e5bc432f93ee3c2052d8d5fcf80221053c52ee647931c2a1200c81cffdfdf598",
+  "jobs": {
+    "policylm": "490ca85dd761592201212cadba98314045a6a28e9d4eb9c12c9be05ac159ab22",
+    "shieldstral": "0cba1bbb6a8b2e5afd013419da24eba2d261703ecf02b30597bdb4872b22fa89",
+    "kev": "b0e1430e3e62b05dc489f1d8bab4b328c30b652b1cd4eb1c4d4820c3c57ec91d",
+    "jev": "b0e1430e3e62b05dc489f1d8bab4b328c30b652b1cd4eb1c4d4820c3c57ec91d"
+  },
+  "query_window_counts": {
+    "1": 1695,
+    "2": 4
+  },
+  "created_utc": "2026-11-01T17:24:29.998075+00:00"
+}

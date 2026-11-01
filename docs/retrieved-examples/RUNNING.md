@@ -1,5 +1,18 @@
 # Reproduce the retrieved-example comparison
 
+## Recompute published numbers without inference
+
+The public verifier needs Python 3.9+
+and NumPy (the recorded analysis used 2.0.2). It checks file hashes and recomputes
+validation selections, test metrics and paired intervals from saved predictions.
+No API credentials, model download or source dataset text is needed:
+
+```bash
+python3 tools/verify_retrieved_examples.py --archive published_runs/2026-11-01-retrieved-examples
+```
+
+## Rerun inference with restored source data
+
 Install the repository's research dependencies in a fresh environment. Retrieval
 uses NumPy, PyTorch, Transformers and Hugging Face Hub. Native runtimes preserve
 the earlier pinned PolicyLM and Kev dependency environments; Shieldstral uses
@@ -11,6 +24,22 @@ category fields; the renderer uses spaces between examples for that model.
 These technical amendments and their rejected attempts are recorded in
 [the notes](NOTES.md). Exact dependency locks will accompany the run archive;
 Kev needs Pydantic in addition to Torch, Transformers, PEFT and its fused kernels.
+
+| Model | Where examples go | Where the target goes | Decision rule |
+|---|---|---|---|
+| PolicyLM | Single-line `exception_override`, after existing exceptions | Native message input | BLOCK score at least 0.5 |
+| Shieldstral | `Instruct`, after existing policy clauses | `Document`; the yes/no `Query` is unchanged | Normalized yes/no BLOCK score at least 0.5 |
+| Kev | Native Choice question's `instructions` | `state.content` | Native argmax, with ALLOW first on ties |
+| Jev | Native Choice question's `instructions` | `state.content` | API's returned choice |
+
+Each demonstration serializes only `example_content` and its training `label`.
+An explicit prefix says the examples are data, not instructions, and the policy
+remains authoritative. Angle and bracket characters inside examples are escaped
+to avoid turning a training prompt into a tokenizer control delimiter. The target
+is never concatenated with the demonstrations in the content field. PolicyLM's
+category-field examples are an experimental conditioning format, not an official
+few-shot API. The same four examples are used across models for a given condition
+and target; their native wrappers differ.
 
 Restore the licensed WildGuard text using the existing contrastive-head study's
 data manifests. Do not put source prompts or embeddings in a public repository.
@@ -65,4 +94,11 @@ python -m evals.retrieved_examples.report evaluate --state /private/new-study
 Export evidence before terminating the GPU; verify provider-side termination and
 reconcile billed usage. Publish only prompt-free manifests, retrieval records,
 predictions, source snapshots and results. Preserve failed attempts and technical
-amendments. A published archive will be linked here when inference is complete.
+amendments. The [published archive](../../published_runs/2026-11-01-retrieved-examples/README.md) contains the exact source and runtime locks.
+
+The optional figure uses Matplotlib 3.9.4 and the archived results; it makes no
+inference calls:
+
+```bash
+python3 tools/plot_retrieved_examples.py --results published_runs/2026-11-01-retrieved-examples/results.json --output /tmp/retrieval-accuracy.png
+```

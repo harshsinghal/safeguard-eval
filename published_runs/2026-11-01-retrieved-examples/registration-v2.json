@@ -1,0 +1,106 @@
+{
+  "created_utc": "2026-11-01T16:28:16.888663+00:00",
+  "sources": {
+    "docs/retrieved-examples/PLAN.md": "ee60e0191511795c435731a3f44ce9e22c7e548db9913dee7c252d1fa46a438f",
+    "evals/decision_models/adapters.py": "7c969011aea177639c13572711ae7c21cf2e5748169ec72d86d61aa97e00e541",
+    "evals/decision_models/study.py": "ac353a7bf1de44ed8d83016e34541d54cd46f3502cb0089f6d30cb4c34a0d49e",
+    "evals/decision_models/vendor-hashes.json": "bc101bd12269214ca4da7c20c4bfd08b69837d9b703b3c82aeed8821e00b17e1",
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/jev/api.py": "d368250e8b9a632bc63bb3b5a12fde49500cf99f6e9c26237fbfd7f94af3756b",
+    "evals/jev/study.py": "d9683a7917c86657c1a8d9f6d52e837010130a55b75a5a4ff33d9205c1fd189c",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30",
+    "evals/retrieved_examples/__init__.py": "c1e3d8a5c08679cedc3086bf92a5f1efb20795b1b0753fdecd385e6f1738c36d",
+    "evals/retrieved_examples/common.py": "66a6a40b964c84bd8e7b1e1a96478213120864702bdad91b26c1ac7857f59040",
+    "evals/retrieved_examples/jev.py": "8382c3efbef66a67977bf74aaeb4361a077e90642310ebd431e708591d5b9cab",
+    "evals/retrieved_examples/native.py": "cfde9c9199d56d8268669dc3fc8c8aac59b97d1b6923711d169ba3130aa0db24",
+    "evals/retrieved_examples/prepare.py": "b661064f70f510223d5d2770b14c3cf1d5ac3fac85eea07f19bf18a50aced51a",
+    "evals/retrieved_examples/report.py": "308e7627280bdac11a16bcb7f505ef8948e99e97dc2ca4b61d44f54a66c3b60d",
+    "evals/retrieved_examples/retrieve.py": "ba015de72bce36dc451c2efbcf9d80d45b029765a0828ddfa2fcd804d950c6a3",
+    "evals/run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986"
+  },
+  "hashes": {
+    "inputs/fit.jsonl": "cd6f82e77a376c0dafb436c022997732257b8b7b15f6a7e47b6d763078c130ba",
+    "metadata/fit.jsonl.gz": "98573adc9cefa171c4ccab9d1631eccd192ee81578c3900d3aa8795f06d38756",
+    "inputs/validation.jsonl": "0904a29a385efc6e18d1a6f4e61e497e177a769ea9b049851364b5a21ce3de75",
+    "metadata/validation.jsonl.gz": "004d9dc401dd2906d1a60fd0d36259b3938c2a972b141efee62f0b65f64e64ae",
+    "inputs/test.jsonl": "09a58a739923884a43dfa23937e8bf24c8e6fb07851fed6822560551361292d3",
+    "metadata/test.jsonl.gz": "ad95f0be7676defcb64c3c4fa0541ad29dbddbbf902ce982e73d0b4acbc69640",
+    "policies/policylm.json": "ad0ceb520f16254b6f8e444be008349d04d26baf70492e770cb1daf59f4da0f2",
+    "policies/shieldstral.json": "c52970c306ee4b66901c0ba9b1e057b0cfeca7d300771a652fe79a3bdbddeaca",
+    "policies/kev.json": "86656221662bb616d2156881e15e4413ec8ba2587bf3139a674a9a29f96a9732",
+    "policies/jev.json": "86656221662bb616d2156881e15e4413ec8ba2587bf3139a674a9a29f96a9732",
+    "private-bank.jsonl": "e5bc432f93ee3c2052d8d5fcf80221053c52ee647931c2a1200c81cffdfdf598",
+    "bank-metadata.jsonl.gz": "9475190d77bdb9853a2949b783c81bb543e44111df5bb93071fa7936e995a497",
+    "inputs/smoke.jsonl": "001ece75eaa72bafe91e465d20a47e579b2e6d5dbc14d4b4bced24ed294f8900",
+    "metadata/smoke.jsonl.gz": "91fafd2241442188969c1d7f76e8fe7ca8c9676f667e0786fe9ec157b6a5f2da"
+  },
+  "models": {
+    "policylm": {
+      "model": "musubilabs/policylm-1.7b",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e"
+    },
+    "shieldstral": {
+      "model": "mistralai/Shieldstral-1.0-3B",
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5"
+    },
+    "kev": {
+      "model": "jaredpalmer/kev-4b",
+      "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52"
+    },
+    "jev": {
+      "model": "typesafe/jev-1.14",
+      "resolved": "typesafe/jev-1.14-20261014"
+    }
+  },
+  "encoder": {
+    "model": "intfloat/e5-small-v2",
+    "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52"
+  },
+  "populations": {
+    "fit": {
+      "n": 4096,
+      "labels": {
+        "ALLOW": 1916,
+        "BLOCK": 2180
+      }
+    },
+    "validation": {
+      "n": 1536,
+      "labels": {
+        "ALLOW": 718,
+        "BLOCK": 818
+      }
+    },
+    "test": {
+      "n": 1699,
+      "labels": {
+        "ALLOW": 945,
+        "BLOCK": 754
+      }
+    }
+  },
+  "bank_n": 1814,
+  "bank_labels": {
+    "ALLOW": 756,
+    "BLOCK": 1058
+  },
+  "bank_exclusions": {
+    "conflicting_groups": 0,
+    "ineligible_rows": 2138,
+    "duplicate_eligible_rows": 144
+  },
+  "fixed_ids": [
+    "wgtrain-066857",
+    "wgtrain-000397",
+    "wgtrain-085846",
+    "wgtrain-032542"
+  ],
+  "decisions": "native argmax for Choice; >=0.5 for PolicyLM and Shieldstral; no calibration",
+  "primary_metric": "accuracy",
+  "prior_registration_sha256": "6eb29c9994fb294abc69ce1c9868245beba86cfb675af704c45807cffb7341b1",
+  "amendment": {
+    "reason": "Include imported policy/model configuration code in hashes; no new inference or choices",
+    "created_utc": "2026-11-01T16:33:21.524361+00:00",
+    "previous_sha256": "809f76e589b7f0811c3dd74ab32ccd38cf40579103b4dc2498e94ac681421792"
+  }
+}

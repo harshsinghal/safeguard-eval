@@ -1,0 +1,11 @@
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:   9%|▉         | 1/11 [00:00<00:01,  8.98it/s]Fetching 11 files:  73%|███████▎  | 8/11 [00:00<00:00, 25.17it/s]Fetching 11 files:  91%|█████████ | 10/11 [00:20<00:00, 25.17it/s]Fetching 11 files: 100%|██████████| 11/11 [00:25<00:00,  3.05s/it]Fetching 11 files: 100%|██████████| 11/11 [00:25<00:00,  2.34s/it]
+Loading weights:   0%|          | 0/458 [00:00<?, ?it/s]Loading weights: 100%|██████████| 458/458 [00:00<00:00, 5506.72it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/safeguard-eval/evals/retrieved_examples/native.py", line 118, in <module>
+    run(**vars(p.parse_args()))
+  File "/root/safeguard-eval/evals/retrieved_examples/native.py", line 95, in run
+    if changes or diff>.005:raise ValueError('Batch parity gate failed; document before changing batch size')
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Batch parity gate failed; document before changing batch size

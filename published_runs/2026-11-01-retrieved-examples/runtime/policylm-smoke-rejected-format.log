@@ -1,0 +1,18 @@
+Fetching 19 files:   0%|          | 0/19 [00:00<?, ?it/s]Fetching 19 files:  42%|████▏     | 8/19 [00:00<00:00, 49.11it/s]Fetching 19 files:  84%|████████▍ | 16/19 [00:00<00:00, 46.14it/s]Fetching 19 files:  95%|█████████▍| 18/19 [00:20<00:01,  1.11s/it]Fetching 19 files: 100%|██████████| 19/19 [01:21<00:00,  4.31s/it]Fetching 19 files: 100%|██████████| 19/19 [01:21<00:00,  4.31s/it]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/safeguard-eval/evals/retrieved_examples/native.py", line 118, in <module>
+    run(**vars(p.parse_args()))
+  File "/root/safeguard-eval/evals/retrieved_examples/native.py", line 88, in run
+    sample=jobs[:min(16,len(jobs))];enc=[engine.encode(j) for j in sample]
+                                         ^^^^^^^^^^^^^^^^
+  File "/root/safeguard-eval/evals/retrieved_examples/native.py", line 41, in encode
+    policy=self.Policy([self.Category(p['name'],violation_rule=p['block'],
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 8, in __init__
+  File "/root/.cache/huggingface/hub/models--musubilabs--policylm-1.7b/snapshots/b3b2cd408a08a68ab6a30c1fc1e440204e44d57e/inference/policylm_infer.py", line 1154, in __post_init__
+    _check_field(rule, what, optional=True)
+  File "/root/.cache/huggingface/hub/models--musubilabs--policylm-1.7b/snapshots/b3b2cd408a08a68ab6a30c1fc1e440204e44d57e/inference/policylm_infer.py", line 1095, in _check_field
+    raise InvalidPolicyError(f"{what} contains a line break; each field is one line")
+policylm_infer.InvalidPolicyError: 'Harmful request' Exception override contains a line break; each field is one line

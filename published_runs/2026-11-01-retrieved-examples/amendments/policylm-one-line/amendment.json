@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-11-01T17:00:36.991141+00:00",
+  "reason": "PolicyLM native Category rejects literal line breaks in exception_override. Replace demonstration separators with spaces for PolicyLM only before any native validation or test. Preserve all example contents, labels, order, rules, and cutoffs. Other model request files unchanged. Jev validation already completed; no metrics inspected.",
+  "registration_before_sha256": "2c4ca949a2a09fba5cf0093bb6b09857782c919a0d5fcfd639772bbec9023309",
+  "changed_jobs": {
+    "smoke": {
+      "before": "5db5b1bb9796b7d767d122309d24887f88e8ec0a488f9be42214c0a36175a45c",
+      "after": "6c1599032df8b8d008345474dfa5108e9e35a855f2b2ec4ca611b0a4152b193c"
+    },
+    "validation": {
+      "before": "0844467f4c305ca678ea8746ca29d598c86b100c7b71ca6f1ad1f2ddb301fca9",
+      "after": "7a8d6e916109b1844ae2355a56e64877a68b1823e2e6da02e4b333b8c70c81af"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files:  38%|███▊      | 5/13 [00:00<00:00, 44.56it/s]Fetching 13 files:  85%|████████▍ | 11/13 [00:00<00:00, 12.49it/s]Fetching 13 files: 100%|██████████| 13/13 [00:01<00:00,  7.43it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/safeguard-eval/evals/retrieved_examples/native.py", line 118, in <module>
+    run(**vars(p.parse_args()))
+  File "/root/safeguard-eval/evals/retrieved_examples/native.py", line 85, in run
+    engine=Engine(model,vendor);pending=[j for j in jobs if (j['id'],j['arm']) not in done]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/safeguard-eval/evals/retrieved_examples/native.py", line 18, in __init__
+    self.native=Adapter('kev',vendor,serving_fused=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/safeguard-eval/evals/decision_models/adapters.py", line 53, in __init__
+    from kev.api import SystemOneRequest,to_record
+  File "/root/decision-vendor/kev/kev/api.py", line 11, in <module>
+    from pydantic import BaseModel, Field, model_validator
+ModuleNotFoundError: No module named 'pydantic'
