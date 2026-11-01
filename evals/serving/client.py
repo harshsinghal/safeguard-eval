@@ -43,6 +43,8 @@ class Client:
         if slug=='wildguard':
             from transformers import AutoTokenizer
             self.tok=AutoTokenizer.from_pretrained(self.spec['model'],revision=self.spec['revision'],use_fast=False)
+            if self.tok.is_fast:
+                raise RuntimeError('WildGuard requires the pinned Transformers 4.57.6 slow-tokenizer client environment')
 
     def one(self, row):
         start=time.perf_counter(); result=dict(id=row['id'],prompt_sha256=row['prompt_sha256'])

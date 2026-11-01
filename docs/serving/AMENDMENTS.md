@@ -86,3 +86,12 @@ row batches 8 and 32 on the same fitting inputs, require the same reference-runt
 and batching gates, and then measure the frozen choice. Use a separate state
 directory and preserve the original 1,024-token-budget profile. No claim is made
 that the selected budget is a global optimum or suitable for a smaller GPU.
+
+Before accepting WildGuard measurements, an explicit tokenizer inspection found
+that Transformers 5.17 returned `TokenizersBackend` with `is_fast=True` despite
+`use_fast=False`. The two preliminary fitting candidates are retained as a
+discarded compatibility attempt. Restart WildGuard in a client environment with
+Transformers 4.57.6, SentencePiece 0.2.2 and the actual slow tokenizer; the model
+server remains vLLM 0.32.0. Add a fail-closed `is_fast` check. Compare tokenization
+hashes for the complete workload and rerun tuning before any accepted WildGuard
+measurement. Other completed models retain their original clients and runtimes.
