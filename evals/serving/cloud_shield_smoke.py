@@ -57,14 +57,17 @@ def run(state):
                                 endpoint='/generate'
                                 request=dict(input_ids=row['token_ids'],sampling_params=dict(
                                     max_new_tokens=1,temperature=0,top_p=1),return_logprob=True,
-                                    token_ids_logprob=label_ids,return_text_in_logprobs=True)
+                                    token_ids_logprob=label_ids,top_logprobs_num=20,
+                                    logprob_start_len=-1,return_text_in_logprobs=True)
                             response=http.post('http://127.0.0.1:8000'+endpoint,json=request)
                             response.raise_for_status();value=response.json()
                             if engine=='vllm':
                                 entries=list(value['choices'][0]['logprobs']['top_logprobs'][0].items())
                                 count=value['usage']['prompt_tokens']
                             else:
-                                entries=[(entry[2],entry[0]) for entry in value['meta_info']['output_token_ids_logprobs'][0]]
+                                alternatives=(value['meta_info']['output_token_ids_logprobs'][0]
+                                              + value['meta_info']['output_top_logprobs'][0])
+                                entries=[(entry[2],entry[0]) for entry in alternatives]
                                 count=value['meta_info']['prompt_tokens']
                             if count!=row['full_tokens']: raise ValueError('Changed input token count')
                             score=normalized_score(entries)

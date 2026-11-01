@@ -1,0 +1,6 @@
+{
+  "created_utc": "2026-11-01T02:28:32.825534+00:00",
+  "reason": "Before accepted SGLang Shieldstral inference, match the historical scoring alternatives exactly: top 20 output probabilities plus explicitly requested yes/no variants.",
+  "change": "Request SGLang top_logprobs_num=20 and merge output_top_logprobs with output_token_ids_logprobs; no input log probabilities. vLLM already returned both sets.",
+  "source_sha256": "ac46fd6500ed067f5e6c58dbe261a65e38e43a8327a45230ce8d488ca4c549b2"
+}

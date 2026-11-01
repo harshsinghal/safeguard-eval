@@ -72,6 +72,14 @@ by the whole timed pass, including any failed requests' elapsed time. Invalid or
 unfinished outputs and changed prompt-token counts are errors. There are no
 automatic request retries.
 
+The initial SGLang launch used a text-only flag whose architecture coverage
+differed from vLLM's. Its pre-inference failures are retained under
+`sglang-initial-failed`; the [runtime amendment](RUNTIME-AMENDMENT.json) removes
+that flag and preserves all input and classification settings. The accepted
+SGLang runs use the default wrapper, which may retain unused vision weights.
+The bundle keeps initial and revised source files. Do not treat the comparison
+as an isolation of scheduler code or identical resident GPU tensors.
+
 For each length/concurrency point, the readout averages the two passes'
 throughputs and latency percentiles. A mean of two p95 values is not a pooled
 percentile or a confidence interval. Each pass has only 64 requests; especially
