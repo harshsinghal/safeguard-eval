@@ -39,6 +39,9 @@ Preserve the free A/B decision, thinking disabled, temperature zero and an
 eight-token generation cap. No forced-label grammar. Compare resulting labels
 on 32 unmodified fitting examples before reporting an engine speed comparison.
 Record disagreements; do not silently treat changed outputs as equivalent work.
+This pilot requests the primary label only, omitting the auxiliary log-probability
+payload used in the preceding L40S study. It is a matched engine comparison on
+the L4, not a controlled L4-versus-L40S hardware comparison.
 
 ## Length and load
 
@@ -77,6 +80,24 @@ Policy length, context length and deployment quality are different axes. Keep
 policy text fixed here. Later policy-length experiments must use meaningful
 short and detailed versions, assess quality separately, and preserve a held-out
 set. A long synthetic document is not an evaluation of enterprise governance.
+
+## Specialist compatibility check
+
+Before running the optional Shieldstral work, narrow it to a fitting-only
+interface canary: 32 original prompts, serial and at concurrency 16, under each
+engine. Use the historical policy, fixed 0.5 threshold and exact model revision.
+Both engines generate one token and must return log probabilities for the same
+yes/no alternatives. vLLM exposes arbitrary token probabilities through its
+completion API; SGLang exposes them through native `/generate`. Normalize the
+maximum log probability for each label's registered token variants, exactly as
+the earlier adapter did. Do not invent a missing alternative.
+
+Keep the 2,048-token serving budget fixed for this canary. Accept batch
+consistency only with zero errors, at most one label change and at most 0.02
+absolute score drift. Report cross-engine differences separately. This checks
+the specialist scoring interface; it does not produce a Shieldstral throughput
+curve or establish equal moderation quality. Its separate registration is
+[SHIELD-REGISTRATION.json](SHIELD-REGISTRATION.json), written before execution.
 
 ## Progress
 

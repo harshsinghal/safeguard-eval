@@ -1,0 +1,57 @@
+"""Audit the frozen L4 serving evidence without GPU/API calls."""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from tools.report_cloud_serving import report
+from evals.serving.cloud_lengths import rows, sha
+
+
+def verify(root):
+    sums = json.loads((root/'SHA256SUMS.json').read_text())
+    for name, digest in sums.items():
+        assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest, name
+    reg = json.loads((root/'registration.json').read_text())
+    freeze = json.loads((root/'input-freeze.json').read_text())
+    manifest = json.loads((root/'input-manifest.json').read_text())
+    assert freeze['registration_sha256']==sha(reg)
+    assert freeze['manifest_sha256']==sha(manifest)
+    assert freeze['policy_sha256']==sha(json.loads((root/'policy.json').read_text()))
+    for name, group in manifest.items():
+        assert len(group)==64 and len({r['input_sha256'] for r in group})==64
+        if name not in ('fit','mixed'):
+            assert all(r['content_tokens']==int(name) for r in group)
+        assert all(r['full_tokens']+8<=8192 for r in group)
+    result = report(root)
+    assert result == json.loads((root/'results.json').read_text())
+    passes=0;count=0
+    for engine in ('vllm','sglang'):
+        d=root/engine
+        for p in d.glob('measure-*.jsonl'):
+            group=p.stem.split('-')[1]
+            expected={r['id']:r['input_sha256'] for r in manifest[group]}
+            records=rows(p)
+            assert {r['id']:r['input_sha256'] for r in records}==expected
+            passes+=1;count+=len(records)
+        if (d/'freeze.json').exists():
+            f=json.loads((d/'freeze.json').read_text())
+            for candidate in f['candidates']:
+                assert candidate['errors']==0 and candidate['decision_changes']<=1
+                n=candidate['parameter']
+                a={r['id']:r for r in rows(d/f'parity-p{n}.jsonl')}
+                b={r['id']:r for r in rows(d/f'tune-p{n}.jsonl')}
+                assert len(a)==32 and len(b)==64 and a.keys()<=b.keys()
+                assert candidate['decision_changes']==sum(a[i]['prediction']!=b[i]['prediction'] for i in a)
+    bill=json.loads((root/'billing.json').read_text())
+    assert bill['status']=='terminated' and bill['cost_usd']<=1.22
+    assert bill['cumulative_accounted_usd']<=20
+    print(json.dumps(dict(verified_passes=passes,requests=count,cost_usd=bill['cost_usd'],
+                          cross_engine=result['cross_engine'])))
+
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True)
+    verify(p.parse_args().root)

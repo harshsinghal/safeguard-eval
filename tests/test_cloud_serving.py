@@ -1,6 +1,7 @@
 import unittest
 import httpx
 from evals.serving.cloud_lengths import Client, summary
+from evals.serving.cloud_shield_smoke import normalized_score
 
 
 class CloudServingContract(unittest.TestCase):
@@ -32,6 +33,11 @@ class CloudServingContract(unittest.TestCase):
         self.assertEqual(m['requests_per_second'], .5)
         self.assertEqual(m['errors'], 1)
         self.assertAlmostEqual(m['gpu_usd_per_million'], .59/3600/.5*1e6)
+
+    def test_score_contract_preserves_alternatives_and_rejects_missing_mass(self):
+        self.assertAlmostEqual(normalized_score([('yes',-1001),(' no',-1001)]),.5)
+        self.assertAlmostEqual(normalized_score([('yes',-1001),(' yes',-1002),('no',-1001)]),.5)
+        with self.assertRaises(ValueError): normalized_score([('yes',-.01)])
 
 
 if __name__=='__main__': unittest.main()
