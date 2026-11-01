@@ -36,7 +36,7 @@ def parse(keys, logits, probabilities):
 
 
 class Adapter:
-    def __init__(self, slug, vendor):
+    def __init__(self, slug, vendor, serving_fused=False):
         import torch
         from huggingface_hub import snapshot_download
         self.torch=torch; self.slug=slug; self.vendor=Path(vendor)
@@ -57,7 +57,7 @@ class Adapter:
             if ck.meta.base!=conf['base'] or ck.meta.base_revision!=conf['base_revision']:
                 raise ValueError('Unregistered Kev base weights')
             self.tokenizer,self.model=ck.load('cuda',LoadOptions(dtype=torch.bfloat16,merge=True,
-                attn='sdpa',backend='torch',fused=False,cuda_graphs=False))
+                attn='sdpa',backend='torch',fused=serving_fused,cuda_graphs=False))
             self.temperature=ck.meta.temperature
         else:
             source=self.vendor/'joint_schema_model.py'

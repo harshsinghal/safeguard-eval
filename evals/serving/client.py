@@ -29,7 +29,8 @@ def summarize(records, seconds):
 class Client:
     def __init__(self, state, slug, base='http://127.0.0.1:8000'):
         self.state=Path(state); self.slug=slug; self.base=base
-        self.spec=read(self.state/'registration.json')['models'][slug]
+        self.registration=read(self.state/'registration.json')
+        self.spec=self.registration['models'][slug]
         self.http=httpx.Client(timeout=600,limits=httpx.Limits(max_connections=64,max_keepalive_connections=64))
         self.policy=read(self.state/'policies'/(slug+'.json')) if (self.state/'policies'/(slug+'.json')).exists() else None
         self.ids=[]; self.tok=None
@@ -80,6 +81,13 @@ class Client:
             with urllib.request.urlopen(request,timeout=60) as response: response.read()
         warm=rows(self.state/'inputs/tune.jsonl')[:16]
         for row in warm:self.one(row)
+        if self.registration.get('warmup_matching_concurrency'):
+            # The optional native kernels compile/autotune for batch shapes.
+            # Exercise fitting inputs at this load; never warm on measurement text.
+            with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as pool:
+                warmed=list(pool.map(self.one,rows(self.state/'inputs/tune.jsonl')))
+            if any(r['prediction']=='ERROR' for r in warmed):
+                raise RuntimeError('Matching-concurrency warm-up failed')
         start=time.perf_counter()
         with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as pool:
             output_rows=list(pool.map(self.one,data))

@@ -44,6 +44,7 @@ def report(state, output):
         if historical.exists() or historical.with_suffix('.jsonl.gz').exists():
             old={r['id']:r for r in trace(historical)}
             matched=[r for k,r in baseline.items() if k in old]
+            assert all(r['prompt_sha256']==old[r['id']]['prompt_sha256'] for r in matched)
             def old_label(r):
                 if r.get('score') is not None and slug not in ('qwen-4b','wildguard'):
                     return 'BLOCK' if r['score']>=spec['threshold'] else 'ALLOW'

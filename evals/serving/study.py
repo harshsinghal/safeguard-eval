@@ -1,5 +1,6 @@
 """Serial models, bounded tuning, then frozen repeated measurements."""
 import argparse
+import fcntl
 from contextlib import contextmanager
 import os
 from pathlib import Path
@@ -20,14 +21,18 @@ def server(state,slug,parameter,cache=False):
     if spec['backend']=='vllm':
         env['CUDA_HOME']='/root/vllmenv/lib/python3.12/site-packages/nvidia/cu13'
         env['PATH']='/root/vllmenv/bin:'+env.get('PATH','')
+        # Benchmark-only localhost controls prevent repeated-content cache hits.
+        env['VLLM_SERVER_DEV_MODE']='1'
         command=['/root/vllmenv/bin/vllm','serve',spec['model'],'--revision',spec['revision'],
             '--host','127.0.0.1','--port','8000','--dtype','bfloat16','--max-model-len','8192',
             '--gpu-memory-utilization','.85','--max-num-seqs','64','--max-num-batched-tokens',str(parameter),
             '--enable-prefix-caching' if cache else '--no-enable-prefix-caching']
         if slug in ('qwen-4b','shieldstral'):command+=['--language-model-only']
-        if slug=='wildguard':command+=['--tokenizer-mode','slow']
+        # WildGuard requests already contain slow-tokenizer IDs from the client.
+        # vLLM 0.32 no longer registers a server tokenizer mode named "slow".
     else:
-        command=['/root/'+ENVS[slug]+'/bin/python','-m','evals.serving.native','--state',str(state),'--model',slug,'--max-batch',str(parameter)]
+        environment=spec.get('native_environment',ENVS[slug])
+        command=['/root/'+environment+'/bin/python','-m','evals.serving.native','--state',str(state),'--model',slug,'--max-batch',str(parameter)]
     logs=state/'runtime';logs.mkdir(exist_ok=True)
     stem=f'{slug}-p{parameter}-cache{int(cache)}-{time.time_ns()}'
     with (logs/(stem+'.log')).open('w') as out:
@@ -73,7 +78,21 @@ def run(state,slug):
                     parity=dict(n=len(reference),decision_changes=sum(r['prediction']!=batched[r['id']]['prediction'] for r in reference),
                                 max_score_difference=max(differences,default=0.))
                     write(directory/f'parity-check-p{value}.json',parity)
-                    if parity['max_score_difference']>.02 or parity['decision_changes']>1:
+                    # Kernel variants must also agree with the fitting-only
+                    # reference runtime before measurement inputs are timed.
+                    cross_reference=state/'runtime-reference'/(slug+'.jsonl')
+                    if cross_reference.exists():
+                        previous={r['id']:r for r in rows(cross_reference)}
+                        assert set(previous)=={r['id'] for r in reference}
+                        assert all(r['prompt_sha256']==previous[r['id']]['prompt_sha256'] for r in reference)
+                        cross=dict(n=len(reference),decision_changes=sum(r['prediction']!=previous[r['id']]['prediction'] for r in reference),
+                            max_score_difference=max(abs(r['score']-previous[r['id']]['score']) for r in reference))
+                        write(directory/f'runtime-parity-p{value}.json',cross)
+                        if cross['max_score_difference']>.02 or cross['decision_changes']>1:
+                            raise RuntimeError('Kernel runtime parity needs investigation')
+                    # Qwen's primary classifier uses its generated A/B label.
+                    # Record auxiliary probability drift without claiming score parity.
+                    if (parity['max_score_difference']>.02 and slug!='qwen-4b') or parity['decision_changes']>1:
                         raise RuntimeError('Batch parity needs investigation')
                     result['parity']=parity
                     tuning.append(dict(parameter=value,**result))
@@ -102,11 +121,14 @@ def run(state,slug):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--state',required=True);p.add_argument('--model',required=True)
     a=p.parse_args()
+    lock=(Path(a.state)/'.controller.lock').open('a+')
+    fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     def stop(signum,frame):raise KeyboardInterrupt('Bounded serving deadline')
     signal.signal(signal.SIGTERM,stop);signal.signal(signal.SIGALRM,stop)
     signal.alarm(5*3600)
     if a.model=='all':
         for slug in ['shieldstral','qwen-4b','wildguard','policylm','liquid','kev','clef']:
+            if slug not in read(Path(a.state)/'registration.json')['models']:continue
             try:run(a.state,slug)
             except Exception as exc:
                 write(Path(a.state)/slug/'failed.json',dict(error=str(exc),created_utc=now()))

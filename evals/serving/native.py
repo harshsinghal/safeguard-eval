@@ -21,7 +21,7 @@ class Native:
         from huggingface_hub import snapshot_download
         if slug in ('clef','kev'):
             from evals.decision_models.adapters import Adapter
-            self.adapter=Adapter(slug,'/root/decision-vendor')
+            self.adapter=Adapter(slug,'/root/decision-vendor',serving_fused=self.spec.get('serving_fused',False))
         elif slug=='policylm':
             path=snapshot_download(self.spec['model'],revision=self.spec['revision'])
             sys.path.insert(0,str(Path(path)/'inference'))
