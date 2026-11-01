@@ -27,8 +27,8 @@ def hash_value(x):
 
 def sources():
     pp = list((ROOT/'evals/retrieved_examples').glob('*.py'))
-    pp += [ROOT/p for p in ('evals/ensemble/common.py','evals/jev/api.py',
-        'evals/decision_models/adapters.py','evals/decision_models/vendor-hashes.json',
+    pp += [ROOT/p for p in ('evals/ensemble/common.py','evals/jev/api.py','evals/jev/study.py',
+        'evals/decision_models/adapters.py','evals/decision_models/study.py','evals/decision_models/vendor-hashes.json',
         'evals/run.py','evals/leaderboard/metrics.py','docs/retrieved-examples/PLAN.md')]
     return {str(p.relative_to(ROOT)):digest(p) for p in sorted(pp)}
 
