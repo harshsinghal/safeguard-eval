@@ -1,5 +1,5 @@
 {
-  "status": "validation_and_native_compatibility",
+  "status": "frozen_before_test",
   "data_verified": true,
   "retrieval_smoke_prepared": true,
   "retrieval_validation_prepared": true,
@@ -26,5 +26,24 @@
   "new_budget_separate_from_prior": true,
   "cost_status": "API ledger tracked; GPU usage reconciled at termination",
   "jev_validation_completed": true,
-  "policylm_single_line_amendment_recorded": true
+  "policylm_single_line_amendment_recorded": true,
+  "all_native_compatibility_checks_passed": true,
+  "policylm_validation_completed": true,
+  "runtime_batch_sizes": {
+    "policylm": 1,
+    "shieldstral": 1,
+    "kev": 8
+  },
+  "current_registration_amendments": [
+    "policylm_single_line_examples",
+    "shieldstral_batch_one"
+  ],
+  "all_validation_completed": true,
+  "validation_selections": {
+    "policylm": "policy_only",
+    "shieldstral": "policy_only",
+    "kev": "balanced_nearest",
+    "jev": "balanced_nearest"
+  },
+  "freeze_sha256": "eaa10e9c0a31155a43905bf29a9e1767a8e170dfadbf8604c4618017b0319373"
 }

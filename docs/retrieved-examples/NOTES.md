@@ -96,3 +96,16 @@ largely model-derived labels; the official test uses a different annotation
 process. The within-model comparisons are useful exploratory evidence, not a
 fresh independent estimate of production quality. No enterprise-data, multilingual,
 image-moderation, HateXplain, latency or end-to-end cost claim is added by this run.
+
+## Validation freeze before final test
+
+All 24,576 validation classifications completed and their request hashes matched
+the frozen inputs. PolicyLM and Shieldstral nominated policy-only; Kev and Jev
+nominated two-nearest-per-class examples. These are validation selections, not
+final-test findings. All four conditions will still be evaluated for every model.
+
+The freeze SHA-256 is
+`eaa10e9c0a31155a43905bf29a9e1767a8e170dfadbf8604c4618017b0319373`.
+The public registration and validation freeze are committed before creating test
+retrieval jobs or starting test inference. No base policy, model weights,
+retrieval choices, example counts or output cutoffs are revised after this freeze.
