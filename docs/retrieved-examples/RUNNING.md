@@ -5,6 +5,13 @@ uses NumPy, PyTorch, Transformers and Hugging Face Hub. Native runtimes preserve
 the earlier pinned PolicyLM and Kev dependency environments; Shieldstral uses
 Transformers' native text forward path and canonical yes/no label logits.
 
+The completed compatibility checks require single-request PolicyLM and
+Shieldstral execution. The native PolicyLM schema also requires single-line
+category fields; the renderer uses spaces between examples for that model.
+These technical amendments and their rejected attempts are recorded in
+[the notes](NOTES.md). Exact dependency locks will accompany the run archive;
+Kev needs Pydantic in addition to Torch, Transformers, PEFT and its fused kernels.
+
 Restore the licensed WildGuard text using the existing contrastive-head study's
 data manifests. Do not put source prompts or embeddings in a public repository.
 Preparation verifies that study's data hashes and group separation. The following
@@ -28,8 +35,8 @@ On a disposable GPU with pinned native runtime and reviewed Kev source:
 ```bash
 python -m evals.retrieved_examples.native --state /private/new-study --model policylm --split smoke
 python -m evals.retrieved_examples.native --state /private/new-study --model policylm --split validation
-python -m evals.retrieved_examples.native --state /private/new-study --model shieldstral --split smoke
-python -m evals.retrieved_examples.native --state /private/new-study --model shieldstral --split validation
+python -m evals.retrieved_examples.native --state /private/new-study --model shieldstral --batch-size 1 --split smoke
+python -m evals.retrieved_examples.native --state /private/new-study --model shieldstral --batch-size 1 --split validation
 python -m evals.retrieved_examples.native --state /private/new-study --model kev --vendor /private/decision-vendor --split smoke
 python -m evals.retrieved_examples.native --state /private/new-study --model kev --vendor /private/decision-vendor --split validation
 ```
@@ -40,8 +47,8 @@ authorized remaining budget. Unknown charges remain reserved and stop further
 requests until reconciled. Each target/condition is an independent Choice request.
 
 ```bash
-python -m evals.retrieved_examples.jev --state /private/new-study --split smoke --keyfile /private/keys/openrouter --cap 0.60
-python -m evals.retrieved_examples.jev --state /private/new-study --split validation --keyfile /private/keys/openrouter --cap 0.60
+python -m evals.retrieved_examples.jev --state /private/new-study --split smoke --keyfile /private/keys/openrouter --cap 1.00
+python -m evals.retrieved_examples.jev --state /private/new-study --split validation --keyfile /private/keys/openrouter --cap 1.00
 python -m evals.retrieved_examples.report freeze --state /private/new-study
 python -m evals.retrieved_examples.retrieve --state /private/new-study --split test
 ```

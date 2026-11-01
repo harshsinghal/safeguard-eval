@@ -61,3 +61,38 @@ All Jev, Kev and Shieldstral request hashes remain unchanged. Jev had completed
 validation before this amendment; its metrics had not been inspected. Its
 predictions are retained without rerunning. Twenty-two focused tests pass after
 adding a regression check for PolicyLM's single-line requirement.
+
+## Shieldstral batch consistency amendment
+
+The fitting-only batch-8 check changed Shieldstral scores by at most 0.015083,
+exceeding the registered 0.005 tolerance, while changing none of the 16 decisions.
+Before native validation or final testing, switch Shieldstral to batch size 1
+throughout. This prioritizes consistent single-request scoring; it is not an
+accuracy-driven runtime search. Preserve the rejected parity record and log.
+PolicyLM already uses batch size 1; Kev remains subject to its own parity check.
+No policy, examples, output cutoffs or model weights change.
+
+Kev's first smoke attempt also found a missing runtime dependency (`pydantic`).
+Install and pin version 2.12.5 before any Kev predictions; retain the failed
+startup log and complete environment lock. This does not change model inputs.
+
+## Boundaries for interpreting the study
+
+This study changes the examples supplied to an existing policy. It does not
+rewrite the base clauses, train an embedding model, fit a classifier, or select
+a new output threshold. The nearest-neighbor control still depends on labeled
+training data; the comparison is not evidence that labels are unnecessary.
+
+Only one fixed set of four examples and one embedding model are tested. Adding
+examples also adds input length, and similarity can reflect shared topics rather
+than the same policy boundary. The balanced condition helps test label balance
+but does not isolate every difference in example content and order. PolicyLM's
+category-field conditioning differs from the decision models' instruction
+conditioning, so differences between model families have several possible causes.
+
+The official test was used in earlier project studies and might also have been
+seen during checkpoint development. The fitting library uses WildGuardTrain's
+largely model-derived labels; the official test uses a different annotation
+process. The within-model comparisons are useful exploratory evidence, not a
+fresh independent estimate of production quality. No enterprise-data, multilingual,
+image-moderation, HateXplain, latency or end-to-end cost claim is added by this run.

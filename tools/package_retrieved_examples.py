@@ -18,9 +18,10 @@ def package(state,output):
     output.mkdir(parents=True)
     def copy(rel):
         src=state/rel;dst=output/rel;dst.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(src,dst)
-    for rel in ['registration.json','registration-v1.json','registration-v2.json','freeze.json','results.json','RESULTS.md',
+    for rel in ['registration.json','freeze.json','results.json','RESULTS.md',
                 'preflight.json','billing.json','cleanup.json','jev-costs.json','bank-metadata.jsonl.gz']:
         copy(rel)
+    for src in sorted(state.glob('registration-v*.json')):copy(src.name)
     for name in ['policies','metadata','retrieval','runtime','amendments']:
         shutil.copytree(state/name,output/name)
     compressed={}
@@ -41,7 +42,8 @@ def package(state,output):
             source_init=ROOT/parent.relative_to(output/'source')/'__init__.py'
             if source_init.exists():shutil.copy2(source_init,parent/'__init__.py')
             parent=parent.parent
-    for rel in ['tools/verify_retrieved_examples.py','tools/package_retrieved_examples.py','tests/test_retrieved_examples.py']:
+    for rel in ['tools/verify_retrieved_examples.py','tools/package_retrieved_examples.py',
+                'tools/plot_retrieved_examples.py','tests/test_retrieved_examples.py']:
         dst=output/'source'/rel;dst.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/rel,dst)
     for n in ['PLAN.md','NOTES.md','RUNNING.md']:shutil.copy2(ROOT/'docs/retrieved-examples'/n,output/n)
     (output/'compressed-predictions.json').write_text(json.dumps(compressed,indent=2)+'\n')
