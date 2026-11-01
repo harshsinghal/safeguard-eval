@@ -1,0 +1,15 @@
+{
+  "model": "shieldstral",
+  "stage": "selector",
+  "split": "validation",
+  "n": 15360,
+  "cached_rows_this_process": 3871,
+  "api_responses_this_process": 0,
+  "native_requests_this_process": 9616,
+  "seconds_this_process": 649.432235711,
+  "prediction_sha256": "75902b6573f35d4d971ff18db91e0384b1c07022b22ae7bfcc16dd19a82a79d8",
+  "created_utc": "2026-11-01T19:52:58.625092+00:00",
+  "torch": "2.8.0+cu128",
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "batch_size": 1
+}

@@ -1,0 +1,15 @@
+{
+  "model": "kev",
+  "stage": "coverage",
+  "split": "validation",
+  "n": 3072,
+  "cached_rows_this_process": 2213,
+  "api_responses_this_process": 0,
+  "native_requests_this_process": 859,
+  "seconds_this_process": 67.93396654499975,
+  "prediction_sha256": "eb48a570b19f6f625e8cfa254eac57bfef4543dd11d79d185b51b04e3e3e27d6",
+  "created_utc": "2026-11-01T20:11:16.533933+00:00",
+  "torch": "2.8.0+cu128",
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "batch_size": 1
+}

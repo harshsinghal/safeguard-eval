@@ -1,0 +1,8 @@
+{
+  "sha256": "7e6beb92616f8d9dbf394896c009e79aa231f197333a3e3ea43205b6da605648",
+  "n": 32,
+  "bank": "short",
+  "retriever": "bm25",
+  "created_utc": "2026-11-01T18:48:57.546071+00:00",
+  "query_sha256": "001ece75eaa72bafe91e465d20a47e579b2e6d5dbc14d4b4bced24ed294f8900"
+}

@@ -1,0 +1,118 @@
+{
+  "stage": "retriever",
+  "split": "smoke",
+  "configurations": {
+    "policylm": {
+      "native__e5__nearest4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__qwen06__nearest4__short": {
+        "format": "native",
+        "retriever": "qwen06",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__qwen4__nearest4__short": {
+        "format": "native",
+        "retriever": "qwen4",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__bm25__nearest4__short": {
+        "format": "native",
+        "retriever": "bm25",
+        "method": "nearest4",
+        "bank": "short"
+      }
+    },
+    "shieldstral": {
+      "original__e5__nearest4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__qwen06__nearest4__short": {
+        "format": "original",
+        "retriever": "qwen06",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__qwen4__nearest4__short": {
+        "format": "original",
+        "retriever": "qwen4",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__bm25__nearest4__short": {
+        "format": "original",
+        "retriever": "bm25",
+        "method": "nearest4",
+        "bank": "short"
+      }
+    },
+    "kev": {
+      "original__e5__nearest4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__qwen06__nearest4__short": {
+        "format": "original",
+        "retriever": "qwen06",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__qwen4__nearest4__short": {
+        "format": "original",
+        "retriever": "qwen4",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__bm25__nearest4__short": {
+        "format": "original",
+        "retriever": "bm25",
+        "method": "nearest4",
+        "bank": "short"
+      }
+    },
+    "jev": {
+      "native__e5__nearest4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__qwen06__nearest4__short": {
+        "format": "native",
+        "retriever": "qwen06",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__qwen4__nearest4__short": {
+        "format": "native",
+        "retriever": "qwen4",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__bm25__nearest4__short": {
+        "format": "native",
+        "retriever": "bm25",
+        "method": "nearest4",
+        "bank": "short"
+      }
+    }
+  },
+  "jobs": {
+    "policylm": "367d9b830659db722acfa699147bd9e56368c0a4ad62acce50b7a43041237c75",
+    "shieldstral": "b335b79e8a2fb6881564afeb56a8c014dd99a859b109b1ab97127e094d68e070",
+    "kev": "d819bf4e6c4f778a2ecfc9249985a7337f3e5ac29e1149b3441c998fcb127712",
+    "jev": "ea556f59a21b19cbbd6e0e39dd83c5709c786909edb050acf12eca1407ed67b9"
+  },
+  "n": 32,
+  "created_utc": "2026-11-01T19:11:12.806836+00:00"
+}

@@ -1,13 +1,19 @@
 # Can better retrieval and example formatting improve the result?
 
+**Follow-up completed:** the proposed sequence is now documented in
+[the retrieval optimization study](../retrieval-optimization/README.md), including
+format, embedding, selector and library comparisons. The analysis below preserves
+the diagnosis and proposal that motivated it; the original frozen archive is
+unchanged.
+
 **Status: a completed analysis of saved validation outputs, followed by a proposed
-experiment.** No new model inference has run. The original study and its frozen
+experiment at the time of this diagnosis.** This analysis used no new inference. The original study and its frozen
 archive remain unchanged. This diagnosis adds no GPU or API charges.
 
 The first study tested a simple retrieval configuration. It did not establish the
 best accuracy obtainable with retrieved examples. A stronger embedding model,
 better examples and a more suitable native format are reasonable things to test.
-We do not yet know which of them would help, or by how much.
+At the time of this diagnosis, we did not know which would help, or by how much.
 
 ## What the first experiment left open
 

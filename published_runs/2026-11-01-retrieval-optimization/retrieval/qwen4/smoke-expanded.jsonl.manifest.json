@@ -1,0 +1,8 @@
+{
+  "sha256": "8af6d89137f2b50981ce28b476ffd4d5eeed7f089db0571009cc2bae1c45731e",
+  "n": 32,
+  "bank": "expanded",
+  "retriever": "qwen4",
+  "created_utc": "2026-11-01T18:48:44.621699+00:00",
+  "query_sha256": "001ece75eaa72bafe91e465d20a47e579b2e6d5dbc14d4b4bced24ed294f8900"
+}

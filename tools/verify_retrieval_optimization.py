@@ -60,8 +60,17 @@ def verify(archive):
         for key in ('roles', 'configurations', 'test', 'validation', 'stages', 'paired'):
             if actual[key] != expected[key]:
                 raise ValueError('Result mismatch: ' + key)
+        diagnostic_names = ('validation-retrieval.json', 'policylm-validation-windows.json')
+        saved_diagnostics = {name: json.loads((state / 'diagnostics' / name).read_text())
+                             for name in diagnostic_names}
+        subprocess.run([sys.executable, str(state / 'source/tools/diagnose_retrieval_optimization.py'),
+                        '--state', str(state)], env=env, cwd=tmp, check=True, stdout=subprocess.DEVNULL)
+        for name, saved in saved_diagnostics.items():
+            if json.loads((state / 'diagnostics' / name).read_text()) != saved:
+                raise ValueError('Diagnostic mismatch: ' + name)
     result = {'verified': True, 'checksummed_files': len(checks), 'stage_selections': 'exact',
-              'freeze': 'exact', 'metrics': 'exact', 'paired_intervals': 'exact', 'paid_inference': False}
+              'freeze': 'exact', 'metrics': 'exact', 'paired_intervals': 'exact',
+              'validation_diagnostics': 'exact', 'paid_inference': False}
     print(json.dumps(result))
     return result
 

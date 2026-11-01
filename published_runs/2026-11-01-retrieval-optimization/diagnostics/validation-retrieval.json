@@ -1,0 +1,26 @@
+{
+  "scope": "post-hoc validation diagnostic, not a selection objective",
+  "vote_rule": "majority of four; nearest neighbor breaks a two-two tie",
+  "retrievers": {
+    "e5": {
+      "n": 1536,
+      "four_neighbor_vote_accuracy": 0.7858072916666666,
+      "nearest_label_agreement": 0.7701822916666666
+    },
+    "qwen06": {
+      "n": 1536,
+      "four_neighbor_vote_accuracy": 0.7545572916666666,
+      "nearest_label_agreement": 0.7565104166666666
+    },
+    "qwen4": {
+      "n": 1536,
+      "four_neighbor_vote_accuracy": 0.7421875,
+      "nearest_label_agreement": 0.7467447916666666
+    },
+    "bm25": {
+      "n": 1536,
+      "four_neighbor_vote_accuracy": 0.73828125,
+      "nearest_label_agreement": 0.7141927083333334
+    }
+  }
+}

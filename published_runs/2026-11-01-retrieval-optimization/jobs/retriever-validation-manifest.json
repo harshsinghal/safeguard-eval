@@ -1,0 +1,118 @@
+{
+  "stage": "retriever",
+  "split": "validation",
+  "configurations": {
+    "policylm": {
+      "native__e5__nearest4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__qwen06__nearest4__short": {
+        "format": "native",
+        "retriever": "qwen06",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__qwen4__nearest4__short": {
+        "format": "native",
+        "retriever": "qwen4",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__bm25__nearest4__short": {
+        "format": "native",
+        "retriever": "bm25",
+        "method": "nearest4",
+        "bank": "short"
+      }
+    },
+    "shieldstral": {
+      "original__e5__nearest4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__qwen06__nearest4__short": {
+        "format": "original",
+        "retriever": "qwen06",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__qwen4__nearest4__short": {
+        "format": "original",
+        "retriever": "qwen4",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__bm25__nearest4__short": {
+        "format": "original",
+        "retriever": "bm25",
+        "method": "nearest4",
+        "bank": "short"
+      }
+    },
+    "kev": {
+      "original__e5__nearest4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__qwen06__nearest4__short": {
+        "format": "original",
+        "retriever": "qwen06",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__qwen4__nearest4__short": {
+        "format": "original",
+        "retriever": "qwen4",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__bm25__nearest4__short": {
+        "format": "original",
+        "retriever": "bm25",
+        "method": "nearest4",
+        "bank": "short"
+      }
+    },
+    "jev": {
+      "native__e5__nearest4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__qwen06__nearest4__short": {
+        "format": "native",
+        "retriever": "qwen06",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__qwen4__nearest4__short": {
+        "format": "native",
+        "retriever": "qwen4",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__bm25__nearest4__short": {
+        "format": "native",
+        "retriever": "bm25",
+        "method": "nearest4",
+        "bank": "short"
+      }
+    }
+  },
+  "jobs": {
+    "policylm": "92209412bf3a9ac749d2151987d85cefe322661474bbbd75226a456fdae70121",
+    "shieldstral": "8c960cf8eec81194916a543c4d81466b664b8aef9e7111bcbb327ade5ba13757",
+    "kev": "91a6061602be6642fd115e6693399db84d274b5a0c8bf6bd0eb08c930dedd4f1",
+    "jev": "279f80642c9fece5dbcad425a7e8388d7bb98e47c5d144a7a5fa817a5d591f9b"
+  },
+  "n": 1536,
+  "created_utc": "2026-11-01T19:11:12.987737+00:00"
+}

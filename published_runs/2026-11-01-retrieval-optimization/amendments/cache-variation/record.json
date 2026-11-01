@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-11-01T18:53:49.843795+00:00",
+  "reason": "Prior identical Jev requests had varying responses; deterministic first-response cache policy independent of labels",
+  "prior_cache_duplicates": 247,
+  "jev_score_differences": 111,
+  "jev_max_score_difference": 0.07,
+  "jev_decision_differences": 4,
+  "new_jev_requests_before_amendment": 0,
+  "native_predictions_reused_unchanged": true
+}

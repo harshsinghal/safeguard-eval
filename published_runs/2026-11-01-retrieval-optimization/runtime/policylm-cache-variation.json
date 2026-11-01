@@ -1,0 +1,4 @@
+{
+  "policy": "first response in sorted cache-file/line order; prior cache precedes new predictions",
+  "varying_duplicates": []
+}

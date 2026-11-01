@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-11-01T19:02:04.870522+00:00",
+  "reason": "Kev fitting batch8 max score difference .0063854456 exceeded .005; 0/16 changed decisions",
+  "batch_size": 1,
+  "prior_kev_cache_disabled": true,
+  "all_new_kev_controls_recomputed_serially": true,
+  "cutoffs_changed": false
+}

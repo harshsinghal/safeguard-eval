@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-01T18:59:35.800599+00:00",
+  "reason": "One transport failure without a usable response; conservatively account the full request reservation and allow at most three separately reserved attempts",
+  "unknown_cost_upper_bound_usd": 0.0027525120000000004,
+  "affected_request_ids": [
+    "c3cf347ca2be0b826746763d4ec41ec3c193fd032a38bc04ba4d96e4eb77042c"
+  ],
+  "new_predictions_repeated_for_accuracy": false
+}

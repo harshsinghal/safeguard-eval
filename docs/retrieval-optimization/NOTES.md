@@ -106,3 +106,143 @@ the same execution setting. It may produce a slightly different baseline than
 the preceding study; report the new control and do not attribute cross-study
 numerical differences to policy or retrieval. Other models' runtimes and caches
 are unchanged. No output cutoff or selection rule is altered.
+
+## Formatting stage completed
+
+The registered mean over nearest-four and balanced-four validation conditions
+selected labeled native-field cases for PolicyLM and Jev, and the original JSON
+suffix for Shieldstral and Kev. For PolicyLM, balanced-four accuracy rose from
+85.81% to 89.65%, but its unchanged policy-only control remained at 92.32%.
+Jev's corresponding change was 93.88% to 93.95%, one case. The API repeat
+variation above is especially relevant to interpreting such a small difference.
+These are validation observations, not final test findings.
+
+The word `native` is a configuration name for our alternate example rendering.
+Both conditions use each publisher's native classification interface; none of
+these comparisons establishes a publisher-endorsed few-shot format. PolicyLM's
+change moves cases into different semantic policy fields. For the other models,
+the same instruction field holds either JSON cases or labeled prose.
+
+## Diagnostic checks excluded from selection
+
+An additional validation-only diagnostic compares nearest-neighbor labels and
+four-neighbor majority voting (nearest breaks ties). E5's neighbor voting scored
+78.58%, Qwen 0.6B 75.46%, Qwen 4B 74.22%, and BM25 73.83%. These are descriptions
+of retrieved neighborhoods, not the criterion for choosing a classifier's
+retriever. A different-label example can still provide a useful contrast, and
+the classifier need not copy its neighbors' labels.
+
+PolicyLM used the same number of windows for each target in all five formatting
+conditions: 1,516 validation prompts had one window, 17 had two, and one each
+had three, four and six. Every condition reported one input variant. This rules
+out a change in window count for this particular formatting comparison; it does
+not explain the model's internal behavior. The prompt-free diagnostic script and
+aggregates are retained separately from the registered selection procedure.
+
+## Retriever stage completed
+
+Keeping the selected layout and four-example count fixed, validation chose
+Qwen3-Embedding-0.6B for PolicyLM, BM25 for Shieldstral, and E5 for Kev and Jev.
+PolicyLM improved from 87.89% with E5 to 91.21% with Qwen 0.6B: false blocks fell
+from 144 to 84 while misses rose from 42 to 51. Its Qwen 4B result was 90.17%.
+The larger embedding model was not the winning configuration for any classifier.
+
+Shieldstral's best retrieval accuracy was 96.81% with BM25, versus 96.61% with E5.
+That small accuracy gain combined fewer false blocks (36 to 19) with more misses
+(16 to 30). Jev and Kev retained E5. These choices follow the registered ordinary
+accuracy objective, with balanced accuracy as a tie-breaker; they do not optimize
+a deployment-specific false-block or miss-rate constraint.
+
+The selector stage then began using these frozen choices. No final test feature
+or request had been created. The previous retrieval archive's 103 checksummed
+files were verified unchanged during this follow-up.
+
+## Selection and library stages completed
+
+PolicyLM's best retrieval candidate was the Qwen 0.6B contrast set at 92.06%
+validation accuracy, below policy-only at 92.32%. One fixed set tied policy-only
+on ordinary accuracy, but lost the balanced-accuracy tie-break. Shieldstral's
+best retrieval candidate remained the earlier E5 balanced-four condition at
+97.46%, below policy-only at 98.57%. Kev selected E5 with four diverse cases
+(MMR) at 89.65%, versus policy-only at 87.96%. Jev selected E5's reranked contrast
+set at 94.01%, versus policy-only at 91.67%. These are validation-selected recipes,
+not test winners.
+
+Expanding the two-example library changed validation accuracy as follows:
+PolicyLM 89.52% to 88.93%; Shieldstral 97.01% to 97.33%; Kev 88.61% to 87.57%;
+Jev 93.03% to 93.03%. No expanded-library condition became a final selection.
+The expansion changes both eligible case length and library breadth; BM25's
+corpus statistics also change. It does not isolate a pure library-size effect.
+
+Each model had 18 distinct validation configurations, 72 in total. Intermediate
+stages repeat controls and reuse exact requests; these are not independent
+trials. Final ranking considered every completed configuration, not only the
+latest stage. This allowed Shieldstral to return to an earlier retrieval recipe.
+
+## Test freeze
+
+Published [commit af5a8aa](https://github.com/harshsinghal/safeguard-eval/commit/af5a8aa)
+with both intermediate selections and the final freeze before new test feature
+extraction or requests. The freeze was created at 2026-11-01 20:11:32 UTC.
+It chooses policy-only for PolicyLM/Shieldstral and the selected retrieval
+recipes for Kev/Jev as the overall systems. Separate retrieval-only selections
+are retained for all four. Test roles and aliases are fixed in `freeze.json`;
+none will be replaced based on a test score.
+
+## Completed test and interpretation
+
+All 16 distinct frozen configurations completed the 1,699-row test population:
+27,184 prediction records with no unresolved classifications. The four selected
+retrieval accuracies were PolicyLM 86.52%, Shieldstral 89.94%, Kev 87.35% and Jev
+89.41%. Their policy-only controls were 86.70%, 90.82%, 87.64% and 89.29%.
+Overall selection retained policy-only for the two specialists; the selected
+Kev and Jev recipes were kept despite their small or unfavorable test changes.
+
+PolicyLM recovered 2.18 percentage points versus original retrieval, with a
+descriptive paired interval of +0.77 to +3.65, but did not exceed its policy-only
+control. Shieldstral's retrieval choice was 0.88 points below policy-only, with
+an interval of -1.59 to -0.18. Kev changed by -0.29 points (-1.47 to +0.88), and
+Jev by +0.12 (-0.71 to +1.00). Intervals are unadjusted and do not capture search
+uncertainty, API repeat variation, or benchmark reuse.
+
+Every selected retrieval recipe traded fewer misses for more false blocks.
+For Kev, misses fell by 34 and false blocks rose by 39. Its balanced accuracy
+increased from 87.31% to 87.50% while ordinary accuracy decreased. This is a
+metric-dependent trade-off, not evidence that both moderation errors improved.
+For Jev, 11 fewer misses and nine additional false blocks produced only two
+additional correct decisions. The study supports testing the complete retrieval
+configuration against a policy-only control, not a claim that more elaborate
+retrieval reliably improves moderation or that retrieval cannot help elsewhere.
+
+## Verification and controls
+
+An independent scikit-learn 1.6.1 calculation reproduced accuracy, balanced
+accuracy, macro-F1 and both error counts for all 72 validation configurations.
+It also reproduced the 16 test configurations, including recall and specificity,
+and confirmed the specialists' fixed output cutoffs. Results are retained in
+prompt-free diagnostics alongside the final metrics.
+
+The policy-only and original-nearest test requests exactly match the earlier
+study for all models. Reused PolicyLM, Shieldstral and Jev control decisions match
+that study. Kev's serial controls changed two policy-only decisions and five
+original-nearest decisions relative to its earlier batched run. Its accuracy
+therefore moves from 87.52% to 87.64% for policy-only and from 88.17% to 87.99%
+for original nearest-four. These are execution-setting differences, not retrieval
+optimization gains. Within this study all Kev conditions are serial.
+
+## Cost and resource cleanup
+
+The follow-up accounts for $1.821001282: $1.15 for 6,347 billed RTX6000 Ada seconds
+at $0.65/hour, plus $0.671001282 in Jev accounting. The latter includes 23,786
+reported requests totaling $0.668248770 and a $0.002752512 upper bound for one
+lost response. No pending reservations remain. Both retrieval studies together
+use $2.695934430 of the fresh $20 allowance; all studies' cumulative accounted
+spending is $22.05595230256 under their separate authorizations.
+
+All outputs were collected, the GPU terminated, temporary local/provider SSH
+keys removed, and the provider listed zero active instances. RunPod was not used.
+The bill includes setup, feature extraction, failures, validation and test work;
+it is not a production per-request cost or latency estimate. Local electricity,
+labeling and engineering time are excluded. The original frozen study remains
+unchanged. Papers, articles and the versioned skill were not rewritten as part
+of this experiment publication.

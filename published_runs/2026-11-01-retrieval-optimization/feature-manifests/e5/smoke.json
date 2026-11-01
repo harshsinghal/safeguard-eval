@@ -1,0 +1,12 @@
+{
+  "sha256": "8782a1cf96d451f94a95ddd04c1dd6c67d0b4dbf269342519bcc6217c4eead91",
+  "shape": [
+    32,
+    384
+  ],
+  "encoder": {
+    "model": "intfloat/e5-small-v2",
+    "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52"
+  },
+  "prior_cache": true
+}

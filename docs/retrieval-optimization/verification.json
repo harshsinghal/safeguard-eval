@@ -1,0 +1,28 @@
+{
+  "verified_utc": "2026-11-01T20:36:59.840066+00:00",
+  "archive_checks": {
+    "verified": true,
+    "checksummed_files": 261,
+    "stage_selections": "exact",
+    "freeze": "exact",
+    "metrics": "exact",
+    "paired_intervals": "exact",
+    "validation_diagnostics": "exact",
+    "paid_inference": false
+  },
+  "independent_metric_checks": {
+    "sklearn_version": "1.6.1",
+    "validation_configurations": 72,
+    "test_configurations": 16,
+    "test_prediction_rows": 27184,
+    "all_match": true
+  },
+  "focused_tests_passed": 14,
+  "readme_leaderboard_check": "pass",
+  "skill_release_check": "pass",
+  "changed_document_links": "pass",
+  "public_jsonl_rows_without_source_text_fields": 257390,
+  "credential_pattern_scan": "pass",
+  "prior_frozen_files_unchanged": 103,
+  "figure_visually_reviewed": true
+}

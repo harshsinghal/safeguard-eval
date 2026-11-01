@@ -1,0 +1,262 @@
+{
+  "stage": "selector",
+  "split": "validation",
+  "configurations": {
+    "policylm": {
+      "native__qwen06__nearest4__short": {
+        "format": "native",
+        "retriever": "qwen06",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__qwen06__nearest2__short": {
+        "format": "native",
+        "retriever": "qwen06",
+        "method": "nearest2",
+        "bank": "short"
+      },
+      "native__qwen06__mmr4__short": {
+        "format": "native",
+        "retriever": "qwen06",
+        "method": "mmr4",
+        "bank": "short"
+      },
+      "native__qwen06__rerank2__short": {
+        "format": "native",
+        "retriever": "qwen06",
+        "method": "rerank2",
+        "bank": "short"
+      },
+      "native__qwen06__rerank4__short": {
+        "format": "native",
+        "retriever": "qwen06",
+        "method": "rerank4",
+        "bank": "short"
+      },
+      "native__qwen06__contrast4__short": {
+        "format": "native",
+        "retriever": "qwen06",
+        "method": "contrast4",
+        "bank": "short"
+      },
+      "native__qwen06__gated2__short": {
+        "format": "native",
+        "retriever": "qwen06",
+        "method": "gated2",
+        "bank": "short"
+      },
+      "native__e5__fixed0__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "fixed0",
+        "bank": "short"
+      },
+      "native__e5__fixed1__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "fixed1",
+        "bank": "short"
+      },
+      "native__e5__fixed2__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "fixed2",
+        "bank": "short"
+      }
+    },
+    "shieldstral": {
+      "original__bm25__nearest4__short": {
+        "format": "original",
+        "retriever": "bm25",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__bm25__nearest2__short": {
+        "format": "original",
+        "retriever": "bm25",
+        "method": "nearest2",
+        "bank": "short"
+      },
+      "original__bm25__mmr4__short": {
+        "format": "original",
+        "retriever": "bm25",
+        "method": "mmr4",
+        "bank": "short"
+      },
+      "original__bm25__rerank2__short": {
+        "format": "original",
+        "retriever": "bm25",
+        "method": "rerank2",
+        "bank": "short"
+      },
+      "original__bm25__rerank4__short": {
+        "format": "original",
+        "retriever": "bm25",
+        "method": "rerank4",
+        "bank": "short"
+      },
+      "original__bm25__contrast4__short": {
+        "format": "original",
+        "retriever": "bm25",
+        "method": "contrast4",
+        "bank": "short"
+      },
+      "original__bm25__gated2__short": {
+        "format": "original",
+        "retriever": "bm25",
+        "method": "gated2",
+        "bank": "short"
+      },
+      "original__e5__fixed0__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "fixed0",
+        "bank": "short"
+      },
+      "original__e5__fixed1__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "fixed1",
+        "bank": "short"
+      },
+      "original__e5__fixed2__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "fixed2",
+        "bank": "short"
+      }
+    },
+    "kev": {
+      "original__e5__nearest4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__e5__nearest2__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "nearest2",
+        "bank": "short"
+      },
+      "original__e5__mmr4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "mmr4",
+        "bank": "short"
+      },
+      "original__e5__rerank2__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "rerank2",
+        "bank": "short"
+      },
+      "original__e5__rerank4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "rerank4",
+        "bank": "short"
+      },
+      "original__e5__contrast4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "contrast4",
+        "bank": "short"
+      },
+      "original__e5__gated2__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "gated2",
+        "bank": "short"
+      },
+      "original__e5__fixed0__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "fixed0",
+        "bank": "short"
+      },
+      "original__e5__fixed1__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "fixed1",
+        "bank": "short"
+      },
+      "original__e5__fixed2__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "fixed2",
+        "bank": "short"
+      }
+    },
+    "jev": {
+      "native__e5__nearest4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__e5__nearest2__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "nearest2",
+        "bank": "short"
+      },
+      "native__e5__mmr4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "mmr4",
+        "bank": "short"
+      },
+      "native__e5__rerank2__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "rerank2",
+        "bank": "short"
+      },
+      "native__e5__rerank4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "rerank4",
+        "bank": "short"
+      },
+      "native__e5__contrast4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "contrast4",
+        "bank": "short"
+      },
+      "native__e5__gated2__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "gated2",
+        "bank": "short"
+      },
+      "native__e5__fixed0__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "fixed0",
+        "bank": "short"
+      },
+      "native__e5__fixed1__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "fixed1",
+        "bank": "short"
+      },
+      "native__e5__fixed2__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "fixed2",
+        "bank": "short"
+      }
+    }
+  },
+  "jobs": {
+    "policylm": "c4db134a3800b1e4815ab42bdcdff63c82dde42db6693a3e5f2c4ead8955f0ff",
+    "shieldstral": "3ed2d8754ab59da9fcbb73f3d04b5c25c867a3e9b99c0a0db0c3fda914fd36f2",
+    "kev": "2a9e378c2dea6f86673c48f510e00a8662d01e7c7c340c1c04a79484873773bf",
+    "jev": "2712ee8f373075f947fc18769c51c555d8d71df48416384a0c659763041be261"
+  },
+  "n": 1536,
+  "created_utc": "2026-11-01T19:33:57.649701+00:00"
+}

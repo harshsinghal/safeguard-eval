@@ -1,0 +1,14 @@
+{
+  "scope": "independent validation metric check against frozen table",
+  "configurations": 72,
+  "rows_per_configuration": 1536,
+  "sklearn_version": "1.6.1",
+  "metrics": [
+    "accuracy",
+    "balanced_accuracy",
+    "macro_f1",
+    "false_blocks",
+    "misses"
+  ],
+  "all_match": true
+}

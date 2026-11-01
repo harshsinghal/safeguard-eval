@@ -1,0 +1,15 @@
+{
+  "model": "kev",
+  "stage": "retriever",
+  "split": "smoke",
+  "n": 128,
+  "cached_rows_this_process": 32,
+  "api_responses_this_process": 0,
+  "native_requests_this_process": 96,
+  "seconds_this_process": 19.72637513699965,
+  "prediction_sha256": "ce062940defe6253ff9c78fa20daa64f103022213df5aa3382760a36c535df17",
+  "created_utc": "2026-11-01T19:20:19.994947+00:00",
+  "torch": "2.8.0+cu128",
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "batch_size": 1
+}

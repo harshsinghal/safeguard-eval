@@ -1,0 +1,142 @@
+{
+  "stage": "format",
+  "split": "validation",
+  "configurations": {
+    "policylm": {
+      "policy_only": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "none",
+        "bank": "short"
+      },
+      "original__e5__nearest4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__e5__balanced4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "balanced4",
+        "bank": "short"
+      },
+      "native__e5__nearest4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__e5__balanced4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "balanced4",
+        "bank": "short"
+      }
+    },
+    "shieldstral": {
+      "policy_only": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "none",
+        "bank": "short"
+      },
+      "original__e5__nearest4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__e5__balanced4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "balanced4",
+        "bank": "short"
+      },
+      "native__e5__nearest4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__e5__balanced4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "balanced4",
+        "bank": "short"
+      }
+    },
+    "kev": {
+      "policy_only": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "none",
+        "bank": "short"
+      },
+      "original__e5__nearest4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__e5__balanced4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "balanced4",
+        "bank": "short"
+      },
+      "native__e5__nearest4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__e5__balanced4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "balanced4",
+        "bank": "short"
+      }
+    },
+    "jev": {
+      "policy_only": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "none",
+        "bank": "short"
+      },
+      "original__e5__nearest4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "original__e5__balanced4__short": {
+        "format": "original",
+        "retriever": "e5",
+        "method": "balanced4",
+        "bank": "short"
+      },
+      "native__e5__nearest4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "nearest4",
+        "bank": "short"
+      },
+      "native__e5__balanced4__short": {
+        "format": "native",
+        "retriever": "e5",
+        "method": "balanced4",
+        "bank": "short"
+      }
+    }
+  },
+  "jobs": {
+    "policylm": "912a77a815ba6a44e4bd01d3323173fb06eb0b4a785af750b70a97a034458ff5",
+    "shieldstral": "1f2e73ad808ecf04f6edf1dcf5e481e3807a868fdf695ea39093f50711167789",
+    "kev": "b3fc4c9618aebd074bcd544f8b29222eb8a2ed0f27dc2798b67672a417af4558",
+    "jev": "b3fc4c9618aebd074bcd544f8b29222eb8a2ed0f27dc2798b67672a417af4558"
+  },
+  "n": 1536,
+  "created_utc": "2026-11-01T18:51:06.169918+00:00"
+}

@@ -12,9 +12,7 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 [Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
 
-**Latest experiment:** [Relevant labeled examples with fixed decision rules](docs/retrieved-examples/README.md) found modest, uncertain accuracy gains for Kev and Jev, and regressions for PolicyLM and Shieldstral. Policy-only Shieldstral remained strongest at 90.82%. The study compares fixed examples, retrieved examples and neighbor voting on WildGuard, with no new calibration.
-
-**In progress:** [Optimizing example formatting, retrieval and selection](docs/retrieval-optimization/README.md) tests stronger embeddings, native example placement, reranking and a larger training library in separate stages. No new result is claimed yet.
+**Latest experiment:** [Optimizing example formatting, retrieval and selection](docs/retrieval-optimization/README.md) tested 72 validation configurations across four classifiers. Better retrieval recovered PolicyLM's original retrieval loss (84.34% → 86.52% test accuracy), but did not beat its policy-only control (86.70%). Kev's validation gain did not carry over; Jev gained only two test cases. Policy-only Shieldstral remained strongest among the frozen test choices at 90.82%. The readout includes every stage, both error counts, uncertainty and a reproducible archive.
 
 ## Experiment map
 
@@ -29,8 +27,9 @@ flowchart TB
         P2["5, 7 · Transfer + structure<br/>Model adapters<br/>Sections and examples"]
         P3["16 · Training-error edits<br/>Shieldstral → Qwen"]
         P4["22 · Relevant training examples<br/>Fixed / nearest / balanced<br/>Policy-only + neighbor-vote controls"]
+        P5["23 · Optimize example use<br/>Model-specific fields · Embeddings<br/>Reranking · Diversity · Library coverage"]
         P1 --> P2 --> P3
-        P2 --> P4
+        P2 --> P4 --> P5
     end
 
     subgraph SCORES["Scores and decisions"]
@@ -54,7 +53,7 @@ flowchart TB
     START --> S1
     START --> F1
     P3 --> EVIDENCE
-    P4 --> EVIDENCE
+    P5 --> EVIDENCE
     S4 --> EVIDENCE
     F5 --> EVIDENCE
     EVIDENCE["11 · Balanced evaluation<br/>False blocks + missed violations<br/>Validate → freeze → test"]
@@ -68,7 +67,7 @@ flowchart TB
     classDef features fill:#f4efff,stroke:#7b63a8,color:#3d2c60;
     classDef proposed fill:#fff6e5,stroke:#a36e16,color:#61420f,stroke-dasharray:6 4;
     class START,EVIDENCE,SERVING,CLOUD neutral;
-    class P1,P2,P3,P4 policy;
+    class P1,P2,P3,P4,P5 policy;
     class S1,S2,S3,S4 scores;
     class F1,F2,F3,F4,F5 features;
     class NEXT proposed;
@@ -81,7 +80,7 @@ flowchart TB
 
 | Follow a branch | Where to start |
 |---|---|
-| Policy wording, transfer, structure, and examples | [WildGuard tuning](docs/wildguard/METHODS.md) → [Qwen comparison](docs/qwen-policy/READOUT.md) → [policy transfer](docs/policy-transfer/READOUT.md) → [HateXplain structure tests](docs/hatexplain/READOUT.md) → [training-error corrections](docs/policy-corrections/README.md) → [retrieved examples](docs/retrieved-examples/README.md) |
+| Policy wording, transfer, structure, and examples | [WildGuard tuning](docs/wildguard/METHODS.md) → [Qwen comparison](docs/qwen-policy/READOUT.md) → [policy transfer](docs/policy-transfer/READOUT.md) → [HateXplain structure tests](docs/hatexplain/READOUT.md) → [training-error corrections](docs/policy-corrections/README.md) → [retrieved examples](docs/retrieved-examples/README.md) → [retrieval optimization](docs/retrieval-optimization/README.md) |
 | Scores, calibration, cutoffs, and combinations | [Probability ensembles](docs/ensemble/READOUT.md) → [log-odds ensembles](docs/ensemble-logits/RESULTS.md) → [Jev](docs/jev/READOUT.md) → [Kev / Clef](docs/decision-models/README.md) → [decision-model ensembles](docs/decision-ensemble/README.md) → [smart ensemble](docs/smart-ensemble/README.md) |
 | Representations and task-specific training | [PolicyLM / Qwen](docs/activation-probe/README.md) → [Shieldstral / Qwen](docs/shield-probe/README.md) → [linear, neural and contrastive task classifiers](docs/contrastive-heads/README.md) → [Liquid encoder fine-tuning](docs/liquid-finetune/README.md) |
 | Deploy and operate | [Seven-model serving study](docs/serving/README.md) → [L4: prompt length and vLLM/SGLang](docs/cloud-serving/README.md) · [Self-hosting implications](docs/cloud-serving/DEPLOYMENT.md) |
@@ -311,6 +310,16 @@ The errors explain more than accuracy alone. PolicyLM's nearest examples caught 
 
 [Findings and accuracy chart](docs/retrieved-examples/README.md) · [All conditions and error counts](docs/retrieved-examples/RESULTS.md) · [Retrieval diagnosis and proposed improvements](docs/retrieved-examples/RETRIEVAL-AUDIT.md) · [Plan and amendments](docs/retrieved-examples/NOTES.md) · [Frozen evidence and CPU reproduction](published_runs/2026-11-01-retrieved-examples/README.md)
 
+### 23. Smarter retrieval: format, embeddings, selection and coverage
+
+We followed the initial retrieval study with four stages: model-specific example placement; E5, Qwen 0.6B/4B and BM25 retrieval; reranking, diversity, label contrasts and relevance gating; then a larger training library. Each classifier had 18 validation configurations. Choices were published before new test inference, with fixed model weights and output cutoffs.
+
+**Better retrieval repaired some losses, but did not reliably beat policy alone.** PolicyLM's selected retrieval recipe rose from the original 84.34% to 86.52% test accuracy, still below its 86.70% policy-only control. Shieldstral's selected retrieval scored 89.94%, versus 90.82% alone. Overall validation selection retained policy-only for both. Kev selected diverse examples, but scored 87.35% on test versus 87.64% alone. Jev selected nearby label contrasts and scored 89.41% versus 89.29% alone—two additional correct cases, with the interval for its gain including zero. Kev's controls were recomputed serially after a fitting check and differ slightly from the preceding study.
+
+All four selected retrieval recipes caught more harmful prompts **and** created more false blocks. Kev's balanced accuracy rose while ordinary accuracy fell, demonstrating why the error objective matters. Qwen 4B won none of the retriever comparisons, and no expanded-library condition became a final choice. This was a staged search on reused WildGuard data, not proof that retrieval cannot help. The follow-up cost **$1.821**, bringing the two retrieval studies to **$2.696 of the fresh $20 allowance**. The GPU was terminated and temporary access keys removed.
+
+[Readout and chart](docs/retrieval-optimization/README.md) · [All configurations and paired changes](docs/retrieval-optimization/RESULTS.md) · [Plan and amendments](docs/retrieval-optimization/NOTES.md) · [Pre-test selections](docs/retrieval-optimization/freeze.json) · [Frozen evidence and CPU reproduction](published_runs/2026-11-01-retrieval-optimization/README.md)
+
 ## What the evidence suggests for moderation teams
 
 - **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. If examples are retrieved, include the labeled library, encoder and selection rule. A model replacement requires another evaluation.
@@ -340,7 +349,7 @@ The research archive grows separately from versioned skill releases. New studies
 
 The comparison now includes the **Jev/Kev/Clef score ensembles and decision-only controls**, alongside the earlier policy models, general-purpose LLMs, and specialist ensembles. There are **38 WildGuard entries and 20 HateXplain entries**, drawn from **261 eligible archived candidate records**. These are configured systems and methods, not 261 distinct models or independent experiments. The new decision-model combinations were tested on WildGuard only.
 
-The [PolicyLM representation study](docs/activation-probe/README.md), [Shieldstral representation study](docs/shield-probe/README.md), [smart-ensemble study](docs/smart-ensemble/README.md), [contrastive-head study](docs/contrastive-heads/README.md), [Liquid fine-tuning study](docs/liquid-finetune/README.md), and [retrieved-example study](docs/retrieved-examples/README.md) use separate 1,536-row validation protocols. The retrieved-example study keeps native cutoffs fixed and nominates conditions by ordinary accuracy. The [training-error policy-correction study](docs/policy-corrections/README.md) uses a newly reserved validation population and additional project holdout. Their results are reported separately and have not been inserted into these common-validation tables.
+The [PolicyLM representation study](docs/activation-probe/README.md), [Shieldstral representation study](docs/shield-probe/README.md), [smart-ensemble study](docs/smart-ensemble/README.md), [contrastive-head study](docs/contrastive-heads/README.md), [Liquid fine-tuning study](docs/liquid-finetune/README.md), [retrieved-example study](docs/retrieved-examples/README.md), and [retrieval optimization follow-up](docs/retrieval-optimization/README.md) use separate 1,536-row validation protocols. Both retrieval studies keep native cutoffs fixed and nominate conditions by ordinary accuracy. The [training-error policy-correction study](docs/policy-corrections/README.md) uses a newly reserved validation population and additional project holdout. Their results are reported separately and have not been inserted into these common-validation tables.
 
 The [integration record](published_runs/2026-10-30-leaderboard-decision-ensembles/README.md) preserves every earlier selection and result. It adds the new study's frozen method selections without refitting or choosing replacements from test scores. Individual calibration controls and “best method” aliases remain in that study's report rather than becoming duplicate leaderboard entries.
 

@@ -1,0 +1,27 @@
+{
+  "provider": "GPU.ai",
+  "instance_id": "gpu-d6775281",
+  "status": "terminated",
+  "gpu": "NVIDIA RTX6000 Ada",
+  "gpu_cost_usd": 1.15,
+  "gpu_seconds": 6347,
+  "hourly_price_usd": 0.65,
+  "auto_terminate_hours": 8,
+  "api_cost_usd": 0.6710012820000001,
+  "experiment_cost_usd": 1.821001282,
+  "experiment_cap_usd": 20,
+  "prior_studies_usd": 19.36001787256,
+  "all_studies_accounted_usd": 22.055952302559998,
+  "prior_retrieval_cost_usd": 0.874933148,
+  "retrieval_series_accounted_usd": 2.69593443,
+  "api_cost_is_accounted_including_unknown_charge_upper_bounds": true,
+  "usage": [
+    {
+      "bucket_start": "2026-11-01T00:00:00Z",
+      "instance_id": "gpu-d6775281",
+      "gpu_seconds": 6347,
+      "cost_cents": 115
+    }
+  ],
+  "runpod_used": false
+}

@@ -12,8 +12,9 @@ python3 tools/verify_retrieval_optimization.py --archive published_runs/2026-11-
 
 The verifier checks artifact hashes, reconstructs both intermediate selections
 and the final freeze, then reproduces final metrics and paired uncertainty. It
-does not call inference providers or download models. This command becomes
-available once the completed archive is published.
+does not call inference providers or download models. It also reproduces the
+validation retrieval/window diagnostics. The recorded local analysis used NumPy
+2.0.2; an independent metric check used scikit-learn 1.6.1.
 
 ## Repeat inference with restored licensed data
 
@@ -35,6 +36,21 @@ Use the archived runtime locks. PolicyLM and the embedding/reranking code use
 the PolicyLM environment; Shieldstral and Kev use the Kev environment. The latter
 needs the pinned and reviewed decision-model vendor source, Pydantic and its
 native fused kernels. The earlier model adapters are reused unchanged.
+
+All three self-hosted classifiers run one request at a time in this study.
+Kev's fitting-only check rejected batch eight under the registered score-parity
+tolerance, so its earlier batched predictions are excluded from reuse. Its
+controls are recomputed serially. The [notes](NOTES.md) preserve this amendment,
+the earlier Jev cache-variation check and bounded transport retries. The original
+plan remains unchanged as a record of what was registered first.
+
+Both example layouts use the model's native interface. The `native` configuration
+name means our alternate labeled-case rendering; it does not mean that the
+publisher has certified a few-shot recipe. For PolicyLM it puts BLOCK cases in
+`violation_rule` and ALLOW cases in `not_violation_rule`, leaving
+`exception_override` unchanged. The original JSON suffix uses that last field.
+For Shieldstral both layouts use `Instruct`; for Kev and Jev both use Choice
+`instructions`. The target remains in its separate content field in every arm.
 
 First, construct development features and the formatting jobs. Repeat each
 command for `smoke` and `validation`, in that order:
@@ -96,3 +112,9 @@ continuing. Never silently truncate inputs or discard missing predictions.
 
 Collect artifacts, terminate rented compute, reconcile usage and confirm cleanup
 before publishing the final archive. Preserve failed attempts in the study notes.
+
+The optional chart uses Matplotlib (recorded version 3.9.4) and saved metrics:
+
+```bash
+python3 tools/plot_retrieval_optimization.py --results published_runs/2026-11-01-retrieval-optimization/results.json --output /tmp/retrieval-optimization.png
+```

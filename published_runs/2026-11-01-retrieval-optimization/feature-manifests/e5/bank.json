@@ -1,0 +1,11 @@
+{
+  "sha256": "eec3abe25cca77943b4b3b23e8c7fcb01db4ec8b4e1582881cb60ceceee13371",
+  "shape": [
+    2711,
+    384
+  ],
+  "encoder": {
+    "model": "intfloat/e5-small-v2",
+    "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52"
+  }
+}

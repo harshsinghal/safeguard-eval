@@ -1,0 +1,11 @@
+{
+  "sha256": "b23850c7414fa270fe5a62e3e8504cb9fa3fe0db999abcb3f748e9c92674c6b8",
+  "shape": [
+    32,
+    1024
+  ],
+  "encoder": {
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3"
+  }
+}

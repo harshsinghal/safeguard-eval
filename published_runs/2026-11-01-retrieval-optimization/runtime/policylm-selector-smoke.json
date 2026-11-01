@@ -1,0 +1,15 @@
+{
+  "model": "policylm",
+  "stage": "selector",
+  "split": "smoke",
+  "n": 320,
+  "cached_rows_this_process": 34,
+  "api_responses_this_process": 0,
+  "native_requests_this_process": 246,
+  "seconds_this_process": 19.222404453999843,
+  "prediction_sha256": "a4a0a7a59c35ba7403c898553313f9fa89c2305cddaaa37afa8c43b81bae7330",
+  "created_utc": "2026-11-01T19:34:29.698987+00:00",
+  "torch": "2.11.0+cu128",
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "batch_size": 1
+}

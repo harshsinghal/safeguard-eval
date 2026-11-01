@@ -1,0 +1,12 @@
+{
+  "model": "jev",
+  "stage": "test",
+  "split": "test",
+  "n": 6796,
+  "cached_rows_this_process": 3398,
+  "api_responses_this_process": 3398,
+  "native_requests_this_process": 0,
+  "seconds_this_process": 141.607230417,
+  "prediction_sha256": "8fb3290833c12149630d81dd3685e4b26e2ee7f7d789abf5b09f3e86d0c78fa4",
+  "created_utc": "2026-11-01T20:22:13.590644+00:00"
+}

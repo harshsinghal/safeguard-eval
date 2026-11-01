@@ -14,7 +14,7 @@ def digest(path):
 
 
 def package(state, output):
-    state, output = Path(state), Path(output)
+    state, output = Path(state).resolve(), Path(output).resolve()
     if output.exists():
         raise ValueError('Use a new immutable archive')
     if not (state / 'results.json').exists() or json.loads((state / 'cleanup.json').read_text())['our_instance_active']:
@@ -35,10 +35,13 @@ def package(state, output):
                  'results.json', 'RESULTS.md', 'bank-audit.json', 'bank-short-metadata.jsonl.gz',
                  'bank-expanded-metadata.jsonl.gz', 'billing.json', 'cleanup.json', 'jev-costs.json'):
         copy(state / name)
-    for name in ('policies', 'metadata', 'cache', 'predictions', 'runtime', 'retrieval', 'rerank', 'amendments'):
+    for name in ('policies', 'metadata', 'cache', 'predictions', 'runtime', 'retrieval', 'rerank', 'amendments', 'diagnostics'):
         for path in sorted((state / name).rglob('*')):
             if path.is_file():
                 copy(path)
+    # Shapes and checksums support auditing without distributing embedding vectors.
+    for path in sorted((state / 'private-embeddings').glob('*/*.json')):
+        copy(path, Path('feature-manifests') / path.relative_to(state / 'private-embeddings'))
     for path in sorted(state.glob('registration-v*.json')):
         copy(path)
     for path in sorted((state / 'jobs').glob('*-manifest.json')):
@@ -57,6 +60,7 @@ def package(state, output):
                 shutil.copy2(init, output / 'source' / parent / '__init__.py')
             parent = parent.parent
     for rel in ('tools/package_retrieval_optimization.py', 'tools/verify_retrieval_optimization.py',
+                'tools/plot_retrieval_optimization.py', 'tools/diagnose_retrieval_optimization.py',
                 'tests/test_retrieval_optimization.py'):
         dest = output / 'source' / rel
         dest.parent.mkdir(parents=True, exist_ok=True)

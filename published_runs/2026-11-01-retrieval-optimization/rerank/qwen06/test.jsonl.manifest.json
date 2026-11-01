@@ -1,0 +1,10 @@
+{
+  "sha256": "b22e07ba54ff07ae3ba44480e6620b007c29dc86a822f52cd8604b280f6629a9",
+  "model": {
+    "model": "Qwen/Qwen3-Reranker-0.6B",
+    "revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473"
+  },
+  "n": 1699,
+  "candidate_pairs": 33980,
+  "created_utc": "2026-11-01T20:19:17.323297+00:00"
+}
