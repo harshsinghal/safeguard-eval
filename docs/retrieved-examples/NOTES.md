@@ -37,3 +37,11 @@ The initial implementation and protocol were published at `1ac1c7a`. The user wa
 asked for up to $3 additional allowance, raising the prior cumulative cap to $23.
 Until an explicit reply arrives, paid work remains pending. Local preparation
 has incurred no API or GPU charges.
+
+## Fresh budget authorized
+
+The user authorized a **fresh $20 budget for this experiment**. This replaces the
+pending $3 request. Prior accounted spending of $19.36001787256 is reported
+separately and does not consume this new allowance. The first bounded rental
+reserves at most $2.60 (four hours at $0.65/hour); Jev reserves up to $1.00.
+No changes to the registered comparisons, policies, examples or fixed decisions.

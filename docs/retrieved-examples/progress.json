@@ -1,5 +1,5 @@
 {
-  "status": "prepared_awaiting_budget_reply",
+  "status": "budget_authorized_starting_inference",
   "data_verified": true,
   "retrieval_smoke_prepared": true,
   "retrieval_validation_prepared": true,
@@ -7,7 +7,12 @@
   "bank_examples": 1814,
   "bank_allow": 756,
   "bank_block": 1058,
-  "models": ["policylm", "shieldstral", "kev", "jev"],
+  "models": [
+    "policylm",
+    "shieldstral",
+    "kev",
+    "jev"
+  ],
   "calibration": false,
   "latency_study": false,
   "paid_classification_started": false,
@@ -16,6 +21,7 @@
   "new_paid_cost_usd": 0,
   "prior_cumulative_usd": 19.36001787256,
   "existing_cumulative_cap_usd": 20,
-  "requested_cumulative_cap_usd": 23,
-  "gpu_resources_running": false
+  "gpu_resources_running": false,
+  "experiment_budget_usd": 20,
+  "new_budget_separate_from_prior": true
 }
