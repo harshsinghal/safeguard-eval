@@ -30,6 +30,15 @@ def render(root):
         c=result['cross_engine']
         lines+=['',f"The two selected engines differed on {c['label_differences']} of {c['fitting_n']} fitting labels, with {c['errors']} errors.",
                 'This small canary is a consistency check, not proof of unchanged benchmark accuracy.']
+    if result.get('long_input_control'):
+        lines+=['','## Exploratory long-input control','',
+                'The unselected 8,192-token chunk was measured after the primary curves.',
+                'It does not replace either engine\'s original selection. All inputs have',
+                '4,096 content tokens (4,498 full tokens). See [the control plan](LONG-INPUT-CONTROL.md).','',
+                '| Engine | In flight | Chunk | Valid/s | Median ms | p95 ms | Label changes vs primary |',
+                '|---|---:|---:|---:|---:|---:|---:|']
+        for r in result['long_input_control']:
+            lines.append(f"| {r['engine']} | {r['concurrency']} | 8192 | {r['requests_per_second']:.2f} | {r['p50_ms']:.1f} | {r['p95_ms']:.1f} | {r['label_changes_from_primary']} / {r['requests']} |")
     lines+=['','[Readable findings](README.md) · [Deployment implications](DEPLOYMENT.md) · [Reproduction](REPRODUCE.md)','']
     return '\n'.join(lines)
 

@@ -62,6 +62,51 @@ def report(root):
         result['cross_engine'] = dict(fitting_n=32,
             label_differences=sum(a[i]['prediction']!=b[i]['prediction'] for i in a),
             errors=sum(a[i]['prediction']=='ERROR' or b[i]['prediction']=='ERROR' for i in a))
+    result['long_input_control']=[]
+    for engine in ('vllm','sglang'):
+        for concurrency in (1,8):
+            repetitions=[]
+            changes=0
+            for repeat in (0,1):
+                p=root/'long-input-control'/engine/f'measure-4096-c{concurrency}-r{repeat}'
+                if not p.with_suffix('.json').exists(): continue
+                saved=json.loads(p.with_suffix('.json').read_text())
+                records=rows(p.with_suffix('.jsonl'))
+                recalculated=summary(records,saved['wall_seconds'])
+                for key,value in recalculated.items(): assert value==saved[key],(p,key)
+                primary={r['id']:r for r in rows(root/engine/p.with_suffix('.jsonl').name)}
+                assert {r['id']:r['input_sha256'] for r in records}=={i:r['input_sha256'] for i,r in primary.items()}
+                changes+=sum(r['prediction']!=primary[r['id']]['prediction'] for r in records)
+                repetitions.append(saved)
+            if len(repetitions)!=2: continue
+            result['long_input_control'].append(dict(engine=engine,parameter=8192,
+                content_tokens=4096,concurrency=concurrency,
+                requests=sum(r['requests'] for r in repetitions),errors=sum(r['errors'] for r in repetitions),
+                requests_per_second=statistics.mean(r['requests_per_second'] for r in repetitions),
+                p50_ms=mean_or_none([r['p50_ms'] for r in repetitions]),
+                p95_ms=mean_or_none([r['p95_ms'] for r in repetitions]),
+                gpu_usd_per_million=mean_or_none([r['gpu_usd_per_million'] for r in repetitions]),
+                label_changes_from_primary=changes,repeats=repetitions))
+    canary=root/'shieldstral-canary'
+    if canary.exists():
+        result['shieldstral_canary']={}
+        pairs={}
+        for engine in ('vllm','sglang'):
+            d=canary/engine
+            if (d/'result.json').exists():
+                result['shieldstral_canary'][engine]=json.loads((d/'result.json').read_text())
+                pairs[engine]={r['id']:r for r in rows(d/'serial.jsonl')}
+            else:
+                result['shieldstral_canary'][engine]=dict(status='failed before accepted scoring')
+        if len(pairs)==2:
+            a,b=pairs['vllm'],pairs['sglang']
+            assert set(a)==set(b)
+            assert all(a[i]['input_sha256']==b[i]['input_sha256'] for i in a)
+            differences=[abs(a[i]['score']-b[i]['score']) for i in a if 'score' in a[i] and 'score' in b[i]]
+            result['shieldstral_canary']['cross_engine']=dict(n=len(a),
+                label_differences=sum(a[i]['prediction']!=b[i]['prediction'] for i in a),
+                max_score_difference=max(differences,default=None),
+                errors=sum(a[i]['prediction']=='ERROR' or b[i]['prediction']=='ERROR' for i in a))
     return result
 
 

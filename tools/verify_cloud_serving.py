@@ -21,6 +21,9 @@ def verify(root):
     assert freeze['registration_sha256']==sha(reg)
     assert freeze['manifest_sha256']==sha(manifest)
     assert freeze['policy_sha256']==sha(json.loads((root/'policy.json').read_text()))
+    amendment=json.loads((root/'runtime-amendment.json').read_text())
+    assert hashlib.sha256((root/'source/cloud_lengths-initial.py').read_bytes()).hexdigest()==reg['code_sha256']
+    assert hashlib.sha256((root/'source/cloud_lengths.py').read_bytes()).hexdigest()==amendment['revised_source_sha256']
     for name, group in manifest.items():
         assert len(group)==64 and len({r['input_sha256'] for r in group})==64
         if name not in ('fit','mixed'):
@@ -31,7 +34,8 @@ def verify(root):
     passes=0;count=0
     for engine in ('vllm','sglang'):
         d=root/engine
-        for p in d.glob('measure-*.jsonl'):
+        traces=list(d.glob('measure-*.jsonl'))+list((root/'long-input-control'/engine).glob('measure-*.jsonl'))
+        for p in traces:
             group=p.stem.split('-')[1]
             expected={r['id']:r['input_sha256'] for r in manifest[group]}
             records=rows(p)
@@ -49,8 +53,8 @@ def verify(root):
     bill=json.loads((root/'billing.json').read_text())
     assert bill['status']=='terminated' and bill['cost_usd']<=1.22
     assert bill['cumulative_accounted_usd']<=20
-    shield=root/'shieldstral-canary'
-    if shield.exists():
+    for shield in [root/'shieldstral-canary',root/'shieldstral-initial']:
+        if not shield.exists(): continue
         for engine in ('vllm','sglang'):
             d=shield/engine
             if not (d/'result.json').exists(): continue
@@ -66,6 +70,8 @@ def verify(root):
             assert saved['label_changes']==sum(a['prediction']!=b['prediction'] for a,b in zip(serial,batch))
             differences=[abs(a['score']-b['score']) for a,b in zip(serial,batch) if 'score' in a and 'score' in b]
             assert saved['max_score_difference']==max(differences,default=None)
+            assert saved['accepted']==(saved['errors']==0 and saved['label_changes']<=1
+                                        and saved['max_score_difference']<=.02)
     print(json.dumps(dict(verified_passes=passes,requests=count,cost_usd=bill['cost_usd'],
                           cross_engine=result['cross_engine'])))
 
