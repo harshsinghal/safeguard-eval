@@ -69,3 +69,11 @@ bounded optimization attempts, not the publishers' maximum performance claims.
 The kernel extension also warms all 96 fitting inputs at the upcoming concurrency
 to exercise batch-shape JIT compilation. Measurement texts remain unused for
 warm-up. Some unseen shapes may still add first-use overhead; retain all repeats.
+
+The large shared-policy cache benefit observed for Shieldstral motivates one
+additional operational sweep: fill in cached concurrency 8 and 64 for the three
+vLLM systems, using their already frozen token budgets, policies and output
+contracts. The original cached conditions were 1 and 32. Register this extension
+before running the added conditions; no settings or thresholds are selected from
+the measurement results. This makes the latency/throughput curve more useful for
+deployment planning. Keep its source and completion markers separate.

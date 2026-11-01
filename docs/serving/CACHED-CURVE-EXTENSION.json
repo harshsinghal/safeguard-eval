@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-11-01T00:22:29.576632+00:00",
+  "models": [
+    "shieldstral",
+    "qwen-4b",
+    "wildguard"
+  ],
+  "cache": true,
+  "additional_concurrency": [
+    8,
+    64
+  ],
+  "repeats": 3,
+  "selection": "Reuse frozen token budget; no retuning",
+  "source_sha256": "d0de5cf74256e5d54bcea5522aaf801dffe09958453e296fe8fb8e20ef69b84a",
+  "within_original_study_cap_usd": 5
+}
