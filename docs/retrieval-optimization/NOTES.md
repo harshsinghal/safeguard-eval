@@ -40,3 +40,41 @@ motivate this bounded comparison. E5 and BM25 are retained as controls.
 PolicyLM, Shieldstral, Kev and Jev use the same revisions and base policies as
 the preceding study. Earlier predictions are eligible for reuse only when the
 entire request body, model revision and target identity match.
+
+## Provisioning and runtime
+
+The provider accepted the instance creation and returned `operation_id`. The
+reused launcher expected `id` and stopped at its local acknowledgement check.
+Recovered the accepted operation and its instance rather than submitting a
+second creation. The server reports an eight-hour automatic termination time.
+This is a provisioning compatibility issue, not an inference or selection change.
+
+Both environments installed successfully. Embedding extraction and development
+retrieval began with no validation/test labels in query inputs. The original
+test inputs and vectors have not been uploaded to the development GPU.
+
+## Exact-request cache variation amendment
+
+The first Jev smoke attempt stopped before sending new requests because its
+cache integrity check found varying earlier responses to identical inputs.
+Across 247 duplicate requests in the earlier fitting-smoke/validation cache,
+Jev had 111 score differences above 0.000001, a maximum difference of 0.07, and
+four decision differences. The other three models had no differences in those
+duplicates. This is a cache-repeat diagnostic, not a representative reliability
+estimate or a new accuracy result.
+
+Before Jev inference or any stage selection, change the cache rule to retain
+the first response in sorted source-file and original line order. Prior cache
+files precede newly generated files; their recorded order places nearest-four
+before balanced-nearest when requests coincide. No target label or correctness
+is used. Preserve every prior response and record discrepant duplicate IDs and
+decisions in runtime diagnostics. Identical new requests share one response.
+Consequently an original balanced condition can differ from the earlier study
+when its request was repeated there with a different API answer; the original
+nearest-condition control retains its earlier response.
+
+PolicyLM smoke and part of its validation execution had begun under the first
+registration. Their duplicate responses were identical, and this cache change
+does not alter their inputs, decisions or selection rules. Keep those results,
+the failed Jev attempt and the original source/registration. Update the source
+hashes before further stages; no native run is repeated to improve a result.

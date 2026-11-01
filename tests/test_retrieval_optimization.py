@@ -3,6 +3,8 @@ import pytest
 
 from evals.retrieval_optimization.common import BM25, choose, config, ranked, render
 from evals.retrieved_examples.common import augmented_policy
+from evals.retrieval_optimization.infer import load_cache
+from evals.retrieval_optimization.common import write_rows, read, MODELS
 
 
 def examples():
@@ -63,3 +65,14 @@ def test_bm25_returns_finite_lexical_scores():
     b = BM25([{'prompt': 'report threatening messages'}, {'prompt': 'garden flowers'}, {'prompt': 'report messages'}])
     scores = b.scores('threatening messages')
     assert np.isfinite(scores).all() and scores[0] > scores[2] > scores[1]
+
+
+def test_varying_api_cache_keeps_first_without_consulting_labels(tmp_path):
+    base = {'id': 'query', 'request_sha256': 'same', 'model': MODELS['jev']['resolved']}
+    write_rows(tmp_path / 'cache/jev/validation.jsonl.gz', [
+        {**base, 'prediction': 'ALLOW', 'score': .48},
+        {**base, 'prediction': 'BLOCK', 'score': .52}])
+    got = load_cache(tmp_path, 'jev')
+    assert got['query', 'same']['prediction'] == 'ALLOW'
+    note = read(tmp_path / 'runtime/jev-cache-variation.json')
+    assert len(note['varying_duplicates']) == 1

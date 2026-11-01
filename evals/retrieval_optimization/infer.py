@@ -10,6 +10,7 @@ from .common import *
 
 def load_cache(state, model):
     cache = {}
+    differences = []
     paths = sorted((state / f'cache/{model}').glob('*.jsonl*'))
     paths += sorted((state / f'predictions/{model}').glob('*.jsonl'))
     for path in paths:
@@ -19,8 +20,16 @@ def load_cache(state, model):
                 raise ValueError('Cached model differs')
             key = (r['id'], r['request_sha256'])
             if key in cache and (cache[key]['prediction'] != r['prediction'] or abs(cache[key]['score'] - r['score']) > 1e-6):
-                raise ValueError('Identical requests have conflicting cached outputs')
+                differences.append({'id': r['id'], 'request_sha256': r['request_sha256'],
+                    'retained_source': cache[key]['_cache_origin'], 'other_source': str(path.relative_to(state)),
+                    'retained_prediction': cache[key]['prediction'], 'other_prediction': r['prediction'],
+                    'absolute_score_difference': abs(cache[key]['score'] - r['score'])})
+            # Prior API calls can vary despite identical requests. Retain the first
+            # recorded response in sorted source-file/line order, without labels.
             cache.setdefault(key, {**r, '_cache_origin': str(path.relative_to(state))})
+    write(state / f'runtime/{model}-cache-variation.json', {
+        'policy': 'first response in sorted cache-file/line order; prior cache precedes new predictions',
+        'varying_duplicates': differences})
     return cache
 
 
