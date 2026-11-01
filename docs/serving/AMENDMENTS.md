@@ -77,3 +77,12 @@ contracts. The original cached conditions were 1 and 32. Register this extension
 before running the added conditions; no settings or thresholds are selected from
 the measurement results. This makes the latency/throughput curve more useful for
 deployment planning. Keep its source and completion markers separate.
+
+Inspection of PolicyLM's pinned helper explains its weak batching gain: its
+default internal GPU token budget is 1,024, independent of the outer HTTP batch
+size. Add a separately registered native run with `max_batch_tokens=32768`,
+retaining the same weights, helper, cleaning, policy and cutoff. Compare maximum
+row batches 8 and 32 on the same fitting inputs, require the same reference-runtime
+and batching gates, and then measure the frozen choice. Use a separate state
+directory and preserve the original 1,024-token-budget profile. No claim is made
+that the selected budget is a global optimum or suitable for a smaller GPU.

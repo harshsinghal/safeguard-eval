@@ -26,7 +26,8 @@ class Native:
             path=snapshot_download(self.spec['model'],revision=self.spec['revision'])
             sys.path.insert(0,str(Path(path)/'inference'))
             from policylm_infer import PolicyLM, Policy, Category
-            self.native=PolicyLM.from_pretrained(path,device='cuda',dtype='bfloat16',max_batch_rows=max_batch,max_chars=None)
+            self.native=PolicyLM.from_pretrained(path,device='cuda',dtype='bfloat16',max_batch_rows=max_batch,
+                max_batch_tokens=self.spec.get('native_max_batch_tokens','auto'),max_chars=None)
             self.category=Policy([Category(self.policy['name'],violation_rule=self.policy['block'],not_violation_rule=self.policy['allow'],exception_override=self.policy['precedence'])])
             self.native.check_policy(self.category)
         else:
