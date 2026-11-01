@@ -19,14 +19,18 @@ def plot(source, destination):
             values=sorted([r for r in data if r['concurrency']==concurrency and r['content_tokens']!='mixed'],
                           key=lambda r:int(r['content_tokens']))
             if values:
-                ax.plot([int(r['content_tokens']) for r in values],[r[field] for r in values],
-                        marker='o',label=engine,color=color,lw=2)
+                scale=1000 if field=='p95_ms' else 1
+                ax.plot([int(r['content_tokens']) for r in values],[r[field]/scale for r in values],
+                        marker='o' if engine=='vllm' else 's',linestyle='-' if engine=='vllm' else '--',
+                        label=engine,color=color,lw=2)
             ax.set_xscale('log',base=2)
             ax.set_xticks([64,256,1024,4096],['64','256','1,024','4,096'])
             ax.set_xlabel('Submitted-content tokens')
             ax.set_title(title,fontsize=10)
             ax.grid(alpha=.2)
-            ax.set_ylabel('Valid decisions / second' if field=='requests_per_second' else 'Milliseconds')
+            ax.set_ylim(bottom=0)
+            ax.set_ylabel('Valid decisions / second' if field=='requests_per_second' else
+                          ('Seconds' if field=='p95_ms' else 'Milliseconds'))
     axes[0].legend(frameon=False)
     fig.suptitle('Qwen3.5 4B on one NVIDIA L4 · BF16 · prefix caches disabled',fontsize=13)
     fig.text(.5,.015,'Synthetic documents; two 64-request repeats per point. Fixed policy adds input overhead. Not a quality benchmark.',

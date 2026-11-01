@@ -111,6 +111,16 @@ record its memory footprint. This is a comparison of deployable runtime bundles,
 not an isolated scheduler comparison with guaranteed identical resident tensors.
 Retain the initial Shieldstral canary as well and rerun it after the same repair.
 
+The repaired default Shieldstral loader subsequently failed on the Mistral-format
+tensor name `layers.0.attention.wk.weight`. Its pinned repository contains both
+`consolidated.safetensors` and `model.safetensors`. A final fitting-only canary
+uses a local directory of the published Hugging Face-format files, with every
+file checksummed and no tensor transformation. Run both engines through the
+same scoring check; compare vLLM to its original scores as well. Preserve both
+earlier failures. This checks a loading path, not a new throughput claim. See
+[the HF-only registration](SHIELD-HF-REGISTRATION.json). Perform file preparation
+after the timing controls to avoid competing with measured inference.
+
 ## Progress
 
 - [x] Prior study recorded and published; standing update workflow added.
