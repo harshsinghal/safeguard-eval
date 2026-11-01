@@ -8,6 +8,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from tools.report_cloud_serving import report
 from evals.serving.cloud_lengths import rows, sha
+from evals.serving.cloud_shield_smoke import normalized_score
 
 
 def verify(root):
@@ -48,6 +49,23 @@ def verify(root):
     bill=json.loads((root/'billing.json').read_text())
     assert bill['status']=='terminated' and bill['cost_usd']<=1.22
     assert bill['cumulative_accounted_usd']<=20
+    shield=root/'shieldstral-canary'
+    if shield.exists():
+        for engine in ('vllm','sglang'):
+            d=shield/engine
+            if not (d/'result.json').exists(): continue
+            serial,batch=rows(d/'serial.jsonl'),rows(d/'batch.jsonl')
+            saved=json.loads((d/'result.json').read_text())
+            assert len(serial)==len(batch)==32
+            for r in serial+batch:
+                if r['prediction']=='ERROR': continue
+                assert r['full_tokens']==r['prompt_tokens']
+                assert normalized_score(r['label_logprobs'])==r['score']
+                assert r['prediction']==('BLOCK' if r['score']>=.5 else 'ALLOW')
+            assert saved['errors']==sum(r['prediction']=='ERROR' for r in serial+batch)
+            assert saved['label_changes']==sum(a['prediction']!=b['prediction'] for a,b in zip(serial,batch))
+            differences=[abs(a['score']-b['score']) for a,b in zip(serial,batch) if 'score' in a and 'score' in b]
+            assert saved['max_score_difference']==max(differences,default=None)
     print(json.dumps(dict(verified_passes=passes,requests=count,cost_usd=bill['cost_usd'],
                           cross_engine=result['cross_engine'])))
 

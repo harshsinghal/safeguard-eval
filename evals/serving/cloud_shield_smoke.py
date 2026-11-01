@@ -68,7 +68,8 @@ def run(state):
                                 count=value['meta_info']['prompt_tokens']
                             if count!=row['full_tokens']: raise ValueError('Changed input token count')
                             score=normalized_score(entries)
-                            result.update(prediction='BLOCK' if score>=.5 else 'ALLOW',score=score)
+                            result.update(prediction='BLOCK' if score>=.5 else 'ALLOW',score=score,
+                                          label_logprobs=entries, prompt_tokens=count)
                         except Exception as exc:
                             result.update(prediction='ERROR',error=type(exc).__name__+': '+str(exc)[:300])
                         result['seconds']=time.perf_counter()-start

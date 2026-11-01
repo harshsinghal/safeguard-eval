@@ -20,5 +20,6 @@
     "max_label_changes": 1,
     "errors": 0
   },
-  "code_sha256": "e8eb69732caa47a383c72ce8872680e3d68d56d545e43cf36200e7fa09ff5fb5"
+  "code_sha256": "0adb918587115611b97e2a4bd311c5a38fb65b59f2308569656c93562eae2303",
+  "pre_execution_note": "Preserve returned label log probabilities and prompt-token counts for a CPU-only score audit."
 }
