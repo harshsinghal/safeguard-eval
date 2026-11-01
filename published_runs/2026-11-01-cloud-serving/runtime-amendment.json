@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-01T02:22:50.214324+00:00",
+  "reason": "SGLang 0.5.23 language-model-only flag rejects Qwen3_5ForConditionalGeneration before inference.",
+  "change": "Remove SGLang --language-model-only; use default multimodal wrapper for text requests. vLLM configuration and all token IDs and selection rules unchanged. Unused vision weights may consume additional memory.",
+  "initial_source_sha256": "d13b80a7e4f0135c408f7c0b0a14c94e4c10b739035fbb2e83f23546bc3e7ef1",
+  "revised_source_sha256": "b23b4b733588cf6532599760954e1194da2c818f927095601f405900040fb573",
+  "original_attempts": "Both SGLang candidates failed before fitting requests; preserve under sglang-initial-failed",
+  "shield": "Preserve initial canary, then rerun both engines after same configuration repair"
+}

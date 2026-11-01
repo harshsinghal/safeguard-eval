@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-01T02:46:20.956350+00:00",
+  "model": {
+    "model": "/root/shieldstral-hf",
+    "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+    "adapter": "shieldstral",
+    "policy_sha256": "153eac556b8e3ff707e0b1b03305bca487c7c931c925b1f1d51eac4957e9e390",
+    "policy_origin": "published_runs/2026-10-25-policy-transfer/policies/transfer-qwen-2b-p3.json",
+    "threshold": 0.5,
+    "source_model": "mistralai/Shieldstral-1.0-3B",
+    "historical_backend": "vllm"
+  },
+  "engines": {
+    "vllm": "0.32.0",
+    "sglang": "0.5.23"
+  },
+  "scope": "Fitting-only compatibility repair after default SGLang loader failed: same pinned policy, 32 inputs, and scoring; published Hugging Face files only in local directory. No tensor transformation. Compare with original vLLM scores.",
+  "parameter": 2048,
+  "gate": {
+    "max_score_difference": 0.02,
+    "max_label_changes": 1,
+    "errors": 0
+  },
+  "code_sha256": "ac46fd6500ed067f5e6c58dbe261a65e38e43a8327a45230ce8d488ca4c549b2",
+  "pre_execution_note": "Preserve returned label log probabilities and prompt-token counts for a CPU-only score audit.",
+  "preparation_source_sha256": "482c146854cc3432177724980ec6035501a059192345635cdde5dec50c54afff"
+}

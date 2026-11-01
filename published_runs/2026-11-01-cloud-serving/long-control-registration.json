@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-11-01T02:37:44.509659+00:00",
+  "scope": "exploratory, specified after observing primary length curves",
+  "parameter": 8192,
+  "content_tokens": 4096,
+  "n": 64,
+  "concurrency": [
+    1,
+    8
+  ],
+  "repeats": 2,
+  "seeds": [
+    100,
+    101
+  ],
+  "replace_primary": false,
+  "code_sha256": "404ea96158393038fca4d8f2d4f79d609e107a915aee7d129e06af5400e21743"
+}

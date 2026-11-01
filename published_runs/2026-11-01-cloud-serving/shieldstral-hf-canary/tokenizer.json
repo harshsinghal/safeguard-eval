@@ -1,0 +1,15 @@
+{
+  "tokenizer": "TokenizersBackend",
+  "label_token_ids": [
+    1836,
+    2649,
+    13059,
+    14842
+  ],
+  "label_tokens": [
+    " no",
+    "no",
+    "yes",
+    " yes"
+  ]
+}

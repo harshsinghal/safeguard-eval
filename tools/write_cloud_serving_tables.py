@@ -39,6 +39,20 @@ def render(root):
                 '|---|---:|---:|---:|---:|---:|---:|']
         for r in result['long_input_control']:
             lines.append(f"| {r['engine']} | {r['concurrency']} | 8192 | {r['requests_per_second']:.2f} | {r['p50_ms']:.1f} | {r['p95_ms']:.1f} | {r['label_changes_from_primary']} / {r['requests']} |")
+    hf=result.get('shieldstral_hf_canary')
+    if hf:
+        lines+=['','## Shieldstral HF-only scoring check','',
+            'Thirty-two fitting prompts, serial and with 16 in flight. These are',
+            'score-consistency checks, not capacity or benchmark-accuracy results.','',
+            '| Engine | Request errors | Batch label changes | Maximum batch score change | Accepted |',
+            '|---|---:|---:|---:|---|']
+        for engine in ('vllm','sglang'):
+            r=hf[engine]
+            lines.append(f"| {engine} | {r['errors']} / 64 | {r['label_changes']} / 32 | {r['max_score_difference']:.8f} | {r['accepted']} |")
+        c=hf['cross_engine'];o=hf['original_vllm_comparison']
+        lines+=['',f"Serial labels differed across engines on {c['label_differences']} / {c['n']} prompts; maximum score difference was {c['max_score_difference']:.8f}.",
+            f"vLLM's scores before and after selecting the HF-only directory differed by at most {o['max_score_difference']:.8f}.",
+            'Both earlier SGLang loading failures remain in the archive. No weights were transformed.']
     lines+=['','[Readable findings](README.md) · [Deployment implications](DEPLOYMENT.md) · [Reproduction](REPRODUCE.md)','']
     return '\n'.join(lines)
 

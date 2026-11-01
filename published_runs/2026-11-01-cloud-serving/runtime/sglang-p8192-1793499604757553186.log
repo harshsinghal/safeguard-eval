@@ -1,0 +1,24 @@
+/root/sglangenv/lib/python3.12/site-packages/sglang/launch_server.py:71: UserWarning: 'python -m sglang.launch_server' is still supported, but 'sglang serve' is the recommended entrypoint.
+  Example: sglang serve --model-path <model> [options]
+  warnings.warn(
+[2026-11-01 02:20:12] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[2026-11-01 02:20:12] Attention backend not specified. Use flashinfer backend by default.
+[2026-11-01 02:20:12] kill_process_tree called: parent_pid=4450, include_parent=False, pid=4450
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/sglangenv/lib/python3.12/site-packages/sglang/launch_server.py", line 84, in <module>
+    run_server(server_args)
+  File "/root/sglangenv/lib/python3.12/site-packages/sglang/launch_server.py", line 29, in run_server
+    server_args.resolve_once()
+  File "/root/sglangenv/lib/python3.12/site-packages/sglang/srt/server_args.py", line 277, in resolve_once
+    run_resolution_pipeline(self)
+  File "/root/sglangenv/lib/python3.12/site-packages/sglang/srt/arg_groups/pipeline.py", line 328, in run_resolution_pipeline
+    run_hook(handle_encoder_disaggregation, server_args)
+  File "/root/sglangenv/lib/python3.12/site-packages/sglang/srt/arg_groups/resolution_hooks.py", line 139, in run_hook
+    step(server_args)
+  File "/root/sglangenv/lib/python3.12/site-packages/sglang/srt/arg_groups/pd_disaggregation_hook.py", line 304, in handle_encoder_disaggregation
+    handle_language_model_only(server_args)
+  File "/root/sglangenv/lib/python3.12/site-packages/sglang/srt/arg_groups/model_hook.py", line 1106, in handle_language_model_only
+    raise ValueError(
+ValueError: --language-model-only does not support ['Qwen3_5ForConditionalGeneration']. Supported: ['DeepseekV4ForCausalLM', 'MuseGlimmerForConditionalGeneration', 'Cosmos3ForConditionalGeneration', 'Cosmos3EdgeForConditionalGeneration'].

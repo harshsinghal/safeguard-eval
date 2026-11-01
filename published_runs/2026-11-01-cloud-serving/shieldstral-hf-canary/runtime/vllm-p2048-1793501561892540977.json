@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/root/vllmenv/bin/vllm",
+    "serve",
+    "/root/shieldstral-hf",
+    "--revision",
+    "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8000",
+    "--dtype",
+    "bfloat16",
+    "--max-model-len",
+    "8192",
+    "--gpu-memory-utilization",
+    ".85",
+    "--max-num-seqs",
+    "32",
+    "--max-num-batched-tokens",
+    "2048",
+    "--no-enable-prefix-caching",
+    "--language-model-only"
+  ],
+  "ready_seconds": 62.47910953988321
+}

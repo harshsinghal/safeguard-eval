@@ -1,0 +1,41 @@
+{
+  "provider": "GPU.ai",
+  "gpu": "NVIDIA L4",
+  "price_per_hour_usd": 0.59,
+  "advertised_gpu_memory_gb": 24,
+  "advertised_cpu_cores": 4,
+  "advertised_host_ram_gb": 19,
+  "observed_gpu_memory_mib": 23034,
+  "observed_gpu_power_limit_w": 72,
+  "observed_cpu_quota_us": 340000,
+  "observed_cpu_period_us": 100000,
+  "observed_cpu_quota_cores": 3.4,
+  "observed_host_memory_limit_bytes": 18999996416,
+  "nvidia_driver": "595.91.07",
+  "initial_base_image_cuda": "12.4",
+  "installed_runtime_cuda": "13.0",
+  "cpu_memory_evidence": "runtime/cgroup-v1.txt",
+  "gpu_evidence": "runtime/gpu-profile.csv",
+  "initial_custom_image_attempt": {
+    "created_instance": false,
+    "outcome": "Selected capacity rejected custom image defining ENTRYPOINT, even with a command override; provider base environment used for retry."
+  },
+  "runpod_preflight": {
+    "http_status": 403,
+    "resource_created": false,
+    "interpretation": "Read-only request not authorized; no conclusion about general provider availability or credential validity."
+  },
+  "aws_gcp_accounts_accessed": false,
+  "cloud_catalog_sources": [
+    "https://aws.amazon.com/ec2/instance-types/g6/",
+    "https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines"
+  ],
+  "private_omissions": [
+    "API credentials",
+    "SSH keys",
+    "SSH connection details",
+    "full instance and deployment request responses"
+  ],
+  "cleanup": "cleanup.json",
+  "billing": "billing.json"
+}

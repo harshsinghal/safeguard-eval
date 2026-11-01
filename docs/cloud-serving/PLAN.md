@@ -125,7 +125,13 @@ after the timing controls to avoid competing with measured inference.
 
 - [x] Prior study recorded and published; standing update workflow added.
 - [x] Common-cloud GPU verified; current provider capacity checked.
-- [ ] Prepare and validate harness; pin inputs and runtime choices.
-- [ ] Provision bounded instance; execute supported comparisons.
-- [ ] Export evidence, terminate resources and reconcile actual cost.
-- [ ] Publish findings, deployment implications and README links.
+- [x] Prepare and validate harness; pin inputs and runtime choices.
+- [x] Provision bounded instance; execute supported comparisons.
+- [x] Export evidence, terminate resources and reconcile actual cost.
+- [x] Record findings, deployment implications and README links for publication.
+
+The completed [readout](README.md) and [evidence bundle](../../published_runs/2026-11-01-cloud-serving/README.md)
+record both primary engine curves, the exploratory long-input control and all
+three Shieldstral loading attempts. The final HF-only canary passed on both
+engines. The rental cost $0.62; termination and temporary-key removal were
+confirmed. No full benchmark accuracy evaluation was added.

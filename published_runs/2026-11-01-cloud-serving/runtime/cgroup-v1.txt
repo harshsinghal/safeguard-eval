@@ -1,0 +1,3 @@
+/sys/fs/cgroup/cpu/cpu.cfs_quota_us 340000
+/sys/fs/cgroup/cpu/cpu.cfs_period_us 100000
+/sys/fs/cgroup/memory/memory.limit_in_bytes 18999996416

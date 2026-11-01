@@ -1,0 +1,14 @@
+{
+  "requests": 64,
+  "valid": 64,
+  "errors": 0,
+  "wall_seconds": 52.16451974585652,
+  "requests_per_second": 1.2268875532987837,
+  "p50_ms": 813.8709701597691,
+  "p95_ms": 818.4493968146853,
+  "gpu_usd_per_million": 133.58101844642076,
+  "prompt_tokens": 287872,
+  "completion_tokens": 128,
+  "concurrency": 1,
+  "seed": 100
+}

@@ -1,0 +1,31 @@
+{
+  "command": [
+    "/root/sglangenv/bin/python",
+    "-m",
+    "sglang.launch_server",
+    "--model-path",
+    "/root/shieldstral-hf",
+    "--revision",
+    "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8000",
+    "--dtype",
+    "bfloat16",
+    "--context-length",
+    "8192",
+    "--mem-fraction-static",
+    ".85",
+    "--max-running-requests",
+    "32",
+    "--chunked-prefill-size",
+    "2048",
+    "--max-prefill-tokens",
+    "8192",
+    "--disable-radix-cache",
+    "--cuda-graph-max-bs-decode",
+    "32"
+  ],
+  "ready_seconds": 99.75003263494
+}

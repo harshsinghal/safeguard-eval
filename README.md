@@ -4,7 +4,7 @@
 
 A moderation team writes a rule. A model interprets it. What happens when the team changes a definition, removes an example, switches models, or combines their decisions?
 
-This repository follows those questions through a growing series of experiments. We test specialist policy models, general-purpose language models, and decision models sometimes called “System One” models. We change policy text, examine model-specific input formats, transfer policies between models, combine model scores, train classifiers on frozen representations, and fine-tune a compact encoder for a fixed task, and measure serving latency, throughput and GPU cost. The records include improvements, regressions, and inconclusive results.
+This repository follows those questions through a growing series of experiments. We test specialist policy models, general-purpose language models, and decision models sometimes called “System One” models. We change policy text, examine model-specific input formats, transfer policies between models, combine model scores, train classifiers on frozen representations, and fine-tune a compact encoder for a fixed task. We also measure serving latency, throughput and GPU cost, including how prompt length and inference engines affect deployment. The records include improvements, regressions, and inconclusive results.
 
 The finding running through this work is that **policy authoring is deeply coupled with AI engineering**. A policy is an operational input: its wording, its delivery to the model, and the rule that turns a score into an action all need testing. Policy owners define the intended boundary; engineers help measure and implement it. Neither the model name nor a well-written document is sufficient on its own.
 
@@ -52,6 +52,7 @@ flowchart TB
     F5 --> EVIDENCE
     EVIDENCE["11 · Balanced evaluation<br/>False blocks + missed violations<br/>Validate → freeze → test"]
     EVIDENCE --> SERVING["20 · Serving performance<br/>vLLM + native runtimes<br/>Batching · Caching · GPU cost"]
+    SERVING --> CLOUD["21 · Cloud-compatible GPU<br/>L4 · vLLM and SGLang<br/>Prompt length · Loading checks"]
     EVIDENCE -.-> NEXT["PROPOSED · Not started<br/>Add trained feature heads<br/>Policy + cutoff · Second pass"]
 
     classDef neutral fill:#f1f5f9,stroke:#64748b,color:#172c49;
@@ -59,7 +60,7 @@ flowchart TB
     classDef scores fill:#e9f5ef,stroke:#367556,color:#153e2b;
     classDef features fill:#f4efff,stroke:#7b63a8,color:#3d2c60;
     classDef proposed fill:#fff6e5,stroke:#a36e16,color:#61420f,stroke-dasharray:6 4;
-    class START,EVIDENCE,SERVING neutral;
+    class START,EVIDENCE,SERVING,CLOUD neutral;
     class P1,P2,P3 policy;
     class S1,S2,S3,S4 scores;
     class F1,F2,F3,F4,F5 features;
@@ -76,7 +77,7 @@ flowchart TB
 | Policy wording, transfer, and structure | [WildGuard tuning](docs/wildguard/METHODS.md) → [Qwen comparison](docs/qwen-policy/READOUT.md) → [policy transfer](docs/policy-transfer/READOUT.md) → [HateXplain structure tests](docs/hatexplain/READOUT.md) → [training-error corrections](docs/policy-corrections/README.md) |
 | Scores, calibration, cutoffs, and combinations | [Probability ensembles](docs/ensemble/READOUT.md) → [log-odds ensembles](docs/ensemble-logits/RESULTS.md) → [Jev](docs/jev/READOUT.md) → [Kev / Clef](docs/decision-models/README.md) → [decision-model ensembles](docs/decision-ensemble/README.md) → [smart ensemble](docs/smart-ensemble/README.md) |
 | Representations and task-specific training | [PolicyLM / Qwen](docs/activation-probe/README.md) → [Shieldstral / Qwen](docs/shield-probe/README.md) → [linear, neural and contrastive task classifiers](docs/contrastive-heads/README.md) → [Liquid encoder fine-tuning](docs/liquid-finetune/README.md) |
-| Deploy and operate | [Serving latency, throughput, batching and GPU cost](docs/serving/README.md) |
+| Deploy and operate | [Seven-model serving study](docs/serving/README.md) → [L4: prompt length and vLLM/SGLang](docs/cloud-serving/README.md) · [Self-hosting implications](docs/cloud-serving/DEPLOYMENT.md) |
 | Compare outcomes and see what is proposed | [Balanced metric guide](docs/leaderboard/METRICS.md) · [leaderboard](#current-leaderboard) · [next steps: reducing moderation errors](docs/research-directions/REDUCING-MODERATION-ERRORS.md) |
 
 The [smart-ensemble study](docs/smart-ensemble/README.md) takes the next step: learn which native model scores help each other, then test the frozen combination. Adding trained representation heads to that combination, broader policy-and-cutoff optimization, and a targeted second pass remain [proposed work](docs/research-directions/REDUCING-MODERATION-ERRORS.md), awaiting separate authorization.
@@ -283,6 +284,16 @@ These are deployment profiles, not an equal-accuracy model ranking. The readout 
 
 [Plain-language findings and curves](docs/serving/README.md) · [All operating profiles](docs/serving/RESULTS.md) · [Plan and limits](docs/serving/PLAN.md) · [Evidence and reproduction](published_runs/2026-10-31-serving/README.md)
 
+### 21. A cloud-compatible GPU: prompt length and engine choice
+
+We tested **Qwen3.5 4B on one NVIDIA L4**, a GPU offered in AWS G6 and Google Cloud G2, rented through GPU.ai. vLLM and SGLang received identical input tokens, with the same policy and generation settings. Neither AWS nor GCP was accessed. Content lengths ranged from 64 to 4,096 tokens, plus a mixed workload; the policy and template added 402 tokens. Each engine selected a processing-chunk setting on separate fitting prompts before the length tests.
+
+**The engines performed similarly; prompt length and queueing mattered much more.** A single short request took about 159 ms on vLLM and 157 ms on SGLang; a long one took 829 ms and 815 ms. At eight requests in flight, long-input median latency rose to roughly six seconds. A subsequent larger-chunk control did not improve throughput. These are small, warm, local-HTTP load tests, not production latency guarantees or new accuracy scores. One of 32 natural fitting labels differed between engines, reinforcing the need to recheck quality when changing runtimes.
+
+A separate **Shieldstral 3B compatibility check** initially failed on SGLang's text-only setting and then its weight-loading path. Selecting the published Hugging Face-format files resolved the loader error: both engines passed the scoring check, agreed on all 32 serial labels, and showed very small score differences. That is interface evidence, not a Shieldstral speed ranking. Across the Qwen primary and control measurements, all **4,352 timed requests** returned valid classifications. The study cost **$0.62**; the GPU was terminated and temporary access keys removed.
+
+[Findings and length curves](docs/cloud-serving/README.md) · [Deployment implications](docs/cloud-serving/DEPLOYMENT.md) · [All operating profiles](docs/cloud-serving/RESULTS.md) · [Plan and amendments](docs/cloud-serving/PLAN.md) · [Frozen evidence and reproduction](published_runs/2026-11-01-cloud-serving/README.md)
+
 ## What the evidence suggests for moderation teams
 
 - **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. A model replacement requires another evaluation.
@@ -298,6 +309,7 @@ These experiments support a workflow in which policy owners and engineers test c
 | Start here | What you will find |
 |---|---|
 | [Engineering article](docs/engineering-guardrails/README.md) | A shorter guide to building and evaluating a policy guardrail, with an editable Word version. |
+| [Self-hosting guide](docs/cloud-serving/DEPLOYMENT.md) | Model interfaces, vLLM/SGLang, input lengths, batching, cloud GPU selection and the operational responsibilities behind a moderation endpoint. |
 | [Research paper](research-preprint/README.md) | Review draft v0.6: PDF, extracted text, LaTeX source, methods, citations, and fuller limitations. Covers through the Kev/Clef comparison; later ensemble, representation-probe and policy-correction studies are linked above. Not peer reviewed or submitted to arXiv. |
 | [Install the Safeguard Eval skill](skills/safeguard-eval/README.md) | A guided introduction and evidence-based Q&A in Codex, Claude Code, or Pi. The v0.5.0 release covers through the specialist probability/log-odds ensembles. The newer decision-model, representation and policy-correction studies are available in the research log above. |
 | [Published runs](published_runs) | Dated experiment bundles with policies, predictions, selections, analysis, and provenance. Follow each study's reproduction instructions. |

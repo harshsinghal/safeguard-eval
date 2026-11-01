@@ -1,0 +1,35 @@
+{
+  "source_model": "mistralai/Shieldstral-1.0-3B",
+  "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+  "files": {
+    "config.json": {
+      "sha256": "a0b1122916b629ab9c3b54a422476e3f4bf4f2b66353a82c43c349c4fe2257ad",
+      "bytes": 1654
+    },
+    "generation_config.json": {
+      "sha256": "7e8a15f269bb1b52e54ed4f4ef5a0b73014f15275a7d2a9d2bf6f8c291c494bd",
+      "bytes": 126
+    },
+    "model.safetensors": {
+      "sha256": "87753e30c8c321da478b83bbabebcd813cc9b3d0cee5c5b3d64349a8ee4172f7",
+      "bytes": 7698241104
+    },
+    "tokenizer.json": {
+      "sha256": "9172cf28b79a17502736f971b560faeced38ee527540cea6882a1f40cce320c0",
+      "bytes": 17077322
+    },
+    "tokenizer_config.json": {
+      "sha256": "b41ad95e3321bd29dcbc525de2b34d74f0d64e6a96add615149e448bff5c38c3",
+      "bytes": 261
+    },
+    "chat_template.jinja": {
+      "sha256": "df026d5384cfbb925dd35ff96b9c55ce7257ec8d47d5fa73757673bd4c98ce53",
+      "bytes": 7095
+    },
+    "processor_config.json": {
+      "sha256": "bb6bbc47d9aec510c0ee42c2eeecde5cb54fa96cd85035c7248b35f91157deab",
+      "bytes": 660
+    }
+  },
+  "no_tensor_conversion": true
+}

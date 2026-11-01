@@ -1,0 +1,6 @@
+# Preserve the exact bytes covered by this frozen experiment's SHA-256 manifest.
+published_runs/2026-11-01-cloud-serving/** -text
+# Terminal logs and generated SVG paths contain intentional whitespace.
+published_runs/2026-11-01-cloud-serving/**/*.log -whitespace
+published_runs/2026-11-01-cloud-serving/runtime/gpu-environment.txt -whitespace
+docs/cloud-serving/figures/*.svg -whitespace

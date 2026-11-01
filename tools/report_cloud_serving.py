@@ -87,26 +87,36 @@ def report(root):
                 p95_ms=mean_or_none([r['p95_ms'] for r in repetitions]),
                 gpu_usd_per_million=mean_or_none([r['gpu_usd_per_million'] for r in repetitions]),
                 label_changes_from_primary=changes,repeats=repetitions))
-    canary=root/'shieldstral-canary'
-    if canary.exists():
-        result['shieldstral_canary']={}
+    for key,directory in [('shieldstral_canary','shieldstral-canary'),('shieldstral_hf_canary','shieldstral-hf-canary')]:
+        canary=root/directory
+        if not canary.exists(): continue
+        result[key]={}
         pairs={}
         for engine in ('vllm','sglang'):
             d=canary/engine
             if (d/'result.json').exists():
-                result['shieldstral_canary'][engine]=json.loads((d/'result.json').read_text())
+                result[key][engine]=json.loads((d/'result.json').read_text())
                 pairs[engine]={r['id']:r for r in rows(d/'serial.jsonl')}
             else:
-                result['shieldstral_canary'][engine]=dict(status='failed before accepted scoring')
+                result[key][engine]=dict(status='failed before accepted scoring')
         if len(pairs)==2:
             a,b=pairs['vllm'],pairs['sglang']
             assert set(a)==set(b)
             assert all(a[i]['input_sha256']==b[i]['input_sha256'] for i in a)
             differences=[abs(a[i]['score']-b[i]['score']) for i in a if 'score' in a[i] and 'score' in b[i]]
-            result['shieldstral_canary']['cross_engine']=dict(n=len(a),
+            result[key]['cross_engine']=dict(n=len(a),
                 label_differences=sum(a[i]['prediction']!=b[i]['prediction'] for i in a),
                 max_score_difference=max(differences,default=None),
                 errors=sum(a[i]['prediction']=='ERROR' or b[i]['prediction']=='ERROR' for i in a))
+    original=root/'shieldstral-canary/vllm/serial.jsonl'
+    hf=root/'shieldstral-hf-canary/vllm/serial.jsonl'
+    if original.exists() and hf.exists():
+        a={r['id']:r for r in rows(original)};b={r['id']:r for r in rows(hf)}
+        assert set(a)==set(b) and all(a[i]['input_sha256']==b[i]['input_sha256'] for i in a)
+        diffs=[abs(a[i]['score']-b[i]['score']) for i in a if 'score' in a[i] and 'score' in b[i]]
+        result['shieldstral_hf_canary']['original_vllm_comparison']=dict(n=len(a),
+            label_differences=sum(a[i]['prediction']!=b[i]['prediction'] for i in a),
+            max_score_difference=max(diffs,default=None))
     return result
 
 

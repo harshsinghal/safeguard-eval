@@ -1,0 +1,31 @@
+{
+  "command": [
+    "/root/sglangenv/bin/python",
+    "-m",
+    "sglang.launch_server",
+    "--model-path",
+    "Qwen/Qwen3.5-4B",
+    "--revision",
+    "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8000",
+    "--dtype",
+    "bfloat16",
+    "--context-length",
+    "8192",
+    "--mem-fraction-static",
+    ".85",
+    "--max-running-requests",
+    "32",
+    "--chunked-prefill-size",
+    "2048",
+    "--max-prefill-tokens",
+    "8192",
+    "--disable-radix-cache",
+    "--cuda-graph-max-bs-decode",
+    "32"
+  ],
+  "ready_seconds": 127.76247022906318
+}

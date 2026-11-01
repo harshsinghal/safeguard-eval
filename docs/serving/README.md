@@ -195,3 +195,13 @@ Read the [registered plan](PLAN.md), [model-interface notes](COMPATIBILITY.md),
 The bundle includes all 144 accepted timed passes—55,296 parsed classifications—
 plus fitting attempts, failures, exact settings, environment records and billing.
 Its public verification runs locally without a GPU or paid inference call.
+
+
+## Follow-up: prompt length and engine choice
+
+The [L4 serving study](../cloud-serving/README.md) adds Qwen3.5 4B length curves
+under vLLM and SGLang on a GPU offered in AWS G6 and Google Cloud G2. It also
+records a Shieldstral scoring compatibility check and a practical
+[self-hosting guide](../cloud-serving/DEPLOYMENT.md). That follow-up uses a
+matched contract within the L4 study; it is not a controlled L4-versus-L40S
+hardware comparison and does not change the historical measurements above.

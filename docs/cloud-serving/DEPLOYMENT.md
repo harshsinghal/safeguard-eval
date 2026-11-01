@@ -22,6 +22,14 @@ at inference time. Likewise, a model that returns a typed score through a custom
 head cannot be assumed to work through a generic chat endpoint. An engineer
 should preserve the model's actual classification interface before optimizing it.
 
+| System in our studies | What the deployment must preserve |
+|---|---|
+| Shieldstral, Qwen and WildGuard | Their distinct templates, output formats and score mappings; all three ran through vLLM on the L40S. On the L4, Qwen has timing curves under both engines; Shieldstral has a scoring compatibility check. |
+| PolicyLM | Its native policy-scoring path and internal batching limits. We did not replace that path with a chat-completion call. |
+| Kev and Clef-Flash | Their native classification heads, schemas and kernels. The earlier study tested targeted kernel changes while checking score consistency. |
+| Fine-tuned Liquid encoder | The trained binary head and selected cutoff for one learned task. It does not accept an arbitrary replacement policy at inference time. |
+| Jev | The remote API's schema, availability and data-handling arrangement. It was not available for our self-hosted comparison. |
+
 Running open weights within your own environment gives you control over the
 processing location and serving configuration. It does not itself establish
 zero retention: request logs, traces, backups, access and storage still need to
@@ -43,7 +51,7 @@ also accommodate policy framing and output. Define behavior for oversized inputs
 explicitly. Truncation can remove the very passage that changes the decision;
 splitting a document requires a tested rule for combining segment decisions.
 
-Our [L4 pilot](PLAN.md) holds policy text fixed and varies content length. Its
+Our [L4 pilot](README.md) holds policy text fixed and varies content length. Its
 synthetic documents measure processing load; they do not establish moderation
 accuracy on long enterprise documents. A production evaluation should add
 labeled examples with important content at the beginning, middle and end,
@@ -73,6 +81,10 @@ capacity every request will receive. The primary L4 comparison disables caches.
 The matched pilot can inform this particular model and workload. It cannot
 establish that either engine is universally superior, or that a custom decision
 head will receive the same optimizations as an ordinary language model.
+Qwen's measured times were similar, but one of 32 fitting decisions differed
+between engines. Shieldstral passed its small scoring check on both only after
+we selected the Hugging Face-format files explicitly. These are reasons to
+test a complete deployment, including its loader and output adapter.
 See the official [SGLang serving benchmark guide](https://docs.sglang.io/docs/developer_guide/bench_serving)
 and [server configuration reference](https://docs.sglang.io/docs/advanced_features/server_arguments)
 for the controls behind that comparison.
@@ -82,9 +94,10 @@ for the controls behind that comparison.
 NVIDIA's 24 GB L4 is offered in
 [AWS G6](https://aws.amazon.com/ec2/instance-types/g6/) and
 [Google Cloud G2](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines).
-It is a useful common starting point for the smaller systems studied here.
-We rent an L4 through GPU.ai to test model execution without accessing either
-cloud account. This is a hardware selection, not a provider endorsement.
+We verified Qwen3.5 4B serving and Shieldstral 3B scoring on an L4 rented through
+GPU.ai, without accessing either cloud account. We did not establish that every
+model in the earlier L40S study fits or performs adequately on an L4. This is a
+hardware selection, not a provider endorsement.
 
 An L4 result is a starting estimate for another L4 deployment. CPU count, RAM,
 power limits, driver versions, network paths and VM overhead can differ.

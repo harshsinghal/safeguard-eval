@@ -72,6 +72,14 @@ by the whole timed pass, including any failed requests' elapsed time. Invalid or
 unfinished outputs and changed prompt-token counts are errors. There are no
 automatic request retries.
 
+Shieldstral uses a different output contract: one generated token with the top
+20 log probabilities plus explicitly requested yes/no token variants. The
+adapter takes the maximum log probability among variants of each label, then
+normalizes the two label values. This is the historical scoring rule, not a sum
+over all variant probabilities or a calibrated risk estimate. vLLM exposes it
+through completions; SGLang uses native `/generate`. Both sets of returned label
+log probabilities are retained so normalization can be checked without a GPU.
+
 The initial SGLang launch used a text-only flag whose architecture coverage
 differed from vLLM's. Its pre-inference failures are retained under
 `sglang-initial-failed`; the [runtime amendment](RUNTIME-AMENDMENT.json) removes
@@ -93,3 +101,32 @@ sustained measured utilization, excludes cloud/network/engineering overhead, and
 uses the experiment provider's rate. Actual rental cost includes setup and idle
 time and is recorded separately. Startup measurements include differing cache
 and compilation states; they are descriptive, not a controlled cold-start ranking.
+
+## Reproduce the separate controls
+
+The optional long-input control reuses the prepared primary state and writes a
+separate directory. It never changes `freeze.json`:
+
+```bash
+python -m evals.serving.cloud_long_control --state /root/cloud-state
+```
+
+For the final Shieldstral check, create a fresh `/root/cloud-shield-hf` state
+directory containing `registration.json` and `policy.json` from the archive's
+`shieldstral-hf-canary/`. Copy the restored fitting file as `private-fit.jsonl`,
+and the SGLang Python path file to `runtime/sglang-python.txt`. On the disposable
+GPU machine, run the archived `source/prepare-shield-hf.py` with the vLLM Python
+environment. It creates a new `/root/shieldstral-hf` directory containing symlinks
+to seven files from the pinned model revision. Compare its `hf-files.json` to
+the archive. The script does not transform tensors and refuses to overwrite an
+existing target directory. Then run:
+
+```bash
+python -m evals.serving.cloud_shield_smoke --state /root/cloud-shield-hf
+```
+
+That script checks 32 fitting inputs serially and with 16 in flight under each
+engine; it does not perform a throughput benchmark. The two earlier loading
+failures are retained as provenance, not required steps in a new successful run.
+Use a new state directory for any modified protocol and record its own inputs,
+settings, costs and cleanup.

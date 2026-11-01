@@ -1,0 +1,16 @@
+{
+  "preceding_implementation_commit": "3556a97ef3773283fe9121defbd25acec001d1fb",
+  "runtime_source": {
+    "initial_primary": "source/cloud_lengths-initial.py",
+    "accepted_primary": "source/cloud_lengths.py",
+    "initial_specialist": "source/cloud_shield_smoke-initial.py",
+    "accepted_specialist": "source/cloud_shield_smoke.py",
+    "long_input_control": "source/cloud_long_control.py",
+    "hf_only_files": "source/prepare-shield-hf.py"
+  },
+  "repository_helpers": [
+    "evals/qwen_policy/run.py:render",
+    "evals/run.py:build_payload"
+  ],
+  "note": "Registration and amendment hashes bind executed harness snapshots. Analysis scripts were finalized after collection; they do not alter the saved runtime traces."
+}

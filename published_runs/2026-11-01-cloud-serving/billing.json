@@ -1,0 +1,24 @@
+{
+  "provider": "GPU.ai",
+  "instance_id": "gpu-a582fa2c",
+  "status": "terminated",
+  "gpu": "NVIDIA L4",
+  "cost_usd": 0.62,
+  "gpu_seconds": 3765,
+  "price_per_hour_usd": 0.59,
+  "server_auto_terminate_hours": 2,
+  "study_ceiling_usd": 1.22,
+  "prior_cumulative_accounted_usd": 18.74001787256,
+  "cumulative_accounted_usd": 19.36001787256,
+  "usage": [
+    {
+      "bucket_start": "2026-11-01T00:00:00Z",
+      "instance_id": "gpu-a582fa2c",
+      "gpu_seconds": 3765,
+      "cost_cents": 62
+    }
+  ],
+  "api_inference_usd": 0,
+  "runpod_resources_used": false,
+  "aws_gcp_resources_used": false
+}

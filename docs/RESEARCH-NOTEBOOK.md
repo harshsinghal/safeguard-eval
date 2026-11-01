@@ -279,3 +279,56 @@ rate costs $576 even when idle. Actual experiment cost was $1.65, with terminati
 and key removal confirmed. No paid inference API or RunPod resource was used.
 The quality leaderboard, papers, articles and released skill remain separate
 snapshots; this study does not silently revise their accuracy claims.
+
+
+## Prompt length and inference engines on a common-cloud GPU
+
+The [L4 follow-up](cloud-serving/README.md) asks whether the serving engine or the
+request shape matters more when planning a moderation endpoint. AWS G6 and
+Google Cloud G2 both offer L4 GPUs. We rented one through GPU.ai, at $0.59/hour,
+without accessing either cloud. The actual host enforced 3.4 CPU cores and about
+19 GB RAM. Matching the GPU does not reproduce another provider's VM or price.
+
+Qwen3.5 4B received identical token IDs through vLLM 0.32.0 and SGLang 0.5.23,
+using BF16, its historical policy, thinking disabled, an eight-token output cap
+and disabled prefix/radix caching. Both engines selected a 2,048-token processing
+chunk on 64 original fitting prompts. Neutral synthetic documents then varied
+submitted content across 64, 256, 1,024 and 4,096 tokens; the policy/template added
+402 tokens. A mixed group contained equal numbers from each bin. Concurrency
+was 1, 8 or 32, with two 64-request repeats per condition.
+
+Engine timings were similar. Single-request medians ranged from 159 to 829 ms
+for vLLM and 157 to 815 ms for SGLang. At concurrency eight, long-input median
+latency was about six seconds and throughput only about 1.35/second. At 32,
+long-input p95 was about 24 seconds. The exploratory 8,192-token chunk control
+improved neither engine's long-input throughput. vLLM's median improved slightly
+at concurrency eight while its p95 worsened. These short closed-loop passes
+estimate operating behavior, not production service levels or global optima.
+
+The selected Qwen engines disagreed on one of 32 natural fitting labels; each
+also changed one label between serial and batched fitting. Valid timed responses
+are not evidence of unchanged accuracy. SGLang initially rejected the text-only
+flag for this architecture. Its repaired default wrapper retains unused vision
+weights, unlike the vLLM text-only path. Different dependency stacks and resident
+weights prevent isolating scheduler performance. Failures and amendments remain
+in the archive, and the earlier L40S run also requested a different output payload,
+so this is not a controlled L4-versus-L40S comparison.
+
+Shieldstral's optional work was a separate 32-prompt scoring canary, not a
+capacity test. Removing SGLang's unsupported flag exposed a weight-name error.
+A directory containing only the pinned Hugging Face-format files resolved it;
+no tensors were transformed. Both engines then passed the serial/batch gate.
+Serial labels agreed on all 32 prompts, with maximum score difference about
+0.000002. vLLM scores were identical before and after selecting the HF-only files.
+These checks establish a working interface for this sample, not full quality parity.
+
+The [archive](../published_runs/2026-11-01-cloud-serving/README.md) contains 68
+Qwen timed passes, 4,352 valid requests, specialist checks, all failure stages,
+registrations, source snapshots, hashes, runtime records and the bill. The study
+cost $0.62, bringing cumulative accounted spending to $19.36001787256. The GPU
+was terminated and temporary keys removed. CPU-only verification recomputes
+metrics and checks output contracts; it is not an independent inference rerun.
+The [deployment guide](cloud-serving/DEPLOYMENT.md) connects these findings to
+prompt limits, cache behavior, model adapters, release checks and cloud planning.
+The common quality leaderboard, reviewed articles and pinned skill remain
+separate snapshots.
