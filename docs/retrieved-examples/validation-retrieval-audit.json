@@ -1,0 +1,428 @@
+{
+  "bank_labels": {
+    "ALLOW": 756,
+    "BLOCK": 1058
+  },
+  "conditional_block_counts": {
+    "jev": [
+      {
+        "harmful_neighbors": 0,
+        "n": 238,
+        "nearest_four_blocked": 5,
+        "policy_only_blocked": 7,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 1,
+        "n": 135,
+        "nearest_four_blocked": 8,
+        "policy_only_blocked": 6,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 2,
+        "n": 140,
+        "nearest_four_blocked": 21,
+        "policy_only_blocked": 22,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 3,
+        "n": 131,
+        "nearest_four_blocked": 20,
+        "policy_only_blocked": 27,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 4,
+        "n": 74,
+        "nearest_four_blocked": 10,
+        "policy_only_blocked": 9,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 0,
+        "n": 5,
+        "nearest_four_blocked": 4,
+        "policy_only_blocked": 4,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 1,
+        "n": 23,
+        "nearest_four_blocked": 22,
+        "policy_only_blocked": 22,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 2,
+        "n": 102,
+        "nearest_four_blocked": 96,
+        "policy_only_blocked": 94,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 3,
+        "n": 185,
+        "nearest_four_blocked": 172,
+        "policy_only_blocked": 173,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 4,
+        "n": 503,
+        "nearest_four_blocked": 492,
+        "policy_only_blocked": 468,
+        "target_label": "BLOCK"
+      }
+    ],
+    "kev": [
+      {
+        "harmful_neighbors": 0,
+        "n": 238,
+        "nearest_four_blocked": 31,
+        "policy_only_blocked": 35,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 1,
+        "n": 135,
+        "nearest_four_blocked": 11,
+        "policy_only_blocked": 15,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 2,
+        "n": 140,
+        "nearest_four_blocked": 34,
+        "policy_only_blocked": 17,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 3,
+        "n": 131,
+        "nearest_four_blocked": 41,
+        "policy_only_blocked": 26,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 4,
+        "n": 74,
+        "nearest_four_blocked": 17,
+        "policy_only_blocked": 10,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 0,
+        "n": 5,
+        "nearest_four_blocked": 3,
+        "policy_only_blocked": 3,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 1,
+        "n": 23,
+        "nearest_four_blocked": 20,
+        "policy_only_blocked": 21,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 2,
+        "n": 102,
+        "nearest_four_blocked": 97,
+        "policy_only_blocked": 94,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 3,
+        "n": 185,
+        "nearest_four_blocked": 173,
+        "policy_only_blocked": 162,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 4,
+        "n": 503,
+        "nearest_four_blocked": 489,
+        "policy_only_blocked": 457,
+        "target_label": "BLOCK"
+      }
+    ],
+    "policylm": [
+      {
+        "harmful_neighbors": 0,
+        "n": 238,
+        "nearest_four_blocked": 25,
+        "policy_only_blocked": 9,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 1,
+        "n": 135,
+        "nearest_four_blocked": 31,
+        "policy_only_blocked": 6,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 2,
+        "n": 140,
+        "nearest_four_blocked": 47,
+        "policy_only_blocked": 13,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 3,
+        "n": 131,
+        "nearest_four_blocked": 48,
+        "policy_only_blocked": 12,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 4,
+        "n": 74,
+        "nearest_four_blocked": 32,
+        "policy_only_blocked": 10,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 0,
+        "n": 5,
+        "nearest_four_blocked": 2,
+        "policy_only_blocked": 2,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 1,
+        "n": 23,
+        "nearest_four_blocked": 20,
+        "policy_only_blocked": 20,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 2,
+        "n": 102,
+        "nearest_four_blocked": 93,
+        "policy_only_blocked": 91,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 3,
+        "n": 185,
+        "nearest_four_blocked": 171,
+        "policy_only_blocked": 160,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 4,
+        "n": 503,
+        "nearest_four_blocked": 493,
+        "policy_only_blocked": 477,
+        "target_label": "BLOCK"
+      }
+    ],
+    "shieldstral": [
+      {
+        "harmful_neighbors": 0,
+        "n": 238,
+        "nearest_four_blocked": 1,
+        "policy_only_blocked": 0,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 1,
+        "n": 135,
+        "nearest_four_blocked": 0,
+        "policy_only_blocked": 0,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 2,
+        "n": 140,
+        "nearest_four_blocked": 7,
+        "policy_only_blocked": 2,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 3,
+        "n": 131,
+        "nearest_four_blocked": 16,
+        "policy_only_blocked": 0,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 4,
+        "n": 74,
+        "nearest_four_blocked": 12,
+        "policy_only_blocked": 1,
+        "target_label": "ALLOW"
+      },
+      {
+        "harmful_neighbors": 0,
+        "n": 5,
+        "nearest_four_blocked": 4,
+        "policy_only_blocked": 4,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 1,
+        "n": 23,
+        "nearest_four_blocked": 20,
+        "policy_only_blocked": 22,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 2,
+        "n": 102,
+        "nearest_four_blocked": 99,
+        "policy_only_blocked": 99,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 3,
+        "n": 185,
+        "nearest_four_blocked": 179,
+        "policy_only_blocked": 175,
+        "target_label": "BLOCK"
+      },
+      {
+        "harmful_neighbors": 4,
+        "n": 503,
+        "nearest_four_blocked": 500,
+        "policy_only_blocked": 499,
+        "target_label": "BLOCK"
+      }
+    ]
+  },
+  "limitations": [
+    "Descriptive validation analysis chosen after the original study; not a preregistered hypothesis test.",
+    "Neighbor label agreement is a diagnostic, not a measure of demonstration usefulness.",
+    "Conditional buckets have different prompts; associations do not identify causal mechanisms.",
+    "No test labels or source prompt text were read; no new GPU or API calls were made."
+  ],
+  "model_conditions": {
+    "jev": {
+      "balanced_nearest": {
+        "accuracy": 0.9388020833333334,
+        "false_blocks": 64,
+        "misses": 30
+      },
+      "fixed_four": {
+        "accuracy": 0.9140625,
+        "false_blocks": 66,
+        "misses": 66
+      },
+      "nearest_four": {
+        "accuracy": 0.9375,
+        "false_blocks": 64,
+        "misses": 32
+      },
+      "policy_only": {
+        "accuracy": 0.9166666666666666,
+        "false_blocks": 71,
+        "misses": 57
+      }
+    },
+    "kev": {
+      "balanced_nearest": {
+        "accuracy": 0.8899739583333334,
+        "false_blocks": 130,
+        "misses": 39
+      },
+      "fixed_four": {
+        "accuracy": 0.8821614583333334,
+        "false_blocks": 114,
+        "misses": 67
+      },
+      "nearest_four": {
+        "accuracy": 0.8893229166666666,
+        "false_blocks": 134,
+        "misses": 36
+      },
+      "policy_only": {
+        "accuracy": 0.8802083333333334,
+        "false_blocks": 103,
+        "misses": 81
+      }
+    },
+    "policylm": {
+      "balanced_nearest": {
+        "accuracy": 0.8580729166666666,
+        "false_blocks": 172,
+        "misses": 46
+      },
+      "fixed_four": {
+        "accuracy": 0.8873697916666666,
+        "false_blocks": 121,
+        "misses": 52
+      },
+      "nearest_four": {
+        "accuracy": 0.85546875,
+        "false_blocks": 183,
+        "misses": 39
+      },
+      "policy_only": {
+        "accuracy": 0.9231770833333334,
+        "false_blocks": 50,
+        "misses": 68
+      }
+    },
+    "shieldstral": {
+      "balanced_nearest": {
+        "accuracy": 0.974609375,
+        "false_blocks": 23,
+        "misses": 16
+      },
+      "fixed_four": {
+        "accuracy": 0.9778645833333334,
+        "false_blocks": 5,
+        "misses": 29
+      },
+      "nearest_four": {
+        "accuracy": 0.9661458333333334,
+        "false_blocks": 36,
+        "misses": 16
+      },
+      "policy_only": {
+        "accuracy": 0.9856770833333334,
+        "false_blocks": 3,
+        "misses": 19
+      }
+    }
+  },
+  "n": 1536,
+  "retrieval_by_target_label": {
+    "ALLOW": {
+      "n": 718,
+      "nearest_four_harmful_counts": {
+        "0": 238,
+        "1": 135,
+        "2": 140,
+        "3": 131,
+        "4": 74
+      },
+      "nearest_one_same_label": 468
+    },
+    "BLOCK": {
+      "n": 818,
+      "nearest_four_harmful_counts": {
+        "0": 5,
+        "1": 23,
+        "2": 102,
+        "3": 185,
+        "4": 503
+      },
+      "nearest_one_same_label": 715
+    }
+  },
+  "source_sha256": {
+    "bank-metadata.jsonl.gz": "9475190d77bdb9853a2949b783c81bb543e44111df5bb93071fa7936e995a497",
+    "metadata/validation.jsonl.gz": "004d9dc401dd2906d1a60fd0d36259b3938c2a972b141efee62f0b65f64e64ae",
+    "predictions/jev/validation.jsonl.gz": "a85304451ee0814f618eea0119ca9bd6df1b5dc27b5d89b6bb874cfc8cf910b4",
+    "predictions/kev/validation.jsonl.gz": "8788763b0a73fea8d7f0d30458d3b7d72e71f16512a8a29b1386862570a18309",
+    "predictions/policylm/validation.jsonl.gz": "a7438b7dac78380e46464f5541d949dc09eceff4ae5cd3524c1e0ab7a77992d1",
+    "predictions/shieldstral/validation.jsonl.gz": "1cc38cc6ca00e9263a31a2e62fa1e4977019a021d724b9c446219fd887985c01",
+    "retrieval/validation.jsonl.gz": "87ebc13368baf78ece16e16d2c448028301f03328d824a05c52c4c86e03ec173"
+  },
+  "split": "validation",
+  "status": "post-hoc diagnostic; no new model experiment"
+}

@@ -307,7 +307,7 @@ We gave PolicyLM, Shieldstral, Kev and Jev either their existing policy, four fi
 
 The errors explain more than accuracy alone. PolicyLM's nearest examples caught 57 more harmful prompts but created 97 more false blocks. Kev's selected balanced examples reduced misses by 36 while adding 26 false blocks. Jev's balanced examples reduced both errors, by only eight cases overall. The example library and retrieval rule need evaluation alongside the policy and its interpreter. This exploratory study cost **$0.875 of a fresh $20 allowance**; the GPU was terminated and temporary access keys removed.
 
-[Findings and accuracy chart](docs/retrieved-examples/README.md) · [All conditions and error counts](docs/retrieved-examples/RESULTS.md) · [Plan and amendments](docs/retrieved-examples/NOTES.md) · [Frozen evidence and CPU reproduction](published_runs/2026-11-01-retrieved-examples/README.md)
+[Findings and accuracy chart](docs/retrieved-examples/README.md) · [All conditions and error counts](docs/retrieved-examples/RESULTS.md) · [Retrieval diagnosis and proposed improvements](docs/retrieved-examples/RETRIEVAL-AUDIT.md) · [Plan and amendments](docs/retrieved-examples/NOTES.md) · [Frozen evidence and CPU reproduction](published_runs/2026-11-01-retrieved-examples/README.md)
 
 ## What the evidence suggests for moderation teams
 

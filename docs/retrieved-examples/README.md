@@ -119,6 +119,11 @@ for a particular model family. We tested one encoder, one fixed example set,
 four-example conditions and specific native wrappers. Input length changes with
 examples; we did not isolate all effects of content, order or formatting.
 
+The [retrieval and format audit](RETRIEVAL-AUDIT.md) examines those limitations
+using saved validation outputs and proposes separate tests of native example
+placement, stronger embeddings and decision-relevant selection. It is a post-hoc
+diagnosis and a follow-up proposal; no new inference results are claimed.
+
 This is an exploratory follow-up on a public test used in earlier project work.
 Unknown checkpoint exposure, training-label quality, repeated benchmark use and
 unadjusted comparisons limit generalization. There is no new HateXplain,
