@@ -99,6 +99,18 @@ the specialist scoring interface; it does not produce a Shieldstral throughput
 curve or establish equal moderation quality. Its separate registration is
 [SHIELD-REGISTRATION.json](SHIELD-REGISTRATION.json), written before execution.
 
+## Compatibility amendment before accepted SGLang inference
+
+Both SGLang chunk candidates failed before model inference because SGLang 0.5.23
+restricts its standalone `--language-model-only` flag to other architectures.
+Remove that flag for SGLang and use its supported default model wrapper. Keep
+the vLLM setting and all input IDs, BF16 precision, labels and tuning rules
+unchanged. Preserve the initial failures separately and rerun SGLang fitting.
+The SGLang wrapper can load unused vision weights even for these text requests;
+record its memory footprint. This is a comparison of deployable runtime bundles,
+not an isolated scheduler comparison with guaranteed identical resident tensors.
+Retain the initial Shieldstral canary as well and rerun it after the same repair.
+
 ## Progress
 
 - [x] Prior study recorded and published; standing update workflow added.

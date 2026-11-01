@@ -165,7 +165,7 @@ def server(state, engine, parameter):
             '--revision', spec['revision'], '--host', '127.0.0.1', '--port', '8000', '--dtype', 'bfloat16',
             '--context-length', '8192', '--mem-fraction-static', '.85', '--max-running-requests', '32',
             '--chunked-prefill-size', str(parameter), '--max-prefill-tokens', '8192',
-            '--disable-radix-cache', '--cuda-graph-max-bs-decode', '32', '--language-model-only']
+            '--disable-radix-cache', '--cuda-graph-max-bs-decode', '32']
     runtime = state/'runtime'; runtime.mkdir(exist_ok=True)
     stem = f'{engine}-p{parameter}-{time.time_ns()}'
     start = time.perf_counter()
