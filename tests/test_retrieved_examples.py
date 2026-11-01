@@ -35,8 +35,10 @@ def test_examples_do_not_replace_policy_or_modify_decision_fields():
     p={'block':'block rule','allow':'allow rule','precedence':'exceptions'}
     out=augmented_policy(p,'policylm',bank()[:4])
     assert out['block']==p['block'] and out['allow']==p['allow']
-    assert out['precedence'].startswith('exceptions\n\n')
+    assert out['precedence'].startswith('exceptions  ')
+    assert '\n' not in out['precedence']
     assert augmented_policy(p,'policylm',[])==p
+    assert augmented_policy(p,'shieldstral',bank()[:4])['precedence'].startswith('exceptions\n\n')
 
 def test_errors_stay_in_denominator_and_paired_improvements():
     meta=[{'expected':x,'group':str(i)} for i,x in enumerate(['ALLOW','ALLOW','BLOCK','BLOCK'])]

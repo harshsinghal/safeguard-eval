@@ -1,6 +1,6 @@
 # Relevant examples, unchanged decision rules
 
-**Status: preparation and local checks. Paid inference has not started.**
+**Status: inference in progress under a separately authorized $20 experiment budget.**
 
 This experiment asks whether a moderation model makes fewer mistakes when its
 policy includes labeled examples similar to the request it is judging. We compare
@@ -41,6 +41,6 @@ public test makes this an exploratory follow-up, not a fresh blind evaluation.
 
 [Registered plan](PLAN.md) · [Research notes](NOTES.md) · [Run and reproduce](RUNNING.md)
 
-No accuracy improvement has been measured in this new study yet. The existing
-budget has about $0.64 remaining; an additional allowance has been requested
-before launching the full paid comparison. No GPU resources are running.
+No final-test accuracy improvement has been measured in this new study yet.
+The user authorized a fresh $20 budget; earlier study spending is accounted
+separately. Native compatibility checks and validation precede the frozen test.

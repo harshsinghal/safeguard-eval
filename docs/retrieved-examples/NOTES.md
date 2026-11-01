@@ -45,3 +45,19 @@ pending $3 request. Prior accounted spending of $19.36001787256 is reported
 separately and does not consume this new allowance. The first bounded rental
 reserves at most $2.60 (four hours at $0.65/hour); Jev reserves up to $1.00.
 No changes to the registered comparisons, policies, examples or fixed decisions.
+
+## Native PolicyLM formatting amendment
+
+The fitting-only PolicyLM smoke run rejected the demonstration suffix before
+producing predictions: its native Category interface requires every field to be
+one line. Before native validation or any final testing, replace the presentation
+newlines with spaces for PolicyLM alone. JSON-escaped newlines inside the actual
+example strings are preserved, as are example content, labels, order, base rules
+and the 0.5 cutoff. This is an input compatibility fix, not a search over example
+wording. The original source, registration, job hashes and rejection log are
+retained. The previous private job files are also retained without publication.
+
+All Jev, Kev and Shieldstral request hashes remain unchanged. Jev had completed
+validation before this amendment; its metrics had not been inspected. Its
+predictions are retained without rerunning. Twenty-two focused tests pass after
+adding a regression check for PolicyLM's single-line requirement.

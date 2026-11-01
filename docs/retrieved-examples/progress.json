@@ -1,5 +1,5 @@
 {
-  "status": "budget_authorized_starting_inference",
+  "status": "validation_and_native_compatibility",
   "data_verified": true,
   "retrieval_smoke_prepared": true,
   "retrieval_validation_prepared": true,
@@ -15,13 +15,16 @@
   ],
   "calibration": false,
   "latency_study": false,
-  "paid_classification_started": false,
+  "paid_classification_started": true,
   "test_retrieval_started": false,
   "test_scored": false,
-  "new_paid_cost_usd": 0,
+  "new_paid_cost_usd": null,
   "prior_cumulative_usd": 19.36001787256,
   "existing_cumulative_cap_usd": 20,
-  "gpu_resources_running": false,
+  "gpu_resources_running": true,
   "experiment_budget_usd": 20,
-  "new_budget_separate_from_prior": true
+  "new_budget_separate_from_prior": true,
+  "cost_status": "API ledger tracked; GPU usage reconciled at termination",
+  "jev_validation_completed": true,
+  "policylm_single_line_amendment_recorded": true
 }

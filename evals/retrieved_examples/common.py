@@ -91,6 +91,9 @@ def augmented_policy(base,model,examples):
     # Escape bracket/angle delimiters inside JSON strings so tokenizer control
     # tokens in an adversarial demonstration cannot become schema separators.
     text='\n\n'+PREFIX+'\n'.join(canonical({'example_content':r['prompt'],'label':r['expected']}).replace('<','\\u003c').replace('[','\\u005b') for r in examples)
+    # Native PolicyLM Category fields must be single-line. JSON already escapes
+    # newlines inside each example; only presentation separators change here.
+    if model=='policylm':text=text.replace('\n',' ')
     field='instructions' if model in ('kev','jev') else 'precedence'
     p[field]+=text
     return p
