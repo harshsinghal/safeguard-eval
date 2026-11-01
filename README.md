@@ -14,6 +14,8 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 **Latest experiment:** [Relevant labeled examples with fixed decision rules](docs/retrieved-examples/README.md) found modest, uncertain accuracy gains for Kev and Jev, and regressions for PolicyLM and Shieldstral. Policy-only Shieldstral remained strongest at 90.82%. The study compares fixed examples, retrieved examples and neighbor voting on WildGuard, with no new calibration.
 
+**In progress:** [Optimizing example formatting, retrieval and selection](docs/retrieval-optimization/README.md) tests stronger embeddings, native example placement, reranking and a larger training library in separate stages. No new result is claimed yet.
+
 ## Experiment map
 
 We started by asking whether a model could apply a platform's written rules. That led to three branches: **change the policy, change how scores become decisions, or learn a classifier from the model's internal features**. We also measure what it takes to serve representative systems. The map shows how the questions connect; it is not one shared pipeline. Numbers refer to the entries in the [experiment log](#experiment-log).
