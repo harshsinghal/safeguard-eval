@@ -5,6 +5,12 @@ It should explain what question each experiment addressed, what changed, what
 happened, and what a practitioner can learn. Detailed methods and evidence live
 in linked study folders; the original application lives in [DEMO.md](../DEMO.md).
 
+**Standing workflow:** the owner has asked for these updates after every
+authorized experiment, without another reminder. Completing the work includes
+publishing the experiment record and README links to GitHub, reporting actual
+spend, and confirming resource cleanup. See the repository's [agent instructions](../AGENTS.md).
+This does not expand the budget or authorize unrelated experiments.
+
 The [experiment map](../README.md#experiment-map) is the visual entry point. Keep
 its branch labels and log numbers aligned with completed studies. Its arrows
 connect research questions; they do not imply a common validation population or

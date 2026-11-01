@@ -31,5 +31,7 @@
   "classification_contract": "historical Qwen template -> explicit identical token IDs -> free A/B, 8 output tokens",
   "cost_ceiling_usd": 1.22,
   "prior_cumulative_cost_usd": 18.74001787256,
-  "code_sha256": "d198beba88f527c42901f41d9eaf1858d814a18784f29141c73588a1123f256d"
+  "code_sha256": "d13b80a7e4f0135c408f7c0b0a14c94e4c10b739035fbb2e83f23546bc3e7ef1",
+  "pre_measurement_amendment": "Both engines use standalone language-model-only mode; explicit CUDA 13 compiler path. Custom-image deployment rejected before resource creation; use provider base image and isolated Python environments. Explicit return_dict=False for Transformers 5 chat-template tokenization; warm full requested batch size up to 32.",
+  "amended_utc": "2026-11-01T01:59:28.188657+00:00"
 }

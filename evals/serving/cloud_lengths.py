@@ -57,7 +57,8 @@ def prepare(state):
         messages = [dict(role='system', content=render(policy)),
                     dict(role='user', content=json.dumps({'request': content}, ensure_ascii=False))]
         ids = tok.apply_chat_template(messages, tokenize=True, add_generation_prompt=True,
-                                      enable_thinking=False)
+                                      enable_thinking=False, return_dict=False)
+        assert isinstance(ids, list) and all(isinstance(x, int) for x in ids)
         return dict(id=name, token_ids=ids, input_sha256=sha(ids), full_tokens=len(ids))
     fit = rows(state/'private-fit.jsonl')[:64]
     write_rows(state/'private-inputs/fit.jsonl', [encode(r['prompt'], r['id']) for r in fit])
@@ -158,11 +159,13 @@ def server(state, engine, parameter):
             '--no-enable-prefix-caching', '--language-model-only']
     else:
         python = (state/'runtime/sglang-python.txt').read_text().strip()
+        env['PATH'] = str(Path(python).parent)+':'+env.get('PATH','')
+        env['CUDA_HOME'] = '/root/vllmenv/lib/python3.12/site-packages/nvidia/cu13'
         command = [python, '-m', 'sglang.launch_server', '--model-path', spec['model'],
             '--revision', spec['revision'], '--host', '127.0.0.1', '--port', '8000', '--dtype', 'bfloat16',
             '--context-length', '8192', '--mem-fraction-static', '.85', '--max-running-requests', '32',
             '--chunked-prefill-size', str(parameter), '--max-prefill-tokens', '8192',
-            '--disable-radix-cache', '--cuda-graph-max-bs-decode', '32']
+            '--disable-radix-cache', '--cuda-graph-max-bs-decode', '32', '--language-model-only']
     runtime = state/'runtime'; runtime.mkdir(exist_ok=True)
     stem = f'{engine}-p{parameter}-{time.time_ns()}'
     start = time.perf_counter()
@@ -232,7 +235,7 @@ def run(state, engine):
                 for c in ([1,8,32] if repeat==0 else [32,8,1]):
                     # Warm each sequence-length/batch condition before timing.
                     with ThreadPoolExecutor(max_workers=c) as pool:
-                        warm = list(pool.map(client.one, data[:min(8,len(data))]))
+                        warm = list(pool.map(client.one, data[:min(max(8,c),len(data))]))
                     if any(r['prediction']=='ERROR' for r in warm):
                         write_rows(out/f'length-warmup-failed-{name}-c{c}-r{repeat}.jsonl', warm)
                     client.run(data, c, out/f'measure-{name}-c{c}-r{repeat}', 100+repeat)
