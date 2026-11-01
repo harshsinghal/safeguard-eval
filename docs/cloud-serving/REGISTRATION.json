@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-11-01T01:55:22.907416+00:00",
+  "model": {
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "adapter": "qwen",
+    "policy_sha256": "916c1609309023f16c302322414553a125e1d5ed599a34c472a94443b97ccb69",
+    "policy_origin": "published_runs/2026-10-25-policy-transfer/baseline/runs/qwen-4b-validation/policy.json",
+    "backend": "vllm",
+    "threshold": 0.5
+  },
+  "engines": {
+    "vllm": "0.32.0",
+    "sglang": "0.5.23"
+  },
+  "content_lengths": [
+    64,
+    256,
+    1024,
+    4096
+  ],
+  "n_per_condition": 64,
+  "repeats": 2,
+  "concurrency": [
+    1,
+    8,
+    32
+  ],
+  "cache": false,
+  "precision": "bfloat16",
+  "classification_contract": "historical Qwen template -> explicit identical token IDs -> free A/B, 8 output tokens",
+  "cost_ceiling_usd": 1.22,
+  "prior_cumulative_cost_usd": 18.74001787256,
+  "code_sha256": "d198beba88f527c42901f41d9eaf1858d814a18784f29141c73588a1123f256d"
+}
