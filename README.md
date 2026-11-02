@@ -336,6 +336,7 @@ These experiments support a workflow in which policy owners and engineers test c
 |---|---|
 | [Engineering article](docs/engineering-guardrails/README.md) | A shorter guide to building and evaluating a policy guardrail, with an editable Word version. |
 | [Self-hosting guide](docs/cloud-serving/DEPLOYMENT.md) | Model interfaces, vLLM/SGLang, input lengths, batching, cloud GPU selection and the operational responsibilities behind a moderation endpoint. |
+| [Backbone and cloud-serving survey](docs/research-directions/POLICY-BACKBONES-AND-CLOUD-SERVING.md) | Gemma, Liquid, Qwen and smaller encoders; what TPU throughput headlines mean for a policy classifier. Source review and proposed checks, not new benchmark results. |
 | [Research paper](research-preprint/README.md) | Review draft v0.6: PDF, extracted text, LaTeX source, methods, citations, and fuller limitations. Covers through the Kev/Clef comparison; later ensemble, representation-probe and policy-correction studies are linked above. Not peer reviewed or submitted to arXiv. |
 | [Install the Safeguard Eval skill](skills/safeguard-eval/README.md) | A guided introduction and evidence-based Q&A in Codex, Claude Code, or Pi. The v0.5.0 release covers through the specialist probability/log-odds ensembles. The newer decision-model, representation and policy-correction studies are available in the research log above. |
 | [Published runs](published_runs) | Dated experiment bundles with policies, predictions, selections, analysis, and provenance. Follow each study's reproduction instructions. |

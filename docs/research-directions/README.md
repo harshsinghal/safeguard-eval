@@ -3,6 +3,15 @@
 The original directions were recorded on 25 October 2026. This index distinguishes
 proposals from the later completed studies linked below.
 
+## Choosing a backbone for future cloud deployment
+
+The [policy-backbone and cloud-serving survey](POLICY-BACKBONES-AND-CLOUD-SERVING.md)
+compares Gemma, Liquid, Qwen-derived models, and conventional encoders. It traces
+the Gemma/TPU throughput headline to its generation workload, distinguishes
+documented runtime support from untested custom classifiers, and proposes a
+small compatibility and policy-quality pilot. This is a source review, not a
+completed TPU experiment or authorization for new spending.
+
 ## Current next steps: reduce errors in the complete system
 
 The [next-step proposal](REDUCING-MODERATION-ERRORS.md) records three priorities:
