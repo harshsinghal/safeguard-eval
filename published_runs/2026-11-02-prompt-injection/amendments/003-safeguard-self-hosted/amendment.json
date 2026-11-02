@@ -1,0 +1,6 @@
+{
+  "id": "003-safeguard-self-hosted",
+  "created_utc": "2026-11-02T20:20:00.442349+00:00",
+  "previous_registration_sha256": "7b606ebab2bbd780aef4c885f4d4717a5ea53c82e5075bc9f4a1b75fed81ecec",
+  "reason": "Safeguard API returned repeated HTTP 429 even with pacing, making full evaluation unreliable. Archive the entire API fitting preflight and exclude it from model comparisons; preserve reported costs and unknown-charge upper bounds. Use pinned openai/gpt-oss-safeguard-20b checkpoint 8a11e17b25c973a24099d4016bf2e17dd7ec1574 via the previously exercised vLLM 0.31.0 stack on the allocated GPU. Rerun its entire fitting population. Policy text, binary labels, reasoning effort, generation ceiling, data and selection rules unchanged. No accuracy comparison or test outputs informed the fallback."
+}

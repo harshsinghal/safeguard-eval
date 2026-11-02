@@ -72,8 +72,9 @@ def run(state,slug,split,keyfile,concurrency=4):
         try:body=payload(j,slug)
         except ValueError as exc:return record(j,{'prediction':'ERROR','score':None,'error_type':type(exc).__name__},slug)
         for attempt in range(3):
-            uid=hash_value({'request':j['request_sha256'],'id':j['id'],'split':split,'pid':pid,'attempt':attempt,'model':slug})
+            uid=hash_value({'request':j['request_sha256'],'id':j['id'],'split':split,'pid':pid,'attempt':attempt,'model':slug,'transport':'paced-v2'})
             budget.reserve(uid)
+            if slug=='safeguard':time.sleep(1.0)
             try:
                 req=urllib.request.Request(base,data=canonical(body).encode(),headers={
                     'Authorization':'Bearer '+key,'Content-Type':'application/json',
@@ -83,7 +84,7 @@ def run(state,slug,split,keyfile,concurrency=4):
                 budget.settle(uid,RESERVE[slug],'unknown_upper_bound')
                 write(state/f'private-api/{slug}/{uid}.json',{'transport_error':type(exc).__name__,'status':getattr(exc,'code',None)})
                 if attempt<2 and (not isinstance(exc,urllib.error.HTTPError) or exc.code in (408,429,500,502,503,504)):
-                    time.sleep(2*(attempt+1));continue
+                    time.sleep(30 if getattr(exc,'code',None)==429 else 2*(attempt+1));continue
                 return record(j,{'prediction':'ERROR','score':None,'error_type':type(exc).__name__,'attempt_id':uid},slug)
             write(state/f'private-api/{slug}/{uid}.json',x)
             cost=x.get('usage',{}).get('cost')

@@ -1,0 +1,104 @@
+{
+  "fit/brief": {
+    "records": 256,
+    "unresolved": [
+      {
+        "id": "deepset:train:515",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:train:978",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      }
+    ],
+    "finish_reasons": {
+      "stop": 254,
+      "length": 2
+    },
+    "total_completion_tokens": 96319,
+    "max_completion_tokens": 8192
+  },
+  "validation/brief": {
+    "records": 256,
+    "unresolved": [],
+    "finish_reasons": {
+      "stop": 256
+    },
+    "total_completion_tokens": 88501,
+    "max_completion_tokens": 6994
+  },
+  "validation/examples": {
+    "records": 256,
+    "unresolved": [
+      {
+        "id": "deepset:train:236",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:train:2924",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      }
+    ],
+    "finish_reasons": {
+      "stop": 254,
+      "length": 2
+    },
+    "total_completion_tokens": 110018,
+    "max_completion_tokens": 8192
+  },
+  "validation/structured": {
+    "records": 256,
+    "unresolved": [
+      {
+        "id": "deepset:train:267",
+        "finish_reason": "stop",
+        "completion_tokens": 902
+      },
+      {
+        "id": "deepset:train:502",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:train:2979",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:train:2986",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:train:4631",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:train:6317",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:train:6348",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:train:8215",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      }
+    ],
+    "finish_reasons": {
+      "stop": 249,
+      "length": 7
+    },
+    "total_completion_tokens": 160511,
+    "max_completion_tokens": 8192
+  }
+}

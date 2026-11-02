@@ -1,0 +1,6 @@
+{
+  "id": "004-generation-scheduling",
+  "created_utc": "2026-11-02T20:30:54.788857+00:00",
+  "previous_registration_sha256": "6b40a220c506c9b27ee30d4b0879caa621f36e0bd1d31efb98e29312b6c9206f",
+  "reason": "Fitting-only runtime inspection showed truncated generations and long tail requests leaving the GPU idle behind a client batch barrier. Drain in-flight requests, retain all completed fitting predictions, then resume only pending fitting requests and use continuous refill for validation/test, with the same maximum of 16 concurrent requests. Same server, checkpoint, request bodies and decoding; no prediction labels or test results used. Truncated/malformed generations remain ERROR outcomes without retry; only five infrastructure transport failures halt execution. Record the fitting scheduling change and all unresolved outcomes."
+}

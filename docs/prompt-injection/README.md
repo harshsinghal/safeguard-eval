@@ -1,6 +1,6 @@
 # Can policy models recognize prompt injection without blocking ordinary text?
 
-**Status: prepared; no new model results yet.** The six-model execution is awaiting the requested allocation of up to $8. Preparation has incurred **$0 in GPU/API charges**, and no GPU has been provisioned.
+**Status: validation complete; policies frozen before final testing.** All six models finished the three-candidate comparison under an authorized $15 ceiling. [Frozen selections and validation evidence](../../published_runs/2026-11-02-prompt-injection/README.md) are published before test inference. See the [execution notes](NOTES.md) for operational amendments.
 
 This follow-up compares **PolicyLM, Shieldstral, GPT-OSS Safeguard, Jev, Kev and Clef-Flash** on a different question from WildGuard harmfulness: does the submitted text try to override an AI's instructions or restrictions?
 
@@ -15,7 +15,7 @@ The benchmark will include both attack detection and false blocks. A prompt can 
 
 There are **2,697 final examples**, kept in separate result tables. Eighteen PAIR records have no released attack prompt and are excluded. Published binary labels are retained, including their limitations: some source examples lack the governing context needed to tell a task change from an injection. The scores will describe annotation agreement, not a guarantee of security.
 
-The preparation audit removed **336 training rows** that overlapped evaluation material under a fixed text-similarity rule. We reserved **256 fitting and 256 validation examples**, balanced by source and label. Model outputs have not yet been collected.
+The preparation audit removed **336 training rows** that overlapped evaluation material under a fixed text-similarity rule. We reserved **256 fitting and 256 validation examples**, balanced by source and label. Fitting outputs are complete; all three candidate policies are now frozen for validation.
 
 Each model will get three candidates: a brief policy; a more explicit policy with attack mechanisms and benign exceptions; and the explicit policy with four fitting examples that prioritize that model's mistakes. Validation selects the policy for each model. The final tests compare that selection with the brief baseline. **No score calibration, cutoff tuning, ensemble or weight update is included.** PolicyLM retains its publisher's fixed 0.335 precision preset; the other models use their stated categorical or argmax decisions.
 
@@ -23,6 +23,7 @@ The native adapters matter here. PolicyLM has rule fields and a standard text cl
 
 This does not test a live application's resistance to injection. It does not execute the attacks, or test retrieved documents, tool outputs, or multi-turn agents. PolicyLM's own card also excludes use as a sole adversarial security boundary.
 
+- [What changed in the policies, and why](POLICY-CHANGES.md)
 - [Registered experiment design and limitations](PLAN.md)
 - [Run and reproduce the study](RUNNING.md)
 - [Implementation](../../evals/prompt_injection/)

@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-02T19:17:23.242268+00:00",
-  "status": "prepared_awaiting_budget_allocation",
+  "updated_utc": "2026-11-02T21:17:33.738074+00:00",
+  "status": "policies_frozen_before_test",
   "fit_n": 256,
   "validation_n": 256,
   "test_n": 2697,
@@ -12,16 +12,28 @@
     "kev",
     "clef"
   ],
-  "tests_passed": 9,
-  "gpu_api_spend_usd": 0,
-  "gpu_provisioned": false,
-  "inference_requests_sent": 0,
-  "requested_cap_usd": 8,
-  "requested_gpu_reservation_usd": 2.6,
+  "tests_passed": 30,
+  "gpu_api_spend_usd": null,
+  "gpu_provisioned": true,
+  "requested_cap_usd": 15,
+  "requested_gpu_reservation_usd": 3.9,
   "requested_api_caps_usd": {
     "jev": 1,
     "safeguard": 3.5
   },
-  "budget_approved": false,
-  "test_results_available": false
+  "budget_approved": true,
+  "test_results_available": false,
+  "authorized_cap_usd": 15,
+  "safeguard_backend": "self-hosted vLLM; API preflight archived",
+  "fit_complete": true,
+  "inference_requests_started": true,
+  "validation_complete": true,
+  "selected": {
+    "policylm": "examples",
+    "shieldstral": "structured",
+    "safeguard": "examples",
+    "kev": "brief",
+    "clef": "brief",
+    "jev": "examples"
+  }
 }

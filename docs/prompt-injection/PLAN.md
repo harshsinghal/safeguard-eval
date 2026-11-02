@@ -1,6 +1,6 @@
 # Detecting injection attempts without overblocking ordinary text
 
-Status: implementation and dataset preparation; paid execution awaits the requested budget allocation. No new accuracy results yet. This study is separate from the older [small injection pilot](../../evals/injection/README.md), whose thresholds were tuned.
+Status: execution authorized, up to $15 allocated by the user. No final accuracy results yet. The original preparation registration and this pre-inference budget amendment are preserved. This study is separate from the older [small injection pilot](../../evals/injection/README.md), whose thresholds were tuned.
 
 ## Question
 
@@ -51,11 +51,11 @@ This is a bounded three-candidate search, not a claim that policy optimization h
 |---|---|
 | PolicyLM | One explicit category with violation, non-violation and exception fields. Single-line fields. Publisher **precision** preset, fixed at **0.335**; no cutoff fitting. Standard cleaner enabled; record cleaning, variants and windows. Disable only the character cap so no test message is head-truncated. BF16, one row per native batch. |
 | Shieldstral | Publisher instruction/query/document wrapper; next-token yes/no probabilities; pair argmax with BLOCK on a tie. |
-| GPT-OSS Safeguard | System policy and JSON-quoted content; request only an ALLOW/BLOCK JSON decision. Medium reasoning, temperature 0, 2,048 output-token ceiling. Groq via OpenRouter, provider fallback disabled. |
+| GPT-OSS Safeguard | System policy and JSON-quoted content; request only an ALLOW/BLOCK JSON decision. Medium reasoning, temperature 0, 8,192 output-token ceiling, fixed after a fitting-only token-budget check. Self-hosted pinned MXFP4 weights using vLLM 0.31.0, after the API preflight was rate-limited. The API attempts are archived and excluded from classifier results; their costs remain included. |
 | Kev / Clef | Native state/question/choice interfaces and released decision heads; ALLOW/BLOCK argmax. Preserve any publisher-supplied temperature. No new temperature fitting. |
 | Jev | Native OpenRouter Decisions Choice API, rather than a chat-completions imitation; require the registered resolved model and TypeSafe provider. |
 
-Open checkpoints and provider code are pinned in `common.py` and the inherited audited native adapters. API aliases may change: record resolved identity, provider and fingerprint where exposed; do not claim an immutable hosted checkpoint. Record actual runtime environments. Run open models serially to avoid known padding/batching variation. This study does not benchmark latency or serving throughput.
+Open checkpoints and provider code are pinned in `common.py` and the inherited audited native adapters. Jev API aliases may change: record resolved identity, provider and fingerprint where exposed; do not claim an immutable hosted checkpoint. Safeguard is pinned to the same open checkpoint used in earlier studies, with no mixing of API and local predictions. Record actual runtime environments. Run the four native decision-head/encoder models serially to avoid known padding/batching variation. Safeguard serves up to 16 concurrent generation requests on its separate local vLLM server; model families run on the GPU one at a time. This study does not benchmark latency or serving throughput.
 
 For PolicyLM, its cleaner and long-message windows are part of the evaluated system, not evidence that its weights alone learned an obfuscation defense. Its model card explicitly excludes use as a sole adversarial security boundary. A benchmark score cannot override that restriction.
 
@@ -69,6 +69,6 @@ API transport failures may be retried twice using the same request and separatel
 
 ## Budget, execution and release
 
-Requested ceiling: **$8**, pending user allocation from the earlier allowance or a new authorization. GPU.ai currently offers a 48 GB RTX6000 Ada at $0.65/hour; reserve at most four hours ($2.60) with provider-side automatic termination. RunPod remains the fallback if availability or credit prevents this, within the same cap. API subcaps: Jev $1, Safeguard $3.50. Combined reservations are $7.10, leaving $0.90 unallocated headroom. Verify live prices and authorization before paid work. Budget exhaustion produces an explicitly incomplete result, not a smaller test chosen after seeing results.
+Authorized ceiling: **$15**, allocated by the user from the earlier remaining allowance before any paid inference. GPU.ai currently offers a 48 GB RTX6000 Ada at $0.65/hour; reserve at most six hours ($3.90) with provider-side automatic termination. RunPod remains the fallback if availability or credit prevents this, within the same cap. API subcaps: Jev $1, Safeguard $3.50. Combined reservations are $8.40, leaving $6.60 unallocated headroom. Verify live prices and authorization before paid work. Budget exhaustion produces an explicitly incomplete result, not a smaller test chosen after seeing results.
 
 Publish plan, implementation, pinned manifests, policy provenance, prompt-free predictions, selections, results, costs and cleanup evidence; link from the README. Keep raw dataset text, copied labeled examples, requests, credentials, private endpoints and model weights outside Git. Provide restoration instructions for final policies whose examples are reconstructed from source IDs. Update the compute ledger and terminate all resources. Do not automatically rewrite reviewed papers, articles or released skill versions.

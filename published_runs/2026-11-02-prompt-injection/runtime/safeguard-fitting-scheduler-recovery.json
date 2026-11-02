@@ -1,0 +1,6 @@
+{
+  "previously_written": 144,
+  "recovered": 0,
+  "retained_unresolved": 6,
+  "reason": "Drain in-flight responses before scheduler update; preserve every returned result without resampling."
+}

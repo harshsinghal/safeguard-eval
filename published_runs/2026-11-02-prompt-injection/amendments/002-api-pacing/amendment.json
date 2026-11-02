@@ -1,0 +1,6 @@
+{
+  "id": "002-api-pacing",
+  "created_utc": "2026-11-02T20:16:52.292836+00:00",
+  "previous_registration_sha256": "efd3e39f26d37815b74a8fa8a16cdd66b78341b164e8ca107b3b11da27ebbd18",
+  "reason": "Initial Safeguard fitting preflight encountered 21 HTTP 429 responses. One isolated diagnostic request succeeded. Archive its eight prediction rows and rerun the complete fitting population with one worker, one-second pacing, and 30-second waits after 429. Request bodies, decoding and decision rules unchanged. Retain all charges/upper bounds. No test data or outputs inspected."
+}

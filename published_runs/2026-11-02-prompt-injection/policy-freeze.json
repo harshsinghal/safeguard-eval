@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-02T20:49:22.213642+00:00",
+  "registration_sha256": "76b0fceebcc3e938ab3d37015abcb3dfbdfe22259313c6d1179e803a9ef95011",
+  "files": {
+    "policies/clef/candidates.json": "572537d1354b0b17de004b5290281e04c173e72486273922682065b29abaa8d9",
+    "policies/clef/example-provenance.json": "405ae7ec23d196bececc8b7df8748fde9aba3549eb1c19b3d2dbd43dd6ed374d",
+    "policies/initial.json": "062946b94e11ce47a55b4f8331243c717d87db304fd049d5d5e0c2178cf6ed65",
+    "policies/jev/candidates.json": "b6d61da89c9f13c33090a474705c96dce9ce7bacc836114abfe3779ea8d74168",
+    "policies/jev/example-provenance.json": "d241b89c20a9d6b76fbdadef166374cb3c983a4df4a8c564332bc463b9f1a993",
+    "policies/kev/candidates.json": "9badea41978d1c9538b794bde476e7afe69c43b90eb783730c8b813f8ad1274e",
+    "policies/kev/example-provenance.json": "47e4279afbb4c8a03f9ebcf29ed78020f694d277dfcd3e4e8a093759b7e15a77",
+    "policies/policylm/candidates.json": "201538ae3059a935de1b80398e00c8f8276edd39122c6af718c04294ac97ec7f",
+    "policies/policylm/example-provenance.json": "0496a9768deb6f1f048f0aa007191dedd651119dd0dcce3421114a7023cd6a1c",
+    "policies/safeguard/candidates.json": "2023c9fef1427e1fa443f19d213b42117df8094386b7e39d4f77ae166d3f347b",
+    "policies/safeguard/example-provenance.json": "eeebd2b52189172f1ba17249b890e09e5663b02f89aadcf57255ce88f9458e45",
+    "policies/shieldstral/candidates.json": "e3dcf415fd1a62be203129cf481cbc8b3f54c77dcdc101da5df49f70b522bb40",
+    "policies/shieldstral/example-provenance.json": "6c2d1db4a69c1869761f859018775b9a74dfa49e41735f77e3c4b0ec15018e43"
+  },
+  "fitting": {
+    "policylm": "2e6f33e3b5691aacf59fb2f8d3d92eca8b9f52e79fb260844f0f27b8870825b2",
+    "shieldstral": "1ec75faf34e96aa5ab2423b72b3e0e71487ae26a54daeca755fe40274a3dfed6",
+    "safeguard": "3cfddb2cfee82703aa436545a6e78e7a0119475d25ebe49b70a16644a0cd9ba7",
+    "kev": "ac958c733634d769ef8df3ada7c14ccd819984eab1f320ac470cc53c9b935506",
+    "clef": "8e94c956a452561dfb70a63cfa87456ee9787dd66d49f96c3238b19af155cef7",
+    "jev": "f08271fa54b8ffe10c9f7d5e0cf009ee3733b6b8be9b295d95ae31f422e6491b"
+  }
+}

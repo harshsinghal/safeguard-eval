@@ -1,0 +1,95 @@
+{
+  "created_utc": "2026-11-02T19:16:41.333037+00:00",
+  "models": {
+    "policylm": {
+      "model": "musubilabs/policylm-1.7b",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+      "decision": "publisher precision preset, fixed 0.335",
+      "clean": true,
+      "max_chars": null,
+      "max_batch_rows": 1
+    },
+    "shieldstral": {
+      "model": "mistralai/Shieldstral-1.0-3B",
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+      "decision": "yes/no token-pair argmax, BLOCK on tie"
+    },
+    "safeguard": {
+      "model": "openai/gpt-oss-safeguard-20b",
+      "provider": "Groq via OpenRouter",
+      "decision": "generated binary JSON label",
+      "reasoning": "medium",
+      "max_tokens": 2048,
+      "revision": "provider alias; immutable checkpoint not exposed"
+    },
+    "kev": {
+      "model": "jaredpalmer/kev-4b",
+      "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+      "code_revision": "2074cc44256200bb37540103fa4572901faa10f3",
+      "base": "Qwen/Qwen3.5-4B-Base",
+      "base_revision": "1001bb4d826a52d1f399e183466143f4da7b741b",
+      "decision": "native Choice argmax, ALLOW on tie; publisher learned temperature retained"
+    },
+    "clef": {
+      "model": "Cloudflare/clef-flash",
+      "revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+      "decision": "native Choice argmax, ALLOW on tie"
+    },
+    "jev": {
+      "model": "typesafe/jev-1.14",
+      "resolved": "typesafe/jev-1.14-20261014",
+      "provider": "TypeSafe via OpenRouter",
+      "decision": "native Choice argmax"
+    }
+  },
+  "files": {
+    "source-manifest.json": "34c0ec4b1763c66663ea13a5d4135ed0a8956daf10d137fe9d085eb6e8c6d188",
+    "data-audit.json": "3a079c975a33611d8f4a4ccf7e27d12220f22722f9fa70ad2b44da4f838731d8",
+    "policies/initial.json": "062946b94e11ce47a55b4f8331243c717d87db304fd049d5d5e0c2178cf6ed65",
+    "data/fit.jsonl": "e5ac12953061ff962ef8d1d771e5b1162cbf83c2d2376816cd3c2f3c4448e7fe",
+    "data/test.jsonl": "275255552e3c8fa725fc70a3d5ea4d1046b64e8b715154e41456d725ebf86155",
+    "data/validation.jsonl": "dd1c34ea04527ed7a718f6b65c0bb3d8660d0ca2b1db40fa2e93aa97ba823c1a",
+    "metadata/fit.jsonl": "889c92de49f46991789c01b34c916abd4bc53dd63fc1d9ab6abdccd7d9b298e4",
+    "metadata/test.jsonl": "5d016ba0181b9e1d24278842e5fe5554865755fa373ef208605406aa9c36b8de",
+    "metadata/validation.jsonl": "b10eb7e96faaf76410c8ad1c443a2356463aea9e8b7156e9871abddc7d704a03"
+  },
+  "sources": {
+    "docs/prompt-injection/PLAN.md": "afb13a178b988ead264acf56111a577f927ff8930a91e83039f60f24f9f6e2d0",
+    "evals/decision_models/adapters.py": "7c969011aea177639c13572711ae7c21cf2e5748169ec72d86d61aa97e00e541",
+    "evals/decision_models/study.py": "ac353a7bf1de44ed8d83016e34541d54cd46f3502cb0089f6d30cb4c34a0d49e",
+    "evals/decision_models/vendor-hashes.json": "bc101bd12269214ca4da7c20c4bfd08b69837d9b703b3c82aeed8821e00b17e1",
+    "evals/jev/api.py": "d368250e8b9a632bc63bb3b5a12fde49500cf99f6e9c26237fbfd7f94af3756b",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30",
+    "evals/prompt_injection/__init__.py": "62f6b3bc0659c5772f855eb8f2f7762f3d4fa1d397d034a7bdbc5d3bf8b4d08a",
+    "evals/prompt_injection/api.py": "abea9ec5caef2e21e94abda0b22900c3e8ba61af4280f5bc9e34f9a25d1ecac6",
+    "evals/prompt_injection/common.py": "20c8566b4a9e54d1b1dd2d6a09da9fc4e48f2d84b27950ea37c9a2a29c4c1615",
+    "evals/prompt_injection/data.py": "da9f1f8d2ee266183cd1cdc72af344b6b1b0e8b4574ec1c78de1ebe37e5f885f",
+    "evals/prompt_injection/infer.py": "37c2adef05bcd199a7bdc8702ea184e3f731de6a86a739e35904a32b1aec55d5",
+    "evals/prompt_injection/policies.py": "19153f8e9de7693e6d215ee1f5de384a8fa2191edac8d52babb48a75f1aa0538",
+    "evals/prompt_injection/report.py": "22f0d31b3ac2bd7fabb642e3a2371f2729a23f736b5e7d2af994bbaee5780dfb",
+    "evals/prompt_injection/study.py": "460fdcb55ed075d72c6446952e3c5f7d16ca434413a749441d4be112c28e5bbc",
+    "evals/prompt_injection/test_contracts.py": "1a54c82c2095c0a34346cb54d30e4716f4d488fd277c4075706d711a34e06584",
+    "evals/retrieved_examples/common.py": "e07870d64555b1430a5923278a9dcb67b4d1456a29085921e70de63d815e8e50",
+    "evals/retrieved_examples/native.py": "cfde9c9199d56d8268669dc3fc8c8aac59b97d1b6923711d169ba3130aa0db24",
+    "evals/run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986"
+  },
+  "selection": "equal-source mean balanced accuracy on validation; tie: mean macro F1, shorter serialized policy, policy id",
+  "fit_example_rule": "two per label; brief-policy errors first; <=280 characters; distinct groups; stable hash order; fallback to correctly classified fitting rows",
+  "calibration": false,
+  "ensemble": false,
+  "test_data_shown_to_policy_author": false,
+  "amendments": [
+    {
+      "id": "001-authorization",
+      "created_utc": "2026-11-02T20:13:21.489946+00:00",
+      "previous_registration_sha256": "5a1d3b10e2d4126314dd8dcb47ffdea517e92cb1e861bb24b51834f17490d68f",
+      "reason": "User allocated up to $15; raise authorization guard to $15 and GPU auto-termination reservation to six hours. Data, policies, selection rules and decisions unchanged. No model inference had started."
+    },
+    {
+      "id": "002-api-pacing",
+      "created_utc": "2026-11-02T20:16:52.292836+00:00",
+      "previous_registration_sha256": "efd3e39f26d37815b74a8fa8a16cdd66b78341b164e8ca107b3b11da27ebbd18",
+      "reason": "Initial Safeguard fitting preflight encountered 21 HTTP 429 responses. One isolated diagnostic request succeeded. Archive its eight prediction rows and rerun the complete fitting population with one worker, one-second pacing, and 30-second waits after 429. Request bodies, decoding and decision rules unchanged. Retain all charges/upper bounds. No test data or outputs inspected."
+    }
+  ]
+}

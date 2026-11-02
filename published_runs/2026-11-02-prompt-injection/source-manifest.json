@@ -1,0 +1,72 @@
+{
+  "deepset/train.parquet": {
+    "url": "https://huggingface.co/datasets/deepset/prompt-injections/resolve/4f61ecb038e9c3fb77e21034b22511b523772cdd/data/train-00000-of-00001-9564e8b05b4757ab.parquet",
+    "sha256": "2e10bc7ab30f542c97e4e83e2a5683000b5057d25ec10908784c631d44124c04",
+    "bytes": 40323
+  },
+  "deepset/test.parquet": {
+    "url": "https://huggingface.co/datasets/deepset/prompt-injections/resolve/4f61ecb038e9c3fb77e21034b22511b523772cdd/data/test-00000-of-00001-701d16158af87368.parquet",
+    "sha256": "39ac797cabc157eeed58435a08593b2952bb6cb16fc394a2d383f447cc7b246e",
+    "bytes": 10892
+  },
+  "deepset/README.md": {
+    "url": "https://huggingface.co/datasets/deepset/prompt-injections/resolve/4f61ecb038e9c3fb77e21034b22511b523772cdd/README.md",
+    "sha256": "d90b4518dfe06154deeec938243d1ec9119bdfbfd2105aee9cf1567999764b94",
+    "bytes": 500
+  },
+  "safeguard/train.parquet": {
+    "url": "https://huggingface.co/datasets/xTRam1/safe-guard-prompt-injection/resolve/a3a877d608f37b7d20d9945671902df895ecdb46/data/train-00000-of-00001.parquet",
+    "sha256": "0f1879d20f98e8b47589453cd7dceb71f4a94e4abec8b0cf809188d1aeca3b3e",
+    "bytes": 1993692
+  },
+  "safeguard/test.parquet": {
+    "url": "https://huggingface.co/datasets/xTRam1/safe-guard-prompt-injection/resolve/a3a877d608f37b7d20d9945671902df895ecdb46/data/test-00000-of-00001.parquet",
+    "sha256": "99981a32fa354d9f541aea7214c15fed258c67639dcb3da5751968b043d8f742",
+    "bytes": 497276
+  },
+  "safeguard/README.md": {
+    "url": "https://huggingface.co/datasets/xTRam1/safe-guard-prompt-injection/resolve/a3a877d608f37b7d20d9945671902df895ecdb46/README.md",
+    "sha256": "fa44e3ab97a9aadd6564f4960445a9d7a01619ef60a5bbb0ec0d6a340c50cb4e",
+    "bytes": 2756
+  },
+  "notinject/one.parquet": {
+    "url": "https://huggingface.co/datasets/leolee99/NotInject/resolve/847ae76cf8fea5ed325429e569ae8cfef022d2e0/data/NotInject_one-00000-of-00001.parquet",
+    "sha256": "5b1d3a8ec341205305efd8c6d2cabeb5ba0f594dd8726b08ee7fde1a46ddc6ec",
+    "bytes": 10859
+  },
+  "notinject/two.parquet": {
+    "url": "https://huggingface.co/datasets/leolee99/NotInject/resolve/847ae76cf8fea5ed325429e569ae8cfef022d2e0/data/NotInject_two-00000-of-00001.parquet",
+    "sha256": "a5a8c1b3b851b0b5acc3b6caf8bfee26d7da631b2967dd31ca90358df8883feb",
+    "bytes": 11183
+  },
+  "notinject/three.parquet": {
+    "url": "https://huggingface.co/datasets/leolee99/NotInject/resolve/847ae76cf8fea5ed325429e569ae8cfef022d2e0/data/NotInject_three-00000-of-00001.parquet",
+    "sha256": "d5c685b123570c092a0f374ba6bdf324b2026d905a2751a243eb2bb360d411a8",
+    "bytes": 13009
+  },
+  "notinject/README.md": {
+    "url": "https://huggingface.co/datasets/leolee99/NotInject/resolve/847ae76cf8fea5ed325429e569ae8cfef022d2e0/README.md",
+    "sha256": "ffaf685021522a526f94af2047e5099ec6b7439a462c67e0ecaca0d631a0d43f",
+    "bytes": 2973
+  },
+  "jbb/GCG.json": {
+    "url": "https://raw.githubusercontent.com/JailbreakBench/artifacts/909e68c01d94222b8ad2e397a017e2e12e2adb73/attack-artifacts/GCG/white_box/vicuna-13b-v1.5.json",
+    "sha256": "9eff8b6f78cae002737868ca8cdd886be5afcd1cbbbe4cf51ff837bc688b01b1",
+    "bytes": 134533
+  },
+  "jbb/PAIR.json": {
+    "url": "https://raw.githubusercontent.com/JailbreakBench/artifacts/909e68c01d94222b8ad2e397a017e2e12e2adb73/attack-artifacts/PAIR/black_box/vicuna-13b-v1.5.json",
+    "sha256": "18b101386419a98fbdf45cb987069f83af3a40d5e0f7f0d32c4e9dc5ecc049b4",
+    "bytes": 149383
+  },
+  "jbb/README.md": {
+    "url": "https://raw.githubusercontent.com/JailbreakBench/artifacts/909e68c01d94222b8ad2e397a017e2e12e2adb73/README.md",
+    "sha256": "cc0b5cacb5b9a7ef66d209abf242a8981514713de26dcf5df7f756da3d1bbf7a",
+    "bytes": 1690
+  },
+  "jbb/LICENSE": {
+    "url": "https://raw.githubusercontent.com/JailbreakBench/artifacts/909e68c01d94222b8ad2e397a017e2e12e2adb73/LICENSE",
+    "sha256": "09017abee723a7b715866bbcd1bd2569e0a5fa7e996dd1d9d1ec4b36fb5ca51c",
+    "bytes": 1098
+  }
+}

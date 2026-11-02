@@ -1,6 +1,6 @@
 # Running the injection study
 
-No paid inference has run yet. The code has local contract tests, but its new end-to-end GPU/API execution still needs a smoke check. See [the plan](PLAN.md) for the selection rules and the budget request.
+Execution is in progress under a user-authorized $15 allocation. See [the plan](PLAN.md) and [execution amendments](NOTES.md) for the fixed selection rules and the provider-rate-limit fallback.
 
 ## Prepare without paid inference
 
@@ -20,7 +20,7 @@ python -m evals.prompt_injection.study jobs --state "$STATE" --split fit
 
 ## Authorize and provision before inference
 
-Paid commands require a private `authorization.json` with `approved: true` and `experiment_cap_usd: 8`. **Create this only after actual user authorization**, recording its source and time. This file is a guard, not a substitute for permission. This study's request remains pending. Recheck GPU/API prices, available balance and existing resources before provisioning. Set provider-side automatic termination, with at most $2.60 reserved for a four-hour $0.65/hour GPU. API caps are $1 for Jev and $3.50 for Safeguard. Do not change these caps merely to get a run to finish.
+Paid commands require a private `authorization.json` with `approved: true` and `experiment_cap_usd: 15`. **Create this only after actual user authorization**, recording its source and time. This file is a guard, not a substitute for permission. The recorded study authorization is $15; a reproduction requires its own authorization. Recheck GPU/API prices, available balance and existing resources before provisioning. Set provider-side automatic termination, with at most $3.90 reserved for a six-hour $0.65/hour GPU. API caps are $1 for Jev and $3.50 for Safeguard. Do not change these caps merely to get a run to finish.
 
 GPU.ai is preferred; RunPod is a fallback within the same budget. A 48 GB RTX6000 Ada is sufficient for the sequential open-model runs. Do not publish SSH details, credentials, provider resource IDs, weights, raw source text or API responses.
 
@@ -32,8 +32,9 @@ The native engines inherit previously exercised, pinned implementations, but use
 | Shieldstral | Torch 2.11.0 CUDA 12.8; Transformers 5.10.2; torchvision 0.26.0 |
 | Kev | Torch 2.8.0 CUDA 12.8; Transformers 5.17.0; PEFT 0.21.2; flash-linear-attention 0.5.2; compatible causal-conv1d 1.7.0 wheel |
 | Clef | Torch 2.11.0 CUDA 12.8; Transformers 5.10.2; torchvision 0.26.0 |
+| Safeguard | vLLM 0.31.0, published MXFP4 checkpoint, TRITON_ATTN, eager mode, medium reasoning, 8,192 output tokens; 16 concurrent requests |
 
-Also install NumPy, SciPy, scikit-learn, safetensors, accelerate and Pillow as required; retain the actual environment freezes. Download and verify publisher source with `python -m evals.decision_models.fetch_sources --destination /private/path/vendor` and review it before execution. Keep inference serial for this accuracy study. Do not silently substitute a generic chat template or classification head.
+Also install NumPy, SciPy, scikit-learn, safetensors, accelerate and Pillow as required; retain the actual environment freezes. Download and verify publisher source with `python -m evals.decision_models.fetch_sources --destination /private/path/vendor` and review it before execution. Keep native decision-head/encoder inference serial for this accuracy study; Safeguard uses the separately documented 16-request generation server. Do not silently substitute a generic chat template or classification head.
 
 ## Fitting, validation and final testing
 
@@ -45,7 +46,9 @@ python -m evals.prompt_injection.infer --state "$STATE" --slug policylm --split 
 # Repeat for shieldstral, kev and clef.
 
 python -m evals.prompt_injection.api --state "$STATE" --slug jev --split fit --keyfile /private/path/openrouter-key.txt
-python -m evals.prompt_injection.api --state "$STATE" --slug safeguard --split fit --keyfile /private/path/openrouter-key.txt
+# Start a localhost-only vLLM server with the pinned Safeguard checkpoint.
+# The full server invocation is in the execution artifacts.
+python -m evals.prompt_injection.local_safeguard --state "$STATE" --split fit --concurrency 16
 
 # All six fitting outputs are required before creating the example policies.
 python -m evals.prompt_injection.study author --state "$STATE"
@@ -60,7 +63,7 @@ python -m evals.prompt_injection.study jobs --state "$STATE" --split test
 python -m evals.prompt_injection.report --state "$STATE" --out "$STATE/report"
 ```
 
-The API code routes Jev to its Decisions interface and Safeguard to Groq through OpenRouter, without provider fallback. Credential values are read from a local file and never printed. A durable SQLite ledger reserves costs before each request; unknown transport charges retain a conservative upper bound. Pending reservations must be reconciled before resuming. Retries do not replace malformed model output with repeated samples. Results are resumable only for matching request hashes. Repeated failures halt the run for inspection.
+Jev uses its native Decisions API. The initial Safeguard/Groq API preflight was rate-limited and is retained only as operational evidence; the benchmark uses the pinned self-hosted Safeguard checkpoint throughout. Credential values are read from a local file and never printed. A durable SQLite ledger reserves costs before each request; unknown transport charges retain a conservative upper bound. Pending reservations must be reconciled before resuming. Retries do not replace malformed model output with repeated samples. Results are resumable only for matching request hashes. Repeated failures halt the run for inspection.
 
 Before final testing, collect and inspect fitting/validation execution failures, freeze all policies, and archive the selection evidence. Do not inspect test examples to repair a policy or decide which arm to report. Additional revisions require another registered study.
 
@@ -68,4 +71,31 @@ Before final testing, collect and inspect fitting/validation execution failures,
 
 Collect prompt-free predictions, source hashes, metadata, selected IDs, exact costs, environment records and failure/amendment notes. Raw example-bearing policies remain private; publish their hashes and source IDs so they can be restored from the pinned development records. Original brief/structured policy text is in `policies.py`. The four final test collections must be reported separately, with baseline changes and both types of classification errors.
 
-Terminate the GPU, verify provider status and billing, remove temporary access keys, reconcile both API ledgers, and update `docs/COMPUTE.md`. Publish the readout and safe evidence with a README link. No result, latency claim or cost-per-request conclusion should be inferred from this preparation-only record.
+Terminate the GPU, verify provider status and billing, remove temporary access keys, reconcile both API ledgers, and update `docs/COMPUTE.md`. Publish the readout and safe evidence with a README link. This is an accuracy study, not a controlled latency or cost-per-request benchmark.
+
+## Reproduce the eventual published tables without inference
+
+Once final artifacts are published, use the prompt-free archive and its checksum
+verifier. This step needs NumPy but no GPU, model download, API key or raw prompt
+text. It recomputes the metrics and paired bootstrap intervals rather than
+copying the published table.
+
+```sh
+python scripts/reproduce_prompt_injection.py \
+  --archive published_runs/2026-11-02-prompt-injection \
+  --out /tmp/injection-reproduced.json
+```
+
+To reconstruct the exact model-specific policy candidates, prepare the pinned
+data privately using the steps above, then run:
+
+```sh
+python scripts/restore_prompt_injection_policies.py \
+  --archive published_runs/2026-11-02-prompt-injection \
+  --data-state "$STATE" \
+  --out /private/path/restored-policies
+```
+
+The script requires the original fitting-data hash and verifies each restored
+policy against the frozen file hash. Keep these files private because their
+labeled examples quote source datasets whose redistribution terms differ.

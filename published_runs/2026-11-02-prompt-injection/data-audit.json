@@ -1,0 +1,171 @@
+{
+  "near_duplicate_rule": "NFKC/casefold/whitespace exact; >=0.90 cosine of hashed character 5-gram counts, minimum 20 characters; connected components; JBB goals included",
+  "near_edges": 1921,
+  "excluded_development": 336,
+  "missing_jbb": [
+    {
+      "method": "PAIR",
+      "index": 24,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 26,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 31,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 32,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 37,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 40,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 47,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 49,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 55,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 56,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 59,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 68,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 72,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 76,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 81,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 83,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 85,
+      "reason": "No released attack prompt"
+    },
+    {
+      "method": "PAIR",
+      "index": 93,
+      "reason": "No released attack prompt"
+    }
+  ],
+  "excluded_by_source": {
+    "deepset": 3,
+    "safeguard": 333
+  },
+  "development_unused": 7934,
+  "splits": {
+    "fit": {
+      "deepset": {
+        "n": 128,
+        "labels": {
+          "BLOCK": 64,
+          "ALLOW": 64
+        }
+      },
+      "safeguard": {
+        "n": 128,
+        "labels": {
+          "BLOCK": 64,
+          "ALLOW": 64
+        }
+      }
+    },
+    "validation": {
+      "deepset": {
+        "n": 128,
+        "labels": {
+          "BLOCK": 64,
+          "ALLOW": 64
+        }
+      },
+      "safeguard": {
+        "n": 128,
+        "labels": {
+          "BLOCK": 64,
+          "ALLOW": 64
+        }
+      }
+    },
+    "test": {
+      "deepset": {
+        "n": 116,
+        "labels": {
+          "BLOCK": 60,
+          "ALLOW": 56
+        }
+      },
+      "jbb": {
+        "n": 182,
+        "labels": {
+          "BLOCK": 182
+        }
+      },
+      "notinject": {
+        "n": 339,
+        "labels": {
+          "ALLOW": 339
+        }
+      },
+      "safeguard": {
+        "n": 2060,
+        "labels": {
+          "ALLOW": 1410,
+          "BLOCK": 650
+        }
+      }
+    }
+  },
+  "test_duplicate_groups": 131,
+  "test_cross_source_groups": 1,
+  "files": {
+    "data/fit.jsonl": "e5ac12953061ff962ef8d1d771e5b1162cbf83c2d2376816cd3c2f3c4448e7fe",
+    "data/test.jsonl": "275255552e3c8fa725fc70a3d5ea4d1046b64e8b715154e41456d725ebf86155",
+    "data/validation.jsonl": "dd1c34ea04527ed7a718f6b65c0bb3d8660d0ca2b1db40fa2e93aa97ba823c1a"
+  }
+}

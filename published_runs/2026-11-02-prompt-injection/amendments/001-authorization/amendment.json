@@ -1,0 +1,6 @@
+{
+  "id": "001-authorization",
+  "created_utc": "2026-11-02T20:13:21.489946+00:00",
+  "previous_registration_sha256": "5a1d3b10e2d4126314dd8dcb47ffdea517e92cb1e861bb24b51834f17490d68f",
+  "reason": "User allocated up to $15; raise authorization guard to $15 and GPU auto-termination reservation to six hours. Data, policies, selection rules and decisions unchanged. No model inference had started."
+}

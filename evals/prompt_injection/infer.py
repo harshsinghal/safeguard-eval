@@ -57,7 +57,7 @@ class Native:
 def run(state,slug,split,vendor):
     state=Path(state);verify(state,test=split=='test')
     authorization=read(state/'authorization.json')
-    if not authorization.get('approved') or authorization['experiment_cap_usd']>8:raise ValueError('Budget not approved')
+    if not authorization.get('approved') or not 0<authorization['experiment_cap_usd']<=15:raise ValueError('Budget not approved')
     catalog=read(state/f'jobs/{split}-manifest.json')[slug]
     engine=Native(slug,vendor);start=time.monotonic();errors=0
     for pid in catalog:

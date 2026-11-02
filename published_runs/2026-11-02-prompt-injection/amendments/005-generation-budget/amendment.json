@@ -1,0 +1,6 @@
+{
+  "id": "005-generation-budget",
+  "created_utc": "2026-11-02T20:39:16.929445+00:00",
+  "previous_registration_sha256": "3175ff7b922d2cd9acf6ca8a8fde11489a9651faf4465752adf5388ef5d8fdf7",
+  "reason": "Full fitting collection found 13/256 Safeguard outputs truncated at 2048 tokens (243 stop, 13 length). Before authoring example policies or validation, fix its generation allowance to 8192, matching prior studies, and rerun all 256 fitting examples. Context limit rises to 32768 to accommodate original inputs plus the output budget; transport timeout is 600 seconds. No policy, label, cutoff, weight or reasoning-effort change. Preserve all 2048-token predictions and costs as an operational pilot. No test inference has occurred. This budget will be identical for all Safeguard validation/test candidates."
+}
