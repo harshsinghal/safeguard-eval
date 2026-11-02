@@ -14,6 +14,8 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 **Latest experiment:** [Optimizing example formatting, retrieval and selection](docs/retrieval-optimization/README.md) tested 72 validation configurations across four classifiers. Better retrieval recovered PolicyLM's original retrieval loss (84.34% → 86.52% test accuracy), but did not beat its policy-only control (86.70%). Kev's validation gain did not carry over; Jev gained only two test cases. Policy-only Shieldstral remained strongest among the frozen test choices at 90.82%. The readout includes every stage, both error counts, uncertainty and a reproducible archive.
 
+**Prepared next study:** [Prompt injection and benign lookalikes](docs/prompt-injection/README.md) will compare PolicyLM, Shieldstral, GPT-OSS Safeguard, Jev, Kev and Clef on 2,697 evaluation examples. Policy selection uses separate fitting/validation data; there is no new calibration or cutoff tuning. Dataset preparation and local contract checks are complete; paid execution awaits budget allocation, so there are no new results yet.
+
 ## Experiment map
 
 We started by asking whether a model could apply a platform's written rules. That led to three branches: **change the policy, change how scores become decisions, or learn a classifier from the model's internal features**. We also measure what it takes to serve representative systems. The map shows how the questions connect; it is not one shared pipeline. Numbers refer to the entries in the [experiment log](#experiment-log).
@@ -61,6 +63,8 @@ flowchart TB
     SERVING --> CLOUD["21 · Cloud-compatible GPU<br/>L4 · vLLM and SGLang<br/>Prompt length · Loading checks"]
     EVIDENCE -.-> NEXT["PROPOSED · Not started<br/>Add trained feature heads<br/>Policy + cutoff · Second pass"]
 
+    START -.-> INJECTION["24 · PREPARED · Awaiting budget<br/>Six-model injection detection<br/>Attacks + benign lookalikes<br/>Policy tuning · Fixed decisions"]
+
     classDef neutral fill:#f1f5f9,stroke:#64748b,color:#172c49;
     classDef policy fill:#eef4ff,stroke:#526b91,color:#172c49;
     classDef scores fill:#e9f5ef,stroke:#367556,color:#153e2b;
@@ -70,13 +74,13 @@ flowchart TB
     class P1,P2,P3,P4,P5 policy;
     class S1,S2,S3,S4 scores;
     class F1,F2,F3,F4,F5 features;
-    class NEXT proposed;
+    class NEXT,INJECTION proposed;
     style POLICY fill:#f8fafc,stroke:#cbd5e1
     style SCORES fill:#f8fafc,stroke:#cbd5e1
     style FEATURES fill:#f8fafc,stroke:#cbd5e1
 ```
 
-**How to read the map:** solid boxes describe completed work; the dashed box is future work awaiting authorization. The separate **frontier-API pilot (6)** checked whether requests returned usable classifications; its full held-out experiment did not run. Not every branch covers both benchmarks: the first decision-model ensemble, the first two representation studies, training-error corrections, Liquid fine-tuning, and retrieved examples were tested on WildGuard only. The smart ensemble and task-specific contrastive-head study cover both benchmarks. The representation, correction, smart-ensemble, contrastive-head, Liquid, and retrieved-example studies use separate validation protocols and are **not merged into the common leaderboard**.
+**How to read the map:** solid boxes describe completed work; dashed boxes describe proposed work or prepared studies awaiting execution funding. The separate **frontier-API pilot (6)** checked whether requests returned usable classifications; its full held-out experiment did not run. Not every branch covers both benchmarks: the first decision-model ensemble, the first two representation studies, training-error corrections, Liquid fine-tuning, and retrieved examples were tested on WildGuard only. The smart ensemble and task-specific contrastive-head study cover both benchmarks. The representation, correction, smart-ensemble, contrastive-head, Liquid, and retrieved-example studies use separate validation protocols and are **not merged into the common leaderboard**.
 
 | Follow a branch | Where to start |
 |---|---|
@@ -319,6 +323,16 @@ We followed the initial retrieval study with four stages: model-specific example
 All four selected retrieval recipes caught more harmful prompts **and** created more false blocks. Kev's balanced accuracy rose while ordinary accuracy fell, demonstrating why the error objective matters. Qwen 4B won none of the retriever comparisons, and no expanded-library condition became a final choice. This was a staged search on reused WildGuard data, not proof that retrieval cannot help. The follow-up cost **$1.821**, bringing the two retrieval studies to **$2.696 of the fresh $20 allowance**. The GPU was terminated and temporary access keys removed.
 
 [Readout and chart](docs/retrieval-optimization/README.md) · [All configurations and paired changes](docs/retrieval-optimization/RESULTS.md) · [Plan and amendments](docs/retrieval-optimization/NOTES.md) · [Pre-test selections](docs/retrieval-optimization/freeze.json) · [Frozen evidence and CPU reproduction](published_runs/2026-11-01-retrieval-optimization/README.md)
+
+### 24. Prompt injection: attacks, obfuscation and benign lookalikes
+
+**Prepared, not yet run.** The next study compares PolicyLM, Shieldstral, GPT-OSS Safeguard, Jev, Kev and Clef. It uses the original xTRam1 and deepset binary tests, NotInject's benign stress cases, and released JailbreakBench GCG/PAIR attempts. The 2,697 final examples remain in separate comparisons: attack-only and benign-only sets do not receive artificial balanced-accuracy scores.
+
+The dataset audit excludes 336 overlapping training rows and reserves 256 fitting and 256 validation examples. Each model will compare a brief policy, an explicit policy with attack mechanisms and benign exceptions, and fitting-derived examples. Validation selects policy text; native decision rules stay fixed. No new score calibration, threshold search or model fine-tuning is planned. Public labels have contextual ambiguities, so agreement with those labels will not be described as proof that an agent is secure.
+
+Preparation cost $0 in GPU/API fees. Nine local contract checks pass; the new end-to-end inference run still needs its smoke check. Paid execution awaits the requested budget allocation. This study is separate from the earlier injection pilot and the WildGuard/HateXplain leaderboard.
+
+[Study overview](docs/prompt-injection/README.md) · [Protocol](docs/prompt-injection/PLAN.md) · [Run guide](docs/prompt-injection/RUNNING.md) · [Implementation](evals/prompt_injection/) · [Dataset audit](docs/prompt-injection/preparation/data-audit.json)
 
 ## What the evidence suggests for moderation teams
 

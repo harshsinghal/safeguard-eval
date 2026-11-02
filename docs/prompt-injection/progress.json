@@ -1,0 +1,27 @@
+{
+  "updated_utc": "2026-11-02T19:17:23.242268+00:00",
+  "status": "prepared_awaiting_budget_allocation",
+  "fit_n": 256,
+  "validation_n": 256,
+  "test_n": 2697,
+  "models": [
+    "policylm",
+    "shieldstral",
+    "safeguard",
+    "jev",
+    "kev",
+    "clef"
+  ],
+  "tests_passed": 9,
+  "gpu_api_spend_usd": 0,
+  "gpu_provisioned": false,
+  "inference_requests_sent": 0,
+  "requested_cap_usd": 8,
+  "requested_gpu_reservation_usd": 2.6,
+  "requested_api_caps_usd": {
+    "jev": 1,
+    "safeguard": 3.5
+  },
+  "budget_approved": false,
+  "test_results_available": false
+}

@@ -1,0 +1,122 @@
+{
+  "deepset/train": {
+    "n": 546,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "labels": {
+      "0": 343,
+      "1": 203
+    }
+  },
+  "deepset/test": {
+    "n": 116,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "labels": {
+      "1": 60,
+      "0": 56
+    }
+  },
+  "safeguard/train": {
+    "n": 8236,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "labels": {
+      "0": 5740,
+      "1": 2496
+    }
+  },
+  "safeguard/test": {
+    "n": 2060,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "labels": {
+      "0": 1410,
+      "1": 650
+    }
+  },
+  "notinject/one": {
+    "n": 113,
+    "columns": [
+      "prompt",
+      "word_list",
+      "category"
+    ]
+  },
+  "notinject/two": {
+    "n": 113,
+    "columns": [
+      "prompt",
+      "word_list",
+      "category"
+    ]
+  },
+  "notinject/three": {
+    "n": 113,
+    "columns": [
+      "prompt",
+      "word_list",
+      "category"
+    ]
+  },
+  "jbb/GCG": {
+    "type": "dict",
+    "keys": [
+      "parameters",
+      "jailbreaks"
+    ],
+    "list_fields": {
+      "jailbreaks": {
+        "n": 100,
+        "first_keys": [
+          "index",
+          "goal",
+          "behavior",
+          "category",
+          "prompt",
+          "response",
+          "number_of_queries",
+          "queries_to_jailbreak",
+          "prompt_tokens",
+          "response_tokens",
+          "jailbroken",
+          "jailbroken_llama_guard1"
+        ]
+      }
+    }
+  },
+  "jbb/PAIR": {
+    "type": "dict",
+    "keys": [
+      "parameters",
+      "jailbreaks"
+    ],
+    "list_fields": {
+      "jailbreaks": {
+        "n": 100,
+        "first_keys": [
+          "index",
+          "goal",
+          "behavior",
+          "category",
+          "prompt",
+          "response",
+          "number_of_queries",
+          "queries_to_jailbreak",
+          "prompt_tokens",
+          "response_tokens",
+          "jailbroken",
+          "jailbroken_llama_guard1"
+        ]
+      }
+    }
+  }
+}
