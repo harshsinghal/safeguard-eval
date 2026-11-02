@@ -10,7 +10,7 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 *Maintained by [Harsh Singhal](https://www.linkedin.com/in/harshsinghal). A growing collection of exploratory studies; the paper is an author-review draft.*
 
-[Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
+[Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Datasets](docs/datasets/README.md) · [Models](docs/models/README.md) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
 
 **Latest experiment:** [Prompt injection and benign lookalikes](docs/prompt-injection/README.md) compares six models on 2,697 examples, with three policy candidates selected on separate development data. The results report both missed attempts and false blocks, retain unresolved answers, and use fixed decision rules without new calibration. [Full results](docs/prompt-injection/RESULTS.md) · [Policy edits](docs/prompt-injection/POLICY-CHANGES.md)
 
@@ -102,6 +102,12 @@ The main studies ask whether we can improve classification by changing the **pol
 
 The main comparisons are binary ALLOW/BLOCK tasks. The earlier demonstrations also explored REVIEW, but these two benchmarks do not establish a validated three-way review workflow. The DiffusionDB browsing demo and synthetic demonstrations are separate from the main benchmark evidence.
 
+The [dataset directory](docs/datasets/README.md) covers all evaluation sources,
+including the injection and jailbreak collections, original demonstrations,
+source links, label mappings and study-specific splits. The
+[model directory](docs/models/README.md) lists the classifiers, general LLMs,
+decision models, encoders, retrievers and API pilots, with their roles and interfaces.
+
 | Model family | Models tested | How they enter the experiments |
 |---|---|---|
 | Specialist policy models | PolicyLM 1.7B, Shieldstral 3B, CoPE-B-A4B, GPT-OSS Safeguard 20B | Authored rules delivered through each model's native interface. |
@@ -113,7 +119,7 @@ The main comparisons are binary ALLOW/BLOCK tasks. The earlier demonstrations al
 | Task-specific classifiers | PolicyLM 1.7B and ModernBERT-base 149M | Matched linear, neural and contrastive heads on frozen features; separately trained on WildGuard and HateXplain with three neural seeds. |
 | Supervised encoder fine-tuning | Liquid LFM2.5-Encoder-350M | Frozen encoder with logistic regression versus updating the encoder and a binary head; WildGuard only, three fine-tuning seeds. |
 
-Not every model has been tested on every dataset. The [interface audit](docs/research-directions/POLICY-INTERFACE-AUDIT.md), [model reference guide](skills/safeguard-eval/references/models.md), and [decision-model study](docs/decision-models/README.md) identify the checkpoints and adapters behind these names. Model size alone does not establish inference cost, speed, or suitability.
+Not every model has been tested on every dataset. The [model directory](docs/models/README.md), [interface audit](docs/research-directions/POLICY-INTERFACE-AUDIT.md), and [decision-model study](docs/decision-models/README.md) identify the checkpoints and adapters behind these names. Model size alone does not establish inference cost, speed, or suitability.
 
 ## Experiment log
 
@@ -357,6 +363,8 @@ These experiments support a workflow in which policy owners and engineers test c
 
 | Start here | What you will find |
 |---|---|
+| [Dataset directory](docs/datasets/README.md) | Every evaluation source: where to find it, the tasks and labels it contains, our mappings and test populations, and links to experiment evidence. Demonstrations and serving workloads are identified separately. |
+| [Model directory](docs/models/README.md) | Publisher links, model sizes, open-weight/API access, native policy interfaces and which studies used each model. Includes supporting encoders, retrievers and clearly labeled pilots. |
 | [Engineering article](docs/engineering-guardrails/README.md) | A shorter guide to building and evaluating a policy guardrail, with an editable Word version. |
 | [Self-hosting guide](docs/cloud-serving/DEPLOYMENT.md) | Model interfaces, vLLM/SGLang, input lengths, batching, cloud GPU selection and the operational responsibilities behind a moderation endpoint. |
 | [Backbone and cloud-serving survey](docs/research-directions/POLICY-BACKBONES-AND-CLOUD-SERVING.md) | Gemma, Liquid, Qwen and smaller encoders; what TPU throughput headlines mean for a policy classifier. Source review and proposed checks, not new benchmark results. |

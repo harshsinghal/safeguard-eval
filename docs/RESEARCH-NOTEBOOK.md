@@ -34,6 +34,13 @@ representation-score, policy-optimization and second-pass proposals.
    Label pilots, proposals, synthetic demonstrations, and reused-test analyses.
 4. Link the summary and frozen evidence from that entry. Preserve the historical
    result even if a later selection objective produces a different score.
+5. Update the [dataset directory](datasets/README.md) and
+   [model directory](models/README.md) when adding a source, checkpoint or new
+   experimental role. Include publisher links, our task/label mapping or model
+   interface, and the study's version records. Keep full evaluations, pilots,
+   demonstrations and supporting models distinguishable; proposals are not
+   completed entries. These living directories do not replace frozen archives
+   or update a separately versioned skill release.
 
 Do not rewrite frozen results. Publish corrections or extensions separately,
 explain the difference, and link both versions. Dates belong in provenance and
