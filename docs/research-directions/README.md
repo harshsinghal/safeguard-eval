@@ -3,6 +3,15 @@
 The original directions were recorded on 25 October 2026. This index distinguishes
 proposals from the later completed studies linked below.
 
+## Concurrent task specialists
+
+The [parallel-specialist proposal](PARALLEL-TASK-SPECIALISTS.md) combines a
+WildGuard classifier and a separately fine-tuned HateXplain classifier behind
+an any-block endpoint. It separates native-task accuracy, the cross-labels needed
+for combined accuracy, and latency tests with two through ten checks. Replicated
+classifiers simulate serving load, not additional learned policies. Training and
+serving runs have not started.
+
 ## Choosing a backbone for future cloud deployment
 
 The [policy-backbone and cloud-serving survey](POLICY-BACKBONES-AND-CLOUD-SERVING.md)
