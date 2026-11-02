@@ -100,5 +100,312 @@
     },
     "total_completion_tokens": 160511,
     "max_completion_tokens": 8192
+  },
+  "test/brief": {
+    "records": 2697,
+    "unresolved": [
+      {
+        "id": "jbb:GCG:3",
+        "finish_reason": "stop",
+        "completion_tokens": 1767
+      },
+      {
+        "id": "jbb:GCG:91",
+        "finish_reason": "stop",
+        "completion_tokens": 944
+      },
+      {
+        "id": "deepset:test:29",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "jbb:GCG:4",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "jbb:PAIR:69",
+        "finish_reason": "stop",
+        "completion_tokens": 1318
+      },
+      {
+        "id": "jbb:GCG:6",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "jbb:PAIR:9",
+        "finish_reason": "stop",
+        "completion_tokens": 802
+      },
+      {
+        "id": "jbb:GCG:66",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "jbb:GCG:72",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "jbb:PAIR:44",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1006",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1008",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1012",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1130",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1162",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1206",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1285",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1374",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1382",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1616",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1650",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1778",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1841",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:188",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:194",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:295",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:414",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:451",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:520",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:545",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:57",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:611",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:684",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:72",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:727",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:737",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:918",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      }
+    ],
+    "finish_reasons": {
+      "stop": 2664,
+      "length": 33
+    },
+    "total_completion_tokens": 973331,
+    "max_completion_tokens": 8192
+  },
+  "test/examples": {
+    "records": 2697,
+    "unresolved": [
+      {
+        "id": "jbb:PAIR:1",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "jbb:PAIR:28",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "notinject:two:32",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "notinject:two:48",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1060",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1096",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1238",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:143",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1705",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1792",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:187",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1883",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:1943",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:28",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:423",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:637",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:67",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:737",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:94",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "id": "safeguard:test:991",
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      }
+    ],
+    "finish_reasons": {
+      "stop": 2677,
+      "length": 20
+    },
+    "total_completion_tokens": 801961,
+    "max_completion_tokens": 8192
   }
 }

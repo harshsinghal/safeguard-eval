@@ -15,3 +15,32 @@ No final test predictions had been generated at these amendments. The test set i
 The 8,192-token rerun completed all 256 fitting records with two unresolved outputs. Those remain in the record; the output allowance is fixed for validation and test. All six models’ example policies were then authored and frozen from fitting data. Validation began only after that freeze.
 
 All 4,608 validation decisions were collected before selection. Safeguard had ten unresolved validation outputs (nine token-limit truncations and one invalid binary response); the other five models had none. The fixed rule selected examples for PolicyLM, Safeguard and Jev, structured for Shieldstral, and brief for Kev and Clef. This evidence is committed before test requests are issued.
+
+## Completion and verification
+
+All six models completed the registered final population. The ten distinct test
+configurations produced 26,970 records covering the same 2,697 examples; Kev and
+Clef reuse brief predictions because brief was selected. All records matched
+the frozen policy and request hashes. No setting was changed in response to
+held-out outcomes.
+
+Safeguard's brief run had 37 unresolved outputs: 33 token-limit truncations and
+four invalid binary answers. Its selected example-bearing run had 20 unresolved
+outputs, all token-limit truncations. No transport failures occurred. The other
+five models had no unresolved test outputs. These outcomes remain in the metrics.
+The two selected NotInject failures are unresolved, separate from four false
+blocks; neither is counted as a correct allow.
+
+The prompt-free archive reproducer matched every published dataset metric and
+all 2,000-draw paired group-bootstrap intervals exactly. Policy restoration also
+matched all six frozen candidate-file hashes. Raw execution logs and responses
+are retained privately; public artifacts contain no raw source prompts or model
+reasoning.
+
+The GPU was terminated and verification completed at 2026-11-02 22:44 UTC.
+GPU.ai reported 8,883 GPU-seconds and $1.60. Jev accounting was $0.173527200;
+Safeguard's excluded API preflight added $0.075251000, including $0.070400000 in
+conservative unknown-charge allowances. Total accounted cost was $1.848778200
+against the authorized $15, leaving $13.151221800 of that allocation unused.
+Temporary local/provider SSH keys were removed and zero active instances were
+confirmed. RunPod was not used.

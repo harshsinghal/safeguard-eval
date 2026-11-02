@@ -1,0 +1,47 @@
+{
+  "termination_verified_utc": "2026-11-02T22:44:08.857117+00:00",
+  "provider": "GPU.ai",
+  "gpu": "NVIDIA RTX6000 Ada 48GB",
+  "hourly_usd": 0.65,
+  "auto_terminate_hours": 6,
+  "gpu_seconds": 8883,
+  "gpu_usd": 1.6,
+  "api": {
+    "jev": {
+      "cap_usd": 1.0,
+      "total_accounted_usd": 0.1735272,
+      "statuses": {
+        "reported": {
+          "requests": 6418,
+          "usd": 0.1735272
+        }
+      }
+    },
+    "safeguard": {
+      "cap_usd": 3.5,
+      "total_accounted_usd": 0.075251,
+      "statuses": {
+        "reported": {
+          "requests": 83,
+          "usd": 0.004851
+        },
+        "unknown_upper_bound": {
+          "requests": 22,
+          "usd": 0.0704
+        }
+      }
+    }
+  },
+  "experiment_cost_usd": 1.8487782000000001,
+  "experiment_cap_usd": 15,
+  "allocation": "from the previously remaining retrieval allowance, explicitly authorized for this benchmark",
+  "cumulative_prior_studies_usd": 22.05595230256,
+  "cumulative_accounted_usd": 23.904730502560003,
+  "prior_retrieval_studies_usd": 2.69593443,
+  "remaining_from_original_retrieval_allowance_usd": 15.455287369999999,
+  "unused_benchmark_allocation_usd": 13.1512218,
+  "runpod_used": false,
+  "reported_and_unknown_charge_upper_bounds_included": true,
+  "local_electricity_and_engineering_time_excluded": true,
+  "status": "terminated"
+}

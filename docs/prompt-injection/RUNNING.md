@@ -1,8 +1,10 @@
 # Running the injection study
 
-Execution is in progress under a user-authorized $15 allocation. See [the plan](PLAN.md) and [execution amendments](NOTES.md) for the fixed selection rules and the provider-rate-limit fallback.
+The study completed at an accounted cost of $1.848778200 under the user-authorized $15 allocation, with the GPU terminated. See [the completed readout](README.md), [the frozen pre-test plan](PLAN.md), and [execution amendments](NOTES.md). The plan deliberately retains its pre-run wording; current status is recorded in the readout and progress file.
 
 ## Prepare without paid inference
+
+The implementation used for this run is preserved in commit `cc7cf1f`; subsequent result-publication edits do not change the frozen inference code. Source hashes are in the run registration.
 
 Use Python 3.12 in a local virtual environment. The preparation environment used `pyarrow==26.0.0`, `numpy==2.5.4`, `scipy==1.18.1` and `scikit-learn==1.9.1`. Keep `STATE` outside Git: it contains licensed dataset text and later request logs.
 
@@ -22,7 +24,7 @@ python -m evals.prompt_injection.study jobs --state "$STATE" --split fit
 
 Paid commands require a private `authorization.json` with `approved: true` and `experiment_cap_usd: 15`. **Create this only after actual user authorization**, recording its source and time. This file is a guard, not a substitute for permission. The recorded study authorization is $15; a reproduction requires its own authorization. Recheck GPU/API prices, available balance and existing resources before provisioning. Set provider-side automatic termination, with at most $3.90 reserved for a six-hour $0.65/hour GPU. API caps are $1 for Jev and $3.50 for Safeguard. Do not change these caps merely to get a run to finish.
 
-GPU.ai is preferred; RunPod is a fallback within the same budget. A 48 GB RTX6000 Ada is sufficient for the sequential open-model runs. Do not publish SSH details, credentials, provider resource IDs, weights, raw source text or API responses.
+The recorded run used GPU.ai; the project owner also authorized RunPod as a fallback within the same budget. This is provenance, not a provider endorsement. A reproduction may use a compatible host chosen for its own cost and data-handling requirements. The sequential open-model runs were exercised on a 48 GB RTX6000 Ada. Do not publish SSH details, credentials, provider resource IDs, weights, raw source text or API responses.
 
 The native engines inherit previously exercised, pinned implementations, but use separate Python environments:
 
@@ -73,9 +75,9 @@ Collect prompt-free predictions, source hashes, metadata, selected IDs, exact co
 
 Terminate the GPU, verify provider status and billing, remove temporary access keys, reconcile both API ledgers, and update `docs/COMPUTE.md`. Publish the readout and safe evidence with a README link. This is an accuracy study, not a controlled latency or cost-per-request benchmark.
 
-## Reproduce the eventual published tables without inference
+## Reproduce the published tables without inference
 
-Once final artifacts are published, use the prompt-free archive and its checksum
+Use the completed prompt-free archive and its checksum
 verifier. This step needs NumPy but no GPU, model download, API key or raw prompt
 text. It recomputes the metrics and paired bootstrap intervals rather than
 copying the published table.
@@ -99,3 +101,12 @@ python scripts/restore_prompt_injection_policies.py \
 The script requires the original fitting-data hash and verifies each restored
 policy against the frozen file hash. Keep these files private because their
 labeled examples quote source datasets whose redistribution terms differ.
+
+To regenerate the Markdown tables and both figures from the same public archive,
+install Matplotlib (the recorded renderer used 3.11.2) and run:
+
+```sh
+python scripts/render_prompt_injection.py \
+  --archive published_runs/2026-11-02-prompt-injection \
+  --out-dir /tmp/injection-report
+```

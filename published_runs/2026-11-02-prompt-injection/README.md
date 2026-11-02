@@ -28,4 +28,18 @@ All six reconstructed candidate files must match the frozen hashes. Compressed
 predictions and metadata contain IDs, labels, hashes and decisions, without raw
 source text. Model/runtime and split identities are retained.
 
-Status: validation complete and policies frozen; final test inference has not started.
+Final inference, billing reconciliation and resource termination are complete.
+[Results](../../docs/prompt-injection/RESULTS.md), [machine-readable summary](summary.json),
+[CSV](results.csv), [billing](billing.json), and [cleanup](cleanup.json).
+Recompute every headline metric and paired interval without GPU or API access:
+
+```sh
+python scripts/reproduce_prompt_injection.py \
+  --archive published_runs/2026-11-02-prompt-injection \
+  --out /tmp/injection-reproduced.json
+```
+
+The verifier checks every archived file against `checksums.json`, checks the test
+population and labels, and requires exact agreement with the published metrics
+and bootstrap intervals. Fitting pilots excluded from classifier results remain
+under `amendments/`; their costs remain in the billing ledger.

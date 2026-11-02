@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-02T21:17:33.738074+00:00",
-  "status": "policies_frozen_before_test",
+  "updated_utc": "2026-11-02T22:44:04.925967+00:00",
+  "status": "completed_and_resources_terminated",
   "fit_n": 256,
   "validation_n": 256,
   "test_n": 2697,
@@ -13,7 +13,7 @@
     "clef"
   ],
   "tests_passed": 30,
-  "gpu_api_spend_usd": null,
+  "gpu_api_spend_usd": 1.8487782000000001,
   "gpu_provisioned": true,
   "requested_cap_usd": 15,
   "requested_gpu_reservation_usd": 3.9,
@@ -22,7 +22,7 @@
     "safeguard": 3.5
   },
   "budget_approved": true,
-  "test_results_available": false,
+  "test_results_available": true,
   "authorized_cap_usd": 15,
   "safeguard_backend": "self-hosted vLLM; API preflight archived",
   "fit_complete": true,
@@ -35,5 +35,8 @@
     "kev": "brief",
     "clef": "brief",
     "jev": "examples"
-  }
+  },
+  "gpu_active": false,
+  "test_complete": true,
+  "gpu_terminated": true
 }

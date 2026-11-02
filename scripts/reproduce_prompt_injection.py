@@ -31,6 +31,7 @@ def reproduce(archive,out):
             rr=rows(archive/f'predictions/{slug}/test/{pid}.jsonl.gz')
             if len(rr)!=len(metadata) or {r['id'] for r in rr}!=set(by_id):raise ValueError('Incomplete population')
             for r in rr:
+                if r['policy_id']!=pid or r['prediction'] not in ('ALLOW','BLOCK','ERROR'):raise ValueError('Policy identity or decision mismatch')
                 if any(r[k]!=by_id[r['id']][k] for k in ('expected','group','split','prompt_sha256','dataset')):raise ValueError('Metadata mismatch')
             systems[slug+'/'+arm]=rr
     result={}

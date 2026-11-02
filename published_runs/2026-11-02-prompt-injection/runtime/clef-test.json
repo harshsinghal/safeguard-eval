@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-11-02T21:36:10.831616+00:00",
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "torch": "2.11.0+cu128",
+  "batch_size": 1,
+  "seconds": 497.90009476900013,
+  "dtype": "bfloat16",
+  "serial": true,
+  "errors": 0
+}

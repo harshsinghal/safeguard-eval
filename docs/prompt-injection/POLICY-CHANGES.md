@@ -24,6 +24,11 @@ slots. Neither validation nor test examples are copied into the policy. Their
 source IDs, labels and the model's initial decisions are published; exact quotes
 can be restored privately from the pinned data.
 
+The four copied examples were balanced by label, not by source. The fixed
+selection procedure chose four deepset examples for five models; Jev received
+three deepset examples and one xTRam1 example. This concentration and the short
+length limit constrain what we can infer about few-shot guidance more generally.
+
 ## Same intent, different model interfaces
 
 | Interpreter | How the policy is delivered |
@@ -38,6 +43,11 @@ We select among these three candidates separately for each model, using the same
 and allowing benign labels, equally across the two development sources. It does
 not reward the highest test score, and it does not optimize specifically for the
 external NotInject or JailbreakBench collections.
+
+When the example-bearing policy is selected, its test comparison with brief
+changes both the detailed guidance and the examples. That comparison cannot
+isolate which component caused a gain. Validation evaluates all three candidates,
+but this is not a full held-out component-ablation study.
 
 “Structured” changes both the amount of guidance and its specificity. It is not
 a pure Markdown-formatting experiment. The example-bearing policies differ

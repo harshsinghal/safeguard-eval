@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-11-02T22:43:10.356615+00:00",
+  "seconds": 3986.5100834739997,
+  "concurrency": 16,
+  "vllm": "0.31.0",
+  "models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "openai/gpt-oss-safeguard-20b",
+        "object": "model",
+        "created": 1793655403,
+        "owned_by": "vllm",
+        "root": "openai/gpt-oss-safeguard-20b",
+        "parent": null,
+        "max_model_len": 32768,
+        "permission": [
+          {
+            "id": "modelperm-801882572e983059",
+            "object": "model_permission",
+            "created": 1793655403,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ]
+  },
+  "model": {
+    "model": "openai/gpt-oss-safeguard-20b",
+    "provider": "self-hosted GPU.ai; vLLM 0.31.0",
+    "decision": "generated binary JSON label",
+    "reasoning": "medium",
+    "max_tokens": 8192,
+    "revision": "8a11e17b25c973a24099d4016bf2e17dd7ec1574",
+    "quantization": "publisher MXFP4"
+  },
+  "errors": 57
+}

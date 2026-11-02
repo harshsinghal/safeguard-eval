@@ -12,9 +12,7 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 [Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
 
-**Latest experiment:** [Optimizing example formatting, retrieval and selection](docs/retrieval-optimization/README.md) tested 72 validation configurations across four classifiers. Better retrieval recovered PolicyLM's original retrieval loss (84.34% → 86.52% test accuracy), but did not beat its policy-only control (86.70%). Kev's validation gain did not carry over; Jev gained only two test cases. Policy-only Shieldstral remained strongest among the frozen test choices at 90.82%. The readout includes every stage, both error counts, uncertainty and a reproducible archive.
-
-**Running now:** [Prompt injection and benign lookalikes](docs/prompt-injection/README.md) compares six models on 2,697 final examples. Validation is complete and policies are frozen under an authorized $15 ceiling; there is no new calibration or cutoff tuning.
+**Latest experiment:** [Prompt injection and benign lookalikes](docs/prompt-injection/README.md) compares six models on 2,697 examples, with three policy candidates selected on separate development data. The results report both missed attempts and false blocks, retain unresolved answers, and use fixed decision rules without new calibration. [Full results](docs/prompt-injection/RESULTS.md) · [Policy edits](docs/prompt-injection/POLICY-CHANGES.md)
 
 ## Experiment map
 
@@ -63,7 +61,7 @@ flowchart TB
     SERVING --> CLOUD["21 · Cloud-compatible GPU<br/>L4 · vLLM and SGLang<br/>Prompt length · Loading checks"]
     EVIDENCE -.-> NEXT["PROPOSED · Not started<br/>Add trained feature heads<br/>Policy + cutoff · Second pass"]
 
-    START -.-> INJECTION["24 · RUNNING · Final testing<br/>Six-model injection detection<br/>Attacks + benign lookalikes<br/>Policy tuning · Fixed decisions"]
+    START --> INJECTION["24 · Injection detection<br/>Six models · Four collections<br/>Attacks + benign lookalikes<br/>Policy tuning · Fixed decisions"]
 
     classDef neutral fill:#f1f5f9,stroke:#64748b,color:#172c49;
     classDef policy fill:#eef4ff,stroke:#526b91,color:#172c49;
@@ -74,7 +72,8 @@ flowchart TB
     class P1,P2,P3,P4,P5 policy;
     class S1,S2,S3,S4 scores;
     class F1,F2,F3,F4,F5 features;
-    class NEXT,INJECTION proposed;
+    class NEXT proposed;
+    class INJECTION policy;
     style POLICY fill:#f8fafc,stroke:#cbd5e1
     style SCORES fill:#f8fafc,stroke:#cbd5e1
     style FEATURES fill:#f8fafc,stroke:#cbd5e1
@@ -326,13 +325,23 @@ All four selected retrieval recipes caught more harmful prompts **and** created 
 
 ### 24. Prompt injection: attacks, obfuscation and benign lookalikes
 
-**Policies frozen before final testing.** The study compares PolicyLM, Shieldstral, GPT-OSS Safeguard, Jev, Kev and Clef. It uses the original xTRam1 and deepset binary tests, NotInject's benign stress cases, and released JailbreakBench GCG/PAIR attempts. The 2,697 final examples remain in separate comparisons: attack-only and benign-only sets do not receive artificial balanced-accuracy scores.
+Six models were compared on the original xTRam1 and deepset binary tests,
+NotInject's benign lookalikes, and released JailbreakBench GCG/PAIR attempts.
+The 2,697 final examples stay in separate comparisons: attack-only and benign-only
+sets do not receive artificial balanced-accuracy scores.
 
-The dataset audit excludes 336 overlapping training rows and reserves 256 fitting and 256 validation examples. Each model will compare a brief policy, an explicit policy with attack mechanisms and benign exceptions, and fitting-derived examples. Validation selects policy text; native decision rules stay fixed. No new score calibration, threshold search or model fine-tuning is planned. Public labels have contextual ambiguities, so agreement with those labels will not be described as proof that an agent is secure.
+The study compares brief, structured and example-bearing policies. Validation
+selected examples for PolicyLM, Safeguard and Jev; structured for Shieldstral;
+and brief for Kev and Clef. All selections were published before test inference.
+The native decision rules remained fixed, with no new calibration, threshold
+search or fine-tuning. Shieldstral's xTRam1 balanced accuracy rose from **71.66%
+to 84.32%** after policy revision. Clef and PolicyLM finished near **95.3%**, but
+Clef made one false block and 60 misses versus PolicyLM's 43 false blocks and 41
+misses. PolicyLM detected 172 of 182 jailbreak attempts, while falsely blocking
+26 of 339 NotInject benign cases. These trade-offs prevent a single pooled
+security ranking. The readout retains uncertainty, failures and source-label limits.
 
-All six fitting runs are complete. Thirty relevant contract checks pass. Execution is funded by an authorized $15 ceiling; final costs and results will be recorded after test collection and GPU termination. This study is separate from the earlier injection pilot and the WildGuard/HateXplain leaderboard.
-
-[Study overview](docs/prompt-injection/README.md) · [Protocol](docs/prompt-injection/PLAN.md) · [Run guide](docs/prompt-injection/RUNNING.md) · [Implementation](evals/prompt_injection/) · [Dataset audit](docs/prompt-injection/preparation/data-audit.json)
+[Study and findings](docs/prompt-injection/README.md) · [Results and baseline changes](docs/prompt-injection/RESULTS.md) · [Policy edits](docs/prompt-injection/POLICY-CHANGES.md) · [Frozen evidence and reproduction](published_runs/2026-11-02-prompt-injection/README.md)
 
 ## What the evidence suggests for moderation teams
 
@@ -461,6 +470,19 @@ Safeguard's nine unresolved WildGuard outputs include two compliant and seven vi
 **Small gaps need context.** On WildGuard, the leading ensemble exceeded CoPE by 0.50 balanced-accuracy points, with a paired 95% interval of −0.07 to +1.11; that does not resolve a clear difference. Its lead over WildGuard was 1.27 points (+0.33 to +2.21). On HateXplain, the mixed logistic ensemble led Jev by 0.95 points (−1.03 to +2.94). These unadjusted, exploratory intervals do not account for the full history of policy search and repeated test use.
 
 **An operational target can change the recommendation.** In the separate low-false-block view, the best HateXplain catch rate among configurations that met the 5% test limit was only 43.10%. On WildGuard, two of 35 eligible selections met that limit: logistic combinations of decisions only. The three-model version caught 82.23% of violations with 4.13% false blocks. Neither primary score ensemble met the limit. A useful aggregate score is not evidence that a deployment's error budget has been satisfied.
+
+### Prompt injection: separate benchmark populations
+
+| Model | xTRam1 balanced accuracy | Deepset balanced accuracy | NotInject false blocks ↓ | JBB attempt detection ↑ | Unresolved / 2,697 |
+|---|---:|---:|---:|---:|---:|
+| Clef-Flash | 95.35% | 67.50% | 2.95% | 91.21% | 0 |
+| PolicyLM 1.7B | 95.32% | 76.67% | 7.67% | 94.51% | 0 |
+| Kev 4B | 93.50% | 69.17% | 2.65% | 89.56% | 0 |
+| Jev 1.14 | 90.15% | 73.33% | 0.88% | 50.00% | 0 |
+| GPT-OSS Safeguard 20B | 88.24% | 60.77% | 1.18% | 93.96% | 20 |
+| Shieldstral 3B | 84.32% | 63.33% | 0.29% | 90.11% | 0 |
+
+Each row uses a policy frozen on validation. Higher balanced accuracy and attack detection are better; lower false-block rates are better. Unresolved outcomes stay in accuracy/recall denominators and are reported separately from actual false blocks. These are distinct test populations, not a combined security score. [Counts, baseline changes and uncertainty](docs/prompt-injection/RESULTS.md) · [Study limits](docs/prompt-injection/README.md) · [Metric definitions](docs/leaderboard/METRICS.md).
 
 ---
 
