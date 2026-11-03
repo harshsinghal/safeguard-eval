@@ -13,6 +13,13 @@ traces would extend our existing classification benchmarks. Reasoning modes,
 human-review workload and later supervised/preference training are distinct
 experiments. This is a source review and proposal; no model runs have started.
 
+The [agent-trace environment design](AGENT-TRACE-DATASET-ENVIRONMENTS.md) extends
+that proposal with observable outcomes and executable checks. It examines
+AgentHarm, AgentHazard and SABER's existing Pi adapter, then proposes collecting
+trusted action logs, state changes and approval events. It separates machine-
+verified labels from human judgments, and retrospective auditing from pre-action
+replay. The proposed data-collection pilot has not started.
+
 ## Training a shared moderation model with Tinker
 
 The [Tinker survey and proposed study](TINKER-MULTITASK-MODERATION.md) maps its

@@ -4,6 +4,11 @@ Status: source review and proposed research direction, checked 3 November 2026.
 No inference, training, GPU rental or paid API call was started. The study below
 is a proposal, not a registered protocol or a completed experiment.
 
+The subsequent [environment and labeling design](AGENT-TRACE-DATASET-ENVIRONMENTS.md)
+adds AgentHarm, AgentHazard and SABER, including SABER's published Pi adapter. It
+proposes deriving labels from observable outcomes under reviewed rules, while
+retaining independent human assessment for ambiguous policy judgments.
+
 ## Recommendation
 
 Build and evaluate an offline policy reviewer before training another guard model.
