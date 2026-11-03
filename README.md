@@ -20,6 +20,8 @@ policy text and labeled-example training are different ways to shape a decision;
 this study keeps their results and limitations visible.
 [Findings](docs/artifact-representations/RESULTS.md) · [Methods](docs/artifact-representations/METHODS.md)
 
+**In progress:** [Cyberattack requests and complete skill packages](docs/cyber-skill-guardrails/README.md) adds CyberSecEval and MalSkillBench, Meta guard-model baselines, and a paired test of companion files versus SKILL.md alone.
+
 ## Experiment map
 
 We started by asking whether a model could apply a platform's written rules. That led to three branches: **change the policy, change how scores become decisions, or learn a classifier from the model's internal features**. We also measure what it takes to serve representative systems. The map shows how the questions connect; it is not one shared pipeline. Numbers refer to the entries in the [experiment log](#experiment-log).

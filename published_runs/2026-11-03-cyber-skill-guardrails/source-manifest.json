@@ -1,0 +1,20 @@
+{
+  "purple_revision": "f64eebd53003a87d9c2d2a3a712133534c214c8d",
+  "skill_revision": "3548e2837adf58b96497f2c688f96beff26485da",
+  "source_files": {
+    "sources/Llama-Guard-3-8B-info.json": "f60c69e60efce1016bddbf5b2d3359c70395b8551307799e4f2b22d80d0f324c",
+    "sources/Llama-Guard-4-12B-info.json": "c2f82156b2f2357d3659c85324bdf5647343e04da2637a26836c84d1e14eb243",
+    "sources/Llama-Prompt-Guard-2-86M-info.json": "1b4a09a471bd51d8bff3872b1cdaac606e788a0dcdd1ec57a744cc76528872de",
+    "sources/frr.json": "7a9b400bdf5ddbb36d5e7c3e8f6b5adb5d13125b8d03be66fd252a0f20b79d15",
+    "sources/llamaguard4-README.md": "50da205cb878643efa43cb6d585173d7de5c8ffa260eef5ed31ed4acad4a3e14",
+    "sources/llamaguard4-chat_template.jinja": "40782d45db7ce0d96b0b2595c698e47603e2d459b0390f5025d974c861c53e3b",
+    "sources/llamaguard4-config.json": "344ab345ed1268f17e1d6f7d8eb3947b56ac90ca28834c18c171b64a026563cc",
+    "sources/llamaguard4-tokenizer_config.json": "0ae4529298fd6d9c1c316571ade3179343d208d47072cc3fac3cb37bcff21aa6",
+    "sources/malskill-benign-tree.json": "3f19cbf920199ef667c876a01ea885d7f88f5f7f520120e2fbe8c31727312cd7",
+    "sources/malskill-malware-tree.json": "eb491ab0e863402908782d2d00e17f476f3f6fdaec8f8254b5e00a555dcd090f",
+    "sources/malskill-root.json": "f8d1355004a6ccbc2a6afa9a68ccc71c5cd4cf7c2d6ec57e5ed59e721bff7434",
+    "sources/malskill-source-inventory.txt": "539dc60009c070f901144dba33a60c491b3d514e4598bdb951a5d4ec147fd811",
+    "sources/mitre.json": "0dc5ef0e4dc0f6937c1090473d85ee0d2800c83c5e9ccca568a3da7176b97d6a",
+    "sources/purple-tree.json": "4a0076419338dd904cb4710368afd776e2effe3d20fba140e84a30196616d133"
+  }
+}

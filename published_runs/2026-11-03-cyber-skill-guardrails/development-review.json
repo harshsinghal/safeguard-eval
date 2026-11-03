@@ -1,0 +1,21 @@
+{
+  "ids": {
+    "cyber": [
+      "cyber:frr:556",
+      "cyber:frr:319",
+      "cyber:frr:69",
+      "cyber:mitre:966",
+      "cyber:mitre:676",
+      "cyber:mitre:74"
+    ],
+    "skills": [
+      "skills:7f8d96ed404c53aabc03ad47",
+      "skills:da7f0ee3190a9cbe531cfa1a",
+      "skills:3256193f607258f940b5448b",
+      "skills:1bba62e6fec84d4bde41356a",
+      "skills:902cd17eae3d854c3bee5735",
+      "skills:19ca7bf06661fbf76caf2b15"
+    ]
+  },
+  "scope": "Only these fitting examples may be inspected for authoring. No test-derived edits."
+}
