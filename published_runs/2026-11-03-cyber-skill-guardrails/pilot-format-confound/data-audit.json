@@ -1,0 +1,180 @@
+{
+  "cyber": {
+    "audit": {
+      "groups": 1656,
+      "largest_group": 9,
+      "near_edges": 94,
+      "source_rows": 1750,
+      "eligible_rows": 1750,
+      "conflicting_or_oversize": 0
+    },
+    "splits": {
+      "fit": {
+        "n": 768,
+        "labels": {
+          "ALLOW": 384,
+          "BLOCK": 384
+        },
+        "groups": 723,
+        "sources": {
+          "frr": 384,
+          "mitre": 384
+        },
+        "categories": {
+          "benign_system_change": 384,
+          "Collection": 40,
+          "C2": 39,
+          "Discovery": 45,
+          "Evasion": 33,
+          "Execution": 38,
+          "Exfil": 33,
+          "Lateral Movement": 43,
+          "Persistence": 45,
+          "Privilege Escalation": 33,
+          "Recon": 35
+        },
+        "max_input_bytes": 2716
+      },
+      "validation": {
+        "n": 256,
+        "labels": {
+          "ALLOW": 128,
+          "BLOCK": 128
+        },
+        "groups": 243,
+        "sources": {
+          "frr": 128,
+          "mitre": 128
+        },
+        "categories": {
+          "benign_system_change": 128,
+          "C2": 17,
+          "Collection": 8,
+          "Discovery": 11,
+          "Evasion": 17,
+          "Execution": 13,
+          "Exfil": 13,
+          "Lateral Movement": 14,
+          "Persistence": 12,
+          "Privilege Escalation": 16,
+          "Recon": 7
+        },
+        "max_input_bytes": 2686
+      },
+      "test": {
+        "n": 332,
+        "labels": {
+          "ALLOW": 166,
+          "BLOCK": 166
+        },
+        "groups": 314,
+        "sources": {
+          "frr": 166,
+          "mitre": 166
+        },
+        "categories": {
+          "benign_system_change": 166,
+          "C2": 16,
+          "Collection": 18,
+          "Discovery": 12,
+          "Evasion": 25,
+          "Execution": 11,
+          "Exfil": 18,
+          "Lateral Movement": 13,
+          "Persistence": 15,
+          "Privilege Escalation": 20,
+          "Recon": 18
+        },
+        "max_input_bytes": 2706
+      }
+    }
+  },
+  "skills": {
+    "audit": {
+      "groups": 5223,
+      "largest_group": 636,
+      "near_edges": 7378,
+      "eligible_rows": 6886,
+      "eligible_labels": {
+        "ALLOW": 3304,
+        "BLOCK": 3582
+      },
+      "excluded": {
+        "benign:oversize_source": 688,
+        "benign:oversize_serialization": 2,
+        "benign:nonutf8": 4,
+        "malware:oversize_source": 355,
+        "malware:oversize_serialization": 4,
+        "malware:nonutf8": 1,
+        "conflicting_full_package": 4
+      }
+    },
+    "splits": {
+      "fit": {
+        "n": 1024,
+        "labels": {
+          "BLOCK": 512,
+          "ALLOW": 512
+        },
+        "groups": 813,
+        "sources": {
+          "WILD": 168,
+          "BENIGN": 512,
+          "GENERATED": 341,
+          "TEST": 3
+        },
+        "categories": {
+          "unknown": 171,
+          "benign": 512,
+          "CI": 133,
+          "MIXED": 59,
+          "PI": 149
+        },
+        "max_input_bytes": 19956
+      },
+      "validation": {
+        "n": 256,
+        "labels": {
+          "BLOCK": 128,
+          "ALLOW": 128
+        },
+        "groups": 243,
+        "sources": {
+          "GENERATED": 127,
+          "BENIGN": 128,
+          "WILD": 1
+        },
+        "categories": {
+          "PI": 53,
+          "benign": 128,
+          "CI": 55,
+          "MIXED": 19,
+          "unknown": 1
+        },
+        "max_input_bytes": 19824
+      },
+      "test": {
+        "n": 512,
+        "labels": {
+          "ALLOW": 256,
+          "BLOCK": 256
+        },
+        "groups": 479,
+        "sources": {
+          "BENIGN": 256,
+          "GENERATED": 251,
+          "WILD": 3,
+          "TEST": 2
+        },
+        "categories": {
+          "benign": 256,
+          "CI": 102,
+          "PI": 106,
+          "MIXED": 43,
+          "unknown": 5
+        },
+        "max_input_bytes": 19652
+      }
+    }
+  }
+}

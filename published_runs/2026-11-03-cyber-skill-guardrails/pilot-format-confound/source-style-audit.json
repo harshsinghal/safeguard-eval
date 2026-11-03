@@ -1,0 +1,41 @@
+{
+  "scope": "Descriptive format audit, no configuration selection or model predictions. Mechanical test inspection only; no test text used for authoring.",
+  "splits": {
+    "fit": {
+      "mitre": {
+        "n": 384,
+        "json_prompt_wrapper": 383,
+        "median_input_bytes": 2286.0
+      },
+      "frr": {
+        "n": 384,
+        "json_prompt_wrapper": 0,
+        "median_input_bytes": 382.0
+      }
+    },
+    "validation": {
+      "mitre": {
+        "n": 128,
+        "json_prompt_wrapper": 128,
+        "median_input_bytes": 2311.0
+      },
+      "frr": {
+        "n": 128,
+        "json_prompt_wrapper": 0,
+        "median_input_bytes": 374.5
+      }
+    },
+    "test": {
+      "mitre": {
+        "n": 166,
+        "json_prompt_wrapper": 166,
+        "median_input_bytes": 2239.0
+      },
+      "frr": {
+        "n": 166,
+        "json_prompt_wrapper": 0,
+        "median_input_bytes": 374.5
+      }
+    }
+  }
+}

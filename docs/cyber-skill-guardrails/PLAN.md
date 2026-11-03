@@ -55,6 +55,21 @@ package context may matter. Cap fitting at 1,024, validation 256 and test 512,
 balanced using deterministic ID hashes. Do not tune sampling to model performance.
 This is template/author-grouped evaluation, not an unseen-attack-family claim.
 
+### Pre-test repair: remove the source-format shortcut
+
+The initial augmented cyber text exposed a formatting shortcut: 383/384 fitting
+MITRE rows began with a JSON prompt wrapper, versus 0/384 benign rows. Those
+pilot inputs and attempted predictions are retained separately. Before any test
+inference, replace MITRE text with its upstream base_prompt. Keep FRR text,
+labels, candidate policies and original split assignments fixed. Group the new
+text using both prior groups and normalized exact/near matches; drop any newly
+connected group spanning splits. Rebalance within each original split without
+adding rows. This leaves 768 fitting, 254 validation and 330 test requests.
+No previously seen fitting or validation row can move into the final test.
+Rerun cyber validation; retain unchanged skill predictions. The six reviewed
+fitting IDs still belong to fitting. No new policy search is introduced.
+Source labels and remaining style differences still limit semantic conclusions.
+
 ## Models and native interfaces
 
 PolicyLM 1.7B, Shieldstral 3B, Qwen3.5 4B, Kev 4B, Clef-Flash 9B and Jev 1.14

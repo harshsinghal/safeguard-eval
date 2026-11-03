@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-11-03T19:03:16.038344+00:00",
+  "reason": "Training-source formatting almost perfectly separates labels. Replace augmented MITRE text with underlying base_prompt before final-test inference. Preserve all original split assignments; drop cross-split near groups and rebalance without adding rows.",
+  "prior_registration_sha256": "741d728913903d7120983dacedd7ac399147777db0391275c23e9d57e0fba8da",
+  "pilot": "pilot-format-confound",
+  "source_labels_changed": false,
+  "policies_changed": false,
+  "skill_inputs_changed": false,
+  "new_rows_added": 0,
+  "test_inference_started": false,
+  "final_cyber_counts": {
+    "fit": 768,
+    "validation": 254,
+    "test": 330
+  }
+}

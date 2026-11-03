@@ -1,0 +1,41 @@
+{
+  "scope": "Descriptive mechanical audit only; not model or policy selection.",
+  "splits": {
+    "fit": {
+      "mitre": {
+        "n": 384,
+        "json_prompt_wrapper": 0,
+        "median_input_bytes": 290.5
+      },
+      "frr": {
+        "n": 384,
+        "json_prompt_wrapper": 0,
+        "median_input_bytes": 382.0
+      }
+    },
+    "validation": {
+      "mitre": {
+        "n": 127,
+        "json_prompt_wrapper": 0,
+        "median_input_bytes": 280.0
+      },
+      "frr": {
+        "n": 127,
+        "json_prompt_wrapper": 0,
+        "median_input_bytes": 375.0
+      }
+    },
+    "test": {
+      "mitre": {
+        "n": 165,
+        "json_prompt_wrapper": 0,
+        "median_input_bytes": 288.0
+      },
+      "frr": {
+        "n": 165,
+        "json_prompt_wrapper": 0,
+        "median_input_bytes": 374.0
+      }
+    }
+  }
+}

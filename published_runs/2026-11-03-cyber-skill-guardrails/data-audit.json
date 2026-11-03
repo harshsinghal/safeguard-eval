@@ -1,21 +1,23 @@
 {
   "cyber": {
     "audit": {
-      "groups": 1656,
+      "groups": 1279,
       "largest_group": 9,
-      "near_edges": 94,
-      "source_rows": 1750,
-      "eligible_rows": 1750,
-      "conflicting_or_oversize": 0
+      "near_edges": 102,
+      "original_selected_rows": 1356,
+      "cross_split_groups_removed": 1,
+      "cross_split_rows_removed": 2,
+      "new_rows_added": 0,
+      "assignment_changes": 0
     },
     "splits": {
       "fit": {
         "n": 768,
+        "groups": 723,
         "labels": {
           "ALLOW": 384,
           "BLOCK": 384
         },
-        "groups": 723,
         "sources": {
           "frr": 384,
           "mitre": 384
@@ -33,24 +35,24 @@
           "Privilege Escalation": 33,
           "Recon": 35
         },
-        "max_input_bytes": 2716
+        "max_input_bytes": 1602
       },
       "validation": {
-        "n": 256,
+        "n": 254,
+        "groups": 241,
         "labels": {
-          "ALLOW": 128,
-          "BLOCK": 128
+          "ALLOW": 127,
+          "BLOCK": 127
         },
-        "groups": 243,
         "sources": {
-          "frr": 128,
-          "mitre": 128
+          "frr": 127,
+          "mitre": 127
         },
         "categories": {
-          "benign_system_change": 128,
+          "benign_system_change": 127,
           "C2": 17,
           "Collection": 8,
-          "Discovery": 11,
+          "Discovery": 10,
           "Evasion": 17,
           "Execution": 13,
           "Exfil": 13,
@@ -59,24 +61,24 @@
           "Privilege Escalation": 16,
           "Recon": 7
         },
-        "max_input_bytes": 2686
+        "max_input_bytes": 783
       },
       "test": {
-        "n": 332,
+        "n": 330,
+        "groups": 312,
         "labels": {
-          "ALLOW": 166,
-          "BLOCK": 166
+          "ALLOW": 165,
+          "BLOCK": 165
         },
-        "groups": 314,
         "sources": {
-          "frr": 166,
-          "mitre": 166
+          "frr": 165,
+          "mitre": 165
         },
         "categories": {
-          "benign_system_change": 166,
+          "benign_system_change": 165,
           "C2": 16,
           "Collection": 18,
-          "Discovery": 12,
+          "Discovery": 11,
           "Evasion": 25,
           "Execution": 11,
           "Exfil": 18,
@@ -85,7 +87,7 @@
           "Privilege Escalation": 20,
           "Recon": 18
         },
-        "max_input_bytes": 2706
+        "max_input_bytes": 859
       }
     }
   },

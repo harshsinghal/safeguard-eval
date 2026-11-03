@@ -14,7 +14,7 @@ def restore(state,checkout,cyber_sources):
             for meta_row in rows(state/f'metadata/{task}/{split}.jsonl'):
                 r=dict(meta_row)
                 if task=='cyber':
-                    _,source,index=r['id'].split(':');r['prompt']=cyber[source][int(index)]['mutated_prompt']
+                    _,source,index=r['id'].split(':');r['prompt']=cyber[source][int(index)][r.get('input_field','mutated_prompt')]
                 else:
                     m=manifest[r['id']];parts=[]
                     for f in sorted(m['files'],key=lambda x:(x['path']!='SKILL.md',x['path'])):
