@@ -7,10 +7,6 @@ from pathlib import Path
 import sys
 import tempfile
 
-ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT))
-from evals.cyber_skill_guardrails.report import report
-
 def main():
     p=argparse.ArgumentParser();p.add_argument('--run',required=True);a=p.parse_args();run=Path(a.run).resolve()
     manifest=json.loads((run/'artifact-manifest.json').read_text())
@@ -18,6 +14,8 @@ def main():
         path=(run/rel).resolve()
         if not path.is_relative_to(run):raise ValueError('Unsafe manifest path')
         if hashlib.sha256(path.read_bytes()).hexdigest()!=h:raise ValueError('Artifact changed: '+rel)
+    sys.path.insert(0,str(run/'source'))
+    from evals.cyber_skill_guardrails.report import report
     with tempfile.TemporaryDirectory() as td:
         tmp=Path(td)
         for name in ('freeze.json','metadata','predictions'):(tmp/name).symlink_to(run/name)

@@ -6,7 +6,8 @@
 - [x] Audit eligibility, exact/near duplicates, template and author grouping.
 - [x] Implement native interfaces, paired input views and learned controls.
 - [x] Check input/cache contracts and label-free model payloads.
-- [ ] Publish registration; run validation within the existing $6 cap.
+- [x] Publish registration and pre-test runtime/data amendments.
+- [ ] Complete validation within the existing $6 cap.
 - [ ] Publish validation selection before test inference.
 - [ ] Run test, independently check metrics, publish failures and limits.
 - [ ] Reconcile provider/API charges; verify resource termination.

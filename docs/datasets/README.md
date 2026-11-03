@@ -19,9 +19,11 @@ always the same.
 | [JailbreakBench attack artifacts](https://github.com/JailbreakBench/artifacts) | Detection of released jailbreak attempts | 182 GCG/PAIR attempts targeting Vicuna-13B | [Detection results](../prompt-injection/RESULTS.md#jailbreakbench-182-released-attack-attempts) |
 | [OMCBench](https://github.com/False-Positive-Community/open-malicious-code-benchmark) | Malicious versus benign source files in Python/JavaScript packages | Derived, group-disjoint test of 160 files; 80 per class | [Artifact study](../malicious-artifacts/README.md), [methods](../malicious-artifacts/METHODS.md) |
 | [MaliciousSkillBench](https://huggingface.co/datasets/ProtectSkills/MaliciousSkillBench) | Malicious versus benign agent skill text | All 1,384 official source-disjoint test records | [Artifact study](../malicious-artifacts/README.md), [methods](../malicious-artifacts/METHODS.md) |
+| [CyberSecEval MITRE / FRR](https://github.com/meta-llama/PurpleLlama) | Cyberattack-assistance versus benign system-changing requests | Registered group-separated test: 330 requests, 165 per class | [Protocol and progress](../cyber-skill-guardrails/README.md) |
+| [MalSkillBench](https://github.com/lxyeternal/MalSkillBench) | Static screening of complete textual agent packages | Registered group-separated test: 512 packages, 256 per class | [Protocol and eligibility](../cyber-skill-guardrails/PLAN.md) |
 | [DiffusionDB](https://huggingface.co/datasets/poloclub/diffusiondb) | Browsing image-generation prompts and trying a custom policy | Interactive text-prompt demo; no scored policy test set | [Original application](../../DEMO.md) |
 
-The first eight rows are evaluation sources. DiffusionDB supported the original
+The rows above DiffusionDB are evaluation sources or registered studies. DiffusionDB supported the original
 demo. Our separately authored synthetic sets and serving workloads are listed
 below. **No study here evaluates generated images.**
 
@@ -211,6 +213,44 @@ settings and Qwen policies before another held-out evaluation. It adds no
 synthetic training rows and does not invent behavior-category labels from the
 binary labels. Prior aggregate results motivate the follow-up; the same test
 population is not a new independent benchmark.
+
+## CyberSecEval MITRE / FRR: requests for cyber assistance
+
+Meta's MITRE benchmark tests whether a model assists with cyberattacks. Its FRR
+collection tests over-refusal on benign requests that change system state. We
+adapt 1,000 MITRE and 750 explicitly non-malicious FRR requests into a binary
+classification study. This is not a reproduction of the original generation or
+attack-success scoring procedure.
+
+We group base-prompt variants, exact matches and near-duplicates before splitting.
+A pre-test format audit led us to use upstream MITRE base requests, preserving
+original split assignments and excluding newly connected cross-split duplicates.
+The balanced fitting/validation/test cohorts contain 768/254/330 examples. The
+BLOCK mapping follows the source's intended task; some requests can be dual-use
+or look legitimate under another policy. Source style can also be a shortcut.
+[Plan and pinned source revision](../cyber-skill-guardrails/PLAN.md).
+
+## MalSkillBench: complete textual packages
+
+This is [lxyeternal/MalSkillBench](https://github.com/lxyeternal/MalSkillBench), a
+separate collection from ProtectSkills/MaliciousSkillBench above. It contains
+4,000 benign and 3,944 malicious packages, including generated, wild and tool-test
+sources. Verification differs by attack vector; labels are not uniform proof
+that exploitation succeeded.
+
+Our static cohort includes SKILL.md and companion text files that fit a 20 KB
+serialization limit. Binary, oversized and ambiguous packages are excluded;
+registry/evaluation metadata is removed. Template families, near-identical
+SKILL.md documents and malicious wild authors are grouped before partitioning.
+Balanced fitting/validation/test counts are 1,024/256/512. Of the 256 malicious
+test packages, 251 are generated, three wild and two tool-test. We cannot infer
+reliable wild-ecosystem performance from that slice.
+
+The same selected policy is also tested on SKILL.md alone. Separately fitted
+Jina heads compare whole-package and document-only representations. No package
+is executed or installed. Upstream restricts use to academic research; the repo
+publishes hashes and safe manifests, not raw skill text.
+[Study](../cyber-skill-guardrails/README.md) · [Methods](../cyber-skill-guardrails/METHODS.md).
 
 ## DiffusionDB and original project examples
 

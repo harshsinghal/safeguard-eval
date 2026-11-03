@@ -54,3 +54,35 @@ estimate of detection across the wild ecosystem.
 
 The [plan](PLAN.md) records exact pins, eligibility rules, policy selection,
 thresholds, head grids, seeds and the spending ceiling.
+
+## Repairing a benchmark shortcut before test
+
+In the initial augmented cyber input, 383 of 384 fitting attack requests started
+with a JSON prompt wrapper, versus none of the benign requests. A classifier
+could exploit this artifact without learning harmful intent. We therefore use
+the upstream base requests for MITRE and retain the original FRR requests.
+We preserve original split assignments, remove one newly connected near-duplicate
+group spanning validation and test, and rebalance without adding examples. The
+final cohorts contain 768/254/330 fitting/validation/test requests. Neither source
+now has that wrapper. This removes one obvious shortcut; it does not establish
+that all style confounds or ambiguous labels have disappeared.
+
+All initial predictions remain in a separate pilot archive. Unchanged Jev
+requests are recovered only when their exact policy/content request hash matches
+a saved API response. Their labels and new grouping metadata are never sent to
+the API. The three policy candidates were not changed during this repair.
+
+## Native interfaces need output checks too
+
+The Meta comparison exposed two integration faults before test inference. The
+current Transformers runtime rejected Llama Guard 4's attention configuration;
+we switched to the publisher-recommended pinned preview runtime. Its native
+completion also begins with a blank line before the safety label. Scoring the
+first token as if it were already safe/unsafe produced invalid allow-only outputs.
+The corrected adapter advances through native greedy whitespace and scores the
+actual label. Simple synthetic checks agree with native generation. Invalid
+attempts remain archived and are excluded from the leaderboard.
+
+These are implementation failures we repaired, not evidence that Llama Guard
+cannot perform the task. They illustrate why an evaluation must check both the
+input policy format and the model's output contract.

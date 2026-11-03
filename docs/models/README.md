@@ -136,6 +136,20 @@ These are task-trained classifiers, not policies automatically encoded by Jina.
 | [Jina embeddings v2 base code](https://huggingface.co/jinaai/jina-embeddings-v2-base-code) | About 161M; bidirectional encoder; mean-pooled 768-dimensional vector | Apache-2.0; [methods and pins](../artifact-representations/METHODS.md) |
 | [Jina code embeddings 0.5B](https://huggingface.co/jinaai/jina-code-embeddings-0.5b) | About 494M; Qwen2.5-Coder-derived retrieval model; last-token 896-dimensional vector | CC-BY-NC-4.0; this research use is not commercial deployment permission. [Registered protocol](../artifact-representations/PLAN.md) |
 
+## Meta guard baselines for cyber requests and skill packages
+
+The [registered cyber/skill comparison](../cyber-skill-guardrails/README.md) adds:
+
+| Model | Interface and role | Important boundary |
+|---|---|---|
+| [Llama Guard 4 12B](https://huggingface.co/meta-llama/Llama-Guard-4-12B) | Native chat template; default safety taxonomy plus validation-selected custom categories; unsafe/safe token-pair classification | Official checkpoint and model-card runtime; this study uses text only. Custom-policy results differ from the untouched taxonomy. |
+| [Llama Prompt Guard 2 86M](https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-86M) | Fixed malicious-instruction classifier, with a maximum over overlapping windows for long inputs | Injection/jailbreak diagnostic, not a general malicious-code detector. Broad-task rankings do not measure its intended-task performance alone. |
+
+The same panel retains PolicyLM, Shieldstral, Qwen 4B, Kev, Clef, Jev, and frozen
+Jina v2 code features with trained heads. Llama Guard 3 8B could not be accessed
+with the provided HF account and was not run. Exact pins, runtime repairs and
+input formats are [recorded here](../cyber-skill-guardrails/PLAN.md).
+
 ## Retrieval and reranking models
 
 These models helped choose labeled training examples to put beside a moderation
@@ -203,8 +217,8 @@ name. Preserve the complete configuration and test both missed violations and
 false blocks when changing it. Check current publisher licenses, interfaces and
 provider terms for a new deployment.
 
-Models discussed only as future candidates—for example Granite Guardian, Llama
-Guard, Prompt Guard, ShieldGemma or other proposed backbones—are not completed
+Models discussed only as future candidates—for example Granite Guardian,
+ShieldGemma or other proposed backbones—are not completed
 benchmark entries. See the [research directions](../research-directions/README.md)
 and [ROOST model community](https://github.com/roostorg/model-community) for
 further exploration.

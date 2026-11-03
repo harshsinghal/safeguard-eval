@@ -17,9 +17,14 @@ Each model gets three prespecified policy candidates. Validation selects the
 policy; test inputs are released only after the selection is frozen publicly.
 We report false blocks and missed harmful cases alongside balanced accuracy.
 
-The group-separated test sets contain 332 cyber requests and 512 skill packages,
+The group-separated test sets contain 330 cyber requests and 512 skill packages,
 each evenly divided between ALLOW and BLOCK. The skill test contains 251 generated,
 three wild and two tool-test malicious packages. Large and binary packages are
 excluded. Results will describe this bounded cohort, not all wild agent skills.
 
 See the [registered plan](PLAN.md) and [run instructions](RUNNING.md).
+
+A pre-test audit found a JSON-wrapper shortcut in the augmented cyber requests.
+We preserved that pilot, switched to upstream base requests, removed cross-split
+near-duplicates, and kept every retained row in its original split. No fitting or
+validation row moved into test. [Amendment](../../published_runs/2026-11-03-cyber-skill-guardrails/amendments/cyber-source-format.json).
