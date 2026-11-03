@@ -1,0 +1,9 @@
+{
+  "approved": true,
+  "experiment_cap_usd": 6.0,
+  "gpu_cap_usd": 3.9,
+  "jev_cap_usd": 2.0,
+  "remaining_prior_allocation_usd": 13.1512218,
+  "authorization": "User: Ok. Go ahead and implement the experiments to benchmark across the model families",
+  "scope": "malicious code-file and agent-skill screening; six frozen models plus supervised baselines"
+}

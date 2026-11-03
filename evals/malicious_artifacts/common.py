@@ -1,7 +1,9 @@
 from pathlib import Path
 import copy
 import json
-from evals.prompt_injection.common import canonical, hash_value, digest, read, rows, write, jsonl, now, measures
+import gzip
+import hashlib
+from evals.prompt_injection.common import canonical, hash_value, digest as file_digest, read, rows, write, jsonl, now, measures
 from evals.prompt_injection.common import MODELS as PREVIOUS_MODELS
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -13,6 +15,16 @@ MODELS['qwen'] = dict(model='Qwen/Qwen3.5-4B', revision='851bf6e806efd8d0a36b00d
 ENCODER = dict(model='LiquidAI/LFM2.5-Encoder-350M', revision='b886781f7c6f10ca9b7096e21b83e30a073c2f39',
     seed=SEED, learning_rates=[2e-5,5e-5], epochs=3, max_length=8192, cutoff=.5)
 VIEW_BYTES = 8000
+
+def digest(path):
+    path=Path(path)
+    if not path.exists() and path.suffix=='.pt' and path.with_suffix('.pt.gz').is_file():
+        # Hash the original checkpoint bytes, not their lossless storage wrapper.
+        with gzip.open(path.with_suffix('.pt.gz'),'rb') as f:
+            h=hashlib.sha256()
+            for chunk in iter(lambda:f.read(4*1024*1024),b''):h.update(chunk)
+        return h.hexdigest()
+    return file_digest(path)
 
 def rows(path):
     # Unicode U+2028/U+2029/NEL are valid inside JSON strings. They are not

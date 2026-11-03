@@ -1,0 +1,114 @@
+{
+  "code": {
+    "audit": {
+      "unknown_label": 49,
+      "short_or_binary": 124,
+      "conflicting_exact_view": 0,
+      "eligible_files": 1513,
+      "groups": 600,
+      "largest_group": 50
+    },
+    "splits": {
+      "fit": {
+        "n": 632,
+        "labels": {
+          "ALLOW": 316,
+          "BLOCK": 316
+        },
+        "clipped": 124,
+        "groups": 282,
+        "sources": {
+          "py": 350,
+          "js": 282
+        }
+      },
+      "validation": {
+        "n": 240,
+        "labels": {
+          "BLOCK": 120,
+          "ALLOW": 120
+        },
+        "clipped": 36,
+        "groups": 104,
+        "sources": {
+          "js": 147,
+          "py": 93
+        }
+      },
+      "test": {
+        "n": 160,
+        "labels": {
+          "BLOCK": 80,
+          "ALLOW": 80
+        },
+        "clipped": 38,
+        "groups": 101,
+        "sources": {
+          "py": 93,
+          "js": 67
+        }
+      }
+    }
+  },
+  "skills": {
+    "audit": {
+      "original_text_withheld_train": 3,
+      "original_text_withheld_validation": 2,
+      "publisher_excluded": 8,
+      "view_overlap_test_train": 0,
+      "view_overlap_test_validation": 0,
+      "view_overlap_validation_train": 0
+    },
+    "splits": {
+      "fit": {
+        "n": 1024,
+        "labels": {
+          "BLOCK": 512,
+          "ALLOW": 512
+        },
+        "clipped": 278,
+        "groups": 996,
+        "sources": {
+          "SRC001": 263,
+          "SRC010": 706,
+          "SRC006": 25,
+          "SRC002": 11,
+          "SRC013": 15,
+          "SRC004": 3,
+          "SRC008": 1
+        }
+      },
+      "validation": {
+        "n": 256,
+        "labels": {
+          "BLOCK": 128,
+          "ALLOW": 128
+        },
+        "clipped": 88,
+        "groups": 255,
+        "sources": {
+          "SRC001": 74,
+          "SRC010": 170,
+          "SRC013": 2,
+          "SRC006": 5,
+          "SRC005": 1,
+          "SRC002": 4
+        }
+      },
+      "test": {
+        "n": 1384,
+        "labels": {
+          "BLOCK": 839,
+          "ALLOW": 545
+        },
+        "clipped": 398,
+        "groups": 849,
+        "sources": {
+          "SRC009": 728,
+          "SRC012": 180,
+          "SRC011": 476
+        }
+      }
+    }
+  }
+}

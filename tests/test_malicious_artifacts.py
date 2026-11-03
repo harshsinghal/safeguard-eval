@@ -1,10 +1,12 @@
 import io
+import gzip
+import hashlib
 from pathlib import Path
 import tarfile
 import tempfile
 import unittest
 import zipfile
-from evals.malicious_artifacts.common import view,hash_value
+from evals.malicious_artifacts.common import view,hash_value,digest
 from evals.malicious_artifacts.data import member_bytes,sample
 from evals.malicious_artifacts.policies import policies
 from evals.malicious_artifacts.infer import jobs,prediction
@@ -12,6 +14,12 @@ from evals.malicious_artifacts.common import jsonl,rows
 from evals.malicious_artifacts.report import intervals
 
 class Contracts(unittest.TestCase):
+    def test_compressed_checkpoint_preserves_original_hash(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/'weights.pt';content=b'exact checkpoint bytes'*1024
+            with gzip.open(p.with_suffix('.pt.gz'),'wb') as f:f.write(content)
+            self.assertEqual(digest(p),hashlib.sha256(content).hexdigest())
+
     def test_unicode_line_separators_are_not_records(self):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d)/'rows.jsonl';original=[dict(text='a\u2028b\u2029c\u0085d'),dict(text='next')]

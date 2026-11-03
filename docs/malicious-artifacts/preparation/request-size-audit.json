@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-11-03T06:55:32.450592+00:00",
+  "checks": {
+    "code-fit": {
+      "n": 632,
+      "maximum_request_bytes": 12603,
+      "passed": true
+    },
+    "code-validation": {
+      "n": 240,
+      "maximum_request_bytes": 11490,
+      "passed": true
+    },
+    "code-test": {
+      "n": 160,
+      "maximum_request_bytes": 12209,
+      "passed": true
+    },
+    "skills-fit": {
+      "n": 1024,
+      "maximum_request_bytes": 11206,
+      "passed": true
+    },
+    "skills-validation": {
+      "n": 256,
+      "maximum_request_bytes": 11031,
+      "passed": true
+    },
+    "skills-test": {
+      "n": 1384,
+      "maximum_request_bytes": 11004,
+      "passed": true
+    }
+  },
+  "model_calls": 0,
+  "content_displayed": false
+}

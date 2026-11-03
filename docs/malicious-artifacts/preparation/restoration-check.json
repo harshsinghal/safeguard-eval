@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-11-03T06:46:19.136612+00:00",
+  "matches": true,
+  "files": {
+    "data/code/fit.jsonl": "1868bf82933bff7311ffd68b8c32f438861ec26348f15fedce2319c386e2531d",
+    "data/code/test.jsonl": "43d14f6c7a74fafe93d3a945f2399aae0eb6465724442e87159f0863bd95b652",
+    "data/code/validation.jsonl": "29107d1a3ef5998278f86c6a54995a16390079a3483fc6e1b31c79fa8402caa7",
+    "data/skills/fit.jsonl": "4f157df0b4e58ba3db2e9f7d049a46b158bdf44ad7fe92ec8736a8de77d0934d",
+    "data/skills/test.jsonl": "66d775e455125ad168ceb4faa008be955a31f331b9313f2efd99590e69313b6a",
+    "data/skills/validation.jsonl": "337d15a9dbdd2afe332f917cb6230c7d7e5e98bb8641fb622c61659ac1c71fb9",
+    "metadata/code/fit.jsonl": "075c53dddda024946e0d0dc2cce955947f6ef3e1d715f4c03cfb1617ae2d28a5",
+    "metadata/code/test.jsonl": "1c22236e758445119b9ce1813a990941a73082c0701fc30cef81cbb20e616952",
+    "metadata/code/validation.jsonl": "a7097d571dfcad5afda5d17e17e9a994ac74e9b06c7637c393ac1133c3b19c6e",
+    "metadata/skills/fit.jsonl": "0bc3eee9ff00c35f44ba2005214180b8e4478e2a31018a453070d93fc05edf75",
+    "metadata/skills/test.jsonl": "4bd890927a4b0470571659d955f1e0cf521d5e647378d69c0de96756ea6e7e39",
+    "metadata/skills/validation.jsonl": "ca93d8222a0bbb94329f9019ffed55178d9a0f2ea6081d0e3b749f4f3bc08bd4"
+  },
+  "source": "pinned verified download cache",
+  "paid_inference": false
+}
