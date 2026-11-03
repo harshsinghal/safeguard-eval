@@ -1,0 +1,76 @@
+{
+  "selected": "C0.1",
+  "validation": {
+    "C0.1": {
+      "n": 256,
+      "benign": 128,
+      "malicious": 128,
+      "accuracy": 0.6875,
+      "balanced_accuracy": 0.6875,
+      "macro_f1": 0.6870224341341158,
+      "mcc": 0.3761496746576099,
+      "false_blocks": 35,
+      "missed_threats": 45,
+      "false_block_rate": 0.2734375,
+      "miss_rate": 0.3515625,
+      "recall": 0.6484375,
+      "specificity": 0.7265625,
+      "unresolved": 0
+    },
+    "C1": {
+      "n": 256,
+      "benign": 128,
+      "malicious": 128,
+      "accuracy": 0.671875,
+      "balanced_accuracy": 0.671875,
+      "macro_f1": 0.67089072543618,
+      "mcc": 0.34582475555079445,
+      "false_blocks": 35,
+      "missed_threats": 49,
+      "false_block_rate": 0.2734375,
+      "miss_rate": 0.3828125,
+      "recall": 0.6171875,
+      "specificity": 0.7265625,
+      "unresolved": 0
+    },
+    "C10": {
+      "n": 256,
+      "benign": 128,
+      "malicious": 128,
+      "accuracy": 0.64453125,
+      "balanced_accuracy": 0.64453125,
+      "macro_f1": 0.6436122202334511,
+      "mcc": 0.2905649647954381,
+      "false_blocks": 39,
+      "missed_threats": 52,
+      "false_block_rate": 0.3046875,
+      "miss_rate": 0.40625,
+      "recall": 0.59375,
+      "specificity": 0.6953125,
+      "unresolved": 0
+    }
+  },
+  "configs": {
+    "C0.1": {
+      "C": 0.1
+    },
+    "C1": {
+      "C": 1.0
+    },
+    "C10": {
+      "C": 10.0
+    }
+  },
+  "aggregate": null,
+  "evidence": {
+    "learned/jina-v2-lr/skills/C0.1.joblib": "e999b1f44636aaeb9ffd1f5d876e521ca825358913fd627d04b8eed20dfe019d",
+    "predictions/jina-v2-lr/skills/validation/C10.jsonl": "35e4d4d01c936b1122aa87c6114261c32cbed1b8b6b191e50c083937c9ea9649",
+    "predictions/jina-v2-lr/skills/validation/C1.jsonl": "36bb254ee87b4e08f60a3d7d5bd0f15f1f5d24bcb34b5a28043e669d9ceedc84",
+    "predictions/jina-v2-lr/skills/validation/C0.1.jsonl": "2d2792e20e9019ecf12f401066b0f1da18faf11b909856cd4810f7562fd32d88",
+    "features/jina-v2/skills/fit.npz": "fede25b0e85678fe6b611e296a141a15ffc6dde35d0a60a4369e171edd3cb0f2",
+    "features/jina-v2/skills/validation.npz": "f38a2a29306698ea482ce3f809adfefb049754768d3de7851892ebbfc7f6dc7b"
+  },
+  "seeds": [
+    20261103
+  ]
+}

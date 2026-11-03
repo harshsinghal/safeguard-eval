@@ -1,0 +1,54 @@
+{
+  "code": {
+    "n": 16,
+    "ids": [
+      "code:4ab1edf171a5b74dc02060e2",
+      "code:e6d5547c022446a93e6319e1",
+      "code:40b3adfbc5a1db828ff3897f",
+      "code:5b3ec734edb9e911eb0632c2",
+      "code:fce19fcf71cc9266a14f164d",
+      "code:8b5d473f11e423cb43c6912f",
+      "code:04ca32ba1bfa48367cd4c115",
+      "code:adbbc66f34770cf44f28faa1",
+      "code:fe21522bffa0d1026fed81cb",
+      "code:4038af985a422a4080493a2c",
+      "code:df29dae6408b870440f8db6f",
+      "code:cd24d6b2139a9978ffccec40",
+      "code:faa51492cf10e90d733a9c38",
+      "code:fe6638bf3bd3794868b96270",
+      "code:09f6ef0fba3035b31f567613",
+      "code:1337cf1f44e0b2dfb46eb2b0"
+    ],
+    "min_cosine": 0.9999200105667114,
+    "mean_cosine": 0.9999644756317139,
+    "max_component_difference": 0.002377644181251526,
+    "comparison": "Fresh model load, singleton batch versus original length-sorted batch4; validation inputs only",
+    "passed": true
+  },
+  "skills": {
+    "n": 16,
+    "ids": [
+      "skills:ASB04_009107",
+      "skills:ASB04_009390",
+      "skills:ASB04_003550",
+      "skills:ASB04_009118",
+      "skills:ASB04_009678",
+      "skills:ASB04_001626",
+      "skills:ASB04_004028",
+      "skills:ASB04_003504",
+      "skills:ASB04_005148",
+      "skills:ASB04_002527",
+      "skills:ASB04_009398",
+      "skills:ASB04_008344",
+      "skills:ASB04_005092",
+      "skills:ASB04_003702",
+      "skills:ASB04_003132",
+      "skills:ASB04_009679"
+    ],
+    "min_cosine": 0.9999600052833557,
+    "mean_cosine": 0.9999812841415405,
+    "max_component_difference": 0.0019647181034088135,
+    "comparison": "Fresh model load, singleton batch versus original length-sorted batch4; validation inputs only",
+    "passed": true
+  }
+}

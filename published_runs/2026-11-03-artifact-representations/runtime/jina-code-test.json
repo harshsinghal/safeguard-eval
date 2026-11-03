@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-11-03T16:28:51.994710+00:00",
+  "seconds": 27.62617987999988,
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "torch": "2.8.0+cu128",
+  "parameter_count": 494032768,
+  "features": {
+    "code/test": {
+      "n": 160,
+      "dimension": 896,
+      "max_tokens": 5229,
+      "prefix": "Candidate code snippet:\n",
+      "sha256": "a9ff7326c5f79b558b3f039722be62d343c4b766fca2e32972de18b44ab60e41"
+    },
+    "skills/test": {
+      "n": 1384,
+      "dimension": 896,
+      "max_tokens": 2613,
+      "prefix": "Candidate answer:\n",
+      "sha256": "a1539da7883e38979af7d87cb156646c656c969f164e65e038326e531d0b2910"
+    }
+  }
+}

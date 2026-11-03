@@ -1,0 +1,8 @@
+{
+  "approved": true,
+  "experiment_cap_usd": 4.0,
+  "gpu_max_hourly_usd": 0.65,
+  "auto_terminate_hours": 4,
+  "paid_api": false,
+  "unused_prior_benchmark_allocation_usd": 11.768416426
+}

@@ -1,0 +1,76 @@
+{
+  "selected": "C0.1",
+  "validation": {
+    "C0.1": {
+      "n": 240,
+      "benign": 120,
+      "malicious": 120,
+      "accuracy": 0.8833333333333333,
+      "balanced_accuracy": 0.8833333333333333,
+      "macro_f1": 0.8832035595105673,
+      "mcc": 0.7683760704982201,
+      "false_blocks": 18,
+      "missed_threats": 10,
+      "false_block_rate": 0.15,
+      "miss_rate": 0.08333333333333333,
+      "recall": 0.9166666666666666,
+      "specificity": 0.85,
+      "unresolved": 0
+    },
+    "C1": {
+      "n": 240,
+      "benign": 120,
+      "malicious": 120,
+      "accuracy": 0.8833333333333333,
+      "balanced_accuracy": 0.8833333333333333,
+      "macro_f1": 0.8832035595105673,
+      "mcc": 0.7683760704982201,
+      "false_blocks": 18,
+      "missed_threats": 10,
+      "false_block_rate": 0.15,
+      "miss_rate": 0.08333333333333333,
+      "recall": 0.9166666666666666,
+      "specificity": 0.85,
+      "unresolved": 0
+    },
+    "C10": {
+      "n": 240,
+      "benign": 120,
+      "malicious": 120,
+      "accuracy": 0.875,
+      "balanced_accuracy": 0.875,
+      "macro_f1": 0.8749218261413383,
+      "mcc": 0.7509392614826383,
+      "false_blocks": 18,
+      "missed_threats": 12,
+      "false_block_rate": 0.15,
+      "miss_rate": 0.1,
+      "recall": 0.9,
+      "specificity": 0.85,
+      "unresolved": 0
+    }
+  },
+  "configs": {
+    "C0.1": {
+      "C": 0.1
+    },
+    "C1": {
+      "C": 1.0
+    },
+    "C10": {
+      "C": 10.0
+    }
+  },
+  "aggregate": null,
+  "evidence": {
+    "learned/jina-v2-lr/code/C0.1.joblib": "44694c009cff8992051ffc3235a8d867f083f7af41f3d2dbb8cb5c300f6e5847",
+    "predictions/jina-v2-lr/code/validation/C10.jsonl": "6bcea5e4e977ce8c674cdc4635c1eef07f6ede44ad29ce8c82f5d9e7c6fc7f86",
+    "predictions/jina-v2-lr/code/validation/C1.jsonl": "7bddb92f3a76cbb65c1d6ae35838f415835c04f37d0804c99f0e4c98de50bef8",
+    "predictions/jina-v2-lr/code/validation/C0.1.jsonl": "05b901057287514556f808197ca182bf3f7174a8643a5e075036aa74b9226230",
+    "features/jina-v2/code/fit.npz": "60aa7d7e28d33db8043866e27a437db6062073f67dfcbf6b310a180e957786d6",
+    "features/jina-v2/code/validation.npz": "9ad1eaa5e3944ce34a28af19606cccd458f9dc446f7a1734270d1c23e2b23e14"
+  },
+  "seeds": [
+    20261103
+  ]
+}

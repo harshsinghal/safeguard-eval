@@ -1,0 +1,32 @@
+{
+  "code/brief": {
+    "n": 240,
+    "changed_decisions": 0,
+    "max_score_delta": 0.027823805809020996
+  },
+  "code/structured": {
+    "n": 240,
+    "changed_decisions": 0,
+    "max_score_delta": 0.02385641634464264
+  },
+  "code/evidence": {
+    "n": 240,
+    "changed_decisions": 0,
+    "max_score_delta": 0.05671936273574829
+  },
+  "skills/brief": {
+    "n": 256,
+    "changed_decisions": 0,
+    "max_score_delta": 0.05443018674850464
+  },
+  "skills/structured": {
+    "n": 256,
+    "changed_decisions": 0,
+    "max_score_delta": 0.03729677200317383
+  },
+  "skills/evidence": {
+    "n": 256,
+    "changed_decisions": 1,
+    "max_score_delta": 0.05868828296661377
+  }
+}

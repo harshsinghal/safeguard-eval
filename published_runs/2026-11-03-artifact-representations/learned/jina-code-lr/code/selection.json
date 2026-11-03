@@ -1,0 +1,76 @@
+{
+  "selected": "C0.1",
+  "validation": {
+    "C0.1": {
+      "n": 240,
+      "benign": 120,
+      "malicious": 120,
+      "accuracy": 0.9333333333333333,
+      "balanced_accuracy": 0.9333333333333333,
+      "macro_f1": 0.9333148096693527,
+      "mcc": 0.8671485497545911,
+      "false_blocks": 6,
+      "missed_threats": 10,
+      "false_block_rate": 0.05,
+      "miss_rate": 0.08333333333333333,
+      "recall": 0.9166666666666666,
+      "specificity": 0.95,
+      "unresolved": 0
+    },
+    "C1": {
+      "n": 240,
+      "benign": 120,
+      "malicious": 120,
+      "accuracy": 0.9291666666666667,
+      "balanced_accuracy": 0.9291666666666667,
+      "macro_f1": 0.9291359096830221,
+      "mcc": 0.859079385915148,
+      "false_blocks": 6,
+      "missed_threats": 11,
+      "false_block_rate": 0.05,
+      "miss_rate": 0.09166666666666666,
+      "recall": 0.9083333333333333,
+      "specificity": 0.95,
+      "unresolved": 0
+    },
+    "C10": {
+      "n": 240,
+      "benign": 120,
+      "malicious": 120,
+      "accuracy": 0.925,
+      "balanced_accuracy": 0.925,
+      "macro_f1": 0.9249791608780217,
+      "mcc": 0.8504726161054643,
+      "false_blocks": 7,
+      "missed_threats": 11,
+      "false_block_rate": 0.058333333333333334,
+      "miss_rate": 0.09166666666666666,
+      "recall": 0.9083333333333333,
+      "specificity": 0.9416666666666667,
+      "unresolved": 0
+    }
+  },
+  "configs": {
+    "C0.1": {
+      "C": 0.1
+    },
+    "C1": {
+      "C": 1.0
+    },
+    "C10": {
+      "C": 10.0
+    }
+  },
+  "aggregate": null,
+  "evidence": {
+    "learned/jina-code-lr/code/C0.1.joblib": "01198f08febc8b059b029add18a82603264b5ac0d50a125c694d2e44e2a5813e",
+    "predictions/jina-code-lr/code/validation/C10.jsonl": "6b08b17b541150690a8245ca8e2596680460987ba7e378f7dd6943e9488498ba",
+    "predictions/jina-code-lr/code/validation/C1.jsonl": "b373652c9f393227186b6a7d18c42f8b78ce2704fbbb1b60d522a15713520576",
+    "predictions/jina-code-lr/code/validation/C0.1.jsonl": "2ddcb553f29f1cf15ae81b5e575c84c3eab45b61696798ac92c9c0ff38ad665c",
+    "features/jina-code/code/fit.npz": "64e2c536896aa407fd848900dafed97c0fd863e918e1e33d1b75df72e1ce65d8",
+    "features/jina-code/code/validation.npz": "a87eb2813e9a221088af54e39c89c0dc9050470b26f0959ab08c27af659f21e4"
+  },
+  "seeds": [
+    20261103
+  ]
+}

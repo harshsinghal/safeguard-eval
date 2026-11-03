@@ -1,0 +1,1993 @@
+{
+  "freeze_sha256": "feecd3c6b4e885d4319b877840254dbaac677d006cc4f68fa3abb7efa45b9dfc",
+  "tasks": {
+    "code": {
+      "qwen4": {
+        "selected": "brief",
+        "metrics": {
+          "n": 160,
+          "benign": 80,
+          "malicious": 80,
+          "accuracy": 0.86875,
+          "balanced_accuracy": 0.86875,
+          "macro_f1": 0.8664493819309194,
+          "mcc": 0.7643025682552586,
+          "false_blocks": 0,
+          "missed_threats": 21,
+          "false_block_rate": 0.0,
+          "miss_rate": 0.2625,
+          "recall": 0.7375,
+          "specificity": 1.0,
+          "unresolved": 0
+        },
+        "balanced_accuracy_ci95": [
+          0.81578164160401,
+          0.9237416538263995
+        ],
+        "delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 101,
+        "baseline": {
+          "n": 160,
+          "benign": 80,
+          "malicious": 80,
+          "accuracy": 0.86875,
+          "balanced_accuracy": 0.86875,
+          "macro_f1": 0.8664493819309194,
+          "mcc": 0.7643025682552586,
+          "false_blocks": 0,
+          "missed_threats": 21,
+          "false_block_rate": 0.0,
+          "miss_rate": 0.2625,
+          "recall": 0.7375,
+          "specificity": 1.0,
+          "unresolved": 0
+        },
+        "seeds": null,
+        "comparison": {
+          "qwen": {
+            "delta_balanced_accuracy": 0.0,
+            "balanced_accuracy_ci95": [
+              0.81578164160401,
+              0.9237416538263995
+            ],
+            "delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "groups": 101
+          },
+          "liquid": {
+            "delta_balanced_accuracy": -0.04375000000000007,
+            "balanced_accuracy_ci95": [
+              0.81578164160401,
+              0.9237416538263995
+            ],
+            "delta_ci95": [
+              -0.10422656804449011,
+              0.023391211906449348
+            ],
+            "groups": 101
+          },
+          "tfidf": {
+            "delta_balanced_accuracy": -0.012499999999999956,
+            "balanced_accuracy_ci95": [
+              0.81578164160401,
+              0.9237416538263995
+            ],
+            "delta_ci95": [
+              -0.06174768518518513,
+              0.03378378378378377
+            ],
+            "groups": 101
+          }
+        },
+        "slices": {
+          "source": {
+            "js": {
+              "n": 67,
+              "benign": 38,
+              "malicious": 29,
+              "accuracy": 0.9253731343283582,
+              "balanced_accuracy": 0.9137931034482758,
+              "macro_f1": 0.9219659911483811,
+              "mcc": 0.8551931083715859,
+              "false_blocks": 0,
+              "missed_threats": 5,
+              "false_block_rate": 0.0,
+              "miss_rate": 0.1724137931034483,
+              "recall": 0.8275862068965517,
+              "specificity": 1.0,
+              "unresolved": 0
+            },
+            "py": {
+              "n": 93,
+              "benign": 42,
+              "malicious": 51,
+              "accuracy": 0.8279569892473118,
+              "balanced_accuracy": 0.8431372549019608,
+              "macro_f1": 0.8269767441860465,
+              "mcc": 0.7049520576969158,
+              "false_blocks": 0,
+              "missed_threats": 16,
+              "false_block_rate": 0.0,
+              "miss_rate": 0.3137254901960784,
+              "recall": 0.6862745098039216,
+              "specificity": 1.0,
+              "unresolved": 0
+            }
+          },
+          "clipped": {
+            "False": {
+              "n": 122,
+              "benign": 59,
+              "malicious": 63,
+              "accuracy": 0.8688524590163934,
+              "balanced_accuracy": 0.873015873015873,
+              "macro_f1": 0.8675712347354139,
+              "mcc": 0.7660798306170884,
+              "false_blocks": 0,
+              "missed_threats": 16,
+              "false_block_rate": 0.0,
+              "miss_rate": 0.25396825396825395,
+              "recall": 0.746031746031746,
+              "specificity": 1.0,
+              "unresolved": 0
+            },
+            "True": {
+              "n": 38,
+              "benign": 21,
+              "malicious": 17,
+              "accuracy": 0.868421052631579,
+              "balanced_accuracy": 0.8529411764705883,
+              "macro_f1": 0.8606016140865738,
+              "mcc": 0.7550733385614505,
+              "false_blocks": 0,
+              "missed_threats": 5,
+              "false_block_rate": 0.0,
+              "miss_rate": 0.29411764705882354,
+              "recall": 0.7058823529411765,
+              "specificity": 1.0,
+              "unresolved": 0
+            }
+          }
+        }
+      },
+      "qwen9": {
+        "selected": "behavior",
+        "metrics": {
+          "n": 160,
+          "benign": 80,
+          "malicious": 80,
+          "accuracy": 0.8875,
+          "balanced_accuracy": 0.8875,
+          "macro_f1": 0.8860579205570501,
+          "mcc": 0.7953949089757174,
+          "false_blocks": 0,
+          "missed_threats": 18,
+          "false_block_rate": 0.0,
+          "miss_rate": 0.225,
+          "recall": 0.775,
+          "specificity": 1.0,
+          "unresolved": 0
+        },
+        "balanced_accuracy_ci95": [
+          0.8356141852919972,
+          0.9337349397590362
+        ],
+        "delta_ci95": [
+          0.0058122828120823426,
+          0.05056357559379889
+        ],
+        "groups": 101,
+        "baseline": {
+          "n": 160,
+          "benign": 80,
+          "malicious": 80,
+          "accuracy": 0.8625,
+          "balanced_accuracy": 0.8625,
+          "macro_f1": 0.8598502946329033,
+          "mcc": 0.7540739028638984,
+          "false_blocks": 0,
+          "missed_threats": 22,
+          "false_block_rate": 0.0,
+          "miss_rate": 0.275,
+          "recall": 0.725,
+          "specificity": 1.0,
+          "unresolved": 0
+        },
+        "seeds": null,
+        "comparison": {
+          "qwen": {
+            "delta_balanced_accuracy": 0.018749999999999933,
+            "balanced_accuracy_ci95": [
+              0.8356141852919972,
+              0.9337349397590362
+            ],
+            "delta_ci95": [
+              -0.017050352664576843,
+              0.05555555555555547
+            ],
+            "groups": 101
+          },
+          "liquid": {
+            "delta_balanced_accuracy": -0.025000000000000133,
+            "balanced_accuracy_ci95": [
+              0.8356141852919972,
+              0.9337349397590362
+            ],
+            "delta_ci95": [
+              -0.08803308700146323,
+              0.03679104846345461
+            ],
+            "groups": 101
+          },
+          "tfidf": {
+            "delta_balanced_accuracy": 0.006249999999999978,
+            "balanced_accuracy_ci95": [
+              0.8356141852919972,
+              0.9337349397590362
+            ],
+            "delta_ci95": [
+              -0.049183214038328385,
+              0.051140005827505705
+            ],
+            "groups": 101
+          }
+        },
+        "slices": {
+          "source": {
+            "js": {
+              "n": 67,
+              "benign": 38,
+              "malicious": 29,
+              "accuracy": 0.9402985074626866,
+              "balanced_accuracy": 0.9310344827586207,
+              "macro_f1": 0.9379629629629629,
+              "mcc": 0.8831574940391459,
+              "false_blocks": 0,
+              "missed_threats": 4,
+              "false_block_rate": 0.0,
+              "miss_rate": 0.13793103448275862,
+              "recall": 0.8620689655172413,
+              "specificity": 1.0,
+              "unresolved": 0
+            },
+            "py": {
+              "n": 93,
+              "benign": 42,
+              "malicious": 51,
+              "accuracy": 0.8494623655913979,
+              "balanced_accuracy": 0.8627450980392157,
+              "macro_f1": 0.849025974025974,
+              "mcc": 0.7376433061167325,
+              "false_blocks": 0,
+              "missed_threats": 14,
+              "false_block_rate": 0.0,
+              "miss_rate": 0.27450980392156865,
+              "recall": 0.7254901960784313,
+              "specificity": 1.0,
+              "unresolved": 0
+            }
+          },
+          "clipped": {
+            "False": {
+              "n": 122,
+              "benign": 59,
+              "malicious": 63,
+              "accuracy": 0.8934426229508197,
+              "balanced_accuracy": 0.8968253968253967,
+              "macro_f1": 0.8928595554955077,
+              "mcc": 0.8064445013056181,
+              "false_blocks": 0,
+              "missed_threats": 13,
+              "false_block_rate": 0.0,
+              "miss_rate": 0.20634920634920634,
+              "recall": 0.7936507936507936,
+              "specificity": 1.0,
+              "unresolved": 0
+            },
+            "True": {
+              "n": 38,
+              "benign": 21,
+              "malicious": 17,
+              "accuracy": 0.868421052631579,
+              "balanced_accuracy": 0.8529411764705883,
+              "macro_f1": 0.8606016140865738,
+              "mcc": 0.7550733385614505,
+              "false_blocks": 0,
+              "missed_threats": 5,
+              "false_block_rate": 0.0,
+              "miss_rate": 0.29411764705882354,
+              "recall": 0.7058823529411765,
+              "specificity": 1.0,
+              "unresolved": 0
+            }
+          }
+        }
+      },
+      "jina-v2-lr": {
+        "selected": "C0.1",
+        "metrics": {
+          "n": 160,
+          "benign": 80,
+          "malicious": 80,
+          "accuracy": 0.8875,
+          "balanced_accuracy": 0.8875,
+          "macro_f1": 0.8874296435272044,
+          "mcc": 0.7759705701987263,
+          "false_blocks": 7,
+          "missed_threats": 11,
+          "false_block_rate": 0.0875,
+          "miss_rate": 0.1375,
+          "recall": 0.8625,
+          "specificity": 0.9125,
+          "unresolved": 0
+        },
+        "balanced_accuracy_ci95": [
+          0.8370399734930064,
+          0.9388900728935013
+        ],
+        "delta_ci95": null,
+        "groups": 101,
+        "baseline": null,
+        "seeds": null,
+        "comparison": {
+          "qwen": {
+            "delta_balanced_accuracy": 0.018749999999999933,
+            "balanced_accuracy_ci95": [
+              0.8370399734930064,
+              0.9388900728935013
+            ],
+            "delta_ci95": [
+              -0.03610069730540109,
+              0.07536124634858808
+            ],
+            "groups": 101
+          },
+          "liquid": {
+            "delta_balanced_accuracy": -0.025000000000000133,
+            "balanced_accuracy_ci95": [
+              0.8370399734930064,
+              0.9388900728935013
+            ],
+            "delta_ci95": [
+              -0.09487304357617396,
+              0.044816576103561996
+            ],
+            "groups": 101
+          },
+          "tfidf": {
+            "delta_balanced_accuracy": 0.006249999999999978,
+            "balanced_accuracy_ci95": [
+              0.8370399734930064,
+              0.9388900728935013
+            ],
+            "delta_ci95": [
+              -0.05362379356219126,
+              0.0657667760612342
+            ],
+            "groups": 101
+          }
+        },
+        "slices": {
+          "source": {
+            "js": {
+              "n": 67,
+              "benign": 38,
+              "malicious": 29,
+              "accuracy": 0.9253731343283582,
+              "balanced_accuracy": 0.9301270417422868,
+              "macro_f1": 0.9247698181001571,
+              "mcc": 0.8533133275353448,
+              "false_blocks": 4,
+              "missed_threats": 1,
+              "false_block_rate": 0.10526315789473684,
+              "miss_rate": 0.034482758620689655,
+              "recall": 0.9655172413793104,
+              "specificity": 0.8947368421052632,
+              "unresolved": 0
+            },
+            "py": {
+              "n": 93,
+              "benign": 42,
+              "malicious": 51,
+              "accuracy": 0.8602150537634409,
+              "balanced_accuracy": 0.8662464985994398,
+              "macro_f1": 0.8601503759398497,
+              "mcc": 0.730110899842708,
+              "false_blocks": 3,
+              "missed_threats": 10,
+              "false_block_rate": 0.07142857142857142,
+              "miss_rate": 0.19607843137254902,
+              "recall": 0.803921568627451,
+              "specificity": 0.9285714285714286,
+              "unresolved": 0
+            }
+          },
+          "clipped": {
+            "False": {
+              "n": 122,
+              "benign": 59,
+              "malicious": 63,
+              "accuracy": 0.8688524590163934,
+              "balanced_accuracy": 0.869787463007802,
+              "macro_f1": 0.8688524590163934,
+              "mcc": 0.7395749260156039,
+              "false_blocks": 6,
+              "missed_threats": 10,
+              "false_block_rate": 0.1016949152542373,
+              "miss_rate": 0.15873015873015872,
+              "recall": 0.8412698412698413,
+              "specificity": 0.8983050847457628,
+              "unresolved": 0
+            },
+            "True": {
+              "n": 38,
+              "benign": 21,
+              "malicious": 17,
+              "accuracy": 0.9473684210526316,
+              "balanced_accuracy": 0.9467787114845938,
+              "macro_f1": 0.9467787114845938,
+              "mcc": 0.8935574229691877,
+              "false_blocks": 1,
+              "missed_threats": 1,
+              "false_block_rate": 0.047619047619047616,
+              "miss_rate": 0.058823529411764705,
+              "recall": 0.9411764705882353,
+              "specificity": 0.9523809523809523,
+              "unresolved": 0
+            }
+          }
+        }
+      },
+      "jina-v2-mlp": {
+        "selected": "h128-a0.01-e30",
+        "metrics": {
+          "n": 160,
+          "benign": 80,
+          "malicious": 80,
+          "accuracy": 0.8875,
+          "balanced_accuracy": 0.8875,
+          "macro_f1": 0.887341574088562,
+          "mcc": 0.7771889263740452,
+          "false_blocks": 6,
+          "missed_threats": 12,
+          "false_block_rate": 0.075,
+          "miss_rate": 0.15,
+          "recall": 0.85,
+          "specificity": 0.925,
+          "unresolved": 0
+        },
+        "balanced_accuracy_ci95": [
+          0.8333305794227803,
+          0.9433708974325373
+        ],
+        "delta_ci95": null,
+        "groups": 101,
+        "baseline": null,
+        "seeds": {
+          "20261103": {
+            "n": 160,
+            "benign": 80,
+            "malicious": 80,
+            "accuracy": 0.8875,
+            "balanced_accuracy": 0.8875,
+            "macro_f1": 0.887341574088562,
+            "mcc": 0.7771889263740452,
+            "false_blocks": 6,
+            "missed_threats": 12,
+            "false_block_rate": 0.075,
+            "miss_rate": 0.15,
+            "recall": 0.85,
+            "specificity": 0.925,
+            "unresolved": 0
+          },
+          "20261104": {
+            "n": 160,
+            "benign": 80,
+            "malicious": 80,
+            "accuracy": 0.90625,
+            "balanced_accuracy": 0.90625,
+            "macro_f1": 0.906217029424407,
+            "mcc": 0.8130718923008946,
+            "false_blocks": 6,
+            "missed_threats": 9,
+            "false_block_rate": 0.075,
+            "miss_rate": 0.1125,
+            "recall": 0.8875,
+            "specificity": 0.925,
+            "unresolved": 0
+          },
+          "20261105": {
+            "n": 160,
+            "benign": 80,
+            "malicious": 80,
+            "accuracy": 0.90625,
+            "balanced_accuracy": 0.90625,
+            "macro_f1": 0.906217029424407,
+            "mcc": 0.8130718923008946,
+            "false_blocks": 6,
+            "missed_threats": 9,
+            "false_block_rate": 0.075,
+            "miss_rate": 0.1125,
+            "recall": 0.8875,
+            "specificity": 0.925,
+            "unresolved": 0
+          }
+        },
+        "comparison": {
+          "qwen": {
+            "delta_balanced_accuracy": 0.018749999999999933,
+            "balanced_accuracy_ci95": [
+              0.8333305794227803,
+              0.9433708974325373
+            ],
+            "delta_ci95": [
+              -0.03978060207336525,
+              0.08013255374980224
+            ],
+            "groups": 101
+          },
+          "liquid": {
+            "delta_balanced_accuracy": -0.025000000000000133,
+            "balanced_accuracy_ci95": [
+              0.8333305794227803,
+              0.9433708974325373
+            ],
+            "delta_ci95": [
+              -0.10093273574251851,
+              0.04919546382264337
+            ],
+            "groups": 101
+          },
+          "tfidf": {
+            "delta_balanced_accuracy": 0.006249999999999978,
+            "balanced_accuracy_ci95": [
+              0.8333305794227803,
+              0.9433708974325373
+            ],
+            "delta_ci95": [
+              -0.04851154463514008,
+              0.06709505175158105
+            ],
+            "groups": 101
+          }
+        },
+        "slices": {
+          "source": {
+            "js": {
+              "n": 67,
+              "benign": 38,
+              "malicious": 29,
+              "accuracy": 0.9253731343283582,
+              "balanced_accuracy": 0.9301270417422868,
+              "macro_f1": 0.9247698181001571,
+              "mcc": 0.8533133275353448,
+              "false_blocks": 4,
+              "missed_threats": 1,
+              "false_block_rate": 0.10526315789473684,
+              "miss_rate": 0.034482758620689655,
+              "recall": 0.9655172413793104,
+              "specificity": 0.8947368421052632,
+              "unresolved": 0
+            },
+            "py": {
+              "n": 93,
+              "benign": 42,
+              "malicious": 51,
+              "accuracy": 0.8602150537634409,
+              "balanced_accuracy": 0.8683473389355743,
+              "macro_f1": 0.8602150537634409,
+              "mcc": 0.7366946778711485,
+              "false_blocks": 2,
+              "missed_threats": 11,
+              "false_block_rate": 0.047619047619047616,
+              "miss_rate": 0.21568627450980393,
+              "recall": 0.7843137254901961,
+              "specificity": 0.9523809523809523,
+              "unresolved": 0
+            }
+          },
+          "clipped": {
+            "False": {
+              "n": 122,
+              "benign": 59,
+              "malicious": 63,
+              "accuracy": 0.8688524590163934,
+              "balanced_accuracy": 0.8703255313424805,
+              "macro_f1": 0.8688172043010753,
+              "mcc": 0.7418495279715458,
+              "false_blocks": 5,
+              "missed_threats": 11,
+              "false_block_rate": 0.0847457627118644,
+              "miss_rate": 0.1746031746031746,
+              "recall": 0.8253968253968254,
+              "specificity": 0.9152542372881356,
+              "unresolved": 0
+            },
+            "True": {
+              "n": 38,
+              "benign": 21,
+              "malicious": 17,
+              "accuracy": 0.9473684210526316,
+              "balanced_accuracy": 0.9467787114845938,
+              "macro_f1": 0.9467787114845938,
+              "mcc": 0.8935574229691877,
+              "false_blocks": 1,
+              "missed_threats": 1,
+              "false_block_rate": 0.047619047619047616,
+              "miss_rate": 0.058823529411764705,
+              "recall": 0.9411764705882353,
+              "specificity": 0.9523809523809523,
+              "unresolved": 0
+            }
+          }
+        }
+      },
+      "jina-code-lr": {
+        "selected": "C0.1",
+        "metrics": {
+          "n": 160,
+          "benign": 80,
+          "malicious": 80,
+          "accuracy": 0.84375,
+          "balanced_accuracy": 0.84375,
+          "macro_f1": 0.8423645320197044,
+          "mcc": 0.6999132392733556,
+          "false_blocks": 5,
+          "missed_threats": 20,
+          "false_block_rate": 0.0625,
+          "miss_rate": 0.25,
+          "recall": 0.75,
+          "specificity": 0.9375,
+          "unresolved": 0
+        },
+        "balanced_accuracy_ci95": [
+          0.777309612522058,
+          0.9162852112676056
+        ],
+        "delta_ci95": null,
+        "groups": 101,
+        "baseline": null,
+        "seeds": null,
+        "comparison": {
+          "qwen": {
+            "delta_balanced_accuracy": -0.025000000000000022,
+            "balanced_accuracy_ci95": [
+              0.777309612522058,
+              0.9162852112676056
+            ],
+            "delta_ci95": [
+              -0.0723450962663546,
+              0.03091889835961867
+            ],
+            "groups": 101
+          },
+          "liquid": {
+            "delta_balanced_accuracy": -0.06875000000000009,
+            "balanced_accuracy_ci95": [
+              0.777309612522058,
+              0.9162852112676056
+            ],
+            "delta_ci95": [
+              -0.14034368579866466,
+              0.013313985687478
+            ],
+            "groups": 101
+          },
+          "tfidf": {
+            "delta_balanced_accuracy": -0.03749999999999998,
+            "balanced_accuracy_ci95": [
+              0.777309612522058,
+              0.9162852112676056
+            ],
+            "delta_ci95": [
+              -0.09694639245991624,
+              0.021799253574432294
+            ],
+            "groups": 101
+          }
+        },
+        "slices": {
+          "source": {
+            "js": {
+              "n": 67,
+              "benign": 38,
+              "malicious": 29,
+              "accuracy": 0.8955223880597015,
+              "balanced_accuracy": 0.8956442831215972,
+              "macro_f1": 0.8940112994350282,
+              "mcc": 0.788431919495487,
+              "false_blocks": 4,
+              "missed_threats": 3,
+              "false_block_rate": 0.10526315789473684,
+              "miss_rate": 0.10344827586206896,
+              "recall": 0.896551724137931,
+              "specificity": 0.8947368421052632,
+              "unresolved": 0
+            },
+            "py": {
+              "n": 93,
+              "benign": 42,
+              "malicious": 51,
+              "accuracy": 0.8064516129032258,
+              "balanced_accuracy": 0.8214285714285714,
+              "macro_f1": 0.8053488372093023,
+              "mcc": 0.66035304996507,
+              "false_blocks": 1,
+              "missed_threats": 17,
+              "false_block_rate": 0.023809523809523808,
+              "miss_rate": 0.3333333333333333,
+              "recall": 0.6666666666666666,
+              "specificity": 0.9761904761904762,
+              "unresolved": 0
+            }
+          },
+          "clipped": {
+            "False": {
+              "n": 122,
+              "benign": 59,
+              "malicious": 63,
+              "accuracy": 0.8360655737704918,
+              "balanced_accuracy": 0.8391175679311272,
+              "macro_f1": 0.835357624831309,
+              "mcc": 0.6871670120777889,
+              "false_blocks": 4,
+              "missed_threats": 16,
+              "false_block_rate": 0.06779661016949153,
+              "miss_rate": 0.25396825396825395,
+              "recall": 0.746031746031746,
+              "specificity": 0.9322033898305084,
+              "unresolved": 0
+            },
+            "True": {
+              "n": 38,
+              "benign": 21,
+              "malicious": 17,
+              "accuracy": 0.868421052631579,
+              "balanced_accuracy": 0.8585434173669467,
+              "macro_f1": 0.8637992831541219,
+              "mcc": 0.7391561905869195,
+              "false_blocks": 1,
+              "missed_threats": 4,
+              "false_block_rate": 0.047619047619047616,
+              "miss_rate": 0.23529411764705882,
+              "recall": 0.7647058823529411,
+              "specificity": 0.9523809523809523,
+              "unresolved": 0
+            }
+          }
+        }
+      },
+      "jina-code-mlp": {
+        "selected": "h128-a0.01-e30",
+        "metrics": {
+          "n": 160,
+          "benign": 80,
+          "malicious": 80,
+          "accuracy": 0.84375,
+          "balanced_accuracy": 0.84375,
+          "macro_f1": 0.8419659436608589,
+          "mcc": 0.7035687600822249,
+          "false_blocks": 4,
+          "missed_threats": 21,
+          "false_block_rate": 0.05,
+          "miss_rate": 0.2625,
+          "recall": 0.7375,
+          "specificity": 0.95,
+          "unresolved": 0
+        },
+        "balanced_accuracy_ci95": [
+          0.7716430673077679,
+          0.9166182747667262
+        ],
+        "delta_ci95": null,
+        "groups": 101,
+        "baseline": null,
+        "seeds": {
+          "20261103": {
+            "n": 160,
+            "benign": 80,
+            "malicious": 80,
+            "accuracy": 0.84375,
+            "balanced_accuracy": 0.84375,
+            "macro_f1": 0.8419659436608589,
+            "mcc": 0.7035687600822249,
+            "false_blocks": 4,
+            "missed_threats": 21,
+            "false_block_rate": 0.05,
+            "miss_rate": 0.2625,
+            "recall": 0.7375,
+            "specificity": 0.95,
+            "unresolved": 0
+          },
+          "20261104": {
+            "n": 160,
+            "benign": 80,
+            "malicious": 80,
+            "accuracy": 0.85,
+            "balanced_accuracy": 0.85,
+            "macro_f1": 0.8488427019367029,
+            "mcc": 0.7109714025666357,
+            "false_blocks": 5,
+            "missed_threats": 19,
+            "false_block_rate": 0.0625,
+            "miss_rate": 0.2375,
+            "recall": 0.7625,
+            "specificity": 0.9375,
+            "unresolved": 0
+          },
+          "20261105": {
+            "n": 160,
+            "benign": 80,
+            "malicious": 80,
+            "accuracy": 0.8375,
+            "balanced_accuracy": 0.8374999999999999,
+            "macro_f1": 0.8354169963601836,
+            "mcc": 0.6927633078175603,
+            "false_blocks": 4,
+            "missed_threats": 22,
+            "false_block_rate": 0.05,
+            "miss_rate": 0.275,
+            "recall": 0.725,
+            "specificity": 0.95,
+            "unresolved": 0
+          }
+        },
+        "comparison": {
+          "qwen": {
+            "delta_balanced_accuracy": -0.025000000000000022,
+            "balanced_accuracy_ci95": [
+              0.7716430673077679,
+              0.9166182747667262
+            ],
+            "delta_ci95": [
+              -0.08059602922333921,
+              0.03197011322011324
+            ],
+            "groups": 101
+          },
+          "liquid": {
+            "delta_balanced_accuracy": -0.06875000000000009,
+            "balanced_accuracy_ci95": [
+              0.7716430673077679,
+              0.9166182747667262
+            ],
+            "delta_ci95": [
+              -0.14377492968189165,
+              0.009818057185346868
+            ],
+            "groups": 101
+          },
+          "tfidf": {
+            "delta_balanced_accuracy": -0.03749999999999998,
+            "balanced_accuracy_ci95": [
+              0.7716430673077679,
+              0.9166182747667262
+            ],
+            "delta_ci95": [
+              -0.10390308854387507,
+              0.025322000556660385
+            ],
+            "groups": 101
+          }
+        },
+        "slices": {
+          "source": {
+            "js": {
+              "n": 67,
+              "benign": 38,
+              "malicious": 29,
+              "accuracy": 0.9402985074626866,
+              "balanced_accuracy": 0.9392014519056261,
+              "macro_f1": 0.9392014519056261,
+              "mcc": 0.8784029038112523,
+              "false_blocks": 2,
+              "missed_threats": 2,
+              "false_block_rate": 0.05263157894736842,
+              "miss_rate": 0.06896551724137931,
+              "recall": 0.9310344827586207,
+              "specificity": 0.9473684210526315,
+              "unresolved": 0
+            },
+            "py": {
+              "n": 93,
+              "benign": 42,
+              "malicious": 51,
+              "accuracy": 0.7741935483870968,
+              "balanced_accuracy": 0.7899159663865546,
+              "macro_f1": 0.7725101921956902,
+              "mcc": 0.5991649475303555,
+              "false_blocks": 2,
+              "missed_threats": 19,
+              "false_block_rate": 0.047619047619047616,
+              "miss_rate": 0.37254901960784315,
+              "recall": 0.6274509803921569,
+              "specificity": 0.9523809523809523,
+              "unresolved": 0
+            }
+          },
+          "clipped": {
+            "False": {
+              "n": 122,
+              "benign": 59,
+              "malicious": 63,
+              "accuracy": 0.8360655737704918,
+              "balanced_accuracy": 0.8396556362658057,
+              "macro_f1": 0.8349567099567099,
+              "mcc": 0.6924774441548366,
+              "false_blocks": 3,
+              "missed_threats": 17,
+              "false_block_rate": 0.05084745762711865,
+              "miss_rate": 0.2698412698412698,
+              "recall": 0.7301587301587301,
+              "specificity": 0.9491525423728814,
+              "unresolved": 0
+            },
+            "True": {
+              "n": 38,
+              "benign": 21,
+              "malicious": 17,
+              "accuracy": 0.868421052631579,
+              "balanced_accuracy": 0.8585434173669467,
+              "macro_f1": 0.8637992831541219,
+              "mcc": 0.7391561905869195,
+              "false_blocks": 1,
+              "missed_threats": 4,
+              "false_block_rate": 0.047619047619047616,
+              "miss_rate": 0.23529411764705882,
+              "recall": 0.7647058823529411,
+              "specificity": 0.9523809523809523,
+              "unresolved": 0
+            }
+          }
+        }
+      }
+    },
+    "skills": {
+      "qwen4": {
+        "selected": "scope",
+        "metrics": {
+          "n": 1384,
+          "benign": 545,
+          "malicious": 839,
+          "accuracy": 0.4530346820809249,
+          "balanced_accuracy": 0.548546216006386,
+          "macro_f1": 0.3847751088561807,
+          "mcc": 0.19867960687290107,
+          "false_blocks": 1,
+          "missed_threats": 756,
+          "false_block_rate": 0.001834862385321101,
+          "miss_rate": 0.901072705601907,
+          "recall": 0.09892729439809297,
+          "specificity": 0.998165137614679,
+          "unresolved": 0
+        },
+        "balanced_accuracy_ci95": [
+          0.5257887042222811,
+          0.5790493450481559
+        ],
+        "delta_ci95": [
+          -0.0015568606369363996,
+          0.01363408616968522
+        ],
+        "groups": 849,
+        "baseline": {
+          "n": 1384,
+          "benign": 545,
+          "malicious": 839,
+          "accuracy": 0.44436416184971095,
+          "balanced_accuracy": 0.5417163289630512,
+          "macro_f1": 0.37017607086152404,
+          "mcc": 0.18602384130954833,
+          "false_blocks": 0,
+          "missed_threats": 769,
+          "false_block_rate": 0.0,
+          "miss_rate": 0.9165673420738975,
+          "recall": 0.08343265792610251,
+          "specificity": 1.0,
+          "unresolved": 0
+        },
+        "seeds": null,
+        "comparison": {
+          "qwen": {
+            "delta_balanced_accuracy": 0.006829887043334759,
+            "balanced_accuracy_ci95": [
+              0.5257887042222811,
+              0.5790493450481559
+            ],
+            "delta_ci95": [
+              0.0023250716338570425,
+              0.011362555465615834
+            ],
+            "groups": 849
+          },
+          "liquid": {
+            "delta_balanced_accuracy": -0.10201309991142793,
+            "balanced_accuracy_ci95": [
+              0.5257887042222811,
+              0.5790493450481559
+            ],
+            "delta_ci95": [
+              -0.14995794235517207,
+              -0.0437852772528371
+            ],
+            "groups": 849
+          },
+          "tfidf": {
+            "delta_balanced_accuracy": -0.15337393795584509,
+            "balanced_accuracy_ci95": [
+              0.5257887042222811,
+              0.5790493450481559
+            ],
+            "delta_ci95": [
+              -0.19495423833485606,
+              -0.09830795043383614
+            ],
+            "groups": 849
+          }
+        },
+        "slices": {
+          "source": {
+            "SRC009": {
+              "n": 728,
+              "benign": 0,
+              "malicious": 728,
+              "accuracy": 0.008241758241758212,
+              "balanced_accuracy": null,
+              "macro_f1": 0.008174386920980926,
+              "mcc": 0.0,
+              "false_blocks": 0,
+              "missed_threats": 722,
+              "false_block_rate": null,
+              "miss_rate": 0.9917582417582418,
+              "recall": 0.008241758241758242,
+              "specificity": null,
+              "unresolved": 0
+            },
+            "SRC011": {
+              "n": 476,
+              "benign": 455,
+              "malicious": 21,
+              "accuracy": 0.9810924369747899,
+              "balanced_accuracy": 0.8084249084249084,
+              "macro_f1": 0.8665212649945475,
+              "mcc": 0.7497384434163057,
+              "false_blocks": 1,
+              "missed_threats": 8,
+              "false_block_rate": 0.002197802197802198,
+              "miss_rate": 0.38095238095238093,
+              "recall": 0.6190476190476191,
+              "specificity": 0.9978021978021978,
+              "unresolved": 0
+            },
+            "SRC012": {
+              "n": 180,
+              "benign": 90,
+              "malicious": 90,
+              "accuracy": 0.8555555555555556,
+              "balanced_accuracy": 0.8555555555555556,
+              "macro_f1": 0.8524776194679107,
+              "mcc": 0.7427813527082074,
+              "false_blocks": 0,
+              "missed_threats": 26,
+              "false_block_rate": 0.0,
+              "miss_rate": 0.28888888888888886,
+              "recall": 0.7111111111111111,
+              "specificity": 1.0,
+              "unresolved": 0
+            }
+          },
+          "clipped": {
+            "False": {
+              "n": 986,
+              "benign": 386,
+              "malicious": 600,
+              "accuracy": 0.47160243407707914,
+              "balanced_accuracy": 0.5653713298791019,
+              "macro_f1": 0.41569273781778515,
+              "mcc": 0.23239126193103823,
+              "false_blocks": 1,
+              "missed_threats": 520,
+              "false_block_rate": 0.0025906735751295338,
+              "miss_rate": 0.8666666666666667,
+              "recall": 0.13333333333333333,
+              "specificity": 0.9974093264248705,
+              "unresolved": 0
+            },
+            "True": {
+              "n": 398,
+              "benign": 159,
+              "malicious": 239,
+              "accuracy": 0.40703517587939697,
+              "balanced_accuracy": 0.5062761506276151,
+              "macro_f1": 0.2994003043231793,
+              "mcc": 0.07108233592077143,
+              "false_blocks": 0,
+              "missed_threats": 236,
+              "false_block_rate": 0.0,
+              "miss_rate": 0.9874476987447699,
+              "recall": 0.012552301255230125,
+              "specificity": 1.0,
+              "unresolved": 0
+            }
+          }
+        }
+      },
+      "qwen9": {
+        "selected": "contrasts",
+        "metrics": {
+          "n": 1384,
+          "benign": 545,
+          "malicious": 839,
+          "accuracy": 0.4609826589595376,
+          "balanced_accuracy": 0.5547801554931056,
+          "macro_f1": 0.39789310640839026,
+          "mcc": 0.20968016384245355,
+          "false_blocks": 2,
+          "missed_threats": 744,
+          "false_block_rate": 0.003669724770642202,
+          "miss_rate": 0.8867699642431466,
+          "recall": 0.11323003575685339,
+          "specificity": 0.9963302752293578,
+          "unresolved": 0
+        },
+        "balanced_accuracy_ci95": [
+          0.5292378612984946,
+          0.5881711791283979
+        ],
+        "delta_ci95": [
+          -0.005518099242295215,
+          0.008954993168162485
+        ],
+        "groups": 849,
+        "baseline": {
+          "n": 1384,
+          "benign": 545,
+          "malicious": 839,
+          "accuracy": 0.45809248554913296,
+          "balanced_accuracy": 0.5530393325387366,
+          "macro_f1": 0.3921008245877061,
+          "mcc": 0.2112892443129424,
+          "false_blocks": 0,
+          "missed_threats": 750,
+          "false_block_rate": 0.0,
+          "miss_rate": 0.8939213349225268,
+          "recall": 0.10607866507747318,
+          "specificity": 1.0,
+          "unresolved": 0
+        },
+        "seeds": null,
+        "comparison": {
+          "qwen": {
+            "delta_balanced_accuracy": 0.013063826530054334,
+            "balanced_accuracy_ci95": [
+              0.5292378612984946,
+              0.5881711791283979
+            ],
+            "delta_ci95": [
+              0.005101055330945556,
+              0.02435056021715761
+            ],
+            "groups": 849
+          },
+          "liquid": {
+            "delta_balanced_accuracy": -0.09577916042470835,
+            "balanced_accuracy_ci95": [
+              0.5292378612984946,
+              0.5881711791283979
+            ],
+            "delta_ci95": [
+              -0.14723761175094877,
+              -0.03488843565444793
+            ],
+            "groups": 849
+          },
+          "tfidf": {
+            "delta_balanced_accuracy": -0.1471399984691255,
+            "balanced_accuracy_ci95": [
+              0.5292378612984946,
+              0.5881711791283979
+            ],
+            "delta_ci95": [
+              -0.19258067568441892,
+              -0.09001054667896356
+            ],
+            "groups": 849
+          }
+        },
+        "slices": {
+          "source": {
+            "SRC009": {
+              "n": 728,
+              "benign": 0,
+              "malicious": 728,
+              "accuracy": 0.006868131868131844,
+              "balanced_accuracy": null,
+              "macro_f1": 0.0068212824010914054,
+              "mcc": 0.0,
+              "false_blocks": 0,
+              "missed_threats": 723,
+              "false_block_rate": null,
+              "miss_rate": 0.9931318681318682,
+              "recall": 0.006868131868131868,
+              "specificity": null,
+              "unresolved": 0
+            },
+            "SRC011": {
+              "n": 476,
+              "benign": 455,
+              "malicious": 21,
+              "accuracy": 0.9810924369747899,
+              "balanced_accuracy": 0.8311355311355311,
+              "macro_f1": 0.8734603455914931,
+              "mcc": 0.7545920365224209,
+              "false_blocks": 2,
+              "missed_threats": 7,
+              "false_block_rate": 0.004395604395604396,
+              "miss_rate": 0.3333333333333333,
+              "recall": 0.6666666666666666,
+              "specificity": 0.9956043956043956,
+              "unresolved": 0
+            },
+            "SRC012": {
+              "n": 180,
+              "benign": 90,
+              "malicious": 90,
+              "accuracy": 0.9222222222222223,
+              "balanced_accuracy": 0.9222222222222223,
+              "macro_f1": 0.9217488510744007,
+              "mcc": 0.8548504142651103,
+              "false_blocks": 0,
+              "missed_threats": 14,
+              "false_block_rate": 0.0,
+              "miss_rate": 0.15555555555555556,
+              "recall": 0.8444444444444444,
+              "specificity": 1.0,
+              "unresolved": 0
+            }
+          },
+          "clipped": {
+            "False": {
+              "n": 986,
+              "benign": 386,
+              "malicious": 600,
+              "accuracy": 0.48377281947261663,
+              "balanced_accuracy": 0.5749093264248705,
+              "macro_f1": 0.43451772646096126,
+              "mcc": 0.2478189488251018,
+              "false_blocks": 2,
+              "missed_threats": 507,
+              "false_block_rate": 0.0051813471502590676,
+              "miss_rate": 0.845,
+              "recall": 0.155,
+              "specificity": 0.9948186528497409,
+              "unresolved": 0
+            },
+            "True": {
+              "n": 398,
+              "benign": 159,
+              "malicious": 239,
+              "accuracy": 0.40452261306532666,
+              "balanced_accuracy": 0.50418410041841,
+              "macro_f1": 0.2947852416732085,
+              "mcc": 0.057965157007507824,
+              "false_blocks": 0,
+              "missed_threats": 237,
+              "false_block_rate": 0.0,
+              "miss_rate": 0.9916317991631799,
+              "recall": 0.008368200836820083,
+              "specificity": 1.0,
+              "unresolved": 0
+            }
+          }
+        }
+      },
+      "jina-v2-lr": {
+        "selected": "C0.1",
+        "metrics": {
+          "n": 1384,
+          "benign": 545,
+          "malicious": 839,
+          "accuracy": 0.5773121387283238,
+          "balanced_accuracy": 0.5488173994816896,
+          "macro_f1": 0.5489588851991062,
+          "mcc": 0.09965954254202689,
+          "false_blocks": 319,
+          "missed_threats": 266,
+          "false_block_rate": 0.5853211009174312,
+          "miss_rate": 0.3170441001191895,
+          "recall": 0.6829558998808105,
+          "specificity": 0.41467889908256883,
+          "unresolved": 0
+        },
+        "balanced_accuracy_ci95": [
+          0.48147838987945674,
+          0.6048225031247203
+        ],
+        "delta_ci95": null,
+        "groups": 849,
+        "baseline": null,
+        "seeds": null,
+        "comparison": {
+          "qwen": {
+            "delta_balanced_accuracy": 0.007101070518638397,
+            "balanced_accuracy_ci95": [
+              0.48147838987945674,
+              0.6048225031247203
+            ],
+            "delta_ci95": [
+              -0.07892651830220974,
+              0.07630222157526378
+            ],
+            "groups": 849
+          },
+          "liquid": {
+            "delta_balanced_accuracy": -0.10174191643612429,
+            "balanced_accuracy_ci95": [
+              0.48147838987945674,
+              0.6048225031247203
+            ],
+            "delta_ci95": [
+              -0.15352870998455875,
+              -0.05862876391431948
+            ],
+            "groups": 849
+          },
+          "tfidf": {
+            "delta_balanced_accuracy": -0.15310275448054145,
+            "balanced_accuracy_ci95": [
+              0.48147838987945674,
+              0.6048225031247203
+            ],
+            "delta_ci95": [
+              -0.20907804989396225,
+              -0.10630230133397742
+            ],
+            "groups": 849
+          }
+        },
+        "slices": {
+          "source": {
+            "SRC009": {
+              "n": 728,
+              "benign": 0,
+              "malicious": 728,
+              "accuracy": 0.6744505494505495,
+              "balanced_accuracy": null,
+              "macro_f1": 0.4027891714520098,
+              "mcc": 0.0,
+              "false_blocks": 0,
+              "missed_threats": 237,
+              "false_block_rate": null,
+              "miss_rate": 0.32554945054945056,
+              "recall": 0.6744505494505495,
+              "specificity": null,
+              "unresolved": 0
+            },
+            "SRC011": {
+              "n": 476,
+              "benign": 455,
+              "malicious": 21,
+              "accuracy": 0.41806722689075626,
+              "balanced_accuracy": 0.582051282051282,
+              "macro_f1": 0.3363833567369783,
+              "mcc": 0.06893750227897966,
+              "false_blocks": 272,
+              "missed_threats": 5,
+              "false_block_rate": 0.5978021978021978,
+              "miss_rate": 0.23809523809523808,
+              "recall": 0.7619047619047619,
+              "specificity": 0.4021978021978022,
+              "unresolved": 0
+            },
+            "SRC012": {
+              "n": 180,
+              "benign": 90,
+              "malicious": 90,
+              "accuracy": 0.6055555555555556,
+              "balanced_accuracy": 0.6055555555555555,
+              "macro_f1": 0.5990085030278309,
+              "mcc": 0.21836195699112954,
+              "false_blocks": 47,
+              "missed_threats": 24,
+              "false_block_rate": 0.5222222222222223,
+              "miss_rate": 0.26666666666666666,
+              "recall": 0.7333333333333333,
+              "specificity": 0.4777777777777778,
+              "unresolved": 0
+            }
+          },
+          "clipped": {
+            "False": {
+              "n": 986,
+              "benign": 386,
+              "malicious": 600,
+              "accuracy": 0.5365111561866126,
+              "balanced_accuracy": 0.5170639032815199,
+              "macro_f1": 0.5168299208123569,
+              "mcc": 0.033909980083394346,
+              "false_blocks": 221,
+              "missed_threats": 236,
+              "false_block_rate": 0.572538860103627,
+              "miss_rate": 0.3933333333333333,
+              "recall": 0.6066666666666667,
+              "specificity": 0.4274611398963731,
+              "unresolved": 0
+            },
+            "True": {
+              "n": 398,
+              "benign": 159,
+              "malicious": 239,
+              "accuracy": 0.6783919597989949,
+              "balanced_accuracy": 0.6290623930949186,
+              "macro_f1": 0.6267838827838828,
+              "mcc": 0.3010491033263492,
+              "false_blocks": 98,
+              "missed_threats": 30,
+              "false_block_rate": 0.6163522012578616,
+              "miss_rate": 0.12552301255230125,
+              "recall": 0.8744769874476988,
+              "specificity": 0.3836477987421384,
+              "unresolved": 0
+            }
+          }
+        }
+      },
+      "jina-v2-mlp": {
+        "selected": "h128-a0.01-e60",
+        "metrics": {
+          "n": 1384,
+          "benign": 545,
+          "malicious": 839,
+          "accuracy": 0.5028901734104047,
+          "balanced_accuracy": 0.48486293206197856,
+          "macro_f1": 0.4847044358434856,
+          "mcc": -0.029985670561704866,
+          "false_blocks": 327,
+          "missed_threats": 361,
+          "false_block_rate": 0.6,
+          "miss_rate": 0.4302741358760429,
+          "recall": 0.5697258641239571,
+          "specificity": 0.4,
+          "unresolved": 0
+        },
+        "balanced_accuracy_ci95": [
+          0.4013929818941197,
+          0.5591334852157397
+        ],
+        "delta_ci95": null,
+        "groups": 849,
+        "baseline": null,
+        "seeds": {
+          "20261103": {
+            "n": 1384,
+            "benign": 545,
+            "malicious": 839,
+            "accuracy": 0.5028901734104047,
+            "balanced_accuracy": 0.48486293206197856,
+            "macro_f1": 0.4847044358434856,
+            "mcc": -0.029985670561704866,
+            "false_blocks": 327,
+            "missed_threats": 361,
+            "false_block_rate": 0.6,
+            "miss_rate": 0.4302741358760429,
+            "recall": 0.5697258641239571,
+            "specificity": 0.4,
+            "unresolved": 0
+          },
+          "20261104": {
+            "n": 1384,
+            "benign": 545,
+            "malicious": 839,
+            "accuracy": 0.49349710982658956,
+            "balanced_accuracy": 0.4729363265573914,
+            "macro_f1": 0.4729915960817566,
+            "mcc": -0.05379118407754409,
+            "false_blocks": 340,
+            "missed_threats": 361,
+            "false_block_rate": 0.6238532110091743,
+            "miss_rate": 0.4302741358760429,
+            "recall": 0.5697258641239571,
+            "specificity": 0.3761467889908257,
+            "unresolved": 0
+          },
+          "20261105": {
+            "n": 1384,
+            "benign": 545,
+            "malicious": 839,
+            "accuracy": 0.47760115606936415,
+            "balanced_accuracy": 0.4611114148560431,
+            "macro_f1": 0.460984579351403,
+            "mcc": -0.07674412368692182,
+            "false_blocks": 336,
+            "missed_threats": 387,
+            "false_block_rate": 0.6165137614678899,
+            "miss_rate": 0.4612634088200238,
+            "recall": 0.5387365911799762,
+            "specificity": 0.3834862385321101,
+            "unresolved": 0
+          }
+        },
+        "comparison": {
+          "qwen": {
+            "delta_balanced_accuracy": -0.05685339690107266,
+            "balanced_accuracy_ci95": [
+              0.4013929818941197,
+              0.5591334852157397
+            ],
+            "delta_ci95": [
+              -0.15246193426168256,
+              0.02850792710355411
+            ],
+            "groups": 849
+          },
+          "liquid": {
+            "delta_balanced_accuracy": -0.16569638385583535,
+            "balanced_accuracy_ci95": [
+              0.4013929818941197,
+              0.5591334852157397
+            ],
+            "delta_ci95": [
+              -0.23555356864046212,
+              -0.10793539801773118
+            ],
+            "groups": 849
+          },
+          "tfidf": {
+            "delta_balanced_accuracy": -0.2170572219002525,
+            "balanced_accuracy_ci95": [
+              0.4013929818941197,
+              0.5591334852157397
+            ],
+            "delta_ci95": [
+              -0.28962731153512167,
+              -0.15383120558538396
+            ],
+            "groups": 849
+          }
+        },
+        "slices": {
+          "source": {
+            "SRC009": {
+              "n": 728,
+              "benign": 0,
+              "malicious": 728,
+              "accuracy": 0.5398351648351649,
+              "balanced_accuracy": null,
+              "macro_f1": 0.35057983942908116,
+              "mcc": 0.0,
+              "false_blocks": 0,
+              "missed_threats": 335,
+              "false_block_rate": null,
+              "miss_rate": 0.46016483516483514,
+              "recall": 0.5398351648351648,
+              "specificity": null,
+              "unresolved": 0
+            },
+            "SRC011": {
+              "n": 476,
+              "benign": 455,
+              "malicious": 21,
+              "accuracy": 0.4201680672268907,
+              "balanced_accuracy": 0.5604395604395604,
+              "macro_f1": 0.3353973168214654,
+              "mcc": 0.05064394458461585,
+              "false_blocks": 270,
+              "missed_threats": 6,
+              "false_block_rate": 0.5934065934065934,
+              "miss_rate": 0.2857142857142857,
+              "recall": 0.7142857142857143,
+              "specificity": 0.4065934065934066,
+              "unresolved": 0
+            },
+            "SRC012": {
+              "n": 180,
+              "benign": 90,
+              "malicious": 90,
+              "accuracy": 0.5722222222222222,
+              "balanced_accuracy": 0.5722222222222222,
+              "macro_f1": 0.5533498759305211,
+              "mcc": 0.15845412772401885,
+              "false_blocks": 57,
+              "missed_threats": 20,
+              "false_block_rate": 0.6333333333333333,
+              "miss_rate": 0.2222222222222222,
+              "recall": 0.7777777777777778,
+              "specificity": 0.36666666666666664,
+              "unresolved": 0
+            }
+          },
+          "clipped": {
+            "False": {
+              "n": 986,
+              "benign": 386,
+              "malicious": 600,
+              "accuracy": 0.46957403651115615,
+              "balanced_accuracy": 0.4588298791018998,
+              "macro_f1": 0.4575162504852265,
+              "mcc": -0.08064337776492614,
+              "false_blocks": 228,
+              "missed_threats": 295,
+              "false_block_rate": 0.5906735751295337,
+              "miss_rate": 0.49166666666666664,
+              "recall": 0.5083333333333333,
+              "specificity": 0.40932642487046633,
+              "unresolved": 0
+            },
+            "True": {
+              "n": 398,
+              "benign": 159,
+              "malicious": 239,
+              "accuracy": 0.585427135678392,
+              "balanced_accuracy": 0.5506039314754875,
+              "macro_f1": 0.5490781748892779,
+              "mcc": 0.10657173659344131,
+              "false_blocks": 99,
+              "missed_threats": 66,
+              "false_block_rate": 0.6226415094339622,
+              "miss_rate": 0.27615062761506276,
+              "recall": 0.7238493723849372,
+              "specificity": 0.37735849056603776,
+              "unresolved": 0
+            }
+          }
+        }
+      },
+      "jina-code-lr": {
+        "selected": "C10",
+        "metrics": {
+          "n": 1384,
+          "benign": 545,
+          "malicious": 839,
+          "accuracy": 0.5917630057803468,
+          "balanced_accuracy": 0.5726312451476747,
+          "macro_f1": 0.5726076692972862,
+          "mcc": 0.14521597197849379,
+          "false_blocks": 282,
+          "missed_threats": 283,
+          "false_block_rate": 0.5174311926605505,
+          "miss_rate": 0.33730631704410013,
+          "recall": 0.6626936829558999,
+          "specificity": 0.48256880733944957,
+          "unresolved": 0
+        },
+        "balanced_accuracy_ci95": [
+          0.5275625545263785,
+          0.6172431546140562
+        ],
+        "delta_ci95": null,
+        "groups": 849,
+        "baseline": null,
+        "seeds": null,
+        "comparison": {
+          "qwen": {
+            "delta_balanced_accuracy": 0.030914916184623498,
+            "balanced_accuracy_ci95": [
+              0.5275625545263785,
+              0.6172431546140562
+            ],
+            "delta_ci95": [
+              -0.016654535855156936,
+              0.07474195457901635
+            ],
+            "groups": 849
+          },
+          "liquid": {
+            "delta_balanced_accuracy": -0.07792807077013919,
+            "balanced_accuracy_ci95": [
+              0.5275625545263785,
+              0.6172431546140562
+            ],
+            "delta_ci95": [
+              -0.12885552995391694,
+              -0.015586730405075373
+            ],
+            "groups": 849
+          },
+          "tfidf": {
+            "delta_balanced_accuracy": -0.12928890881455635,
+            "balanced_accuracy_ci95": [
+              0.5275625545263785,
+              0.6172431546140562
+            ],
+            "delta_ci95": [
+              -0.17973760287701357,
+              -0.06600271408095976
+            ],
+            "groups": 849
+          }
+        },
+        "slices": {
+          "source": {
+            "SRC009": {
+              "n": 728,
+              "benign": 0,
+              "malicious": 728,
+              "accuracy": 0.6222527472527473,
+              "balanced_accuracy": null,
+              "macro_f1": 0.3835732430143946,
+              "mcc": 0.0,
+              "false_blocks": 0,
+              "missed_threats": 275,
+              "false_block_rate": null,
+              "miss_rate": 0.37774725274725274,
+              "recall": 0.6222527472527473,
+              "specificity": null,
+              "unresolved": 0
+            },
+            "SRC011": {
+              "n": 476,
+              "benign": 455,
+              "malicious": 21,
+              "accuracy": 0.4726890756302521,
+              "balanced_accuracy": 0.6333333333333333,
+              "macro_f1": 0.37149320076803705,
+              "mcc": 0.11018289627177472,
+              "false_blocks": 247,
+              "missed_threats": 4,
+              "false_block_rate": 0.5428571428571428,
+              "miss_rate": 0.19047619047619047,
+              "recall": 0.8095238095238095,
+              "specificity": 0.45714285714285713,
+              "unresolved": 0
+            },
+            "SRC012": {
+              "n": 180,
+              "benign": 90,
+              "malicious": 90,
+              "accuracy": 0.7833333333333333,
+              "balanced_accuracy": 0.7833333333333334,
+              "macro_f1": 0.7767104551671491,
+              "mcc": 0.6036031327292743,
+              "false_blocks": 35,
+              "missed_threats": 4,
+              "false_block_rate": 0.3888888888888889,
+              "miss_rate": 0.044444444444444446,
+              "recall": 0.9555555555555556,
+              "specificity": 0.6111111111111112,
+              "unresolved": 0
+            }
+          },
+          "clipped": {
+            "False": {
+              "n": 986,
+              "benign": 386,
+              "malicious": 600,
+              "accuracy": 0.5963488843813387,
+              "balanced_accuracy": 0.5796286701208981,
+              "macro_f1": 0.5790284446618522,
+              "mcc": 0.15830328682829578,
+              "false_blocks": 192,
+              "missed_threats": 206,
+              "false_block_rate": 0.49740932642487046,
+              "miss_rate": 0.3433333333333333,
+              "recall": 0.6566666666666666,
+              "specificity": 0.5025906735751295,
+              "unresolved": 0
+            },
+            "True": {
+              "n": 398,
+              "benign": 159,
+              "malicious": 239,
+              "accuracy": 0.5804020100502513,
+              "balanced_accuracy": 0.5558932659666851,
+              "macro_f1": 0.5561684084003873,
+              "mcc": 0.11360836171429783,
+              "false_blocks": 90,
+              "missed_threats": 77,
+              "false_block_rate": 0.5660377358490566,
+              "miss_rate": 0.32217573221757323,
+              "recall": 0.6778242677824268,
+              "specificity": 0.4339622641509434,
+              "unresolved": 0
+            }
+          }
+        }
+      },
+      "jina-code-mlp": {
+        "selected": "h256-a0.01-e30",
+        "metrics": {
+          "n": 1384,
+          "benign": 545,
+          "malicious": 839,
+          "accuracy": 0.573699421965318,
+          "balanced_accuracy": 0.5458376616986146,
+          "macro_f1": 0.5459751836538611,
+          "mcc": 0.09336662879383163,
+          "false_blocks": 319,
+          "missed_threats": 271,
+          "false_block_rate": 0.5853211009174312,
+          "miss_rate": 0.3230035756853397,
+          "recall": 0.6769964243146603,
+          "specificity": 0.41467889908256883,
+          "unresolved": 0
+        },
+        "balanced_accuracy_ci95": [
+          0.5000137184537369,
+          0.5861864165158797
+        ],
+        "delta_ci95": null,
+        "groups": 849,
+        "baseline": null,
+        "seeds": {
+          "20261103": {
+            "n": 1384,
+            "benign": 545,
+            "malicious": 839,
+            "accuracy": 0.573699421965318,
+            "balanced_accuracy": 0.5458376616986146,
+            "macro_f1": 0.5459751836538611,
+            "mcc": 0.09336662879383163,
+            "false_blocks": 319,
+            "missed_threats": 271,
+            "false_block_rate": 0.5853211009174312,
+            "miss_rate": 0.3230035756853397,
+            "recall": 0.6769964243146603,
+            "specificity": 0.41467889908256883,
+            "unresolved": 0
+          },
+          "20261104": {
+            "n": 1384,
+            "benign": 545,
+            "malicious": 839,
+            "accuracy": 0.5700867052023122,
+            "balanced_accuracy": 0.5422149566434484,
+            "macro_f1": 0.5423013325551989,
+            "mcc": 0.08594963613668877,
+            "false_blocks": 321,
+            "missed_threats": 274,
+            "false_block_rate": 0.5889908256880734,
+            "miss_rate": 0.3265792610250298,
+            "recall": 0.6734207389749702,
+            "specificity": 0.41100917431192663,
+            "unresolved": 0
+          },
+          "20261105": {
+            "n": 1384,
+            "benign": 545,
+            "malicious": 839,
+            "accuracy": 0.5643063583815029,
+            "balanced_accuracy": 0.5403407289149381,
+            "macro_f1": 0.5405033831049024,
+            "mcc": 0.08127146703614303,
+            "false_blocks": 312,
+            "missed_threats": 291,
+            "false_block_rate": 0.5724770642201835,
+            "miss_rate": 0.3468414779499404,
+            "recall": 0.6531585220500596,
+            "specificity": 0.42752293577981654,
+            "unresolved": 0
+          }
+        },
+        "comparison": {
+          "qwen": {
+            "delta_balanced_accuracy": 0.0041213327355633655,
+            "balanced_accuracy_ci95": [
+              0.5000137184537369,
+              0.5861864165158797
+            ],
+            "delta_ci95": [
+              -0.05413243373657055,
+              0.05125175119675128
+            ],
+            "groups": 849
+          },
+          "liquid": {
+            "delta_balanced_accuracy": -0.10472165421919932,
+            "balanced_accuracy_ci95": [
+              0.5000137184537369,
+              0.5861864165158797
+            ],
+            "delta_ci95": [
+              -0.1461560080397549,
+              -0.055220490857072306
+            ],
+            "groups": 849
+          },
+          "tfidf": {
+            "delta_balanced_accuracy": -0.15608249226361648,
+            "balanced_accuracy_ci95": [
+              0.5000137184537369,
+              0.5861864165158797
+            ],
+            "delta_ci95": [
+              -0.198824800238305,
+              -0.10805697145035127
+            ],
+            "groups": 849
+          }
+        },
+        "slices": {
+          "source": {
+            "SRC009": {
+              "n": 728,
+              "benign": 0,
+              "malicious": 728,
+              "accuracy": 0.6538461538461539,
+              "balanced_accuracy": null,
+              "macro_f1": 0.3953488372093023,
+              "mcc": 0.0,
+              "false_blocks": 0,
+              "missed_threats": 252,
+              "false_block_rate": null,
+              "miss_rate": 0.34615384615384615,
+              "recall": 0.6538461538461539,
+              "specificity": null,
+              "unresolved": 0
+            },
+            "SRC011": {
+              "n": 476,
+              "benign": 455,
+              "malicious": 21,
+              "accuracy": 0.4054621848739496,
+              "balanced_accuracy": 0.5527472527472528,
+              "macro_f1": 0.3264835730749424,
+              "mcc": 0.04448820150673329,
+              "false_blocks": 277,
+              "missed_threats": 6,
+              "false_block_rate": 0.6087912087912087,
+              "miss_rate": 0.2857142857142857,
+              "recall": 0.7142857142857143,
+              "specificity": 0.3912087912087912,
+              "unresolved": 0
+            },
+            "SRC012": {
+              "n": 180,
+              "benign": 90,
+              "malicious": 90,
+              "accuracy": 0.6944444444444444,
+              "balanced_accuracy": 0.6944444444444444,
+              "macro_f1": 0.6863018473335657,
+              "mcc": 0.4107992538953355,
+              "false_blocks": 42,
+              "missed_threats": 13,
+              "false_block_rate": 0.4666666666666667,
+              "miss_rate": 0.14444444444444443,
+              "recall": 0.8555555555555555,
+              "specificity": 0.5333333333333333,
+              "unresolved": 0
+            }
+          },
+          "clipped": {
+            "False": {
+              "n": 986,
+              "benign": 386,
+              "malicious": 600,
+              "accuracy": 0.5588235294117647,
+              "balanced_accuracy": 0.5377072538860104,
+              "macro_f1": 0.5376505780580483,
+              "mcc": 0.07531165857013286,
+              "false_blocks": 216,
+              "missed_threats": 219,
+              "false_block_rate": 0.5595854922279793,
+              "miss_rate": 0.365,
+              "recall": 0.635,
+              "specificity": 0.44041450777202074,
+              "unresolved": 0
+            },
+            "True": {
+              "n": 398,
+              "benign": 159,
+              "malicious": 239,
+              "accuracy": 0.6105527638190955,
+              "balanced_accuracy": 0.5673140180521565,
+              "macro_f1": 0.5632349921766034,
+              "mcc": 0.1482935105946045,
+              "false_blocks": 103,
+              "missed_threats": 52,
+              "false_block_rate": 0.6477987421383647,
+              "miss_rate": 0.2175732217573222,
+              "recall": 0.7824267782426778,
+              "specificity": 0.3522012578616352,
+              "unresolved": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "phase": "Post-selection descriptive diagnostic; no refitting or selection changes",
+  "tasks": {
+    "code": {
+      "jina-v2-lr": {
+        "selected": "C0.1",
+        "metrics": {
+          "fit": {
+            "n": 632,
+            "benign": 316,
+            "malicious": 316,
+            "accuracy": 0.9984177215189873,
+            "balanced_accuracy": 0.9984177215189873,
+            "macro_f1": 0.9984177175575768,
+            "mcc": 0.9968404344402447,
+            "false_blocks": 1,
+            "missed_threats": 0,
+            "false_block_rate": 0.0031645569620253164,
+            "miss_rate": 0.0,
+            "recall": 1.0,
+            "specificity": 0.9968354430379747,
+            "unresolved": 0
+          },
+          "validation": {
+            "n": 240,
+            "benign": 120,
+            "malicious": 120,
+            "accuracy": 0.8833333333333333,
+            "balanced_accuracy": 0.8833333333333333,
+            "macro_f1": 0.8832035595105673,
+            "mcc": 0.7683760704982201,
+            "false_blocks": 18,
+            "missed_threats": 10,
+            "false_block_rate": 0.15,
+            "miss_rate": 0.08333333333333333,
+            "recall": 0.9166666666666666,
+            "specificity": 0.85,
+            "unresolved": 0
+          }
+        },
+        "final_fitting_loss": null
+      },
+      "jina-v2-mlp": {
+        "selected": "h128-a0.01-e30-s20261103",
+        "metrics": {
+          "fit": {
+            "n": 632,
+            "benign": 316,
+            "malicious": 316,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "macro_f1": 1.0,
+            "mcc": 1.0,
+            "false_blocks": 0,
+            "missed_threats": 0,
+            "false_block_rate": 0.0,
+            "miss_rate": 0.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "unresolved": 0
+          },
+          "validation": {
+            "n": 240,
+            "benign": 120,
+            "malicious": 120,
+            "accuracy": 0.8916666666666666,
+            "balanced_accuracy": 0.8916666666666666,
+            "macro_f1": 0.8914782608695653,
+            "mcc": 0.7860674894066653,
+            "false_blocks": 18,
+            "missed_threats": 8,
+            "false_block_rate": 0.15,
+            "miss_rate": 0.06666666666666667,
+            "recall": 0.9333333333333333,
+            "specificity": 0.85,
+            "unresolved": 0
+          }
+        },
+        "final_fitting_loss": 0.01760103282393462
+      },
+      "jina-code-lr": {
+        "selected": "C0.1",
+        "metrics": {
+          "fit": {
+            "n": 632,
+            "benign": 316,
+            "malicious": 316,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "macro_f1": 1.0,
+            "mcc": 1.0,
+            "false_blocks": 0,
+            "missed_threats": 0,
+            "false_block_rate": 0.0,
+            "miss_rate": 0.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "unresolved": 0
+          },
+          "validation": {
+            "n": 240,
+            "benign": 120,
+            "malicious": 120,
+            "accuracy": 0.9333333333333333,
+            "balanced_accuracy": 0.9333333333333333,
+            "macro_f1": 0.9333148096693527,
+            "mcc": 0.8671485497545911,
+            "false_blocks": 6,
+            "missed_threats": 10,
+            "false_block_rate": 0.05,
+            "miss_rate": 0.08333333333333333,
+            "recall": 0.9166666666666666,
+            "specificity": 0.95,
+            "unresolved": 0
+          }
+        },
+        "final_fitting_loss": null
+      },
+      "jina-code-mlp": {
+        "selected": "h128-a0.01-e30-s20261103",
+        "metrics": {
+          "fit": {
+            "n": 632,
+            "benign": 316,
+            "malicious": 316,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "macro_f1": 1.0,
+            "mcc": 1.0,
+            "false_blocks": 0,
+            "missed_threats": 0,
+            "false_block_rate": 0.0,
+            "miss_rate": 0.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "unresolved": 0
+          },
+          "validation": {
+            "n": 240,
+            "benign": 120,
+            "malicious": 120,
+            "accuracy": 0.9291666666666667,
+            "balanced_accuracy": 0.9291666666666667,
+            "macro_f1": 0.9291555972287336,
+            "mcc": 0.8586016882979434,
+            "false_blocks": 7,
+            "missed_threats": 10,
+            "false_block_rate": 0.058333333333333334,
+            "miss_rate": 0.08333333333333333,
+            "recall": 0.9166666666666666,
+            "specificity": 0.9416666666666667,
+            "unresolved": 0
+          }
+        },
+        "final_fitting_loss": 0.017930514813230623
+      }
+    },
+    "skills": {
+      "jina-v2-lr": {
+        "selected": "C0.1",
+        "metrics": {
+          "fit": {
+            "n": 1024,
+            "benign": 512,
+            "malicious": 512,
+            "accuracy": 0.90625,
+            "balanced_accuracy": 0.90625,
+            "macro_f1": 0.9062410584505511,
+            "mcc": 0.812655016428382,
+            "false_blocks": 43,
+            "missed_threats": 53,
+            "false_block_rate": 0.083984375,
+            "miss_rate": 0.103515625,
+            "recall": 0.896484375,
+            "specificity": 0.916015625,
+            "unresolved": 0
+          },
+          "validation": {
+            "n": 256,
+            "benign": 128,
+            "malicious": 128,
+            "accuracy": 0.6875,
+            "balanced_accuracy": 0.6875,
+            "macro_f1": 0.6870224341341158,
+            "mcc": 0.3761496746576099,
+            "false_blocks": 35,
+            "missed_threats": 45,
+            "false_block_rate": 0.2734375,
+            "miss_rate": 0.3515625,
+            "recall": 0.6484375,
+            "specificity": 0.7265625,
+            "unresolved": 0
+          }
+        },
+        "final_fitting_loss": null
+      },
+      "jina-v2-mlp": {
+        "selected": "h128-a0.01-e60-s20261103",
+        "metrics": {
+          "fit": {
+            "n": 1024,
+            "benign": 512,
+            "malicious": 512,
+            "accuracy": 0.9951171875,
+            "balanced_accuracy": 0.9951171875,
+            "macro_f1": 0.9951171455901244,
+            "mcc": 0.9902513739373423,
+            "false_blocks": 1,
+            "missed_threats": 4,
+            "false_block_rate": 0.001953125,
+            "miss_rate": 0.0078125,
+            "recall": 0.9921875,
+            "specificity": 0.998046875,
+            "unresolved": 0
+          },
+          "validation": {
+            "n": 256,
+            "benign": 128,
+            "malicious": 128,
+            "accuracy": 0.703125,
+            "balanced_accuracy": 0.703125,
+            "macro_f1": 0.7029618320610687,
+            "mcc": 0.40669705644143855,
+            "false_blocks": 35,
+            "missed_threats": 41,
+            "false_block_rate": 0.2734375,
+            "miss_rate": 0.3203125,
+            "recall": 0.6796875,
+            "specificity": 0.7265625,
+            "unresolved": 0
+          }
+        },
+        "final_fitting_loss": 0.03522437029782915
+      },
+      "jina-code-lr": {
+        "selected": "C10",
+        "metrics": {
+          "fit": {
+            "n": 1024,
+            "benign": 512,
+            "malicious": 512,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "macro_f1": 1.0,
+            "mcc": 1.0,
+            "false_blocks": 0,
+            "missed_threats": 0,
+            "false_block_rate": 0.0,
+            "miss_rate": 0.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "unresolved": 0
+          },
+          "validation": {
+            "n": 256,
+            "benign": 128,
+            "malicious": 128,
+            "accuracy": 0.79296875,
+            "balanced_accuracy": 0.79296875,
+            "macro_f1": 0.7925857983642894,
+            "mcc": 0.5881132071619336,
+            "false_blocks": 21,
+            "missed_threats": 32,
+            "false_block_rate": 0.1640625,
+            "miss_rate": 0.25,
+            "recall": 0.75,
+            "specificity": 0.8359375,
+            "unresolved": 0
+          }
+        },
+        "final_fitting_loss": null
+      },
+      "jina-code-mlp": {
+        "selected": "h256-a0.01-e30-s20261103",
+        "metrics": {
+          "fit": {
+            "n": 1024,
+            "benign": 512,
+            "malicious": 512,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "macro_f1": 1.0,
+            "mcc": 1.0,
+            "false_blocks": 0,
+            "missed_threats": 0,
+            "false_block_rate": 0.0,
+            "miss_rate": 0.0,
+            "recall": 1.0,
+            "specificity": 1.0,
+            "unresolved": 0
+          },
+          "validation": {
+            "n": 256,
+            "benign": 128,
+            "malicious": 128,
+            "accuracy": 0.796875,
+            "balanced_accuracy": 0.796875,
+            "macro_f1": 0.7965645821871752,
+            "mcc": 0.5955703182078824,
+            "false_blocks": 21,
+            "missed_threats": 31,
+            "false_block_rate": 0.1640625,
+            "miss_rate": 0.2421875,
+            "recall": 0.7578125,
+            "specificity": 0.8359375,
+            "unresolved": 0
+          }
+        },
+        "final_fitting_loss": 0.04200615572775183
+      }
+    }
+  }
+}

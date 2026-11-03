@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-11-03T16:01:30.204913+00:00",
+  "seconds": 47.32830127599999,
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "torch": "2.8.0+cu128",
+  "parameter_count": 494032768,
+  "features": {
+    "code/fit": {
+      "n": 632,
+      "dimension": 896,
+      "max_tokens": 6115,
+      "prefix": "Candidate code snippet:\n",
+      "sha256": "64e2c536896aa407fd848900dafed97c0fd863e918e1e33d1b75df72e1ce65d8"
+    },
+    "code/validation": {
+      "n": 240,
+      "dimension": 896,
+      "max_tokens": 4333,
+      "prefix": "Candidate code snippet:\n",
+      "sha256": "a87eb2813e9a221088af54e39c89c0dc9050470b26f0959ab08c27af659f21e4"
+    },
+    "skills/fit": {
+      "n": 1024,
+      "dimension": 896,
+      "max_tokens": 2558,
+      "prefix": "Candidate answer:\n",
+      "sha256": "dd06701bb6795e63f082ec53c45a48698b4e468ca3f63b6dd151b757eb18f19a"
+    },
+    "skills/validation": {
+      "n": 256,
+      "dimension": 896,
+      "max_tokens": 2518,
+      "prefix": "Candidate answer:\n",
+      "sha256": "8d0c311ea20b4b8522c8a387384a3cd21dc19d3e132bf02aeda644bf47175d7c"
+    }
+  }
+}

@@ -1,0 +1,798 @@
+{
+  "code": {
+    "qwen4": {
+      "brief": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.9458333333333333,
+        "balanced_accuracy": 0.9458333333333333,
+        "macro_f1": 0.9456739391617768,
+        "mcc": 0.8969455268830369,
+        "false_blocks": 0,
+        "missed_threats": 13,
+        "false_block_rate": 0.0,
+        "miss_rate": 0.10833333333333334,
+        "recall": 0.8916666666666667,
+        "specificity": 1.0,
+        "unresolved": 0
+      },
+      "structured": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.9166666666666666,
+        "balanced_accuracy": 0.9166666666666667,
+        "macro_f1": 0.916083916083916,
+        "mcc": 0.8451542547285166,
+        "false_blocks": 0,
+        "missed_threats": 20,
+        "false_block_rate": 0.0,
+        "miss_rate": 0.16666666666666666,
+        "recall": 0.8333333333333334,
+        "specificity": 1.0,
+        "unresolved": 0
+      },
+      "evidence": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.7958333333333334,
+        "balanced_accuracy": 0.7958333333333334,
+        "macro_f1": 0.7869526621859091,
+        "mcc": 0.6481653671674121,
+        "false_blocks": 0,
+        "missed_threats": 49,
+        "false_block_rate": 0.0,
+        "miss_rate": 0.4083333333333333,
+        "recall": 0.5916666666666667,
+        "specificity": 1.0,
+        "unresolved": 0
+      },
+      "behavior": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.9375,
+        "balanced_accuracy": 0.9375,
+        "macro_f1": 0.9372549019607843,
+        "mcc": 0.8819171036881969,
+        "false_blocks": 0,
+        "missed_threats": 15,
+        "false_block_rate": 0.0,
+        "miss_rate": 0.125,
+        "recall": 0.875,
+        "specificity": 1.0,
+        "unresolved": 0
+      },
+      "contrasts": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.9416666666666667,
+        "balanced_accuracy": 0.9416666666666667,
+        "macro_f1": 0.9414674935544561,
+        "mcc": 0.8894069800262436,
+        "false_blocks": 0,
+        "missed_threats": 14,
+        "false_block_rate": 0.0,
+        "miss_rate": 0.11666666666666667,
+        "recall": 0.8833333333333333,
+        "specificity": 1.0,
+        "unresolved": 0
+      },
+      "scope": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.9291666666666667,
+        "balanced_accuracy": 0.9291666666666667,
+        "macro_f1": 0.9288094781106594,
+        "mcc": 0.8670783225973581,
+        "false_blocks": 0,
+        "missed_threats": 17,
+        "false_block_rate": 0.0,
+        "miss_rate": 0.14166666666666666,
+        "recall": 0.8583333333333333,
+        "specificity": 1.0,
+        "unresolved": 0
+      }
+    },
+    "qwen9": {
+      "brief": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.9375,
+        "balanced_accuracy": 0.9375,
+        "macro_f1": 0.9372549019607843,
+        "mcc": 0.8819171036881969,
+        "false_blocks": 0,
+        "missed_threats": 15,
+        "false_block_rate": 0.0,
+        "miss_rate": 0.125,
+        "recall": 0.875,
+        "specificity": 1.0,
+        "unresolved": 0
+      },
+      "structured": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.9375,
+        "balanced_accuracy": 0.9375,
+        "macro_f1": 0.9372549019607843,
+        "mcc": 0.8819171036881969,
+        "false_blocks": 0,
+        "missed_threats": 15,
+        "false_block_rate": 0.0,
+        "miss_rate": 0.125,
+        "recall": 0.875,
+        "specificity": 1.0,
+        "unresolved": 0
+      },
+      "evidence": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.9333333333333333,
+        "balanced_accuracy": 0.9333333333333333,
+        "macro_f1": 0.9330357142857143,
+        "mcc": 0.8744746321952062,
+        "false_blocks": 0,
+        "missed_threats": 16,
+        "false_block_rate": 0.0,
+        "miss_rate": 0.13333333333333333,
+        "recall": 0.8666666666666667,
+        "specificity": 1.0,
+        "unresolved": 0
+      },
+      "behavior": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.9416666666666667,
+        "balanced_accuracy": 0.9416666666666667,
+        "macro_f1": 0.9414674935544561,
+        "mcc": 0.8894069800262436,
+        "false_blocks": 0,
+        "missed_threats": 14,
+        "false_block_rate": 0.0,
+        "miss_rate": 0.11666666666666667,
+        "recall": 0.8833333333333333,
+        "specificity": 1.0,
+        "unresolved": 0
+      },
+      "contrasts": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.9416666666666667,
+        "balanced_accuracy": 0.9416666666666667,
+        "macro_f1": 0.9414674935544561,
+        "mcc": 0.8894069800262436,
+        "false_blocks": 0,
+        "missed_threats": 14,
+        "false_block_rate": 0.0,
+        "miss_rate": 0.11666666666666667,
+        "recall": 0.8833333333333333,
+        "specificity": 1.0,
+        "unresolved": 0
+      },
+      "scope": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.9333333333333333,
+        "balanced_accuracy": 0.9333333333333333,
+        "macro_f1": 0.9330357142857143,
+        "mcc": 0.8744746321952062,
+        "false_blocks": 0,
+        "missed_threats": 16,
+        "false_block_rate": 0.0,
+        "miss_rate": 0.13333333333333333,
+        "recall": 0.8666666666666667,
+        "specificity": 1.0,
+        "unresolved": 0
+      }
+    },
+    "jina-v2-lr": {
+      "C0.1": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.8833333333333333,
+        "balanced_accuracy": 0.8833333333333333,
+        "macro_f1": 0.8832035595105673,
+        "mcc": 0.7683760704982201,
+        "false_blocks": 18,
+        "missed_threats": 10,
+        "false_block_rate": 0.15,
+        "miss_rate": 0.08333333333333333,
+        "recall": 0.9166666666666666,
+        "specificity": 0.85,
+        "unresolved": 0
+      },
+      "C1": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.8833333333333333,
+        "balanced_accuracy": 0.8833333333333333,
+        "macro_f1": 0.8832035595105673,
+        "mcc": 0.7683760704982201,
+        "false_blocks": 18,
+        "missed_threats": 10,
+        "false_block_rate": 0.15,
+        "miss_rate": 0.08333333333333333,
+        "recall": 0.9166666666666666,
+        "specificity": 0.85,
+        "unresolved": 0
+      },
+      "C10": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.875,
+        "balanced_accuracy": 0.875,
+        "macro_f1": 0.8749218261413383,
+        "mcc": 0.7509392614826383,
+        "false_blocks": 18,
+        "missed_threats": 12,
+        "false_block_rate": 0.15,
+        "miss_rate": 0.1,
+        "recall": 0.9,
+        "specificity": 0.85,
+        "unresolved": 0
+      }
+    },
+    "jina-v2-mlp": {
+      "h128-a0.0001-e10": {
+        "balanced_accuracy": 0.8888888888888888,
+        "macro_f1": 0.8886682032076744
+      },
+      "h128-a0.0001-e30": {
+        "balanced_accuracy": 0.8944444444444444,
+        "macro_f1": 0.8942835034095856
+      },
+      "h128-a0.0001-e60": {
+        "balanced_accuracy": 0.8916666666666666,
+        "macro_f1": 0.8915230396452417
+      },
+      "h128-a0.01-e10": {
+        "balanced_accuracy": 0.8888888888888888,
+        "macro_f1": 0.8886682032076744
+      },
+      "h128-a0.01-e30": {
+        "balanced_accuracy": 0.8944444444444444,
+        "macro_f1": 0.8942835034095856
+      },
+      "h128-a0.01-e60": {
+        "balanced_accuracy": 0.8902777777777778,
+        "macro_f1": 0.890144144051574
+      },
+      "h256-a0.0001-e10": {
+        "balanced_accuracy": 0.8944444444444444,
+        "macro_f1": 0.8942319491921555
+      },
+      "h256-a0.0001-e30": {
+        "balanced_accuracy": 0.8944444444444444,
+        "macro_f1": 0.8942596512976609
+      },
+      "h256-a0.0001-e60": {
+        "balanced_accuracy": 0.8930555555555556,
+        "macro_f1": 0.8929263224933113
+      },
+      "h256-a0.01-e10": {
+        "balanced_accuracy": 0.8944444444444444,
+        "macro_f1": 0.8942319491921555
+      },
+      "h256-a0.01-e30": {
+        "balanced_accuracy": 0.8944444444444444,
+        "macro_f1": 0.8942596512976609
+      },
+      "h256-a0.01-e60": {
+        "balanced_accuracy": 0.8930555555555556,
+        "macro_f1": 0.8929263224933113
+      }
+    },
+    "jina-code-lr": {
+      "C0.1": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.9333333333333333,
+        "balanced_accuracy": 0.9333333333333333,
+        "macro_f1": 0.9333148096693527,
+        "mcc": 0.8671485497545911,
+        "false_blocks": 6,
+        "missed_threats": 10,
+        "false_block_rate": 0.05,
+        "miss_rate": 0.08333333333333333,
+        "recall": 0.9166666666666666,
+        "specificity": 0.95,
+        "unresolved": 0
+      },
+      "C1": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.9291666666666667,
+        "balanced_accuracy": 0.9291666666666667,
+        "macro_f1": 0.9291359096830221,
+        "mcc": 0.859079385915148,
+        "false_blocks": 6,
+        "missed_threats": 11,
+        "false_block_rate": 0.05,
+        "miss_rate": 0.09166666666666666,
+        "recall": 0.9083333333333333,
+        "specificity": 0.95,
+        "unresolved": 0
+      },
+      "C10": {
+        "n": 240,
+        "benign": 120,
+        "malicious": 120,
+        "accuracy": 0.925,
+        "balanced_accuracy": 0.925,
+        "macro_f1": 0.9249791608780217,
+        "mcc": 0.8504726161054643,
+        "false_blocks": 7,
+        "missed_threats": 11,
+        "false_block_rate": 0.058333333333333334,
+        "miss_rate": 0.09166666666666666,
+        "recall": 0.9083333333333333,
+        "specificity": 0.9416666666666667,
+        "unresolved": 0
+      }
+    },
+    "jina-code-mlp": {
+      "h128-a0.0001-e10": {
+        "balanced_accuracy": 0.9333333333333332,
+        "macro_f1": 0.9333140850706414
+      },
+      "h128-a0.0001-e30": {
+        "balanced_accuracy": 0.9347222222222222,
+        "macro_f1": 0.9347032844322848
+      },
+      "h128-a0.0001-e60": {
+        "balanced_accuracy": 0.9347222222222222,
+        "macro_f1": 0.9347032844322848
+      },
+      "h128-a0.01-e10": {
+        "balanced_accuracy": 0.9333333333333332,
+        "macro_f1": 0.9333140850706414
+      },
+      "h128-a0.01-e30": {
+        "balanced_accuracy": 0.9361111111111112,
+        "macro_f1": 0.9360970247243867
+      },
+      "h128-a0.01-e60": {
+        "balanced_accuracy": 0.9333333333333332,
+        "macro_f1": 0.9333144227943686
+      },
+      "h256-a0.0001-e10": {
+        "balanced_accuracy": 0.9208333333333334,
+        "macro_f1": 0.9208140125705135
+      },
+      "h256-a0.0001-e30": {
+        "balanced_accuracy": 0.9277777777777777,
+        "macro_f1": 0.927756889263259
+      },
+      "h256-a0.0001-e60": {
+        "balanced_accuracy": 0.9277777777777777,
+        "macro_f1": 0.927756889263259
+      },
+      "h256-a0.01-e10": {
+        "balanced_accuracy": 0.9208333333333334,
+        "macro_f1": 0.9208140125705135
+      },
+      "h256-a0.01-e30": {
+        "balanced_accuracy": 0.9277777777777777,
+        "macro_f1": 0.927756889263259
+      },
+      "h256-a0.01-e60": {
+        "balanced_accuracy": 0.9277777777777777,
+        "macro_f1": 0.927756889263259
+      }
+    }
+  },
+  "skills": {
+    "qwen4": {
+      "brief": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.6015625,
+        "balanced_accuracy": 0.6015625,
+        "macro_f1": 0.5298184961106309,
+        "mcc": 0.3254070133091433,
+        "false_blocks": 1,
+        "missed_threats": 101,
+        "false_block_rate": 0.0078125,
+        "miss_rate": 0.7890625,
+        "recall": 0.2109375,
+        "specificity": 0.9921875,
+        "unresolved": 0
+      },
+      "structured": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.609375,
+        "balanced_accuracy": 0.609375,
+        "macro_f1": 0.5423013659443611,
+        "mcc": 0.34005031729008217,
+        "false_blocks": 1,
+        "missed_threats": 99,
+        "false_block_rate": 0.0078125,
+        "miss_rate": 0.7734375,
+        "recall": 0.2265625,
+        "specificity": 0.9921875,
+        "unresolved": 0
+      },
+      "evidence": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.58203125,
+        "balanced_accuracy": 0.58203125,
+        "macro_f1": 0.49355667720524343,
+        "mcc": 0.2989342772712082,
+        "false_blocks": 0,
+        "missed_threats": 107,
+        "false_block_rate": 0.0,
+        "miss_rate": 0.8359375,
+        "recall": 0.1640625,
+        "specificity": 1.0,
+        "unresolved": 0
+      },
+      "behavior": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.64453125,
+        "balanced_accuracy": 0.64453125,
+        "macro_f1": 0.598116169544741,
+        "mcc": 0.3940855998528039,
+        "false_blocks": 2,
+        "missed_threats": 89,
+        "false_block_rate": 0.015625,
+        "miss_rate": 0.6953125,
+        "recall": 0.3046875,
+        "specificity": 0.984375,
+        "unresolved": 0
+      },
+      "contrasts": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.66796875,
+        "balanced_accuracy": 0.66796875,
+        "macro_f1": 0.6310300974989402,
+        "mcc": 0.4338567748804214,
+        "false_blocks": 2,
+        "missed_threats": 83,
+        "false_block_rate": 0.015625,
+        "miss_rate": 0.6484375,
+        "recall": 0.3515625,
+        "specificity": 0.984375,
+        "unresolved": 0
+      },
+      "scope": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.67578125,
+        "balanced_accuracy": 0.67578125,
+        "macro_f1": 0.6416561261489164,
+        "mcc": 0.44681660155087444,
+        "false_blocks": 2,
+        "missed_threats": 81,
+        "false_block_rate": 0.015625,
+        "miss_rate": 0.6328125,
+        "recall": 0.3671875,
+        "specificity": 0.984375,
+        "unresolved": 0
+      }
+    },
+    "qwen9": {
+      "brief": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.625,
+        "balanced_accuracy": 0.625,
+        "macro_f1": 0.5693860386879731,
+        "mcc": 0.3595732599803958,
+        "false_blocks": 2,
+        "missed_threats": 94,
+        "false_block_rate": 0.015625,
+        "miss_rate": 0.734375,
+        "recall": 0.265625,
+        "specificity": 0.984375,
+        "unresolved": 0
+      },
+      "structured": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.65234375,
+        "balanced_accuracy": 0.65234375,
+        "macro_f1": 0.6069487812030983,
+        "mcc": 0.4153875241691717,
+        "false_blocks": 1,
+        "missed_threats": 88,
+        "false_block_rate": 0.0078125,
+        "miss_rate": 0.6875,
+        "recall": 0.3125,
+        "specificity": 0.9921875,
+        "unresolved": 0
+      },
+      "evidence": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.62890625,
+        "balanced_accuracy": 0.62890625,
+        "macro_f1": 0.5724858051927505,
+        "mcc": 0.3752181007648276,
+        "false_blocks": 1,
+        "missed_threats": 94,
+        "false_block_rate": 0.0078125,
+        "miss_rate": 0.734375,
+        "recall": 0.265625,
+        "specificity": 0.9921875,
+        "unresolved": 0
+      },
+      "behavior": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.66796875,
+        "balanced_accuracy": 0.66796875,
+        "macro_f1": 0.628966528552185,
+        "mcc": 0.44128683479507347,
+        "false_blocks": 1,
+        "missed_threats": 84,
+        "false_block_rate": 0.0078125,
+        "miss_rate": 0.65625,
+        "recall": 0.34375,
+        "specificity": 0.9921875,
+        "unresolved": 0
+      },
+      "contrasts": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.67578125,
+        "balanced_accuracy": 0.67578125,
+        "macro_f1": 0.6397117422636711,
+        "mcc": 0.4540361597585805,
+        "false_blocks": 1,
+        "missed_threats": 82,
+        "false_block_rate": 0.0078125,
+        "miss_rate": 0.640625,
+        "recall": 0.359375,
+        "specificity": 0.9921875,
+        "unresolved": 0
+      },
+      "scope": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.66796875,
+        "balanced_accuracy": 0.66796875,
+        "macro_f1": 0.628966528552185,
+        "mcc": 0.44128683479507347,
+        "false_blocks": 1,
+        "missed_threats": 84,
+        "false_block_rate": 0.0078125,
+        "miss_rate": 0.65625,
+        "recall": 0.34375,
+        "specificity": 0.9921875,
+        "unresolved": 0
+      }
+    },
+    "jina-v2-lr": {
+      "C0.1": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.6875,
+        "balanced_accuracy": 0.6875,
+        "macro_f1": 0.6870224341341158,
+        "mcc": 0.3761496746576099,
+        "false_blocks": 35,
+        "missed_threats": 45,
+        "false_block_rate": 0.2734375,
+        "miss_rate": 0.3515625,
+        "recall": 0.6484375,
+        "specificity": 0.7265625,
+        "unresolved": 0
+      },
+      "C1": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.671875,
+        "balanced_accuracy": 0.671875,
+        "macro_f1": 0.67089072543618,
+        "mcc": 0.34582475555079445,
+        "false_blocks": 35,
+        "missed_threats": 49,
+        "false_block_rate": 0.2734375,
+        "miss_rate": 0.3828125,
+        "recall": 0.6171875,
+        "specificity": 0.7265625,
+        "unresolved": 0
+      },
+      "C10": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.64453125,
+        "balanced_accuracy": 0.64453125,
+        "macro_f1": 0.6436122202334511,
+        "mcc": 0.2905649647954381,
+        "false_blocks": 39,
+        "missed_threats": 52,
+        "false_block_rate": 0.3046875,
+        "miss_rate": 0.40625,
+        "recall": 0.59375,
+        "specificity": 0.6953125,
+        "unresolved": 0
+      }
+    },
+    "jina-v2-mlp": {
+      "h128-a0.0001-e10": {
+        "balanced_accuracy": 0.66796875,
+        "macro_f1": 0.667716957987838
+      },
+      "h128-a0.0001-e30": {
+        "balanced_accuracy": 0.6744791666666666,
+        "macro_f1": 0.674181290017354
+      },
+      "h128-a0.0001-e60": {
+        "balanced_accuracy": 0.6731770833333334,
+        "macro_f1": 0.672947595037833
+      },
+      "h128-a0.01-e10": {
+        "balanced_accuracy": 0.6653645833333334,
+        "macro_f1": 0.6650485794860916
+      },
+      "h128-a0.01-e30": {
+        "balanced_accuracy": 0.6783854166666666,
+        "macro_f1": 0.6781257299564633
+      },
+      "h128-a0.01-e60": {
+        "balanced_accuracy": 0.6888020833333334,
+        "macro_f1": 0.6885868563113929
+      },
+      "h256-a0.0001-e10": {
+        "balanced_accuracy": 0.68359375,
+        "macro_f1": 0.6832944138051257
+      },
+      "h256-a0.0001-e30": {
+        "balanced_accuracy": 0.671875,
+        "macro_f1": 0.671638910122056
+      },
+      "h256-a0.0001-e60": {
+        "balanced_accuracy": 0.6796875,
+        "macro_f1": 0.6793229826167902
+      },
+      "h256-a0.01-e10": {
+        "balanced_accuracy": 0.6809895833333334,
+        "macro_f1": 0.6806431287307921
+      },
+      "h256-a0.01-e30": {
+        "balanced_accuracy": 0.6731770833333334,
+        "macro_f1": 0.6730494546570197
+      },
+      "h256-a0.01-e60": {
+        "balanced_accuracy": 0.6809895833333334,
+        "macro_f1": 0.6805804836094486
+      }
+    },
+    "jina-code-lr": {
+      "C0.1": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.79296875,
+        "balanced_accuracy": 0.79296875,
+        "macro_f1": 0.7922555159161551,
+        "mcc": 0.5900027323745365,
+        "false_blocks": 19,
+        "missed_threats": 34,
+        "false_block_rate": 0.1484375,
+        "miss_rate": 0.265625,
+        "recall": 0.734375,
+        "specificity": 0.8515625,
+        "unresolved": 0
+      },
+      "C1": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.79296875,
+        "balanced_accuracy": 0.79296875,
+        "macro_f1": 0.7924334909051969,
+        "mcc": 0.5889830367475096,
+        "false_blocks": 20,
+        "missed_threats": 33,
+        "false_block_rate": 0.15625,
+        "miss_rate": 0.2578125,
+        "recall": 0.7421875,
+        "specificity": 0.84375,
+        "unresolved": 0
+      },
+      "C10": {
+        "n": 256,
+        "benign": 128,
+        "malicious": 128,
+        "accuracy": 0.79296875,
+        "balanced_accuracy": 0.79296875,
+        "macro_f1": 0.7925857983642894,
+        "mcc": 0.5881132071619336,
+        "false_blocks": 21,
+        "missed_threats": 32,
+        "false_block_rate": 0.1640625,
+        "miss_rate": 0.25,
+        "recall": 0.75,
+        "specificity": 0.8359375,
+        "unresolved": 0
+      }
+    },
+    "jina-code-mlp": {
+      "h128-a0.0001-e10": {
+        "balanced_accuracy": 0.765625,
+        "macro_f1": 0.7652495668362015
+      },
+      "h128-a0.0001-e30": {
+        "balanced_accuracy": 0.7747395833333334,
+        "macro_f1": 0.7744570695125311
+      },
+      "h128-a0.0001-e60": {
+        "balanced_accuracy": 0.7799479166666666,
+        "macro_f1": 0.7795395476270576
+      },
+      "h128-a0.01-e10": {
+        "balanced_accuracy": 0.7643229166666666,
+        "macro_f1": 0.7639656156483787
+      },
+      "h128-a0.01-e30": {
+        "balanced_accuracy": 0.7760416666666666,
+        "macro_f1": 0.7757371197783831
+      },
+      "h128-a0.01-e60": {
+        "balanced_accuracy": 0.7760416666666666,
+        "macro_f1": 0.7756932746628807
+      },
+      "h256-a0.0001-e10": {
+        "balanced_accuracy": 0.7864583333333334,
+        "macro_f1": 0.7858554901200699
+      },
+      "h256-a0.0001-e30": {
+        "balanced_accuracy": 0.7864583333333334,
+        "macro_f1": 0.7858464185265616
+      },
+      "h256-a0.0001-e60": {
+        "balanced_accuracy": 0.77734375,
+        "macro_f1": 0.7765555105426527
+      },
+      "h256-a0.01-e10": {
+        "balanced_accuracy": 0.7864583333333334,
+        "macro_f1": 0.7858554901200699
+      },
+      "h256-a0.01-e30": {
+        "balanced_accuracy": 0.7916666666666666,
+        "macro_f1": 0.791008063572244
+      },
+      "h256-a0.01-e60": {
+        "balanced_accuracy": 0.7760416666666666,
+        "macro_f1": 0.7752601373997036
+      }
+    }
+  }
+}

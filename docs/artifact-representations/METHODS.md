@@ -70,3 +70,9 @@ authoring or fitting. Repeating this benchmark does not create a new independent
 test sample. Report both errors, macro F1, MCC and grouped confidence intervals;
 do not select a new winner after seeing test scores. Intervals are exploratory,
 unadjusted and conditional on this benchmark and its labels.
+
+The [dataset publisher](https://github.com/protectskills/MaliciousSkillBench)
+also reports deterioration when detector evaluation holds out sources. This is
+useful context for interpreting a development-to-test gap, not a direct ranking
+against its baseline: our fitting sample, bounded text view and classifier
+search differ. We do not establish which cue caused any particular failure.

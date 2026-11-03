@@ -12,12 +12,13 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 [Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Datasets](docs/datasets/README.md) · [Models](docs/models/README.md) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
 
-**Latest experiment:** [Malicious code and agent-skill screening](docs/malicious-artifacts/README.md)
-compares eight systems across policy, general LLM, decision and trained-classifier
-families. Policies and classifier settings were fixed on validation before the
-160-file code test and 1,384-skill source holdout. The results retain both false
-blocks and missed threats, with separate leaderboards for the two tasks.
-[Findings and policy changes](docs/malicious-artifacts/RESULTS.md) · [Methods and limits](docs/malicious-artifacts/METHODS.md)
+**Latest experiment:** [Code embeddings and Qwen for artifact screening](docs/artifact-representations/README.md)
+compares frozen Jina code embeddings with trained linear/neural heads, alongside
+Qwen 4B and 9B under an expanded policy search. It reuses the same 160 code files
+and 1,384 held-out skill texts as the preceding eight-system study. Model weights,
+policy text and labeled-example training are different ways to shape a decision;
+this study keeps their results and limitations visible.
+[Findings](docs/artifact-representations/RESULTS.md) · [Methods](docs/artifact-representations/METHODS.md)
 
 ## Experiment map
 
@@ -70,6 +71,7 @@ flowchart TB
 
     INJECTION --> ARTIFACTS["25 · Malicious artifacts<br/>Code files + agent skills<br/>Native policies + trained classifiers"]
     F5 --> ARTIFACTS
+    ARTIFACTS --> ARTREP["26 · Code embeddings + Qwen<br/>Frozen Jina · Linear / neural heads<br/>Six policies · Qwen 4B / 9B"]
 
     classDef neutral fill:#f1f5f9,stroke:#64748b,color:#172c49;
     classDef policy fill:#eef4ff,stroke:#526b91,color:#172c49;
@@ -79,7 +81,7 @@ flowchart TB
     class START,EVIDENCE,SERVING,CLOUD neutral;
     class P1,P2,P3,P4,P5 policy;
     class S1,S2,S3,S4 scores;
-    class F1,F2,F3,F4,F5 features;
+    class F1,F2,F3,F4,F5,ARTREP features;
     class NEXT proposed;
     class INJECTION,ARTIFACTS policy;
     style POLICY fill:#f8fafc,stroke:#cbd5e1
@@ -383,6 +385,35 @@ leaderboards remain separate from WildGuard, HateXplain and injection detection.
 
 [Readout](docs/malicious-artifacts/README.md) · [All scores, policy changes and uncertainty](docs/malicious-artifacts/RESULTS.md) · [Methods](docs/malicious-artifacts/METHODS.md) · [Pre-test selections](docs/malicious-artifacts/preparation/README.md) · [Frozen evidence and reproduction](published_runs/2026-11-03-malicious-artifacts/README.md)
 
+### 26. Code embeddings and general LLMs for artifact screening
+
+Can a small trained head make good use of code representations? We freeze two
+Jina models—a 161M bidirectional encoder and a 0.5B Qwen-Coder-derived embedding
+model—and fit separate logistic and one-hidden-layer neural classifiers for
+source files and skills. Qwen 4B and 9B instead select from six policies, including
+behavior checklists, paired benign/malicious examples and authority/scope rules.
+All choices freeze before new test inference, with no output calibration.
+
+The older Jina v2 model with logistic regression reaches **88.75%** code balanced
+accuracy, matching Qwen 9B's observed score with a different mix of errors.
+Jina code 0.5B with logistic regression scores **84.38%**
+balanced accuracy on code and **57.26%** on skills; its
+neural head scores **84.38%** and
+**54.58%** using the first registered seed. All three
+neural seeds are reported; none is selected by test performance. Qwen 4B's selected
+policies score **86.88% / 54.85%**, and Qwen
+9B's **88.75% / 55.48%** (code / skills).
+None of the new systems improves on the earlier skill baseline.
+
+These heads learn a fixed binary task from labels; they do not accept a newly
+written policy at inference. The study therefore compares useful approaches,
+not interchangeable capabilities. Code labels remain largely model-assisted;
+skill sources are held out but some attack families overlap fitting. The report
+retains both errors and grouped uncertainty. GPU cost was **$0.60**
+against a $4 ceiling; the GPU was terminated. No paid model API was used.
+
+[Readout](docs/artifact-representations/README.md) · [Full results and seed sensitivity](docs/artifact-representations/RESULTS.md) · [Policy changes and methods](docs/artifact-representations/METHODS.md) · [Pre-test freeze](docs/artifact-representations/preparation/README.md) · [Frozen evidence](published_runs/2026-11-03-artifact-representations/README.md)
+
 ## What the evidence suggests for moderation teams
 
 - **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. If examples are retrieved, include the labeled library, encoder and selection rule. A model replacement requires another evaluation.
@@ -561,6 +592,28 @@ Validation-selected systems, with fixed decision rules. The trained Liquid and T
 | Shieldstral 3B | 42.34% | 52.44% | 0 | 798 | 0 |
 
 The code labels are largely model-assisted; skill sources are held out but not all attack families. The shared bounded view can omit decisive content. These results do not establish that artifacts are safe to execute. [Confidence intervals, macro F1, MCC and policy deltas](docs/malicious-artifacts/RESULTS.md) · [Data and label limits](docs/malicious-artifacts/METHODS.md) · [Metric definitions](docs/leaderboard/METRICS.md).
+
+### Code embeddings and expanded Qwen policy search
+
+Same code and skill tests as above. Four Jina systems train heads on fitting
+labels; Qwen selects policies. Neural rows use the first registered seed. The
+earlier Qwen 4B row above uses the original three-candidate search; both study
+versions remain visible. No test-score-based replacement is made.
+
+| System | Code accuracy / BA | Code false blocks / misses | Skill accuracy | Skill BA | Skill false blocks / misses |
+|---|---:|---:|---:|---:|---:|
+| Jina code 0.5B + logistic | 84.38% | 5 / 20 | 59.18% | 57.26% | 282 / 283 |
+| Jina code 0.5B + neural head | 84.38% | 4 / 21 | 57.37% | 54.58% | 319 / 271 |
+| Jina v2 code + logistic | 88.75% | 7 / 11 | 57.73% | 54.88% | 319 / 266 |
+| Jina v2 code + neural head | 88.75% | 6 / 12 | 50.29% | 48.49% | 327 / 361 |
+| Qwen3.5 4B · six-policy search | 86.88% | 0 / 21 | 45.30% | 54.85% | 1 / 756 |
+| Qwen3.5 9B · six-policy search | 88.75% | 0 / 18 | 46.10% | 55.48% | 2 / 744 |
+
+Code denominators: 80 benign, 80 malicious. Skill denominators: 545 benign,
+839 malicious. All outputs resolved. [Intervals, macro F1, MCC, seed ranges and
+paired comparisons](docs/artifact-representations/RESULTS.md). Jina code 0.5B
+uses a noncommercial license; this is a research comparison, not a production
+deployment recommendation.
 
 ---
 

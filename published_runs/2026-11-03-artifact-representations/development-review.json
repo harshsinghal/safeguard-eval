@@ -1,0 +1,21 @@
+{
+  "fitting_ids": {
+    "code": [
+      "code:ec25fb4214678ef5f9ce9180",
+      "code:0e5d691511cbaa9adf46a007",
+      "code:cc716f74c09ea22b3cbf592c",
+      "code:e13e4a09a004a782a95717a5",
+      "code:600fdcfc92ae5ddd9c46f000",
+      "code:144129f0b5d121bfcdf01b09"
+    ],
+    "skills": [
+      "skills:ASB04_008920",
+      "skills:ASB04_009648",
+      "skills:ASB04_008776",
+      "skills:ASB04_006701",
+      "skills:ASB04_006110",
+      "skills:ASB04_000068"
+    ]
+  },
+  "notes": "Read fitting examples only. Legitimate API usage, administration and documentation coexist with hidden setup and authority attacks. Some positive code labels need missing package context. Conceptual policy examples are authored, not copied. No behavior labels or synthetic training rows added."
+}

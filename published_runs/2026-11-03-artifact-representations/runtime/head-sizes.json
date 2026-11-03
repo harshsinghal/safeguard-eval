@@ -1,0 +1,45 @@
+{
+  "sklearn": "1.9.1",
+  "heads": {
+    "code/jina-v2-lr": {
+      "selected": "C0.1",
+      "trained_parameters": 769,
+      "embedding_dim": 768
+    },
+    "code/jina-v2-mlp": {
+      "selected": "h128-a0.01-e30",
+      "trained_parameters": 98561,
+      "embedding_dim": 768
+    },
+    "code/jina-code-lr": {
+      "selected": "C0.1",
+      "trained_parameters": 897,
+      "embedding_dim": 896
+    },
+    "code/jina-code-mlp": {
+      "selected": "h128-a0.01-e30",
+      "trained_parameters": 114945,
+      "embedding_dim": 896
+    },
+    "skills/jina-v2-lr": {
+      "selected": "C0.1",
+      "trained_parameters": 769,
+      "embedding_dim": 768
+    },
+    "skills/jina-v2-mlp": {
+      "selected": "h128-a0.01-e60",
+      "trained_parameters": 98561,
+      "embedding_dim": 768
+    },
+    "skills/jina-code-lr": {
+      "selected": "C10",
+      "trained_parameters": 897,
+      "embedding_dim": 896
+    },
+    "skills/jina-code-mlp": {
+      "selected": "h256-a0.01-e30",
+      "trained_parameters": 229889,
+      "embedding_dim": 896
+    }
+  }
+}

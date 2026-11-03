@@ -46,3 +46,12 @@ Model and remote-code revisions are pinned in `common.py`. Runtime package
 versions, hardware, spending and termination evidence accompany completed runs.
 The budget file is a record of this study's authorization, not permission for
 someone else's agent to rent hardware. Set a new explicit budget for replication.
+
+The completed [public bundle](../../published_runs/2026-11-03-artifact-representations/README.md)
+contains the two metric-only reproduction commands. A separate
+[vector stability diagnostic](../../scripts/audit_artifact_vectors.py) was added
+after the negative skill results, using 16 fixed-hash validation items per task
+and representation. It reloads each model and compares single-item vectors with
+the original stored batch-four features. It never refits a head, changes a
+selection, or edits predictions. Run it in the model's recorded runtime with
+`--state /private/new-study --slug jina-v2` (or `jina-code`).
