@@ -20,7 +20,7 @@ def jobs(state,slug,task,split,pid,policy,view):
     if len(done)!=len(old) or not set(done)<={r['id'] for r in rr}:raise ValueError('Bad cache IDs')
     out=[]
     for r in rr:
-        body={'content':r['skill_text'] if view=='skill_only' else r['prompt'],'policy':policy}
+        body={'content':model_input(r,view),'policy':policy}
         j={**meta(r),'task':task,'input_view':view,'body':body,'policy_id':pid,'policy_sha256':hash_value(policy),'request_sha256':hash_value(body)}
         if r['id'] in done:
             if done[r['id']]['request_sha256']!=j['request_sha256']:raise ValueError('Cache request changed')

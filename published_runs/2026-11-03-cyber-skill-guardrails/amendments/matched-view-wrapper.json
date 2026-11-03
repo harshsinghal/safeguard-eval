@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-03T19:50:03.399329+00:00",
+  "reason": "Keep identical FILE SKILL.md headings in full and document-only views so the native paired contrast removes only companion files. Whole-package validation inputs unchanged; no document-only features or test inference have run. Add companion-file subset and identical-input repeat controls.",
+  "prior_registration_sha256": "6c793537d47a97bfcd768c8f38e1b50acededebf9f47192eec83d1a933a7dcd8",
+  "policy_candidates_changed": false,
+  "full_inputs_changed": false,
+  "skill_only_features_started": false,
+  "test_inference_started": false
+}

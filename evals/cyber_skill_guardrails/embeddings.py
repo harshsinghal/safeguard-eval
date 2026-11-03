@@ -18,7 +18,7 @@ def extract(state,split):
                 rr=data(state,task,part);xx=[];counts=[];lengths=[]
                 with torch.inference_mode():
                     for i,r in enumerate(rr):
-                        text=r['skill_text'] if view=='skill_only' else r['prompt'];ids=tok.encode(text,add_special_tokens=False,truncation=False)
+                        text=model_input(r,view);ids=tok.encode(text,add_special_tokens=False,truncation=False)
                         if not ids:raise ValueError('Empty embedding input')
                         zz=[];ww=[]
                         for a in range(0,len(ids),4096):

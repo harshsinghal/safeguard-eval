@@ -7,6 +7,10 @@ from .infer import jobs, record, runs
 from .report import intervals
 
 class Contracts(unittest.TestCase):
+    def test_single_file_views_are_identical(self):
+        r=dict(skill_text='A document.\n',prompt='FILE SKILL.md\nA document.\n')
+        self.assertEqual(model_input(r,'package'),model_input(r,'skill_only'))
+        with self.assertRaises(ValueError):model_input(r,'unknown')
     def test_json_lines_and_metadata(self):
         with tempfile.TemporaryDirectory() as t:
             r={'id':'a','prompt':'a\u2028b\nline','skill_text':'private','expected':'ALLOW'}

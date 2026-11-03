@@ -19,6 +19,11 @@ SEEDS = (20261104, 20261105, 20261106)
 
 def meta(r): return {k:v for k,v in r.items() if k not in ('prompt','skill_text')}
 
+def model_input(r,view):
+    if view=='package':return r['prompt']
+    if view=='skill_only':return 'FILE SKILL.md\n'+r['skill_text']
+    raise ValueError('Unknown input view')
+
 def data(state, task, split):
     rr = rows(Path(state)/f'data/{task}/{split}.jsonl')
     if len({r['id'] for r in rr}) != len(rr): raise ValueError('Duplicate input IDs')

@@ -46,6 +46,14 @@ def report(state,public=False):
             if slug in MODELS and task=='skills':
                 md=complete(state,slug,task,'test',best+'-md')
                 row['full_vs_skill_only']=compare(rr,md)
+                md_by_id={r['id']:r for r in md}
+                multi=[r for r in rr if r['file_count']>1]
+                if {r['expected'] for r in multi}=={'ALLOW','BLOCK'}:
+                    row['companion_file_subset']=dict(n=len(multi),**compare(multi,[md_by_id[r['id']] for r in multi]))
+                single=[r for r in rr if r['file_count']==1]
+                row['single_file_repeat_control']=dict(n=len(single),
+                    identical_request_hashes=sum(r['request_sha256']==md_by_id[r['id']]['request_sha256'] for r in single),
+                    changed_decisions=sum(r['prediction']!=md_by_id[r['id']]['prediction'] for r in single))
             if slug=='llamaguard':
                 default=complete(state,slug,task,'test','default')
                 row['custom_vs_default']=compare(rr,default)

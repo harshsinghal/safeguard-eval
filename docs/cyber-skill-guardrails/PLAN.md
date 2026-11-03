@@ -127,6 +127,10 @@ Final native inference runs the brief and validation-selected policies. Llama
 also runs its default taxonomy. On skills, rerun the **same selected policy** on
 SKILL.md only, keeping examples, weights and cutoff fixed. This paired ablation
 changes available evidence, not policy tuning. Prompt Guard also gets both views.
+Keep the same FILE SKILL.md heading in both views. Single-file packages therefore
+have identical native requests and provide a repeat-control check. Also report
+the paired subset containing companion files. This correction was registered
+before any skill-only feature extraction or final inference.
 The separately trained Jina skill-only heads are a different comparison and must
 be labeled accordingly. Output/error artifacts retain all attempted cases.
 
