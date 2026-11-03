@@ -1,0 +1,20 @@
+{
+  "termination_verified_utc": "2026-11-03T21:32:43.937568+00:00",
+  "provider": "GPU.ai",
+  "gpu": "NVIDIA RTX6000 Ada 48GB",
+  "hourly_usd": 0.65,
+  "auto_terminate_hours": 4,
+  "gpu_seconds": 10064,
+  "gpu_usd": 1.82,
+  "api_usd": 0.295403262,
+  "experiment_cost_usd": 2.115403262,
+  "experiment_cap_usd": 6.0,
+  "cumulative_prior_studies_usd": 25.887535876560005,
+  "cumulative_accounted_usd": 28.002939138560006,
+  "remaining_from_original_retrieval_allowance_usd": 11.357078733999998,
+  "unused_prior_benchmark_allocation_usd": 9.053013164,
+  "allocation": "Follow-up authorized within the unused prior benchmark allowance; overlapping accounting views are not additive.",
+  "runpod_used": false,
+  "local_electricity_and_engineering_time_excluded": true,
+  "status": "terminated"
+}

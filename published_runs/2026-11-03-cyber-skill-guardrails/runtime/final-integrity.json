@@ -1,0 +1,108 @@
+{
+  "recorded_utc": "2026-11-03T21:32:24.119415+00:00",
+  "frozen_source_inputs_and_selection_hashes_match": true,
+  "label_token_checks": {
+    "qwen/cyber/brief": {
+      "n": 330,
+      "with_token_check": 330,
+      "top_label": 330,
+      "unresolved": 0
+    },
+    "qwen/skills/brief": {
+      "n": 512,
+      "with_token_check": 512,
+      "top_label": 512,
+      "unresolved": 0
+    },
+    "qwen/skills/contrasts-md": {
+      "n": 512,
+      "with_token_check": 512,
+      "top_label": 512,
+      "unresolved": 0
+    },
+    "qwen/skills/contrasts": {
+      "n": 512,
+      "with_token_check": 512,
+      "top_label": 512,
+      "unresolved": 0
+    },
+    "shieldstral/cyber/brief": {
+      "n": 330,
+      "with_token_check": 330,
+      "top_label": 330,
+      "unresolved": 0
+    },
+    "shieldstral/cyber/contrasts": {
+      "n": 330,
+      "with_token_check": 330,
+      "top_label": 330,
+      "unresolved": 0
+    },
+    "shieldstral/skills/brief": {
+      "n": 512,
+      "with_token_check": 512,
+      "top_label": 512,
+      "unresolved": 0
+    },
+    "shieldstral/skills/contrasts-md": {
+      "n": 512,
+      "with_token_check": 512,
+      "top_label": 512,
+      "unresolved": 0
+    },
+    "shieldstral/skills/contrasts": {
+      "n": 512,
+      "with_token_check": 512,
+      "top_label": 512,
+      "unresolved": 0
+    },
+    "llamaguard/cyber/brief": {
+      "n": 330,
+      "with_token_check": 330,
+      "top_label": 330,
+      "unresolved": 0
+    },
+    "llamaguard/cyber/default": {
+      "n": 330,
+      "with_token_check": 330,
+      "top_label": 330,
+      "unresolved": 0
+    },
+    "llamaguard/cyber/structured": {
+      "n": 330,
+      "with_token_check": 330,
+      "top_label": 330,
+      "unresolved": 0
+    },
+    "llamaguard/skills/brief": {
+      "n": 512,
+      "with_token_check": 512,
+      "top_label": 512,
+      "unresolved": 0
+    },
+    "llamaguard/skills/contrasts-md": {
+      "n": 512,
+      "with_token_check": 512,
+      "top_label": 512,
+      "unresolved": 0
+    },
+    "llamaguard/skills/contrasts": {
+      "n": 512,
+      "with_token_check": 512,
+      "top_label": 512,
+      "unresolved": 0
+    },
+    "llamaguard/skills/default": {
+      "n": 512,
+      "with_token_check": 512,
+      "top_label": 512,
+      "unresolved": 0
+    }
+  },
+  "identical_document_feature_control": {
+    "n": 335,
+    "maximum_absolute_embedding_difference": 0.0
+  },
+  "api_requests_reported": 4113,
+  "api_total_usd": 0.295403262
+}

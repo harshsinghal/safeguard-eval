@@ -1,0 +1,11 @@
+{
+  "cap_usd": 2.0,
+  "initial_usd": 0.0,
+  "total_accounted_usd": 0.295403262,
+  "statuses": {
+    "reported": {
+      "requests": 4113,
+      "usd": 0.295403262
+    }
+  }
+}

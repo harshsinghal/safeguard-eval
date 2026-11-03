@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-11-03T21:30:25.785944+00:00",
+  "seconds": 40.72811122100029,
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "torch": "2.8.0+cu128",
+  "features": {
+    "jina-v2/cyber/test": {
+      "n": 330,
+      "view": "package",
+      "max_tokens": 156,
+      "chunk_count": 330,
+      "multi_chunk_inputs": 0,
+      "sha256": "34e172d2b9e04068b62ee936d227d8a6844c0a5f41d6e15c69913a3504857a35"
+    },
+    "jina-v2/skills/test": {
+      "n": 512,
+      "view": "package",
+      "max_tokens": 6340,
+      "chunk_count": 572,
+      "multi_chunk_inputs": 60,
+      "sha256": "7eb30087f1264c6ce880e28391562cdef4ba5d6b3b17bc8de766b0ad02a3e7b1"
+    },
+    "jina-v2-md/skills/test": {
+      "n": 512,
+      "view": "skill_only",
+      "max_tokens": 6340,
+      "chunk_count": 538,
+      "multi_chunk_inputs": 26,
+      "sha256": "333316494fdd5c00b3b0af0ad41687cff0949c8465b19f44f6dccb6aa52f3615"
+    }
+  }
+}

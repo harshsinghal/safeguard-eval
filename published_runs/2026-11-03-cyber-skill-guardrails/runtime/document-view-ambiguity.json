@@ -1,0 +1,24 @@
+{
+  "recorded_utc": "2026-11-03T21:19:01.265047+00:00",
+  "scope": "Descriptive metadata audit after inference started; not used for selection. Exact text hashes, not semantic equivalence.",
+  "splits": {
+    "fit": {
+      "n": 1024,
+      "identical_document_conflict_groups": 0,
+      "affected_rows": 0,
+      "unavoidable_errors_for_a_deterministic_document_only_rule": 0
+    },
+    "validation": {
+      "n": 256,
+      "identical_document_conflict_groups": 0,
+      "affected_rows": 0,
+      "unavoidable_errors_for_a_deterministic_document_only_rule": 0
+    },
+    "test": {
+      "n": 512,
+      "identical_document_conflict_groups": 0,
+      "affected_rows": 0,
+      "unavoidable_errors_for_a_deterministic_document_only_rule": 0
+    }
+  }
+}

@@ -138,7 +138,7 @@ These are task-trained classifiers, not policies automatically encoded by Jina.
 
 ## Meta guard baselines for cyber requests and skill packages
 
-The [registered cyber/skill comparison](../cyber-skill-guardrails/README.md) adds:
+The [completed cyber/skill comparison](../cyber-skill-guardrails/README.md) adds:
 
 | Model | Interface and role | Important boundary |
 |---|---|---|

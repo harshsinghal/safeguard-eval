@@ -1,0 +1,6 @@
+{
+  "recorded_utc": "2026-11-03T20:38:29.243997+00:00",
+  "gpu_fields": "name,driver_version,memory.total,compute_cap",
+  "gpu_values": "NVIDIA RTX 6000 Ada Generation, 580.126.09, 49140 MiB, 8.9",
+  "study_execution": "serial inference; native PyTorch runtimes; not a production serving benchmark"
+}

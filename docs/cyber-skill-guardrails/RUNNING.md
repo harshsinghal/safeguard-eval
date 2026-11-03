@@ -9,8 +9,16 @@
 - [x] Publish registration and pre-test runtime/data amendments.
 - [x] Complete validation within the existing $6 cap.
 - [x] Publish validation selection before test inference.
-- [ ] Run test, independently check metrics, publish failures and limits.
-- [ ] Reconcile provider/API charges; verify resource termination.
+- [x] Run test, independently check metrics, publish failures and limits.
+- [x] Reconcile provider/API charges; verify resource termination.
+
+## Completed verification
+
+All 50 final arms passed independent confusion-count and metric checks, including
+companion-file subsets and repeat controls. The 16 decoder label-contract checks
+all returned expected label tokens. Identical single-file inputs produced identical
+Jina embeddings. Seven local contract tests pass. Final GPU/API cost is
+$2.115403262; provider termination and temporary-key removal are confirmed.
 
 ## Local verification
 
@@ -42,6 +50,14 @@ upstream license; raw skill text and model weights are excluded from this reposi
 Paid reruns require a new explicit budget. Use provider termination limits, log
 unknown API charges conservatively, and stop resources after collecting evidence.
 Models use separate compatible environments; dependency snapshots accompany results.
+
+The public runtime recipes use a Linux CUDA host and absolute paths from this
+study. Adapt those paths in a fresh run directory, obtain access to gated model
+repositories through your own account, and supply credentials through private
+environment variables or files. Do not commit credentials. The decision-model
+adapters also require the provider reference code at the revisions and hashes
+recorded in the archived source. Jev uses an external API; its private responses
+and billing database are separate from the public prediction summary.
 
 A full rerun needs its own output directory, spending ledger and selection freeze.
 Do not overwrite the archived study or assume recomputed features and learned

@@ -38,6 +38,27 @@ def main():
                     for key,value in [('balanced_accuracy',balanced_accuracy_score(y,binary)),('macro_f1',f1_score(y,binary,average='macro',zero_division=0)),('mcc',matthews_corrcoef(y,binary))]:
                         assert abs(float(value)-m[key])<1e-12,(task,slug,pid,key)
                 count+=1
-    print(f'Independently verified {count} final arms and error denominators.')
+            if 'companion_file_subset' in row:
+                full=rows(root/f'predictions/{slug}/{task}/test/{primary}.jsonl')
+                md={r['id']:r for r in rows(root/f'predictions/{slug}/{task}/test/{best}-md.jsonl')}
+                subset=[r for r in full if meta[r['id']]['file_count']>1]
+                comparison=row['companion_file_subset']
+                assert comparison['n']==len(subset)
+                for records,metrics in [(subset,comparison['metrics']),([md[r['id']] for r in subset],comparison['reference_metrics'])]:
+                    positives=sum(r['expected']=='BLOCK' for r in records)
+                    negatives=len(records)-positives
+                    tp=sum(r['expected']=='BLOCK' and r['prediction']=='BLOCK' for r in records)
+                    tn=sum(r['expected']=='ALLOW' and r['prediction']=='ALLOW' for r in records)
+                    fp=sum(r['expected']=='ALLOW' and r['prediction']=='BLOCK' for r in records)
+                    fn=sum(r['expected']=='BLOCK' and r['prediction']=='ALLOW' for r in records)
+                    assert (fp,fn)==(metrics['false_blocks'],metrics['missed_violations'])
+                    assert abs(.5*(tp/positives+tn/negatives)-metrics['balanced_accuracy'])<1e-12
+                assert abs(comparison['delta_balanced_accuracy']-(comparison['metrics']['balanced_accuracy']-comparison['reference_metrics']['balanced_accuracy']))<1e-12
+                single=[r for r in full if meta[r['id']]['file_count']==1]
+                repeat=row['single_file_repeat_control']
+                assert repeat['n']==len(single)
+                assert repeat['identical_request_hashes']==sum(r['request_sha256']==md[r['id']]['request_sha256'] for r in single)
+                assert repeat['changed_decisions']==sum(r['prediction']!=md[r['id']]['prediction'] for r in single)
+    print(f'Independently verified {count} final arms, error denominators, companion-file subsets and repeat controls.')
 
 if __name__=='__main__':main()

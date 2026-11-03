@@ -12,15 +12,13 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 [Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Datasets](docs/datasets/README.md) · [Models](docs/models/README.md) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
 
-**Latest experiment:** [Code embeddings and Qwen for artifact screening](docs/artifact-representations/README.md)
-compares frozen Jina code embeddings with trained linear/neural heads, alongside
-Qwen 4B and 9B under an expanded policy search. It reuses the same 160 code files
-and 1,384 held-out skill texts as the preceding eight-system study. Model weights,
-policy text and labeled-example training are different ways to shape a decision;
-this study keeps their results and limitations visible.
-[Findings](docs/artifact-representations/RESULTS.md) · [Methods](docs/artifact-representations/METHODS.md)
-
-**In progress:** [Cyberattack requests and complete skill packages](docs/cyber-skill-guardrails/README.md) adds CyberSecEval and MalSkillBench, Meta guard-model baselines, and a paired test of companion files versus SKILL.md alone.
+**Latest experiments:** [Cyberattack requests and complete skill packages](docs/cyber-skill-guardrails/README.md)
+compare authored policies, Meta guard baselines and small classifiers trained on
+frozen code embeddings. CyberSecEval supplies cyber-assistance requests;
+MalSkillBench supplies complete textual agent packages. The skill study also
+removes companion files while keeping each prompted model's selected policy fixed.
+These are separate populations from the earlier code-file and skill-text tests.
+[Results](docs/cyber-skill-guardrails/RESULTS.md) · [Methods](docs/cyber-skill-guardrails/METHODS.md)
 
 ## Experiment map
 
@@ -74,6 +72,8 @@ flowchart TB
     INJECTION --> ARTIFACTS["25 · Malicious artifacts<br/>Code files + agent skills<br/>Native policies + trained classifiers"]
     F5 --> ARTIFACTS
     ARTIFACTS --> ARTREP["26 · Code embeddings + Qwen<br/>Frozen Jina · Linear / neural heads<br/>Six policies · Qwen 4B / 9B"]
+    ARTREP --> CYBER["27 · Cyber assistance requests<br/>CyberSecEval MITRE + FRR<br/>Custom policies · Meta guard baselines"]
+    ARTREP --> SKILLS["28 · Complete skill packages<br/>MalSkillBench · Companion-file ablation<br/>Policy models · Decision models · Jina heads"]
 
     classDef neutral fill:#f1f5f9,stroke:#64748b,color:#172c49;
     classDef policy fill:#eef4ff,stroke:#526b91,color:#172c49;
@@ -85,7 +85,7 @@ flowchart TB
     class S1,S2,S3,S4 scores;
     class F1,F2,F3,F4,F5,ARTREP features;
     class NEXT proposed;
-    class INJECTION,ARTIFACTS policy;
+    class INJECTION,ARTIFACTS,CYBER,SKILLS policy;
     style POLICY fill:#f8fafc,stroke:#cbd5e1
     style SCORES fill:#f8fafc,stroke:#cbd5e1
     style FEATURES fill:#f8fafc,stroke:#cbd5e1
@@ -99,7 +99,7 @@ flowchart TB
 | Scores, calibration, cutoffs, and combinations | [Probability ensembles](docs/ensemble/READOUT.md) → [log-odds ensembles](docs/ensemble-logits/RESULTS.md) → [Jev](docs/jev/READOUT.md) → [Kev / Clef](docs/decision-models/README.md) → [decision-model ensembles](docs/decision-ensemble/README.md) → [smart ensemble](docs/smart-ensemble/README.md) |
 | Representations and task-specific training | [PolicyLM / Qwen](docs/activation-probe/README.md) → [Shieldstral / Qwen](docs/shield-probe/README.md) → [linear, neural and contrastive task classifiers](docs/contrastive-heads/README.md) → [Liquid encoder fine-tuning](docs/liquid-finetune/README.md) |
 | Deploy and operate | [Seven-model serving study](docs/serving/README.md) → [L4: prompt length and vLLM/SGLang](docs/cloud-serving/README.md) · [Self-hosting implications](docs/cloud-serving/DEPLOYMENT.md) |
-| Test prompt and artifact security | [Injection and benign lookalikes](docs/prompt-injection/README.md) → [malicious source files and agent skills](docs/malicious-artifacts/README.md) |
+| Test prompt and artifact security | [Injection and benign lookalikes](docs/prompt-injection/README.md) → [malicious source files and agent skills](docs/malicious-artifacts/README.md) → [code embeddings](docs/artifact-representations/README.md) → [cyber requests and complete packages](docs/cyber-skill-guardrails/README.md) |
 | Compare outcomes and see what is proposed | [Balanced metric guide](docs/leaderboard/METRICS.md) · [leaderboard](#current-leaderboard) · [next steps: reducing moderation errors](docs/research-directions/REDUCING-MODERATION-ERRORS.md) |
 
 The [smart-ensemble study](docs/smart-ensemble/README.md) takes the next step: learn which native model scores help each other, then test the frozen combination. Adding trained representation heads to that combination, broader policy-and-cutoff optimization, and a targeted second pass remain [proposed work](docs/research-directions/REDUCING-MODERATION-ERRORS.md), awaiting separate authorization.
@@ -126,6 +126,8 @@ decision models, encoders, retrievers and API pilots, with their roles and inter
 | Specialist policy models | PolicyLM 1.7B, Shieldstral 3B, CoPE-B-A4B, GPT-OSS Safeguard 20B | Authored rules delivered through each model's native interface. |
 | General-purpose LLMs | Qwen3.5 2B, 4B, 9B, 27B, and 35B-A3B | Classification instructions and policy text; thinking disabled in these comparisons. |
 | Decision / “System One” models | Jev 1.14, Kev 4B, Clef-Flash 9B | Native classification interfaces. Jev was accessed by API; Kev and Clef were self-hosted from open weights. |
+| Meta guard controls | Llama Guard 4 12B; Prompt Guard 2 86M | Llama Guard native/default and custom categories; Prompt Guard is a narrower injection diagnostic in the cyber/skill study. |
+| Code embedding classifiers | Jina v2 code 161M; Jina code 0.5B | Frozen representations with task-trained linear and neural heads; separate code and skill populations. |
 | Fixed-task reference | WildGuard 7B | The released fine-tuned model and official inference template; no custom-policy tuning arm. |
 | Ensembles | Averages, learned weights, logistic regression, random forests, shallow gradient boosting | Combinations of specified component scores; the smart-ensemble study also selects a small subset using training folds. |
 | Frozen-representation probes | Qwen3.5 0.8B with PolicyLM 1.7B; Qwen3.5 4B with Shieldstral 3B | Supervised logistic regression on individual or concatenated hidden states under a fixed harmfulness policy within each study; language-model weights stay frozen. |
@@ -416,6 +418,52 @@ against a $4 ceiling; the GPU was terminated. No paid model API was used.
 
 [Readout](docs/artifact-representations/README.md) · [Full results and seed sensitivity](docs/artifact-representations/RESULTS.md) · [Policy changes and methods](docs/artifact-representations/METHODS.md) · [Pre-test freeze](docs/artifact-representations/preparation/README.md) · [Frozen evidence](published_runs/2026-11-03-artifact-representations/README.md)
 
+### 27. Cyber assistance: custom policies and Meta guard baselines
+
+We adapt CyberSecEval MITRE and benign FRR requests into a binary classification
+task. The 330 test requests are balanced and group-separated from development.
+Seven editable models select among three policies; Llama Guard's default taxonomy,
+Prompt Guard's fixed injection detector, and supervised Jina heads add controls.
+This is agreement with source-derived labels, not Meta's native attack-generation
+score or proof of a user's malicious intent.
+
+Jev scores **83.33%**, Qwen 4B **60.91%**, and
+Llama Guard's selected custom policy **77.27%** balanced accuracy.
+Jina's logistic head scores **99.70%** after learning from fitting
+labels; the primary neural head matches all 330 source labels. Because each label
+comes from a different collection, the trained head may learn residual corpus
+cues. This is **not evidence of perfect malicious-intent detection**.
+Shieldstral and Jev both score **83.33%**, but Shieldstral has 18 false
+blocks / 37 misses versus Jev's 7 / 48. All systems and intervals appear below. A source
+formatting shortcut was repaired before testing, with original split assignments
+preserved; remaining dual-use ambiguity and source differences limit the claim.
+
+[Readout](docs/cyber-skill-guardrails/README.md) · [Scores and policy comparisons](docs/cyber-skill-guardrails/RESULTS.md) · [Pre-test selection](docs/cyber-skill-guardrails/preparation/README.md)
+
+### 28. Agent packages: does the model need companion files?
+
+A separate MalSkillBench test contains 512 complete textual packages. Each prompted
+model sees the full package, then SKILL.md alone under the **same selected policy**.
+The 177 packages with companion files provide the direct comparison; 335 single-file
+packages provide an identical-request repeat check. No package is executed.
+
+Clef's selected policy raises skill-package accuracy from **80.86% to 90.82%**:
+misses fall from 96 to 39 while false blocks rise from 2 to 8.
+Jev scores **95.51%** on full packages and
+**88.09%**
+on SKILL.md alone. The results retain repeat variability as well as differences
+caused by available evidence. The Jina document-only heads are trained separately,
+so their comparison changes both the input and the fitted classifier.
+
+Only three malicious test packages are wild; most are generated. This is a
+different dataset from ProtectSkills/MaliciousSkillBench in experiments 25–26.
+A higher score across those datasets cannot be attributed to adding companion
+files. The paired test within this study addresses that question. Both studies
+cost **$2.115** in total, including setup and preserved
+failed attempts; the GPU was terminated.
+
+[Readout](docs/cyber-skill-guardrails/README.md) · [Paired results and uncertainty](docs/cyber-skill-guardrails/RESULTS.md) · [Methods](docs/cyber-skill-guardrails/METHODS.md) · [Frozen evidence and reproduction](published_runs/2026-11-03-cyber-skill-guardrails/README.md)
+
 ## What the evidence suggests for moderation teams
 
 - **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. If examples are retrieved, include the labeled library, encoder and selection rule. A model replacement requires another evaluation.
@@ -616,6 +664,60 @@ Code denominators: 80 benign, 80 malicious. Skill denominators: 545 benign,
 paired comparisons](docs/artifact-representations/RESULTS.md). Jina code 0.5B
 uses a noncommercial license; this is a research comparison, not a production
 deployment recommendation.
+
+
+### Cyber requests and complete skill packages
+
+These are **two new populations**, not additions to the shared WildGuard/HateXplain
+ranking or a rerun of the earlier skill-text cohort. Policies and head settings
+were selected on validation before final inference. Accuracy equals balanced
+accuracy on these balanced test sets; the two error counts remain useful.
+
+#### CyberSecEval-derived requests: 330, with 165 per class
+
+The Jina neural head’s 100% cyber score is agreement with this source-derived
+cohort. The labels coincide with source collections, so residual corpus cues may
+help a trained classifier. Its degenerate bootstrap interval does not establish
+zero future error or perfect malicious-intent recognition.
+
+| System | Balanced accuracy | False blocks | Misses |
+|---|---:|---:|---:|
+| Jina v2 + neural head | 100.00% | 0/165 | 0/165 |
+| Jina v2 + logistic | 99.70% | 1/165 | 0/165 |
+| Kev 4B | 84.55% | 7/165 | 44/165 |
+| Jev 1.14 (API) | 83.33% | 7/165 | 48/165 |
+| Shieldstral 3B | 83.33% | 18/165 | 37/165 |
+| Clef-Flash 9B | 78.48% | 29/165 | 42/165 |
+| Llama Guard 4 12B, custom policy | 77.27% | 14/165 | 61/165 |
+| PolicyLM 1.7B | 70.91% | 35/165 | 61/165 |
+| Qwen3.5 4B | 60.91% | 0/165 | 129/165 |
+| Llama Guard 4, fixed default taxonomy | 72.42% | 10/165 | 81/165 |
+
+Prompt Guard's narrower, windowed diagnostic scores 55.76% BA (2 false blocks, 144 misses). It is not ranked as a general cyber-abuse or malicious-package detector.
+
+#### MalSkillBench text packages: 512, with 256 per class
+
+| System | Balanced accuracy | False blocks | Misses |
+|---|---:|---:|---:|
+| Jev 1.14 (API) | 95.51% | 1/256 | 22/256 |
+| Clef-Flash 9B | 90.82% | 8/256 | 39/256 |
+| Qwen3.5 4B | 85.55% | 0/256 | 74/256 |
+| Jina v2 + neural head | 81.64% | 43/256 | 51/256 |
+| Jina v2 + logistic | 79.49% | 48/256 | 57/256 |
+| Kev 4B | 73.24% | 6/256 | 131/256 |
+| Llama Guard 4 12B, custom policy | 70.70% | 37/256 | 113/256 |
+| PolicyLM 1.7B | 61.72% | 135/256 | 61/256 |
+| Shieldstral 3B | 58.01% | 0/256 | 215/256 |
+| Llama Guard 4, fixed default taxonomy | 70.31% | 21/256 | 131/256 |
+
+Prompt Guard's narrower, windowed diagnostic scores 50.00% BA (57 false blocks, 199 misses). It is not ranked as a general cyber-abuse or malicious-package detector.
+
+Jina heads use supervised fitting labels; neural rows use the first registered
+seed. These are fixed-task classifiers, not policy-only methods. Cyber labels
+follow the source task, and the skill test is predominantly generated.
+See [full results](docs/cyber-skill-guardrails/RESULTS.md) for macro F1, MCC, grouped
+intervals, all neural seeds, policy changes, companion-file comparisons and
+unresolved outputs. [Metric definitions](docs/leaderboard/METRICS.md).
 
 ---
 

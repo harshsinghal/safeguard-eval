@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-11-03T20:04:51.556978+00:00",
+  "note": "API inference runs on the Mac; GPU collection excludes Jev predictions and API billing to preserve authoritative local records. A transient partial transfer was removed before collection. No classification was rerun.",
+  "files": {
+    "predictions/jev/cyber/test/brief.jsonl": "d55070f0b8aadd369802e67b92e229ee859c23aeca1ece5fbfffc0314c84e08e",
+    "predictions/jev/cyber/test/contrasts.jsonl": "154c7908a5e14d693f3afe0161d0ab9ac1b5e8ad793caa69106ac29ff6baf346",
+    "predictions/jev/cyber/validation/brief.jsonl": "6311aa457efa59bac28fee2fd68a0ae801db420fcdc001a18a279ae1a5725569",
+    "predictions/jev/cyber/validation/contrasts.jsonl": "bdbf956eedc342c34da37424e9e1eab733999f89307976c69dd89d63bab3f531",
+    "predictions/jev/cyber/validation/structured.jsonl": "0d4217c4edf30cc6a0ee9da6c9ba435fda26bee9456e42bd85b362d4f04cf6e2",
+    "predictions/jev/skills/test/brief.jsonl": "b80aec8a5d40fc0fb7e623a99a13dd2f25fcf0e2900518264b1c9731a9fa51d6",
+    "predictions/jev/skills/test/structured-md.jsonl": "5949d21bd8fb17268dacf910b3a9c020a36f97cb8be1c3cd38817198dff7576e",
+    "predictions/jev/skills/test/structured.jsonl": "716af04fadd61a720234afcb270c2e05baf14b892bfee2c0e0b034a82a74f17e",
+    "predictions/jev/skills/validation/brief.jsonl": "9ee2ae06c87ee5baf5abd5448984821cbc019849c0b44caa1de376d1748c8a27",
+    "predictions/jev/skills/validation/contrasts.jsonl": "a5a7bbef53a51cbfa63d8504298e3cb0ecb41512dfef3563fcb5b835291ae37b",
+    "predictions/jev/skills/validation/structured.jsonl": "8d9389fba418a966f59f4ad604d1a0904dd73a7d96fa685fbf40c29535f2c32e",
+    "jev-billing.json": "9190e1e7356ca52f75adc8e0cf150f1d3638dd6f5e295cc5e9985c4fc80718c6",
+    "runtime/jev-test.json": "91ddbfe466994bd9a47b05f726f509c4a9aa3e58ed940f30cda811e5a9b1d0cb"
+  }
+}
