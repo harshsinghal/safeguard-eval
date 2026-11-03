@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-11-03T06:44:44.624712+00:00",
+  "before_test_inference": true,
+  "tasks": {
+    "code": {
+      "fit_test_shared_groups": 0,
+      "validation_test_shared_groups": 0,
+      "test_records_sharing_any_development_group": 0
+    },
+    "skills": {
+      "fit_test_shared_groups": 5,
+      "validation_test_shared_groups": 0,
+      "test_records_sharing_any_development_group": 205
+    }
+  }
+}

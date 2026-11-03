@@ -17,9 +17,11 @@ always the same.
 | [xTRam1 Safe-Guard prompt injection](https://huggingface.co/datasets/xTRam1/safe-guard-prompt-injection) | A larger, largely synthetic binary injection collection | 2,060 original test examples | [Six-model study](../prompt-injection/README.md) |
 | [NotInject](https://huggingface.co/datasets/leolee99/NotInject) | False alarms on benign text containing suspicious words or characters | 339 benign examples | [False-block results](../prompt-injection/RESULTS.md#notinject-339-benign-lookalikes) |
 | [JailbreakBench attack artifacts](https://github.com/JailbreakBench/artifacts) | Detection of released jailbreak attempts | 182 GCG/PAIR attempts targeting Vicuna-13B | [Detection results](../prompt-injection/RESULTS.md#jailbreakbench-182-released-attack-attempts) |
+| [OMCBench](https://github.com/False-Positive-Community/open-malicious-code-benchmark) | Malicious versus benign source files in Python/JavaScript packages | Derived, group-disjoint test of 160 files; 80 per class | [Artifact study](../malicious-artifacts/README.md), [methods](../malicious-artifacts/METHODS.md) |
+| [MaliciousSkillBench](https://huggingface.co/datasets/ProtectSkills/MaliciousSkillBench) | Malicious versus benign agent skill text | All 1,384 official source-disjoint test records | [Artifact study](../malicious-artifacts/README.md), [methods](../malicious-artifacts/METHODS.md) |
 | [DiffusionDB](https://huggingface.co/datasets/poloclub/diffusiondb) | Browsing image-generation prompts and trying a custom policy | Interactive text-prompt demo; no scored policy test set | [Original application](../../DEMO.md) |
 
-The first six rows are evaluation sources. DiffusionDB supported the original
+The first eight rows are evaluation sources. DiffusionDB supported the original
 demo. Our separately authored synthetic sets and serving workloads are listed
 below. **No study here evaluates generated images.**
 
@@ -158,6 +160,49 @@ not balanced accuracy. **Detecting an attempt is different from preventing a
 successful attack on a live application.** See the
 [exact source files](../prompt-injection/preparation/source-manifest.json) and
 [method-level results](../prompt-injection/RESULTS.md#jailbreakbench-182-released-attack-attempts).
+
+## OMCBench: source-file screening
+
+**What it contains.** The [upstream repository](https://github.com/False-Positive-Community/open-malicious-code-benchmark)
+provides 800 Python/JavaScript packages and file-level malicious, benign and
+unknown labels. Our pinned snapshot has 25,557 file labels; most are benign.
+
+**Our task.** Classify a source file as malicious (BLOCK) or benign (ALLOW).
+We retain confirmed UTF-8 files, including benign files inside malicious packages,
+and use the file's label rather than its enclosing package's label. Grouping by
+package, exact text and high character similarity precedes splitting. Balanced
+samples contain **632 fitting, 240 validation and 160 test files**. Test labels
+are 80 malicious and 80 benign, across 101 groups. This is a derived file-level
+task, not the publisher's full-package benchmark.
+
+**Limits.** Of the retained test labels, 99 are tagged `llm` and 61
+`benign_package`; this is not an independently human-adjudicated test. The common
+8,000-byte source view clips 38 test files. Missing companion files or omitted
+code can hide the decisive behavior. Scores measure agreement with these labels
+from this view, not whether a package is safe to execute. No downloaded code was
+executed. See [population and provenance](../malicious-artifacts/METHODS.md) and
+the [source manifest](../../published_runs/2026-11-03-malicious-artifacts/source-manifest.json).
+
+## MaliciousSkillBench: agent-skill screening
+
+**What it contains.** [MaliciousSkillBench](https://github.com/protectskills/MaliciousSkillBench)
+consolidates skill text, malicious/benign labels, source identifiers and partial
+attack-category annotations. The pinned primary collection has 9,740 rows.
+
+**Our task.** Classify the supplied skill text as malicious (BLOCK) or benign
+(ALLOW), without installing it or supplying auxiliary files. We preserve the
+publisher's source-disjoint split, exclude withheld/sanitized originals from
+development, and sample **1,024 balanced fitting and 256 balanced validation
+records**. All **1,384 test records** remain: 839 malicious and 545 benign.
+
+**Limits.** The common bounded input view clips 398 test records. No exact model
+view crosses the retained partitions, but five structural families span fitting
+and test and cover 205 test records. Source holdout therefore does not establish
+generalization to entirely new attack families. Category mappings are partial
+and overlapping; absent mappings are not negative labels. The task evaluates
+static text classification, not whether a live agent resists a skill's attack.
+See [methods](../malicious-artifacts/METHODS.md) and the
+[overlap audit](../../published_runs/2026-11-03-malicious-artifacts/group-overlap-audit.json).
 
 ## DiffusionDB and original project examples
 

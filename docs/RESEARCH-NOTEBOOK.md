@@ -369,3 +369,60 @@ Keep this fixed-decision, accuracy-nominated study separate from the common
 calibrated leaderboard. It is exploratory evidence on a reused benchmark and
 particular example wrappers, not a general model-family or retrieval claim.
 Papers, articles and versioned skill releases have not been rewritten.
+
+
+## Malicious code and agent-skill screening
+
+The [artifact study](malicious-artifacts/README.md) is complete. It compares
+PolicyLM-1.7B, Shieldstral-1.0-3B, Qwen3.5-4B, Kev-4B, Clef-Flash and Jev-1.14,
+plus separate Liquid 350M and character TF-IDF classifiers trained for each task.
+These are static classifications of code-file or skill text; no benchmark
+artifact was executed. All policies and trained configurations were selected
+on validation, and the freeze was published in commit `e75f593` before test.
+
+The OMCBench-derived file study uses 632 fitting, 240 validation and 160 test
+files, grouped by package and near-duplicate views before splitting. The test
+has 80 examples per class. Liquid's 91.25% balanced accuracy is the highest point
+estimate, followed by Jev at 90.00%; the difference is two cases and does not
+establish a reliable winner. PolicyLM improved from 70.00% to 86.88% with its
+selected evidence-focused rule: 48 to 6 false blocks, but 0 to 15 misses.
+That gain changes the error trade-off, rather than reducing both errors.
+
+The skill study uses 1,024 fitting and 256 validation examples, then all 1,384
+records in MaliciousSkillBench's source-held-out test. TF-IDF leads at 70.19%
+balanced accuracy and 73.92% ordinary accuracy, followed by Liquid at 65.06%
+and PolicyLM at 61.86%. TF-IDF falsely blocks 258 of 545 benign skills while
+missing 103 of 839 malicious ones. Jev makes no false blocks but misses 718.
+These operating points demonstrate why aggregate accuracy and a model-family
+label cannot settle a deployment decision. The six frozen models' skill balanced
+accuracies range from 52.44% to 61.86% under this bounded policy search.
+
+Policies vary concrete behavior definitions, allowed operations and an evidence
+standard, through fixed native adapters. They are three prespecified variants,
+not training-error-derived edits. Some changes do not transfer from validation:
+Jev's selected skill policy regresses slightly on test. No new cutoff fitting,
+calibration, retrieval or ensemble is included. The trained baselines use fitting
+labels differently from prompted systems and do not accept new policies at
+inference; the comparison does not isolate architecture or parameter count.
+
+The [methods](malicious-artifacts/METHODS.md) retain material limits: code labels
+include 99 LLM annotations and 61 inherited benign-package labels; 38 code and
+398 skill test views are clipped to an equal source-byte budget. The skill test
+holds out sources, but five attack families span fitting/test and cover 205 test
+records. Auxiliary package files are not inputs. Low recall cannot be assigned
+solely to model reasoning, clipping, or label uncertainty from this design.
+
+The [frozen bundle](../published_runs/2026-11-03-malicious-artifacts/README.md)
+contains the pre-test selection, 26 final selected/control arms, grouped
+intervals, source and error slices, raw-text-free predictions and source hashes.
+All 26 metric comparisons pass independent checks with zero unresolved outputs.
+Exact input restoration matches 12 data/metadata files. Execution records retain
+the Unicode JSONL fix, lossless checkpoint storage, and recovery of eight cached
+Jev responses after local disk-write interruption, with no replacement calls or
+lost results. Supplementary adapter dependencies match the pre-test Git commit
+and the GPU copies.
+
+The bill is $1.382805374: $1.07 GPU and $0.312805374 API, within the $6 cap.
+The GPU was terminated and temporary access keys removed. The README map, log,
+separate artifact leaderboards and dataset/model directories link this evidence.
+Reviewed papers, articles and the versioned skill remain separate snapshots.

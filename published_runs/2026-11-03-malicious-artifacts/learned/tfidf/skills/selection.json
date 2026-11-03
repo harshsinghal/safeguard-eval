@@ -1,0 +1,103 @@
+{
+  "selected": "C10",
+  "validation": {
+    "C0.1": {
+      "n": 256,
+      "positives": 128,
+      "negatives": 128,
+      "confusion": {
+        "tp": 89,
+        "tn": 111,
+        "fp": 17,
+        "fn": 39,
+        "error_allow": 0,
+        "error_block": 0
+      },
+      "balanced_accuracy": 0.78125,
+      "accuracy": 0.78125,
+      "recall": 0.6953125,
+      "specificity": 0.8671875,
+      "false_positive_rate": 0.1328125,
+      "false_negative_rate": 0.3046875,
+      "compliant_error_rate": 0.1328125,
+      "violation_error_rate": 0.3046875,
+      "precision": 0.839622641509434,
+      "macro_f1": 0.7796224558814486,
+      "block_f1": 0.7606837606837606,
+      "allow_f1": 0.7985611510791367,
+      "mcc": 0.5709971417170637,
+      "false_blocks": 17,
+      "missed_violations": 39,
+      "unresolved": 0,
+      "coverage": 1.0
+    },
+    "C1": {
+      "n": 256,
+      "positives": 128,
+      "negatives": 128,
+      "confusion": {
+        "tp": 96,
+        "tn": 112,
+        "fp": 16,
+        "fn": 32,
+        "error_allow": 0,
+        "error_block": 0
+      },
+      "balanced_accuracy": 0.8125,
+      "accuracy": 0.8125,
+      "recall": 0.75,
+      "specificity": 0.875,
+      "false_positive_rate": 0.125,
+      "false_negative_rate": 0.25,
+      "compliant_error_rate": 0.125,
+      "violation_error_rate": 0.25,
+      "precision": 0.8571428571428571,
+      "macro_f1": 0.8117647058823529,
+      "block_f1": 0.8,
+      "allow_f1": 0.8235294117647058,
+      "mcc": 0.629940788348712,
+      "false_blocks": 16,
+      "missed_violations": 32,
+      "unresolved": 0,
+      "coverage": 1.0
+    },
+    "C10": {
+      "n": 256,
+      "positives": 128,
+      "negatives": 128,
+      "confusion": {
+        "tp": 99,
+        "tn": 114,
+        "fp": 14,
+        "fn": 29,
+        "error_allow": 0,
+        "error_block": 0
+      },
+      "balanced_accuracy": 0.83203125,
+      "accuracy": 0.83203125,
+      "recall": 0.7734375,
+      "specificity": 0.890625,
+      "false_positive_rate": 0.109375,
+      "false_negative_rate": 0.2265625,
+      "compliant_error_rate": 0.109375,
+      "violation_error_rate": 0.2265625,
+      "precision": 0.8761061946902655,
+      "macro_f1": 0.831452588384805,
+      "block_f1": 0.8215767634854771,
+      "allow_f1": 0.8413284132841329,
+      "mcc": 0.668669763357808,
+      "false_blocks": 14,
+      "missed_violations": 29,
+      "unresolved": 0,
+      "coverage": 1.0
+    }
+  },
+  "evidence": {
+    "predictions/tfidf/skills/validation/C0.1.jsonl": "55c092cafd137b028b6d74ca9a57a99bb844024a3af5e29dfeaa98b27dffcccb",
+    "learned/tfidf/skills/C0.1.joblib": "d97d053113b82ee270f04c535f5f34bd8608ba08904dc62f619c847f5f32e7c6",
+    "predictions/tfidf/skills/validation/C1.jsonl": "17b641dfa92127638287b47861e15260a4c2f41b466a8b2a6f77ac4bfb41e470",
+    "learned/tfidf/skills/C1.joblib": "2ab26c90ff9d3893b363b1525698c68bba71dba1635cd59f7633b0635f46f982",
+    "predictions/tfidf/skills/validation/C10.jsonl": "829c6f5c52b574ab8d7ce15e16aa2277d3a0e7bb84509320c480a8d6946e7d6c",
+    "learned/tfidf/skills/C10.joblib": "5fe25feb569f35f9d5807889a32865cfb3ac178040745120c30cc32d33c69ae6"
+  }
+}

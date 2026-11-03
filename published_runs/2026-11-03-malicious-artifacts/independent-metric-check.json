@@ -1,0 +1,216 @@
+{
+  "created_utc": "2026-11-03T08:08:29.318147+00:00",
+  "method": "Independent scikit-learn metrics and direct error counts; no study metric functions imported",
+  "coverage_alignment_verified": true,
+  "arms": [
+    {
+      "task": "code",
+      "model": "liquid",
+      "candidate": "lr5e-05-epoch3",
+      "n": 160,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "code",
+      "model": "jev",
+      "candidate": "brief",
+      "n": 160,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "code",
+      "model": "clef",
+      "candidate": "structured",
+      "n": 160,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "code",
+      "model": "clef",
+      "candidate": "brief",
+      "n": 160,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "code",
+      "model": "tfidf",
+      "candidate": "C10",
+      "n": 160,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "code",
+      "model": "policylm",
+      "candidate": "evidence",
+      "n": 160,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "code",
+      "model": "policylm",
+      "candidate": "brief",
+      "n": 160,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "code",
+      "model": "qwen",
+      "candidate": "brief",
+      "n": 160,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "code",
+      "model": "kev",
+      "candidate": "evidence",
+      "n": 160,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "code",
+      "model": "kev",
+      "candidate": "brief",
+      "n": 160,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "code",
+      "model": "shieldstral",
+      "candidate": "structured",
+      "n": 160,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "code",
+      "model": "shieldstral",
+      "candidate": "brief",
+      "n": 160,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "tfidf",
+      "candidate": "C10",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "liquid",
+      "candidate": "lr5e-05-epoch3",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "policylm",
+      "candidate": "structured",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "policylm",
+      "candidate": "brief",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "jev",
+      "candidate": "structured",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "jev",
+      "candidate": "brief",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "clef",
+      "candidate": "structured",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "clef",
+      "candidate": "brief",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "qwen",
+      "candidate": "structured",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "qwen",
+      "candidate": "brief",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "kev",
+      "candidate": "structured",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "kev",
+      "candidate": "brief",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "shieldstral",
+      "candidate": "structured",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    },
+    {
+      "task": "skills",
+      "model": "shieldstral",
+      "candidate": "brief",
+      "n": 1384,
+      "unresolved": 0,
+      "matches": true
+    }
+  ],
+  "all_match": true
+}

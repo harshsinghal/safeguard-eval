@@ -1,0 +1,12 @@
+{
+  "pre_test_commit": "e75f593",
+  "reason": "Transitive local adapter dependencies supplement the explicit registered-source list; verified unchanged from the pre-test Git commit.",
+  "sources": {
+    "evals/ensemble/common.py": "49fd69c929645c8e318be3f9e3a01155cb7f8ba14e0af151778ffe0991b6118a",
+    "evals/jev/study.py": "d9683a7917c86657c1a8d9f6d52e837010130a55b75a5a4ff33d9205c1fd189c",
+    "evals/prompt_injection/policies.py": "19153f8e9de7693e6d215ee1f5de384a8fa2191edac8d52babb48a75f1aa0538",
+    "evals/prompt_injection/study.py": "460fdcb55ed075d72c6446952e3c5f7d16ca434413a749441d4be112c28e5bbc",
+    "evals/wildguard/metrics.py": "8fd93378cb6bbbcbca2e6ed47e3f3ae198da663709d3fa7dbf44b1be41c69da7"
+  },
+  "remote_hashes_match": true
+}

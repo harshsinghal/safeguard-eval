@@ -1,0 +1,3 @@
+{
+  "reason": "The inherited JSONL reader used str.splitlines(), which splits literal Unicode line separators inside JSON strings. Replace with splitting only ASCII newline. Inputs, policies, model requests and selection rules are unchanged. No final test inference has occurred."
+}

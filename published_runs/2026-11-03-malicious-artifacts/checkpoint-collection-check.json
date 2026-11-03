@@ -1,0 +1,6 @@
+{
+  "all_frozen_hashes_verified": true,
+  "checkpoint_count": 2,
+  "storage": "lossless gzip; hashes refer to original checkpoint bytes",
+  "transfer_warning": "tar reported directory timestamp changes while selection files were re-uploaded; all file hashes verified against the pre-test freeze."
+}

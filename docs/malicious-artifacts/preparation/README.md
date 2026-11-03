@@ -7,8 +7,8 @@ results, not held-out performance. The [plan](../PLAN.md) sets the selection rul
 
 The frozen selections are evidence for PolicyLM and Kev, structured for Shieldstral
 and Clef, and brief for Qwen and Jev on code. Every prompted model selects structured
-on skills. Both trained baselines choose C=10 for TF-IDF and learning rate 5e-5,
-epoch 3 for Liquid, separately for each task.
+on skills. TF-IDF selects C=10 on both tasks. Liquid selects learning rate 5e-5,
+epoch 3 on both tasks, with a separate trained classifier for each.
 
 Source pins, input hashes, exclusions and overlap checks accompany the freeze.
 Original text and model weights remain private. The registration retains two

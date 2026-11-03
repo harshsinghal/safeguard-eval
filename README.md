@@ -12,12 +12,12 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 [Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Datasets](docs/datasets/README.md) · [Models](docs/models/README.md) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
 
-**Latest experiment:** [Prompt injection and benign lookalikes](docs/prompt-injection/README.md) compares six models on 2,697 examples, with three policy candidates selected on separate development data. The results report both missed attempts and false blocks, retain unresolved answers, and use fixed decision rules without new calibration. [Full results](docs/prompt-injection/RESULTS.md) · [Policy edits](docs/prompt-injection/POLICY-CHANGES.md)
-
-**In progress:** [Malicious code and agent-skill screening](docs/malicious-artifacts/README.md)
-compares policy models, decision models, Qwen and supervised classifiers on two
-separate artifact-screening tasks. The [plan](docs/malicious-artifacts/PLAN.md)
-fixes the data views, splits, policy candidates and selection rules before test.
+**Latest experiment:** [Malicious code and agent-skill screening](docs/malicious-artifacts/README.md)
+compares eight systems across policy, general LLM, decision and trained-classifier
+families. Policies and classifier settings were fixed on validation before the
+160-file code test and 1,384-skill source holdout. The results retain both false
+blocks and missed threats, with separate leaderboards for the two tasks.
+[Findings and policy changes](docs/malicious-artifacts/RESULTS.md) · [Methods and limits](docs/malicious-artifacts/METHODS.md)
 
 ## Experiment map
 
@@ -68,6 +68,9 @@ flowchart TB
 
     START --> INJECTION["24 · Injection detection<br/>Six models · Four collections<br/>Attacks + benign lookalikes<br/>Policy tuning · Fixed decisions"]
 
+    INJECTION --> ARTIFACTS["25 · Malicious artifacts<br/>Code files + agent skills<br/>Native policies + trained classifiers"]
+    F5 --> ARTIFACTS
+
     classDef neutral fill:#f1f5f9,stroke:#64748b,color:#172c49;
     classDef policy fill:#eef4ff,stroke:#526b91,color:#172c49;
     classDef scores fill:#e9f5ef,stroke:#367556,color:#153e2b;
@@ -78,7 +81,7 @@ flowchart TB
     class S1,S2,S3,S4 scores;
     class F1,F2,F3,F4,F5 features;
     class NEXT proposed;
-    class INJECTION policy;
+    class INJECTION,ARTIFACTS policy;
     style POLICY fill:#f8fafc,stroke:#cbd5e1
     style SCORES fill:#f8fafc,stroke:#cbd5e1
     style FEATURES fill:#f8fafc,stroke:#cbd5e1
@@ -92,6 +95,7 @@ flowchart TB
 | Scores, calibration, cutoffs, and combinations | [Probability ensembles](docs/ensemble/READOUT.md) → [log-odds ensembles](docs/ensemble-logits/RESULTS.md) → [Jev](docs/jev/READOUT.md) → [Kev / Clef](docs/decision-models/README.md) → [decision-model ensembles](docs/decision-ensemble/README.md) → [smart ensemble](docs/smart-ensemble/README.md) |
 | Representations and task-specific training | [PolicyLM / Qwen](docs/activation-probe/README.md) → [Shieldstral / Qwen](docs/shield-probe/README.md) → [linear, neural and contrastive task classifiers](docs/contrastive-heads/README.md) → [Liquid encoder fine-tuning](docs/liquid-finetune/README.md) |
 | Deploy and operate | [Seven-model serving study](docs/serving/README.md) → [L4: prompt length and vLLM/SGLang](docs/cloud-serving/README.md) · [Self-hosting implications](docs/cloud-serving/DEPLOYMENT.md) |
+| Test prompt and artifact security | [Injection and benign lookalikes](docs/prompt-injection/README.md) → [malicious source files and agent skills](docs/malicious-artifacts/README.md) |
 | Compare outcomes and see what is proposed | [Balanced metric guide](docs/leaderboard/METRICS.md) · [leaderboard](#current-leaderboard) · [next steps: reducing moderation errors](docs/research-directions/REDUCING-MODERATION-ERRORS.md) |
 
 The [smart-ensemble study](docs/smart-ensemble/README.md) takes the next step: learn which native model scores help each other, then test the frozen combination. Adding trained representation heads to that combination, broader policy-and-cutoff optimization, and a targeted second pass remain [proposed work](docs/research-directions/REDUCING-MODERATION-ERRORS.md), awaiting separate authorization.
@@ -354,6 +358,31 @@ security ranking. The readout retains uncertainty, failures and source-label lim
 
 [Study and findings](docs/prompt-injection/README.md) · [Results and baseline changes](docs/prompt-injection/RESULTS.md) · [Policy edits](docs/prompt-injection/POLICY-CHANGES.md) · [Frozen evidence and reproduction](published_runs/2026-11-02-prompt-injection/README.md)
 
+### 25. Malicious code and agent skills across model families
+
+Eight systems classify two kinds of artifact: source files and agent-skill text.
+PolicyLM, Shieldstral, Qwen 4B, Kev, Clef and Jev each compare three prespecified
+policies through their native interfaces. Separate Liquid 350M and character
+TF-IDF classifiers learn from fitting labels. All selections were published
+before final inference; no new calibration, cutoff search or ensemble was added.
+
+PolicyLM's code balanced accuracy rose from **70.00% to
+86.88%** with its selected evidence-focused policy. The
+report shows the corresponding false blocks and misses: PolicyLM reduced false
+blocks from 48 to 6 while introducing 15 misses. It also retains cases where
+validation-selected policies regressed on test. Skill screening is a separate,
+harder transfer in this panel: the source holdout and the bounded text view can
+expose weaknesses that a code or prompt-injection score does not reveal.
+
+The code test has 160 files and largely model-assisted labels. The skill test
+retains 1,384 source-held-out records but shares some attack families with fitting.
+These are static classification results, not proof of safe execution. Trained
+classifiers use labels differently from frozen prompted models. Total GPU/API
+cost was **$1.383**; the GPU was terminated. The two new
+leaderboards remain separate from WildGuard, HateXplain and injection detection.
+
+[Readout](docs/malicious-artifacts/README.md) · [All scores, policy changes and uncertainty](docs/malicious-artifacts/RESULTS.md) · [Methods](docs/malicious-artifacts/METHODS.md) · [Pre-test selections](docs/malicious-artifacts/preparation/README.md) · [Frozen evidence and reproduction](published_runs/2026-11-03-malicious-artifacts/README.md)
+
 ## What the evidence suggests for moderation teams
 
 - **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. If examples are retrieved, include the labeled library, encoder and selection rule. A model replacement requires another evaluation.
@@ -496,6 +525,42 @@ Safeguard's nine unresolved WildGuard outputs include two compliant and seven vi
 | Shieldstral 3B | 84.32% | 63.33% | 0.29% | 90.11% | 0 |
 
 Each row uses a policy frozen on validation. Higher balanced accuracy and attack detection are better; lower false-block rates are better. Unresolved outcomes stay in accuracy/recall denominators and are reported separately from actual false blocks. These are distinct test populations, not a combined security score. [Counts, baseline changes and uncertainty](docs/prompt-injection/RESULTS.md) · [Study limits](docs/prompt-injection/README.md) · [Metric definitions](docs/leaderboard/METRICS.md).
+
+### Malicious artifacts: separate code and skill benchmarks
+
+Validation-selected systems, with fixed decision rules. The trained Liquid and TF-IDF classifiers use fitting labels; the other six select a supplied policy. This is not an architecture-only comparison.
+
+#### Code files
+
+160 files: 80 benign and 80 malicious.
+
+| Model / system | Accuracy | Balanced accuracy | False blocks | Missed threats | Unresolved |
+|---|---:|---:|---:|---:|---:|
+| Fine-tuned Liquid 350M | 91.25% | 91.25% | 3 | 11 | 0 |
+| Jev 1.14 (API) | 90.00% | 90.00% | 0 | 16 | 0 |
+| Clef-Flash | 88.75% | 88.75% | 0 | 18 | 0 |
+| Character TF-IDF + logistic regression | 88.12% | 88.12% | 0 | 19 | 0 |
+| PolicyLM 1.7B | 86.88% | 86.88% | 6 | 15 | 0 |
+| Qwen3.5 4B | 86.88% | 86.88% | 0 | 21 | 0 |
+| Kev 4B | 78.75% | 78.75% | 0 | 34 | 0 |
+| Shieldstral 3B | 76.25% | 76.25% | 1 | 37 | 0 |
+
+#### Agent-skill text
+
+1,384 skills: 545 benign and 839 malicious.
+
+| Model / system | Accuracy | Balanced accuracy | False blocks | Missed threats | Unresolved |
+|---|---:|---:|---:|---:|---:|
+| Character TF-IDF + logistic regression | 73.92% | 70.19% | 258 | 103 | 0 |
+| Fine-tuned Liquid 350M | 68.86% | 65.06% | 288 | 143 | 0 |
+| PolicyLM 1.7B | 55.27% | 61.86% | 39 | 580 | 0 |
+| Jev 1.14 (API) | 48.12% | 57.21% | 0 | 718 | 0 |
+| Clef-Flash | 45.74% | 55.24% | 0 | 751 | 0 |
+| Qwen3.5 4B | 44.44% | 54.17% | 0 | 769 | 0 |
+| Kev 4B | 43.71% | 53.51% | 2 | 777 | 0 |
+| Shieldstral 3B | 42.34% | 52.44% | 0 | 798 | 0 |
+
+The code labels are largely model-assisted; skill sources are held out but not all attack families. The shared bounded view can omit decisive content. These results do not establish that artifacts are safe to execute. [Confidence intervals, macro F1, MCC and policy deltas](docs/malicious-artifacts/RESULTS.md) · [Data and label limits](docs/malicious-artifacts/METHODS.md) · [Metric definitions](docs/leaderboard/METRICS.md).
 
 ---
 

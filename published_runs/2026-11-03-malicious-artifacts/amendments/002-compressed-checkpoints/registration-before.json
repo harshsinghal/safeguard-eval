@@ -1,0 +1,113 @@
+{
+  "created_utc": "2026-11-03T06:27:37.126217+00:00",
+  "models": {
+    "policylm": {
+      "model": "musubilabs/policylm-1.7b",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+      "decision": "publisher precision preset, fixed 0.335",
+      "clean": true,
+      "max_chars": null,
+      "max_batch_rows": 1
+    },
+    "shieldstral": {
+      "model": "mistralai/Shieldstral-1.0-3B",
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+      "decision": "yes/no token-pair argmax, BLOCK on tie"
+    },
+    "kev": {
+      "model": "jaredpalmer/kev-4b",
+      "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+      "code_revision": "2074cc44256200bb37540103fa4572901faa10f3",
+      "base": "Qwen/Qwen3.5-4B-Base",
+      "base_revision": "1001bb4d826a52d1f399e183466143f4da7b741b",
+      "decision": "native Choice argmax, ALLOW on tie; publisher learned temperature retained"
+    },
+    "clef": {
+      "model": "Cloudflare/clef-flash",
+      "revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+      "decision": "native Choice argmax, ALLOW on tie"
+    },
+    "jev": {
+      "model": "typesafe/jev-1.14",
+      "resolved": "typesafe/jev-1.14-20261014",
+      "provider": "TypeSafe via OpenRouter",
+      "decision": "native Choice argmax"
+    },
+    "qwen": {
+      "model": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "decision": "yes/no next-token-pair argmax; thinking disabled; BLOCK on tie"
+    }
+  },
+  "encoder": {
+    "model": "LiquidAI/LFM2.5-Encoder-350M",
+    "revision": "b886781f7c6f10ca9b7096e21b83e30a073c2f39",
+    "seed": 20261102,
+    "learning_rates": [
+      2e-05,
+      5e-05
+    ],
+    "epochs": 3,
+    "max_length": 8192,
+    "cutoff": 0.5
+  },
+  "selection": "per task/model: validation balanced accuracy, macro F1, shorter policy, lexical policy ID",
+  "sources": {
+    "docs/malicious-artifacts/PLAN.md": "4adadfab8eac97cbbb1ab7fcc304695567335dc23e36194ce06a7470ee82733b",
+    "evals/decision_models/adapters.py": "7c969011aea177639c13572711ae7c21cf2e5748169ec72d86d61aa97e00e541",
+    "evals/decision_models/study.py": "ac353a7bf1de44ed8d83016e34541d54cd46f3502cb0089f6d30cb4c34a0d49e",
+    "evals/decision_models/vendor-hashes.json": "bc101bd12269214ca4da7c20c4bfd08b69837d9b703b3c82aeed8821e00b17e1",
+    "evals/jev/api.py": "d368250e8b9a632bc63bb3b5a12fde49500cf99f6e9c26237fbfd7f94af3756b",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30",
+    "evals/liquid_finetune/common.py": "ab95c0fc1c7713ae633cee22fca29b0eee96ecfa0780d042db1ca741a8e3ae93",
+    "evals/liquid_finetune/runner.py": "f73410c7d855af5db18098d99747e16b1ccfaedc6b340376997148ec09f3b191",
+    "evals/malicious_artifacts/__init__.py": "587c31d6aebdadce8443d9caba59f57e798baa7b115fd4410c0c7622785d9f63",
+    "evals/malicious_artifacts/common.py": "c49040a87237745015655cfb650b34f113381003f250ab4d8247c3ff0d3cfd5f",
+    "evals/malicious_artifacts/data.py": "9eb511976a05bd918fce6f0b3011fcce8091762c79b9f622cac61067bc1b19b2",
+    "evals/malicious_artifacts/infer.py": "de06ca43951c662b318f92c46e51a0f67d0c43959ead00cedb1a9e3905a53ff3",
+    "evals/malicious_artifacts/learned.py": "daa912291643b5d15c6e5b80be5e9c70905236b9ca40f7905885980d335abc2b",
+    "evals/malicious_artifacts/policies.py": "10648c14203e0468fb379ea034d5a277c6da88628111ee21b50b9bf28490dc6d",
+    "evals/malicious_artifacts/report.py": "7dd43fc205816f33857fa1316aac6fb8afbae82f87bdb6b308276b7abc04d3b2",
+    "evals/malicious_artifacts/study.py": "ba3810dff54283c3b4a8f55f2dfa745939bb48972d222794d3ac5d44ebcb7725",
+    "evals/prompt_injection/common.py": "13ada43d8b5b7bb8610b0d6483dec6040f8b070a63f037bf1ca3d61c800011c4",
+    "evals/prompt_injection/infer.py": "37c2adef05bcd199a7bdc8702ea184e3f731de6a86a739e35904a32b1aec55d5",
+    "evals/retrieved_examples/common.py": "e07870d64555b1430a5923278a9dcb67b4d1456a29085921e70de63d815e8e50",
+    "evals/retrieved_examples/native.py": "cfde9c9199d56d8268669dc3fc8c8aac59b97d1b6923711d169ba3130aa0db24",
+    "evals/run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986"
+  },
+  "files": {
+    "authorization.json": "6b3712e938a61ac41baf91e6f8a97119df75e47ae719c15bec25468d00a18f94",
+    "data/code/fit.jsonl": "1868bf82933bff7311ffd68b8c32f438861ec26348f15fedce2319c386e2531d",
+    "data/code/test.jsonl": "43d14f6c7a74fafe93d3a945f2399aae0eb6465724442e87159f0863bd95b652",
+    "data/code/validation.jsonl": "29107d1a3ef5998278f86c6a54995a16390079a3483fc6e1b31c79fa8402caa7",
+    "data/skills/fit.jsonl": "4f157df0b4e58ba3db2e9f7d049a46b158bdf44ad7fe92ec8736a8de77d0934d",
+    "data/skills/test.jsonl": "66d775e455125ad168ceb4faa008be955a31f331b9313f2efd99590e69313b6a",
+    "data/skills/validation.jsonl": "337d15a9dbdd2afe332f917cb6230c7d7e5e98bb8641fb622c61659ac1c71fb9",
+    "data-audit.json": "39078b24831930f81ee354df75df843357456e7efecfbccee4650210c376fb03",
+    "metadata/code/fit.jsonl": "075c53dddda024946e0d0dc2cce955947f6ef3e1d715f4c03cfb1617ae2d28a5",
+    "metadata/code/test.jsonl": "1c22236e758445119b9ce1813a990941a73082c0701fc30cef81cbb20e616952",
+    "metadata/code/validation.jsonl": "a7097d571dfcad5afda5d17e17e9a994ac74e9b06c7637c393ac1133c3b19c6e",
+    "metadata/skills/fit.jsonl": "0bc3eee9ff00c35f44ba2005214180b8e4478e2a31018a453070d93fc05edf75",
+    "metadata/skills/test.jsonl": "4bd890927a4b0470571659d955f1e0cf521d5e647378d69c0de96756ea6e7e39",
+    "metadata/skills/validation.jsonl": "ca93d8222a0bbb94329f9019ffed55178d9a0f2ea6081d0e3b749f4f3bc08bd4",
+    "policies/code/clef.json": "d06266abe24519d753c1b31a766a99c464ce06908c838460dfc687315db542af",
+    "policies/code/jev.json": "d06266abe24519d753c1b31a766a99c464ce06908c838460dfc687315db542af",
+    "policies/code/kev.json": "d06266abe24519d753c1b31a766a99c464ce06908c838460dfc687315db542af",
+    "policies/code/policylm.json": "bd04e2349de15c983d21df55af60c2323553c446aff8e43305a873b69094fda5",
+    "policies/code/qwen.json": "bd04e2349de15c983d21df55af60c2323553c446aff8e43305a873b69094fda5",
+    "policies/code/shieldstral.json": "bd04e2349de15c983d21df55af60c2323553c446aff8e43305a873b69094fda5",
+    "policies/skills/clef.json": "301dc696da6a5b3180fa6d6637990d829435f76567b23669dea15ccf52f07a4e",
+    "policies/skills/jev.json": "301dc696da6a5b3180fa6d6637990d829435f76567b23669dea15ccf52f07a4e",
+    "policies/skills/kev.json": "301dc696da6a5b3180fa6d6637990d829435f76567b23669dea15ccf52f07a4e",
+    "policies/skills/policylm.json": "f656dbef0a0494adf32b8060ab6d35fa934cd90e48116bef461b03c5967a9edb",
+    "policies/skills/qwen.json": "f656dbef0a0494adf32b8060ab6d35fa934cd90e48116bef461b03c5967a9edb",
+    "policies/skills/shieldstral.json": "f656dbef0a0494adf32b8060ab6d35fa934cd90e48116bef461b03c5967a9edb",
+    "source-manifest.json": "968587a69e12f105b3ba503497f39a4cb73a391696a0fe4005bb0c70343eca0b"
+  },
+  "test_viewed_for_authoring": false,
+  "threshold_tuning": false,
+  "ensemble": false,
+  "amendments": [
+    "001-unicode-jsonl"
+  ]
+}
