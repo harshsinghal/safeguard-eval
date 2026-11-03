@@ -1,0 +1,118 @@
+{
+  "selected": "C0.1",
+  "validation": {
+    "C0.1": {
+      "n": 254,
+      "positives": 127,
+      "negatives": 127,
+      "confusion": {
+        "tp": 127,
+        "tn": 127,
+        "fp": 0,
+        "fn": 0,
+        "error_allow": 0,
+        "error_block": 0
+      },
+      "balanced_accuracy": 1.0,
+      "accuracy": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "compliant_error_rate": 0.0,
+      "violation_error_rate": 0.0,
+      "precision": 1.0,
+      "macro_f1": 1.0,
+      "block_f1": 1.0,
+      "allow_f1": 1.0,
+      "mcc": 1.0,
+      "false_blocks": 0,
+      "missed_violations": 0,
+      "unresolved": 0,
+      "coverage": 1.0
+    },
+    "C1": {
+      "n": 254,
+      "positives": 127,
+      "negatives": 127,
+      "confusion": {
+        "tp": 127,
+        "tn": 127,
+        "fp": 0,
+        "fn": 0,
+        "error_allow": 0,
+        "error_block": 0
+      },
+      "balanced_accuracy": 1.0,
+      "accuracy": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "compliant_error_rate": 0.0,
+      "violation_error_rate": 0.0,
+      "precision": 1.0,
+      "macro_f1": 1.0,
+      "block_f1": 1.0,
+      "allow_f1": 1.0,
+      "mcc": 1.0,
+      "false_blocks": 0,
+      "missed_violations": 0,
+      "unresolved": 0,
+      "coverage": 1.0
+    },
+    "C10": {
+      "n": 254,
+      "positives": 127,
+      "negatives": 127,
+      "confusion": {
+        "tp": 127,
+        "tn": 127,
+        "fp": 0,
+        "fn": 0,
+        "error_allow": 0,
+        "error_block": 0
+      },
+      "balanced_accuracy": 1.0,
+      "accuracy": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "compliant_error_rate": 0.0,
+      "violation_error_rate": 0.0,
+      "precision": 1.0,
+      "macro_f1": 1.0,
+      "block_f1": 1.0,
+      "allow_f1": 1.0,
+      "mcc": 1.0,
+      "false_blocks": 0,
+      "missed_violations": 0,
+      "unresolved": 0,
+      "coverage": 1.0
+    }
+  },
+  "configs": {
+    "C0.1": {
+      "C": 0.1
+    },
+    "C1": {
+      "C": 1.0
+    },
+    "C10": {
+      "C": 10.0
+    }
+  },
+  "aggregate": null,
+  "evidence": {
+    "learned/jina-v2-lr/cyber/C0.1.joblib": "ad8dca7126e99caa63a11e27615b680ea0b0cde0db8b8036bd6a99676b7e8567",
+    "predictions/jina-v2-lr/cyber/validation/C10.jsonl": "9d86c6191ab4e4ffc77ea8fb07a63e1ea07a745c7da69748b3247797c53ab934",
+    "predictions/jina-v2-lr/cyber/validation/C1.jsonl": "19db2808e0750e865e8f53a44d2a061e60fba6ee7f6de28ed62a9cbd5cd12dc7",
+    "predictions/jina-v2-lr/cyber/validation/C0.1.jsonl": "fdac5f1186fc773cce0245f0fd9defaec072b49ac061fab71379f0de029d82ad",
+    "features/jina-v2/cyber/fit.npz": "a86c4a72a0de72f9577dd70378221192e124eefd2daa027226f9a529f736ac67",
+    "features/jina-v2/cyber/validation.npz": "7e3d65f767f8023760790d491f9610a8533d7b7b799eeae49c0afc2fc4364bfe"
+  },
+  "seeds": [
+    20261104
+  ]
+}

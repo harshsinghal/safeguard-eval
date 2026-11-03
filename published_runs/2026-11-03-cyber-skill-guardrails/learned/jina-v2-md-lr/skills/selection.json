@@ -1,0 +1,118 @@
+{
+  "selected": "C0.1",
+  "validation": {
+    "C0.1": {
+      "n": 256,
+      "positives": 128,
+      "negatives": 128,
+      "confusion": {
+        "tp": 100,
+        "tn": 99,
+        "fp": 29,
+        "fn": 28,
+        "error_allow": 0,
+        "error_block": 0
+      },
+      "balanced_accuracy": 0.77734375,
+      "accuracy": 0.77734375,
+      "recall": 0.78125,
+      "specificity": 0.7734375,
+      "false_positive_rate": 0.2265625,
+      "false_negative_rate": 0.21875,
+      "compliant_error_rate": 0.2265625,
+      "violation_error_rate": 0.21875,
+      "precision": 0.7751937984496124,
+      "macro_f1": 0.7773403524834058,
+      "block_f1": 0.7782101167315175,
+      "allow_f1": 0.7764705882352941,
+      "mcc": 0.5547044284940451,
+      "false_blocks": 29,
+      "missed_violations": 28,
+      "unresolved": 0,
+      "coverage": 1.0
+    },
+    "C1": {
+      "n": 256,
+      "positives": 128,
+      "negatives": 128,
+      "confusion": {
+        "tp": 90,
+        "tn": 101,
+        "fp": 27,
+        "fn": 38,
+        "error_allow": 0,
+        "error_block": 0
+      },
+      "balanced_accuracy": 0.74609375,
+      "accuracy": 0.74609375,
+      "recall": 0.703125,
+      "specificity": 0.7890625,
+      "false_positive_rate": 0.2109375,
+      "false_negative_rate": 0.296875,
+      "compliant_error_rate": 0.2109375,
+      "violation_error_rate": 0.296875,
+      "precision": 0.7692307692307693,
+      "macro_f1": 0.7456240923335626,
+      "block_f1": 0.7346938775510204,
+      "allow_f1": 0.7565543071161048,
+      "mcc": 0.4940150940160243,
+      "false_blocks": 27,
+      "missed_violations": 38,
+      "unresolved": 0,
+      "coverage": 1.0
+    },
+    "C10": {
+      "n": 256,
+      "positives": 128,
+      "negatives": 128,
+      "confusion": {
+        "tp": 89,
+        "tn": 99,
+        "fp": 29,
+        "fn": 39,
+        "error_allow": 0,
+        "error_block": 0
+      },
+      "balanced_accuracy": 0.734375,
+      "accuracy": 0.734375,
+      "recall": 0.6953125,
+      "specificity": 0.7734375,
+      "false_positive_rate": 0.2265625,
+      "false_negative_rate": 0.3046875,
+      "compliant_error_rate": 0.2265625,
+      "violation_error_rate": 0.3046875,
+      "precision": 0.7542372881355932,
+      "macro_f1": 0.7339690690139984,
+      "block_f1": 0.7235772357723578,
+      "allow_f1": 0.7443609022556391,
+      "mcc": 0.4701870933220124,
+      "false_blocks": 29,
+      "missed_violations": 39,
+      "unresolved": 0,
+      "coverage": 1.0
+    }
+  },
+  "configs": {
+    "C0.1": {
+      "C": 0.1
+    },
+    "C1": {
+      "C": 1.0
+    },
+    "C10": {
+      "C": 10.0
+    }
+  },
+  "aggregate": null,
+  "evidence": {
+    "learned/jina-v2-md-lr/skills/C0.1.joblib": "ddf350e12efb1673c8c11fe1724d224811d96988cc07544eea5e1c59c978aca1",
+    "predictions/jina-v2-md-lr/skills/validation/C10.jsonl": "73a7a2bad06115e7183e0dd07d1b0410c06bc57af9a175e6cdcf5ae060afcc29",
+    "predictions/jina-v2-md-lr/skills/validation/C1.jsonl": "656a32a0c130b52732432f9af1a9e410c2ae4047af8d05ba07589e88af7ba831",
+    "predictions/jina-v2-md-lr/skills/validation/C0.1.jsonl": "dc6b8a5c766602077087986c5b38264887a6d6fac271a128490ea9a5969c4fd1",
+    "features/jina-v2-md/skills/fit.npz": "64808956e25abe7788c6cdcef2fd7cfbbe27c1549567d5898e70136698d7ee69",
+    "features/jina-v2-md/skills/validation.npz": "f299e993a610b0bb7881a60b7e7fce75c22f1f2abee37decf09ddad78d091d59"
+  },
+  "seeds": [
+    20261104
+  ]
+}

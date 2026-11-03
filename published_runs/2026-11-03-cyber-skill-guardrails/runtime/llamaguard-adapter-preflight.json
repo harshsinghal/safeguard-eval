@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-11-03T19:09:38.971713+00:00",
+  "synthetic_only": true,
+  "checks": [
+    {
+      "expected": "ALLOW",
+      "result": {
+        "score": 8.423464183116014e-12,
+        "prediction": "ALLOW",
+        "input_tokens": 213,
+        "top_token_is_label": true,
+        "formatting_prefix_tokens": [
+          368
+        ]
+      }
+    },
+    {
+      "expected": "BLOCK",
+      "result": {
+        "score": 1.0,
+        "prediction": "BLOCK",
+        "input_tokens": 215,
+        "top_token_is_label": true,
+        "formatting_prefix_tokens": [
+          368
+        ]
+      }
+    }
+  ]
+}

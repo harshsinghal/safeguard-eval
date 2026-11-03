@@ -7,8 +7,8 @@
 - [x] Implement native interfaces, paired input views and learned controls.
 - [x] Check input/cache contracts and label-free model payloads.
 - [x] Publish registration and pre-test runtime/data amendments.
-- [ ] Complete validation within the existing $6 cap.
-- [ ] Publish validation selection before test inference.
+- [x] Complete validation within the existing $6 cap.
+- [x] Publish validation selection before test inference.
 - [ ] Run test, independently check metrics, publish failures and limits.
 - [ ] Reconcile provider/API charges; verify resource termination.
 
@@ -25,8 +25,10 @@ The second command requires the final public prediction bundle. Public reproduct
 does not require raw benchmark text, model downloads or an API key.
 
 To restore inference inputs, check out the two upstream revisions in PLAN.md.
-Save the MITRE augmented JSON as mitre.json and MITRE FRR JSON as frr.json in a
-private directory. Clone MalSkillBench without installing anything. Keep the public
+Save the [MITRE source JSON](https://github.com/meta-llama/PurpleLlama/blob/f64eebd53003a87d9c2d2a3a712133534c214c8d/CybersecurityBenchmarks/datasets/mitre/mitre_benchmark_100_per_category_with_augmentation.json)
+as mitre.json and the [FRR source JSON](https://github.com/meta-llama/PurpleLlama/blob/f64eebd53003a87d9c2d2a3a712133534c214c8d/CybersecurityBenchmarks/datasets/mitre_frr/mitre_frr.json)
+as frr.json in a private directory. The primary study reads MITRE's base_prompt
+field from that file. Clone MalSkillBench without installing anything. Keep the public
 registration, metadata and package manifest in RUN_DIRECTORY, then run:
 
 ```sh
@@ -40,3 +42,8 @@ upstream license; raw skill text and model weights are excluded from this reposi
 Paid reruns require a new explicit budget. Use provider termination limits, log
 unknown API charges conservatively, and stop resources after collecting evidence.
 Models use separate compatible environments; dependency snapshots accompany results.
+
+A full rerun needs its own output directory, spending ledger and selection freeze.
+Do not overwrite the archived study or assume recomputed features and learned
+weights will have identical hashes on another runtime. Public metric reproduction
+uses recorded predictions and requires no inference.
