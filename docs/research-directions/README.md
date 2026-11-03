@@ -3,6 +3,16 @@
 The original directions were recorded on 25 October 2026. This index distinguishes
 proposals from the later completed studies linked below.
 
+## Reviewing completed agent runs with policy and evidence
+
+The [offline policy-review proposal](OFFLINE-AGENT-POLICY-REVIEW.md) draws lessons
+from Granite Guardian, Qwen3Guard, Llama Guard and GPT-OSS Safeguard. It proposes
+testing current models on decisions and evidence-backed explanations before
+training a smaller reviewer. R-Judge and independently annotated enterprise
+traces would extend our existing classification benchmarks. Reasoning modes,
+human-review workload and later supervised/preference training are distinct
+experiments. This is a source review and proposal; no model runs have started.
+
 ## Training a shared moderation model with Tinker
 
 The [Tinker survey and proposed study](TINKER-MULTITASK-MODERATION.md) maps its
