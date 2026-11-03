@@ -204,6 +204,14 @@ static text classification, not whether a live agent resists a skill's attack.
 See [methods](../malicious-artifacts/METHODS.md) and the
 [overlap audit](../../published_runs/2026-11-03-malicious-artifacts/group-overlap-audit.json).
 
+The [Jina/Qwen follow-up](../artifact-representations/README.md) reuses the exact
+OMCBench and MaliciousSkillBench splits and bounded input views above. Fitting
+labels train small heads on frozen code embeddings; validation selects head
+settings and Qwen policies before another held-out evaluation. It adds no
+synthetic training rows and does not invent behavior-category labels from the
+binary labels. Prior aggregate results motivate the follow-up; the same test
+population is not a new independent benchmark.
+
 ## DiffusionDB and original project examples
 
 [DiffusionDB](https://huggingface.co/datasets/poloclub/diffusiondb) contains

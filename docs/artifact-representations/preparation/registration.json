@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-11-03T15:55:37.399417+00:00",
+  "models": {
+    "jina-v2": {
+      "model": "jinaai/jina-embeddings-v2-base-code",
+      "revision": "516f4baf13dec4ddddda8631e019b5737c8bc250",
+      "code_revision": "3baf9e3ac750e76e8edd3019170176884695fb94",
+      "dimension": 768
+    },
+    "jina-code": {
+      "model": "jinaai/jina-code-embeddings-0.5b",
+      "revision": "4db235132dafbe56a8b9c5f59b59795ecf58a4a7",
+      "dimension": 896
+    },
+    "qwen4": {
+      "model": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+    },
+    "qwen9": {
+      "model": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+    }
+  },
+  "seeds": [
+    20261103,
+    20261104,
+    20261105
+  ],
+  "files": {
+    "data/code/fit.jsonl": "1868bf82933bff7311ffd68b8c32f438861ec26348f15fedce2319c386e2531d",
+    "data/code/validation.jsonl": "29107d1a3ef5998278f86c6a54995a16390079a3483fc6e1b31c79fa8402caa7",
+    "data/code/test.jsonl": "43d14f6c7a74fafe93d3a945f2399aae0eb6465724442e87159f0863bd95b652",
+    "metadata/code/fit.jsonl": "075c53dddda024946e0d0dc2cce955947f6ef3e1d715f4c03cfb1617ae2d28a5",
+    "metadata/code/validation.jsonl": "a7097d571dfcad5afda5d17e17e9a994ac74e9b06c7637c393ac1133c3b19c6e",
+    "metadata/code/test.jsonl": "1c22236e758445119b9ce1813a990941a73082c0701fc30cef81cbb20e616952",
+    "policies/code.json": "8def6a998df4eb0b4f262cabadf124d4df8116bae37a0c018d732f00412b0e31",
+    "data/skills/fit.jsonl": "4f157df0b4e58ba3db2e9f7d049a46b158bdf44ad7fe92ec8736a8de77d0934d",
+    "data/skills/validation.jsonl": "337d15a9dbdd2afe332f917cb6230c7d7e5e98bb8641fb622c61659ac1c71fb9",
+    "data/skills/test.jsonl": "66d775e455125ad168ceb4faa008be955a31f331b9313f2efd99590e69313b6a",
+    "metadata/skills/fit.jsonl": "0bc3eee9ff00c35f44ba2005214180b8e4478e2a31018a453070d93fc05edf75",
+    "metadata/skills/validation.jsonl": "ca93d8222a0bbb94329f9019ffed55178d9a0f2ea6081d0e3b749f4f3bc08bd4",
+    "metadata/skills/test.jsonl": "4bd890927a4b0470571659d955f1e0cf521d5e647378d69c0de96756ea6e7e39",
+    "policies/skills.json": "a10c5716aba4e78e9995a72b27a2aee55eec9796fa5a02083f7443213a34011c",
+    "development-review.json": "5450d9b8dea3295aec70ac72e980c775127a8a2eb86a03d95ec0ee6c250f262c",
+    "authorization.json": "a787d69b44ff2a415e787ec0db228415c40bdb9e16dcba811e3cc5acb100f4ef"
+  },
+  "sources": {
+    "docs/artifact-representations/PLAN.md": "73a7ca4be5cdc89190c8314470dca79bb2fd8c979c4736a8e3e6ea8c6b0e0fc7",
+    "evals/artifact_representations/__init__.py": "82fac76f17c051c62d5b6bb43e9ab0a173e9982b7140df7134348f3a6a032f72",
+    "evals/artifact_representations/common.py": "174252e549eeb3735b1a27e48b254a4f7e993c74620fab401118303e8f0ae83f",
+    "evals/artifact_representations/embeddings.py": "9781e2912e0abb79bf7dcad37a3d9ece67aba3314dbe4b6554284c839a3711b5",
+    "evals/artifact_representations/heads.py": "24bf5cd12c41fa7b4052a1703a28fb38ce28ceb32f08abd29ddc82e0b67ac9f1",
+    "evals/artifact_representations/policies.py": "fe03918b6b28d02c6ba16ce7d3337b3292eb70aafff54819336864c485139692",
+    "evals/artifact_representations/qwen.py": "35e60a17a51fb42dfa34eb03ca46e1b8e5fd5aaf1a5c28e448f291b60bf28de8",
+    "evals/artifact_representations/report.py": "b1b8d027016604ffc4bd1585787179bbe387b9e170d2dc8f4b3cab9b89b5f283",
+    "evals/artifact_representations/study.py": "3647dc3564a6dcc0cde6fd986e4a1bab24aa83754618cde086b612fc779e36e3"
+  },
+  "prior_registration_sha256": "1a52312286eb797710f659fabd6ed62f5018f9cb387d1a4c92108f4dd851d903",
+  "prior_freeze_sha256": "f7a5982f3560d46bdcbe17109912cf5729167921f1499777f677b2ec214da782"
+}

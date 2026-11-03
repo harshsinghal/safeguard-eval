@@ -124,6 +124,18 @@ and [runtime records](../../published_runs/2026-11-03-malicious-artifacts/runtim
 The TF-IDF baseline is a learned vocabulary plus logistic regression, not an
 additional pretrained language model.
 
+## Code embeddings with learned artifact classifiers
+
+The [code-representation follow-up](../artifact-representations/README.md) keeps
+Jina weights frozen and fits separate linear and small neural heads for source
+files and skill text. It also expands Qwen 4B/9B policy search on those tasks.
+These are task-trained classifiers, not policies automatically encoded by Jina.
+
+| Checkpoint | Representation | License / evidence |
+|---|---|---|
+| [Jina embeddings v2 base code](https://huggingface.co/jinaai/jina-embeddings-v2-base-code) | About 161M; bidirectional encoder; mean-pooled 768-dimensional vector | Apache-2.0; [methods and pins](../artifact-representations/METHODS.md) |
+| [Jina code embeddings 0.5B](https://huggingface.co/jinaai/jina-code-embeddings-0.5b) | About 494M; Qwen2.5-Coder-derived retrieval model; last-token 896-dimensional vector | CC-BY-NC-4.0; this research use is not commercial deployment permission. [Registered protocol](../artifact-representations/PLAN.md) |
+
 ## Retrieval and reranking models
 
 These models helped choose labeled training examples to put beside a moderation
