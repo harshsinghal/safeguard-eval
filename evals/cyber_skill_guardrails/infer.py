@@ -71,8 +71,18 @@ class MetaEngine:
                 if self.slug=='promptguard':
                     scores=[float(self.model(**{k:v.cuda() for k,v in x.items() if k in ('input_ids','attention_mask')}).logits.float().softmax(-1)[0,1]) for x in enc]
                     s=max(scores);out.append(dict(score=s,prediction='BLOCK' if s>=.5 else 'ALLOW',windows=len(scores)));continue
-                z=self.model(**enc,use_cache=False,logits_to_keep=1,return_dict=True).logits[:,-1,:].float()
-                s=float(z[:,self.ids].softmax(-1)[0,0]);out.append(dict(score=s,prediction='BLOCK' if s>=.5 else 'ALLOW',input_tokens=enc['input_ids'].shape[-1],top_token_is_label=int(z.argmax(-1)) in self.ids))
+                current=enc;prefix=[]
+                for _ in range(4):
+                    z=self.model(**current,use_cache=False,logits_to_keep=1,return_dict=True).logits[:,-1,:].float()
+                    top=int(z.argmax(-1))
+                    if top in self.ids:break
+                    decoded=self.tok.decode([top],skip_special_tokens=False)
+                    if not decoded or decoded.strip():raise ValueError('Native output does not begin with a safety label')
+                    prefix.append(top)
+                    current={'input_ids':self.torch.cat([current['input_ids'],self.torch.tensor([[top]],device='cuda')],dim=1),
+                        'attention_mask':self.torch.cat([current['attention_mask'],self.torch.ones((1,1),device='cuda',dtype=current['attention_mask'].dtype)],dim=1)}
+                else:raise ValueError('Too many formatting tokens before safety label')
+                s=float(z[:,self.ids].softmax(-1)[0,0]);out.append(dict(score=s,prediction='BLOCK' if s>=.5 else 'ALLOW',input_tokens=enc['input_ids'].shape[-1],top_token_is_label=True,formatting_prefix_tokens=prefix))
         return out
 
 def native(state,slug,split,vendor):

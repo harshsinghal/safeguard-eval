@@ -1,0 +1,138 @@
+{
+  "created_utc": "2026-11-03T18:41:16.010117+00:00",
+  "models": {
+    "policylm": {
+      "model": "musubilabs/policylm-1.7b",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+      "decision": "publisher precision preset, fixed 0.335",
+      "clean": true,
+      "max_chars": null,
+      "max_batch_rows": 1
+    },
+    "shieldstral": {
+      "model": "mistralai/Shieldstral-1.0-3B",
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+      "decision": "yes/no token-pair argmax, BLOCK on tie"
+    },
+    "kev": {
+      "model": "jaredpalmer/kev-4b",
+      "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+      "code_revision": "2074cc44256200bb37540103fa4572901faa10f3",
+      "base": "Qwen/Qwen3.5-4B-Base",
+      "base_revision": "1001bb4d826a52d1f399e183466143f4da7b741b",
+      "decision": "native Choice argmax, ALLOW on tie; publisher learned temperature retained"
+    },
+    "clef": {
+      "model": "Cloudflare/clef-flash",
+      "revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+      "decision": "native Choice argmax, ALLOW on tie"
+    },
+    "jev": {
+      "model": "typesafe/jev-1.14",
+      "resolved": "typesafe/jev-1.14-20261014",
+      "provider": "TypeSafe via OpenRouter",
+      "decision": "native Choice argmax"
+    },
+    "qwen": {
+      "model": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "decision": "yes/no pair, fixed 0.5; thinking disabled"
+    },
+    "llamaguard": {
+      "model": "meta-llama/Llama-Guard-4-12B",
+      "revision": "87acb4b94e930c3d679e6e7ee9d57e2feab9ea71",
+      "decision": "unsafe/safe pair, fixed 0.5; native template"
+    },
+    "promptguard": {
+      "model": "meta-llama/Llama-Prompt-Guard-2-86M",
+      "revision": "a8ded8e697ce7c355e395a0df51f94adb4a2fd27",
+      "decision": "maximum malicious probability across 510-token windows, stride 384, fixed 0.5; diagnostic only"
+    }
+  },
+  "embedding": {
+    "model": "jinaai/jina-embeddings-v2-base-code",
+    "revision": "516f4baf13dec4ddddda8631e019b5737c8bc250",
+    "code_revision": "3baf9e3ac750e76e8edd3019170176884695fb94",
+    "dimension": 768
+  },
+  "seeds": [
+    20261104,
+    20261105,
+    20261106
+  ],
+  "files": {
+    "authorization.json": "1aa392f4d0ca9474d995102f8426c858a339a0092d4fe5b550ace5a1c60f0660",
+    "data/cyber/fit.jsonl": "f448597773e435059d5d5804d9a208083a34214d6280b33bca5244900d7cff22",
+    "data/cyber/test.jsonl": "ddcb946ce7d06e1271efda17c4dba45200a9b24fe58f40a7264911852b8c07a1",
+    "data/cyber/validation.jsonl": "ac4adcabf1df297d0f469b6ef589d0f1c95d1e62f216738b31fcd428722a2d83",
+    "data/skills/fit.jsonl": "34267c372f4b061c27d7bc818219323eaf00305931b4ecccb4eaa4a3a9964c80",
+    "data/skills/test.jsonl": "8a3d12700958fcd31535ce8a0f3385c4a488d9f3400a2a374512565c90dc2246",
+    "data/skills/validation.jsonl": "19a10e42590c4646c371c5f9d62fc42b448a088afa5b7ba7a1da585270820325",
+    "data-audit.json": "f3d0f93f11698db61cd248a15b65fc5e960164093b32cc81bf5d390ff4ff0e27",
+    "development-review.json": "e15920c2e89c62b28426b1867b9c5b7ecc837f66b0764a866c0b98d6e3400f3c",
+    "metadata/cyber/fit.jsonl": "bfc5ff3ce088013ff0e298e827ff3c6e75e137939457436a7bf92abae908889a",
+    "metadata/cyber/test.jsonl": "43531ed2258e225e600878b71de32c571f59fd6565f1af88f6a514f34d33ed6d",
+    "metadata/cyber/validation.jsonl": "f039881620b095476cfc8994751f6b1d1ed868d65aad5809d55819c98e76ea4c",
+    "metadata/skills/fit.jsonl": "b2d4711be36103ca7a48de97ff12dcba0999e4caa7b3adcf6c15fa06b2bd42b9",
+    "metadata/skills/test.jsonl": "bb70eb383b4ce186c1348268c49d883950216db26911b884b7c0ccafea91b42e",
+    "metadata/skills/validation.jsonl": "9e260242ca3b378a8d73ea5178ecc2067e43797acbab893d52c20cfb82983452",
+    "package-manifest.jsonl": "be8038a854dc0a07a7d17a595590c687a7ec0d838692677f96d72ad37b8120fd",
+    "policies/cyber/clef.json": "4f52851a8474cd8ecb8de56dcf80d45247f82e23ba719f5e3615e7eb59b4e043",
+    "policies/cyber/jev.json": "4f52851a8474cd8ecb8de56dcf80d45247f82e23ba719f5e3615e7eb59b4e043",
+    "policies/cyber/kev.json": "4f52851a8474cd8ecb8de56dcf80d45247f82e23ba719f5e3615e7eb59b4e043",
+    "policies/cyber/llamaguard.json": "68c5515f3e252a8500e226e07173e50bfb81dc0aed5c4f9d39cf19284f12278f",
+    "policies/cyber/policylm.json": "bd19378258ce5e0751b9396ae315d7b96b3592dfe7fee52c857f8c355fc596f4",
+    "policies/cyber/promptguard.json": "a0de5e262a5a7cf4e8ef440e9908f0cfe22f3d0f3de6e795463ce0abdb6db9af",
+    "policies/cyber/qwen.json": "bd19378258ce5e0751b9396ae315d7b96b3592dfe7fee52c857f8c355fc596f4",
+    "policies/cyber/shieldstral.json": "bd19378258ce5e0751b9396ae315d7b96b3592dfe7fee52c857f8c355fc596f4",
+    "policies/skills/clef.json": "a18a9b8254aeeabe3ec76f4046600f7a34e92fa71f9175b8fd4bc9be225d8fb1",
+    "policies/skills/jev.json": "a18a9b8254aeeabe3ec76f4046600f7a34e92fa71f9175b8fd4bc9be225d8fb1",
+    "policies/skills/kev.json": "a18a9b8254aeeabe3ec76f4046600f7a34e92fa71f9175b8fd4bc9be225d8fb1",
+    "policies/skills/llamaguard.json": "ba3923c830863c986dd60564c8e4308f552d6e7d7e11674a630226c492a79841",
+    "policies/skills/policylm.json": "511bbbf722e5c4cae9546af97d5b607299b48356cdd3c8034c52522491030fb8",
+    "policies/skills/promptguard.json": "a0de5e262a5a7cf4e8ef440e9908f0cfe22f3d0f3de6e795463ce0abdb6db9af",
+    "policies/skills/qwen.json": "511bbbf722e5c4cae9546af97d5b607299b48356cdd3c8034c52522491030fb8",
+    "policies/skills/shieldstral.json": "511bbbf722e5c4cae9546af97d5b607299b48356cdd3c8034c52522491030fb8",
+    "request-size-audit.json": "7f2a866c3ff8e7e4349b41d6e49796bcb52a297807e1345400623dafd016475a",
+    "source-manifest.json": "d5cffc21a21958ac8f8eeeba92a9478646bcd2953b71fef80f2beae2a0d2d3be",
+    "amendments/tokenizer-batch-shape.json": "f3c5c1234c41287bb779f539e13063c65724469534400ad6135c7287d5044698",
+    "amendments/llamaguard-runtime.json": "402ee4b9d911d33d2eb4375ef7d0fe494948d450ee7dd49709c2bdf2064987d9",
+    "attempts/llamaguard-transformers-5.17-errors.jsonl": "a3166df3d501bab3559f1c2ff26a87d57105d97d0d30227ad56a3173646eb14d",
+    "amendments/cyber-source-format.json": "973dd8f4bcda4962d805e15f89be7f41ff5687aaad1eaed15bebcfbe96961823",
+    "source-style-audit.json": "14386b94ea0924e95352beae7a169fe4e6231cc5c487c06fde93ee0d32b9e7d1"
+  },
+  "sources": {
+    "docs/cyber-skill-guardrails/PLAN.md": "c4e5879b982ffae16df114b2f75adcf485f0c3fb946c204ed8ac573bb9f7baa6",
+    "evals/artifact_representations/common.py": "174252e549eeb3735b1a27e48b254a4f7e993c74620fab401118303e8f0ae83f",
+    "evals/cyber_skill_guardrails/__init__.py": "9946df42b8a63cc34fda2e3127064875763a123900da6c584a8935331735c0db",
+    "evals/cyber_skill_guardrails/common.py": "e6d25d9e8b0ea344e86c88072c3ec3c941e1621625a08b10bf5a7253f861e4d3",
+    "evals/cyber_skill_guardrails/cyber_base.py": "33599b36ceda18d4745fe68bbc261db9a87498e0b049adc6bd568cebbc3c601d",
+    "evals/cyber_skill_guardrails/data.py": "ac500e7c5d67eae6a08676541ba03916aabae612c434e79b0a946ab00012b17a",
+    "evals/cyber_skill_guardrails/embeddings.py": "3c9f6191e6b1440289cb79287ee9131a858cc74eaf50d8e0916a7ecfde874090",
+    "evals/cyber_skill_guardrails/heads.py": "e4e00ff539d53dd7159574734c089e6afe8b2d801b83356f228b5100b912b136",
+    "evals/cyber_skill_guardrails/infer.py": "403efd2141ee5b21e0af36ec6070bac7a937508e040f422df5ed5b1d3c078639",
+    "evals/cyber_skill_guardrails/policies.py": "f56c19a5364580e8c2e7f4aefb5b0b45a09f0b5600afefcf6198b17abe8bb29e",
+    "evals/cyber_skill_guardrails/report.py": "2278d2200e47170021d950cbe90cca63eb9603511dcca8a1246fc985cc45f226",
+    "evals/cyber_skill_guardrails/restore.py": "98b3e62c3f47303ce85115bfc1e0f7465420bc6328624cef1bcb9af38effce28",
+    "evals/cyber_skill_guardrails/study.py": "7fef8cb363de34df52519cca613a28fb33c3c1edf52e13df01dadf3488bae2df",
+    "evals/cyber_skill_guardrails/test_contracts.py": "8eb2d5da5bcf2022f03ce6f15487758bf53888977ba4855048b1bc16298c2ed3",
+    "evals/decision_models/adapters.py": "7c969011aea177639c13572711ae7c21cf2e5748169ec72d86d61aa97e00e541",
+    "evals/decision_models/study.py": "ac353a7bf1de44ed8d83016e34541d54cd46f3502cb0089f6d30cb4c34a0d49e",
+    "evals/decision_models/vendor-hashes.json": "bc101bd12269214ca4da7c20c4bfd08b69837d9b703b3c82aeed8821e00b17e1",
+    "evals/jev/api.py": "d368250e8b9a632bc63bb3b5a12fde49500cf99f6e9c26237fbfd7f94af3756b",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30",
+    "evals/malicious_artifacts/common.py": "bb09dc00b2b0f2844b2bcfb14d392fbd626eb35e1f7e08ed7a94973c805db8c6",
+    "evals/malicious_artifacts/infer.py": "de06ca43951c662b318f92c46e51a0f67d0c43959ead00cedb1a9e3905a53ff3",
+    "evals/prompt_injection/common.py": "13ada43d8b5b7bb8610b0d6483dec6040f8b070a63f037bf1ca3d61c800011c4",
+    "evals/prompt_injection/infer.py": "37c2adef05bcd199a7bdc8702ea184e3f731de6a86a739e35904a32b1aec55d5",
+    "evals/prompt_injection/policies.py": "19153f8e9de7693e6d215ee1f5de384a8fa2191edac8d52babb48a75f1aa0538",
+    "evals/retrieved_examples/common.py": "e07870d64555b1430a5923278a9dcb67b4d1456a29085921e70de63d815e8e50",
+    "evals/retrieved_examples/native.py": "cfde9c9199d56d8268669dc3fc8c8aac59b97d1b6923711d169ba3130aa0db24",
+    "evals/run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986"
+  },
+  "test_viewed_for_authoring": false,
+  "threshold_search": false,
+  "ensemble": false,
+  "initial_registration_sha256": "17110f0b5c1bd5235b5e3f9beee93336206d2eebdc95aeede413d03d5633f9e2",
+  "cyber_repair_prior_sha256": "741d728913903d7120983dacedd7ac399147777db0391275c23e9d57e0fba8da"
+}

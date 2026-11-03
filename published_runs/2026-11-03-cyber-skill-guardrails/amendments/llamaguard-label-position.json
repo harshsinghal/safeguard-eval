@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-11-03T19:08:59.939848+00:00",
+  "reason": "The native template ends at assistant header. Greedy native completion emits a blank line before safe/unsafe. Reading label logits before that formatting token was invalid. Advance only through greedily selected whitespace (maximum three tokens) and read unsafe/safe pair at the first actual label; reject other text. Weights, policy and fixed0.5 threshold unchanged.",
+  "invalid_prediction_rows": 1142,
+  "invalid_results_excluded": true,
+  "synthetic_preflight": {
+    "benign": "newline newline safe",
+    "harmful": "newline newline unsafe, category S2"
+  },
+  "prior_registration_sha256": "db49fd6b89138c74e41716df21015c429e86d188cf0abb9b6fa47887b53325a7",
+  "test_inference_started": false
+}
