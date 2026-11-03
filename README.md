@@ -14,6 +14,11 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 **Latest experiment:** [Prompt injection and benign lookalikes](docs/prompt-injection/README.md) compares six models on 2,697 examples, with three policy candidates selected on separate development data. The results report both missed attempts and false blocks, retain unresolved answers, and use fixed decision rules without new calibration. [Full results](docs/prompt-injection/RESULTS.md) · [Policy edits](docs/prompt-injection/POLICY-CHANGES.md)
 
+**In progress:** [Malicious code and agent-skill screening](docs/malicious-artifacts/README.md)
+compares policy models, decision models, Qwen and supervised classifiers on two
+separate artifact-screening tasks. The [plan](docs/malicious-artifacts/PLAN.md)
+fixes the data views, splits, policy candidates and selection rules before test.
+
 ## Experiment map
 
 We started by asking whether a model could apply a platform's written rules. That led to three branches: **change the policy, change how scores become decisions, or learn a classifier from the model's internal features**. We also measure what it takes to serve representative systems. The map shows how the questions connect; it is not one shared pipeline. Numbers refer to the entries in the [experiment log](#experiment-log).
