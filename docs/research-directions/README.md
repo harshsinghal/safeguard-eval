@@ -3,6 +3,15 @@
 The original directions were recorded on 25 October 2026. This index distinguishes
 proposals from the later completed studies linked below.
 
+## Training a shared moderation model with Tinker
+
+The [Tinker survey and proposed study](TINKER-MULTITASK-MODERATION.md) maps its
+decision-model recipe, supervised LoRA training, distillation and RL to our
+benchmark suite. It recommends a small matched Qwen baseline, then separate
+task adapters versus one shared model, with policy-change tests and per-task
+error limits. It distinguishes documented support, beta features and our own
+hypotheses. No Tinker run or new spending has started.
+
 ## Concurrent task specialists
 
 The [parallel-specialist proposal](PARALLEL-TASK-SPECIALISTS.md) combines a
