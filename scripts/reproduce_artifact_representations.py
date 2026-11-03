@@ -15,8 +15,9 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--run',required=True);p.add_argument('--prior',default=str(ROOT/'published_runs/2026-11-03-malicious-artifacts'))
     a=p.parse_args();run=Path(a.run).resolve();prior=Path(a.prior).resolve()
     manifest=json.loads((run/'artifact-manifest.json').read_text())
-    for rel,h in manifest['files'].items():
-        if hashlib.sha256((run/rel).read_bytes()).hexdigest()!=h:raise ValueError('Artifact changed: '+rel)
+    for bundle,items in ((run,manifest), (prior,json.loads((prior/'artifact-manifest.json').read_text()))):
+        for rel,h in items['files'].items():
+            if hashlib.sha256((bundle/rel).read_bytes()).hexdigest()!=h:raise ValueError('Artifact changed: '+str(bundle/rel))
     expected=json.loads((run/'results.json').read_text())
     with tempfile.TemporaryDirectory() as td:
         tmp=Path(td)
