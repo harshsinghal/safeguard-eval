@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-03T18:47:37.766105+00:00",
+  "reason": "Prompt Guard preflight failed before recording predictions: tokenizer.prepare_for_model returned an unbatched tensor. Explicitly add the batch dimension for Prompt Guard and the shared Jina preparation path.",
+  "initial_registration_sha256": "17110f0b5c1bd5235b5e3f9beee93336206d2eebdc95aeede413d03d5633f9e2",
+  "policies_changed": false,
+  "splits_changed": false,
+  "selection_changed": false,
+  "test_inference_started": false
+}

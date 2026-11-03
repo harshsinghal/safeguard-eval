@@ -23,7 +23,7 @@ def extract(state,split):
                         zz=[];ww=[]
                         for a in range(0,len(ids),4096):
                             chunk=ids[a:a+4096];enc=tok.prepare_for_model(chunk,return_tensors='pt',return_attention_mask=True)
-                            enc={k:v.cuda() for k,v in enc.items() if k in ('input_ids','attention_mask')}
+                            enc={k:(v.unsqueeze(0) if v.ndim==1 else v).cuda() for k,v in enc.items() if k in ('input_ids','attention_mask')}
                             h=model(**enc,return_dict=True).last_hidden_state.float();mask=enc['attention_mask'].unsqueeze(-1)
                             z=(h*mask).sum(1)/mask.sum(1);zz.append(z[0]);ww.append(len(chunk))
                         z=(torch.stack(zz)*torch.tensor(ww,device='cuda').unsqueeze(-1)).sum(0)/sum(ww)

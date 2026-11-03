@@ -51,7 +51,8 @@ class MetaEngine:
         if self.slug=='promptguard':
             ids=self.tok.encode(text,add_special_tokens=False,truncation=False);chunks=[]
             for start in range(0,len(ids),384):
-                chunks.append(self.tok.prepare_for_model(ids[start:start+510],add_special_tokens=True,return_tensors='pt',return_attention_mask=True))
+                enc=self.tok.prepare_for_model(ids[start:start+510],add_special_tokens=True,return_tensors='pt',return_attention_mask=True)
+                chunks.append({k:v.unsqueeze(0) if v.ndim==1 else v for k,v in enc.items()})
                 if start+510>=len(ids):break
             return chunks
         messages=[{'role':'user','content':[{'type':'text','text':text}]}]

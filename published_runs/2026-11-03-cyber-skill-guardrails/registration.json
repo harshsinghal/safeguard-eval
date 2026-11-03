@@ -94,7 +94,8 @@
     "policies/skills/qwen.json": "511bbbf722e5c4cae9546af97d5b607299b48356cdd3c8034c52522491030fb8",
     "policies/skills/shieldstral.json": "511bbbf722e5c4cae9546af97d5b607299b48356cdd3c8034c52522491030fb8",
     "request-size-audit.json": "aa3f35bee665366cfb32f1f0f86191808d5a7fe34749540a9c4e564fa5edfcfe",
-    "source-manifest.json": "d5cffc21a21958ac8f8eeeba92a9478646bcd2953b71fef80f2beae2a0d2d3be"
+    "source-manifest.json": "d5cffc21a21958ac8f8eeeba92a9478646bcd2953b71fef80f2beae2a0d2d3be",
+    "amendments/tokenizer-batch-shape.json": "f3c5c1234c41287bb779f539e13063c65724469534400ad6135c7287d5044698"
   },
   "sources": {
     "docs/cyber-skill-guardrails/PLAN.md": "8f2a303f344cfc9c0c96dcf12f57309ef7d965983fed02070c84d1ea4500833c",
@@ -102,9 +103,9 @@
     "evals/cyber_skill_guardrails/__init__.py": "9946df42b8a63cc34fda2e3127064875763a123900da6c584a8935331735c0db",
     "evals/cyber_skill_guardrails/common.py": "e6d25d9e8b0ea344e86c88072c3ec3c941e1621625a08b10bf5a7253f861e4d3",
     "evals/cyber_skill_guardrails/data.py": "ac500e7c5d67eae6a08676541ba03916aabae612c434e79b0a946ab00012b17a",
-    "evals/cyber_skill_guardrails/embeddings.py": "8d623da651869fbbfec553f5112f8dbc28f9d500929780237ac8624b6841cdbe",
+    "evals/cyber_skill_guardrails/embeddings.py": "3c9f6191e6b1440289cb79287ee9131a858cc74eaf50d8e0916a7ecfde874090",
     "evals/cyber_skill_guardrails/heads.py": "e4e00ff539d53dd7159574734c089e6afe8b2d801b83356f228b5100b912b136",
-    "evals/cyber_skill_guardrails/infer.py": "08c61006d310f9b04de5989091f2d1f506d8d8da2355e383e19cebe1a222fe23",
+    "evals/cyber_skill_guardrails/infer.py": "0f90eb2a8865f44cf45d267a3897effcf85d901a995c79955739674386b14a9c",
     "evals/cyber_skill_guardrails/policies.py": "f56c19a5364580e8c2e7f4aefb5b0b45a09f0b5600afefcf6198b17abe8bb29e",
     "evals/cyber_skill_guardrails/report.py": "2278d2200e47170021d950cbe90cca63eb9603511dcca8a1246fc985cc45f226",
     "evals/cyber_skill_guardrails/restore.py": "ca2fdca0dbf0ecf238c00e5bd5aa1c06436138cc5b78fd17e8d9ee5df9a4e10f",
@@ -126,5 +127,6 @@
   },
   "test_viewed_for_authoring": false,
   "threshold_search": false,
-  "ensemble": false
+  "ensemble": false,
+  "initial_registration_sha256": "17110f0b5c1bd5235b5e3f9beee93336206d2eebdc95aeede413d03d5633f9e2"
 }
