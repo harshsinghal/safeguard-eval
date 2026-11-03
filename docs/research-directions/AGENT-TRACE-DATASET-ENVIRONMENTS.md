@@ -4,6 +4,10 @@ Status: source review and proposed design, checked 3 November 2026. No agent
 tasks were executed, no sandbox was provisioned and no paid model calls were
 made. This extends the [offline policy-review proposal](OFFLINE-AGENT-POLICY-REVIEW.md).
 
+The [command and tool-call proposal](COMMAND-ACTION-POLICY-INTERPRETER.md) describes
+how utility documentation and security references could seed these environments,
+and how to compare code-specialized models with policy interpreters.
+
 ## The opportunity
 
 We can reduce the amount of per-trace human labeling by designing environments

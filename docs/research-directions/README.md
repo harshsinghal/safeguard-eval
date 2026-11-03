@@ -20,6 +20,12 @@ trusted action logs, state changes and approval events. It separates machine-
 verified labels from human judgments, and retrospective auditing from pre-action
 replay. The proposed data-collection pilot has not started.
 
+The [command and tool-call policy proposal](COMMAND-ACTION-POLICY-INTERPRETER.md)
+adds a way to bootstrap examples from utility manuals, NL2Bash and security
+references. It separates command effects from authorization, proposes code-model
+and policy-model comparisons, and describes supervised training with verified
+effects and contrasting policy contexts. No model training has started.
+
 ## Training a shared moderation model with Tinker
 
 The [Tinker survey and proposed study](TINKER-MULTITASK-MODERATION.md) maps its
