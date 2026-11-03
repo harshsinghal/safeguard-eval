@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-11-03T18:53:08.888256+00:00",
+  "reason": "Transformers 5.17.0 raises attention_chunk_size missing for the official Llama Guard 4 null setting. Use the model-card-recommended v4.51.3-LlamaGuard-preview runtime, peeled commit 63cd4c76f3a068ac36c37453be156e019c55c1b7, with torch2.8.0. Use the compatible torch_dtype keyword. No attention config override.",
+  "prior_registration_sha256": "eb83956b62ec599ac15a27cbb044c0891c317e8963eb98eb20249c04ed0f2254",
+  "failed_attempts": "attempts/llamaguard-transformers-5.17-errors.jsonl",
+  "failed_rows": 3,
+  "successful_llamaguard_predictions": 0,
+  "policies_changed": false,
+  "splits_changed": false,
+  "selection_changed": false,
+  "test_inference_started": false,
+  "source": "https://huggingface.co/meta-llama/Llama-Guard-4-12B"
+}

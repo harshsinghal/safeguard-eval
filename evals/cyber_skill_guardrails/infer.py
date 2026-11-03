@@ -41,7 +41,7 @@ class MetaEngine:
         self.tok=AutoTokenizer.from_pretrained(spec['model'],revision=spec['revision'])
         cls=Llama4ForConditionalGeneration if slug=='llamaguard' else AutoModelForSequenceClassification
         kwargs={'attn_implementation':'sdpa'} if slug=='llamaguard' else {}
-        self.model=cls.from_pretrained(spec['model'],revision=spec['revision'],dtype=torch.bfloat16,**kwargs).cuda().eval().requires_grad_(False)
+        self.model=cls.from_pretrained(spec['model'],revision=spec['revision'],torch_dtype=torch.bfloat16,**kwargs).cuda().eval().requires_grad_(False)
         if slug=='llamaguard':
             ids=[self.tok.encode(x,add_special_tokens=False) for x in ('unsafe','safe')]
             if any(len(x)!=1 for x in ids):raise ValueError('Expected single-token safety labels')
