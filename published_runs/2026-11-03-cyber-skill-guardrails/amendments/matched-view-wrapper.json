@@ -5,5 +5,6 @@
   "policy_candidates_changed": false,
   "full_inputs_changed": false,
   "skill_only_features_started": false,
-  "test_inference_started": false
+  "test_inference_started": false,
+  "report_detail": "Retain both full-view and document-only confusion counts on the companion-file subset."
 }

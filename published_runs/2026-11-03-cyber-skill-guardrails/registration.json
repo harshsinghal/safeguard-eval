@@ -101,7 +101,7 @@
     "amendments/cyber-source-format.json": "973dd8f4bcda4962d805e15f89be7f41ff5687aaad1eaed15bebcfbe96961823",
     "source-style-audit.json": "14386b94ea0924e95352beae7a169fe4e6231cc5c487c06fde93ee0d32b9e7d1",
     "amendments/llamaguard-label-position.json": "ff738e432b1f03d2fa74459d0513cbf665288742acd5b8d9587eb8967ba286ef",
-    "amendments/matched-view-wrapper.json": "8d543269e19da39da4a7984982926167572379d91e6edd8a189af74a4e17d7d4"
+    "amendments/matched-view-wrapper.json": "c95ae0f183eb9d2910c29e744fc143af2faa597c6490ed61857962e7ff0c6c5e"
   },
   "sources": {
     "docs/cyber-skill-guardrails/PLAN.md": "a04a7d15cea09a4878d2939ed7349ebfd0ca3a86fecd1e291836e1fba825513a",
@@ -114,7 +114,7 @@
     "evals/cyber_skill_guardrails/heads.py": "e4e00ff539d53dd7159574734c089e6afe8b2d801b83356f228b5100b912b136",
     "evals/cyber_skill_guardrails/infer.py": "3551c73b00571b974a26af202885bf876627cad207365c2dd3af01691c3253ab",
     "evals/cyber_skill_guardrails/policies.py": "f56c19a5364580e8c2e7f4aefb5b0b45a09f0b5600afefcf6198b17abe8bb29e",
-    "evals/cyber_skill_guardrails/report.py": "efa6a23cf221b922d36dbe74183602916e0ea940540ea75205d4231cdd90896a",
+    "evals/cyber_skill_guardrails/report.py": "9f7e43f3a059898e9b551a8ccbd222bf7984d9346cc7cd622f51c45bef272c7d",
     "evals/cyber_skill_guardrails/restore.py": "98b3e62c3f47303ce85115bfc1e0f7465420bc6328624cef1bcb9af38effce28",
     "evals/cyber_skill_guardrails/study.py": "7fef8cb363de34df52519cca613a28fb33c3c1edf52e13df01dadf3488bae2df",
     "evals/cyber_skill_guardrails/test_contracts.py": "10f50e54ddbd822cffa5946100403bdece6d75985e5ae810b2ed4fefb4d40f66",
