@@ -26,6 +26,15 @@ references. It separates command effects from authorization, proposes code-model
 and policy-model comparisons, and describes supervised training with verified
 effects and contrasting policy contexts. No model training has started.
 
+The [security-cognition dataset design](../security-cognition/README.md) takes a
+dataset-first step before the sandbox pilot. It adds a fictional enterprise
+policy and 24 original synthetic SFT-format examples covering communications,
+network disclosure, cookie access, cleanup and short action sequences. It
+separates policy violations, missing facts and required approvals, with explicit
+attention to human-review workload. The draft passes structural checks; its
+labels are not human-reviewed, execution-verified or eligible for training.
+No model run or new spending has started.
+
 ## Training a shared moderation model with Tinker
 
 The [Tinker survey and proposed study](TINKER-MULTITASK-MODERATION.md) maps its
