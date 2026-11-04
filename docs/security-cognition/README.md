@@ -255,6 +255,12 @@ yes/no LoRA training, starting with StepGuard action-level examples. ToolSafety
 needs an adjudicated action-label mapping. Enterprise policy contrasts and review
 labels remain separate extensions; no training has started.
 
+Before that training, the [StepGuard model-comparison proposal](STEPGUARD-BENCHMARK-PLAN.md)
+would compare existing policy and decision models on the released safety labels.
+It separates pending-action judgment from completed-run auditing, initial from
+tuned policies, and complete-context comparisons from broader coverage results.
+This is a proposed benchmark; no model inference has started.
+
 ## What success would mean
 
 Do not optimize a single three-class accuracy number. Report:

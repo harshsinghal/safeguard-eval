@@ -5,6 +5,11 @@ model evaluation, training, GPU provisioning or paid API calls were started. Thi
 extends the [dataset-first design](README.md); its 24 illustrative cases remain
 unreviewed and ineligible for training.
 
+The later [StepGuard comparison proposal](STEPGUARD-BENCHMARK-PLAN.md) now defines
+the first step: evaluate existing policy and decision models with frozen weights,
+before deciding whether this fine-tuning study is needed. Its final test should
+remain held out from any subsequent training that uses it for comparison.
+
 ## The hypothesis
 
 Shieldstral may be a useful starting point for a small, self-hosted reviewer that
