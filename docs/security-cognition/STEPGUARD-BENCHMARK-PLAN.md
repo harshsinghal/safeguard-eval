@@ -62,6 +62,13 @@ tokenizer, code and provider versions before execution:
 | Policy models | PolicyLM, Shieldstral, GPT-OSS Safeguard | Native category rules; instruction/query/document; native policy and structured decision, respectively |
 | Decision models | Jev, Kev, Clef Flash | Native binary Choice task with explicit criteria |
 
+The context preflight below refines this to a provisional **five-model primary
+panel: Shieldstral, Safeguard, Jev, Kev and Clef Flash**. PolicyLM belongs in a
+separate comparison on short complete inputs, with the other models scored on
+exactly those same inputs. Do not reduce the primary panel's whole population to
+PolicyLM's much smaller window. Final eligibility still requires native-input
+token counts, not just the preliminary counts below.
+
 The six-model panel matches our [prompt-injection registry](../../evals/prompt_injection/common.py).
 An optional small general-purpose Qwen control would be a declared addition, not
 an unrecorded expansion of the study. We do not need every historical model to
@@ -141,6 +148,53 @@ that history and obtain a fresh test for the new claim.
 
 ## Context length is a substantive constraint
 
+### Source-length preflight and proposed model roles
+
+A tokenizer-only preflight on 4 November 2026 counted all 3,000 SFT source human
+inputs with the pinned Qwen3.5-4B-Base tokenizer. It included the source task
+instructions but excluded the reference reviewer target. Median length was
+**1,280 tokens**, the 95th percentile **3,515**, the 99th percentile **4,918**,
+and the maximum **12,038**. There were 2,998 inputs at or below 8,192 tokens and
+all 3,000 were below 16,384. Thus most released records are relatively short;
+the full-run task does not automatically require a 128K window.
+
+These are preliminary source lengths, **not final model request lengths**. Added
+policies, native schemas, chat formatting, tokenizer differences and generated
+output headroom must be accounted for before registering coverage. Only
+aggregate lengths were inspected in this preflight; no label-based selection or
+model predictions were made. The earlier manual content inspection remains
+subject to the discovery-only exclusion described above.
+
+Reproduce from the repository root with the `tokenizers` package installed:
+
+```sh
+python3 tools/audit_stepguard_context.py --output docs/security-cognition/stepguard-context-audit.json
+```
+
+The [audit output](stepguard-context-audit.json)
+records source and tokenizer revisions, file hashes and library version; the
+[script](../../tools/audit_stepguard_context.py) does not load model weights.
+
+| Model | Current published context evidence | Proposed role |
+|---|---|---|
+| Shieldstral-1.0-3B | [Card](https://huggingface.co/mistralai/Shieldstral-1.0-3B) recommends the 32K training range despite a theoretical 256K window | Primary policy-model comparison |
+| GPT-OSS Safeguard-20B | [Configuration](https://huggingface.co/openai/gpt-oss-safeguard-20b/blob/main/config.json) permits 131,072 positions; runtime and output budgets still apply | Primary policy-model comparison |
+| Jev 1.14 | [TypeSafe docs](https://docs.typesafe.ai/models) specify 32K for state plus one question by default; 262K is opt-in. [OpenRouter endpoint metadata](https://openrouter.ai/api/v1/models/typesafe/jev-1.14/endpoints) advertises 262,144, which is not itself a route-level acceptance or accuracy test | Primary API decision-model comparison; ordinary context should suffice |
+| Kev-4B | [Card](https://huggingface.co/jaredpalmer/kev-4b) serves 65,536-token states but validates quality only through 8,192 tokens on its long-document study | Include; report results within and beyond the publisher-validated range separately |
+| Clef Flash | [Reference implementation](https://huggingface.co/Cloudflare/clef-flash/blob/main/joint_schema_model.py) defaults to 16,384 and truncates state; [backbone config](https://huggingface.co/Cloudflare/clef-flash/blob/main/config.json) specifies 262,144, without establishing decision-head accuracy at that length | Include after exact-length checks; use our no-truncation wrapper |
+| PolicyLM-1.7B | [Card](https://huggingface.co/musubilabs/policylm-1.7b) gives policy and message a shared 2,048-token budget | Supplementary short-input comparison; no automatic summary or window aggregation |
+
+These are current publisher statements, not new performance measurements by us.
+Recheck them against the exact checkpoint and runtime selected for execution.
+The existing local decision wrappers and Shieldstral wrapper cap requests at
+16,384 tokens; this is our implementation setting, not the models' universal
+maximum. A provisional 16K input ceiling may cover the primary panel, with
+separate output headroom reserved in Safeguard's serving context. Confirm this
+after native serialization. Analyze accuracy by length, and
+distinguish a model accepting input from its ability to use that input correctly.
+
+### Complete-input comparison rules
+
 Long histories may exceed some model interfaces. For example,
 [PolicyLM's card](https://huggingface.co/musubilabs/policylm-1.7b) specifies a shared
 2,048-token policy/message budget and describes windowing for long messages.
@@ -212,6 +266,7 @@ and context coverage, fix the model panel and register an affordable call plan.
 If available context makes PolicyLM or another model ineligible for the main
 panel, explain that with counts before choosing a reduced comparison.
 
-This document records the design only. No budget has been allocated by this
-proposal, no resources were provisioned and no model predictions were generated.
-External compute spending for this source review: **$0**.
+This document records the design and a completed local tokenizer-only length
+preflight. No inference budget has been allocated by this proposal, no GPU
+resources were provisioned and no model predictions were generated. External
+compute spending for the source review and length preflight: **$0**.
