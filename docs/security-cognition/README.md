@@ -249,6 +249,12 @@ sources such as AgentHarm for evaluation; see the
 [environment proposal](../research-directions/AGENT-TRACE-DATASET-ENVIRONMENTS.md).
 No third-party training material is included in this seed.
 
+The [Shieldstral adaptation proposal](SHIELDSTRAL-PLAN.md) applies this design to
+an existing policy model. It compares frozen policies, policy tuning and native
+yes/no LoRA training, starting with StepGuard action-level examples. ToolSafety
+needs an adjudicated action-label mapping. Enterprise policy contrasts and review
+labels remain separate extensions; no training has started.
+
 ## What success would mean
 
 Do not optimize a single three-class accuracy number. Report:

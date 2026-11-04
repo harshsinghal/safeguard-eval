@@ -35,6 +35,12 @@ attention to human-review workload. The draft passes structural checks; its
 labels are not human-reviewed, execution-verified or eligible for training.
 No model run or new spending has started.
 
+The [Shieldstral tool-action adaptation proposal](../security-cognition/SHIELDSTRAL-PLAN.md)
+compares policy tuning with additional native-format training on audited
+StepGuard action examples and ToolSafety-derived cases. It distinguishes source
+safety classification from following new enterprise policies, and keeps review
+requirements separate from binary labels. This remains proposed work.
+
 ## Training a shared moderation model with Tinker
 
 The [Tinker survey and proposed study](TINKER-MULTITASK-MODERATION.md) maps its
