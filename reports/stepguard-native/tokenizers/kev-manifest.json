@@ -1,0 +1,14 @@
+{
+  "model": {
+    "model": "jaredpalmer/kev-4b",
+    "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+    "code_revision": "2074cc44256200bb37540103fa4572901faa10f3",
+    "base": "Qwen/Qwen3.5-4B-Base",
+    "base_revision": "1001bb4d826a52d1f399e183466143f4da7b741b",
+    "decision": "native Choice argmax, ALLOW on tie; publisher learned temperature retained"
+  },
+  "files": {
+    "tokenizer_config.json": "8671bed7c852ce9e661be94f179a7b4ffd091c2a65aea0363e5501c20318ee45",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+  }
+}

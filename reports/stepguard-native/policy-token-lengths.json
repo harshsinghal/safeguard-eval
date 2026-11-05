@@ -1,0 +1,74 @@
+{
+  "shieldstral": {
+    "action": {
+      "initial": 271,
+      "criteria": 404,
+      "contrasts": 559
+    },
+    "trajectory": {
+      "initial": 271,
+      "criteria": 404,
+      "contrasts": 559
+    }
+  },
+  "safeguard": {
+    "action": {
+      "initial": 316,
+      "criteria": 443,
+      "contrasts": 596
+    },
+    "trajectory": {
+      "initial": 320,
+      "criteria": 447,
+      "contrasts": 600
+    }
+  },
+  "jev": {
+    "action": {
+      "initial": null,
+      "criteria": null,
+      "contrasts": null
+    },
+    "trajectory": {
+      "initial": null,
+      "criteria": null,
+      "contrasts": null
+    }
+  },
+  "kev": {
+    "action": {
+      "initial": 203,
+      "criteria": 329,
+      "contrasts": 482
+    },
+    "trajectory": {
+      "initial": 207,
+      "criteria": 333,
+      "contrasts": 486
+    }
+  },
+  "clef": {
+    "action": {
+      "initial": 309,
+      "criteria": 435,
+      "contrasts": 588
+    },
+    "trajectory": {
+      "initial": 313,
+      "criteria": 439,
+      "contrasts": 592
+    }
+  },
+  "policylm": {
+    "action": {
+      "initial": 157,
+      "criteria": 283,
+      "contrasts": 436
+    },
+    "trajectory": {
+      "initial": 159,
+      "criteria": 285,
+      "contrasts": 438
+    }
+  }
+}

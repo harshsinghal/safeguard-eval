@@ -1,0 +1,122 @@
+{
+  "created_utc": "2026-11-05T01:03:13.795343+00:00",
+  "sources": {
+    "docs/security-cognition/STEPGUARD-RUN-PLAN.md": "215373f1322894d584762980527968be22008c1d26a1d5e3802560d18dbbf19d",
+    "evals/decision_models/adapters.py": "7c969011aea177639c13572711ae7c21cf2e5748169ec72d86d61aa97e00e541",
+    "evals/decision_models/study.py": "ac353a7bf1de44ed8d83016e34541d54cd46f3502cb0089f6d30cb4c34a0d49e",
+    "evals/decision_models/vendor-hashes.json": "bc101bd12269214ca4da7c20c4bfd08b69837d9b703b3c82aeed8821e00b17e1",
+    "evals/jev/api.py": "d368250e8b9a632bc63bb3b5a12fde49500cf99f6e9c26237fbfd7f94af3756b",
+    "evals/leaderboard/metrics.py": "89549b69043f643b380d0b3d6fc33393a6a7beb1e00d441dcaa2843f7eeadc30",
+    "evals/prompt_injection/common.py": "13ada43d8b5b7bb8610b0d6483dec6040f8b070a63f037bf1ca3d61c800011c4",
+    "evals/prompt_injection/infer.py": "37c2adef05bcd199a7bdc8702ea184e3f731de6a86a739e35904a32b1aec55d5",
+    "evals/retrieved_examples/common.py": "e07870d64555b1430a5923278a9dcb67b4d1456a29085921e70de63d815e8e50",
+    "evals/retrieved_examples/native.py": "cfde9c9199d56d8268669dc3fc8c8aac59b97d1b6923711d169ba3130aa0db24",
+    "evals/run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986",
+    "evals/stepguard/__init__.py": "06b4eabdb20f4e36086bbdea52cbc387bf553dd6e6406c8fd67c269c2068ae78",
+    "evals/stepguard/common.py": "d7f1caf8f953f4864dff90357307d760dfe57743d98ae5cfec4748f078cd4a8c",
+    "evals/stepguard/data.py": "79e4720425852c8517f1ea90089d30187b45348f58655f69c6cb454c25aa2b43",
+    "evals/stepguard/infer.py": "6b3dd1170d4cc8d1cb3cb44f35240b987b44395fee7810d615a3b2ec93558e12",
+    "evals/stepguard/policies.py": "c61c5ff405a4a7c25156587c8c9d049c1592c9c96040f3fa01fd084e480f18ac",
+    "evals/stepguard/preflight.py": "90dcf5ece1ff3a80b4c1f8c327edcc243d2b557dd00aeab91b88e3855ea88e2e",
+    "evals/stepguard/report.py": "df00f6863617517881630f556f779427c7ffa9e2f27158c226cb73ebf85c4851",
+    "evals/stepguard/requests.py": "ccc9c50e5b2c19d9af4c00ff95756d65c026a3aceb87afb50f82af52ef756d57",
+    "evals/stepguard/study.py": "c5e95a88b50b38c047de117b42a338116013e5ab0e2efed61ccf05ab6c4984dd",
+    "evals/stepguard/test_contracts.py": "047c9b3e9834f04dc0ae3666221b625e714689734ab52560934cc251a1b9f4d0"
+  },
+  "files": {
+    "data/action/fit.jsonl": "88625b2907910cf05d4201aca78bd58cf6024f4795831a535d7be986a5611c07",
+    "data/action/test.jsonl": "51d3fefc87e5eae0ff7564a0ec998a38955b9b5ca2735200c9e61d4ede1680dc",
+    "data/action/validation.jsonl": "edd8c93406df43bc6baa051fa3801dc8fd77f1b7935c72da8745e03ebae76f75",
+    "data/trajectory/fit.jsonl": "fed6aee36acd1a9043bdcaf81783ff25164fda14aeeb98d236c3a0c155cda277",
+    "data/trajectory/test.jsonl": "a4e813005b2b72fe391e838de55df7734ca6827973c3be22b87eb0f62e6aab08",
+    "data/trajectory/validation.jsonl": "358492744ed91cf96b1219043175bb75d3a05cce5b1ce4977c71256f9cf5d174",
+    "metadata/action/fit.jsonl": "f69d7cb681e39dd00402b40289d73a88acc3e8160ed3b1c6b6a3a7c24bb95565",
+    "metadata/action/test.jsonl": "8944054c13de0cfc6eede3658e9efad2b83a30da352c0b3bf2bf6471f5f96e5e",
+    "metadata/action/validation.jsonl": "2b5ddcbdb6c76b4dd096bfe162c8c9c1be190e7da8740040c534aeaaaff9d2bc",
+    "metadata/trajectory/fit.jsonl": "81924346b19bf0f2c4c3fd9979e3456c0a8ef2a17548750a6db4f6418e663b6f",
+    "metadata/trajectory/test.jsonl": "82ad324567c94d0e2e90a52ca95f00704b9884c718c245afb9036475b0eb3588",
+    "metadata/trajectory/validation.jsonl": "cebf865133a1683f462adc5580e0eccf50cd9235b854b1e1e3838687d87120cc",
+    "policies/action/clef.json": "09ec2e8f4bc7c04364336feac36c75eb26584b7676c0db4b34b515ad86fc6a02",
+    "policies/action/jev.json": "09ec2e8f4bc7c04364336feac36c75eb26584b7676c0db4b34b515ad86fc6a02",
+    "policies/action/kev.json": "09ec2e8f4bc7c04364336feac36c75eb26584b7676c0db4b34b515ad86fc6a02",
+    "policies/action/policylm.json": "5a5597e2483d51adb4e79d53faf30ca8e8f28402774b4146fa18ed5070306fff",
+    "policies/action/safeguard.json": "5a5597e2483d51adb4e79d53faf30ca8e8f28402774b4146fa18ed5070306fff",
+    "policies/action/shieldstral.json": "5a5597e2483d51adb4e79d53faf30ca8e8f28402774b4146fa18ed5070306fff",
+    "policies/trajectory/clef.json": "6e97e33ec46490bed0d59155b0dea557a1ede6a87b25281efa7e878efa07ee6f",
+    "policies/trajectory/jev.json": "6e97e33ec46490bed0d59155b0dea557a1ede6a87b25281efa7e878efa07ee6f",
+    "policies/trajectory/kev.json": "6e97e33ec46490bed0d59155b0dea557a1ede6a87b25281efa7e878efa07ee6f",
+    "policies/trajectory/policylm.json": "07ebf4a5fe3112ebfc0b1ce88890f39e49b60200e637e2f74a9f33a8a804a9dd",
+    "policies/trajectory/safeguard.json": "07ebf4a5fe3112ebfc0b1ce88890f39e49b60200e637e2f74a9f33a8a804a9dd",
+    "policies/trajectory/shieldstral.json": "07ebf4a5fe3112ebfc0b1ce88890f39e49b60200e637e2f74a9f33a8a804a9dd",
+    "tokenizers/clef-manifest.json": "72a51a4770fa015522252965a6e72ef47c93138a20d6007b7980b85dea18704f",
+    "tokenizers/kev-manifest.json": "dafec78a1cd0c97b958194a9088086c4ee0b6378e4f5b71b90d527fe94f7f7c5",
+    "tokenizers/policylm-manifest.json": "ad1b9ff02fa0896240c55053967a9f01c7a868faded54eb5543fbd4253f9b62a",
+    "tokenizers/safeguard-manifest.json": "e73e329c12d7ad6ec15d11804335deabfa39bfe8cd7a35df8ce0a01a130a0d43",
+    "tokenizers/shieldstral-manifest.json": "c21da57d3ad03ff0dbe2bd988dab777c6f1b84d55b99de5b458f624f5fc9ec52",
+    "eligibility.json": "1d619020d3cd4ac4f56529b5abdc4464e19780ded5177126327ddc579949c3e8",
+    "input-lengths.jsonl": "2786559b183702ec3f6bb1e63e9d6fe73308e8335ba68fe26b96a4c43a4c8b72",
+    "policy-token-lengths.json": "c64ab7afe5305c6e65b8a5cc515b64707ddfb850138940e92297b0a38b212c3f",
+    "context-audit.json": "06afed2b40a6f1bbce41fb1267e3cfd0f4e178b477fca12686431ad2f8198158",
+    "data-audit.json": "3ae0504f073255f42db8e213d8f0ec2e93e8f1619b286a50abea92f8e01113ed",
+    "development-review.json": "a14c303747a4aff62cd7a4a5872b7b23dfbb9fa1ba1b0acdae1a38bae09e5047",
+    "group-edges.jsonl": "a1ddf2198b0659c0444c2297cf810acb96d3122714b357bad6ace9460e671853",
+    "authorization.json": "2fd4ff3be982d68f56fd3df801c958610668d12a802515e0ae0aac106bf0f33d"
+  },
+  "models": {
+    "policylm": {
+      "model": "musubilabs/policylm-1.7b",
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+      "decision": "publisher precision preset, fixed 0.335",
+      "clean": true,
+      "max_chars": null,
+      "max_batch_rows": 1
+    },
+    "shieldstral": {
+      "model": "mistralai/Shieldstral-1.0-3B",
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+      "decision": "yes/no token-pair argmax, BLOCK on tie"
+    },
+    "safeguard": {
+      "model": "openai/gpt-oss-safeguard-20b",
+      "provider": "self-hosted; provider recorded in runtime manifest",
+      "decision": "generated binary JSON label",
+      "reasoning": "medium",
+      "max_tokens": 8192,
+      "revision": "8a11e17b25c973a24099d4016bf2e17dd7ec1574",
+      "quantization": "publisher MXFP4"
+    },
+    "kev": {
+      "model": "jaredpalmer/kev-4b",
+      "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+      "code_revision": "2074cc44256200bb37540103fa4572901faa10f3",
+      "base": "Qwen/Qwen3.5-4B-Base",
+      "base_revision": "1001bb4d826a52d1f399e183466143f4da7b741b",
+      "decision": "native Choice argmax, ALLOW on tie; publisher learned temperature retained"
+    },
+    "clef": {
+      "model": "Cloudflare/clef-flash",
+      "revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+      "decision": "native Choice argmax, ALLOW on tie"
+    },
+    "jev": {
+      "model": "typesafe/jev-1.14",
+      "resolved": "typesafe/jev-1.14-20261014",
+      "provider": "TypeSafe via OpenRouter",
+      "decision": "native Choice argmax"
+    }
+  },
+  "primary": [
+    "shieldstral",
+    "safeguard",
+    "jev",
+    "kev",
+    "clef"
+  ],
+  "seed": 20261104,
+  "bootstrap_seed": 20261029,
+  "bootstrap_repetitions": 2000,
+  "source_revision": "aadeae009800d8fbcd145575f1d1a6b37abb0950",
+  "source_sha256": "6429dc6f958e2b1fe242f2528dc6087c62e60e903263cf57dd88bc949752c90d",
+  "selection": "validation balanced accuracy, shorter native policy representation, lexical candidate ID; no test-dependent changes",
+  "no_evaluable_validation": "If no complete validation examples, skip that model/task; if one class only, retain initial without selection."
+}

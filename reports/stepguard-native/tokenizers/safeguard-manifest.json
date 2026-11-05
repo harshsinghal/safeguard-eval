@@ -1,0 +1,16 @@
+{
+  "model": {
+    "model": "openai/gpt-oss-safeguard-20b",
+    "provider": "self-hosted; provider recorded in runtime manifest",
+    "decision": "generated binary JSON label",
+    "reasoning": "medium",
+    "max_tokens": 8192,
+    "revision": "8a11e17b25c973a24099d4016bf2e17dd7ec1574",
+    "quantization": "publisher MXFP4"
+  },
+  "files": {
+    "tokenizer_config.json": "9279e942392b742d633c7adbb89ebe002c98399db8926a7af5125c726f404070",
+    "config.json": "8fc6c94451a1a97bf3080baec34002c75173833164bd8e75f40152e27b31e531",
+    "tokenizer.json": "0614fe83cadab421296e664e1f48f4261fa8fef6e03e63bb75c20f38e37d07d3"
+  }
+}

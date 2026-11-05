@@ -1,0 +1,12 @@
+{
+  "model": {
+    "model": "Cloudflare/clef-flash",
+    "revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+    "decision": "native Choice argmax, ALLOW on tie"
+  },
+  "files": {
+    "tokenizer_config.json": "91a08f825d370d085d692e04cf117cdd7faad7bf18e996f1e6031b6dab03db72",
+    "config.json": "66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+  }
+}

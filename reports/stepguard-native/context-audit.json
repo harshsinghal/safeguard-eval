@@ -1,0 +1,131 @@
+{
+  "created_utc": "2026-11-05T01:00:02.701554+00:00",
+  "models": {
+    "shieldstral": {
+      "action": {
+        "n": 1500,
+        "eligible": 1500,
+        "max_tokens": 12903,
+        "errors": {}
+      },
+      "trajectory": {
+        "n": 1500,
+        "eligible": 1500,
+        "max_tokens": 14990,
+        "errors": {}
+      }
+    },
+    "safeguard": {
+      "action": {
+        "n": 1500,
+        "eligible": 1500,
+        "max_tokens": 9259,
+        "errors": {}
+      },
+      "trajectory": {
+        "n": 1500,
+        "eligible": 1500,
+        "max_tokens": 13934,
+        "errors": {}
+      }
+    },
+    "jev": {
+      "action": {
+        "n": 1500,
+        "eligible": 1500,
+        "max_tokens": null,
+        "errors": {}
+      },
+      "trajectory": {
+        "n": 1500,
+        "eligible": 1498,
+        "max_tokens": null,
+        "errors": {
+          "Conservative context bound exceeded": 6
+        }
+      }
+    },
+    "kev": {
+      "action": {
+        "n": 1500,
+        "eligible": 1500,
+        "max_tokens": 10903,
+        "errors": {}
+      },
+      "trajectory": {
+        "n": 1500,
+        "eligible": 1500,
+        "max_tokens": 12594,
+        "errors": {}
+      }
+    },
+    "clef": {
+      "action": {
+        "n": 1500,
+        "eligible": 1500,
+        "max_tokens": 11844,
+        "errors": {}
+      },
+      "trajectory": {
+        "n": 1500,
+        "eligible": 1500,
+        "max_tokens": 14601,
+        "errors": {}
+      }
+    },
+    "policylm": {
+      "action": {
+        "n": 1500,
+        "eligible": 392,
+        "max_tokens": 2041,
+        "errors": {}
+      },
+      "trajectory": {
+        "n": 1500,
+        "eligible": 159,
+        "max_tokens": 2036,
+        "errors": {}
+      }
+    }
+  },
+  "primary_n": 2998,
+  "short_n": 551,
+  "by_task_split": {
+    "action": {
+      "fit": {
+        "total": 305,
+        "primary": 305,
+        "short": 84
+      },
+      "validation": {
+        "total": 330,
+        "primary": 330,
+        "short": 74
+      },
+      "test": {
+        "total": 865,
+        "primary": 865,
+        "short": 234
+      }
+    },
+    "trajectory": {
+      "fit": {
+        "total": 331,
+        "primary": 331,
+        "short": 38
+      },
+      "validation": {
+        "total": 275,
+        "primary": 273,
+        "short": 22
+      },
+      "test": {
+        "total": 894,
+        "primary": 894,
+        "short": 99
+      }
+    }
+  },
+  "policy_selection_note": "Jev tie lengths use reported input_tokens on the lexically first common validation ID; native tokenizer is not public.",
+  "conditions": "Complete input and every registered policy must fit; no clipping. PolicyLM must use one native window and one cleaning variant."
+}

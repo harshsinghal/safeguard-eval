@@ -1,0 +1,148 @@
+{
+  "created_utc": "2026-11-05T00:49:04.910407+00:00",
+  "source": {
+    "url": "https://huggingface.co/datasets/ninty-seven/stepguard_data/resolve/aadeae009800d8fbcd145575f1d1a6b37abb0950/sft3k/agentguard_sft3k_sharegpt.jsonl",
+    "revision": "aadeae009800d8fbcd145575f1d1a6b37abb0950",
+    "sha256": "6429dc6f958e2b1fe242f2528dc6087c62e60e903263cf57dd88bc949752c90d",
+    "total": 3000
+  },
+  "usable": 3000,
+  "excluded": [],
+  "counts": {
+    "action": {
+      "fit": {
+        "n": 305,
+        "labels": {
+          "ALLOW": 164,
+          "BLOCK": 141
+        },
+        "risks": {
+          "none": 73,
+          "inherent_agent_failure": 27,
+          "indirect_prompt_injection": 23,
+          "malicious_user_instruction_or_jailbreak": 45,
+          "direct_prompt_injection": 38,
+          "corrupted_tool_feedback": 25,
+          "unreliable_or_misinformation": 26,
+          "tool_description_injection": 17,
+          "malicious_tool_execution": 31
+        },
+        "groups": 262
+      },
+      "validation": {
+        "n": 330,
+        "labels": {
+          "ALLOW": 168,
+          "BLOCK": 162
+        },
+        "risks": {
+          "none": 55,
+          "tool_description_injection": 17,
+          "malicious_tool_execution": 42,
+          "malicious_user_instruction_or_jailbreak": 36,
+          "inherent_agent_failure": 30,
+          "corrupted_tool_feedback": 39,
+          "indirect_prompt_injection": 39,
+          "unreliable_or_misinformation": 32,
+          "direct_prompt_injection": 40
+        },
+        "groups": 284
+      },
+      "test": {
+        "n": 865,
+        "labels": {
+          "ALLOW": 418,
+          "BLOCK": 447
+        },
+        "risks": {
+          "unreliable_or_misinformation": 55,
+          "direct_prompt_injection": 144,
+          "malicious_tool_execution": 123,
+          "none": 172,
+          "indirect_prompt_injection": 74,
+          "corrupted_tool_feedback": 80,
+          "inherent_agent_failure": 65,
+          "malicious_user_instruction_or_jailbreak": 122,
+          "tool_description_injection": 30
+        },
+        "groups": 766
+      }
+    },
+    "trajectory": {
+      "fit": {
+        "n": 331,
+        "labels": {
+          "BLOCK": 155,
+          "ALLOW": 176
+        },
+        "risks": {
+          "unreliable_or_misinformation": 61,
+          "malicious_user_instruction_or_jailbreak": 40,
+          "direct_prompt_injection": 33,
+          "malicious_tool_execution": 22,
+          "inherent_agent_failure": 44,
+          "tool_description_injection": 36,
+          "corrupted_tool_feedback": 50,
+          "indirect_prompt_injection": 45
+        },
+        "groups": 295
+      },
+      "validation": {
+        "n": 275,
+        "labels": {
+          "ALLOW": 135,
+          "BLOCK": 140
+        },
+        "risks": {
+          "tool_description_injection": 38,
+          "malicious_tool_execution": 17,
+          "inherent_agent_failure": 33,
+          "unreliable_or_misinformation": 58,
+          "direct_prompt_injection": 27,
+          "corrupted_tool_feedback": 34,
+          "indirect_prompt_injection": 54,
+          "malicious_user_instruction_or_jailbreak": 14
+        },
+        "groups": 253
+      },
+      "test": {
+        "n": 894,
+        "labels": {
+          "ALLOW": 439,
+          "BLOCK": 455
+        },
+        "risks": {
+          "tool_description_injection": 127,
+          "inherent_agent_failure": 126,
+          "corrupted_tool_feedback": 136,
+          "unreliable_or_misinformation": 131,
+          "indirect_prompt_injection": 129,
+          "direct_prompt_injection": 80,
+          "malicious_user_instruction_or_jailbreak": 107,
+          "malicious_tool_execution": 58
+        },
+        "groups": 828
+      }
+    }
+  },
+  "grouping": {
+    "method": "normalized exact requests + request char-TFIDF cosine >= .82 + actor cosine >= .90; transitive closure across both tracks",
+    "groups": 2636,
+    "largest": 23,
+    "size_histogram": {
+      "1": 2367,
+      "2": 214,
+      "23": 1,
+      "3": 40,
+      "5": 6,
+      "4": 8
+    },
+    "edges": 1156,
+    "original_scenario_ids_available": false,
+    "limitation": "Heuristic grouping cannot establish independence of all source scenario paraphrases."
+  },
+  "inspected_prefix_rows": 30,
+  "inspected_groups_forced_to_fit": 30,
+  "split_rule": "five stratified group folds; fold 0 fit, fold 1 validation, others test; inspected groups moved to fit",
+  "seed": 20261104
+}

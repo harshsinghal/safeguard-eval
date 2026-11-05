@@ -1,0 +1,25 @@
+{
+  "model": {
+    "model": "musubilabs/policylm-1.7b",
+    "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+    "decision": "publisher precision preset, fixed 0.335",
+    "clean": true,
+    "max_chars": null,
+    "max_batch_rows": 1
+  },
+  "files": {
+    "config.json": "49105a27c8651e8f3f267eefc1f12f90c74125adfa69bc12f76e6db3ac576448",
+    "threshold_manifest.json": "2282361b9657fcd27e8e3eeff03fb1f7be2aa4fc001c0be4b7a35b6ec9ce9722",
+    "tokenizer/added_tokens.json": "c9338e2672232bf2629d065bae0151018f4b0ff1ffec39015efdcaa8d109e652",
+    "tokenizer/tokenizer_config.json": "43d34fc58d87000f57850ea0ed35e84266a8ee13ea2e16a2f1cea379ac1f8e5b",
+    "tokenizer/special_tokens_map.json": "597948b297cf32c25660ad6279f31f5e560d375246404a0185a3e432e4cd973f",
+    "tokenizer/tokenizer.json": "7c2a9543bcd5468291632f021a56a9c77ae477dc26ec7ea905255ea815a18625",
+    "tokenizer/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "tokenizer/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "inference/policylm_infer.py": "f984ecddd9068fc83545fc6a361ea8c2d4cc41123699135d24f9371511a99677",
+    "inference/quickstart.py": "73dba3c79864bc8cef3246ddd82dad1535eab7f5a53785f28b55bf709eaaa02c",
+    "inference/bidirlm/config.json": "bf8956c86080e8dd947d6f5f636a3c224f875f4c038c1c13a298aa31dd123b0c",
+    "inference/bidirlm/modeling_bidirlm.py": "b12c7ec7f31f99f0c033ea2ecf968cb8425aa4adceafbf22a4119e37cec6f257",
+    "inference/bidirlm/configuration_bidirlm.py": "54dde79c0993c97af988cb33323927da81d858306667b692d8e0763bc663b9e5"
+  }
+}

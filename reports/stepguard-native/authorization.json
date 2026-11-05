@@ -1,0 +1,9 @@
+{
+  "approved": true,
+  "experiment_cap_usd": 8.0,
+  "gpu_and_storage_cap_usd": 6.0,
+  "jev_cap_usd": 2.0,
+  "prior_remaining_usd": 9.053013164,
+  "basis": "User approved implementing the StepGuard plan; existing unused benchmark authorization, not new credit.",
+  "created_utc": "2026-11-05T01:03:13.771667+00:00"
+}
