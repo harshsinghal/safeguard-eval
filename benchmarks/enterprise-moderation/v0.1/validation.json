@@ -1,0 +1,39 @@
+{
+  "calibration_cases": 192,
+  "calibration_groups": 172,
+  "checked_utc": "2026-11-05T20:34:31.410185+00:00",
+  "evaluation_cases": 983,
+  "evaluation_groups": 896,
+  "missing_tracks": [],
+  "moderation_model_inference": false,
+  "private_inputs_checked": true,
+  "profile_weight_sums": {
+    "enterprise_reference_v0": 1.0,
+    "equal_task_v0": 1.0
+  },
+  "tracks": 14,
+  "trivial_baselines": {
+    "always_ALLOW": {
+      "accuracy": 0.4852492370295015,
+      "profiles": {
+        "enterprise_reference_v0": 48.33333333333334,
+        "equal_task_v0": 47.61904761904761
+      }
+    },
+    "always_BLOCK": {
+      "accuracy": 0.47812817904374366,
+      "profiles": {
+        "enterprise_reference_v0": 48.33333333333334,
+        "equal_task_v0": 47.61904761904761
+      }
+    },
+    "always_REVIEW": {
+      "accuracy": 0.03662258392675483,
+      "profiles": {
+        "enterprise_reference_v0": 3.3333333333333335,
+        "equal_task_v0": 4.761904761904762
+      }
+    }
+  },
+  "valid": true
+}

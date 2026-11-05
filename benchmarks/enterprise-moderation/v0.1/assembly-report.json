@@ -1,0 +1,57 @@
+{
+  "calibration": 192,
+  "candidate_pool_before_grouping": 15016,
+  "clusters": 145,
+  "created_utc": "2026-11-05T20:34:31.411694+00:00",
+  "embedded_cases": 14878,
+  "embedding_seconds": 112.59080357199855,
+  "encoder": {
+    "batch_size": 16,
+    "device": "cpu",
+    "pooling": "attention-mask mean and L2 normalization",
+    "repo": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "threads": 4,
+    "view_tokens": 224,
+    "width": 384
+  },
+  "evaluation": 983,
+  "gpu_used": false,
+  "inference_api_usd": 0,
+  "labels": {
+    "ALLOW": 477,
+    "BLOCK": 470,
+    "REVIEW": 36
+  },
+  "lengths": {
+    "long": 50,
+    "medium": 278,
+    "short": 655
+  },
+  "maximum_input_bytes": 18838,
+  "moderation_model_evaluations": 0,
+  "moderation_model_outputs_used": false,
+  "provider_gpu_usd": 0,
+  "python": "3.12.16",
+  "raw_source_text_or_embeddings_published": false,
+  "reference_tiers": {
+    "ai_authored_unadjudicated": 109,
+    "human_majority_with_disagreement": 63,
+    "human_test_model_assisted_development": 63,
+    "largely_synthetic_source_labels": 62,
+    "mixed_model_and_benign_package_labels": 62,
+    "mixed_source_labels": 62,
+    "predominantly_synthetic_research_only": 62,
+    "released_attack_intent_not_success": 62,
+    "source_benign_stress_labels": 63,
+    "source_intent_mapping_dual_use_ambiguity": 63,
+    "source_labels_context_ambiguity": 62,
+    "synthetic_automatically_reviewed": 250
+  },
+  "review_status": "pending independent adjudication",
+  "scored_sources": 13,
+  "selected_clusters": 145,
+  "source_risk_buckets_omitted": {},
+  "tasks": 14,
+  "unit_tests_passed": 20
+}

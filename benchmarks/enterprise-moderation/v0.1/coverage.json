@@ -1,0 +1,1203 @@
+{
+  "agent_actions": {
+    "calibration": {
+      "available_risks": [
+        "corrupted_tool_feedback",
+        "direct_prompt_injection",
+        "indirect_prompt_injection",
+        "inherent_agent_failure",
+        "malicious_tool_execution",
+        "malicious_user_instruction_or_jailbreak",
+        "none",
+        "tool_description_injection",
+        "unreliable_or_misinformation"
+      ],
+      "groups": 15,
+      "label_targets": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "labels": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "length_bands": {
+        "long": 3,
+        "medium": 8,
+        "short": 5
+      },
+      "pool_topics": 12,
+      "risks": {
+        "corrupted_tool_feedback": 2,
+        "direct_prompt_injection": 1,
+        "indirect_prompt_injection": 1,
+        "inherent_agent_failure": 2,
+        "malicious_tool_execution": 2,
+        "malicious_user_instruction_or_jailbreak": 3,
+        "none": 2,
+        "tool_description_injection": 1,
+        "unreliable_or_misinformation": 2
+      },
+      "selected": 16,
+      "status": "selected",
+      "target": 16,
+      "topics": {
+        "1": 2,
+        "10": 1,
+        "11": 2,
+        "3": 1,
+        "5": 1,
+        "6": 2,
+        "7": 2,
+        "8": 5
+      }
+    },
+    "evaluation": {
+      "available_risks": [
+        "corrupted_tool_feedback",
+        "direct_prompt_injection",
+        "indirect_prompt_injection",
+        "inherent_agent_failure",
+        "malicious_tool_execution",
+        "malicious_user_instruction_or_jailbreak",
+        "none",
+        "tool_description_injection",
+        "unreliable_or_misinformation"
+      ],
+      "groups": 122,
+      "label_targets": {
+        "ALLOW": 63,
+        "BLOCK": 62
+      },
+      "labels": {
+        "ALLOW": 63,
+        "BLOCK": 62
+      },
+      "length_bands": {
+        "long": 7,
+        "medium": 95,
+        "short": 23
+      },
+      "pool_topics": 12,
+      "risks": {
+        "corrupted_tool_feedback": 13,
+        "direct_prompt_injection": 22,
+        "indirect_prompt_injection": 13,
+        "inherent_agent_failure": 11,
+        "malicious_tool_execution": 17,
+        "malicious_user_instruction_or_jailbreak": 11,
+        "none": 23,
+        "tool_description_injection": 6,
+        "unreliable_or_misinformation": 9
+      },
+      "selected": 125,
+      "status": "selected",
+      "target": 125,
+      "topics": {
+        "0": 6,
+        "1": 4,
+        "10": 24,
+        "11": 6,
+        "2": 10,
+        "3": 16,
+        "4": 9,
+        "5": 4,
+        "6": 11,
+        "7": 6,
+        "8": 19,
+        "9": 10
+      }
+    }
+  },
+  "agent_runs": {
+    "calibration": {
+      "available_risks": [
+        "corrupted_tool_feedback",
+        "direct_prompt_injection",
+        "indirect_prompt_injection",
+        "inherent_agent_failure",
+        "malicious_tool_execution",
+        "malicious_user_instruction_or_jailbreak",
+        "tool_description_injection",
+        "unreliable_or_misinformation"
+      ],
+      "groups": 16,
+      "label_targets": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "labels": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "length_bands": {
+        "long": 3,
+        "medium": 10,
+        "short": 3
+      },
+      "pool_topics": 12,
+      "risks": {
+        "corrupted_tool_feedback": 2,
+        "direct_prompt_injection": 2,
+        "inherent_agent_failure": 3,
+        "malicious_tool_execution": 4,
+        "malicious_user_instruction_or_jailbreak": 2,
+        "tool_description_injection": 3
+      },
+      "selected": 16,
+      "status": "selected",
+      "target": 16,
+      "topics": {
+        "0": 1,
+        "1": 1,
+        "10": 3,
+        "11": 1,
+        "2": 1,
+        "3": 2,
+        "4": 2,
+        "6": 1,
+        "7": 1,
+        "8": 3
+      }
+    },
+    "evaluation": {
+      "available_risks": [
+        "corrupted_tool_feedback",
+        "direct_prompt_injection",
+        "indirect_prompt_injection",
+        "inherent_agent_failure",
+        "malicious_tool_execution",
+        "malicious_user_instruction_or_jailbreak",
+        "tool_description_injection",
+        "unreliable_or_misinformation"
+      ],
+      "groups": 123,
+      "label_targets": {
+        "ALLOW": 63,
+        "BLOCK": 62
+      },
+      "labels": {
+        "ALLOW": 63,
+        "BLOCK": 62
+      },
+      "length_bands": {
+        "long": 14,
+        "medium": 96,
+        "short": 15
+      },
+      "pool_topics": 12,
+      "risks": {
+        "corrupted_tool_feedback": 15,
+        "direct_prompt_injection": 12,
+        "indirect_prompt_injection": 9,
+        "inherent_agent_failure": 22,
+        "malicious_tool_execution": 7,
+        "malicious_user_instruction_or_jailbreak": 17,
+        "tool_description_injection": 18,
+        "unreliable_or_misinformation": 25
+      },
+      "selected": 125,
+      "status": "selected",
+      "target": 125,
+      "topics": {
+        "0": 8,
+        "1": 5,
+        "10": 7,
+        "11": 8,
+        "2": 13,
+        "3": 10,
+        "4": 15,
+        "5": 15,
+        "6": 12,
+        "7": 9,
+        "8": 20,
+        "9": 3
+      }
+    }
+  },
+  "benign_lookalikes": {
+    "calibration": {
+      "selected": 0,
+      "status": "no_development_source",
+      "target": 0
+    },
+    "evaluation": {
+      "available_risks": [
+        "Common Queries",
+        "Multilingual",
+        "Technique Queries",
+        "Virtual Creation"
+      ],
+      "groups": 63,
+      "label_targets": {
+        "ALLOW": 63
+      },
+      "labels": {
+        "ALLOW": 63
+      },
+      "length_bands": {
+        "short": 63
+      },
+      "pool_topics": 12,
+      "risks": {
+        "Common Queries": 15,
+        "Multilingual": 34,
+        "Technique Queries": 10,
+        "Virtual Creation": 4
+      },
+      "selected": 63,
+      "status": "selected",
+      "target": 63,
+      "topics": {
+        "0": 22,
+        "1": 1,
+        "10": 3,
+        "11": 2,
+        "2": 4,
+        "3": 3,
+        "4": 1,
+        "5": 2,
+        "6": 2,
+        "7": 11,
+        "8": 8,
+        "9": 4
+      }
+    }
+  },
+  "custom_policy": {
+    "calibration": {
+      "available_risks": [
+        "unspecified"
+      ],
+      "groups": 8,
+      "label_targets": {
+        "ALLOW": 6,
+        "BLOCK": 5,
+        "REVIEW": 5
+      },
+      "labels": {
+        "ALLOW": 6,
+        "BLOCK": 5,
+        "REVIEW": 5
+      },
+      "length_bands": {
+        "short": 16
+      },
+      "pool_topics": 2,
+      "risks": {
+        "unspecified": 16
+      },
+      "selected": 16,
+      "status": "selected",
+      "target": 16,
+      "topics": {
+        "1": 12,
+        "3": 4
+      }
+    },
+    "evaluation": {
+      "available_risks": [
+        "unspecified"
+      ],
+      "groups": 16,
+      "label_targets": {
+        "ALLOW": 21,
+        "BLOCK": 21,
+        "REVIEW": 21
+      },
+      "labels": {
+        "ALLOW": 16,
+        "BLOCK": 16,
+        "REVIEW": 16
+      },
+      "length_bands": {
+        "short": 48
+      },
+      "pool_topics": 5,
+      "risks": {
+        "unspecified": 48
+      },
+      "selected": 48,
+      "status": "capacity_shortfall",
+      "target": 63,
+      "topics": {
+        "0": 5,
+        "1": 23,
+        "2": 3,
+        "3": 14,
+        "4": 3
+      }
+    }
+  },
+  "cyber_requests": {
+    "calibration": {
+      "available_risks": [
+        "C2",
+        "Collection",
+        "Discovery",
+        "Evasion",
+        "Execution",
+        "Exfil",
+        "Lateral Movement",
+        "Persistence",
+        "Privilege Escalation",
+        "Recon",
+        "benign_system_change"
+      ],
+      "groups": 16,
+      "label_targets": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "labels": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "length_bands": {
+        "short": 16
+      },
+      "pool_topics": 12,
+      "risks": {
+        "Collection": 1,
+        "Evasion": 4,
+        "Execution": 1,
+        "Exfil": 1,
+        "Recon": 1,
+        "benign_system_change": 8
+      },
+      "selected": 16,
+      "status": "selected",
+      "target": 16,
+      "topics": {
+        "0": 3,
+        "10": 2,
+        "11": 2,
+        "2": 1,
+        "3": 2,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 2,
+        "9": 1
+      }
+    },
+    "evaluation": {
+      "available_risks": [
+        "C2",
+        "Collection",
+        "Discovery",
+        "Evasion",
+        "Execution",
+        "Exfil",
+        "Lateral Movement",
+        "Persistence",
+        "Privilege Escalation",
+        "Recon",
+        "benign_system_change"
+      ],
+      "groups": 63,
+      "label_targets": {
+        "ALLOW": 32,
+        "BLOCK": 31
+      },
+      "labels": {
+        "ALLOW": 32,
+        "BLOCK": 31
+      },
+      "length_bands": {
+        "short": 63
+      },
+      "pool_topics": 12,
+      "risks": {
+        "C2": 4,
+        "Collection": 3,
+        "Discovery": 3,
+        "Evasion": 9,
+        "Execution": 2,
+        "Exfil": 3,
+        "Lateral Movement": 3,
+        "Persistence": 2,
+        "Privilege Escalation": 1,
+        "Recon": 1,
+        "benign_system_change": 32
+      },
+      "selected": 63,
+      "status": "selected",
+      "target": 63,
+      "topics": {
+        "0": 3,
+        "1": 5,
+        "10": 4,
+        "11": 3,
+        "2": 6,
+        "3": 8,
+        "4": 6,
+        "5": 10,
+        "6": 7,
+        "7": 2,
+        "8": 5,
+        "9": 4
+      }
+    }
+  },
+  "harmful_requests": {
+    "calibration": {
+      "available_risks": [
+        "benign",
+        "causing_material_harm_by_disseminating_misinformation",
+        "copyright_violations",
+        "cyberattack",
+        "defamation_encouraging_unethical_or_unsafe_actions",
+        "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns",
+        "fraud_assisting_illegal_activities",
+        "mental_health_over-reliance_crisis",
+        "others",
+        "private_information_individual",
+        "sensitive_information_organization_government",
+        "sexual_content",
+        "social_stereotypes_and_unfair_discrimination",
+        "toxic_language_hate_speech",
+        "violence_and_physical_harm"
+      ],
+      "groups": 16,
+      "label_targets": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "labels": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "length_bands": {
+        "long": 1,
+        "medium": 2,
+        "short": 13
+      },
+      "pool_topics": 12,
+      "risks": {
+        "benign": 8,
+        "copyright_violations": 1,
+        "fraud_assisting_illegal_activities": 1,
+        "mental_health_over-reliance_crisis": 1,
+        "others": 3,
+        "sensitive_information_organization_government": 1,
+        "violence_and_physical_harm": 1
+      },
+      "selected": 16,
+      "status": "selected",
+      "target": 16,
+      "topics": {
+        "0": 1,
+        "1": 2,
+        "10": 3,
+        "11": 2,
+        "2": 1,
+        "4": 3,
+        "5": 1,
+        "6": 1,
+        "8": 1,
+        "9": 1
+      }
+    },
+    "evaluation": {
+      "available_risks": [
+        "benign",
+        "causing_material_harm_by_disseminating_misinformation",
+        "copyright_violations",
+        "cyberattack",
+        "defamation_encouraging_unethical_or_unsafe_actions",
+        "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns",
+        "fraud_assisting_illegal_activities",
+        "mental_health_over-reliance_crisis",
+        "others",
+        "private_information_individual",
+        "sensitive_information_organization_government",
+        "sexual_content",
+        "social_stereotypes_and_unfair_discrimination",
+        "toxic_language_hate_speech",
+        "violence_and_physical_harm"
+      ],
+      "groups": 63,
+      "label_targets": {
+        "ALLOW": 32,
+        "BLOCK": 31
+      },
+      "labels": {
+        "ALLOW": 32,
+        "BLOCK": 31
+      },
+      "length_bands": {
+        "medium": 2,
+        "short": 61
+      },
+      "pool_topics": 12,
+      "risks": {
+        "benign": 32,
+        "causing_material_harm_by_disseminating_misinformation": 1,
+        "copyright_violations": 2,
+        "cyberattack": 5,
+        "defamation_encouraging_unethical_or_unsafe_actions": 2,
+        "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 2,
+        "fraud_assisting_illegal_activities": 2,
+        "mental_health_over-reliance_crisis": 1,
+        "others": 3,
+        "private_information_individual": 3,
+        "sensitive_information_organization_government": 1,
+        "sexual_content": 3,
+        "social_stereotypes_and_unfair_discrimination": 2,
+        "toxic_language_hate_speech": 2,
+        "violence_and_physical_harm": 2
+      },
+      "selected": 63,
+      "status": "selected",
+      "target": 63,
+      "topics": {
+        "0": 2,
+        "1": 8,
+        "10": 5,
+        "11": 7,
+        "2": 6,
+        "3": 4,
+        "4": 10,
+        "5": 5,
+        "6": 4,
+        "7": 4,
+        "8": 4,
+        "9": 4
+      }
+    }
+  },
+  "hate_speech": {
+    "calibration": {
+      "available_risks": [
+        "hatespeech",
+        "normal",
+        "offensive"
+      ],
+      "groups": 16,
+      "label_targets": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "labels": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "length_bands": {
+        "short": 16
+      },
+      "pool_topics": 12,
+      "risks": {
+        "hatespeech": 8,
+        "normal": 3,
+        "offensive": 5
+      },
+      "selected": 16,
+      "status": "selected",
+      "target": 16,
+      "topics": {
+        "0": 2,
+        "1": 1,
+        "10": 1,
+        "11": 2,
+        "2": 2,
+        "3": 3,
+        "4": 2,
+        "5": 1,
+        "6": 1,
+        "8": 1
+      }
+    },
+    "evaluation": {
+      "available_risks": [
+        "hatespeech",
+        "normal",
+        "offensive"
+      ],
+      "groups": 63,
+      "label_targets": {
+        "ALLOW": 32,
+        "BLOCK": 31
+      },
+      "labels": {
+        "ALLOW": 32,
+        "BLOCK": 31
+      },
+      "length_bands": {
+        "short": 63
+      },
+      "pool_topics": 12,
+      "risks": {
+        "hatespeech": 31,
+        "normal": 20,
+        "offensive": 12
+      },
+      "selected": 63,
+      "status": "selected",
+      "target": 63,
+      "topics": {
+        "0": 2,
+        "1": 2,
+        "10": 7,
+        "11": 5,
+        "2": 10,
+        "3": 13,
+        "4": 3,
+        "5": 3,
+        "6": 9,
+        "7": 4,
+        "8": 3,
+        "9": 2
+      }
+    }
+  },
+  "injection_context": {
+    "calibration": {
+      "available_risks": [
+        "unspecified"
+      ],
+      "groups": 5,
+      "label_targets": {
+        "ALLOW": 6,
+        "BLOCK": 5,
+        "REVIEW": 5
+      },
+      "labels": {
+        "ALLOW": 6,
+        "BLOCK": 5,
+        "REVIEW": 5
+      },
+      "length_bands": {
+        "short": 16
+      },
+      "pool_topics": 4,
+      "risks": {
+        "unspecified": 16
+      },
+      "selected": 16,
+      "status": "selected",
+      "target": 16,
+      "topics": {
+        "1": 2,
+        "2": 4,
+        "4": 6,
+        "5": 4
+      }
+    },
+    "evaluation": {
+      "available_risks": [
+        "unspecified"
+      ],
+      "groups": 20,
+      "label_targets": {
+        "ALLOW": 21,
+        "BLOCK": 21,
+        "REVIEW": 21
+      },
+      "labels": {
+        "ALLOW": 21,
+        "BLOCK": 20,
+        "REVIEW": 20
+      },
+      "length_bands": {
+        "short": 61
+      },
+      "pool_topics": 6,
+      "risks": {
+        "unspecified": 61
+      },
+      "selected": 61,
+      "status": "capacity_shortfall",
+      "target": 63,
+      "topics": {
+        "0": 8,
+        "1": 5,
+        "2": 7,
+        "3": 5,
+        "4": 20,
+        "5": 16
+      }
+    }
+  },
+  "injection_deepset": {
+    "calibration": {
+      "available_risks": [
+        "unspecified"
+      ],
+      "groups": 16,
+      "label_targets": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "labels": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "length_bands": {
+        "short": 16
+      },
+      "pool_topics": 8,
+      "risks": {
+        "unspecified": 16
+      },
+      "selected": 16,
+      "status": "selected",
+      "target": 16,
+      "topics": {
+        "0": 1,
+        "1": 2,
+        "2": 4,
+        "3": 1,
+        "4": 4,
+        "5": 2,
+        "6": 1,
+        "7": 1
+      }
+    },
+    "evaluation": {
+      "available_risks": [
+        "unspecified"
+      ],
+      "groups": 62,
+      "label_targets": {
+        "ALLOW": 31,
+        "BLOCK": 31
+      },
+      "labels": {
+        "ALLOW": 31,
+        "BLOCK": 31
+      },
+      "length_bands": {
+        "short": 62
+      },
+      "pool_topics": 8,
+      "risks": {
+        "unspecified": 62
+      },
+      "selected": 62,
+      "status": "selected",
+      "target": 62,
+      "topics": {
+        "0": 6,
+        "1": 5,
+        "2": 5,
+        "3": 17,
+        "4": 6,
+        "5": 6,
+        "6": 4,
+        "7": 13
+      }
+    }
+  },
+  "injection_xtram": {
+    "calibration": {
+      "available_risks": [
+        "unspecified"
+      ],
+      "groups": 16,
+      "label_targets": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "labels": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "length_bands": {
+        "medium": 2,
+        "short": 14
+      },
+      "pool_topics": 12,
+      "risks": {
+        "unspecified": 16
+      },
+      "selected": 16,
+      "status": "selected",
+      "target": 16,
+      "topics": {
+        "0": 1,
+        "1": 2,
+        "10": 1,
+        "11": 3,
+        "2": 1,
+        "4": 3,
+        "7": 2,
+        "8": 2,
+        "9": 1
+      }
+    },
+    "evaluation": {
+      "available_risks": [
+        "unspecified"
+      ],
+      "groups": 62,
+      "label_targets": {
+        "ALLOW": 31,
+        "BLOCK": 31
+      },
+      "labels": {
+        "ALLOW": 31,
+        "BLOCK": 31
+      },
+      "length_bands": {
+        "long": 2,
+        "medium": 5,
+        "short": 55
+      },
+      "pool_topics": 12,
+      "risks": {
+        "unspecified": 62
+      },
+      "selected": 62,
+      "status": "selected",
+      "target": 62,
+      "topics": {
+        "0": 6,
+        "1": 11,
+        "10": 2,
+        "11": 7,
+        "2": 2,
+        "3": 2,
+        "4": 13,
+        "5": 4,
+        "6": 3,
+        "7": 7,
+        "8": 2,
+        "9": 3
+      }
+    }
+  },
+  "jailbreak_attempts": {
+    "calibration": {
+      "selected": 0,
+      "status": "no_development_source",
+      "target": 0
+    },
+    "evaluation": {
+      "available_risks": [
+        "Disinformation",
+        "Economic harm",
+        "Expert advice",
+        "Fraud/Deception",
+        "Government decision-making",
+        "Harassment/Discrimination",
+        "Malware/Hacking",
+        "Physical harm",
+        "Privacy",
+        "Sexual/Adult content"
+      ],
+      "groups": 62,
+      "label_targets": {
+        "BLOCK": 62
+      },
+      "labels": {
+        "BLOCK": 62
+      },
+      "length_bands": {
+        "short": 62
+      },
+      "pool_topics": 10,
+      "risks": {
+        "Disinformation": 6,
+        "Economic harm": 6,
+        "Expert advice": 7,
+        "Fraud/Deception": 3,
+        "Government decision-making": 5,
+        "Harassment/Discrimination": 7,
+        "Malware/Hacking": 5,
+        "Physical harm": 6,
+        "Privacy": 7,
+        "Sexual/Adult content": 10
+      },
+      "selected": 62,
+      "status": "selected",
+      "target": 62,
+      "topics": {
+        "0": 5,
+        "1": 8,
+        "2": 5,
+        "3": 5,
+        "4": 10,
+        "5": 7,
+        "6": 5,
+        "7": 6,
+        "8": 6,
+        "9": 5
+      }
+    }
+  },
+  "skill_packages": {
+    "calibration": {
+      "available_risks": [
+        "CI",
+        "MIXED",
+        "PI",
+        "benign",
+        "unknown"
+      ],
+      "groups": 16,
+      "label_targets": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "labels": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "length_bands": {
+        "long": 7,
+        "medium": 6,
+        "short": 3
+      },
+      "pool_topics": 12,
+      "risks": {
+        "CI": 1,
+        "MIXED": 1,
+        "PI": 5,
+        "benign": 8,
+        "unknown": 1
+      },
+      "selected": 16,
+      "status": "selected",
+      "target": 16,
+      "topics": {
+        "0": 1,
+        "10": 1,
+        "11": 2,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "6": 3,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      }
+    },
+    "evaluation": {
+      "available_risks": [
+        "CI",
+        "MIXED",
+        "PI",
+        "benign",
+        "unknown"
+      ],
+      "groups": 62,
+      "label_targets": {
+        "ALLOW": 31,
+        "BLOCK": 31
+      },
+      "labels": {
+        "ALLOW": 31,
+        "BLOCK": 31
+      },
+      "length_bands": {
+        "long": 27,
+        "medium": 28,
+        "short": 7
+      },
+      "pool_topics": 12,
+      "risks": {
+        "CI": 8,
+        "MIXED": 3,
+        "PI": 18,
+        "benign": 31,
+        "unknown": 2
+      },
+      "selected": 62,
+      "status": "selected",
+      "target": 62,
+      "topics": {
+        "0": 3,
+        "1": 6,
+        "10": 4,
+        "11": 9,
+        "2": 3,
+        "3": 4,
+        "4": 8,
+        "5": 4,
+        "6": 4,
+        "7": 4,
+        "8": 6,
+        "9": 7
+      }
+    }
+  },
+  "skill_text": {
+    "calibration": {
+      "available_risks": [
+        "credential_access",
+        "data_exfiltration_disclosure",
+        "dependency_supply_chain",
+        "execution_code_delivery",
+        "instruction_goal_memory_manipulation",
+        "persistence_control",
+        "privilege_tool_authority_abuse",
+        "resource_availability_abuse",
+        "unspecified"
+      ],
+      "groups": 16,
+      "label_targets": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "labels": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "length_bands": {
+        "medium": 14,
+        "short": 2
+      },
+      "pool_topics": 10,
+      "risks": {
+        "credential_access": 1,
+        "data_exfiltration_disclosure": 1,
+        "execution_code_delivery": 2,
+        "instruction_goal_memory_manipulation": 2,
+        "resource_availability_abuse": 1,
+        "unspecified": 9
+      },
+      "selected": 16,
+      "status": "selected",
+      "target": 16,
+      "topics": {
+        "0": 1,
+        "10": 1,
+        "11": 5,
+        "2": 2,
+        "4": 2,
+        "6": 2,
+        "7": 1,
+        "9": 2
+      }
+    },
+    "evaluation": {
+      "available_risks": [
+        "credential_access",
+        "data_exfiltration_disclosure",
+        "defense_evasion_obfuscation",
+        "dependency_supply_chain",
+        "execution_code_delivery",
+        "instruction_goal_memory_manipulation",
+        "persistence_control",
+        "privilege_tool_authority_abuse",
+        "resource_availability_abuse",
+        "unspecified"
+      ],
+      "groups": 62,
+      "label_targets": {
+        "ALLOW": 31,
+        "BLOCK": 31
+      },
+      "labels": {
+        "ALLOW": 31,
+        "BLOCK": 31
+      },
+      "length_bands": {
+        "medium": 29,
+        "short": 33
+      },
+      "pool_topics": 12,
+      "risks": {
+        "credential_access": 1,
+        "data_exfiltration_disclosure": 3,
+        "defense_evasion_obfuscation": 1,
+        "dependency_supply_chain": 1,
+        "execution_code_delivery": 1,
+        "instruction_goal_memory_manipulation": 2,
+        "persistence_control": 1,
+        "privilege_tool_authority_abuse": 1,
+        "resource_availability_abuse": 2,
+        "unspecified": 49
+      },
+      "selected": 62,
+      "status": "selected",
+      "target": 62,
+      "topics": {
+        "0": 5,
+        "1": 4,
+        "10": 5,
+        "11": 3,
+        "2": 7,
+        "3": 3,
+        "4": 4,
+        "5": 6,
+        "6": 3,
+        "7": 4,
+        "8": 13,
+        "9": 5
+      }
+    }
+  },
+  "source_code": {
+    "calibration": {
+      "available_risks": [
+        "unspecified"
+      ],
+      "groups": 16,
+      "label_targets": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "labels": {
+        "ALLOW": 8,
+        "BLOCK": 8
+      },
+      "length_bands": {
+        "medium": 3,
+        "short": 13
+      },
+      "pool_topics": 7,
+      "risks": {
+        "unspecified": 16
+      },
+      "selected": 16,
+      "status": "selected",
+      "target": 16,
+      "topics": {
+        "1": 2,
+        "2": 3,
+        "3": 3,
+        "4": 2,
+        "5": 1,
+        "6": 4,
+        "7": 1
+      }
+    },
+    "evaluation": {
+      "available_risks": [
+        "unspecified"
+      ],
+      "groups": 56,
+      "label_targets": {
+        "ALLOW": 31,
+        "BLOCK": 31
+      },
+      "labels": {
+        "ALLOW": 31,
+        "BLOCK": 31
+      },
+      "length_bands": {
+        "medium": 23,
+        "short": 39
+      },
+      "pool_topics": 8,
+      "risks": {
+        "unspecified": 62
+      },
+      "selected": 62,
+      "status": "selected",
+      "target": 62,
+      "topics": {
+        "0": 2,
+        "1": 7,
+        "2": 7,
+        "3": 6,
+        "4": 10,
+        "5": 12,
+        "6": 15,
+        "7": 3
+      }
+    }
+  }
+}

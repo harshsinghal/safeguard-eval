@@ -1,0 +1,178 @@
+{
+  "agent_actions": {
+    "domain": "agent",
+    "family": "stepguard",
+    "group_namespace": "stepguard",
+    "labels": [
+      "ALLOW",
+      "BLOCK"
+    ],
+    "source": "ninty-seven/stepguard_data",
+    "tier": "synthetic_automatically_reviewed",
+    "title": "Pending agent actions in context"
+  },
+  "agent_runs": {
+    "domain": "agent",
+    "family": "stepguard",
+    "group_namespace": "stepguard",
+    "labels": [
+      "ALLOW",
+      "BLOCK"
+    ],
+    "source": "ninty-seven/stepguard_data",
+    "tier": "synthetic_automatically_reviewed",
+    "title": "Completed agent-run audits"
+  },
+  "benign_lookalikes": {
+    "domain": "injection",
+    "family": "injections",
+    "group_namespace": "injection",
+    "labels": [
+      "ALLOW"
+    ],
+    "policy_path": "evals/injection/binary-policy.json",
+    "source": "leolee99/NotInject",
+    "tier": "source_benign_stress_labels",
+    "title": "Benign injection lookalikes"
+  },
+  "custom_policy": {
+    "domain": "custom_policy",
+    "family": "synthetic",
+    "group_namespace": "iconography",
+    "labels": [
+      "ALLOW",
+      "BLOCK",
+      "REVIEW"
+    ],
+    "policy_path": "evals/policy.json",
+    "source": "project_synthetic_iconography",
+    "tier": "ai_authored_unadjudicated",
+    "title": "Configurable image-prompt policy"
+  },
+  "cyber_requests": {
+    "domain": "cyber",
+    "family": "cyber",
+    "group_namespace": "cyber",
+    "labels": [
+      "ALLOW",
+      "BLOCK"
+    ],
+    "source": "meta-llama/PurpleLlama",
+    "tier": "source_intent_mapping_dual_use_ambiguity",
+    "title": "Cyber abuse versus legitimate administration"
+  },
+  "harmful_requests": {
+    "domain": "content",
+    "family": "wildguard",
+    "group_namespace": "wildguard",
+    "labels": [
+      "ALLOW",
+      "BLOCK"
+    ],
+    "policy_path": "evals/wildguard/policies/p0.json",
+    "source": "allenai/wildguardmix",
+    "tier": "human_test_model_assisted_development",
+    "title": "Harmful user requests"
+  },
+  "hate_speech": {
+    "domain": "content",
+    "family": "hatexplain",
+    "group_namespace": "hatexplain",
+    "labels": [
+      "ALLOW",
+      "BLOCK"
+    ],
+    "policy_path": "evals/hatexplain/policies/p0.json",
+    "source": "hate-alert/HateXplain",
+    "tier": "human_majority_with_disagreement",
+    "title": "Hate versus offensive/normal speech"
+  },
+  "injection_context": {
+    "domain": "injection",
+    "family": "synthetic",
+    "group_namespace": "synthetic_injection",
+    "labels": [
+      "ALLOW",
+      "BLOCK",
+      "REVIEW"
+    ],
+    "policy_path": "evals/injection/policy.json",
+    "source": "project_synthetic_injection",
+    "tier": "ai_authored_unadjudicated",
+    "title": "Injection/context ambiguity"
+  },
+  "injection_deepset": {
+    "domain": "injection",
+    "family": "injections",
+    "group_namespace": "injection",
+    "labels": [
+      "ALLOW",
+      "BLOCK"
+    ],
+    "policy_path": "evals/injection/binary-policy.json",
+    "source": "deepset/prompt-injections",
+    "tier": "source_labels_context_ambiguity",
+    "title": "Deepset instruction-boundary attacks"
+  },
+  "injection_xtram": {
+    "domain": "injection",
+    "family": "injections",
+    "group_namespace": "injection",
+    "labels": [
+      "ALLOW",
+      "BLOCK"
+    ],
+    "policy_path": "evals/injection/binary-policy.json",
+    "source": "xTRam1/safe-guard-prompt-injection",
+    "tier": "largely_synthetic_source_labels",
+    "title": "xTRam1 injection collection"
+  },
+  "jailbreak_attempts": {
+    "domain": "injection",
+    "family": "injections",
+    "group_namespace": "injection",
+    "labels": [
+      "BLOCK"
+    ],
+    "policy_path": "evals/injection/binary-policy.json",
+    "source": "JailbreakBench/artifacts",
+    "tier": "released_attack_intent_not_success",
+    "title": "Released jailbreak-attempt detection"
+  },
+  "skill_packages": {
+    "domain": "artifacts",
+    "family": "skill_packages",
+    "group_namespace": "malskill",
+    "labels": [
+      "ALLOW",
+      "BLOCK"
+    ],
+    "source": "lxyeternal/MalSkillBench",
+    "tier": "predominantly_synthetic_research_only",
+    "title": "Complete textual skill packages"
+  },
+  "skill_text": {
+    "domain": "artifacts",
+    "family": "artifacts",
+    "group_namespace": "maliciousskill",
+    "labels": [
+      "ALLOW",
+      "BLOCK"
+    ],
+    "source": "ProtectSkills/MaliciousSkillBench",
+    "tier": "mixed_source_labels",
+    "title": "Static agent-skill text"
+  },
+  "source_code": {
+    "domain": "artifacts",
+    "family": "artifacts",
+    "group_namespace": "omc",
+    "labels": [
+      "ALLOW",
+      "BLOCK"
+    ],
+    "source": "False-Positive-Community/open-malicious-code-benchmark",
+    "tier": "mixed_model_and_benign_package_labels",
+    "title": "Static source-file screening"
+  }
+}
