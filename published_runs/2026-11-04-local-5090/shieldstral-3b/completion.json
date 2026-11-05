@@ -1,0 +1,19 @@
+{
+  "utc": "2026-11-05T06:43:46.948181+00:00",
+  "status": "complete",
+  "wall_seconds": 254.47257478600022,
+  "final_gpu": {
+    "utc": "2026-11-05T06:43:46.965346+00:00",
+    "temperature_c": 35.0,
+    "power_w": 82.64,
+    "utilization_percent": 1.0,
+    "memory_mib": 1801.0,
+    "power_limit_w": 575.0
+  },
+  "torch_allocated_bytes": 8519680,
+  "torch_reserved_bytes": 20971520,
+  "peak_torch_allocated_bytes": 7812353536,
+  "provider_cost_usd": 0,
+  "clock_changes": false,
+  "power_limit_changes": false
+}

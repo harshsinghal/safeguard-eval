@@ -1,0 +1,16 @@
+{
+  "observed_utc": "2026-11-05T06:46:38.549980+00:00",
+  "inference_process_exited": true,
+  "active_python_gpu_pids": [],
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5090",
+    "temperature.gpu": "38",
+    "power.draw [W]": "41.35 W",
+    "power.limit [W]": "575.00 W",
+    "memory.used [MiB]": "1136 MiB",
+    "utilization.gpu [%]": "2 %"
+  },
+  "provider_resources_created": false,
+  "clock_changes": false,
+  "power_limit_changes": false
+}

@@ -1,0 +1,35 @@
+{
+  "utc": "2026-11-05T06:41:29.819938+00:00",
+  "sources": {
+    "evals/local_gpu_reproduction.py": "f389f22dc106a6fd05d2c67c1e3560e64e8965cd36d629ed6772e40d50ea8df9",
+    "evals/run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986",
+    "evals/calibrate.py": "16ed575ba667a35f3b7dbe672733fa82bee063ca7dbbf2033d0db3536bb7b2a0",
+    "evals/injection/calibration.py": "e0920e8855265ff9a025907b9b3cfa13f5a9d4414cffa50fbd181539704bd8f7",
+    "evals/qwen_policy/run.py": "837baa4f70eb150062d647e90779f23f13363d90ba71fbf181205ebde59dea16"
+  },
+  "model": {
+    "repo": "mistralai/Shieldstral-1.0-3B",
+    "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5"
+  },
+  "thresholds": {
+    "iconography": [
+      0.05,
+      0.15
+    ],
+    "injection-challenge": [
+      0.65,
+      0.9
+    ],
+    "deepset": [
+      0.05,
+      0.05
+    ]
+  },
+  "dev_predictions": {
+    "iconography": "6ac3006011a4d1a612a1a86dc33832524db0657092d77ea0db48192c168cbc73",
+    "injection-challenge": "896d789903cacbdf9ec27df445d9cc550c91ab94e309ea1bf2f398e8c8b29cdd",
+    "deepset": "1c3e5e2ad6b960f6482c9431a01afc8c20735c1f2faa9d2cbf06afba77e434bf"
+  },
+  "registration_sha256": "5a72d046da47c1f50d6f201703bc8c42c5b1733cf33ff93dbd7279061c352aa6",
+  "new_test_inference_started": false
+}
