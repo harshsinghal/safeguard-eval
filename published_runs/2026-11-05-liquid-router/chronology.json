@@ -1,0 +1,8 @@
+{
+  "registration_written": "2026-11-05T21:51:56.056327+00:00",
+  "first_validation_control_written": "2026-11-05T21:52:53.891823+00:00",
+  "selection_freeze_written": "2026-11-05T22:16:46.503406+00:00",
+  "fp32_result_written": "2026-11-05T22:29:21.236870+00:00",
+  "int8_result_written": "2026-11-05T22:31:20.881925+00:00",
+  "interpretation": "Observed local filesystem timestamps, not an independently witnessed public preregistration"
+}

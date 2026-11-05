@@ -1,0 +1,147 @@
+{
+  "budget_stopped": false,
+  "checkpoint": "checkpoints/epoch-1",
+  "checkpoint_hashes": {
+    "backbone/config.json": "fa83eac5a4a853b5728e06c49ba89f90ee1308216be811ca9e6261f537874472",
+    "backbone/model.safetensors": "61cb56c32829ddc7cecb5d496384a8546990e0395df7bf720dbf7fea07213000",
+    "backbone/modeling_lfm2_bidirectional.py": "f171f518be2a07da48b17fdea5655cad0a2452ab548e90e8ae903143686647e2",
+    "head.safetensors": "1ef9638bfc1daf7dda5a1ff2dd0b6e246c17c80cbd61cc43cbbc89a99d6ca6ac",
+    "router.json": "24fcd7bb00d6b5c8b35ce75e2098e5db061411c0ac72b5ade3a1430db4eba0b1",
+    "tokenizer/tokenizer.json": "1efc3a6609abf6b63b1f47188d139f3b59973a6a434dffe970a7261a51ed2711",
+    "tokenizer/tokenizer_config.json": "5daf6a7e6028f480fda736b033f5963dd50e28c7de56caad112413645610b51e"
+  },
+  "code_hashes": {
+    "docs/liquid-router/PLAN.md": "107dc08c8b58e175801e7d99521edf5f8162f04815ff1f33fe41496f3ebbb3e5",
+    "docs/liquid-router/protocol.json": "a68205a8cdea37967804b30bbf49406c984aa3f04681497fd274320f3a7c890c",
+    "evals/liquid_router/__init__.py": "a4830f0d3bcd076fa0aff128551922bf58de4fccf3678c222d351d2f292cfd71",
+    "evals/liquid_router/common.py": "242e2ddb87e2ae8403dadda5675189db7b405e0d23a4b3a91dfcd46a4a8b89c4",
+    "evals/liquid_router/model.py": "e03fceb4e09f841b91973305208e3c17c84b17922d1df71e5e186e49b1485d03",
+    "evals/liquid_router/prepare.py": "c8c6b40627c6fec9f91e98787da45d073209a2bf4e14310d40f929f349a1db61",
+    "evals/liquid_router/study.py": "848a102dfe409c1a487c3d76a40e3b967e90405a0c43b134602dba9fb7a24274"
+  },
+  "elapsed_seconds": 1429.5957932469973,
+  "policy": {
+    "candidate_count": 1,
+    "coverage_grid": {
+      "1": 0.971764705882353,
+      "2": 0.9976470588235294,
+      "3": 0.9988235294117647
+    },
+    "coverage_target_met": true,
+    "fallback_below": 0.6,
+    "temperature": 2.0,
+    "validation_candidate_coverage": 0.971764705882353
+  },
+  "registration_sha256": "7336b1ec48d43296592a9960661cf33bf90abe16c56d7d2f200234ddaab4c573",
+  "validation": {
+    "accuracy": 0.971764705882353,
+    "candidate_count": 1,
+    "candidate_coverage": 0.971764705882353,
+    "confusion_matrix": [
+      [
+        124,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        91,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        126,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        115,
+        0,
+        13,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        128,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        8,
+        0,
+        117,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        125
+      ]
+    ],
+    "excluded_unsupported": 0,
+    "macro_f1": 0.9723206338859798,
+    "macro_recall": 0.9730372710107665,
+    "n": 850,
+    "per_category": {
+      "agent_safety": {
+        "candidate_coverage": 1.0,
+        "n": 124,
+        "recall": 1.0
+      },
+      "code_safety": {
+        "candidate_coverage": 1.0,
+        "n": 91,
+        "recall": 1.0
+      },
+      "cyber_safety": {
+        "candidate_coverage": 1.0,
+        "n": 126,
+        "recall": 1.0
+      },
+      "harmful_requests": {
+        "candidate_coverage": 0.8984375,
+        "n": 128,
+        "recall": 0.8984375
+      },
+      "hate_speech": {
+        "candidate_coverage": 1.0,
+        "n": 128,
+        "recall": 1.0
+      },
+      "prompt_injection": {
+        "candidate_coverage": 0.9285714285714286,
+        "n": 126,
+        "recall": 0.9285714285714286
+      },
+      "skill_safety": {
+        "candidate_coverage": 0.984251968503937,
+        "n": 127,
+        "recall": 0.984251968503937
+      }
+    }
+  }
+}

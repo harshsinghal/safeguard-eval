@@ -1,0 +1,35 @@
+{
+  "cpu": "",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "model": "LiquidAI/LFM2.5-Encoder-350M",
+  "parameters": 354491143,
+  "python": "3.12.16",
+  "revision": "b886781f7c6f10ca9b7096e21b83e30a073c2f39",
+  "sklearn": "1.9.1",
+  "tokenization": {
+    "fit": {
+      "n": 3316,
+      "original_token_quantiles": [
+        2.0,
+        118.5,
+        1425.5,
+        3422.8999999999987,
+        6541.0
+      ],
+      "truncated": 1353
+    },
+    "validation": {
+      "n": 850,
+      "original_token_quantiles": [
+        5.0,
+        88.5,
+        1581.1000000000004,
+        4667.779999999999,
+        7998.0
+      ],
+      "truncated": 320
+    }
+  },
+  "torch": "2.8.0+cu128",
+  "transformers": "5.10.2"
+}
