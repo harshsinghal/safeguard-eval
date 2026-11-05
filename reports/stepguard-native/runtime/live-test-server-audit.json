@@ -1,0 +1,14 @@
+{
+  "checked_epoch": 1793846306.4814696,
+  "server_flags": [
+    {
+      "--revision": "8a11e17b25c973a24099d4016bf2e17dd7ec1574",
+      "--max-num-seqs": "64",
+      "--max-model-len": "32768",
+      "--gpu-memory-utilization": ".85",
+      "--attention-backend": "TRITON_ATTN",
+      "--reasoning-parser": "openai_gptoss"
+    }
+  ],
+  "log_preservation": "Private hard links retain runtime logs until final collection; no raw logs published."
+}

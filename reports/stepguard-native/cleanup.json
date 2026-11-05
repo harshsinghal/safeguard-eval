@@ -1,0 +1,23 @@
+{
+  "checked_epoch": 1793847721.4218822,
+  "provider": "RunPod",
+  "outputs_collected_before_stop": true,
+  "pod_scoped_stop_observed_status": "EXITED",
+  "stop_closed_ssh_connection": true,
+  "pod_and_container_disk_deleted": true,
+  "remaining_pods": 0,
+  "ongoing_runpod_spend_per_hour_usd": 0,
+  "separate_paid_volumes_created": false,
+  "temporary_ssh_key_files_removed": [
+    "ssh_key",
+    "ssh_key.pub",
+    "known_hosts"
+  ],
+  "full_account_key_uploaded_to_pod": false,
+  "shutdown_controls": {
+    "remote_stop_deadline_seconds": 16500,
+    "local_delete_deadline_seconds": 17100,
+    "completion_cleanup": true
+  },
+  "cleanup_elapsed_seconds": 6954.093362092972
+}

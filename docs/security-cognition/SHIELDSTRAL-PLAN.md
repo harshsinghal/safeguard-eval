@@ -1,14 +1,14 @@
 # Adapting Shieldstral to policy judgments about tool calls
 
-Status: source review and proposed experiment, 3 November 2026. No dataset import,
-model evaluation, training, GPU provisioning or paid API calls were started. This
-extends the [dataset-first design](README.md); its 24 illustrative cases remain
-unreviewed and ineligible for training.
+Status: proposed fine-tuning experiment, originally recorded 3 November 2026.
+No weight training has started. This extends the [dataset-first design](README.md);
+its 24 illustrative cases remain unreviewed and ineligible for training.
 
-The later [StepGuard comparison proposal](STEPGUARD-BENCHMARK-PLAN.md) now defines
-the first step: evaluate existing policy and decision models with frozen weights,
-before deciding whether this fine-tuning study is needed. Its final test should
-remain held out from any subsequent training that uses it for comparison.
+The subsequent [StepGuard frozen-model comparison](STEPGUARD-RESULTS.md) completed
+that initial step: evaluate existing policy and decision models before deciding
+whether this fine-tuning study is needed. Its test records must remain excluded
+from subsequent fitting and policy selection. A follow-up using those public
+results is a reused-holdout comparison, not a fresh independent confirmation.
 
 ## The hypothesis
 

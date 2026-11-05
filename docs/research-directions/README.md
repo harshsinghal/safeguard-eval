@@ -41,11 +41,14 @@ StepGuard action examples and ToolSafety-derived cases. It distinguishes source
 safety classification from following new enterprise policies, and keeps review
 requirements separate from binary labels. This remains proposed work.
 
-The [StepGuard offline comparison](../security-cognition/STEPGUARD-BENCHMARK-PLAN.md)
-would precede fine-tuning: compare PolicyLM, Shieldstral and Safeguard with Jev,
-Kev and Clef on action and trajectory labels, using initial and development-tuned
-policies. It specifies grouped splits, context-coverage checks and error slices,
-including safe behavior in the presence of attacks. No inference has started.
+The [StepGuard offline comparison](../security-cognition/STEPGUARD-RESULTS.md)
+has now tested existing policy and decision models before fine-tuning. It
+compares initial and validation-selected policies on pending actions and
+completed runs, with a separate matched short-record PolicyLM panel. Grouped
+splits, complete-context checks, false flags, misses and runtime failures are
+recorded in the [evidence bundle](../../reports/stepguard-native/README.md).
+Its source labels are synthetic safety judgments; it does not validate the
+enterprise policy or REVIEW boundary proposed above.
 
 ## Training a shared moderation model with Tinker
 

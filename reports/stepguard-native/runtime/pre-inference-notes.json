@@ -1,0 +1,6 @@
+{
+  "tokenizer_compatibility": "PolicyLM tokenizer integrity check rejects transformers 5.10.2; count and inference use supported transformers 4.57.6. No weights or classification were run in the failed preflight.",
+  "runtime_setup": "RunPod image system Python is externally managed; uv bootstrap installation needed --break-system-packages inside the disposable pod. No registered inference code or policies changed.",
+  "shutdown": "Local deletion watchdog began at pod creation. Remote watchdog uses the provider-injected pod-scoped credential from PID 1 environment because SSH does not inherit it; authenticated own-pod GET returned 200 before compute. No full-account credential uploaded.",
+  "jev_validation_cost_usd": 0.147609126
+}

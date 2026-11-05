@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-11-05T01:04:41.880566+00:00",
+  "seconds": 73.9873590003699,
+  "model": {
+    "model": "typesafe/jev-1.14",
+    "resolved": "typesafe/jev-1.14-20261014",
+    "provider": "TypeSafe via OpenRouter",
+    "decision": "native Choice argmax"
+  },
+  "errors": 0,
+  "concurrency": 8
+}

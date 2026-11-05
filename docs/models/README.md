@@ -64,6 +64,21 @@ model version, provider errors and data handling need checking. Self-hosting
 instead requires maintaining the runtime and its resource lifecycle. These
 studies establish no blanket latency or privacy advantage for either route.
 
+## Agent-behavior evaluation
+
+The [StepGuard study](../security-cognition/STEPGUARD-RESULTS.md)
+uses Shieldstral, GPT-OSS Safeguard, Jev, Kev and Clef Flash on complete agent
+records. PolicyLM has a matched short-record supplement because of its native
+windowing limits. The [policy guide](../security-cognition/STEPGUARD-POLICIES.md)
+explains how each interface receives the behavior-safety criteria. Each task
+compares an initial policy with one selected from three validation candidates,
+keeping weights and decision rules fixed. Results include false flags, missed
+unsafe behavior, unresolved outputs and paired policy changes. StepGuard's own
+trained checkpoint is not ranked on its public SFT training examples. These
+scores are agreement with synthetic reference judgments, not live intervention
+results. The [runtime amendment](../../reports/stepguard-native/amendments/safeguard-batching.json)
+also records Safeguard output variation across an incomplete operational repeat.
+
 ## General-purpose language models
 
 The Qwen comparisons ask whether ordinary instruction models can apply the same

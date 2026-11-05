@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-11-05T02:06:59.782547+00:00",
+  "seconds": 223.04929090477526,
+  "model": {
+    "model": "mistralai/Shieldstral-1.0-3B",
+    "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+    "decision": "yes/no token-pair argmax, BLOCK on tie"
+  },
+  "errors": 0,
+  "concurrency": 1,
+  "torch": "2.11.0+cu128",
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "dtype": "bfloat16"
+}

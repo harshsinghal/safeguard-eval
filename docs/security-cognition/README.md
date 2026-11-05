@@ -4,6 +4,10 @@ Status: dataset design and illustrative seed, prepared 3 November 2026. This is
 the next step before the proposed sandbox work. No model has been trained or
 evaluated on this material. No paid inference or GPU resources were used.
 
+The separate [StepGuard benchmark](STEPGUARD-RESULTS.md) now reports frozen-model
+experiments on the publisher's synthetic action/run labels. That completed
+study does not validate the illustrative enterprise dataset described here.
+
 ## The question we want to teach
 
 An assistant is about to send an email. Knowing that email sends information is
@@ -230,7 +234,10 @@ an attack can be present while the action under review remains safe. This is a
 particularly useful precedent for avoiding blanket refusals. Its binary labels
 do not directly provide our enterprise ALLOW/BLOCK/REVIEW judgments. The card
 states Apache 2.0 terms for contributor-owned material and separate rights for
-third-party material. We have reviewed the card, not imported or audited its rows.
+third-party material. Our subsequent [frozen-model benchmark](STEPGUARD-RESULTS.md)
+imports and audits the SFT file, derives grouped splits and tests existing models
+against the binary source labels. It does not train on this material or validate
+the enterprise REVIEW boundary proposed in this document.
 
 [ToolSafety](https://aclanthology.org/2025.emnlp-main.714/) supplies training
 examples for direct, indirect and multi-step tool-related harms. Its
@@ -255,11 +262,16 @@ yes/no LoRA training, starting with StepGuard action-level examples. ToolSafety
 needs an adjudicated action-label mapping. Enterprise policy contrasts and review
 labels remain separate extensions; no training has started.
 
-Before that training, the [StepGuard model-comparison proposal](STEPGUARD-BENCHMARK-PLAN.md)
-would compare existing policy and decision models on the released safety labels.
-It separates pending-action judgment from completed-run auditing, initial from
-tuned policies, and complete-context comparisons from broader coverage results.
-This is a proposed benchmark; no model inference has started.
+Before that training, we completed the [StepGuard model comparison](STEPGUARD-RESULTS.md)
+using existing policy and decision models on the released synthetic safety
+labels. It separates pending-action judgment from completed-run auditing,
+initial from validation-selected policies, and the complete-input primary panel
+from the matched short-record PolicyLM supplement. The
+[original proposal](STEPGUARD-BENCHMARK-PLAN.md),
+[execution registration](STEPGUARD-RUN-PLAN.md) and
+[published evidence](../../reports/stepguard-native/README.md) remain available.
+The Shieldstral fine-tuning proposal and enterprise dataset extension are still
+unrun; this benchmark does not imply they have been validated.
 
 ## What success would mean
 

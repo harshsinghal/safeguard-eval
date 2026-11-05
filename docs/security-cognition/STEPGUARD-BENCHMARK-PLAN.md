@@ -1,8 +1,12 @@
 # Comparing existing models on StepGuard safety judgments
 
-Status: proposed offline benchmark, 4 November 2026. No inference, policy search,
-fine-tuning or paid compute has started. This comparison comes before the
-[Shieldstral fine-tuning proposal](SHIELDSTRAL-PLAN.md).
+Historical proposal, written before inference. The authorized frozen-model
+comparison has since been implemented under the
+[execution registration](STEPGUARD-RUN-PLAN.md); see the
+[results](STEPGUARD-RESULTS.md) and
+[published evidence](../../reports/stepguard-native/README.md).
+The proposal below preserves the original design discussion. The separate
+[Shieldstral fine-tuning proposal](SHIELDSTRAL-PLAN.md) remains unrun.
 
 ## Research question
 

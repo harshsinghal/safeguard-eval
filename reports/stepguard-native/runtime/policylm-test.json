@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-11-05T02:03:15.616527+00:00",
+  "seconds": 31.32701929844916,
+  "model": {
+    "model": "musubilabs/policylm-1.7b",
+    "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e",
+    "decision": "publisher precision preset, fixed 0.335",
+    "clean": true,
+    "max_chars": null,
+    "max_batch_rows": 1
+  },
+  "errors": 0,
+  "concurrency": 1,
+  "torch": "2.11.0+cu128",
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "dtype": "bfloat16"
+}

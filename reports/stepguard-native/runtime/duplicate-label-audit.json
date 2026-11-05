@@ -1,0 +1,8 @@
+{
+  "duplicate_input_groups": 0,
+  "duplicate_input_rows": 0,
+  "conflicting_label_groups": 0,
+  "cross_split_groups": 0,
+  "conflicting_source_ids": [],
+  "scope": "Metadata-only audit; no population or policy changes"
+}

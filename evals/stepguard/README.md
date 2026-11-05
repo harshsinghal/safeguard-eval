@@ -6,6 +6,23 @@ harmful. The pending-action and completed-run tasks have different scopes.
 Dataset text and reference rationales stay outside the repository. Never execute
 the commands contained in an input record.
 
+The [results](../../docs/security-cognition/STEPGUARD-RESULTS.md) and
+[frozen bundle](../../reports/stepguard-native/README.md) document the completed
+study. To check the published file hashes, validation selection and held-out
+confusion counts without downloads, model weights or paid calls:
+
+```sh
+python tools/verify_stepguard_bundle.py --bundle reports/stepguard-native
+```
+
+The full reproduction below restores private source inputs and repeats inference.
+The six models require separate native environments; it is not one shared
+Transformers installation. Exact package freezes and the amended Safeguard
+launch command are in the [runtime record](../../reports/stepguard-native/runtime).
+The preflight fetches and verifies the pinned Kev/Clef source adapters. PolicyLM
+loads its pinned inference helper. All adapter and checkpoint revisions are
+included in the registration and tokenizer manifests.
+
 ```sh
 python -m evals.stepguard.data --state /private/stepguard-state
 # Count native representations without loading weights. PolicyLM needs
@@ -23,6 +40,18 @@ python -m evals.stepguard.infer --state /private/stepguard-state --model shields
 python -m evals.stepguard.report summarize --state /private/stepguard-state
 python -m evals.stepguard.report export --state /private/stepguard-state --destination reports/stepguard-native
 ```
+
+For the published Safeguard run, the loopback server uses a 32,768-token context,
+published MXFP4 weights, a maximum of 64 concurrent sequences, eager execution,
+TRITON_ATTN and the `openai_gptoss` reasoning parser. Its inference invocation
+uses `--concurrency 64`; the payload fixes temperature zero, medium reasoning
+and an 8,192-token output limit. See the preserved runtime amendment before
+comparing with the superseded, incomplete concurrency-16 validation pass.
+
+Jev uses `--model jev --keyfile /private/openrouter-key-file`. A credential's
+contents must not be placed in shell arguments, logs or committed files.
+Native scoring models run with one request at a time in this accuracy study;
+these execution times are not a controlled comparison of serving performance.
 
 The register command records this study's existing authorization; **it does not
 grant a new user permission to spend money**. A reproducer must establish their

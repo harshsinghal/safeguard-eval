@@ -21,11 +21,46 @@ always the same.
 | [MaliciousSkillBench](https://huggingface.co/datasets/ProtectSkills/MaliciousSkillBench) | Malicious versus benign agent skill text | All 1,384 official source-disjoint test records | [Artifact study](../malicious-artifacts/README.md), [methods](../malicious-artifacts/METHODS.md) |
 | [CyberSecEval MITRE / FRR](https://github.com/meta-llama/PurpleLlama) | Cyberattack-assistance versus benign system-changing requests | Completed group-separated test: 330 requests, 165 per class | [Results and scope](../cyber-skill-guardrails/README.md) |
 | [MalSkillBench](https://github.com/lxyeternal/MalSkillBench) | Static screening of complete textual agent packages | Completed group-separated test: 512 packages, 256 per class | [Results and eligibility](../cyber-skill-guardrails/README.md) |
+| [StepGuard-Data](https://huggingface.co/datasets/ninty-seven/stepguard_data) | Safety of a proposed agent action or complete recorded run | Derived grouped test: 865 pending actions and 894 completed runs; five models on complete inputs, plus a matched short-record PolicyLM panel | [Results](../security-cognition/STEPGUARD-RESULTS.md), [protocol](../security-cognition/STEPGUARD-RUN-PLAN.md), [policy changes](../security-cognition/STEPGUARD-POLICIES.md) |
 | [DiffusionDB](https://huggingface.co/datasets/poloclub/diffusiondb) | Browsing image-generation prompts and trying a custom policy | Interactive text-prompt demo; no scored policy test set | [Original application](../../DEMO.md) |
 
-The rows above DiffusionDB are evaluation sources or registered studies. DiffusionDB supported the original
+The rows above DiffusionDB are evaluation sources. DiffusionDB supported the original
 demo. Our separately authored synthetic sets and serving workloads are listed
 below. **No study here evaluates generated images.**
+
+## StepGuard-Data
+
+**What it contains.** The [release](https://huggingface.co/datasets/ninty-seven/stepguard_data)
+has a 3,000-example SFT file and a separate 4,000-example RL collection. Both
+contain individual-action and complete-trajectory records. The
+[paper](https://arxiv.org/html/2608.24777v1) describes synthesized and automatically
+reviewed interactions. These are public training subsets, not an official
+held-out test or independently human-adjudicated ground truth.
+
+**Our tasks.** Judge a pending action using prior context, or judge a complete
+recorded run. SAFE maps to ALLOW; UNSAFE maps to BLOCK. We withhold reference
+reviewer rationales, labels and risk tags. Pending actions do not receive their
+future tool results. Actor thoughts are retained when present. Some candidate
+actions are responses or refusals, rather than external calls. Nothing is
+executed, and no REVIEW class is evaluated.
+
+**Our split.** We use only the SFT file, grouping related user requests and actor
+histories across both tasks before splitting. The primary test has 865 actions
+(418 safe / 447 unsafe) and 894 runs (439 safe / 455 unsafe). Two validation
+records fail Jev's conservative complete-request length bound, leaving 603
+primary validation records. Every primary test record fits all five models.
+PolicyLM's published one-window helper permits a separate 333-record test, on
+which all other models are also reported. Its completed-run subset contains
+only seven unsafe records and should not become a broad ranking.
+
+**Interpretation.** A risky request can lead to safe behavior, so risk-source
+annotations are not safety labels. All 300 no-risk source examples are in the
+action task. Heuristic grouping cannot guarantee removal of every paraphrase,
+and unknown upstream model exposure to this public SFT file remains possible.
+The StepGuard checkpoint is not scored on its own training material. See the
+[results and limitations](../security-cognition/STEPGUARD-RESULTS.md),
+[source/split audit](../../reports/stepguard-native/data-audit.json) and
+[context audit](../../reports/stepguard-native/context-audit.json).
 
 ## WildGuardMix / WildGuardTest
 

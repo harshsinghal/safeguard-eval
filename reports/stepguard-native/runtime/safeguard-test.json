@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-11-05T03:00:11.133089+00:00",
+  "seconds": 1694.1449851244688,
+  "model": {
+    "model": "openai/gpt-oss-safeguard-20b",
+    "provider": "self-hosted; provider recorded in runtime manifest",
+    "decision": "generated binary JSON label",
+    "reasoning": "medium",
+    "max_tokens": 8192,
+    "revision": "8a11e17b25c973a24099d4016bf2e17dd7ec1574",
+    "quantization": "publisher MXFP4"
+  },
+  "errors": 29,
+  "concurrency": 64
+}

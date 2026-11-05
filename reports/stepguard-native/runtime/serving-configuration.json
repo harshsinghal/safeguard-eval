@@ -1,0 +1,33 @@
+{
+  "provider": "RunPod Secure Cloud",
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "memory_mib": 49140,
+  "driver": "595.91.07",
+  "gpu_usd_per_hour": 0.99,
+  "storage_usd_per_hour": 0.022,
+  "total_usd_per_hour": 1.012,
+  "native_heads": {
+    "batch_size": 1,
+    "precision": "bfloat16",
+    "kev_fused": true,
+    "clef": "publisher Torch fallback; optional FLA fast path not installed"
+  },
+  "safeguard": {
+    "vllm": "0.31.0",
+    "torch": "2.13.0",
+    "transformers": "5.17.0",
+    "max_model_len": 32768,
+    "max_num_seqs": 64,
+    "client_concurrency": 64,
+    "gpu_memory_utilization": 0.85,
+    "enforce_eager": true,
+    "attention_backend": "TRITON_ATTN",
+    "reasoning_parser": "openai_gptoss",
+    "reasoning_effort": "medium",
+    "max_output_tokens": 8192,
+    "temperature": 0,
+    "quantization": "publisher MXFP4 weights",
+    "bind": "loopback only"
+  },
+  "interpretation": "Reproduction and cost record; not a controlled latency/throughput comparison."
+}

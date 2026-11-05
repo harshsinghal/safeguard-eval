@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-11-05T01:31:59.275461+00:00",
+  "seconds": 721.1058232951909,
+  "model": {
+    "model": "Cloudflare/clef-flash",
+    "revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+    "decision": "native Choice argmax, ALLOW on tie"
+  },
+  "errors": 0,
+  "concurrency": 1,
+  "torch": "2.11.0+cu128",
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "dtype": "bfloat16"
+}

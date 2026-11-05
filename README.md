@@ -12,13 +12,15 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 [Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Datasets](docs/datasets/README.md) · [Models](docs/models/README.md) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
 
-**Latest experiments:** [Cyberattack requests and complete skill packages](docs/cyber-skill-guardrails/README.md)
-compare authored policies, Meta guard baselines and small classifiers trained on
-frozen code embeddings. CyberSecEval supplies cyber-assistance requests;
-MalSkillBench supplies complete textual agent packages. The skill study also
-removes companion files while keeping each prompted model's selected policy fixed.
-These are separate populations from the earlier code-file and skill-text tests.
-[Results](docs/cyber-skill-guardrails/RESULTS.md) · [Methods](docs/cyber-skill-guardrails/METHODS.md)
+**Latest experiment:** [Judging agent actions and completed runs](docs/security-cognition/STEPGUARD-RESULTS.md)
+tests existing policy and decision models on StepGuard records. A dangerous
+request can lead to a safe refusal; a legitimate request can lead to an unsafe
+action. We compare three authored policies, freeze validation selections, and
+test on 865 pending actions and 894 completed runs. PolicyLM has a separate
+matched short-record panel. Results include false flags, missed unsafe behavior
+and unresolved outputs. These are synthetic reference judgments, not a live
+attack-prevention test.
+[Policy changes](docs/security-cognition/STEPGUARD-POLICIES.md) · [Frozen evidence](reports/stepguard-native/README.md)
 
 ## Experiment map
 
@@ -74,6 +76,7 @@ flowchart TB
     ARTIFACTS --> ARTREP["26 · Code embeddings + Qwen<br/>Frozen Jina · Linear / neural heads<br/>Six policies · Qwen 4B / 9B"]
     ARTREP --> CYBER["27 · Cyber assistance requests<br/>CyberSecEval MITRE + FRR<br/>Custom policies · Meta guard baselines"]
     ARTREP --> SKILLS["28 · Complete skill packages<br/>MalSkillBench · Companion-file ablation<br/>Policy models · Decision models · Jina heads"]
+    SKILLS --> AGENT["29 · Agent behavior: StepGuard<br/>Pending action / completed run<br/>Native policies · Complete-context checks"]
 
     classDef neutral fill:#f1f5f9,stroke:#64748b,color:#172c49;
     classDef policy fill:#eef4ff,stroke:#526b91,color:#172c49;
@@ -85,7 +88,7 @@ flowchart TB
     class S1,S2,S3,S4 scores;
     class F1,F2,F3,F4,F5,ARTREP features;
     class NEXT proposed;
-    class INJECTION,ARTIFACTS,CYBER,SKILLS policy;
+    class INJECTION,ARTIFACTS,CYBER,SKILLS,AGENT policy;
     style POLICY fill:#f8fafc,stroke:#cbd5e1
     style SCORES fill:#f8fafc,stroke:#cbd5e1
     style FEATURES fill:#f8fafc,stroke:#cbd5e1
@@ -100,6 +103,7 @@ flowchart TB
 | Representations and task-specific training | [PolicyLM / Qwen](docs/activation-probe/README.md) → [Shieldstral / Qwen](docs/shield-probe/README.md) → [linear, neural and contrastive task classifiers](docs/contrastive-heads/README.md) → [Liquid encoder fine-tuning](docs/liquid-finetune/README.md) |
 | Deploy and operate | [Seven-model serving study](docs/serving/README.md) → [L4: prompt length and vLLM/SGLang](docs/cloud-serving/README.md) · [Self-hosting implications](docs/cloud-serving/DEPLOYMENT.md) |
 | Test prompt and artifact security | [Injection and benign lookalikes](docs/prompt-injection/README.md) → [malicious source files and agent skills](docs/malicious-artifacts/README.md) → [code embeddings](docs/artifact-representations/README.md) → [cyber requests and complete packages](docs/cyber-skill-guardrails/README.md) |
+| Judge agent behavior in context | [StepGuard: pending actions and completed runs](docs/security-cognition/STEPGUARD-RESULTS.md) · [Native policy formats and edits](docs/security-cognition/STEPGUARD-POLICIES.md) |
 | Compare outcomes and see what is proposed | [Balanced metric guide](docs/leaderboard/METRICS.md) · [leaderboard](#current-leaderboard) · [next steps: reducing moderation errors](docs/research-directions/REDUCING-MODERATION-ERRORS.md) |
 
 The [smart-ensemble study](docs/smart-ensemble/README.md) takes the next step: learn which native model scores help each other, then test the frozen combination. Adding trained representation heads to that combination, broader policy-and-cutoff optimization, and a targeted second pass remain [proposed work](docs/research-directions/REDUCING-MODERATION-ERRORS.md), awaiting separate authorization.
@@ -464,12 +468,56 @@ failed attempts; the GPU was terminated.
 
 [Readout](docs/cyber-skill-guardrails/README.md) · [Paired results and uncertainty](docs/cyber-skill-guardrails/RESULTS.md) · [Methods](docs/cyber-skill-guardrails/METHODS.md) · [Frozen evidence and reproduction](published_runs/2026-11-03-cyber-skill-guardrails/README.md)
 
+### 29. Agent behavior: judge the next action or the whole run?
+
+StepGuard changes the question from “is this request harmful?” to “is the agent's
+behavior unsafe in this context?” Five models receive the same complete records.
+We compare an initial policy with explicit judging criteria and with criteria
+plus boundary examples. Each model/task chooses a policy on validation before
+held-out inference. We do not tune model weights or decision cutoffs.
+
+<!-- BEGIN STEPGUARD_TABLE -->
+Balanced accuracy of each validation-selected policy:
+
+| Model | Pending action | Completed run |
+|---|---:|---:|
+| Shieldstral 3B | 61.84% | 57.24% |
+| GPT-OSS Safeguard 20B | 69.58% | 73.94% |
+| Jev 1.14 (API) | 83.93% | 93.26% |
+| Kev 4B | 66.26% | 68.57% |
+| Clef Flash 9B | 65.73% | 77.78% |
+<!-- END STEPGUARD_TABLE -->
+
+<!-- BEGIN STEPGUARD_FINDINGS -->
+Clef's criteria-plus-contrasts policy raises completed-run balanced accuracy
+from **66.25% to 77.78%**: false flags fall from 114 to 60 and misses from 189 to
+140. Kev improves from **61.75% to 68.57%** on that task, largely by reducing
+false flags. The gains do not carry uniformly across tasks: Shieldstral retains
+its initial policy, as does Clef for pending actions. Jev has the highest observed
+balanced scores, but still misses **118 of 447 unsafe pending actions**. The
+readout reports both error rates and uncertainty; a family label is not a
+substitute for choosing an operating point against the relevant workflow.
+<!-- END STEPGUARD_FINDINGS -->
+
+The primary tests have **865 pending actions** and **894 completed runs**.
+PolicyLM's published helper limits it to a separate matched short-record test;
+all six models are compared on that subset in the readout. It has only seven
+unsafe completed runs, so its results cannot support a broad long-context ranking.
+
+These are derived grouped splits of StepGuard's synthetic SFT training material,
+not official held-out or independently human-adjudicated tests. No dataset
+action is executed and there is no REVIEW label. The record also preserves
+Safeguard's runtime amendment and output variability. This study is separate
+from the WildGuard/HateXplain leaderboard below.
+
+[Results and error rates](docs/security-cognition/STEPGUARD-RESULTS.md) · [What the policies change](docs/security-cognition/STEPGUARD-POLICIES.md) · [Registered method](docs/security-cognition/STEPGUARD-RUN-PLAN.md) · [Evidence and reproduction](reports/stepguard-native/README.md)
+
 ## What the evidence suggests for moderation teams
 
 - **Version the policy with the system that interprets it.** Keep the model revision, native adapter, output mapping, and decision cutoff alongside the policy text. If examples are retrieved, include the labeled library, encoder and selection rule. A model replacement requires another evaluation.
 - **Review meaning as well as scores.** Definitions, exceptions, and examples express a policy owner's intent. A higher aggregate score does not justify silently narrowing that intent or ignoring a costly type of error.
 - **Build a benchmark for the boundary you care about.** Include compliant lookalikes and difficult violations. Use training examples for authoring, validation for selection, and a separate test for the final assessment. Inspect errors by category as well as in aggregate.
-- **Test the serving configuration as well as the classifier.** Batching and shared-policy caching change throughput and waiting time. Changes to kernels or batch composition can also shift scores near a cutoff. A fast response and a correct response are separate requirements.
+- **Test the serving configuration as well as the classifier.** Batching and shared-policy caching change throughput and waiting time. Operational repeats have also changed generated decisions, even at temperature zero; the StepGuard record preserves one such observation without attributing every change to batching. A fast response and a correct response are separate requirements.
 - **Consider specialists, general LLMs, and decision models.** Different configured systems led on different tasks. Small models can be useful; neither size nor family guarantees the outcome. Ensembles add inference and maintenance requirements that a quality-only table does not price.
 
 These experiments support a workflow in which policy owners and engineers test changes together. They do **not** show that policies never transfer, that specialists always win, or that fine-tuning is unnecessary. Our public tests have been examined repeatedly, model-development budgets differ, and prior training exposure is not fully known. The studies establish no enterprise-data, multilingual, or image-moderation benchmark. Proposed enterprise applications remain a [research direction](docs/research-directions/ENTERPRISE-AI-GOVERNANCE.md), not a validated capability.
@@ -484,8 +532,8 @@ These experiments support a workflow in which policy owners and engineers test c
 | [Self-hosting guide](docs/cloud-serving/DEPLOYMENT.md) | Model interfaces, vLLM/SGLang, input lengths, batching, cloud GPU selection and the operational responsibilities behind a moderation endpoint. |
 | [Backbone and cloud-serving survey](docs/research-directions/POLICY-BACKBONES-AND-CLOUD-SERVING.md) | Gemma, Liquid, Qwen and smaller encoders; what TPU throughput headlines mean for a policy classifier. Source review and proposed checks, not new benchmark results. |
 | [Concurrent task specialists](docs/research-directions/PARALLEL-TASK-SPECIALISTS.md) | Proposed any-block endpoint with WildGuard and HateXplain classifiers; combined-label requirements and scaling from two to ten checks. Not yet run. |
-| [Agent-action SFT dataset design](docs/security-cognition/README.md) | A prototype enterprise policy and 24 illustrative examples for judging tool calls in context. Separates trusted lookups from human approvals. Includes a [Shieldstral adaptation proposal](docs/security-cognition/SHIELDSTRAL-PLAN.md) using StepGuard and ToolSafety. Drafts only; no model training or benchmark results. |
-| [StepGuard agent-safety comparison](docs/security-cognition/STEPGUARD-RUN-PLAN.md) | Registered comparison of five policy and decision models on pending actions and complete runs, plus a short-record PolicyLM panel. Three policy candidates, grouped validation/test splits, false flags, misses and complete-context coverage. Implementation and input checks complete; inference pending. |
+| [Agent-action SFT dataset design](docs/security-cognition/README.md) | A prototype enterprise policy and 24 illustrative examples for judging tool calls in context. Separates trusted lookups from human approvals. Includes a [Shieldstral adaptation proposal](docs/security-cognition/SHIELDSTRAL-PLAN.md) using StepGuard and ToolSafety. The enterprise dataset and fine-tuning remain proposals; the separate frozen-model StepGuard benchmark is reported below. |
+| [StepGuard agent-safety comparison](docs/security-cognition/STEPGUARD-RESULTS.md) | Five policy and decision models on pending actions and complete runs, plus a matched short-record PolicyLM panel. Three policy candidates, grouped validation/test splits, false flags, misses, complete-context checks and recorded runtime variation. |
 | [Research paper](research-preprint/README.md) | Review draft v0.6: PDF, extracted text, LaTeX source, methods, citations, and fuller limitations. Covers through the Kev/Clef comparison; later ensemble, representation-probe and policy-correction studies are linked above. Not peer reviewed or submitted to arXiv. |
 | [Install the Safeguard Eval skill](skills/safeguard-eval/README.md) | A guided introduction and evidence-based Q&A in Codex, Claude Code, or Pi. The v0.5.0 release covers through the specialist probability/log-odds ensembles. The newer decision-model, representation and policy-correction studies are available in the research log above. |
 | [Published runs](published_runs) | Dated experiment bundles with policies, predictions, selections, analysis, and provenance. Follow each study's reproduction instructions. |
