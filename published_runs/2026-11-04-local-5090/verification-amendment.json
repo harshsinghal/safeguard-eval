@@ -1,0 +1,9 @@
+{
+  "kind": "post-inference verifier correction",
+  "original_error": "ValueError: Model did not complete and release allocations",
+  "cause": "The original verifier required zero live tensor bytes inside the process before exit. The model had been released; 8,519,680 bytes of cached buffers remained until process exit.",
+  "repair": "Use tools/verify_local_gpu_reproduction.py to audit immutable sources, inputs, logits, decisions, selections and metrics, and independent process-exit cleanup.",
+  "new_inference": false,
+  "changed_predictions": false,
+  "original_completion_preserved": true
+}

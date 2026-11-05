@@ -1,0 +1,55 @@
+{
+  "verified_utc": "2026-11-05T06:46:38.628407+00:00",
+  "checks": [
+    {
+      "model": "shieldstral-3b",
+      "track": "iconography",
+      "split": "dev",
+      "n": 24,
+      "errors": 0
+    },
+    {
+      "model": "shieldstral-3b",
+      "track": "iconography",
+      "split": "test",
+      "n": 48,
+      "errors": 0
+    },
+    {
+      "model": "shieldstral-3b",
+      "track": "injection-challenge",
+      "split": "dev",
+      "n": 20,
+      "errors": 0
+    },
+    {
+      "model": "shieldstral-3b",
+      "track": "injection-challenge",
+      "split": "test",
+      "n": 80,
+      "errors": 0
+    },
+    {
+      "model": "shieldstral-3b",
+      "track": "deepset",
+      "split": "dev",
+      "n": 64,
+      "errors": 0
+    },
+    {
+      "model": "shieldstral-3b",
+      "track": "deepset",
+      "split": "test",
+      "n": 116,
+      "errors": 0
+    }
+  ],
+  "total_predictions": 352,
+  "total_errors": 0,
+  "source_hashes": "matched registration and freeze",
+  "calibration": "recomputed from development only",
+  "decisions": "recomputed from logits, scores and frozen thresholds",
+  "metrics": "all saved summaries matched",
+  "cleanup": "process exited; no Python compute process on GPU",
+  "note": "The original verifier's zero-allocation-before-exit assertion was too strict. The immutable completion record retains its small pre-exit cache; actual process-exit cleanup is independently recorded."
+}

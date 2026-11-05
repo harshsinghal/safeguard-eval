@@ -22,6 +22,8 @@ and unresolved outputs. These are synthetic reference judgments, not a live
 attack-prevention test.
 [Policy changes](docs/security-cognition/STEPGUARD-POLICIES.md) · [Frozen evidence](reports/stepguard-native/README.md)
 
+**Local reproduction complete:** [Shieldstral on a moderately loaded RTX 5090 (Qwen deferred)](published_runs/2026-11-04-local-5090/README.md).
+
 ## Experiment map
 
 We started by asking whether a model could apply a platform's written rules. That led to three branches: **change the policy, change how scores become decisions, or learn a classifier from the model's internal features**. We also measure what it takes to serve representative systems. The map shows how the questions connect; it is not one shared pipeline. Numbers refer to the entries in the [experiment log](#experiment-log).

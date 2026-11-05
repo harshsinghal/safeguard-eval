@@ -1,0 +1,17 @@
+{
+  "checked_utc": "2026-11-05T15:14:50.977526+00:00",
+  "unit_tests": 17,
+  "result": "passed",
+  "modules": [
+    "tests.test_local_gpu_reproduction",
+    "tests.test_evaluation",
+    "tests.test_injection",
+    "tests.test_local_gpu_reproduction_audit"
+  ],
+  "mutation_checks": [
+    "changed test score rejected",
+    "changed test threshold rejected",
+    "active compute process rejected"
+  ],
+  "inference_rerun": false
+}
