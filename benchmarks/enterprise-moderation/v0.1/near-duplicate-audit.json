@@ -1,0 +1,9 @@
+{
+  "calibration": 192,
+  "candidate_pairs": 1,
+  "evaluation": 983,
+  "high_similarity_pairs": [],
+  "limitation": "Approximate retrieval may miss near duplicates; this is not a semantic-contamination or model-training-exposure audit.",
+  "method": "64-permutation 5-word MinHash candidates at .75; exact Jaccard >= .90",
+  "seed": 20261105
+}

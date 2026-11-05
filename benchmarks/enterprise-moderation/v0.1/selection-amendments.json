@@ -1,0 +1,26 @@
+[
+  {
+    "changes": [
+      "Use identical error/status normalization for single-run and paired scores",
+      "Include attack method, trigger group and pending-action kind in existing source-diversity quotas",
+      "Retain source label provenance and adversarial metadata in safe review fields"
+    ],
+    "created_utc": "2026-11-05T16:41:36.308034+00:00",
+    "embedding_geometry_changed": false,
+    "model_predictions_examined": false,
+    "old_registration_sha256": "899d3dc6362c336f3dd5476a5db74c4d18d6448817d3361fb4e27fc293c4977b",
+    "phase": "before any moderation model evaluation",
+    "preserved_preflight_manifest_sha256": "328248926935249683035ec26b98aff3d876135325e7e887924c3b7bce1f00c5",
+    "weights_changed": false
+  },
+  {
+    "change": "Opaque model-facing case IDs prevent accidental leakage from source identifiers containing reference labels.",
+    "created_utc": "2026-11-05T20:14:56.445152+00:00",
+    "example_membership_changed": false,
+    "moderation_model_predictions_examined": false,
+    "old_registration_sha256": "79a07ce2ac6654651e38a4c699fbf031d43cc0db12b687cac04e69acd8992449",
+    "phase": "before moderation evaluation and public release",
+    "reference_labels_changed": false,
+    "weights_changed": false
+  }
+]

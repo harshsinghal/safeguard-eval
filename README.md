@@ -22,6 +22,8 @@ and unresolved outputs. These are synthetic reference judgments, not a live
 attack-prevention test.
 [Policy changes](docs/security-cognition/STEPGUARD-POLICIES.md) · [Frozen evidence](reports/stepguard-native/README.md)
 
+**Benchmark foundation:** [Enterprise Moderation Suite candidate](docs/enterprise-benchmark/README.md) — 983 fixed evaluation cases, 192 calibration cases, 14 tasks, semantic coverage and versioned enterprise/equal-task scoring. Runtime and quantization sweeps have not started.
+
 ## Experiment map
 
 We started by asking whether a model could apply a platform's written rules. That led to three branches: **change the policy, change how scores become decisions, or learn a classifier from the model's internal features**. We also measure what it takes to serve representative systems. The map shows how the questions connect; it is not one shared pipeline. Numbers refer to the entries in the [experiment log](#experiment-log).

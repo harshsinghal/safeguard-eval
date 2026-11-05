@@ -1,0 +1,837 @@
+{
+  "exclusions": [
+    {
+      "id": "cyber_requests::cyber:mitre:335",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "cyber_requests"
+    },
+    {
+      "id": "cyber_requests::cyber:mitre:528",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "cyber_requests"
+    },
+    {
+      "id": "cyber_requests::cyber:mitre:536",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "cyber_requests"
+    },
+    {
+      "id": "cyber_requests::cyber:mitre:542",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "cyber_requests"
+    },
+    {
+      "id": "cyber_requests::cyber:mitre:556",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "cyber_requests"
+    },
+    {
+      "id": "cyber_requests::cyber:mitre:594",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "cyber_requests"
+    },
+    {
+      "id": "cyber_requests::cyber:mitre:66",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "cyber_requests"
+    },
+    {
+      "id": "cyber_requests::cyber:mitre:860",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "cyber_requests"
+    },
+    {
+      "id": "cyber_requests::cyber:mitre:871",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "cyber_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-000207",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-000917",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-001043",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-001278",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-001503",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-001677",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-001739",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-001797",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-002015",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-002315",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-028039",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-028104",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-029460",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-029953",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-030351",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-030442",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-030505",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-031582",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-032248",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-032629",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-033786",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-034279",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-034672",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-035626",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-039763",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-040031",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-040057",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-040190",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-040772",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-040949",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-041027",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-041072",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-041231",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-041386",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-041446",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-042106",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-042995",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-043010",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-044321",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-045133",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-046033",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-046604",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-046721",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-047273",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-047641",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-047948",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-048175",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-048892",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-049370",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-049811",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-050210",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-050575",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-051008",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-051902",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-053210",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-053285",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-053341",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-053573",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-053591",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-053618",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-054203",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-054863",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-055853",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-056033",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-056804",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-057827",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-058397",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-058636",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-058708",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-059582",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-060766",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-061124",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-061282",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-061283",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-061775",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-062477",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-062992",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-063338",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-063736",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-064019",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-064193",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-065126",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-065521",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-065528",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-066077",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-066880",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-067828",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-067889",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-067955",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-068450",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-068908",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-070183",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-071669",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-072695",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-074818",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-075389",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-075701",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-076109",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-076136",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-077234",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-077894",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-078331",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-078646",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-079021",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-079099",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-079691",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-079894",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-080899",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-081193",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-081205",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-081592",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "harmful_requests::wgtrain-082918",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "harmful_requests"
+    },
+    {
+      "id": "hate_speech::11368631_gab",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "hate_speech"
+    },
+    {
+      "id": "hate_speech::1178861841780559872_twitter",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "hate_speech"
+    },
+    {
+      "id": "injection_xtram::safeguard:test:1927",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "injection_xtram"
+    },
+    {
+      "id": "injection_xtram::safeguard:test:405",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "injection_xtram"
+    },
+    {
+      "id": "injection_xtram::safeguard:test:409",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "injection_xtram"
+    },
+    {
+      "id": "injection_xtram::safeguard:test:524",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "injection_xtram"
+    },
+    {
+      "id": "injection_xtram::safeguard:test:604",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "injection_xtram"
+    },
+    {
+      "id": "injection_xtram::safeguard:test:653",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "injection_xtram"
+    },
+    {
+      "id": "injection_xtram::safeguard:test:68",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "injection_xtram"
+    },
+    {
+      "id": "injection_xtram::safeguard:test:73",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "injection_xtram"
+    },
+    {
+      "id": "injection_xtram::safeguard:test:761",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "injection_xtram"
+    },
+    {
+      "id": "injection_xtram::safeguard:test:931",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "injection_xtram"
+    },
+    {
+      "id": "injection_xtram::safeguard:test:950",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "injection_xtram"
+    },
+    {
+      "id": "skill_packages::skills:c40d3b6ef279c988c57679f2",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "evaluation",
+      "track": "skill_packages"
+    },
+    {
+      "id": "source_code::code:78b532680404c7a3e55fe35a",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "source_code"
+    },
+    {
+      "id": "source_code::code:af8cac0d9ceffc643b7a90a9",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "source_code"
+    },
+    {
+      "id": "source_code::code:df3162efac6c76cd4aa99943",
+      "reason": "exact_duplicate_within_task_role_label",
+      "split": "calibration",
+      "track": "source_code"
+    }
+  ],
+  "groups": 13809,
+  "input_rows": 15016,
+  "known_grouping": "source families plus cross-source normalized exact inputs",
+  "limitation": "Existing approximate source-family grouping is retained. Cross-source semantic paraphrase independence is not established.",
+  "retained_rows": 14878
+}

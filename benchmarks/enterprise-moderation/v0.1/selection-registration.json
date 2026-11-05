@@ -1,0 +1,59 @@
+{
+  "encoder": {
+    "batch_size": 16,
+    "device": "cpu",
+    "pooling": "attention-mask mean and L2 normalization",
+    "repo": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "threads": 4,
+    "view_tokens": 224,
+    "width": 384
+  },
+  "pool_sha256": "069826958671f5fd3c426cec69ea8fe1bea493c7249057a41c42e382a8868cca",
+  "profiles": {
+    "enterprise_reference_v0": {
+      "domain_weights": {
+        "agent": 0.35,
+        "artifacts": 0.2,
+        "content": 0.05,
+        "custom_policy": 0.05,
+        "cyber": 0.1,
+        "injection": 0.25
+      },
+      "interpretation": "Normative reference priorities, not incident frequencies or validated business loss.",
+      "within_domain": "equal_task",
+      "within_task": "equal_reference_class"
+    },
+    "equal_task_v0": {
+      "interpretation": "Every task has equal influence; corpus size does not determine weight.",
+      "task_weights": {
+        "agent_actions": 0.07142857142857142,
+        "agent_runs": 0.07142857142857142,
+        "benign_lookalikes": 0.07142857142857142,
+        "custom_policy": 0.07142857142857142,
+        "cyber_requests": 0.07142857142857142,
+        "harmful_requests": 0.07142857142857142,
+        "hate_speech": 0.07142857142857142,
+        "injection_context": 0.07142857142857142,
+        "injection_deepset": 0.07142857142857142,
+        "injection_xtram": 0.07142857142857142,
+        "jailbreak_attempts": 0.07142857142857142,
+        "skill_packages": 0.07142857142857142,
+        "skill_text": 0.07142857142857142,
+        "source_code": 0.07142857142857142
+      },
+      "within_task": "equal_reference_class"
+    }
+  },
+  "seed": 20261105,
+  "sources": {
+    "docs/enterprise-benchmark/PLAN.md": "5069942f0cc23e7fd00ebde59de5abbb72a6ee2e45a0629c0da86f4866bdc315",
+    "evals/enterprise_benchmark/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evals/enterprise_benchmark/build.py": "37f6ebe0e8280ca0536cda0e51e908b57e8f8e9b05c20589bd23a16684d191df",
+    "evals/enterprise_benchmark/registry.py": "355ba4d9355a7449ba715e06a0eed4314c8a262e40ea149d50d7c1c0eb9de55e",
+    "evals/enterprise_benchmark/scoring.py": "eed941082c7c64d62f893b9adf459aa08293c2a28cf02104cd3172cbc92e56f3",
+    "evals/enterprise_benchmark/sources.py": "fc1430f2e6b81d7cdf286994aec21f1b7d7c54075ecb6d75f76946f01281a47d",
+    "evals/enterprise_benchmark/validate.py": "766ce7cbb689961a35d5b14ddcadbf6c06a31a90cffc76568f393b77d1b70793"
+  },
+  "target": 1000
+}

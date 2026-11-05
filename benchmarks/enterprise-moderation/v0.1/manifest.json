@@ -1,0 +1,51 @@
+{
+  "calibration_cases": 192,
+  "created_utc": "2026-11-05T20:15:05.270296+00:00",
+  "embedding_manifest_sha256": "d8d4bb83255cefd85142edce6b6ac7651d05875488b16a03a6f180bfaa6e7797",
+  "encoder": {
+    "batch_size": 16,
+    "device": "cpu",
+    "pooling": "attention-mask mean and L2 normalization",
+    "repo": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "threads": 4,
+    "view_tokens": 224,
+    "width": 384
+  },
+  "evaluation_cases": 983,
+  "files": {
+    "builder-environment.json": "82e983ed4683d04212ff4ff7f30af73faf9336f6cf84f36eabaa15dc8e54acfd",
+    "calibration.jsonl": "7aa663e23dc864332603ffcdc19ecbcc7491acbf89225998cedd1efd22f50faa",
+    "coverage.json": "5fe1710dc809a07bc5b53f4aee78e718e9f1cbb9c48d04e61c609911d7571d57",
+    "evaluation.jsonl": "37f7074c05c307c1c6d5b9992841e18fd49d85c943fc61b2c75c0635fba9ddad",
+    "group-audit.json": "ea7f94e4a30f7d06d41f61cc32289d83793c44ace799ff29ec9860f9e7a3605f",
+    "item-weights.jsonl": "f12002f48f5f719413a065a30367e0096060b5bb00862689807c922c529c4a74",
+    "policies.json": "a612375c2e338fd128b1c35e470d1e9ecc2eaf41f314b402fc42c6db35e49763",
+    "profiles.json": "e3b7c74a482825c79e762130dd72b91f8e06aac8a63180089dcfa2065d1fd2fa",
+    "review-queue.jsonl": "1885ec8bc0a046c98167460d033e423d2b80e1e4633409277968010dfaada67c",
+    "selection-amendments.json": "0bee7d5641f0ad01f1f8aba2cbbb47acdbade6935cf60518ba11c0d9fd6333da",
+    "selection-registration.json": "6f0bec44b2798f00c1ee4c4621e74d8c203c7808e687b66275803cc135399b70",
+    "source-manifest.json": "6790231cdf2bcbe6106ca01cd3b241350183961ce0a530fe8c61f2ff34406870",
+    "topics.json": "9581f1119d62df15e99a9a54ef081b65b33533e6157c0effad645b5066794fb0",
+    "tracks.json": "e11b76069f6a1241466ff73576e1440d626880f0541d5273b6f19ee74a6df028"
+  },
+  "limitation": "Public reused reference data; not an independent unseen test, enterprise incident sample, or independently validated labeling study.",
+  "missing_tracks": [],
+  "moderation_inference_started": false,
+  "moderation_model_predictions_used": false,
+  "pool_sha256": "069826958671f5fd3c426cec69ea8fe1bea493c7249057a41c42e382a8868cca",
+  "seed": 20261105,
+  "selection": "Half quota for combined topic/risk/length/source coverage; remainder representatives, diverse edges and stable hash controls; per-class group caps.",
+  "sources": {
+    "docs/enterprise-benchmark/PLAN.md": "5069942f0cc23e7fd00ebde59de5abbb72a6ee2e45a0629c0da86f4866bdc315",
+    "evals/enterprise_benchmark/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evals/enterprise_benchmark/build.py": "37f6ebe0e8280ca0536cda0e51e908b57e8f8e9b05c20589bd23a16684d191df",
+    "evals/enterprise_benchmark/registry.py": "355ba4d9355a7449ba715e06a0eed4314c8a262e40ea149d50d7c1c0eb9de55e",
+    "evals/enterprise_benchmark/scoring.py": "eed941082c7c64d62f893b9adf459aa08293c2a28cf02104cd3172cbc92e56f3",
+    "evals/enterprise_benchmark/sources.py": "fc1430f2e6b81d7cdf286994aec21f1b7d7c54075ecb6d75f76946f01281a47d",
+    "evals/enterprise_benchmark/validate.py": "766ce7cbb689961a35d5b14ddcadbf6c06a31a90cffc76568f393b77d1b70793"
+  },
+  "status": "candidate_requires_source_and_label_review",
+  "target_evaluation_cases": 1000,
+  "version": "enterprise-moderation-candidate-v0.1"
+}

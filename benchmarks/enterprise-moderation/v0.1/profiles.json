@@ -1,0 +1,35 @@
+{
+  "enterprise_reference_v0": {
+    "domain_weights": {
+      "agent": 0.35,
+      "artifacts": 0.2,
+      "content": 0.05,
+      "custom_policy": 0.05,
+      "cyber": 0.1,
+      "injection": 0.25
+    },
+    "interpretation": "Normative reference priorities, not incident frequencies or validated business loss.",
+    "within_domain": "equal_task",
+    "within_task": "equal_reference_class"
+  },
+  "equal_task_v0": {
+    "interpretation": "Every task has equal influence; corpus size does not determine weight.",
+    "task_weights": {
+      "agent_actions": 0.07142857142857142,
+      "agent_runs": 0.07142857142857142,
+      "benign_lookalikes": 0.07142857142857142,
+      "custom_policy": 0.07142857142857142,
+      "cyber_requests": 0.07142857142857142,
+      "harmful_requests": 0.07142857142857142,
+      "hate_speech": 0.07142857142857142,
+      "injection_context": 0.07142857142857142,
+      "injection_deepset": 0.07142857142857142,
+      "injection_xtram": 0.07142857142857142,
+      "jailbreak_attempts": 0.07142857142857142,
+      "skill_packages": 0.07142857142857142,
+      "skill_text": 0.07142857142857142,
+      "source_code": 0.07142857142857142
+    },
+    "within_task": "equal_reference_class"
+  }
+}
