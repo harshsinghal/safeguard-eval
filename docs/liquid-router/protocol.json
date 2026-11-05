@@ -1,0 +1,1 @@
+{"seed":20261105,"max_fit_per_category":512,"max_validation_per_category":128,"epochs":3,"learning_rate":0.00005,"microbatch":1,"effective_batch":16,"max_tokens":256,"gpu_duty":0.2,"training_budget_seconds":2700,"selection":"validation_macro_f1","candidate_coverage_target":0.95,"temperature_grid":[0.5,1,2,3],"fallback_below":0.6}

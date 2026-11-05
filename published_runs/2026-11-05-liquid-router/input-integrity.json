@@ -1,0 +1,7 @@
+{
+  "audit_groups_disjoint": true,
+  "cross_split_identical_bounded_views": 0,
+  "fixed_evaluation_hashes_match": 983,
+  "registered_data_hashes_match": true,
+  "scope": "Input-only integrity audit; no classifier predictions or final performance used"
+}

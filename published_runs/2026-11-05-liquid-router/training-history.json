@@ -1,0 +1,472 @@
+[
+  {
+    "checkpoint": "checkpoints/frozen",
+    "elapsed_seconds": 132.48271228199883,
+    "kind": "frozen",
+    "validation": {
+      "accuracy": 0.9588235294117647,
+      "candidate_count": 1,
+      "candidate_coverage": 0.9588235294117647,
+      "confusion_matrix": [
+        [
+          124,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          91,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          125,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          114,
+          0,
+          11,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          128,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          15,
+          0,
+          109,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          124
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.9594652742698743,
+      "macro_recall": 0.9605922585569662,
+      "n": 850,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": 1.0,
+          "n": 124,
+          "recall": 1.0
+        },
+        "code_safety": {
+          "candidate_coverage": 1.0,
+          "n": 91,
+          "recall": 1.0
+        },
+        "cyber_safety": {
+          "candidate_coverage": 0.9920634920634921,
+          "n": 126,
+          "recall": 0.9920634920634921
+        },
+        "harmful_requests": {
+          "candidate_coverage": 0.890625,
+          "n": 128,
+          "recall": 0.890625
+        },
+        "hate_speech": {
+          "candidate_coverage": 1.0,
+          "n": 128,
+          "recall": 1.0
+        },
+        "prompt_injection": {
+          "candidate_coverage": 0.8650793650793651,
+          "n": 126,
+          "recall": 0.8650793650793651
+        },
+        "skill_safety": {
+          "candidate_coverage": 0.9763779527559056,
+          "n": 127,
+          "recall": 0.9763779527559056
+        }
+      }
+    }
+  },
+  {
+    "checkpoint": "checkpoints/epoch-1",
+    "elapsed_seconds": 572.6435466609983,
+    "epoch": 1,
+    "kind": "full_finetune",
+    "mean_fit_loss": 0.11443320085904765,
+    "validation": {
+      "accuracy": 0.971764705882353,
+      "candidate_count": 1,
+      "candidate_coverage": 0.971764705882353,
+      "confusion_matrix": [
+        [
+          124,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          91,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          126,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          115,
+          0,
+          13,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          128,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          8,
+          0,
+          117,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          125
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.9723206338859798,
+      "macro_recall": 0.9730372710107665,
+      "n": 850,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": 1.0,
+          "n": 124,
+          "recall": 1.0
+        },
+        "code_safety": {
+          "candidate_coverage": 1.0,
+          "n": 91,
+          "recall": 1.0
+        },
+        "cyber_safety": {
+          "candidate_coverage": 1.0,
+          "n": 126,
+          "recall": 1.0
+        },
+        "harmful_requests": {
+          "candidate_coverage": 0.8984375,
+          "n": 128,
+          "recall": 0.8984375
+        },
+        "hate_speech": {
+          "candidate_coverage": 1.0,
+          "n": 128,
+          "recall": 1.0
+        },
+        "prompt_injection": {
+          "candidate_coverage": 0.9285714285714286,
+          "n": 126,
+          "recall": 0.9285714285714286
+        },
+        "skill_safety": {
+          "candidate_coverage": 0.984251968503937,
+          "n": 127,
+          "recall": 0.984251968503937
+        }
+      }
+    }
+  },
+  {
+    "checkpoint": "checkpoints/epoch-2",
+    "elapsed_seconds": 997.2249590249994,
+    "epoch": 2,
+    "kind": "full_finetune",
+    "mean_fit_loss": 0.008491976850495526,
+    "validation": {
+      "accuracy": 0.971764705882353,
+      "candidate_count": 1,
+      "candidate_coverage": 0.971764705882353,
+      "confusion_matrix": [
+        [
+          124,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          91,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          126,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          122,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          128,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          12,
+          0,
+          113,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          122
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.9716542048640375,
+      "macro_recall": 0.9729400454407485,
+      "n": 850,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": 1.0,
+          "n": 124,
+          "recall": 1.0
+        },
+        "code_safety": {
+          "candidate_coverage": 1.0,
+          "n": 91,
+          "recall": 1.0
+        },
+        "cyber_safety": {
+          "candidate_coverage": 1.0,
+          "n": 126,
+          "recall": 1.0
+        },
+        "harmful_requests": {
+          "candidate_coverage": 0.953125,
+          "n": 128,
+          "recall": 0.953125
+        },
+        "hate_speech": {
+          "candidate_coverage": 1.0,
+          "n": 128,
+          "recall": 1.0
+        },
+        "prompt_injection": {
+          "candidate_coverage": 0.8968253968253969,
+          "n": 126,
+          "recall": 0.8968253968253969
+        },
+        "skill_safety": {
+          "candidate_coverage": 0.9606299212598425,
+          "n": 127,
+          "recall": 0.9606299212598425
+        }
+      }
+    }
+  },
+  {
+    "checkpoint": "checkpoints/epoch-3",
+    "elapsed_seconds": 1429.0043057899966,
+    "epoch": 3,
+    "kind": "full_finetune",
+    "mean_fit_loss": 0.014944691408159077,
+    "validation": {
+      "accuracy": 0.9647058823529412,
+      "candidate_count": 1,
+      "candidate_coverage": 0.9647058823529412,
+      "confusion_matrix": [
+        [
+          124,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          91,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          126,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          118,
+          2,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          128,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          12,
+          2,
+          111,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          122
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.9647474783267965,
+      "macro_recall": 0.9662081860303177,
+      "n": 850,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": 1.0,
+          "n": 124,
+          "recall": 1.0
+        },
+        "code_safety": {
+          "candidate_coverage": 1.0,
+          "n": 91,
+          "recall": 1.0
+        },
+        "cyber_safety": {
+          "candidate_coverage": 1.0,
+          "n": 126,
+          "recall": 1.0
+        },
+        "harmful_requests": {
+          "candidate_coverage": 0.921875,
+          "n": 128,
+          "recall": 0.921875
+        },
+        "hate_speech": {
+          "candidate_coverage": 1.0,
+          "n": 128,
+          "recall": 1.0
+        },
+        "prompt_injection": {
+          "candidate_coverage": 0.8809523809523809,
+          "n": 126,
+          "recall": 0.8809523809523809
+        },
+        "skill_safety": {
+          "candidate_coverage": 0.9606299212598425,
+          "n": 127,
+          "recall": 0.9606299212598425
+        }
+      }
+    }
+  }
+]

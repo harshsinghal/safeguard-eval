@@ -12,7 +12,9 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 [Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Datasets](docs/datasets/README.md) · [Models](docs/models/README.md) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
 
-**Latest experiment:** [Judging agent actions and completed runs](docs/security-cognition/STEPGUARD-RESULTS.md)
+**Latest experiment:** [Liquid CPU classifier for benchmark families](docs/liquid-router/README.md) — seven pooled categories; 90.07% held-out macro F1 in FP32. CPU INT8 halves median latency with a measured accuracy tradeoff. Held-out injection sources expose a routing-label gap; guard dispatch remains deferred.
+
+**Agent-safety study:** [Judging agent actions and completed runs](docs/security-cognition/STEPGUARD-RESULTS.md)
 tests existing policy and decision models on StepGuard records. A dangerous
 request can lead to a safe refusal; a legitimate request can lead to an unsafe
 action. We compare three authored policies, freeze validation selections, and
@@ -22,7 +24,7 @@ and unresolved outputs. These are synthetic reference judgments, not a live
 attack-prevention test.
 [Policy changes](docs/security-cognition/STEPGUARD-POLICIES.md) · [Frozen evidence](reports/stepguard-native/README.md)
 
-**Benchmark foundation:** [Enterprise Moderation Suite candidate](docs/enterprise-benchmark/README.md) — 983 fixed evaluation cases, 192 calibration cases, 14 tasks, semantic coverage and versioned enterprise/equal-task scoring. Runtime and quantization sweeps have not started.
+**Benchmark foundation:** [Enterprise Moderation Suite candidate](docs/enterprise-benchmark/README.md) — 983 fixed evaluation cases, 192 calibration cases, 14 tasks, semantic coverage and versioned enterprise/equal-task scoring. Shieldstral runtime and quantization sweeps have not started.
 
 ## Experiment map
 

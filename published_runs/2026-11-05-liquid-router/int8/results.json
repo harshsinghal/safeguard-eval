@@ -1,0 +1,1693 @@
+{
+  "cpu": {
+    "batch_size": 1,
+    "cold_load_seconds": 3.4080357950006146,
+    "cpu_model": "Intel(R) Core(TM) Ultra 7 270K Plus",
+    "latency_scope": "one serial pass across fixed cases, includes tokenization and dispatch; excludes cold load; mixed input lengths; no concurrency",
+    "platform": "Linux-7.2.15-1-omarchy-x86_64-with-glibc2.44",
+    "process_peak_rss_bytes": 3875389440,
+    "rss_after_evaluation_bytes": 2093993984,
+    "threads": 4,
+    "torch": "2.8.0+cu128",
+    "warm_latency_seconds": {
+      "mean": 0.07811706868474458,
+      "p50": 0.06001067999750376,
+      "p95": 0.14433770430041476,
+      "p99": 0.1459656919402187
+    }
+  },
+  "fallback_rate": 0.07121057985757884,
+  "metrics": {
+    "accuracy": 0.8844919786096257,
+    "candidate_count": 1,
+    "candidate_coverage": 0.8844919786096257,
+    "confusion_matrix": [
+      [
+        249,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        61,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        63,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        59,
+        1,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        63,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        5,
+        86,
+        2,
+        215,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        3,
+        0,
+        1,
+        117
+      ]
+    ],
+    "excluded_unsupported": 48,
+    "macro_f1": 0.8903381531238369,
+    "macro_recall": 0.9362108112062029,
+    "n": 935,
+    "per_category": {
+      "agent_safety": {
+        "candidate_coverage": 0.996,
+        "n": 250,
+        "recall": 0.996
+      },
+      "code_safety": {
+        "candidate_coverage": 0.9838709677419355,
+        "n": 62,
+        "recall": 0.9838709677419355
+      },
+      "cyber_safety": {
+        "candidate_coverage": 1.0,
+        "n": 63,
+        "recall": 1.0
+      },
+      "harmful_requests": {
+        "candidate_coverage": 0.9365079365079365,
+        "n": 63,
+        "recall": 0.9365079365079365
+      },
+      "hate_speech": {
+        "candidate_coverage": 1.0,
+        "n": 63,
+        "recall": 1.0
+      },
+      "prompt_injection": {
+        "candidate_coverage": 0.6935483870967742,
+        "n": 310,
+        "recall": 0.6935483870967742
+      },
+      "skill_safety": {
+        "candidate_coverage": 0.9435483870967742,
+        "n": 124,
+        "recall": 0.9435483870967742
+      }
+    }
+  },
+  "per_track": {
+    "agent_actions": {
+      "accuracy": 0.992,
+      "candidate_count": 1,
+      "candidate_coverage": 0.992,
+      "confusion_matrix": [
+        [
+          124,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.14228341939185313,
+      "macro_recall": 0.1417142857142857,
+      "n": 125,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": 0.992,
+          "n": 125,
+          "recall": 0.992
+        },
+        "code_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "cyber_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "harmful_requests": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "hate_speech": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "prompt_injection": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "skill_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        }
+      }
+    },
+    "agent_runs": {
+      "accuracy": 1.0,
+      "candidate_count": 1,
+      "candidate_coverage": 1.0,
+      "confusion_matrix": [
+        [
+          125,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.14285714285714285,
+      "macro_recall": 0.14285714285714285,
+      "n": 125,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": 1.0,
+          "n": 125,
+          "recall": 1.0
+        },
+        "code_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "cyber_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "harmful_requests": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "hate_speech": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "prompt_injection": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "skill_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        }
+      }
+    },
+    "benign_lookalikes": {
+      "accuracy": 0.25396825396825395,
+      "candidate_count": 1,
+      "candidate_coverage": 0.25396825396825395,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          45,
+          0,
+          16,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.05786618444846293,
+      "macro_recall": 0.036281179138321996,
+      "n": 63,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "code_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "cyber_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "harmful_requests": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "hate_speech": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "prompt_injection": {
+          "candidate_coverage": 0.25396825396825395,
+          "n": 63,
+          "recall": 0.25396825396825395
+        },
+        "skill_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        }
+      }
+    },
+    "cyber_requests": {
+      "accuracy": 1.0,
+      "candidate_count": 1,
+      "candidate_coverage": 1.0,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          63,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.14285714285714285,
+      "macro_recall": 0.14285714285714285,
+      "n": 63,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "code_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "cyber_safety": {
+          "candidate_coverage": 1.0,
+          "n": 63,
+          "recall": 1.0
+        },
+        "harmful_requests": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "hate_speech": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "prompt_injection": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "skill_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        }
+      }
+    },
+    "harmful_requests": {
+      "accuracy": 0.9365079365079365,
+      "candidate_count": 1,
+      "candidate_coverage": 0.9365079365079365,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          59,
+          1,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.13817330210772832,
+      "macro_recall": 0.13378684807256236,
+      "n": 63,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "code_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "cyber_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "harmful_requests": {
+          "candidate_coverage": 0.9365079365079365,
+          "n": 63,
+          "recall": 0.9365079365079365
+        },
+        "hate_speech": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "prompt_injection": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "skill_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        }
+      }
+    },
+    "hate_speech": {
+      "accuracy": 1.0,
+      "candidate_count": 1,
+      "candidate_coverage": 1.0,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          63,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.14285714285714285,
+      "macro_recall": 0.14285714285714285,
+      "n": 63,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "code_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "cyber_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "harmful_requests": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "hate_speech": {
+          "candidate_coverage": 1.0,
+          "n": 63,
+          "recall": 1.0
+        },
+        "prompt_injection": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "skill_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        }
+      }
+    },
+    "injection_context": {
+      "accuracy": 0.9344262295081968,
+      "candidate_count": 1,
+      "candidate_coverage": 0.9344262295081968,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          3,
+          0,
+          57,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.13801452784503632,
+      "macro_recall": 0.13348946135831383,
+      "n": 61,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "code_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "cyber_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "harmful_requests": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "hate_speech": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "prompt_injection": {
+          "candidate_coverage": 0.9344262295081968,
+          "n": 61,
+          "recall": 0.9344262295081968
+        },
+        "skill_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        }
+      }
+    },
+    "injection_deepset": {
+      "accuracy": 1.0,
+      "candidate_count": 1,
+      "candidate_coverage": 1.0,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          62,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.14285714285714285,
+      "macro_recall": 0.14285714285714285,
+      "n": 62,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "code_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "cyber_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "harmful_requests": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "hate_speech": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "prompt_injection": {
+          "candidate_coverage": 1.0,
+          "n": 62,
+          "recall": 1.0
+        },
+        "skill_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        }
+      }
+    },
+    "injection_xtram": {
+      "accuracy": 0.8548387096774194,
+      "candidate_count": 1,
+      "candidate_coverage": 0.8548387096774194,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          9,
+          0,
+          53,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.13167701863354037,
+      "macro_recall": 0.12211981566820276,
+      "n": 62,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "code_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "cyber_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "harmful_requests": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "hate_speech": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "prompt_injection": {
+          "candidate_coverage": 0.8548387096774194,
+          "n": 62,
+          "recall": 0.8548387096774194
+        },
+        "skill_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        }
+      }
+    },
+    "jailbreak_attempts": {
+      "accuracy": 0.43548387096774194,
+      "candidate_count": 1,
+      "candidate_coverage": 0.43548387096774194,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          3,
+          29,
+          2,
+          27,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.08667736757624399,
+      "macro_recall": 0.06221198156682028,
+      "n": 62,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "code_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "cyber_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "harmful_requests": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "hate_speech": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "prompt_injection": {
+          "candidate_coverage": 0.43548387096774194,
+          "n": 62,
+          "recall": 0.43548387096774194
+        },
+        "skill_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        }
+      }
+    },
+    "skill_packages": {
+      "accuracy": 0.8870967741935484,
+      "candidate_count": 1,
+      "candidate_coverage": 0.8870967741935484,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          3,
+          0,
+          1,
+          55
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.1343101343101343,
+      "macro_recall": 0.12672811059907835,
+      "n": 62,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "code_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "cyber_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "harmful_requests": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "hate_speech": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "prompt_injection": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "skill_safety": {
+          "candidate_coverage": 0.8870967741935484,
+          "n": 62,
+          "recall": 0.8870967741935484
+        }
+      }
+    },
+    "skill_text": {
+      "accuracy": 1.0,
+      "candidate_count": 1,
+      "candidate_coverage": 1.0,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          62
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.14285714285714285,
+      "macro_recall": 0.14285714285714285,
+      "n": 62,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "code_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "cyber_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "harmful_requests": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "hate_speech": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "prompt_injection": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "skill_safety": {
+          "candidate_coverage": 1.0,
+          "n": 62,
+          "recall": 1.0
+        }
+      }
+    },
+    "source_code": {
+      "accuracy": 0.9838709677419355,
+      "candidate_count": 1,
+      "candidate_coverage": 0.9838709677419355,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          61,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "excluded_unsupported": 0,
+      "macro_f1": 0.14169570267131243,
+      "macro_recall": 0.14055299539170507,
+      "n": 62,
+      "per_category": {
+        "agent_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "code_safety": {
+          "candidate_coverage": 0.9838709677419355,
+          "n": 62,
+          "recall": 0.9838709677419355
+        },
+        "cyber_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "harmful_requests": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "hate_speech": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "prompt_injection": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        },
+        "skill_safety": {
+          "candidate_coverage": null,
+          "n": 0,
+          "recall": null
+        }
+      }
+    }
+  },
+  "precision": "int8",
+  "tfidf_control": {
+    "accuracy": 0.8,
+    "candidate_count": 1,
+    "candidate_coverage": 0.8,
+    "confusion_matrix": [
+      [
+        250,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        61,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        60,
+        2,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        62,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        60,
+        2,
+        0
+      ],
+      [
+        0,
+        4,
+        3,
+        119,
+        47,
+        135,
+        2
+      ],
+      [
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        120
+      ]
+    ],
+    "excluded_unsupported": 48,
+    "macro_f1": 0.8084377338675954,
+    "macro_recall": 0.8965693804403482,
+    "n": 935,
+    "per_category": {
+      "agent_safety": {
+        "candidate_coverage": 1.0,
+        "n": 250,
+        "recall": 1.0
+      },
+      "code_safety": {
+        "candidate_coverage": 0.9838709677419355,
+        "n": 62,
+        "recall": 0.9838709677419355
+      },
+      "cyber_safety": {
+        "candidate_coverage": 0.9523809523809523,
+        "n": 63,
+        "recall": 0.9523809523809523
+      },
+      "harmful_requests": {
+        "candidate_coverage": 0.9841269841269841,
+        "n": 63,
+        "recall": 0.9841269841269841
+      },
+      "hate_speech": {
+        "candidate_coverage": 0.9523809523809523,
+        "n": 63,
+        "recall": 0.9523809523809523
+      },
+      "prompt_injection": {
+        "candidate_coverage": 0.43548387096774194,
+        "n": 310,
+        "recall": 0.43548387096774194
+      },
+      "skill_safety": {
+        "candidate_coverage": 0.967741935483871,
+        "n": 124,
+        "recall": 0.967741935483871
+      }
+    }
+  },
+  "truncation_rate": 0.41098677517802645,
+  "unsupported_custom_policy": {
+    "fallback_rate": 0.4166666666666667,
+    "n": 48
+  }
+}

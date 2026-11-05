@@ -1,0 +1,11 @@
+{
+  "tests_passed_before_archive": 34,
+  "offline_fp32_checkpoint_roundtrip": true,
+  "offline_int8_smoke": true,
+  "pretrained_embedding_tensor_identity_checked": true,
+  "selected_encoder_sample_parameter": "layers.0.conv.in_proj.weight",
+  "selected_encoder_sample_delta_l2": 0.07329164445400238,
+  "gpu_experiment_process_exited": true,
+  "paid_compute_usd": 0,
+  "electricity_and_engineering_not_priced": true
+}

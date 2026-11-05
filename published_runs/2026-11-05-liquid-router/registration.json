@@ -1,0 +1,38 @@
+{
+  "audit_sha256": "29d7b8f34ba21eedb3f8244ee01a115b4b59c78c920eeac177a8ad2036720b18",
+  "code_hashes": {
+    "docs/liquid-router/PLAN.md": "107dc08c8b58e175801e7d99521edf5f8162f04815ff1f33fe41496f3ebbb3e5",
+    "docs/liquid-router/protocol.json": "a68205a8cdea37967804b30bbf49406c984aa3f04681497fd274320f3a7c890c",
+    "evals/liquid_router/__init__.py": "a4830f0d3bcd076fa0aff128551922bf58de4fccf3678c222d351d2f292cfd71",
+    "evals/liquid_router/common.py": "242e2ddb87e2ae8403dadda5675189db7b405e0d23a4b3a91dfcd46a4a8b89c4",
+    "evals/liquid_router/model.py": "e03fceb4e09f841b91973305208e3c17c84b17922d1df71e5e186e49b1485d03",
+    "evals/liquid_router/prepare.py": "c8c6b40627c6fec9f91e98787da45d073209a2bf4e14310d40f929f349a1db61",
+    "evals/liquid_router/study.py": "848a102dfe409c1a487c3d76a40e3b967e90405a0c43b134602dba9fb7a24274"
+  },
+  "input_hashes": {
+    "fit": "5724bb89d65b02030f73de4764b0989014c461622fa27194591da6b6ba55a95a",
+    "test": "ac7a7269c055d2a08c140ea8fe6089643d07a7b55f422e6d21930ef04b1fbcd9",
+    "validation": "c2f1fdaff072ce8b5cf797355fabbdc111dfe5ce393008e0f896bcda0c88cd97"
+  },
+  "protocol": {
+    "candidate_coverage_target": 0.95,
+    "effective_batch": 16,
+    "epochs": 3,
+    "fallback_below": 0.6,
+    "gpu_duty": 0.2,
+    "learning_rate": 5e-05,
+    "max_fit_per_category": 512,
+    "max_tokens": 256,
+    "max_validation_per_category": 128,
+    "microbatch": 1,
+    "seed": 20261105,
+    "selection": "validation_macro_f1",
+    "temperature_grid": [
+      0.5,
+      1,
+      2,
+      3
+    ],
+    "training_budget_seconds": 2700
+  }
+}

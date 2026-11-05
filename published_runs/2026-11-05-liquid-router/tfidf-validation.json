@@ -1,0 +1,111 @@
+{
+  "accuracy": 0.9341176470588235,
+  "candidate_count": 1,
+  "candidate_coverage": 0.9341176470588235,
+  "confusion_matrix": [
+    [
+      124,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      91,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      126,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      113,
+      8,
+      6,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      4,
+      121,
+      3,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      21,
+      7,
+      97,
+      0
+    ],
+    [
+      0,
+      5,
+      0,
+      0,
+      0,
+      0,
+      122
+    ]
+  ],
+  "excluded_unsupported": 0,
+  "macro_f1": 0.9352214056138063,
+  "macro_recall": 0.9369423130144446,
+  "n": 850,
+  "per_category": {
+    "agent_safety": {
+      "candidate_coverage": 1.0,
+      "n": 124,
+      "recall": 1.0
+    },
+    "code_safety": {
+      "candidate_coverage": 1.0,
+      "n": 91,
+      "recall": 1.0
+    },
+    "cyber_safety": {
+      "candidate_coverage": 1.0,
+      "n": 126,
+      "recall": 1.0
+    },
+    "harmful_requests": {
+      "candidate_coverage": 0.8828125,
+      "n": 128,
+      "recall": 0.8828125
+    },
+    "hate_speech": {
+      "candidate_coverage": 0.9453125,
+      "n": 128,
+      "recall": 0.9453125
+    },
+    "prompt_injection": {
+      "candidate_coverage": 0.7698412698412699,
+      "n": 126,
+      "recall": 0.7698412698412699
+    },
+    "skill_safety": {
+      "candidate_coverage": 0.9606299212598425,
+      "n": 127,
+      "recall": 0.9606299212598425
+    }
+  }
+}
