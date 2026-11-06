@@ -1,0 +1,7 @@
+{
+  "active_gpu_guard": null,
+  "all_four_models_cached": true,
+  "cpu_gateway_ready": true,
+  "interface": "loopback_only",
+  "paid_resources_created": false
+}

@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-11-06T03:21:46.051231+00:00",
+  "input_sha256": "6af204cdfcdf81d5f386ded037566b307f158c22812177a343e7afdb8c50aa54",
+  "instrument_sha256": "b52c8ee7794270e268ae36b5d97c52a82a31d69ab77ea0ca271262638657b843",
+  "limit_seconds": 1800,
+  "limitation": "Primary worker context telemetry was not flushed on graceful signal termination; primary full-run device peaks are unavailable",
+  "primary_routed_sha256": "af9e428536a336db0ebbf67e0741b4a8dc395141f49009f4f437a1013100e513",
+  "prior_live_device_observations": {
+    "power_w": 158.24,
+    "scope": "Individual live observations, not full-run peaks",
+    "temperature_c": 51.0
+  },
+  "purpose": "Retain device telemetry across native worker shutdown; no selection, policy, dtype or checkpoint change",
+  "selection_sha256": "068b1c6af149000338e91ea8219d2b5b09836e99b6907a19ff5cf3f4693ca8d0"
+}

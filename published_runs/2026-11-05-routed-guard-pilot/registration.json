@@ -1,0 +1,65 @@
+{
+  "calibration_limit_seconds": 5400,
+  "code_hashes": {
+    "docs/routed-guard/PLAN.md": "83b07b88aae831337fe394d056da90206002605bcf576bfd78449b8ea6cd8bc2",
+    "evals/decision_models/vendor-hashes.json": "bc101bd12269214ca4da7c20c4bfd08b69837d9b703b3c82aeed8821e00b17e1",
+    "evals/routed_guard/__init__.py": "71aded0b094d20319218ce976338a09a7cc23c4c6dbc33af15bf0d0e3d3649e7",
+    "evals/routed_guard/backend.py": "cd4589e49ad7522a3498adaf7ea982c6d321ce49dcebc8c329408c01dbf0a311",
+    "evals/routed_guard/common.py": "53471abd2b6a8ccd7896698148dd461c6820fd09a4e89a4c6a7d226a1c19a282",
+    "evals/routed_guard/experiment.py": "faa5fdedaaf5d4e0b678ce08c5806d8d2602b451964d8f348bd49c38e64d1d91",
+    "evals/routed_guard/server.py": "4c5bffee074f4f0415dd542a1f3313fc22fa9fb0073440508079efdd9d68cf73"
+  },
+  "data_audit_sha256": "67bbba24dc7268c5ac4d9112d4273f965491db97a5bb6b85ba52d9102e75fc9b",
+  "max_context": 16384,
+  "metadata_hashes": {
+    "calibration": "88cc56ca829fcb45b62932493da0f03dd11826d61f48340e2350f952d2a80248",
+    "test": "31e5a8667ccafca0b8d0f5734f9cad201d0b8c109243bfdda94af811ffd4a006"
+  },
+  "models": {
+    "clef": {
+      "backend": "native",
+      "model": "Cloudflare/clef-flash",
+      "parameters_billion": 9.0,
+      "revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f"
+    },
+    "kev": {
+      "backend": "native",
+      "base": "Qwen/Qwen3.5-4B-Base",
+      "base_revision": "1001bb4d826a52d1f399e183466143f4da7b741b",
+      "code_revision": "2074cc44256200bb37540103fa4572901faa10f3",
+      "model": "jaredpalmer/kev-4b",
+      "parameters_billion": 4.0,
+      "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52"
+    },
+    "policylm": {
+      "backend": "native",
+      "block_cutoff": 0.335,
+      "model": "musubilabs/policylm-1.7b",
+      "parameters_billion": 1.7,
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e"
+    },
+    "shieldstral": {
+      "backend": "transformers",
+      "block_cutoff": 0.5,
+      "model": "mistralai/Shieldstral-1.0-3B",
+      "parameters_billion": 3.0,
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5"
+    }
+  },
+  "pilot": true,
+  "policies_sha256": "8b61b6fee86f2771c09df169b4ee2e88269823432a647838bd4f36b86e7ba45f",
+  "private_input_hashes": {
+    "calibration": "83c4ed01179d49567ae1198170fd07c5d323d582b696fbd67f9ad441ea757c3c",
+    "test": "6af204cdfcdf81d5f386ded037566b307f158c22812177a343e7afdb8c50aa54"
+  },
+  "router_checkpoint_hashes": {
+    "backbone/config.json": "fa83eac5a4a853b5728e06c49ba89f90ee1308216be811ca9e6261f537874472",
+    "backbone/model.safetensors": "61cb56c32829ddc7cecb5d496384a8546990e0395df7bf720dbf7fea07213000",
+    "backbone/modeling_lfm2_bidirectional.py": "f171f518be2a07da48b17fdea5655cad0a2452ab548e90e8ae903143686647e2",
+    "head.safetensors": "1ef9638bfc1daf7dda5a1ff2dd0b6e246c17c80cbd61cc43cbbc89a99d6ca6ac",
+    "router.json": "24fcd7bb00d6b5c8b35ce75e2098e5db061411c0ac72b5ade3a1430db4eba0b1",
+    "tokenizer/tokenizer.json": "1efc3a6609abf6b63b1f47188d139f3b59973a6a434dffe970a7261a51ed2711",
+    "tokenizer/tokenizer_config.json": "5daf6a7e6028f480fda736b033f5963dd50e28c7de56caad112413645610b51e"
+  },
+  "test_limit_seconds": 5400
+}

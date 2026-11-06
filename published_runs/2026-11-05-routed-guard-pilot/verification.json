@@ -1,0 +1,9 @@
+{
+  "all_four_native_smoke_checks_passed": true,
+  "live_routed_endpoint_smoke_passed": true,
+  "primary_guard_successful_requests": 112,
+  "repeat_guard_successful_requests": 112,
+  "repeat_primary_decision_changes": 0,
+  "source_policies_are_application_context_not_routing_labels": true,
+  "tests_passed": 56
+}

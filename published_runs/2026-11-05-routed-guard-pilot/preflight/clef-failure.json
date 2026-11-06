@@ -1,0 +1,28 @@
+{
+  "model": "clef",
+  "responses": [
+    {
+      "error": "guard_backend_error",
+      "error_type": "RuntimeError",
+      "guard_attempted": true,
+      "guard_attempts": [
+        "clef"
+      ],
+      "input_sha256": "380c3bebc9d9d833da36ead6a73d6347ef3ca0724416c0c8bd688569097b00d1",
+      "latency_ms": 15275.261814007536,
+      "model": "clef",
+      "policy_sha256": "4ee10a376889555465e1f8d405b767ab4fc1f3e3172c2dbfdd52273b489f4b85",
+      "prediction": "REVIEW",
+      "request_id": null,
+      "requested_model": "clef",
+      "residency": "one_gpu_guard_at_a_time",
+      "route_reason": "forced_control",
+      "router": null,
+      "router_error": false,
+      "router_seconds": 3.5474004107527435e-05,
+      "selection_status": "bootstrap",
+      "status": "error"
+    }
+  ],
+  "scope": "Synthetic interface checks; no accuracy gate"
+}

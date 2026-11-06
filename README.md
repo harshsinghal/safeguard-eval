@@ -12,7 +12,9 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 [Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Datasets](docs/datasets/README.md) · [Models](docs/models/README.md) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
 
-**Latest experiment:** [Liquid CPU classifier for benchmark families](docs/liquid-router/README.md) — seven pooled categories; 90.07% held-out macro F1 in FP32. CPU INT8 halves median latency with a measured accuracy tradeoff. Held-out injection sources expose a routing-label gap; guard dispatch remains deferred.
+**Latest experiment:** [Routed guard system on one 5090](docs/routed-guard/README.md) — every prompt receives a guard check after CPU classification. The four-model, 112-case pilot scored 72.32% accuracy versus 75.00% for the calibration-selected Clef control; routing did not improve this pilot.
+
+**CPU classifier foundation:** [Liquid CPU classifier for benchmark families](docs/liquid-router/README.md) — seven pooled categories; 90.07% held-out macro F1 in FP32. CPU INT8 halves median latency with a measured accuracy tradeoff. Held-out injection sources expose a routing-label gap; guard dispatch remains deferred.
 
 **Agent-safety study:** [Judging agent actions and completed runs](docs/security-cognition/STEPGUARD-RESULTS.md)
 tests existing policy and decision models on StepGuard records. A dangerous

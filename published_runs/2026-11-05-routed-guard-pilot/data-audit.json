@@ -1,0 +1,67 @@
+{
+  "calibration_groups_disjoint": true,
+  "original_suite_untouched": true,
+  "policy_is_trusted_application_configuration": true,
+  "router_features": [
+    "content"
+  ],
+  "seed": 20261105,
+  "selection": "Stable hash, at most eight per task, equal class quotas; max two from a group within a task",
+  "serving_features": [
+    "content",
+    "policy_id"
+  ],
+  "source_suite_manifest_sha256": "b0082195d62e5180cf7ca47e0ff92fc8f3b455f7b6772ec57300f4a93f19291d",
+  "splits": {
+    "calibration": {
+      "input_sha256": "83c4ed01179d49567ae1198170fd07c5d323d582b696fbd67f9ad441ea757c3c",
+      "labels": {
+        "ALLOW": 92,
+        "BLOCK": 90,
+        "REVIEW": 10
+      },
+      "metadata_sha256": "88cc56ca829fcb45b62932493da0f03dd11826d61f48340e2350f952d2a80248",
+      "n": 192,
+      "tasks": {
+        "agent_actions": 16,
+        "agent_runs": 16,
+        "custom_policy": 16,
+        "cyber_requests": 16,
+        "harmful_requests": 16,
+        "hate_speech": 16,
+        "injection_context": 16,
+        "injection_deepset": 16,
+        "injection_xtram": 16,
+        "skill_packages": 16,
+        "skill_text": 16,
+        "source_code": 16
+      }
+    },
+    "test": {
+      "input_sha256": "6af204cdfcdf81d5f386ded037566b307f158c22812177a343e7afdb8c50aa54",
+      "labels": {
+        "ALLOW": 54,
+        "BLOCK": 54,
+        "REVIEW": 4
+      },
+      "metadata_sha256": "31e5a8667ccafca0b8d0f5734f9cad201d0b8c109243bfdda94af811ffd4a006",
+      "n": 112,
+      "tasks": {
+        "agent_actions": 8,
+        "agent_runs": 8,
+        "benign_lookalikes": 8,
+        "custom_policy": 8,
+        "cyber_requests": 8,
+        "harmful_requests": 8,
+        "hate_speech": 8,
+        "injection_context": 8,
+        "injection_deepset": 8,
+        "injection_xtram": 8,
+        "jailbreak_attempts": 8,
+        "skill_packages": 8,
+        "skill_text": 8,
+        "source_code": 8
+      }
+    }
+  }
+}

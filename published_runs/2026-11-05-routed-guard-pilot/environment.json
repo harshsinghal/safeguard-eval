@@ -1,0 +1,21 @@
+{
+  "gateway_and_default_workers": {
+    "fastapi": "0.162.0",
+    "huggingface-hub": "1.33.0",
+    "numpy": "2.3.5",
+    "peft": "0.21.2",
+    "pydantic": "2.14.2",
+    "torch": "2.8.0+cu128",
+    "torchvision": "0.23.0+cu128",
+    "transformers": "5.10.2",
+    "uvicorn": "0.54.0"
+  },
+  "guard_backbone_device": "cuda:0",
+  "guard_backbone_dtype": "bfloat16",
+  "policylm_worker": {
+    "huggingface_hub": "0.36.2",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.6"
+  },
+  "router_device": "cpu"
+}

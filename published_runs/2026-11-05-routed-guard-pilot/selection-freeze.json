@@ -1,0 +1,79 @@
+{
+  "calibration_prediction_hashes": {
+    "clef": "516b0a2200d372f8d694e74a2ee7ecdc202ed70a940506db3611d54d65b70472",
+    "kev": "43bd8edcec092d0f35044f6459042164fbd49254a2bc604b5a105f58f27f2414",
+    "policylm": "38e3f571212fb561fa1e998dca3d522a997b0fd4a46a66f95a4a489a4831d74f",
+    "shieldstral": "2f17616031cc5294d4d92bd901cc4730dca5d370cf6fc7b558b6710f6f64bdbc"
+  },
+  "registration_sha256": "d5c30c6f6ac332602b2d8a468a2fad55775c3cb72fb02cfaeb6d437f3d5709dc",
+  "selection": {
+    "calibration_category_scores": {
+      "agent_safety": {
+        "clef": 0.59375,
+        "kev": 0.46875,
+        "policylm": 0.53125,
+        "shieldstral": 0.5
+      },
+      "code_safety": {
+        "clef": 0.75,
+        "kev": 0.875,
+        "policylm": 0.8125,
+        "shieldstral": 0.75
+      },
+      "cyber_safety": {
+        "clef": 0.8125,
+        "kev": 0.8125,
+        "policylm": 0.5,
+        "shieldstral": 0.8125
+      },
+      "harmful_requests": {
+        "clef": 0.8125,
+        "kev": 0.75,
+        "policylm": 0.75,
+        "shieldstral": 0.9375
+      },
+      "hate_speech": {
+        "clef": 0.6875,
+        "kev": 0.6875,
+        "policylm": 0.6875,
+        "shieldstral": 0.8125
+      },
+      "prompt_injection": {
+        "clef": 0.7087962962962963,
+        "kev": 0.7097222222222221,
+        "policylm": 0.7685185185185185,
+        "shieldstral": 0.7060185185185185
+      },
+      "skill_safety": {
+        "clef": 0.6875,
+        "kev": 0.65625,
+        "policylm": 0.71875,
+        "shieldstral": 0.625
+      }
+    },
+    "calibration_model_scores": {
+      "clef": 0.7015046296296297,
+      "kev": 0.6920138888888889,
+      "policylm": 0.686111111111111,
+      "shieldstral": 0.6733796296296296
+    },
+    "category_models": {
+      "agent_safety": "clef",
+      "code_safety": "kev",
+      "cyber_safety": "shieldstral",
+      "harmful_requests": "shieldstral",
+      "hate_speech": "shieldstral",
+      "prompt_injection": "policylm",
+      "skill_safety": "policylm"
+    },
+    "default_model": "clef",
+    "fallback_below": 0.6,
+    "selection": "Equal available-task mean of reference-class recall on calibration; tie order policylm,shieldstral,kev,clef",
+    "selection_status": "frozen",
+    "unavailable_calibration_tasks": [
+      "benign_lookalikes",
+      "jailbreak_attempts"
+    ]
+  },
+  "selection_sha256": "068b1c6af149000338e91ea8219d2b5b09836e99b6907a19ff5cf3f4693ca8d0"
+}
