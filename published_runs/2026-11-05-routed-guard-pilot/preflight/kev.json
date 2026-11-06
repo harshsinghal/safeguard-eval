@@ -1,0 +1,101 @@
+{
+  "model": "kev",
+  "responses": [
+    {
+      "full_input_passed": true,
+      "guard_attempted": true,
+      "guard_attempts": [
+        "kev"
+      ],
+      "input_sha256": "380c3bebc9d9d833da36ead6a73d6347ef3ca0724416c0c8bd688569097b00d1",
+      "input_tokens": 346,
+      "latency_ms": 74949.34917900537,
+      "model": "kev",
+      "model_id": "jaredpalmer/kev-4b",
+      "model_load_seconds": 57.85423256200738,
+      "model_revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+      "native_calls": 1,
+      "policy_sha256": "4ee10a376889555465e1f8d405b767ab4fc1f3e3172c2dbfdd52273b489f4b85",
+      "prediction": "ALLOW",
+      "probabilities": {
+        "ALLOW": 0.8454992434308197,
+        "BLOCK": 0.15450075656918025
+      },
+      "request_id": null,
+      "requested_model": "kev",
+      "residency": "one_gpu_guard_at_a_time",
+      "route_reason": "forced_control",
+      "router": null,
+      "router_error": false,
+      "router_seconds": 6.303700502030551e-05,
+      "score": 0.15450075656918025,
+      "selection_status": "bootstrap",
+      "status": "ok"
+    },
+    {
+      "full_input_passed": true,
+      "guard_attempted": true,
+      "guard_attempts": [
+        "kev"
+      ],
+      "input_sha256": "13b38a15675fa67d40c9995643139c778c4913e2bb9a2a894ceb8af84bd6b7c5",
+      "input_tokens": 452,
+      "latency_ms": 360.6430820073001,
+      "model": "kev",
+      "model_id": "jaredpalmer/kev-4b",
+      "model_load_seconds": 0.0,
+      "model_revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+      "native_calls": 1,
+      "policy_sha256": "c72eb0143fd9a4c9c14a67a1a6ce5263c050571630b826ed71e7079f10a4ff8b",
+      "prediction": "REVIEW",
+      "probabilities": {
+        "ALLOW": 0.15374442539647898,
+        "BLOCK": 0.13685982271127425,
+        "REVIEW": 0.7093957518922468
+      },
+      "request_id": null,
+      "requested_model": "kev",
+      "residency": "one_gpu_guard_at_a_time",
+      "route_reason": "forced_control",
+      "router": null,
+      "router_error": false,
+      "router_seconds": 8.22160072857514e-05,
+      "score": 0.13685982271127425,
+      "selection_status": "bootstrap",
+      "status": "ok"
+    },
+    {
+      "full_input_passed": true,
+      "guard_attempted": true,
+      "guard_attempts": [
+        "kev"
+      ],
+      "input_sha256": "f751b8f36bbe57cc5c8f805caf375b87dd5d160a9b5d9d107afb8b6414ac0632",
+      "input_tokens": 390,
+      "latency_ms": 345.6265270069707,
+      "model": "kev",
+      "model_id": "jaredpalmer/kev-4b",
+      "model_load_seconds": 0.0,
+      "model_revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+      "native_calls": 1,
+      "policy_sha256": "bcaa3b81ff7963dbd1027274320e8f2509a106ace29c246f9358da79c99dd6c6",
+      "prediction": "BLOCK",
+      "probabilities": {
+        "ALLOW": 0.3331965639367162,
+        "BLOCK": 0.4104416147388483,
+        "REVIEW": 0.2563618213244354
+      },
+      "request_id": null,
+      "requested_model": "kev",
+      "residency": "one_gpu_guard_at_a_time",
+      "route_reason": "forced_control",
+      "router": null,
+      "router_error": false,
+      "router_seconds": 4.8600006266497076e-05,
+      "score": 0.4104416147388483,
+      "selection_status": "bootstrap",
+      "status": "ok"
+    }
+  ],
+  "scope": "Synthetic interface checks; not an accuracy evaluation"
+}

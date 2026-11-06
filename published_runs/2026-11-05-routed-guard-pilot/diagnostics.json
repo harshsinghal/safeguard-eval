@@ -1,0 +1,19 @@
+{
+  "bootstrap_replicates": 1000,
+  "bootstrap_scope": "Exploratory paired raw-accuracy difference over observed source groups on reused pilot cases",
+  "classifier_reference_family_accuracy": 0.9134615384615384,
+  "classifier_reference_family_n": 104,
+  "cold_load_count": 4,
+  "cold_load_seconds": [
+    23.066071606008336,
+    56.111469659997965,
+    47.09912551799789,
+    47.1052257919946
+  ],
+  "guard_control_decision_changes": 0,
+  "paired_group_bootstrap_accuracy_delta_95pct": [
+    -0.08928571428571429,
+    0.02702702702702703
+  ],
+  "warm_median_ms": 238.6520795043907
+}

@@ -1,0 +1,122 @@
+{
+  "model": "clef",
+  "responses": [
+    {
+      "full_input_passed": true,
+      "guard_attempted": true,
+      "guard_attempts": [
+        "clef"
+      ],
+      "input_sha256": "380c3bebc9d9d833da36ead6a73d6347ef3ca0724416c0c8bd688569097b00d1",
+      "input_tokens": 452,
+      "latency_ms": 55598.78471499542,
+      "model": "clef",
+      "model_id": "Cloudflare/clef-flash",
+      "model_load_seconds": 36.58348866000597,
+      "model_revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+      "native_calls": 1,
+      "policy_sha256": "4ee10a376889555465e1f8d405b767ab4fc1f3e3172c2dbfdd52273b489f4b85",
+      "prediction": "ALLOW",
+      "probabilities": {
+        "ALLOW": 0.8438951025545426,
+        "BLOCK": 0.1561048974454574
+      },
+      "request_id": null,
+      "requested_model": "clef",
+      "residency": "one_gpu_guard_at_a_time",
+      "route_reason": "forced_control",
+      "router": null,
+      "router_error": false,
+      "router_seconds": 5.351500294636935e-05,
+      "runtime": {
+        "backbone_dtype": "bfloat16",
+        "cuda_graphs": false,
+        "fused_kernels": false,
+        "torch": "2.8.0+cu128",
+        "transformers": "5.10.2"
+      },
+      "score": 0.1561048974454574,
+      "selection_status": "bootstrap",
+      "status": "ok"
+    },
+    {
+      "full_input_passed": true,
+      "guard_attempted": true,
+      "guard_attempts": [
+        "clef"
+      ],
+      "input_sha256": "13b38a15675fa67d40c9995643139c778c4913e2bb9a2a894ceb8af84bd6b7c5",
+      "input_tokens": 568,
+      "latency_ms": 558.4610059886472,
+      "model": "clef",
+      "model_id": "Cloudflare/clef-flash",
+      "model_load_seconds": 0.0,
+      "model_revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+      "native_calls": 1,
+      "policy_sha256": "c72eb0143fd9a4c9c14a67a1a6ce5263c050571630b826ed71e7079f10a4ff8b",
+      "prediction": "REVIEW",
+      "probabilities": {
+        "ALLOW": 0.09806522786828646,
+        "BLOCK": 0.09357449413170636,
+        "REVIEW": 0.8083602780000072
+      },
+      "request_id": null,
+      "requested_model": "clef",
+      "residency": "one_gpu_guard_at_a_time",
+      "route_reason": "forced_control",
+      "router": null,
+      "router_error": false,
+      "router_seconds": 8.968499605543911e-05,
+      "runtime": {
+        "backbone_dtype": "bfloat16",
+        "cuda_graphs": false,
+        "fused_kernels": false,
+        "torch": "2.8.0+cu128",
+        "transformers": "5.10.2"
+      },
+      "score": 0.09357449413170636,
+      "selection_status": "bootstrap",
+      "status": "ok"
+    },
+    {
+      "full_input_passed": true,
+      "guard_attempted": true,
+      "guard_attempts": [
+        "clef"
+      ],
+      "input_sha256": "f751b8f36bbe57cc5c8f805caf375b87dd5d160a9b5d9d107afb8b6414ac0632",
+      "input_tokens": 506,
+      "latency_ms": 443.8247660000343,
+      "model": "clef",
+      "model_id": "Cloudflare/clef-flash",
+      "model_load_seconds": 0.0,
+      "model_revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f",
+      "native_calls": 1,
+      "policy_sha256": "bcaa3b81ff7963dbd1027274320e8f2509a106ace29c246f9358da79c99dd6c6",
+      "prediction": "BLOCK",
+      "probabilities": {
+        "ALLOW": 0.17911738226941679,
+        "BLOCK": 0.6603228339566244,
+        "REVIEW": 0.16055978377395883
+      },
+      "request_id": null,
+      "requested_model": "clef",
+      "residency": "one_gpu_guard_at_a_time",
+      "route_reason": "forced_control",
+      "router": null,
+      "router_error": false,
+      "router_seconds": 6.58450007904321e-05,
+      "runtime": {
+        "backbone_dtype": "bfloat16",
+        "cuda_graphs": false,
+        "fused_kernels": false,
+        "torch": "2.8.0+cu128",
+        "transformers": "5.10.2"
+      },
+      "score": 0.6603228339566244,
+      "selection_status": "bootstrap",
+      "status": "ok"
+    }
+  ],
+  "scope": "Synthetic interface checks; not an accuracy evaluation"
+}
