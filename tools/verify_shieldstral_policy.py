@@ -2,6 +2,7 @@
 import argparse
 import gzip
 from hashlib import sha256
+import json
 import math
 from pathlib import Path
 import sys
@@ -10,7 +11,7 @@ from tempfile import TemporaryDirectory
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from evals.liquid_router.common import digest, read, rows
 from evals.shieldstral_policy.analysis import same_cases, select, summarize
-from evals.shieldstral_policy.data import BINARY_EXCLUDED, BUNDLE, code_hashes
+from evals.shieldstral_policy.data import BINARY_EXCLUDED, BUNDLE, EVAL_LIMIT, code_hashes
 from evals.shieldstral_policy.study import SYSTEMS
 
 
@@ -27,7 +28,7 @@ def metadata_signature(records):
 def validate_logits(records):
     for row in records:
         if row["score"] is None:
-            if row.get("error") != "input_exceeds_context_limit" or row["tokens"] <= 16384:
+            if row.get("error") != "input_exceeds_context_limit" or row["tokens"] <= EVAL_LIMIT:
                 raise ValueError("Unexplained missing score")
             continue
         yes, no = row["yes_no_logits"]
@@ -88,7 +89,7 @@ def verify(bundle, scratch):
         equal(steps[-1]["examples_seen"], len(mixed), "Fit examples seen")
     for result in results[1:]:
         same_cases(results[0], result)
-    equal(summarize(scratch), read(bundle / "results.json"), "Complete scorecard")
+    equal(json.loads(json.dumps(summarize(scratch))), read(bundle / "results.json"), "Complete scorecard")
     return {"systems": len(results), "validation_cases": len(validation),
             "binary_benchmark_cases": len(final), "fresh_fixture_cases": len(fresh),
             "examples_per_adapter": len(mixed), "passed": True}
@@ -100,8 +101,6 @@ def normalize_cutoff(cutoff):
 
 
 if __name__ == "__main__":
-    import json
-
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("bundle", type=Path)
     args = parser.parse_args()

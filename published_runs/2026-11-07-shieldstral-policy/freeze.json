@@ -1,0 +1,51 @@
+{
+  "checkpoints": {
+    "contrast": {
+      "README.md": "fa3764ec257916835572f414fded3368346cec6b4944fb879173f72c1c85f43a",
+      "adapter_config.json": "93d7b47ff32c31ccac1870a90ea1000344209858b8bc9b7ed11e82ecb89d5973",
+      "adapter_model.safetensors": "6dc7bbd63930c0e7af3fc29482f40e4061f63e163f51c09a58a56851ef76bcfc"
+    },
+    "mixed": {
+      "README.md": "fa3764ec257916835572f414fded3368346cec6b4944fb879173f72c1c85f43a",
+      "adapter_config.json": "93d7b47ff32c31ccac1870a90ea1000344209858b8bc9b7ed11e82ecb89d5973",
+      "adapter_model.safetensors": "c3e39ca6dfbb1bfaf7e8c7e10d0038e6267ed38030c07148871d16fa50d0f95b"
+    }
+  },
+  "cutoffs": {
+    "base": {
+      "balanced": 0.1,
+      "low_false_block": 0.4,
+      "validation_balanced_accuracy": 0.7428594672601071,
+      "validation_low_false_block_operating_point": [
+        0.09507262123312478,
+        0.5689463032784747
+      ]
+    },
+    "contrast": {
+      "balanced": 0.5,
+      "low_false_block": 0.7,
+      "validation_balanced_accuracy": 0.8540145608332281,
+      "validation_low_false_block_operating_point": [
+        0.0793463464588563,
+        0.7416793040117275
+      ]
+    },
+    "mixed": {
+      "balanced": 0.65,
+      "low_false_block": 0.75,
+      "validation_balanced_accuracy": 0.8549575236477578,
+      "validation_low_false_block_operating_point": [
+        0.09838666747842593,
+        0.7936687369314402
+      ]
+    }
+  },
+  "model": "mistralai/Shieldstral-1.0-3B",
+  "registration_sha256": "0233e80895b92ed84e413e339b4d055213ca59614b60c4f2b245570748e0d865",
+  "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+  "validation_hashes": {
+    "base": "011e0d0b3699199c37be80d42d5a55327ad2120566306a2508ec1ad20fb20d55",
+    "contrast": "576335df421ae7409732e690ba25a156474b82f23caf57702abcb2871fe749f7",
+    "mixed": "7d238e8bde98b738135dff0eb62f046d8a3c016b529233e391df5f1366ab14ee"
+  }
+}

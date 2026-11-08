@@ -1,0 +1,171 @@
+{
+  "audit": "Protected hashes and source IDs disjoint; parent group audit verified; normalized FIT/validation disjoint",
+  "code": {
+    "docs/shieldstral-policy/PLAN.md": "049c8f4d922349364a03b69b8abc9af7c8e4b42b91117687da897afbdaa266cc",
+    "evals/enterprise_benchmark/scoring.py": "eed941082c7c64d62f893b9adf459aa08293c2a28cf02104cd3172cbc92e56f3",
+    "evals/run.py": "7ace66fd864247b7a40fd60f9d5f13de9e9ad3288517dc88d21ae59fb735f986",
+    "evals/shieldstral_policy/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evals/shieldstral_policy/analysis.py": "07d206c4aba3094825f1cb6f0a115ce0ebb7b236ceced04144ffd24a915d72a4",
+    "evals/shieldstral_policy/data.py": "6591ecde5fc6d390788b43f00ae0a26a616b548580709e9ad2ab1167286184dc",
+    "evals/shieldstral_policy/runtime.py": "1dc28247f35786ffe95da388078a0cf983dffe51006387dc5b9bbde3a37bf79d",
+    "evals/shieldstral_policy/smoke.py": "0abfb221cbeff79578cc488193d82a8cd5d94da655abaaba9eaf3e73b958b211",
+    "evals/shieldstral_policy/study.py": "ea02b35c3058aa1103d17052932fd5b28927f2c692e4e90c36056ba9341315ef"
+  },
+  "cohorts": {
+    "contrast": {
+      "agent_actions": {
+        "ALLOW": 28,
+        "BLOCK": 28
+      },
+      "agent_runs": {
+        "ALLOW": 28,
+        "BLOCK": 28
+      },
+      "cyber_requests": {
+        "ALLOW": 28,
+        "BLOCK": 28
+      },
+      "harmful_requests": {
+        "ALLOW": 28,
+        "BLOCK": 28
+      },
+      "hate_speech": {
+        "ALLOW": 28,
+        "BLOCK": 28
+      },
+      "injection_deepset": {
+        "ALLOW": 28,
+        "BLOCK": 28
+      },
+      "injection_xtram": {
+        "ALLOW": 28,
+        "BLOCK": 28
+      },
+      "policy_contrast": {
+        "ALLOW": 36,
+        "BLOCK": 36
+      },
+      "skill_text": {
+        "ALLOW": 28,
+        "BLOCK": 28
+      },
+      "source_code": {
+        "ALLOW": 28,
+        "BLOCK": 28
+      }
+    },
+    "fresh": {
+      "policy_contrast": {
+        "ALLOW": 12,
+        "BLOCK": 12
+      }
+    },
+    "mixed": {
+      "agent_actions": {
+        "ALLOW": 32,
+        "BLOCK": 32
+      },
+      "agent_runs": {
+        "ALLOW": 32,
+        "BLOCK": 32
+      },
+      "cyber_requests": {
+        "ALLOW": 32,
+        "BLOCK": 32
+      },
+      "harmful_requests": {
+        "ALLOW": 32,
+        "BLOCK": 32
+      },
+      "hate_speech": {
+        "ALLOW": 32,
+        "BLOCK": 32
+      },
+      "injection_deepset": {
+        "ALLOW": 32,
+        "BLOCK": 32
+      },
+      "injection_xtram": {
+        "ALLOW": 32,
+        "BLOCK": 32
+      },
+      "skill_text": {
+        "ALLOW": 32,
+        "BLOCK": 32
+      },
+      "source_code": {
+        "ALLOW": 32,
+        "BLOCK": 32
+      }
+    },
+    "validation": {
+      "agent_actions": {
+        "ALLOW": 31,
+        "BLOCK": 38
+      },
+      "agent_runs": {
+        "ALLOW": 31,
+        "BLOCK": 24
+      },
+      "cyber_requests": {
+        "ALLOW": 63,
+        "BLOCK": 63
+      },
+      "harmful_requests": {
+        "ALLOW": 46,
+        "BLOCK": 82
+      },
+      "hate_speech": {
+        "ALLOW": 82,
+        "BLOCK": 46
+      },
+      "injection_deepset": {
+        "ALLOW": 30,
+        "BLOCK": 31
+      },
+      "injection_xtram": {
+        "ALLOW": 32,
+        "BLOCK": 33
+      },
+      "skill_packages": {
+        "ALLOW": 37,
+        "BLOCK": 41
+      },
+      "skill_text": {
+        "ALLOW": 24,
+        "BLOCK": 25
+      },
+      "source_code": {
+        "ALLOW": 56,
+        "BLOCK": 35
+      }
+    }
+  },
+  "enterprise_manifest_sha256": "b0082195d62e5180cf7ca47e0ff92fc8f3b455f7b6772ec57300f4a93f19291d",
+  "files": {
+    "contrast-metadata.jsonl": "06fb75e96a486349db88e74c50c21224e554bfcb622709371a8f9ffa0afeafec",
+    "contrast.jsonl": "1ef2097a7880d7124a735edeb369b3c18aabedcf24a9cd0a165e68b61078c360",
+    "fresh-metadata.jsonl": "13861ad3b4ea3d8dd661599909e7474026cc3674126ae7a09409293f8ce03b58",
+    "fresh.jsonl": "eaa6c8a2226d7b01f3ac7f4d9121328a6b15dafa0f5a4d5a400cc23bf772b4ed",
+    "mixed-metadata.jsonl": "73ef788c4f2a9cd41237e2be5017191bea9cddcb074dea7d9eea9120405ae320",
+    "mixed.jsonl": "53520b401aa10d62d711cb2779c8babd7e743288208607572033c89a9c50c55f",
+    "validation-metadata.jsonl": "4a6b2c865bb06e5b4d8242870c6864680cea5d948c085029b82cf7e5ced22460",
+    "validation.jsonl": "c2f1fdaff072ce8b5cf797355fabbdc111dfe5ce393008e0f896bcda0c88cd97"
+  },
+  "fresh_reference_scope": "Authored mechanical fixtures, not independently adjudicated",
+  "over_training_cap_by_task": {
+    "agent_actions": 71,
+    "agent_runs": 52,
+    "skill_text": 79,
+    "source_code": 12
+  },
+  "parent_fit_cases": 3316,
+  "parent_input_hashes": {
+    "fit": "5724bb89d65b02030f73de4764b0989014c461622fa27194591da6b6ba55a95a",
+    "test": "ac7a7269c055d2a08c140ea8fe6089643d07a7b55f422e6d21930ef04b1fbcd9",
+    "validation": "c2f1fdaff072ce8b5cf797355fabbdc111dfe5ce393008e0f896bcda0c88cd97"
+  },
+  "parent_registration_sha256": "7336b1ec48d43296592a9960661cf33bf90abe16c56d7d2f200234ddaab4c573",
+  "policy_catalog_sha256": "a612375c2e338fd128b1c35e470d1e9ecc2eaf41f314b402fc42c6db35e49763",
+  "seed": 20261107
+}

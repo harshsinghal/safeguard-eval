@@ -1,0 +1,13 @@
+{
+  "observed_utc": "2026-11-08T03:53:55.837720+00:00",
+  "study_gpu_processes": 0,
+  "device_after": {
+    "temperature_c": 44.0,
+    "power_w": 101.06,
+    "used_mib": 11087.0
+  },
+  "provider_api_spend_usd": 0,
+  "cloud_resources_provisioned": 0,
+  "local_electricity_metered": false,
+  "hardware_settings_changed": false
+}

@@ -1,0 +1,8 @@
+{
+  "systems": 3,
+  "validation_cases": 850,
+  "binary_benchmark_cases": 874,
+  "fresh_fixture_cases": 24,
+  "examples_per_adapter": 576,
+  "passed": true
+}

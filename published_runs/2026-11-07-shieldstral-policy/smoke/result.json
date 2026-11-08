@@ -1,0 +1,27 @@
+{
+  "answer_ids": {
+    "ALLOW": 2649,
+    "BLOCK": 13059
+  },
+  "elapsed_seconds": 32.97960899100872,
+  "gradient_norm": 9.280987739562988,
+  "input_sha256": "cd995bc2c410dfd1c677108764abccdc81c5d4e7eb85d353e93ffb1e4381f904",
+  "loss": 0.2519572973251343,
+  "model": "mistralai/Shieldstral-1.0-3B",
+  "native_score_difference": 0.0,
+  "operation_seconds": 5.635587188997306,
+  "peak_allocated_mib": 8116.7919921875,
+  "peft": "0.21.2",
+  "reloaded_logits_identical": true,
+  "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+  "sampled_peak": {
+    "power_w": 136.76,
+    "temperature_c": 51.0,
+    "used_mib": 20111.0
+  },
+  "scored_target_positions_per_row": 1,
+  "tokens": 2043,
+  "torch": "2.8.0+cu128",
+  "track": "agent_runs",
+  "transformers": "5.10.2"
+}
