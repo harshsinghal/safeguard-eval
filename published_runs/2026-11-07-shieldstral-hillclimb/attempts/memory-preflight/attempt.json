@@ -1,0 +1,8 @@
+{
+  "stage": "targeted",
+  "completed_steps": 0,
+  "examples_seen": 0,
+  "error": "Less than 16 GiB VRAM available before loading",
+  "checkpoint_saved": false,
+  "recorded_utc": "2026-11-08T05:36:36.204229+00:00"
+}

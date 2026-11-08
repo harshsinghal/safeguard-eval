@@ -1,0 +1,11 @@
+{
+  "checkpoint_files": {
+    "README.md": "fa3764ec257916835572f414fded3368346cec6b4944fb879173f72c1c85f43a",
+    "adapter_config.json": "93d7b47ff32c31ccac1870a90ea1000344209858b8bc9b7ed11e82ecb89d5973",
+    "adapter_model.safetensors": "59816e57e6d7b84fafcc134fde3c79aea4eeddc03026ea7c2ff697e56490e9c7"
+  },
+  "examples": 864,
+  "mean_step_loss": 0.5416526556315923,
+  "steps": 108,
+  "trainable_parameters": 4685824
+}

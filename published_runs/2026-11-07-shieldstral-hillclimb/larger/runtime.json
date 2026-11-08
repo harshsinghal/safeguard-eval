@@ -1,0 +1,10 @@
+{
+  "elapsed_seconds": 460.54574748000596,
+  "operation_seconds": 112.32583862924366,
+  "peak_allocated_mib": 8968.91943359375,
+  "sampled_peak": {
+    "power_w": 202.87,
+    "temperature_c": 46.0,
+    "used_mib": 22063.0
+  }
+}

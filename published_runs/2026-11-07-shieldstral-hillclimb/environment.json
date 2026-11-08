@@ -1,0 +1,8 @@
+{
+  "torch": "2.8.0+cu128",
+  "transformers": "5.10.2",
+  "peft": "0.21.2",
+  "huggingface-hub": "1.33.0",
+  "scikit-learn": "1.9.1",
+  "numpy": "2.3.5"
+}

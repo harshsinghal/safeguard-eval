@@ -1,0 +1,11 @@
+{
+  "systems": 4,
+  "examples_per_fit": 864,
+  "calibration": 426,
+  "selection": 424,
+  "reused_cases": 898,
+  "transfer_cases": 384,
+  "nomination": "incumbent",
+  "promoted": null,
+  "passed": true
+}

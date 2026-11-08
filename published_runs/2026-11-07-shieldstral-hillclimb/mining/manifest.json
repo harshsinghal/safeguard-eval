@@ -1,0 +1,11 @@
+{
+  "fit_sha256": "5724bb89d65b02030f73de4764b0989014c461622fa27194591da6b6ba55a95a",
+  "prior_checkpoint": {
+    "README.md": "fa3764ec257916835572f414fded3368346cec6b4944fb879173f72c1c85f43a",
+    "adapter_config.json": "93d7b47ff32c31ccac1870a90ea1000344209858b8bc9b7ed11e82ecb89d5973",
+    "adapter_model.safetensors": "c3e39ca6dfbb1bfaf7e8c7e10d0038e6267ed38030c07148871d16fa50d0f95b"
+  },
+  "prior_freeze_sha256": "2bc1d2b8430d99072a2380823247a567923e9f9840d4211136c03a1aa0e32cc2",
+  "scores_sha256": "4314e78928831bdc3d844d4d4b5fb459dd939b0256df8eece4e47372697db022",
+  "source_code_sha256": "348fc7d6b1e8979cb2999d4ae94df32f4e62cb6ea14d9cebeed8b90a8085db59"
+}

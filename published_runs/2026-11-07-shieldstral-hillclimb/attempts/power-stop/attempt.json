@@ -1,0 +1,8 @@
+{
+  "stage": "targeted",
+  "completed_steps": 98,
+  "examples_seen": 784,
+  "error": "GPU reached the sustained power stop limit",
+  "checkpoint_saved": false,
+  "recorded_utc": "2026-11-08T05:33:49.069833+00:00"
+}

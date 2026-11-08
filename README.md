@@ -12,6 +12,8 @@ The finding running through this work is that **policy authoring is deeply coupl
 
 [Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Datasets](docs/datasets/README.md) · [Models](docs/models/README.md) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
 
+**Shieldstral hill climb:** [Hate speech and pending actions](docs/shieldstral-hillclimb/README.md) compares two equal-step adapters. The targeted run improved pending actions and the reused-suite mean, but neither candidate passed the retention gate.
+
 **Shieldstral fine-tuning:** [Shared moderation adapter](docs/shieldstral-policy/README.md) lifted equal-task balanced accuracy from 70.93% to 80.72% across ten binary tasks. Both adapters exceeded the registered hate-speech recall regression limit.
 
 **Latest experiment:** [Liquid CPU classifier for benchmark families](docs/liquid-router/README.md) — seven pooled categories; 90.07% held-out macro F1 in FP32. CPU INT8 halves median latency with a measured accuracy tradeoff. Held-out injection sources expose a routing-label gap; guard dispatch remains deferred.
