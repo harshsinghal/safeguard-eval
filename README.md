@@ -2,15 +2,23 @@
 
 **A living research notebook on policy authoring and models for moderation.**
 
-A moderation team writes a rule. A model interprets it. What happens when the team changes a definition, removes an example, switches models, or combines their decisions?
+We study how written policies and models work together to moderate prompts, content, code and agent actions. Our experiments compare specialist policy models, general-purpose LLMs, decision models and task-specific classifiers.
 
-This repository follows those questions through a growing series of experiments. We test specialist policy models, general-purpose language models, and decision models sometimes called “System One” models. We change policy text, examine model-specific input formats, transfer policies between models, retrieve labeled examples, combine model scores, train classifiers on frozen representations, and fine-tune a compact encoder for a fixed task. We also measure serving latency, throughput and GPU cost, including how prompt length and inference engines affect deployment. The records include improvements, regressions, and inconclusive results.
+## TL;DR
 
-The finding running through this work is that **policy authoring is deeply coupled with AI engineering**. A policy is an operational input: its wording, its delivery to the model, and the rule that turns a score into an action all need testing. Policy owners define the intended boundary; engineers help measure and implement it. Neither the model name nor a well-written document is sufficient on its own.
+- **Policy text changes outcomes.** Definitions, examples and format changed decisions without changing model weights. An edit that helped one model sometimes hurt another. [Policy edits](docs/hatexplain/READOUT.md) · [Transfer tests](docs/policy-transfer/READOUT.md)
+- **We found no model that wins everywhere.** Small specialists can compete with larger LLMs, but strength on harmful prompts does not guarantee strength on injections or agent actions. [Model comparisons](docs/models/README.md)
+- **Improvements can come without further language-model fine-tuning.** Policy tuning and combining model scores helped in some experiments. More models or more elaborate combinations did not consistently help. [Policy tuning](docs/prompt-injection/README.md) · [Ensembles](docs/smart-ensemble/README.md)
+- **One accuracy score hides important mistakes.** Count both wrongly blocked content and missed violations. Similar overall scores can mean very different moderation experiences. [Balanced metrics and results](docs/leaderboard/README.md)
+- **Deployment is part of the evaluation.** Input length, traffic and inference settings affected speed, capacity and sometimes decisions. Test the setup you intend to run. [Serving experiments](docs/cloud-serving/README.md)
+
+**Policy authoring is deeply coupled with AI engineering.** Policy owners and engineers should version and review changes together, tune on development examples, and measure on held-out cases that reflect the intended rules.
 
 *Maintained by [Harsh Singhal](https://www.linkedin.com/in/harshsinghal). A growing collection of exploratory studies; the paper is an author-review draft.*
 
 [Experiment map](#experiment-map) · [Experiment log](#experiment-log) · [Datasets](docs/datasets/README.md) · [Models](docs/models/README.md) · [Current leaderboard](#current-leaderboard) · [Next steps](docs/research-directions/REDUCING-MODERATION-ERRORS.md) · [Metric definitions](docs/leaderboard/METRICS.md) · [Engineering guide](docs/engineering-guardrails/README.md) · [Research paper](research-preprint/README.md) · [Agent skill](skills/safeguard-eval/README.md) · [Original demo](DEMO.md)
+
+**New work under review (unmerged PRs):** [Local GPU reproduction](https://github.com/harshsinghal/safeguard-eval/pull/3) · [Shared enterprise benchmark](https://github.com/harshsinghal/safeguard-eval/pull/4) · [CPU category classifier](https://github.com/harshsinghal/safeguard-eval/pull/5) · [Model-routing pilot](https://github.com/harshsinghal/safeguard-eval/pull/6). The routing pilot did not improve on its selected single-model baseline.
 
 **Latest experiment:** [Judging agent actions and completed runs](docs/security-cognition/STEPGUARD-RESULTS.md)
 tests existing policy and decision models on StepGuard records. A dangerous
