@@ -7,6 +7,8 @@ the source contains, the decision we asked models to make, and where to find our
 methods and results. A dataset's original task and our evaluation task are not
 always the same.
 
+The [Enterprise Moderation Suite candidate](../enterprise-benchmark/README.md) combines fixed source-aligned task panels with explicit score profiles and retains all task-level results. It preserves source permissions and label limitations.
+
 ## Find a dataset by task
 
 | Dataset / source | What it helps test | Our evaluated population | Evidence |

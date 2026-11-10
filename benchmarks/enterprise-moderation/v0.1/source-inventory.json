@@ -1,0 +1,225 @@
+{
+  "scored_sources": [
+    {
+      "calibration": 16,
+      "evaluation": 62,
+      "permissions": "Publisher conditions remain in force; dataset text is restored privately.",
+      "raw_source_text_redistributed": false,
+      "reference_provenance": [
+        "mixed_model_and_benign_package_labels"
+      ],
+      "revision": "f0722971eddb654c308106c9086ff69da5b0484b",
+      "source": "False-Positive-Community/open-malicious-code-benchmark",
+      "source_notes": "docs/datasets/README.md",
+      "tasks": [
+        "source_code"
+      ]
+    },
+    {
+      "calibration": 0,
+      "evaluation": 62,
+      "permissions": "Publisher conditions remain in force; dataset text is restored privately.",
+      "raw_source_text_redistributed": false,
+      "reference_provenance": [
+        "released_attack_intent_not_success"
+      ],
+      "revision": "909e68c01d94222b8ad2e397a017e2e12e2adb73",
+      "source": "JailbreakBench/artifacts",
+      "source_notes": "docs/datasets/README.md",
+      "tasks": [
+        "jailbreak_attempts"
+      ]
+    },
+    {
+      "calibration": 16,
+      "evaluation": 62,
+      "permissions": "Publisher conditions remain in force; dataset text is restored privately.",
+      "raw_source_text_redistributed": false,
+      "reference_provenance": [
+        "mixed_source_labels"
+      ],
+      "revision": "d4b42ce5766a6e0359c987cf59c1007cb3795a90",
+      "source": "ProtectSkills/MaliciousSkillBench",
+      "source_notes": "docs/datasets/README.md",
+      "tasks": [
+        "skill_text"
+      ]
+    },
+    {
+      "calibration": 16,
+      "evaluation": 63,
+      "permissions": "Publisher conditions remain in force; dataset text is restored privately.",
+      "raw_source_text_redistributed": false,
+      "reference_provenance": [
+        "human_test_model_assisted_development"
+      ],
+      "revision": "d29c47f41c8b51348b5c8e8c81c039b3132b66d1",
+      "source": "allenai/wildguardmix",
+      "source_notes": "docs/datasets/README.md",
+      "tasks": [
+        "harmful_requests"
+      ]
+    },
+    {
+      "calibration": 16,
+      "evaluation": 62,
+      "permissions": "Publisher conditions remain in force; dataset text is restored privately.",
+      "raw_source_text_redistributed": false,
+      "reference_provenance": [
+        "source_labels_context_ambiguity"
+      ],
+      "revision": "4f61ecb038e9c3fb77e21034b22511b523772cdd",
+      "source": "deepset/prompt-injections",
+      "source_notes": "docs/datasets/README.md",
+      "tasks": [
+        "injection_deepset"
+      ]
+    },
+    {
+      "calibration": 16,
+      "evaluation": 63,
+      "permissions": "Publisher conditions remain in force; dataset text is restored privately.",
+      "raw_source_text_redistributed": false,
+      "reference_provenance": [
+        "human_majority_with_disagreement"
+      ],
+      "revision": "01d742279dac941981f53806154481c0e15ee686",
+      "source": "hate-alert/HateXplain",
+      "source_notes": "docs/datasets/README.md",
+      "tasks": [
+        "hate_speech"
+      ]
+    },
+    {
+      "calibration": 0,
+      "evaluation": 63,
+      "permissions": "Publisher conditions remain in force; dataset text is restored privately.",
+      "raw_source_text_redistributed": false,
+      "reference_provenance": [
+        "source_benign_stress_labels"
+      ],
+      "revision": "847ae76cf8fea5ed325429e569ae8cfef022d2e0",
+      "source": "leolee99/NotInject",
+      "source_notes": "docs/datasets/README.md",
+      "tasks": [
+        "benign_lookalikes"
+      ]
+    },
+    {
+      "calibration": 16,
+      "evaluation": 62,
+      "permissions": "Publisher conditions remain in force; dataset text is restored privately.",
+      "raw_source_text_redistributed": false,
+      "reference_provenance": [
+        "predominantly_synthetic_research_only"
+      ],
+      "revision": "3548e2837adf58b96497f2c688f96beff26485da",
+      "source": "lxyeternal/MalSkillBench",
+      "source_notes": "docs/datasets/README.md",
+      "tasks": [
+        "skill_packages"
+      ]
+    },
+    {
+      "calibration": 16,
+      "evaluation": 63,
+      "permissions": "Publisher conditions remain in force; dataset text is restored privately.",
+      "raw_source_text_redistributed": false,
+      "reference_provenance": [
+        "source_intent_mapping_dual_use_ambiguity"
+      ],
+      "revision": "f64eebd53003a87d9c2d2a3a712133534c214c8d",
+      "source": "meta-llama/PurpleLlama",
+      "source_notes": "docs/datasets/README.md",
+      "tasks": [
+        "cyber_requests"
+      ]
+    },
+    {
+      "calibration": 32,
+      "evaluation": 250,
+      "permissions": "Publisher conditions remain in force; dataset text is restored privately.",
+      "raw_source_text_redistributed": false,
+      "reference_provenance": [
+        "synthetic_automatically_reviewed"
+      ],
+      "revision": "aadeae009800d8fbcd145575f1d1a6b37abb0950",
+      "source": "ninty-seven/stepguard_data",
+      "source_notes": "docs/datasets/README.md",
+      "tasks": [
+        "agent_actions",
+        "agent_runs"
+      ]
+    },
+    {
+      "calibration": 16,
+      "evaluation": 48,
+      "permissions": "Publisher conditions remain in force; dataset text is restored privately.",
+      "raw_source_text_redistributed": false,
+      "reference_provenance": [
+        "ai_authored_unadjudicated"
+      ],
+      "revision": "repository fixture at 9dacb204f8affbb9a53c470892302430ccaa4b1d",
+      "source": "project_synthetic_iconography",
+      "source_notes": "docs/datasets/README.md",
+      "tasks": [
+        "custom_policy"
+      ]
+    },
+    {
+      "calibration": 16,
+      "evaluation": 61,
+      "permissions": "Publisher conditions remain in force; dataset text is restored privately.",
+      "raw_source_text_redistributed": false,
+      "reference_provenance": [
+        "ai_authored_unadjudicated"
+      ],
+      "revision": "repository fixture at 9dacb204f8affbb9a53c470892302430ccaa4b1d",
+      "source": "project_synthetic_injection",
+      "source_notes": "docs/datasets/README.md",
+      "tasks": [
+        "injection_context"
+      ]
+    },
+    {
+      "calibration": 16,
+      "evaluation": 62,
+      "permissions": "Publisher conditions remain in force; dataset text is restored privately.",
+      "raw_source_text_redistributed": false,
+      "reference_provenance": [
+        "largely_synthetic_source_labels"
+      ],
+      "revision": "a3a877d608f37b7d20d9945671902df895ecdb46",
+      "source": "xTRam1/safe-guard-prompt-injection",
+      "source_notes": "docs/datasets/README.md",
+      "tasks": [
+        "injection_xtram"
+      ]
+    }
+  ],
+  "unscored_sources": [
+    {
+      "reason": "No reference labels for the project's custom policy",
+      "role": "excluded_unlabeled",
+      "source": "poloclub/diffusiondb"
+    },
+    {
+      "reason": "Performance workload, not an accuracy reference",
+      "role": "excluded_unlabeled",
+      "source": "synthetic_neutral_serving_documents"
+    },
+    {
+      "n": 8,
+      "reason": "Hand-written smoke cases without a held-out evaluation design",
+      "role": "integration_only",
+      "source": "local_ollama_teaching_cases"
+    },
+    {
+      "n": 24,
+      "path": "docs/security-cognition/seed-cases.jsonl",
+      "reason": "Useful enterprise authorization/privacy cases; AI-authored labels not independently adjudicated and no headline weight",
+      "role": "diagnostic_review_seed",
+      "source": "security_cognition_seed"
+    }
+  ]
+}
