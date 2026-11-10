@@ -1,0 +1,14 @@
+{
+  "samples": 508,
+  "sample_interval_seconds": 0.5,
+  "max_temperature_c": 49.0,
+  "max_sampled_power_w": 99.73,
+  "mean_sampled_power_w": 84.28401574803149,
+  "mean_sampled_utilization_percent": 4.438976377952756,
+  "max_device_memory_mib": 9390.0,
+  "peak_torch_allocated_bytes": 7812353536,
+  "inference_active_seconds": 21.899174763999326,
+  "wall_seconds": 254.47257478600022,
+  "measured_active_share": 0.08605711158625062,
+  "note": "Device samples include model startup and desktop activity. First-call kernel setup is included in active time. Sub-second instantaneous power peaks are not measured."
+}
