@@ -50,11 +50,17 @@ def build(runs_dir, out):
             events = [json.loads(l) for l in f.read_text().splitlines()]
             start = events[0]
             task = tasks.TASKS[start["task"]]
-            history, pending = [], None
+            history, queue = [], []
             for e in events:
                 if e["event"] == "gate":
-                    pending = e
-                elif e["event"] == "call" and pending is not None:
+                    queue.append(e)
+                elif e["event"] == "call":
+                    # Sibling calls in one model turn are all gated, then executed: match by content (A5).
+                    k = json.dumps(e["call"], sort_keys=True)
+                    pending = next((g for g in queue if json.dumps(g["call"], sort_keys=True) == k), None)
+                    if pending is None:
+                        continue
+                    queue.remove(pending)
                     n_in += 1
                     rec, key = pending["record"], f"{f.name}|{pending['step']}"
                     if not rec["error"] and (rec["verb"] != "read" or _keep(key)):
@@ -62,7 +68,6 @@ def build(runs_dir, out):
                         if len(text) > MAX_INPUT_CHARS:
                             excluded += 1
                             history.append({"call": e["call"], "result": e["result"], "error": e["error"]})
-                            pending = None
                             continue
                         for p in TRAIN_POLICIES:
                             d, rules = reference(p, rec, pending["facts"])
@@ -72,7 +77,6 @@ def build(runs_dir, out):
                                                 sort_keys=True) + "\n")
                         kept += 1
                     history.append({"call": e["call"], "result": e["result"], "error": e["error"]})
-                    pending = None
     return {"steps_seen": n_in, "steps_kept": kept, "excluded_over_length": excluded, "examples": kept * len(TRAIN_POLICIES)}
 
 
