@@ -251,10 +251,13 @@ def semantics(adapter, data, out):
     t = Trainer.__new__(Trainer)
     t.torch = torch
     t.g = Shieldstral()
-    t.model = t.g.model
     if adapter:
         from peft import PeftModel
         t.model = PeftModel.from_pretrained(t.g.model, adapter).eval()
+    else:  # untrained LoRA (B = 0) gives the frozen model's exact outputs through the same code path
+        from peft import LoraConfig, get_peft_model
+        t.model = get_peft_model(t.g.model, LoraConfig(r=8, lora_alpha=16, lora_dropout=0.0, task_type="CAUSAL_LM",
+                                                       target_modules=r".*language_model.*\.(q_proj|k_proj|v_proj|o_proj)")).eval()
     seen = set()
     with open(out, "w") as fh:
         for r in (json.loads(l) for l in Path(data).read_text().splitlines()):
