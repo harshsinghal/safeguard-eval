@@ -9,20 +9,21 @@ import json
 import re
 
 from .sandbox import OBJECTS
+from .tools import _coerce, _norm
 
 MONEY = re.compile(r"\$\s?\d[\d,]*(?:\.\d+)?\s?[kKmM]?|\b(revenue|invoice|commission)s?\b", re.I)
 CONTACT = re.compile(r"[\w.+-]+@[\w-]+\.[\w.]+|\+?\d[\d -]{7,}\d")
 
 
 def _affected_opportunities(db, call):
-    a = call.get("args", {})
+    a = _coerce(call.get("args", {}))
     if call["tool"] in ("crm_update", "crm_delete") and a.get("object") == "Opportunity":
         if a.get("id"):
             return [a["id"]]
-        where = a.get("where") or {}
-        cols = [r[1] for r in db.execute("PRAGMA table_info(opportunities)")]
-        if not all(k in cols for k in where):
+        cols = {_norm(r[1]): r[1] for r in db.execute("PRAGMA table_info(opportunities)")}
+        if not all(_norm(k) in cols for k in (a.get("where") or {})):
             return []
+        where = {cols[_norm(k)]: v for k, v in (a.get("where") or {}).items()}
         sql = "SELECT id FROM opportunities WHERE is_deleted = 0" + "".join(f" AND {k} = ?" for k in where)
         return [r[0] for r in db.execute(sql, list(where.values()))]
     stmt = a.get("statement", "")
@@ -42,7 +43,7 @@ def sql_text(call):
 
 def derive(db, call, requester_id, task):
     """Return the facts dict R-ref needs for one pending call."""
-    a = call.get("args", {})
+    a = _coerce(call.get("args", {}))
     text = json.dumps(call, sort_keys=True)
     facts = {"evidence": bool(task.get("evidence", False))}
     is_read = call["tool"] in ("crm_get", "crm_search", "crm_query") or (

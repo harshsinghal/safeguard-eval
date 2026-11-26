@@ -45,6 +45,47 @@ TOOL_SPECS = {
 }
 
 
+def _schema_text():
+    """Columns of every object and warehouse table, for the agent-facing descriptions."""
+    import sqlite3 as _s
+    from .sandbox import SCHEMA
+    db = _s.connect(":memory:")
+    db.executescript(SCHEMA)
+    parts = []
+    for obj, table in OBJECTS.items():
+        cols = [r[1] for r in db.execute(f"PRAGMA table_info({table})") if r[1] != "is_deleted"]
+        parts.append(f"{obj}({', '.join(cols)})")
+    wh = [f"{t}({', '.join(r[1] for r in db.execute(f'PRAGMA table_info({t})'))})" for t in WAREHOUSE_TABLES]
+    db.close()
+    return "CRM objects and fields: " + "; ".join(parts) + ". Warehouse tables: " + "; ".join(wh) + "."
+
+
+def _norm(name):
+    return str(name).replace("_", "").lower()
+
+
+def _canon(db, table, field):
+    """Accept field names regardless of case or underscores (Name, OwnerId, owner_id)."""
+    cols = {_norm(c): c for c in _cols(db, table) if c != "is_deleted"}
+    if _norm(field) not in cols:
+        raise ToolError(f"Unknown field {field!r} on {table}; fields are {sorted(cols.values())}")
+    return cols[_norm(field)]
+
+
+def _coerce(args):
+    """Agents often JSON-encode structured arguments; decode them."""
+    import json as _j
+    out = dict(args)
+    for k in ("where", "fields"):
+        v = out.get(k)
+        if isinstance(v, str):
+            try:
+                out[k] = _j.loads(v)
+            except ValueError:
+                pass
+    return out
+
+
 def _table(obj):
     if obj not in OBJECTS:
         raise ToolError(f"Unknown object {obj!r}")
@@ -56,10 +97,8 @@ def _cols(db, table):
 
 
 def _check_fields(db, table, fields):
-    allowed = set(_cols(db, table)) - {"is_deleted"}
-    bad = [f for f in fields if f not in allowed]
-    if bad:
-        raise ToolError(f"Unknown field(s) on {table}: {bad}")
+    for f in fields:
+        _canon(db, table, f)
 
 
 def _where(db, table, id_=None, where=None):
@@ -68,8 +107,7 @@ def _where(db, table, id_=None, where=None):
     if id_ is not None:
         clauses.append("id = ?"); params.append(id_)
     for k, v in (where or {}).items():
-        _check_fields(db, table, [k])
-        clauses.append(f"{k} = ?"); params.append(v)
+        clauses.append(f"{_canon(db, table, k)} = ?"); params.append(v)
     return " AND ".join(clauses), params
 
 
@@ -129,7 +167,7 @@ def _email(db, to, subject, body, rows=0, obj=None):
 
 
 def execute(db, call):
-    tool, a = call["tool"], call.get("args", {})
+    tool, a = call["tool"], _coerce(call.get("args", {}))
     if tool not in TOOL_SPECS:
         raise ToolError(f"Unknown tool {tool!r}")
     if tool == "crm_get":
@@ -141,11 +179,11 @@ def execute(db, call):
     if tool == "crm_search":
         t = _table(a["object"]); fields = a.get("fields") or ["*"]
         if fields != ["*"]:
-            _check_fields(db, t, fields)
+            fields = [_canon(db, t, f) for f in fields]
         w, p = _where(db, t, None, a.get("where"))
         return {"rows": _rows(db.execute(f"SELECT {', '.join(fields)} FROM {t} WHERE {w}", p), int(a.get("limit", 50)))}
     if tool == "crm_create":
-        t = _table(a["object"]); f = dict(a["fields"]); _check_fields(db, t, f)
+        t = _table(a["object"]); f = {_canon(db, t, k): v for k, v in dict(a["fields"]).items()}
         prefix = {"accounts": "001A", "contacts": "003C", "leads": "00QL", "opportunities": "006O",
                   "tasks": "00TT", "cases": "500K", "users": "005U"}[t]
         n = db.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0]
@@ -156,7 +194,7 @@ def execute(db, call):
     if tool in ("crm_update", "crm_delete"):
         t = _table(a["object"]); w, p = _where(db, t, a.get("id"), a.get("where"))
         if tool == "crm_update":
-            f = a["fields"]; _check_fields(db, t, f)
+            f = {_canon(db, t, k): v for k, v in dict(a["fields"]).items()}
             sets, vals = ", ".join(f"{k} = ?" for k in f), list(f.values())
         else:
             sets, vals = "is_deleted = 1", []
@@ -168,7 +206,7 @@ def execute(db, call):
     if tool == "crm_export":
         t = _table(a["object"]); fields = a.get("fields") or ["*"]
         if fields != ["*"]:
-            _check_fields(db, t, fields)
+            fields = [_canon(db, t, f) for f in fields]
         w, p = _where(db, t, None, a.get("where"))
         n = len(db.execute(f"SELECT {', '.join(fields)} FROM {t} WHERE {w}", p).fetchall())
         _email(db, a["to"], f"Export: {a['object']}", f"Fields: {', '.join(fields)}", n, t); db.commit()
@@ -198,3 +236,8 @@ def execute(db, call):
         db.commit()
         return {"rows_affected": n}
     raise ToolError("unreachable")
+
+
+SCHEMA_TEXT = _schema_text()
+for _name in ("crm_search", "crm_create", "crm_update", "crm_query", "crm_dml", "warehouse_sql"):
+    TOOL_SPECS[_name]["description"] += " " + SCHEMA_TEXT
