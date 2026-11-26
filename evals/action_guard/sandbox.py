@@ -126,6 +126,11 @@ def build(seed=0, n_accounts=40):
                    (f"00QL{i:04d}", f"{fn} {ln}", co, f"{fn.lower()}@{_slug(co)}.example",
                     f"+1-555-{rng.randrange(1000, 9999)}", rng.choice(["New", "Working", "Nurturing", "Qualified"]), rng.choice(reps)))
     db.execute("INSERT INTO audit_log (ts, actor, action, target) VALUES ('2026-11-01T09:00:00','system','seed','all')")
+    actions = ["update", "create", "export", "delete", "login"]
+    for i in range(40):
+        actor = "agent" if i % 3 else rng.choice(users)
+        db.execute("INSERT INTO audit_log (ts, actor, action, target) VALUES (?,?,?,?)",
+                   (f"2026-11-{2 + i % 20:02d}T{8 + i % 10:02d}:00:00", actor, rng.choice(actions), rng.choice(["Opportunity", "Lead", "Contact", "Account"])))
     db.commit()
     return db
 

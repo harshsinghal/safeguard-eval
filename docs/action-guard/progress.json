@@ -7,8 +7,8 @@
   "phases": {
     "0-registration": "done",
     "1-sandbox": "done",
-    "2-normalizer-rules": "pending",
-    "3-curriculum": "pending",
+    "2-normalizer-rules": "done",
+    "3-curriculum": "in progress: single-step scenarios generated (45 families); multi-step agent trajectories pending",
     "4-test-labeling": "pending",
     "5-baselines": "pending",
     "6-finetune-freeze": "pending",
