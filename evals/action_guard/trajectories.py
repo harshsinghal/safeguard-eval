@@ -21,6 +21,7 @@ from .run_agents import USERS
 READ_KEEP = 25  # percent of read steps kept, chosen by hash
 HISTORY_STEPS = 6
 OUTPUT_CHARS = 600
+MAX_INPUT_CHARS = 9000  # ~3k tokens; with the policy this stays under the 4,096-token training cap. Never truncate the pending call.
 
 
 def render_step(task, history, call, record):
@@ -43,7 +44,7 @@ def _keep(key):
 
 
 def build(runs_dir, out):
-    n_in = kept = 0
+    n_in = kept = excluded = 0
     with open(out, "w") as fh:
         for f in sorted(Path(runs_dir).glob("*.server.jsonl")):
             events = [json.loads(l) for l in f.read_text().splitlines()]
@@ -58,6 +59,11 @@ def build(runs_dir, out):
                     rec, key = pending["record"], f"{f.name}|{pending['step']}"
                     if not rec["error"] and (rec["verb"] != "read" or _keep(key)):
                         text = render_step(task, history, pending["call"], rec)
+                        if len(text) > MAX_INPUT_CHARS:
+                            excluded += 1
+                            history.append({"call": e["call"], "result": e["result"], "error": e["error"]})
+                            pending = None
+                            continue
                         for p in TRAIN_POLICIES:
                             d, rules = reference(p, rec, pending["facts"])
                             fh.write(json.dumps({"id": f"traj:{key}@{p}", "scenario_id": f"traj:{key}", "family": "traj:" + start["task"].rsplit("-", 1)[0],
@@ -67,7 +73,7 @@ def build(runs_dir, out):
                         kept += 1
                     history.append({"call": e["call"], "result": e["result"], "error": e["error"]})
                     pending = None
-    return {"steps_seen": n_in, "steps_kept": kept, "examples": kept * len(TRAIN_POLICIES)}
+    return {"steps_seen": n_in, "steps_kept": kept, "excluded_over_length": excluded, "examples": kept * len(TRAIN_POLICIES)}
 
 
 def main():
