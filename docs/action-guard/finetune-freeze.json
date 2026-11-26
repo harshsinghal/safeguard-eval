@@ -1,0 +1,92 @@
+{
+ "created_utc": "2026-11-26T09:21:20Z",
+ "test_inference_started": false,
+ "probe_inference_started": false,
+ "selection_rule": "Joint (checkpoint, cutoff) on validation over cutoffs 0.05..0.95: macro recall, then lower under-escalation, then cutoff nearest 0.5, then earlier checkpoint. The selected checkpoint is also reported at cutoff 0.5.",
+ "arms": {
+  "ordinal": {
+   "arm": "ordinal",
+   "selected": {
+    "checkpoint": "ckpt-2",
+    "cutoff": 0.05,
+    "macro_recall": 0.988102564102564,
+    "under": 0.004728132387706856,
+    "exact": 0.9905437352245863
+   },
+   "selected_checkpoint_at_0.5": {
+    "checkpoint": "ckpt-2",
+    "cutoff": 0.5,
+    "macro_recall": 0.9880544871794872,
+    "under": 0.0070921985815602835,
+    "exact": 0.9905437352245863
+   },
+   "per_checkpoint_at_0.5": [
+    {
+     "checkpoint": "ckpt-1",
+     "cutoff": 0.5,
+     "macro_recall": 0.9355429243752029,
+     "under": 0.02127659574468085,
+     "exact": 0.9456264775413712
+    },
+    {
+     "checkpoint": "ckpt-2",
+     "cutoff": 0.5,
+     "macro_recall": 0.9880544871794872,
+     "under": 0.0070921985815602835,
+     "exact": 0.9905437352245863
+    },
+    {
+     "checkpoint": "ckpt-3",
+     "cutoff": 0.5,
+     "macro_recall": 0.9829431191171697,
+     "under": 0.014184397163120567,
+     "exact": 0.9858156028368794
+    },
+    {
+     "checkpoint": "ckpt-4",
+     "cutoff": 0.5,
+     "macro_recall": 0.9802764524505031,
+     "under": 0.016548463356973995,
+     "exact": 0.983451536643026
+    }
+   ],
+   "adapter_sha256": {
+    "README.md": "fa3764ec257916835572f414fded3368346cec6b4944fb879173f72c1c85f43a",
+    "adapter_config.json": "73740f99d3128ded12129f8b598daccff344b2a7125e36f1cab5621a0ab3e5e4",
+    "adapter_model.safetensors": "fcbb73c0d56ae5c5a56166b36733022a77d8bce33fc85eee73731174b42c8d08",
+    "validation-preds.jsonl": "782ef4ecafb9e46c5735f657aab11163840c10d822956693df1d1b7d4439a306"
+   },
+   "validation_predictions_sha256": "782ef4ecafb9e46c5735f657aab11163840c10d822956693df1d1b7d4439a306",
+   "registration": {
+    "arm": "ordinal",
+    "seed": 20261126,
+    "lr": 0.0001,
+    "micro": 2,
+    "accum": 4,
+    "epochs": 2,
+    "lora": {
+     "r": 8,
+     "alpha": 16,
+     "targets": "language_model q/k/v/o"
+    },
+    "stage_sizes": [
+     14544
+    ],
+    "train_sha256": "07e7db039008cf5e4759d1e22587fcac93c5d93895c7f68a937ed4c6746a2f04",
+    "validation_sha256": "0400827f16d9ccceada151461a1f7c9bea65b8ebbe285f0fdc78922c4b6b1f1c",
+    "trajectories_sha256": "aaf83836828370e91be69450907a6def1fc85968fcc0bd905858781a620ccafb",
+    "train_examples": 3639,
+    "items_excluded_over_token_cap": 12,
+    "test_inference": false
+   }
+  },
+  "staged": "pending: training"
+ },
+ "data_sha256": {
+  "train": "07e7db039008cf5e4759d1e22587fcac93c5d93895c7f68a937ed4c6746a2f04",
+  "validation": "0400827f16d9ccceada151461a1f7c9bea65b8ebbe285f0fdc78922c4b6b1f1c",
+  "test": "5c3bc46107253c8c9f95a341f05ca0b1dc039e498141b16d570e1241720fc517",
+  "trajectories": "aaf83836828370e91be69450907a6def1fc85968fcc0bd905858781a620ccafb",
+  "probes": "40f0211e102b44496905368508e356c91051bfe92b63012de47b1652d408864b"
+ }
+}
