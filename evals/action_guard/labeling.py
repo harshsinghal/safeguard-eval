@@ -74,7 +74,7 @@ def parse(text):
     return {"decision": dec, "rules": obj.get("rules", []), "rationale": obj.get("rationale", "")} if dec in LADDER else None
 
 
-def run(data, labeler, out, cap, limit=None):
+def run(data, labeler, out, cap, limit=None, phase="4-test-labeling"):
     out = Path(out)
     out.mkdir(parents=True, exist_ok=True)
     path = out / f"{labeler.replace('/', '_')}.jsonl"
@@ -96,7 +96,7 @@ def run(data, labeler, out, cap, limit=None):
         with open(path, "a") as fh:
             fh.write(json.dumps({"id": r["id"], "labeler": labeler, "label": label, "response": resp, "usd": cost}) + "\n")
         with open(LEDGER, "a") as fh:
-            fh.write(json.dumps({"phase": "4-test-labeling", "usd": cost, "task": r["id"], "model": labeler,
+            fh.write(json.dumps({"phase": phase, "usd": cost, "task": r["id"], "model": labeler,
                                  "utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}) + "\n")
     print(json.dumps({"labeler": labeler, "usd": round(spent, 4), "labelled": len(done) + len(rows)}))
 
@@ -146,12 +146,13 @@ def main():
     r.add_argument("--out", required=True)
     r.add_argument("--cap-usd", type=float, required=True)
     r.add_argument("--limit", type=int)
+    r.add_argument("--phase", default="4-test-labeling")
     g = sub.add_parser("agreement")
     g.add_argument("--out", required=True)
     g.add_argument("--data", required=True)
     a = ap.parse_args()
     if a.cmd == "run":
-        run(a.data, a.labeler, a.out, a.cap_usd, a.limit)
+        run(a.data, a.labeler, a.out, a.cap_usd, a.limit, a.phase)
     else:
         print(json.dumps(agreement(a.out, a.data), indent=2))
 
