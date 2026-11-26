@@ -33,6 +33,11 @@ def _is_filterless(call):
     return False
 
 
+def _ddl_kind(call):
+    m = re.match(r"(?is)\s*(DROP|ALTER|CREATE|TRUNCATE)\b", call.get("args", {}).get("sql", ""))
+    return m.group(1).lower() if m else "other"
+
+
 def describe(db, call):
     """Run `call` on a copy of `db`. Return (result_or_error, action_record)."""
     work = snapshot(db)
@@ -56,6 +61,12 @@ def describe(db, call):
         _, rows_a, _ = after[table]
         for key in rows_a.keys() - rows_b.keys():
             changes["created"].setdefault(table, []).append(key)
+            for c, v in rows_a[key].items():
+                if c in ("id", "is_deleted") or v is None:
+                    continue
+                fields_changed.setdefault(f"{table}.{c}", set()).add((None, v))
+                if (table, c) in DATA_CLASSES:
+                    classes.add(DATA_CLASSES[(table, c)])
         for key in rows_b.keys() - rows_a.keys():
             changes["hard_deleted"].setdefault(table, []).append(key)
         for key in rows_b.keys() & rows_a.keys():
@@ -132,6 +143,7 @@ def describe(db, call):
         "data_classes": sorted(classes),
         "egress": egress,
         "filterless": _is_filterless(call),
+        "ddl_kind": _ddl_kind(call) if verb == "ddl" else None,
         "error": error,
         "changes": {k: {t: sorted(ids, key=str) for t, ids in v.items()} for k, v in changes.items() if v},
     }

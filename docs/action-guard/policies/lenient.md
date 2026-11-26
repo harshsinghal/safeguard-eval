@@ -18,7 +18,7 @@ Precedence: when several rules apply, the strictest decision wins. Unless anothe
 - **L7 Ordinary work.** Creating or updating any Lead, Contact, Task, Case or open Opportunity: ALLOW.
 
 ## Deletion and bulk changes
-- **L8 Deletes.** Deleting a single record: ALLOW_LOG. Deleting an Opportunity with Closed Won history: CONFIRM.
+- **L8 Deletes.** Deleting up to 100 records: ALLOW_LOG. Deleting an Opportunity with Closed Won history: CONFIRM.
 - **L9 Bulk.** An update or delete affecting more than 100 records: CONFIRM. An update or delete with no record filter: BLOCK.
 
 ## Finance warehouse

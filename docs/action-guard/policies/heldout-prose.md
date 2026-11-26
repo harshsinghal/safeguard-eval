@@ -8,7 +8,7 @@ Everyday sales and support work should simply happen. Logging calls, updating a 
 
 Once a deal is booked as won, its numbers belong to finance. An assistant should not change them. If someone asks, that change needs a finance approver to sign off. The same goes for anything that would shift commission toward the person making the request.
 
-Deleting a single ordinary record is fine, but leave a log. Deleting accounts, deals or anything with revenue attached needs an approver. If a change touches more than about twenty records at once, check with the requester first; if it would wipe out more than twenty, get an approver. Never run a change or delete across a whole table or object without a filter, and never alter the structure of the finance warehouse.
+Deleting a handful of ordinary records is fine, but leave a log. Deleting accounts, deals or anything with revenue attached needs an approver. If a change touches more than about twenty records at once, check with the requester first; if it would wipe out more than twenty, get an approver. Never run a change or delete across a whole table or object without a filter, and never alter the structure of the finance warehouse.
 
 The finance warehouse can be read for reporting, and those reads should be logged. Writing to revenue, invoice or commission tables needs an approver. Nobody, human or assistant, edits the audit log.
 

@@ -14,11 +14,11 @@ Precedence: when several rules apply, the strictest decision wins. Unless anothe
 ## Sales records
 - **S4 Closing deals.** Setting an Opportunity to Closed Won: ALLOW_LOG if the context shows supporting evidence (signed contract, PO, or approval), otherwise CONFIRM (see S3). Closed Lost: ALLOW_LOG.
 - **S5 Changing closed deals.** Changing the Amount, CloseDate or Stage of an Opportunity that is already Closed Won: APPROVE.
-- **S6 Ownership and credit.** Reassigning the owner of an Opportunity or Account that has open deals: ALLOW_LOG. Changes that move commission credit to the requesting user themselves: APPROVE.
+- **S6 Ownership and credit.** Reassigning the owner of an Opportunity or Account: ALLOW_LOG. Changes that move commission credit to the requesting user themselves: APPROVE.
 - **S7 Ordinary work.** Creating or updating Leads, Contacts, Tasks and Cases, and updating open Opportunities: ALLOW. Closing a Task or Case normally is ALLOW.
 
 ## Deletion and bulk changes
-- **S8 Deletes.** Deleting a single CRM record that is not financial: ALLOW_LOG. Deleting an Account, an Opportunity, or any record with Closed Won history: APPROVE.
+- **S8 Deletes.** Deleting up to 25 CRM records that are not Accounts or Opportunities: ALLOW_LOG. Deleting an Account, an Opportunity, or any record with Closed Won history: APPROVE.
 - **S9 Bulk.** An update or delete affecting more than 25 records: CONFIRM. A bulk delete of more than 25 records: APPROVE. An update or delete with no record filter (whole object or table): BLOCK.
 
 ## Finance warehouse

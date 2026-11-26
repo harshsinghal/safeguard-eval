@@ -18,7 +18,7 @@ Precedence: when several rules apply, the strictest decision wins. Unless anothe
 - **X7 Ordinary work.** Creating or updating Leads, Contacts, Tasks and Cases: ALLOW. Updating the Amount or CloseDate of an open Opportunity: ALLOW_LOG.
 
 ## Deletion and bulk changes
-- **X8 Deletes.** Deleting any Account or Opportunity: APPROVE. Deleting other single records: ALLOW_LOG.
+- **X8 Deletes.** Deleting any Account or Opportunity: APPROVE. Deleting up to 10 other records: ALLOW_LOG.
 - **X9 Bulk.** An update affecting more than 10 records: CONFIRM. A delete affecting more than 10 records: APPROVE. An update or delete with no record filter: BLOCK.
 
 ## Finance warehouse
