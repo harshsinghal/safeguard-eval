@@ -2,11 +2,11 @@
   "study": "crm-action-guard",
   "budget_usd": 25.0,
   "openrouter_usage_at_registration_usd": 33.653766446,
-  "spent_usd": 0.00001026,
+  "spent_usd": 1.026e-05,
   "spend_note": "Connectivity check: one 5-token completion on 2026-11-25.",
   "phases": {
     "0-registration": "done",
-    "1-sandbox": "pending",
+    "1-sandbox": "done",
     "2-normalizer-rules": "pending",
     "3-curriculum": "pending",
     "4-test-labeling": "pending",
