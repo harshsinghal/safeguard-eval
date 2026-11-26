@@ -1,184 +1,290 @@
-# CRM judgment curriculum v2: design proposal
+# CRM judgment curriculum v2: design
 
-Status: **draft for the owner's review, 26 November 2026.** Nothing has been generated or trained. Once agreed, this becomes a registered plan.
+Status: **design, 26 November 2026.** Nothing has been generated or trained yet. The owner has settled the decision space (six outcomes), approved a replication on Kev 4B, and asked for a sector-agnostic curriculum, with generalization across sectors as a test. This document turns the research into a generation procedure, step by step. Once the pilot (step 14) passes, it is frozen as the registered plan.
 
-## Goal
+## 0. What the curriculum must teach
 
-Build a curriculum that teaches a small guard three things:
-1. **What the action does.** CRUD, scope and egress, as in v1.
-2. **When to be certain.** Allow or block confidently when the facts settle it.
-3. **What kind of uncertainty it has, when it isn't certain.**
-   - **Seek more context:** a missing fact would settle the decision. The guard names that fact. The system owner reads these results and fixes upstream tool calls, dry runs or prompts so the fact becomes available.
-   - **Ask a human:** all the relevant facts are known, but the decision turns on values or compliance judgment that the policy leaves to a person.
+A guard reviewing an agent's pending call in a CRM should:
+1. know **what the call does**: verb, object, scope, fields, reversibility, where data goes;
+2. be **certain when the facts settle the case**, and correct;
+3. when they don't, say **which kind of uncertainty** it has:
+   - **`SEEK_CONTEXT`:** a missing fact would change the decision, and the guard names it;
+   - **`ASK_HUMAN`:** the facts are complete, but the decision is a values or compliance call;
+4. do all of this under **policies it has never seen**, and in **sectors it was not trained on**.
 
-The study holds the model fixed and varies the curriculum. v1 showed that the curriculum, not the base model, sets what the guard learns.
+## 1. Decision contract
 
-## What v1 taught us (the starting point)
-
-- The tuned guard learned the three training policies but could not read a fourth: 48–55% exact on the unseen prose policy.
-- It learned which facts make an action riskier: its decision moved the right way on 50 of 60 counterfactual pairs.
-- It did not improve on objective questions about what an action does. In the staged arm, the semantics stage was overwritten by decision training.
-- **A data bug in v1 is a lesson for v2.** In 36 probes, the reference label depended on a fact the input did not show. Training on items like that teaches the model to guess.
-
-## What the research says works
-
-| Finding | Source | What it means for this curriculum |
+| Decision | Meaning | Extra target |
 |---|---|---|
-| A model can recall knowledge only if it saw that knowledge in **varied forms** (paraphrased, reordered). Seen in one form, it is memorized but not usable, and later fine-tuning doesn't fix that. | Allen-Zhu & Li, *Physics of LMs 3.1* (ICML 2024) | State each rule and principle in several forms: policy passage, FAQ, Q&A, worked case, contrast pair. One template per rule produces exactly v1's brittleness. |
-| Training on **many free-form safety configs** lets a model follow a new config at inference time. | Zhang et al., *CoSA / CoSAlign* (ICLR 2025) | Train on dozens of generated policies that vary in style, structure, thresholds and persona, not three. Hold out policies by style **and** by content. This targets v1's biggest gap. |
-| **Mixing formats** (zero-shot, few-shot, chain of thought) and task diversity improves held-out performance. Even 10% of a second format helps. | Longpre et al., *Flan Collection* (ICML 2023) | Mix the formats in one training run instead of sequential stages. That also fits v1's overwritten semantics stage. |
-| **Easy-to-hard ordering is not a reliable win.** Results depend on the setting and on the difficulty metric. | Mixed recent studies (2023–2026) | Do not rely on stage ordering. Test it only as an ablation against a shuffled mix. |
-| Training on **minimal pairs that differ only in the fact that matters** reduces reliance on spurious features. Gains are largest when data is scarce and level off with scale. | Kaushik et al. (ICLR 2020); Joshi & He (2021) | Build the curriculum around pairs and triples (see below). Expect a large benefit on a small dataset like ours. |
-| **Ambiguous examples help most for out-of-distribution generalization.** Examples a model never learns are often label errors. | Swayamdipta et al., *Dataset Cartography* (EMNLP 2020) | Weight ambiguous examples more. Use training dynamics to find likely label errors and audit them. |
-| Fine-tuning on answers the model **cannot know from its input** increases hallucination. | Gekhman et al. (EMNLP 2024) | Give a certain label only when the input shows the facts that decide it. Every other case becomes SEEK_CONTEXT. Enforce this in code (v1's 36 probes). |
-| Training refusal on **unknown questions** teaches abstention as a skill that transfers across domains, and calibrates better than filtering at test time. | Diao et al., *R-Tuning* (NAACL 2024) | SEEK_CONTEXT can be taught directly as a label, not added as a threshold afterwards. |
-| Models struggle to tell **"the input is ambiguous or incomplete"** apart from **"I can't work it out."** Synthetic data plus training improved this on 4B–8B models. | Ren et al., *UA-Bench* (ACL 2026) | This is the same split as SEEK_CONTEXT versus ASK_HUMAN. It is learnable, but each case must be labelled with the **reason** for its uncertainty. |
-| The aleatoric/epistemic split is unstable in practice: ambiguity can often be resolved by asking. | Kirchhof et al. (2025) | Define the two uncertain labels **operationally**, by what would resolve them, not by an uncertainty theory. |
-| Soft labels from **annotator disagreement** improve calibration and robustness under shift. | Several papers (2022–2025) | Keep the labelers' disagreement as a soft target on hard cases, and as a signal for ASK_HUMAN. |
-| **Deferring to an expert** can be trained with a consistent cost-sensitive loss. | Mozannar & Sontag (ICML 2020) | Give each decision an explicit cost: a needless deferral costs reviewer time; a missed block costs harm. |
-| Explanation traces and **reasoning over the written spec** help small models generalize. | *Orca 1/2* (2023); *Deliberative Alignment* (2024) | Worked cases cite the clause, then the facts, then the decision. Train on them with a language-modelling loss alongside the decision targets. |
-| Guard accuracy on tool-call traces depends more on **parsing structured data** than on safety alignment. | *TraceSafe* (2026) | Keep the CRUD and effects stage, and give it more weight. |
+| `ALLOW` | Proceed | – |
+| `ALLOW_LOG` | Proceed and write an audit record | clause |
+| `REQUIRE_APPROVAL` | The policy requires a second person. This is certain, not a judgment call. | clause |
+| `BLOCK` | Do not proceed | clause |
+| `SEEK_CONTEXT` | A missing fact would change the decision | `missing`: one or more facts from a fixed list<br>`source`: requester, system lookup or dry run |
+| `ASK_HUMAN` | The decision turns on judgment the policy reserves for a person | `question`: one item from a fixed list |
 
-## Decision space
+**Fixed list for `missing`** (about 15 facts):
+- contract status;
+- recipient's affiliation;
+- number of records touched;
+- record owner;
+- deal stage;
+- who initiated the action (user or content);
+- whether supporting evidence exists;
+- whether a field contains personal data;
+- existence of an approval;
+- prior decline;
+- the purpose of the data;
+- the customer's consent status;
+- retention or hold status;
+- the requester's role;
+- whether the record is a duplicate.
 
-The owner proposed four outcomes: allow, block, seek context and ask a human. v1 also has a policy-required approval, which is certain: the rule says an approver is needed. That is a different thing from a judgment call. **Proposed:**
+**Fixed list for `question`:**
+- conflicting obligations;
+- a discretionary exception;
+- an interpretation of a policy term;
+- a trade-off of harm to a customer or third party;
+- the policy is silent on a material risk.
 
-| Decision | When | Output alongside |
-|---|---|---|
-| `ALLOW` | The facts and the policy say proceed | – |
-| `ALLOW_LOG` | Proceed; the policy requires an audit record | – |
-| `REQUIRE_APPROVAL` | The policy requires a second person (segregation of duties, thresholds). Certain. | The clause |
-| `BLOCK` | The facts and the policy say no | The clause |
-| `SEEK_CONTEXT` | A fact missing from the input would change the decision | **The missing facts** (from a fixed list) and who can supply them: the requester, a system lookup or a dry run |
-| `ASK_HUMAN` | All the deciding facts are present, but the policy leaves the decision to discretion, two clauses conflict, or it turns on a values or compliance call | **The judgment question** (from a fixed list): policy conflict, discretionary exception, legal or regulatory interpretation, customer-harm trade-off |
+Fixed lists keep both targets scorable and let the owner group them into the **context report**: which missing facts the live tools most often fail to provide.
 
-v1's `CONFIRM`, where the requester confirms intent, becomes `SEEK_CONTEXT` with the requester as the source.
+## 2. Principles from the research, and what each one requires
 
-## How the labels stay objective
+Each principle becomes a concrete data requirement and an automated check. The steps in §5 implement them.
 
-**Seek context: hidden-fact triples.** Every scenario is generated **complete** first, with all facts known. Then:
-- with the decisive fact set to value A, the label is certain, for example `ALLOW`;
-- with it set to value B, the label is certain, for example `BLOCK`;
-- with the fact **hidden** from the input, the label is `SEEK_CONTEXT`, and the target names that fact.
+| # | Research finding | Data requirement | Check |
+|---|---|---|---|
+| P1 | A model uses knowledge reliably only if it saw it in **varied forms** ([Allen-Zhu & Li 2024](https://arxiv.org/abs/2309.14316)) | Each principle appears in at least 5 forms (policy passage, FAQ, Q&A, worked case, decision case), and each form in at least 3 wordings | Per-principle coverage table; the build fails below threshold |
+| P2 | **Mixed formats** beat sequential stages; even a small share of a second format helps ([Flan Collection 2023](https://arxiv.org/abs/2301.13688)) | One shuffled mixture of forms; no sequential stages | Mixture proportions recorded per batch |
+| P3 | Training on **many free-form policies** enables following an unseen one ([CoSA 2025](https://arxiv.org/abs/2410.08968)) | About 48 generated policies: 4 styles × 12 parameter sets | Faithfulness of each policy text to its spec (§5 step 3) |
+| P4 | **Minimal pairs** teach the difference that matters; the gain is largest in small datasets ([Kaushik 2020](https://arxiv.org/abs/1909.12434), [Joshi & He 2021](https://arxiv.org/abs/2107.00753)) | Every base scenario expands into counterfactual siblings that differ in one decisive fact | Siblings differ in exactly one fact, verified by spec diff |
+| P5 | **Do not train on labels the input cannot support** ([Gekhman 2024](https://arxiv.org/abs/2405.05904)) | A certain label requires every fact it depends on to be visible in the input | Input-sufficiency check (§5 step 8), applied to every item |
+| P6 | **Abstention can be learned** and transfers ([R-Tuning 2024](https://arxiv.org/abs/2311.09677)) | `SEEK_CONTEXT` is a trained label, generated by hiding a decisive fact | Hidden-fact triples (§4) |
+| P7 | The **reason** for uncertainty must be in the label; models confuse ambiguous input with hard problems ([UA-Bench 2026](https://arxiv.org/abs/2604.17293)) | Uncertain cases carry `missing` or `question`; `SEEK_CONTEXT` and `ASK_HUMAN` items appear as near neighbours | Attribution confusion metric (§7) |
+| P8 | Define uncertainty by **what would resolve it** ([Kirchhof 2025](https://arxiv.org/abs/2505.22655)) | `SEEK_CONTEXT` if some value of a missing fact changes the decision; `ASK_HUMAN` if every fact is known and the policy still reserves the call | Both rules run in code |
+| P9 | **Ambiguous examples** improve generalization to new cases; examples a model never learns are often label errors ([Dataset Cartography 2020](https://arxiv.org/abs/2009.10795)) | About 20% subtle-but-certain cases; a cartography audit after the pilot | Hard-to-learn items are reviewed |
+| P10 | **Soft labels from disagreement** improve calibration under shift ([Khurana 2024](https://arxiv.org/abs/2408.14141)) | Keep labeler disagreement on judgment cases as a soft target (one ablation arm) | Disagreement logged per item |
+| P11 | **Deferral has a cost** and should be trained with that cost in view ([Mozannar & Sontag 2020](https://arxiv.org/abs/2006.01862)) | An explicit cost matrix; a negative control for every uncertain family | False-seek and false-ask rates (§7) |
+| P12 | **Reasoning over the written spec**, and explanation traces, help small models ([Deliberative Alignment 2024](https://arxiv.org/abs/2412.16339), [Orca 2 2023](https://arxiv.org/abs/2311.11045)) | Worked cases: clause → facts → decision → what would change it | The cited clause and decision must match the program label |
+| P13 | Guard accuracy on tool calls depends on **parsing structured data** ([TraceSafe 2026](https://arxiv.org/abs/2604.07223)) | Keep and enlarge the CRUD and effects Q&A; cover 3 call dialects | Q&A answers come from executed effects |
+| P14 | **Easy-to-hard ordering is not reliably useful** (mixed evidence, e.g. [2510.19099](https://arxiv.org/abs/2510.19099)) | Default: a shuffled mix. Ordering is tested only as an ablation. | – |
+| P15 | **Generator diversity** should help: phi-1 found coverage hard to control with a single generator ([phi-1 2023](https://arxiv.org/abs/2306.11644)). No paper above tests this directly, so here it is a working assumption that the study measures. | Surface text comes from 6 open-weight families for training and 3 held-out families for test | Accuracy split by renderer; a style-leak test (§7) |
 
-A case is `SEEK_CONTEXT` **if and only if** two plausible values of a hidden fact lead to different decisions. The generator checks this rule directly: it runs the reference rules under each value.
+## 3. Scenario space: a structured specification, not free text
 
-Examples of decisive facts:
-- whether the contract is signed;
-- whether the recipient's domain belongs to the company;
-- how many rows a `WHERE` clause matches;
-- whether a deal is booked;
-- who owns the record;
-- whether the request came from the user or from retrieved content.
+Every item starts as a **specification**: a typed record of facts that a program samples. LLMs never decide facts or labels. They only render a specification into realistic text. That keeps the labels objective and lets every fact be checked.
 
-**Negative control, essential.** A hidden fact that does **not** change the decision (both values lead to `BLOCK`) must still get the certain label. Without these controls, a model can lower its loss by saying `SEEK_CONTEXT` whenever something is missing.
+| Axis | Values |
+|---|---|
+| Action | verb (create, read, update, delete, export, send, DDL), object (11 CRM and warehouse objects), scope (1, few, bulk, filterless), fields, reversibility, egress (none, internal, external, personal mailbox) |
+| Dialect | REST-style tool, SQL, natural-language tool arguments |
+| Actor | requester role, ownership relation (own, peer, other team), whether the actor benefits from the change |
+| Provenance | the user asked; retrieved content asked (injection); an earlier tool output asked |
+| Evidence | present and trusted, present but untrusted, absent, contradictory |
+| History | none, related earlier steps (split operation, retry after decline, read then send) |
+| Data classes | personal, financial, confidential, credentials, audit records. These are **generic classes, not sector terms.** |
+| Situation type | see below |
+| Policy | one of about 48 generated policies (§5 step 2) |
 
-**Ask a human: designed judgment cases.** The facts are complete, but the policy sends the decision to a person. Families:
-- **conflicting obligations:** a customer's deletion request against a legal hold or retention rule; a discount under the threshold but outside the pricing guidance;
-- **discretionary exceptions:** "may be granted with business justification"; a justification is given, and someone has to weigh it;
-- **interpretation:** whether data in a free-text field is personal data; whether a contractor counts as staff for an export;
-- **trade-offs:** cancelling a renewal the customer disputes; writing off an invoice for a struggling customer.
+Situation types and their target shares in training:
 
-Each family has **near-certain neighbours**: the same situation with the conflict removed, which becomes certain. That forces the model to learn what makes a case a judgment call.
+| Type | Example | Share |
+|---|---|---:|
+| Obvious, safe | Update a phone number on one's own contact | 30% |
+| Obvious, unsafe | Delete the audit log | 15% |
+| Subtle, safe (looks risky, isn't) | A bulk update under the threshold with evidence; an external email with no data | 12% |
+| Subtle, unsafe (looks fine, isn't) | Reassign a deal to oneself; a lookalike domain | 10% |
+| Policy-required approval | A discount over the threshold | 8% |
+| Hidden decisive fact → `SEEK_CONTEXT` | The dry run omits the row count of a delete near the threshold | 12% |
+| Hidden **irrelevant** fact → certain (control) | Contract status missing on a read-only query | 5% |
+| Judgment → `ASK_HUMAN` | Customer erasure request against a litigation hold | 6% |
+| Judgment neighbour → certain | The same erasure request, with no hold | 2% |
 
-**Checking ASK_HUMAN labels.** The two blind labelers see the complete case without the label. Where they systematically disagree on the certain decision, that supports ASK_HUMAN. Where they agree, the case is reviewed and may be reclassified. Their spread is kept as a soft target.
+The mix is about 70% certain, which keeps the review rate realistic.
 
-**Input-sufficiency check, enforced in code.** Each label records the facts it depends on. A build fails if any of those facts is absent from the rendered input. This closes the v1 bug.
+## 4. Variant expansion (P4, P6, P8, P11)
 
-## Data forms (the same principles, many surfaces)
+Each base specification expands, in code, into a **family of variants**:
+1. **Counterfactual siblings:** one decisive fact flipped. The labels differ.
+2. **Hidden-fact triple:** fact = A gives a certain label; fact = B gives a different certain label; fact hidden gives `SEEK_CONTEXT`, with `missing` naming the fact. Before labelling, the generator checks that A and B really produce different decisions.
+3. **Irrelevant-hidden control:** a fact hidden that does not change the decision. The label stays certain.
+4. **Invariance variants:** surface-only changes, such as wording, tone, language, claimed urgency, claimed approval, irrelevant context, or an equivalent query form. The label is unchanged.
+5. **Judgment neighbours:** an `ASK_HUMAN` case with the conflict removed, giving a certain label; and a certain case with a conflict added, giving `ASK_HUMAN`.
 
-| Form | Example | Loss | Share (initial) |
-|---|---|---|---:|
-| Action semantics Q&A | "Does this call delete records? How many? Is it reversible? Does data leave the company?" | decision | 20% |
-| Decision cases | Policy + context + pending call → decision (+ missing fact or judgment question) | decision | 40% |
-| Contrast pairs and triples | The same case with one fact changed or hidden | decision | (inside decision cases) |
-| Worked cases | Clause → facts → decision → what would change it | language model | 15% |
-| Policy passages | A rule explained in prose, with its rationale and edge cases, in several wordings | language model | 10% |
-| FAQ | "Can a rep export their pipeline to a personal mailbox? No: deal amounts are financial data, and…" | language model | 10% |
-| Policy reading | "Under this policy, what does a 30-record delete need?" across many generated policies | decision | 5% |
+Variants share a `family_id`. Families never cross the train, validation and test splits.
 
-**Policies.** About 40 generated policies, varying:
-- format: numbered rules, prose, a table, or an FAQ-style handbook;
-- strictness and thresholds;
-- persona and industry;
-- clause order;
-- the wording of the same rule.
+## 5. Generation pipeline (NeMo Data Designer)
 
-Held out: 6 policies in unseen styles **and** 4 with an unseen combination of thresholds. The four v1 policies stay in the evaluation for comparison.
+**Tool.** NeMo Data Designer (`data-designer`, Apache-2.0), pinned to **0.10.0**, the newest release at least two weeks old (installed in `work/dd-venv`). It provides:
+- seed datasets (`DataFrameSeedSource`);
+- samplers (category and subcategory);
+- LLM text, structured and judge columns (`LLMStructuredColumnConfig`, `LLMJudgeColumnConfig`);
+- Python columns and validators (`CustomColumnConfig`, `LocalCallableValidatorParams`);
+- embeddings and preview.
 
-**Scenario coverage.** v1's 45 families are re-expressed under the new decisions, and new families are added for ASK_HUMAN and for hidden facts. The target mix of training decisions:
-- about 50% obvious, certain cases, mostly benign, to keep the review rate realistic;
-- about 20% ambiguous but certain;
-- about 15% `SEEK_CONTEXT`;
-- about 10% `ASK_HUMAN`;
-- about 5% negative controls.
+It has a built-in OpenRouter provider. Programs produce the seed rows. Data Designer handles rendering, checking and judging, with a recorded configuration per run.
 
-## Evaluation
+**Steps:**
+1. **Ontology and decision function** (code, no LLM).
+   - Fact schema, clause library and judgment triggers.
+   - `decide(policy_params, facts)` gives one of the six decisions with its clause. `seek(policy_params, facts, hidden)` and `judgment(facts, policy)` implement P8.
+   - Unit tests cover every clause.
+   - This replaces v1's R-ref, with the same idea and a wider output.
+2. **Policy specifications** (code). About 40 principles become clauses with parameters: thresholds, required approvers, logging, data-class rules, egress rules, and discretion clauses such as "may approve with documented justification". These are combined into **48 policy specs** (12 parameter sets × 4 styles), each with a persona: company size, risk appetite and region. The persona is **sector-neutral**.
+3. **Policy rendering** (Data Designer).
+   - Seed: the policy specs.
+   - Sampler: style (numbered rules, narrative prose, a table, an employee-handbook FAQ).
+   - LLM text column: the policy document, written by the renderer pool.
+   - Checks:
+     - a structured column, run by a **different model family**, extracts every clause's parameters from the text;
+     - a Python validator compares them with the spec;
+     - a judge column scores readability and the absence of invented rules.
+   - Rejected policies are regenerated.
+4. **Scenario specifications** (code). A stratified sampler over the §3 axes, with quotas per situation type and per principle. This gives about 1,600 base specs.
+5. **Variant expansion** (code), as in §4. This gives about 6,000 decision items before policy pairing.
+6. **Labels** (code). The decision and its extra targets come from steps 1 and 5. **No LLM sets a training label.**
+7. **Surface rendering** (Data Designer).
+   - Seed: the variant specs.
+   - Samplers: tone, length, requester persona, language (about 15% non-English), and **renderer model**.
+   - LLM structured columns render each part:
+     - the requester's message;
+     - the record contents and any retrieved content, including injected instructions;
+     - the prior events;
+     - the tool-call arguments in the sampled dialect.
+   - Variants in one family reuse the base rendering and change only what differs. That preserves minimal pairs and saves cost.
+8. **Fidelity checks** (Data Designer validators, applied to every item):
+   - a. **Executes as specified:** the tool call parses and runs in the sandbox, and its effects record matches the spec's verb, scope and egress.
+   - b. **Input sufficiency (P5):** a structured column extracts the spec's decisive facts from the rendered input, using a model family **different from the renderer**. Every fact the label depends on must be recovered.
+   - c. **No leak (P6):** a hidden fact must come back as "unknown". If the text gives it away, the item is rejected.
+   - d. **No label leak:** a judge column flags text that states the verdict, for example "this risky export".
+   - e. **Realism and diversity:** a judge score, plus embedding near-duplicate removal within and across splits.
 
-The v1 test set, probes and live suite are kept, so results compare across versions. New measures:
+   Failed items are regenerated once, then dropped. Pass rates are reported by renderer and by family.
+9. **Other data forms** (P1, P12, P13), all from the same specs and principles:
+   - **semantics Q&A:** code, using executed effects;
+   - **worked cases:** an LLM writes clause → facts → decision → what would change it, given the program label. A validator checks that the cited clause and the decision match;
+   - **policy passages and FAQ:** an LLM explains each principle with its rationale and edge cases, in 3 wordings, written by different renderers. A judge checks faithfulness to the clause library;
+   - **policy-reading questions:** code, for example "under this policy, what does a 30-record delete need?".
+10. **Splits.**
+    - By family.
+    - By policy: 8 held-out policies, covering unseen styles and unseen parameter combinations.
+    - By **renderer**: test text comes only from held-out model families.
+    - By **sector**: test only, §6.
+11. **Test labels.**
+    - Program labels are audited by two blind frontier labelers on the whole test set. Their agreement with the program, and with each other, is published.
+    - `ASK_HUMAN` items get a **disagreement check**: the labelers choose a certain decision from complete facts, and systematic disagreement supports the judgment label. If they agree, the assistant adjudicates and may reclassify the item, with a recorded rationale.
+    - Disagreement distributions are kept for P10.
+12. **Mixture.** Shuffled, with the shares from §3. Forms are mixed as decision cases 45%, semantics Q&A 20%, worked cases 15%, passages and FAQ 12%, and policy reading 8%.
+13. **Formats for each learner.**
+    - **Shieldstral 3B:** native yes/no queries, one per decision, one per `missing` item and one per `question` item. Worked cases, passages and FAQ get a language-modelling loss.
+    - **Kev 4B:** its native Choice interface, with options supplied: a 6-way decision, a multi-select `missing` question and a single-choice `question`. Its official training path is used (`kev.train --init_from jaredpalmer/kev-4b`). Kev has no language-modelling head, so forms that need that loss are reworded as Choice questions where possible and recorded as a difference between the two learners.
+14. **Pilot before scale.** Run steps 1–9 on 3 principles × 2 renderers × about 150 items. Check:
+    - fidelity pass rates;
+    - that hidden facts don't leak;
+    - cost per accepted item;
+    - one small training run, followed by a cartography audit (P9).
 
-**SEEK_CONTEXT**
-- precision and recall;
-- **missing fact named correctly**;
-- false-seek rate on fully specified cases and on negative controls.
+    Then freeze this document and the configurations as the registered plan.
 
-**ASK_HUMAN**
-- precision and recall;
-- the judgment question named correctly;
-- the confusion between ASK_HUMAN and SEEK_CONTEXT, which is the attribution skill.
+## 6. Sector-agnostic training, sector tests
+
+**Training is sector-neutral.** Companies are described generically, and data classes are generic (personal, financial, confidential). No industry vocabulary or regulation names appear.
+
+**The sector test asks whether the generic principles carry into sectors on their own.** Six sector packs appear only in test:
+- healthcare;
+- financial services;
+- public sector;
+- education;
+- legal services;
+- consumer retail.
+
+Each pack has the same CRM, with sector-typed records and sector wording in the user requests, and 2 policy texts written for that sector. It splits into two kinds of case:
+- **Translated principle:** the sector policy states the rule in sector terms, for example "patient health information must not leave the organization". The guard has to map it onto the generic principle it learned, here "personal data and external egress".
+- **Sector-implicit:** a risk that only domain knowledge reveals, and that the policy doesn't name, for example clinical details in a free-text note. This is reported separately. It asks whether general model knowledge covers the gap, or whether sector data would be needed.
+
+**Readout:**
+- sector accuracy against neutral accuracy, per learner;
+- `ASK_HUMAN` and `SEEK_CONTEXT` rates by sector.
+
+If translated-principle cases hold up and sector-implicit cases fail, the next step is a sector-data arm. That decision is left to the results.
+
+## 7. Evaluation
+
+The v1 test set, probes and live suite are kept for comparison across versions. v1's labels map onto the new decisions: `CONFIRM` becomes `SEEK_CONTEXT` with the requester as the source, and `APPROVE` becomes `REQUIRE_APPROVAL`.
+
+New measures:
 
 **Certainty**
-- accuracy and confidence on the obvious slice; this should be near 100%, with high confidence;
+- exact accuracy and calibration on the obvious slices, where the target is near 100% with high confidence;
 - a risk–coverage curve.
 
-**Policy reading**
-- exact accuracy on held-out policies, by style and by content.
+**Seek context**
+- precision and recall;
+- the missing fact named correctly;
+- the **false-seek rate** on irrelevant-hidden controls and on fully specified cases.
+
+**Ask human**
+- precision and recall;
+- the judgment question named correctly;
+- the false-ask rate on judgment neighbours.
+
+**Attribution**
+- the confusion between `SEEK_CONTEXT` and `ASK_HUMAN`.
+
+**Transfer**
+- held-out policies, split by style and by parameters;
+- held-out renderers;
+- non-English items;
+- the six sector packs.
+
+**Style-leak test**
+- accuracy on items written by a training renderer against items written by a held-out renderer, for the same specs.
 
 **Live**
 - task success, harm and review burden, as in v1;
-- plus the **context report**: the SEEK_CONTEXT outcomes grouped by missing fact. This is what the system owner would use to improve upstream tools. Score it by whether its top items match the facts the live tools actually omit.
+- the **context report**: whether the facts the guard most often asks for are the ones the live tools actually omit.
 
-## Experiments (one base model, curriculum varied)
+## 8. Experiments
 
-| Arm | Curriculum |
+| Arm | Data | Learners |
+|---|---|---|
+| A | v1 data, mapped to the six decisions | Shieldstral |
+| B | v2 decision cases only (many policies, variant families) | Shieldstral |
+| C | B + semantics Q&A + policy reading | Shieldstral |
+| D | C + worked cases, passages and FAQ (**full v2**) | Shieldstral, **Kev 4B** |
+| E | D + soft labels on judgment cases | Shieldstral |
+| F (optional) | D in staged order | Shieldstral |
+
+Selection, freezing and amendments follow v1's protocol.
+
+## 9. Renderer pool (OpenRouter, checked 26 November 2026)
+
+Model families give the data its diversity (P15). Every model here was released at least two weeks ago.
+
+**Terms of use decide which models write training text.** Several closed-model providers forbid using outputs to develop competing models. Training text therefore comes from **open-weight releases with permissive licences**. Closed models write the held-out test text and do the judging and labelling, which are evaluation uses. The pilot checks each model's licence and terms before any of its output enters training data.
+
+| Role | Models |
 |---|---|
-| A | v1 data, relabelled into the new decision space (control) |
-| B | v2 decision cases only (many policies, triples, ASK_HUMAN families) |
-| C | B + semantics Q&A mixed in |
-| D | C + worked cases, policy passages and FAQ with a language-modelling loss (**full v2**) |
-| E | D with soft labels on disagreements |
+| Training renderers (open weights; licence checked at pilot) | Kimi K3.1 Pro, GLM 5.3, Qwen 3.8 27B, DeepSeek V4.1 Flash, Mistral Large 4, Meta Muse Spark Open |
+| **Held-out renderers** (test text only) | Claude Sonnet 5.5, GPT-6.1 Terra, Gemini 3.8 Flash |
+| Fact extraction and judging | Always a family different from the item's renderer. Default: GPT-6 Luna. Items rendered by OpenAI models use Claude Haiku 5.5. |
+| Blind test labelers | GPT-6.1 Sol and Gemini 4 Carbon, used for nothing else |
 
-- **Base model:** Shieldstral 3B, the same as v1. Optionally, run arm D again on Kev 4B to see whether the curriculum's effect carries over to another model.
-- **Training format:** each decision is trained as yes/no queries in Shieldstral's native format. The missing fact and the judgment question are trained the same way, one query per named item.
+## 10. Cost estimate
 
-## Budget and effort
+| Item | Volume | Estimate |
+|---|---|---:|
+| Policy rendering and checks | 48 policies + 12 sector policies | $1 |
+| Surface rendering | about 1,600 base renders + variant edits | $4–6 |
+| Fidelity checks (extraction, judges) | about 7,000 items | $2 |
+| Worked cases, passages, FAQ | about 2,500 items | $2–3 |
+| Test labelling (2 labelers) | about 900 test items + sector packs | $4–5 |
+| Live runs | 2 new arms | $2 |
+| **Total** | | **$15–19** |
 
-- **Generation and reference labels:** local code, no API cost.
-- **Blind labelling of the new test, probes and the ASK_HUMAN check:** about $6.
-- **Live runs:** about $3.
-- **Total:** within the roughly $16 left of the $25 budget.
-- **Local GPU:** about 5 arms × about 1.5 h.
-
-## Decisions for the owner
-
-1. The decision space above: six outcomes, with `REQUIRE_APPROVAL` kept separate from `ASK_HUMAN`.
-2. Whether to include the Kev 4B replication.
-3. The ASK_HUMAN families: the four listed, or others that matter to you, such as sector-specific compliance.
+The remaining v1 budget is about $16. Without a decision, the build is scoped to fit: fewer base specs, and batch pricing where it is offered. The pilot measures the real cost per item before anything is scaled up.
 
 ## Sources
 
-- Allen-Zhu & Li, Physics of Language Models 3.1: https://arxiv.org/abs/2309.14316
-- Zhang et al., Controllable Safety Alignment (CoSA): https://arxiv.org/abs/2410.08968
-- Longpre et al., The Flan Collection: https://arxiv.org/abs/2301.13688
-- Kaushik et al., Counterfactually-Augmented Data: https://arxiv.org/abs/1909.12434 ; Joshi & He: https://arxiv.org/abs/2107.00753
-- Swayamdipta et al., Dataset Cartography: https://arxiv.org/abs/2009.10795
-- Gekhman et al., Fine-tuning on new knowledge: https://arxiv.org/abs/2405.05904
-- Diao et al., R-Tuning: https://arxiv.org/abs/2311.09677
-- Ren et al., UA-Bench (data vs model uncertainty): https://arxiv.org/abs/2604.17293
-- Kirchhof et al., Uncertainty quantification needs reassessment: https://arxiv.org/abs/2505.22655
-- Khurana et al., disagreement and calibration: https://arxiv.org/abs/2408.14141
-- Mozannar & Sontag, Learning to defer: https://arxiv.org/abs/2006.01862
-- Mukherjee et al., Orca: https://arxiv.org/abs/2306.02707 ; Orca 2: https://arxiv.org/abs/2311.11045
-- Guan et al., Deliberative Alignment: https://arxiv.org/abs/2412.16339
-- Chen et al., TraceSafe: https://arxiv.org/abs/2604.07223
-- Curriculum ordering, mixed evidence: https://arxiv.org/abs/2510.19099 ; https://arxiv.org/abs/2308.05696
+Allen-Zhu & Li, Physics of LMs 3.1 (arXiv 2309.14316) · Zhang et al., CoSA (2410.08968) · Longpre et al., Flan Collection (2301.13688) · Kaushik et al., CAD (1909.12434) · Joshi & He (2107.00753) · Swayamdipta et al., Dataset Cartography (2009.10795) · Gekhman et al. (2405.05904) · Diao et al., R-Tuning (2311.09677) · Ren et al., UA-Bench (2604.17293) · Kirchhof et al. (2505.22655) · Khurana et al. (2408.14141) · Mozannar & Sontag (2006.01862) · Guan et al., Deliberative Alignment (2412.16339) · Mitra et al., Orca 2 (2311.11045) · Chen et al., TraceSafe (2604.07223) · Gunasekar et al., phi-1 (2306.11644) · curriculum ordering (2510.19099, 2308.05696) · NeMo Data Designer: github.com/NVIDIA-NeMo/DataDesigner
