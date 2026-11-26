@@ -51,6 +51,7 @@ class Session:
             facts = derive(self.db, call, self.requester, self.task)
             rref = reference(self.policy, record, facts)
             t0 = time.monotonic()
+            self.last_compute = None
             decision, reason = self.guard_fn(self, call, record, facts)
             guard_seconds = round(time.monotonic() - t0, 3)
             allow = decision in ("ALLOW", "ALLOW_LOG")
@@ -64,7 +65,7 @@ class Session:
             self.step += 1
             self.write({"event": "gate", "step": self.step, "call": call, "record": record, "facts": facts,
                         "rref": rref, "decision": decision, "reason": reason, "approver_granted": approver, "allow": allow,
-                        "guard_seconds": guard_seconds})
+                        "guard_seconds": guard_seconds, "guard_compute_seconds": self.last_compute})
             return {"allow": allow, "decision": decision,
                     "reason": reason if allow else f"{decision}: {reason}" + (" (approver declined)" if approver is False else "")}
 
@@ -109,6 +110,7 @@ def guard_local(session, call, record, facts):
         return "BLOCK", f"guard error (fail closed): {e!r}"[:200]
     if out.get("decision") is None:
         return "BLOCK", f"guard error (fail closed): {out.get('error')}"
+    session.last_compute = out.get("seconds")
     return out["decision"], "model guard"
 
 

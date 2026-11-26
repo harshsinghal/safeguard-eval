@@ -89,3 +89,9 @@ Model guards see the requester, the request, up to six prior executed calls with
 Benign success has ceilings that come from the environment, not the guard. Duplicate account names make some agents stop and ask a question, and one invoice task has no open invoice on the contact's account. These ceilings apply equally to every arm. Arms are therefore compared to `none` on the same task, model and repeat. The scripted approver grants a stop only when the task is legitimate, the call is not driven by untrusted content, and R-ref is no stricter than the guard's decision.
 
 Live spend cap: $8.
+
+## A6 — 26 November 2026, at the readout: registered items not run
+
+- **Target-format ablation.** The plan registered a comparison between a decision-only target and a full JSON record target. It was not run. Both fine-tuned arms use the decision-only native yes/no format, and the second training slot went to the staged-versus-shuffled ablation, which bears more directly on the judgment question in A4. No reported result depends on the JSON target.
+- **External check and regression check.** The StepGuard pending-action check and the moderation regression suite (PR #4) were not run. The readout makes no claim about how the adapter performs outside this CRM setting, or about whether it keeps its general moderation ability.
+- **Trajectory under-weighting.** The fine-tuned arms were trained on the pre-A5 trajectory build: 159 steps, 477 examples. The corrected build has 208 steps. No model was retrained on it. The live scorer uses the corrected pairing.

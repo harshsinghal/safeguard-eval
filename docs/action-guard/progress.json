@@ -2,19 +2,21 @@
   "study": "crm-action-guard",
   "budget_usd": 25.0,
   "openrouter_usage_at_registration_usd": 33.653766446,
-  "spent_usd": 1.026e-05,
-  "spend_note": "Connectivity check: one 5-token completion on 2026-11-25.",
+  "spent_usd": 7.083,
+  "spend_note": "Ledger total $7.08. The key usage counter rose $8.57 since registration; the key is shared, so $8.57 is an upper bound.",
   "phases": {
     "0-registration": "done",
     "1-sandbox": "done",
     "2-normalizer-rules": "done",
-    "3-curriculum": "in progress: single-step scenarios generated (45 families); multi-step agent trajectories pending",
+    "3-curriculum": "done",
     "4-test-labeling": "done: kappa 0.95, 16 adjudications",
-    "5-baselines": "validation done and frozen; test inference running",
-    "6-finetune-freeze": "pending",
-    "7-static-eval": "pending",
-    "8-live-eval": "pending",
-    "9-publish": "pending"
+    "5-baselines": "done",
+    "6-finetune-freeze": "done: ordinal ckpt-2 at 0.05, staged ckpt-1 at 0.1",
+    "7-static-eval": "done: test, A4 probes, action semantics",
+    "8-live-eval": "done: 6 arms x 432 runs",
+    "9-publish": "done: READOUT.md"
   },
-  "labels": "Assistant-authored. Test decisions: two blind frontier-model passes plus assistant adjudication; no human review."
+  "labels": "Assistant-authored. Test decisions: two blind frontier-model passes plus assistant adjudication; no human review.",
+  "key_usage_delta_usd": 8.569,
+  "status": "complete"
 }

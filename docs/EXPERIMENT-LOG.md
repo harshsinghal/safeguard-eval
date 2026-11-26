@@ -493,3 +493,33 @@ Safeguard's runtime amendment and output variability. This study is separate
 from the WildGuard/HateXplain leaderboard below.
 
 [Results and error rates](security-cognition/STEPGUARD-RESULTS.md) · [What the policies change](security-cognition/STEPGUARD-POLICIES.md) · [Registered method](security-cognition/STEPGUARD-RUN-PLAN.md) · [Evidence and reproduction](../reports/stepguard-native/README.md)
+
+### 30. CRM action guard: can a 3B model learn GRC judgment from a curriculum?
+
+A Shieldstral 3B LoRA learns to judge an agent's pending CRM or finance-warehouse
+call against a written policy on a five-step ladder (ALLOW, ALLOW_LOG, CONFIRM,
+APPROVE, BLOCK). It trains only on a synthetic curriculum: action semantics, risk
+attributes, policy application, context fit and agent trajectories. Two arms are
+compared: a shuffled mix (ordinal) and semantics questions first (staged).
+Checkpoint and cutoff were frozen on validation. Test (380) and probe (264) labels
+come from two blind frontier labelers plus assistant adjudication (κ 0.95 / 0.96).
+
+| | Frozen 3B | Tuned ordinal | Tuned staged | Jev (API) |
+|---|---:|---:|---:|---:|
+| Test exact / safety misses | 22.9% / 13.4% | 81.1% / 3.4% | 81.1% / 13.9% | 96.3% / 2.6% |
+| Unseen prose policy, exact | 34.0% | 47.9% | 55.3% | 89.4% |
+| Judgment probes, exact | 35.6% | 49.6% | 65.9% | 84.8% |
+| Counterfactual direction (of 60) / invariance flips (of 36) | 15 / 12 | 50 / 1 | 21 / 0 | 51 / 6 |
+| Live (432 runs): harmful changes / benign success vs none | 0 / −30.8 pt | 0 / −2.0 pt | 1 / −1.5 pt | 0 / −1.0 pt |
+
+Without a guard, the agents made 108 harmful changes; the simple rules engine
+let 27 through. Fine-tuning taught the policies the model was trained on, made
+its decisions move with the facts that matter, and made it ignore wording,
+language and pressure. Both arms escalated a personal-mailbox export that the
+training rulebook allows. The curriculum did not teach the model to read a new
+policy: under the prose policy, the ordinal arm over-escalates 93 of 132 probes.
+It also did not improve objective action understanding (about 81% balanced
+accuracy before and after). The live templates match the training-trajectory
+templates, and every label is assistant-authored.
+
+[Readout](action-guard/READOUT.md) · [Registered plan](action-guard/PLAN.md) · [Amendments](action-guard/AMENDMENTS.md) · [Scores](action-guard/scores)

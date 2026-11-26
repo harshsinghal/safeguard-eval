@@ -94,7 +94,7 @@ Each benchmark is a separate population with its own task policy, and results ar
 
 ## Study index
 
-Twenty-nine completed studies, grouped by question. Each line gives the one-sentence takeaway. The [experiment log](docs/EXPERIMENT-LOG.md) has the full write-up, numbers, caveats and evidence links for each.
+Thirty completed studies, grouped by question. Each line gives the one-sentence takeaway. The [experiment log](docs/EXPERIMENT-LOG.md) has the full write-up, numbers, caveats and evidence links for each.
 
 **Benchmark core and policy text**
 
@@ -149,6 +149,7 @@ Twenty-nine completed studies, grouped by question. Each line gives the one-sent
 | 27 | [Cyber assistance requests](docs/cyber-skill-guardrails/README.md) | Trained heads exploit source cues; prompted models land at 60–85%. |
 | 28 | [Complete skill packages](docs/cyber-skill-guardrails/README.md) | Companion files helped: Jev scored 95.5% on full packages vs 88.1% on SKILL.md alone. |
 | 29 | [StepGuard agent behaviour](docs/security-cognition/STEPGUARD-RESULTS.md) | Most models judged completed runs better than pending actions; Jev led both by a wide margin. |
+| 30 | [CRM action guard](docs/action-guard/READOUT.md) | A fine-tuned 3B guard stopped live agents' harmful changes at about a 2-point utility cost. It learned the trained policies and to ignore surface pressure, but could not read an unseen policy. |
 
 ## Work in progress: the enterprise guard
 
