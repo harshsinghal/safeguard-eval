@@ -176,11 +176,17 @@ def predict_rows(trainer, data_rows, out_path, rest=0.5):
 def train(arm, out):
     out = Path(out)
     t = Trainer()
-    stages = items(arm, rows("train"))
+    train_rows = rows("train")
+    traj = DATA / "trajectories.jsonl"
+    if traj.exists():  # curriculum stage 5: agent trajectory steps, training split only
+        train_rows += [json.loads(l) for l in traj.read_text().splitlines()]
+    stages = items(arm, train_rows)
     val = rows("validation")
     reg = {"arm": arm, "seed": SEED, "lr": LR, "micro": MICRO, "accum": ACCUM, "epochs": EPOCHS, "lora": {"r": 8, "alpha": 16, "targets": "language_model q/k/v/o"},
            "stage_sizes": [len(s) for s in stages], "train_sha256": hashlib.sha256((DATA / "train.jsonl").read_bytes()).hexdigest(),
-           "validation_sha256": hashlib.sha256((DATA / "validation.jsonl").read_bytes()).hexdigest(), "test_inference": False}
+           "validation_sha256": hashlib.sha256((DATA / "validation.jsonl").read_bytes()).hexdigest(),
+           "trajectories_sha256": hashlib.sha256(traj.read_bytes()).hexdigest() if traj.exists() else None,
+           "train_examples": len(train_rows), "test_inference": False}
 
     def val_fn(trainer, path):
         predict_rows(trainer, val, path / "validation-preds.jsonl")

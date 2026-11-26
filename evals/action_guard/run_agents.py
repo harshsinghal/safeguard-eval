@@ -124,7 +124,7 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     (ROOT / "work/action-guard/pi-agent").mkdir(parents=True, exist_ok=True)
     k = key()
-    chosen = [tasks.TASKS[t] for t in (a.tasks or tasks.TASKS)]
+    chosen = [tasks.TASKS[t] for t in (a.tasks or tasks.COLLECTION)]
     start, spent = usage(k), 0.0
     for model in a.models:
         for task in chosen:
