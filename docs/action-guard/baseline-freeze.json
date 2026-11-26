@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-11-26T02:52:09Z",
+  "phase": "5-baselines",
+  "test_inference_started": false,
+  "selection_rule": "Shieldstral ordinal cutoff chosen on validation from 0.05..0.95 (step 0.05) by macro recall, ties broken by lower under-escalation. Choice-head guards (Kev, Clef, Jev) use native argmax; R-base has no parameters.",
+  "selections": {
+    "rbase": {},
+    "jev": {
+      "decision": "argmax"
+    },
+    "kev": {
+      "decision": "argmax"
+    },
+    "clef": {
+      "decision": "argmax"
+    },
+    "shieldstral": {
+      "cutoff_primary": 0.5,
+      "cutoff_validation_selected": 0.1,
+      "note": "0.5 is reported as the registered default; 0.1 is the validation-selected operating point. Both are reported on test."
+    }
+  },
+  "validation_predictions_sha256": {
+    "rbase": "c405ece0776e89669429421d56cc1f49527a2dccdd8bda3d80b91c33a0db0abf",
+    "jev": "827203e1a4d3030d006c6074ac9415e46d1d20478ca279d8eb73c0e3662304ab",
+    "kev": "446654ddeddab20bff0b7794bc9f71a874cf094c70822d05a810c0d3acd7d681",
+    "clef": "3fe6095c654332d7eb99ebaedcedcdc0c1d1f43d80e02b64a6a99c542f296b2b",
+    "shieldstral": "00185a63be9c072faad21f022965ad3c261efa517673d49625b4916eadc4cc63"
+  },
+  "data_sha256": {
+    "train": "8ca744c8353aabc33724bf23e29f233d741b03b88488ff803541dfef62ef6a8e",
+    "validation": "dc4d55711dbb855535148c0db624551a61e14ded98a1fd229805c8c550dc2eba",
+    "test": "fa61e2aaec1fd02b451da9af1f2161d8fde1dc316ac12c43b021339f676a71a1"
+  },
+  "code_sha256": {
+    "evals/action_guard/guards.py": "25c0ba8f1a2d807c8392f35d1939f7461c6ebfc36bd2921e82bf0c072c5b33c2",
+    "evals/action_guard/evaluate.py": "2cb10d3f37533771ad2b876a9fb43c0fa5a9299277c13c0e508fdb30c2f7ab43",
+    "evals/action_guard/rules.py": "09d49cf4ba9dcef6b51dae92a299b0c0f88c72895915f71cbf616e2be3326f50",
+    "evals/action_guard/dataset.py": "45e86e0429d9a0b60ee59ce8230b438a32dd42078cdf21d23924711ac3234b3e"
+  }
+}
