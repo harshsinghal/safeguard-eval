@@ -1,0 +1,8 @@
+{
+  "build": "post-A3",
+  "sha256": {
+    "train": "07e7db039008cf5e4759d1e22587fcac93c5d93895c7f68a937ed4c6746a2f04",
+    "validation": "0400827f16d9ccceada151461a1f7c9bea65b8ebbe285f0fdc78922c4b6b1f1c",
+    "test": "5c3bc46107253c8c9f95a341f05ca0b1dc039e498141b16d570e1241720fc517"
+  }
+}
