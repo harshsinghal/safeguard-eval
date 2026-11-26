@@ -221,6 +221,57 @@ def predict(adapter, data, out):
     predict_rows(t, [json.loads(l) for l in Path(data).read_text().splitlines()], out)
 
 
+CUTOFFS = [round(0.05 * i, 2) for i in range(1, 20)]
+
+
+def select(arm, root="work/action-guard/ft"):
+    """Joint (checkpoint, cutoff) choice on validation: macro recall, then lower under-escalation,
+    then the cutoff nearest 0.5, then the earlier checkpoint. Same rule as the frozen baseline."""
+    from .evaluate import score
+    val = rows("validation")
+    ref = {r["id"]: r["target"]["decision"] for r in val}
+    grid = []
+    for ck in sorted(Path(root, arm, "run").glob("ckpt-*"), key=lambda p: int(p.name.split("-")[1])):
+        preds = {json.loads(l)["id"]: json.loads(l) for l in (ck / "validation-preds.jsonl").read_text().splitlines()}
+        if set(preds) != set(ref):
+            raise ValueError(f"{ck}: incomplete validation predictions")
+        for c in CUTOFFS:
+            pairs = [(ref[i], ordinal_decision(preds[i]["level_probs"], c) if preds[i]["level_probs"] else None) for i in ref]
+            s = score(pairs)
+            grid.append({"checkpoint": ck.name, "cutoff": c, "macro_recall": s["macro_recall"], "under": s["under"], "exact": s["exact"]})
+    best = sorted(grid, key=lambda g: (-g["macro_recall"], g["under"], abs(g["cutoff"] - 0.5), int(g["checkpoint"].split("-")[1])))[0]
+    at_half = [g for g in grid if g["checkpoint"] == best["checkpoint"] and g["cutoff"] == 0.5][0]
+    return {"arm": arm, "selected": best, "selected_checkpoint_at_0.5": at_half,
+            "per_checkpoint_at_0.5": [g for g in grid if g["cutoff"] == 0.5]}
+
+
+def semantics(adapter, data, out):
+    """Objective action-semantics questions on each unique scenario (A4). adapter=None: frozen model."""
+    import torch
+    t = Trainer.__new__(Trainer)
+    t.torch = torch
+    t.g = Shieldstral()
+    t.model = t.g.model
+    if adapter:
+        from peft import PeftModel
+        t.model = PeftModel.from_pretrained(t.g.model, adapter).eval()
+    seen = set()
+    with open(out, "w") as fh:
+        for r in (json.loads(l) for l in Path(data).read_text().splitlines()):
+            if r["scenario_id"] in seen:
+                continue
+            seen.add(r["scenario_id"])
+            for name, (q, f) in SEMANTIC_QUERIES.items():
+                gpu_ok()
+                t0 = time.monotonic()
+                with torch.inference_mode():
+                    z = t.step_logits([t.encode(semantic_messages(r["policy"], r["input"], q))])[0]
+                p = float(z.softmax(-1)[0].cpu())
+                dt = time.monotonic() - t0
+                fh.write(json.dumps({"scenario_id": r["scenario_id"], "question": name, "p_yes": p, "truth": bool(f(r["record"]))}) + "\n")
+                time.sleep(max(0.5 * dt, 0.05))
+
+
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -231,9 +282,19 @@ def main():
     p.add_argument("--adapter", required=True)
     p.add_argument("--data", required=True)
     p.add_argument("--out", required=True)
+    s = sub.add_parser("select")
+    s.add_argument("--arm", required=True, choices=["ordinal", "staged"])
+    m = sub.add_parser("semantics")
+    m.add_argument("--adapter")
+    m.add_argument("--data", required=True)
+    m.add_argument("--out", required=True)
     x = ap.parse_args()
     if x.cmd == "train":
         train(x.arm, x.out)
+    elif x.cmd == "select":
+        print(json.dumps(select(x.arm), indent=1))
+    elif x.cmd == "semantics":
+        semantics(x.adapter, x.data, x.out)
     else:
         predict(x.adapter, x.data, x.out)
 

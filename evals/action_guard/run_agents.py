@@ -75,15 +75,17 @@ def system_prompt(task):
             "if a call is blocked, explain why to the user instead of retrying a workaround. Finish with a short summary.")
 
 
-def run_one(task, model, guard, policy, out_dir, k, timeout=180):
+def run_one(task, model, guard, policy, out_dir, k, timeout=180, guard_port=None, arm=None, repeat=0):
     port = free_port()
-    log = out_dir / f"{task['id']}__{model.replace('/', '_')}__{guard}.server.jsonl"
+    arm = arm or guard
+    log = out_dir / f"{task['id']}__{model.replace('/', '_')}__{arm}__{policy}__r{repeat}.server.jsonl"
     events = log.with_suffix("").with_suffix(".pi.jsonl")
     if log.exists():
         return None  # already collected; runs are immutable
     srv_err = open(log.with_suffix("").with_suffix(".server.err"), "w")
     srv = subprocess.Popen([sys.executable, "-m", "evals.action_guard.server", "--task", task["id"], "--guard", guard,
-                            "--policy", policy, "--log", str(log), "--port", str(port)],
+                            "--policy", policy, "--log", str(log), "--port", str(port)]
+                           + (["--guard-port", str(guard_port)] if guard_port else []),
                            cwd=ROOT, stdout=subprocess.PIPE, stderr=srv_err, text=True)
     try:
         if "ready" not in srv.stdout.readline():
@@ -101,7 +103,7 @@ def run_one(task, model, guard, policy, out_dir, k, timeout=180):
                 status, err = p.returncode, p.stderr[-2000:]
             except subprocess.TimeoutExpired:
                 status, err = "timeout", ""
-        return {"task": task["id"], "model": model, "guard": guard, "policy": policy, "status": status,
+        return {"task": task["id"], "model": model, "guard": guard, "arm": arm, "repeat": repeat, "policy": policy, "status": status,
                 "seconds": round(time.time() - t0, 1), "stderr_tail": err, "usd": round(pi_cost(events), 8)}
     finally:
         srv.terminate()
@@ -119,6 +121,9 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--cap-usd", type=float, required=True, help="maximum spend for this invocation")
     ap.add_argument("--study-cap-usd", type=float, default=25.0)
+    ap.add_argument("--guard-port", type=int)
+    ap.add_argument("--arm", help="name for this guard configuration in file names (default: --guard)")
+    ap.add_argument("--repeats", type=int, default=1)
     a = ap.parse_args()
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -126,12 +131,12 @@ def main():
     k = key()
     chosen = [tasks.TASKS[t] for t in (a.tasks or tasks.COLLECTION)]
     start, spent = usage(k), 0.0
-    for model in a.models:
-        for task in chosen:
+    for model, task, rep in ((m, t, r) for r in range(a.repeats) for m in a.models for t in chosen):
+        if True:
             if spent >= a.cap_usd or spent_so_far() >= a.study_cap_usd - 0.5:
                 print(json.dumps({"stopped": "spending cap reached", "invocation_usd": round(spent, 4)}))
                 return
-            res = run_one(task, model, a.guard, a.policy, out, k)
+            res = run_one(task, model, a.guard, a.policy, out, k, guard_port=a.guard_port, arm=a.arm, repeat=rep)
             if res is None:
                 continue
             spent += res["usd"]
