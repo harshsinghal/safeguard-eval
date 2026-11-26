@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Render the README tables from a frozen leaderboard; no inference or fitting."""
+"""Render the leaderboard tables (docs/leaderboard/CURRENT.md) from a frozen archive; no inference or fitting."""
 import argparse
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "published_runs/2026-10-30-leaderboard-decision-ensembles/results.json"
-README = ROOT / "README.md"
+README = ROOT / "docs/leaderboard/CURRENT.md"  # moved from the root README
 BEGIN = "<!-- BEGIN GENERATED LEADERBOARD -->"
 END = "<!-- END GENERATED LEADERBOARD -->"
 
@@ -31,11 +31,11 @@ def render(data):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="Fail if README tables differ from the archived results")
+    parser.add_argument("--check", action="store_true", help="Fail if the leaderboard tables differ from the archived results")
     args = parser.parse_args()
     current = README.read_text(encoding="utf-8")
     if current.count(BEGIN) != 1 or current.count(END) != 1:
-        parser.error("Expected exactly one pair of README leaderboard markers")
+        parser.error("Expected exactly one pair of leaderboard markers in " + README.relative_to(ROOT).as_posix())
     start, finish = current.index(BEGIN), current.index(END) + len(END)
     if finish < start:
         parser.error("Leaderboard markers are out of order")
@@ -43,11 +43,11 @@ def main():
     expected = current[:start] + generated + current[finish:]
     if args.check:
         if expected != current:
-            parser.exit(1, "README leaderboard is stale; run python3 tools/update_readme_leaderboard.py\n")
-        print("README leaderboard matches the frozen results.")
+            parser.exit(1, "Leaderboard tables are stale; run python3 tools/update_readme_leaderboard.py\n")
+        print("Leaderboard tables match the frozen results.")
     else:
         README.write_text(expected, encoding="utf-8")
-        print("Updated README leaderboard from " + SOURCE.relative_to(ROOT).as_posix())
+        print("Updated leaderboard tables from " + SOURCE.relative_to(ROOT).as_posix())
 
 
 if __name__ == "__main__":

@@ -4,7 +4,7 @@ The leaderboard asks two questions together: **do we catch violations, and do we
 correctly allow compliant content?** A single accuracy score can hide a poor answer
 to either question.
 
-This guide defines the metrics used in the [main README](../../README.md#current-leaderboard)
+This guide defines the metrics used in the [current leaderboards](CURRENT.md)
 and the [expanded results](../../published_runs/2026-10-30-leaderboard-decision-ensembles/RESULTS.md).
 The exact implementation is in [metrics.py](../../evals/leaderboard/metrics.py);
 the [archived implementation](../../published_runs/2026-10-29-leaderboard/source/evals/leaderboard/metrics.py)

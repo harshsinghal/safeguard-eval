@@ -11,8 +11,8 @@ always the same.
 
 | Dataset / source | What it helps test | Our evaluated population | Evidence |
 |---|---|---|---|
-| [WildGuardMix](https://huggingface.co/datasets/allenai/wildguardmix) | Harmful requests, harmful responses and refusals; we use **prompt harmfulness only** | 1,699 labeled WildGuardTest prompts | [Methods](../wildguard/METHODS.md), [leaderboard](../../README.md#current-leaderboard) |
-| [HateXplain](https://huggingface.co/datasets/Hate-speech-CNERG/hatexplain) | Hate speech, offensive speech, target groups and annotation rationales | 1,924 official test posts, mapped to hate versus non-hate | [Study](../hatexplain/READOUT.md), [leaderboard](../../README.md#hatexplain-hate-versus-non-hate) |
+| [WildGuardMix](https://huggingface.co/datasets/allenai/wildguardmix) | Harmful requests, harmful responses and refusals; we use **prompt harmfulness only** | 1,699 labeled WildGuardTest prompts | [Methods](../wildguard/METHODS.md), [leaderboard](../leaderboard/CURRENT.md) |
+| [HateXplain](https://huggingface.co/datasets/Hate-speech-CNERG/hatexplain) | Hate speech, offensive speech, target groups and annotation rationales | 1,924 official test posts, mapped to hate versus non-hate | [Study](../hatexplain/READOUT.md), [leaderboard](../leaderboard/CURRENT.md#hatexplain-hate-versus-non-hate) |
 | [Deepset prompt injections](https://huggingface.co/datasets/deepset/prompt-injections) | Injection-labeled text versus ordinary requests | 116 original test examples | [Earlier pilot](../../evals/injection/README.md), [six-model study](../prompt-injection/README.md) |
 | [xTRam1 Safe-Guard prompt injection](https://huggingface.co/datasets/xTRam1/safe-guard-prompt-injection) | A larger, largely synthetic binary injection collection | 2,060 original test examples | [Six-model study](../prompt-injection/README.md) |
 | [NotInject](https://huggingface.co/datasets/leolee99/NotInject) | False alarms on benign text containing suspicious words or characters | 339 benign examples | [False-block results](../prompt-injection/RESULTS.md#notinject-339-benign-lookalikes) |

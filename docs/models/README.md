@@ -1,6 +1,6 @@
 # Model directory
 
-[Research notebook](../../README.md) · [Dataset directory](../datasets/README.md) · [Results](../../README.md#current-leaderboard) · [Deployment guide](../cloud-serving/DEPLOYMENT.md)
+[Research notebook](../../README.md) · [Dataset directory](../datasets/README.md) · [Results](../leaderboard/CURRENT.md) · [Deployment guide](../cloud-serving/DEPLOYMENT.md)
 
 This directory identifies the models used in our experiments, their purpose,
 how we supplied instructions, and where to find their releases and our evidence.

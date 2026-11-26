@@ -1,9 +1,12 @@
 # Maintaining the living research notebook
 
-The [main README](../README.md) is the chronological entry point to the research.
-It should explain what question each experiment addressed, what changed, what
-happened, and what a practitioner can learn. Detailed methods and evidence live
-in linked study folders; the original application lives in [DEMO.md](../DEMO.md).
+The [main README](../README.md) is the landing page: what the research is, the
+key findings, the evaluation contract, a results summary, a one-line-per-study
+index and the work in progress. The chronological record lives in the
+[experiment log](EXPERIMENT-LOG.md). Each log entry explains what question the
+experiment addressed, what changed, what happened, and what a practitioner can
+learn. Detailed methods and evidence live in linked study folders; the original
+application lives in [DEMO.md](../DEMO.md).
 
 **Standing workflow:** the owner has asked for these updates after every
 authorized experiment, without another reminder. Completing the work includes
@@ -11,8 +14,9 @@ publishing the experiment record and README links to GitHub, reporting actual
 spend, and confirming resource cleanup. See the repository's [agent instructions](../AGENTS.md).
 This does not expand the budget or authorize unrelated experiments.
 
-The [experiment map](../README.md#experiment-map) is the visual entry point. Keep
-its branch labels and log numbers aligned with completed studies. Its arrows
+The [README experiment map](../README.md#experiment-map) is the visual entry point;
+the [detailed per-study map](EXPERIMENT-LOG.md#experiment-map) is in the log. Keep
+both maps' branch labels and log numbers aligned with completed studies. Its arrows
 connect research questions; they do not imply a common validation population or
 a single inference pipeline. Show proposals separately and retain their execution
 status. The [next-step proposal](research-directions/REDUCING-MODERATION-ERRORS.md)
@@ -27,8 +31,10 @@ representation-score, policy-optimization and second-pass proposals.
    and keep credentials and private user conversations out of the archive.
 2. Write a readable study summary under `docs/`, including policy edits, error
    trade-offs, limitations, compute use, and reproduction instructions.
-3. Add an experiment-named entry to the README log. Use the research question or
+3. Add an experiment-named entry to the [experiment log](EXPERIMENT-LOG.md) and a
+   one-line takeaway to the README study index. Use the research question or
    method as its heading, without a date. Keep entries in experiment order.
+   Update the README results summary only when a study changes a leading result.
    Distinguish ordinary accuracy,
    balanced accuracy, and macro-F1; identify which settings were held fixed.
    Label pilots, proposals, synthetic demonstrations, and reused-test analyses.
@@ -49,9 +55,10 @@ does not automatically update the downloadable skill, paper, or other articles.
 
 ## Updating the leaderboard
 
-The README tables are generated from a single frozen `results.json`, currently
-the integration of the decision-model ensembles with the earlier studies. Do not type new scores into the
-README or choose each model's largest observed test score.
+The WildGuard and HateXplain tables in [leaderboard/CURRENT.md](leaderboard/CURRENT.md)
+are generated from a single frozen `results.json`, currently
+the integration of the decision-model ensembles with the earlier studies. Do not type new scores into those
+tables or choose each model's largest observed test score.
 
 After reviewing and publishing a new leaderboard archive, update `SOURCE` in
 [`tools/update_readme_leaderboard.py`](../tools/update_readme_leaderboard.py),
