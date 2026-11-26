@@ -1,0 +1,41 @@
+{
+  "actual": {
+    "elapsed_seconds": 166.17854069999885,
+    "sampled_mean_power_w": 121.11824451410659,
+    "sampled_peak_power_w": 281.88,
+    "sampled_peak_temperature_c": 51.0,
+    "samples": 319,
+    "samples_above_250w": 4
+  },
+  "fit": {
+    "elapsed_seconds": 868.8295196929976,
+    "sampled_mean_power_w": 128.8514912808178,
+    "sampled_peak_power_w": 358.12,
+    "sampled_peak_temperature_c": 56.0,
+    "samples": 1663,
+    "samples_above_250w": 16
+  },
+  "hardware_power_or_clock_settings_changed": false,
+  "limitation": "Whole-device 0.5s samples include other applications and may miss instantaneous peaks. Software duty reduces sustained use, not instantaneous power.",
+  "paid_compute_usd": 0,
+  "sampled_mean_power_w": 121.22215892053974,
+  "sampled_peak_device_memory_mib": 30295.0,
+  "sampled_peak_power_w": 358.12,
+  "sampled_peak_temperature_c": 56.0,
+  "test": {
+    "elapsed_seconds": 354.6615402250027,
+    "sampled_mean_power_w": 118.9538552437223,
+    "sampled_peak_power_w": 284.06,
+    "sampled_peak_temperature_c": 55.0,
+    "samples": 677,
+    "samples_above_250w": 4
+  },
+  "validation": {
+    "elapsed_seconds": 353.6176182030031,
+    "sampled_mean_power_w": 104.77424556213018,
+    "sampled_peak_power_w": 329.29,
+    "sampled_peak_temperature_c": 52.0,
+    "samples": 676,
+    "samples_above_250w": 9
+  }
+}

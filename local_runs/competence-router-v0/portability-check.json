@@ -1,0 +1,6 @@
+{
+  "feature_dimensions": 1034,
+  "feature_max_absolute_difference": 0.0,
+  "offline_encoder_reload": true,
+  "scope": "One fixed held-out input, CPU FP32; no fitting or selection based on this check"
+}

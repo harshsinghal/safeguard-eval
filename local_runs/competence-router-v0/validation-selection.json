@@ -1,0 +1,611 @@
+{
+  "calibration": {
+    "clef": {
+      "brier": 0.14525783679285215,
+      "ece10": 0.08783519910205564,
+      "n": 112
+    },
+    "kev": {
+      "brier": 0.18009903076295114,
+      "ece10": 0.06603745602963731,
+      "n": 112
+    },
+    "policylm": {
+      "brier": 0.17269545184810683,
+      "ece10": 0.06927577336877015,
+      "n": 112
+    },
+    "shieldstral": {
+      "brier": 0.1941563362707638,
+      "ece10": 0.12114181687235559,
+      "n": 112
+    }
+  },
+  "conservative_category": {
+    "03ccc019cb0da6ad576f732d3f67deb18424854ea5a931303e113a6d8c9c90b4": "clef",
+    "091ed971858432448b9a2287db0de00031fa8097593d04c60a9f4baa1729b4aa": "clef",
+    "0be6cefcae821387ce6215ae47a5267bdac12e3f5bbd511e2e690b0b77afbbbe": "clef",
+    "42654247453467ab510c4a64991030c5e96019f6188c54d994618e3392dce8bc": "clef",
+    "85d9713cf89e3737f16afc05d4b58aae53413bf338608e87b01d8275e3ade7e7": "clef",
+    "904201135101e7151b7847178ef1b6633bf38ab9714dbd99d40dbcf066c40eb5": "clef",
+    "9bd37a2d9d1a5caca985b7059a039c56735c2fd0949b9054e55973c85f042eef": "clef",
+    "afd97e9aa9c673d6ef4a8d268c4dd0175a1c8932e6388d124efde420a619e8e3": "clef",
+    "fb04fb0de5e9352d11f4b90885b7176269f0efd46e2626f65105201518a9cc48": "clef"
+  },
+  "conservative_evidence": {
+    "03ccc019cb0da6ad576f732d3f67deb18424854ea5a931303e113a6d8c9c90b4": {
+      "kev": {
+        "ci90": [
+          -0.125,
+          0.625
+        ],
+        "n": 8,
+        "paired_delta": 0.25
+      },
+      "policylm": {
+        "ci90": [
+          -0.25,
+          0.625
+        ],
+        "n": 8,
+        "paired_delta": 0.125
+      },
+      "shieldstral": {
+        "ci90": [
+          0.0,
+          0.375
+        ],
+        "n": 8,
+        "paired_delta": 0.125
+      }
+    },
+    "091ed971858432448b9a2287db0de00031fa8097593d04c60a9f4baa1729b4aa": {
+      "kev": {
+        "ci90": [
+          -0.1875,
+          0.0
+        ],
+        "n": 16,
+        "paired_delta": -0.0625
+      },
+      "policylm": {
+        "ci90": [
+          0.0,
+          0.1875
+        ],
+        "n": 16,
+        "paired_delta": 0.0625
+      },
+      "shieldstral": {
+        "ci90": [
+          -0.1875,
+          0.0
+        ],
+        "n": 16,
+        "paired_delta": -0.0625
+      }
+    },
+    "0be6cefcae821387ce6215ae47a5267bdac12e3f5bbd511e2e690b0b77afbbbe": {
+      "kev": {
+        "ci90": [
+          0.0,
+          0.0
+        ],
+        "n": 8,
+        "paired_delta": 0.0
+      },
+      "policylm": {
+        "ci90": [
+          0.0,
+          0.5
+        ],
+        "n": 8,
+        "paired_delta": 0.25
+      },
+      "shieldstral": {
+        "ci90": [
+          0.0,
+          0.0
+        ],
+        "n": 8,
+        "paired_delta": 0.0
+      }
+    },
+    "42654247453467ab510c4a64991030c5e96019f6188c54d994618e3392dce8bc": {
+      "kev": {
+        "ci90": [
+          -0.1875,
+          0.3125
+        ],
+        "n": 16,
+        "paired_delta": 0.0625
+      },
+      "policylm": {
+        "ci90": [
+          -0.1875,
+          0.3125
+        ],
+        "n": 16,
+        "paired_delta": 0.0625
+      },
+      "shieldstral": {
+        "ci90": [
+          0.0,
+          0.25
+        ],
+        "n": 16,
+        "paired_delta": 0.125
+      }
+    },
+    "85d9713cf89e3737f16afc05d4b58aae53413bf338608e87b01d8275e3ade7e7": {
+      "kev": {
+        "ci90": [
+          -0.25,
+          0.0
+        ],
+        "n": 16,
+        "paired_delta": -0.125
+      },
+      "policylm": {
+        "ci90": [
+          -0.3125,
+          0.3125
+        ],
+        "n": 16,
+        "paired_delta": 0.0
+      },
+      "shieldstral": {
+        "ci90": [
+          -0.12812499999999982,
+          0.125
+        ],
+        "n": 16,
+        "paired_delta": 0.0
+      }
+    },
+    "904201135101e7151b7847178ef1b6633bf38ab9714dbd99d40dbcf066c40eb5": {
+      "kev": {
+        "ci90": [
+          -0.3888888888888889,
+          0.0
+        ],
+        "n": 16,
+        "paired_delta": -0.1875
+      },
+      "policylm": {
+        "ci90": [
+          0.0,
+          0.0
+        ],
+        "n": 16,
+        "paired_delta": 0.0
+      },
+      "shieldstral": {
+        "ci90": [
+          0.0,
+          0.0
+        ],
+        "n": 16,
+        "paired_delta": 0.0
+      }
+    },
+    "9bd37a2d9d1a5caca985b7059a039c56735c2fd0949b9054e55973c85f042eef": {
+      "kev": {
+        "ci90": [
+          -0.25,
+          0.0
+        ],
+        "n": 16,
+        "paired_delta": -0.125
+      },
+      "policylm": {
+        "ci90": [
+          -0.625,
+          -0.25
+        ],
+        "n": 16,
+        "paired_delta": -0.4375
+      },
+      "shieldstral": {
+        "ci90": [
+          -0.25,
+          0.0
+        ],
+        "n": 16,
+        "paired_delta": -0.125
+      }
+    },
+    "afd97e9aa9c673d6ef4a8d268c4dd0175a1c8932e6388d124efde420a619e8e3": {
+      "kev": {
+        "ci90": [
+          0.0,
+          0.0
+        ],
+        "n": 8,
+        "paired_delta": 0.0
+      },
+      "policylm": {
+        "ci90": [
+          -0.75,
+          0.0
+        ],
+        "n": 8,
+        "paired_delta": -0.375
+      },
+      "shieldstral": {
+        "ci90": [
+          -0.5,
+          0.0
+        ],
+        "n": 8,
+        "paired_delta": -0.25
+      }
+    },
+    "fb04fb0de5e9352d11f4b90885b7176269f0efd46e2626f65105201518a9cc48": {
+      "kev": {
+        "ci90": [
+          -0.375,
+          0.0
+        ],
+        "n": 8,
+        "paired_delta": -0.125
+      },
+      "policylm": {
+        "ci90": [
+          -0.75,
+          0.25
+        ],
+        "n": 8,
+        "paired_delta": -0.25
+      },
+      "shieldstral": {
+        "ci90": [
+          -0.625,
+          -0.125
+        ],
+        "n": 8,
+        "paired_delta": -0.375
+      }
+    }
+  },
+  "default_accuracy": 0.7767857142857143,
+  "head_candidates": [
+    {
+      "C": 0.01,
+      "validation_brier": 0.17305216391866848,
+      "validation_log_loss": 0.5248169556195971
+    },
+    {
+      "C": 0.1,
+      "validation_brier": 0.19710795180257623,
+      "validation_log_loss": 0.6378819127324462
+    },
+    {
+      "C": 1.0,
+      "validation_brier": 0.224875719899392,
+      "validation_log_loss": 1.015125901976045
+    }
+  ],
+  "route_candidates": [
+    {
+      "accepted": false,
+      "accuracy": 0.7767857142857143,
+      "ci90": [
+        0.0,
+        0.0
+      ],
+      "config": {
+        "default_model": "clef",
+        "enabled_models": [],
+        "supported_policy_hashes": [
+          "03ccc019cb0da6ad576f732d3f67deb18424854ea5a931303e113a6d8c9c90b4",
+          "091ed971858432448b9a2287db0de00031fa8097593d04c60a9f4baa1729b4aa",
+          "0be6cefcae821387ce6215ae47a5267bdac12e3f5bbd511e2e690b0b77afbbbe",
+          "42654247453467ab510c4a64991030c5e96019f6188c54d994618e3392dce8bc",
+          "85d9713cf89e3737f16afc05d4b58aae53413bf338608e87b01d8275e3ade7e7",
+          "904201135101e7151b7847178ef1b6633bf38ab9714dbd99d40dbcf066c40eb5",
+          "9bd37a2d9d1a5caca985b7059a039c56735c2fd0949b9054e55973c85f042eef",
+          "afd97e9aa9c673d6ef4a8d268c4dd0175a1c8932e6388d124efde420a619e8e3",
+          "fb04fb0de5e9352d11f4b90885b7176269f0efd46e2626f65105201518a9cc48"
+        ],
+        "switch_margin": 0.0
+      },
+      "paired_delta": 0.0,
+      "per_guard": {
+        "kev": {
+          "ci90": [
+            -0.11363636363636363,
+            0.06818181818181818
+          ],
+          "n": 44,
+          "paired_delta": -0.022727272727272728
+        },
+        "policylm": {
+          "ci90": [
+            -0.14814814814814814,
+            0.1111111111111111
+          ],
+          "n": 54,
+          "paired_delta": -0.018518518518518517
+        },
+        "shieldstral": {
+          "ci90": [
+            -0.1276595744680851,
+            0.06382978723404255
+          ],
+          "n": 47,
+          "paired_delta": -0.0425531914893617
+        }
+      },
+      "switches": 0
+    },
+    {
+      "accepted": false,
+      "accuracy": 0.7767857142857143,
+      "ci90": [
+        0.0,
+        0.0
+      ],
+      "config": {
+        "default_model": "clef",
+        "enabled_models": [],
+        "supported_policy_hashes": [
+          "03ccc019cb0da6ad576f732d3f67deb18424854ea5a931303e113a6d8c9c90b4",
+          "091ed971858432448b9a2287db0de00031fa8097593d04c60a9f4baa1729b4aa",
+          "0be6cefcae821387ce6215ae47a5267bdac12e3f5bbd511e2e690b0b77afbbbe",
+          "42654247453467ab510c4a64991030c5e96019f6188c54d994618e3392dce8bc",
+          "85d9713cf89e3737f16afc05d4b58aae53413bf338608e87b01d8275e3ade7e7",
+          "904201135101e7151b7847178ef1b6633bf38ab9714dbd99d40dbcf066c40eb5",
+          "9bd37a2d9d1a5caca985b7059a039c56735c2fd0949b9054e55973c85f042eef",
+          "afd97e9aa9c673d6ef4a8d268c4dd0175a1c8932e6388d124efde420a619e8e3",
+          "fb04fb0de5e9352d11f4b90885b7176269f0efd46e2626f65105201518a9cc48"
+        ],
+        "switch_margin": 0.05
+      },
+      "paired_delta": 0.0,
+      "per_guard": {
+        "kev": {
+          "ci90": [
+            -0.2222222222222222,
+            0.0
+          ],
+          "n": 18,
+          "paired_delta": -0.1111111111111111
+        },
+        "policylm": {
+          "ci90": [
+            -0.06896551724137931,
+            0.27586206896551724
+          ],
+          "n": 29,
+          "paired_delta": 0.10344827586206896
+        },
+        "shieldstral": {
+          "ci90": [
+            -0.10714285714285714,
+            0.0
+          ],
+          "n": 28,
+          "paired_delta": -0.03571428571428571
+        }
+      },
+      "switches": 0
+    },
+    {
+      "accepted": false,
+      "accuracy": 0.7767857142857143,
+      "ci90": [
+        0.0,
+        0.0
+      ],
+      "config": {
+        "default_model": "clef",
+        "enabled_models": [],
+        "supported_policy_hashes": [
+          "03ccc019cb0da6ad576f732d3f67deb18424854ea5a931303e113a6d8c9c90b4",
+          "091ed971858432448b9a2287db0de00031fa8097593d04c60a9f4baa1729b4aa",
+          "0be6cefcae821387ce6215ae47a5267bdac12e3f5bbd511e2e690b0b77afbbbe",
+          "42654247453467ab510c4a64991030c5e96019f6188c54d994618e3392dce8bc",
+          "85d9713cf89e3737f16afc05d4b58aae53413bf338608e87b01d8275e3ade7e7",
+          "904201135101e7151b7847178ef1b6633bf38ab9714dbd99d40dbcf066c40eb5",
+          "9bd37a2d9d1a5caca985b7059a039c56735c2fd0949b9054e55973c85f042eef",
+          "afd97e9aa9c673d6ef4a8d268c4dd0175a1c8932e6388d124efde420a619e8e3",
+          "fb04fb0de5e9352d11f4b90885b7176269f0efd46e2626f65105201518a9cc48"
+        ],
+        "switch_margin": 0.1
+      },
+      "paired_delta": 0.0,
+      "per_guard": {
+        "kev": {
+          "ci90": [
+            -0.3333333333333333,
+            0.0
+          ],
+          "n": 12,
+          "paired_delta": -0.16666666666666666
+        },
+        "policylm": {
+          "ci90": [
+            0.0,
+            0.5
+          ],
+          "n": 12,
+          "paired_delta": 0.25
+        },
+        "shieldstral": {
+          "ci90": [
+            0.0,
+            0.0
+          ],
+          "n": 10,
+          "paired_delta": 0.0
+        }
+      },
+      "switches": 0
+    },
+    {
+      "accepted": false,
+      "accuracy": 0.7767857142857143,
+      "ci90": [
+        0.0,
+        0.0
+      ],
+      "config": {
+        "default_model": "clef",
+        "enabled_models": [],
+        "supported_policy_hashes": [
+          "03ccc019cb0da6ad576f732d3f67deb18424854ea5a931303e113a6d8c9c90b4",
+          "091ed971858432448b9a2287db0de00031fa8097593d04c60a9f4baa1729b4aa",
+          "0be6cefcae821387ce6215ae47a5267bdac12e3f5bbd511e2e690b0b77afbbbe",
+          "42654247453467ab510c4a64991030c5e96019f6188c54d994618e3392dce8bc",
+          "85d9713cf89e3737f16afc05d4b58aae53413bf338608e87b01d8275e3ade7e7",
+          "904201135101e7151b7847178ef1b6633bf38ab9714dbd99d40dbcf066c40eb5",
+          "9bd37a2d9d1a5caca985b7059a039c56735c2fd0949b9054e55973c85f042eef",
+          "afd97e9aa9c673d6ef4a8d268c4dd0175a1c8932e6388d124efde420a619e8e3",
+          "fb04fb0de5e9352d11f4b90885b7176269f0efd46e2626f65105201518a9cc48"
+        ],
+        "switch_margin": 0.2
+      },
+      "paired_delta": 0.0,
+      "per_guard": {
+        "kev": {
+          "ci90": [
+            -0.42857142857142855,
+            0.0
+          ],
+          "n": 7,
+          "paired_delta": -0.14285714285714285
+        },
+        "policylm": {
+          "ci90": [
+            0.25,
+            1.0
+          ],
+          "n": 4,
+          "paired_delta": 0.75
+        },
+        "shieldstral": {
+          "ci90": [
+            0.0,
+            0.0
+          ],
+          "n": 6,
+          "paired_delta": 0.0
+        }
+      },
+      "switches": 0
+    },
+    {
+      "accepted": false,
+      "accuracy": 0.7767857142857143,
+      "ci90": [
+        0.0,
+        0.0
+      ],
+      "config": {
+        "default_model": "clef",
+        "enabled_models": [],
+        "supported_policy_hashes": [
+          "03ccc019cb0da6ad576f732d3f67deb18424854ea5a931303e113a6d8c9c90b4",
+          "091ed971858432448b9a2287db0de00031fa8097593d04c60a9f4baa1729b4aa",
+          "0be6cefcae821387ce6215ae47a5267bdac12e3f5bbd511e2e690b0b77afbbbe",
+          "42654247453467ab510c4a64991030c5e96019f6188c54d994618e3392dce8bc",
+          "85d9713cf89e3737f16afc05d4b58aae53413bf338608e87b01d8275e3ade7e7",
+          "904201135101e7151b7847178ef1b6633bf38ab9714dbd99d40dbcf066c40eb5",
+          "9bd37a2d9d1a5caca985b7059a039c56735c2fd0949b9054e55973c85f042eef",
+          "afd97e9aa9c673d6ef4a8d268c4dd0175a1c8932e6388d124efde420a619e8e3",
+          "fb04fb0de5e9352d11f4b90885b7176269f0efd46e2626f65105201518a9cc48"
+        ],
+        "switch_margin": 1.01
+      },
+      "paired_delta": 0.0,
+      "per_guard": {
+        "kev": {
+          "ci90": [
+            -1.0,
+            1.0
+          ],
+          "n": 0,
+          "paired_delta": null
+        },
+        "policylm": {
+          "ci90": [
+            -1.0,
+            1.0
+          ],
+          "n": 0,
+          "paired_delta": null
+        },
+        "shieldstral": {
+          "ci90": [
+            -1.0,
+            1.0
+          ],
+          "n": 0,
+          "paired_delta": null
+        }
+      },
+      "switches": 0
+    }
+  ],
+  "selected_C": 0.01,
+  "selected_route": {
+    "accepted": false,
+    "accuracy": 0.7767857142857143,
+    "ci90": [
+      0.0,
+      0.0
+    ],
+    "config": {
+      "default_model": "clef",
+      "enabled_models": [],
+      "supported_policy_hashes": [
+        "03ccc019cb0da6ad576f732d3f67deb18424854ea5a931303e113a6d8c9c90b4",
+        "091ed971858432448b9a2287db0de00031fa8097593d04c60a9f4baa1729b4aa",
+        "0be6cefcae821387ce6215ae47a5267bdac12e3f5bbd511e2e690b0b77afbbbe",
+        "42654247453467ab510c4a64991030c5e96019f6188c54d994618e3392dce8bc",
+        "85d9713cf89e3737f16afc05d4b58aae53413bf338608e87b01d8275e3ade7e7",
+        "904201135101e7151b7847178ef1b6633bf38ab9714dbd99d40dbcf066c40eb5",
+        "9bd37a2d9d1a5caca985b7059a039c56735c2fd0949b9054e55973c85f042eef",
+        "afd97e9aa9c673d6ef4a8d268c4dd0175a1c8932e6388d124efde420a619e8e3",
+        "fb04fb0de5e9352d11f4b90885b7176269f0efd46e2626f65105201518a9cc48"
+      ],
+      "switch_margin": 1.01
+    },
+    "paired_delta": 0.0,
+    "per_guard": {
+      "kev": {
+        "ci90": [
+          -1.0,
+          1.0
+        ],
+        "n": 0,
+        "paired_delta": null
+      },
+      "policylm": {
+        "ci90": [
+          -1.0,
+          1.0
+        ],
+        "n": 0,
+        "paired_delta": null
+      },
+      "shieldstral": {
+        "ci90": [
+          -1.0,
+          1.0
+        ],
+        "n": 0,
+        "paired_delta": null
+      }
+    },
+    "switches": 0
+  },
+  "semantic_failure_masks": {
+    "clef": 0,
+    "kev": 0,
+    "policylm": 0,
+    "shieldstral": 0
+  },
+  "valid_n": 112
+}

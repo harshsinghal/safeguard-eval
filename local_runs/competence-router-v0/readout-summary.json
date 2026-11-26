@@ -1,0 +1,15 @@
+{
+  "actual_accuracy": 0.7589285714285714,
+  "clef_accuracy": 0.7589285714285714,
+  "limitations": [
+    "Small binary competence holdout",
+    "Prior category-classifier exposure",
+    "Ternary routes default-only",
+    "Dataset labels await human review"
+  ],
+  "scope": "Local exploratory study; no commit or push",
+  "selected_models": [],
+  "switch_margin": 1.01,
+  "unchanged_core_hashes_verified": true,
+  "validation_switching_supported": false
+}

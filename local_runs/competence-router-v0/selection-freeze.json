@@ -1,0 +1,27 @@
+{
+  "checkpoint_hashes": {
+    "backbone/config.json": "fa83eac5a4a853b5728e06c49ba89f90ee1308216be811ca9e6261f537874472",
+    "backbone/model.safetensors": "63663cde618a7948da76cb420ced883238c7ea5ee1cc1210d35e9124898c85db",
+    "backbone/modeling_lfm2_bidirectional.py": "f171f518be2a07da48b17fdea5655cad0a2452ab548e90e8ae903143686647e2",
+    "competence.json": "135997979d4b7854c8411541001ca385506d80d3f331a2e3ce3ea1ad82d7d0d4",
+    "tokenizer/tokenizer.json": "1efc3a6609abf6b63b1f47188d139f3b59973a6a434dffe970a7261a51ed2711",
+    "tokenizer/tokenizer_config.json": "a4643bcd81a95c128eabec1591e368d9fc0b71d40c5ac26310e27e458dc661a7"
+  },
+  "created_utc": "2026-11-06T05:33:15.027693+00:00",
+  "development_outputs": {
+    "fit": {
+      "clef": "7a785a745d84c332b32bfec8ccb01825a8033b74031c0b50205cb2110288f22b",
+      "kev": "6a185537e4a7201883f1cd342156fa92c78aa1ae76905e85ee373d8d41ff1798",
+      "policylm": "a5eefe2fa58421fa29d3123f3fdc41c60f524723acf8e409b07acfceee290b9b",
+      "shieldstral": "0b9fb5e9b4379874984479c1f5ace0c0b98dc767a30bcabe1b2d9b02e02503a9"
+    },
+    "validation": {
+      "clef": "a938dff8ab65adde3b001f5c9a9d32b4820d762ffeb485e9e22bad6f377dc7d6",
+      "kev": "b319d5a3cc243d75ea075bdd83c669763a26903f1fcae98973886d1542c52b70",
+      "policylm": "e4994f1fdb9a06d9db75c4f87fbef8d5285b59cc1df2c2f0727460ed5aa7ae29",
+      "shieldstral": "4fea5c47a5218d2fa318783f6325e75170a6d8aa710f5a825de2bcad10322e8b"
+    }
+  },
+  "registration_sha256": "07b0c59a73900de12931ef5c274fd7424a6b7c27fb87123f99ebd676fb8c4333",
+  "selection_sha256": "a8f7f8587f6809742d223c7d450f1bdd15af8ad1b9a252e3a2b4fb967d55e2ce"
+}

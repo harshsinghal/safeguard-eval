@@ -1,0 +1,7 @@
+{
+  "clarification": "The plan sentence saying protect all frozen calibration/test groups is overbroad. As explicitly specified earlier in the plan and implemented before registration, the original 192 calibration cases are development/fitting data in this study. The 983 original evaluation cases are protected from development. No original files are changed. The new validation and test groups remain disjoint from fitting and each other.",
+  "kind": "Documentation clarification; no data, selection or model changes",
+  "plan_sha256": "4a17f5553a3d69b98881e19affcb47ae380e779c52595a64cd301559aae8427b",
+  "selection_changed": false,
+  "test_outcomes_examined": false
+}

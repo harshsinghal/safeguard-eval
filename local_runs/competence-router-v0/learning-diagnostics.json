@@ -1,0 +1,34 @@
+{
+  "fit": {
+    "all_guards_correct": 326,
+    "all_guards_wrong": 58,
+    "constant_fit_prior_log_loss": 0.5809767180139825,
+    "estimated_correctness_log_loss": 0.3795239583879374,
+    "guard_accuracy": {
+      "clef": 0.746875,
+      "kev": 0.734375,
+      "policylm": 0.7265625,
+      "shieldstral": 0.7203125
+    },
+    "guard_correctness_disagreement": 256,
+    "interpretation": "Diagnostic only; unrestricted argmax is not the registered deployable routing rule and is not selected on test",
+    "n": 640,
+    "unrestricted_argmax_accuracy": 0.88125
+  },
+  "validation": {
+    "all_guards_correct": 51,
+    "all_guards_wrong": 7,
+    "constant_fit_prior_log_loss": 0.5759246512629907,
+    "estimated_correctness_log_loss": 0.5248169556195971,
+    "guard_accuracy": {
+      "clef": 0.7767857142857143,
+      "kev": 0.7232142857142857,
+      "policylm": 0.7142857142857143,
+      "shieldstral": 0.7321428571428571
+    },
+    "guard_correctness_disagreement": 54,
+    "interpretation": "Diagnostic only; unrestricted argmax is not the registered deployable routing rule and is not selected on test",
+    "n": 112,
+    "unrestricted_argmax_accuracy": 0.7767857142857143
+  }
+}

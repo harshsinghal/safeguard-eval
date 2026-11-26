@@ -1,0 +1,366 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "enterprise-evidence-v1"
+    },
+    "id": {
+      "type": "string"
+    },
+    "input_sha256": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "draft",
+        "reviewed"
+      ]
+    },
+    "reviewer": {
+      "type": "string"
+    },
+    "mentions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^m[0-9]+$"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "person",
+              "identity_group",
+              "organization_or_account",
+              "personal_or_private_information",
+              "authentication_material",
+              "computing_resource",
+              "software_artifact",
+              "tool_or_external_service",
+              "instruction_or_policy",
+              "content_artifact_or_symbol",
+              "animal_or_physical_subject",
+              "health_or_substance",
+              "software_agent",
+              "location",
+              "general_group",
+              "action",
+              "purpose_claim",
+              "authorization_claim",
+              "condition",
+              "context"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "end": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "credential_form": {
+            "type": "string",
+            "enum": [
+              "reference",
+              "literal_value",
+              "placeholder",
+              "unclear",
+              "not_applicable"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "text",
+          "start",
+          "end",
+          "credential_form"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "frames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^f[0-9]+$"
+          },
+          "action": {
+            "type": "string"
+          },
+          "action_type": {
+            "type": "string",
+            "enum": [
+              "read_or_retrieve",
+              "generate_or_transform",
+              "execute_or_modify",
+              "delete_or_disrupt",
+              "transmit_or_publish",
+              "authenticate_or_access",
+              "override_or_redirect",
+              "persuade_or_target",
+              "physical_intervention"
+            ]
+          },
+          "roles": {
+            "type": "object",
+            "properties": {
+              "actor": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "object": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "affected_party": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "recipient": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "destination": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "instrument": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "purpose_claims": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "authorization_claims": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "conditions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "actor",
+              "object",
+              "affected_party",
+              "recipient",
+              "destination",
+              "instrument",
+              "purpose_claims",
+              "authorization_claims",
+              "conditions"
+            ],
+            "additionalProperties": false
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "requested",
+              "quoted",
+              "hypothetical",
+              "reported",
+              "observed",
+              "unclear"
+            ]
+          },
+          "polarity": {
+            "type": "string",
+            "enum": [
+              "affirmative",
+              "negated",
+              "unclear"
+            ]
+          },
+          "context_mentions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "action",
+          "action_type",
+          "roles",
+          "mode",
+          "polarity",
+          "context_mentions"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "before",
+              "contains",
+              "corefers_to"
+            ]
+          },
+          "evidence_mentions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "source",
+          "target",
+          "type",
+          "evidence_mentions"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "decision": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "enum": [
+                "ALLOW",
+                "BLOCK",
+                "REVIEW"
+              ]
+            },
+            "coverage": {
+              "type": "string",
+              "enum": [
+                "in_scope",
+                "outside_scope",
+                "unclear"
+              ]
+            },
+            "rules": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "E1",
+                  "E2",
+                  "E3",
+                  "E4"
+                ]
+              },
+              "uniqueItems": true
+            },
+            "evidence_mentions": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "label",
+            "coverage",
+            "rules",
+            "evidence_mentions",
+            "rationale"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "input_sha256",
+    "status",
+    "reviewer",
+    "mentions",
+    "frames",
+    "relations",
+    "uncertainties",
+    "decision"
+  ],
+  "additionalProperties": false
+}

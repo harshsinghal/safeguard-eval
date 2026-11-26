@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "cases": 200,
+  "split_sizes": {
+    "development": 100,
+    "evaluation": 100
+  },
+  "source_binding": true,
+  "group_separation": true,
+  "normalized_duplicate_separation": true,
+  "annotations_pending": 200,
+  "restricted_full_text_exported": false
+}

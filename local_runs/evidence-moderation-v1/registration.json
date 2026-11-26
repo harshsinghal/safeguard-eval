@@ -1,0 +1,58 @@
+{
+  "schema_version": "enterprise-evidence-v1",
+  "created_utc": "2026-11-07T05:19:43.566452+00:00",
+  "status": "prepared_pending_annotation",
+  "cases": 200,
+  "splits": {
+    "development": 100,
+    "evaluation": 100
+  },
+  "track_counts": {
+    "agent_actions": 12,
+    "agent_runs": 12,
+    "authored_controls": 32,
+    "benign_lookalikes": 12,
+    "custom_policy": 12,
+    "cyber_requests": 12,
+    "harmful_requests": 12,
+    "hate_speech": 12,
+    "injection_context": 12,
+    "injection_deepset": 12,
+    "injection_xtram": 12,
+    "jailbreak_attempts": 12,
+    "skill_packages": 12,
+    "skill_text": 12,
+    "source_code": 12
+  },
+  "grouping": {
+    "exact_links": 0,
+    "near_links": 1
+  },
+  "source_hashes": {
+    "safeguard-enterprise-benchmark/work/frozen-enterprise-inputs-v0.1/evaluation.jsonl": "8bc3a6fc926a35744cb0033aa83ce0aa09d56f6dc1183c3132a0138ad75d6159",
+    "safeguard-routed-system/benchmarks/enterprise-moderation/v0.1/evaluation.jsonl": "37f7074c05c307c1c6d5b9992841e18fd49d85c943fc61b2c75c0635fba9ddad"
+  },
+  "code_hashes": {
+    "tools/prepare_evidence_moderation.py": "4c724850f04c6de34cb12839ce43eb9e4ad3ac29ee2ec8ef3ef0e5b8692b12a5",
+    "evals/evidence_moderation/__init__.py": "51ed5cdc5f3365b440d78e9567b28a998c9221295ca9278822c1022235f1ac79",
+    "evals/evidence_moderation/controls.py": "5d7ae4e220cd2816561a43d2cf5bcd053718431a407a806a0862288ce5a2aad5",
+    "evals/evidence_moderation/schema.py": "fc599dff0eb760847bbdd0c839c471944534a291c9aa6e3e73c28712757cad70",
+    "docs/evidence-moderation/PLAN.md": "a05f6982424eb69e4f074beca4224c14ed956fe8414407ff79d5c0da705a7cf5",
+    "docs/evidence-moderation/POLICY.md": "425ef1cb19d19f2bf5290fe3b2e5bb2250c0addade3f0a7bb4b998b90a7b41ff",
+    "docs/evidence-moderation/ANNOTATION.md": "5fd80477c97b3b49f2d3b4b8a6fd1ae453952023c9e66dafadb4b3ff338a03b1",
+    "docs/evidence-moderation/schema.json": "abc9900198caed23b33e8dd061e98623b8e6e1883127de9b6de367b8bdc37ccb"
+  },
+  "input_sha256": "2f53a2e8a068ae5d4c2a69a180c1e1a8e6f59a3eff88ad06ab293fc99a54c07b",
+  "private_file_hashes": {
+    "inputs.private.jsonl": "2f53a2e8a068ae5d4c2a69a180c1e1a8e6f59a3eff88ad06ab293fc99a54c07b",
+    "development-annotations.json": "1a03e27b74fcc0d52c54851fd41252a6dadb8504b5958be340b69d71fbaca6a9",
+    "development-review.html": "33318701620d639bf360a983f28157d0e8d1efe4d9aa4f3ea28b73f75db26804",
+    "evaluation-annotations.json": "175d41b1d066669592cd31b4446c9ab5ae1db1113777ffc2db01d5dbf7d0ff40",
+    "evaluation-review.html": "04c7c923a4e1ebeec5969c6bbf80294decef6dd08d758ba7aeacc5bd5bd203bd"
+  },
+  "prior_exposure": "Existing source suite was used in earlier studies; new split is experiment-local only.",
+  "review_status": "All 200 annotations pending; zero human-reviewed gold cases.",
+  "paid_api_cost_usd": 0,
+  "model_inference_performed": false,
+  "gpu_workers_started": 0
+}

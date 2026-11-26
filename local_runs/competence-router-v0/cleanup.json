@@ -1,0 +1,9 @@
+{
+  "collection_gateway_stopped": true,
+  "competence_gateway_stopped": true,
+  "gpu_workers_unloaded": true,
+  "hardware_clock_or_power_changes": false,
+  "no_git_commit_or_push": true,
+  "paid_compute_usd": 0,
+  "previous_pilot_service_untouched": true
+}

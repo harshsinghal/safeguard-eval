@@ -1,0 +1,15 @@
+{
+  "git_diff_check": "passed",
+  "modules": [
+    "tests.test_competence_router",
+    "tests.test_competence_evidence",
+    "tests.test_liquid_router",
+    "tests.test_liquid_router_integrity",
+    "tests.test_liquid_router_evidence",
+    "tests.test_routed_guard",
+    "tests.test_routed_guard_evidence"
+  ],
+  "offline_encoder_portability": "Exact feature agreement on one saved-input reload check; details in portability-check.json",
+  "relevant_unit_tests": 58,
+  "unit_test_result": "passed"
+}

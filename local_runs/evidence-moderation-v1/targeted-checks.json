@@ -1,0 +1,25 @@
+{
+  "validator": {
+    "valid_draft": true,
+    "incorrect_offsets_rejected": true,
+    "dangling_action_rejected": true,
+    "wrong_action_type_rejected": true,
+    "wrong_case_binding_rejected": true,
+    "invalid_claim_role_rejected": true,
+    "unsupported_block_rejected": true,
+    "draft_cannot_be_pending": true,
+    "review_requires_reviewer": true,
+    "blank_not_reviewed_gold": true,
+    "unicode_codepoint_offsets": true
+  },
+  "browser": {
+    "badBindingRejected": true,
+    "saveWorked": true,
+    "navigationWorked": true,
+    "unicodeOffsets": true,
+    "exportWorked": true,
+    "importWorked": true
+  },
+  "javascript_syntax": true,
+  "visual_review": true
+}

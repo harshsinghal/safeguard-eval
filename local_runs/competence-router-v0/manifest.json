@@ -1,0 +1,78 @@
+{
+  "files": {
+    "actual-device.jsonl.gz": "03cf3a381b202a7dfee9ded7c8cb4a106adc01b515bfcf24c19e9994c8f02c4e",
+    "actual-results.json": "91ec1c1efdc920212e5b1beebf578f30ab790ed800a8df0bc85fe3f86b0c68bb",
+    "actual-routed.jsonl.gz": "6b928989608fa31152c9aa024c0010f8deb3fb139776a2a594d62ddbe311b467",
+    "checks.json": "1a31f76de4687e209386d28653fba640d2392ffff34a3a7e9ef9863e9f7f0ab6",
+    "cleanup.json": "1e993d5d0513c07198c998502619bce7dcf5a3ec06bd1fc2238650a089a68147",
+    "data-audit.json": "e9b025ddfd2be5bad0d9cf1f7caa9ddae35435b8b1f95a8ee0e00bd8af63fd4c",
+    "environment.json": "494927707a0350933c74a015cd8c2af37a75d358904470798de97eb2493616e7",
+    "features/fit.jsonl.gz": "8627c26baf4c6bf5528fc9f763c203d254a11a6071f2385a01c1afa99eb21798",
+    "features/test.jsonl.gz": "d06035d79e8b403edbe9d2ef0066bba9965a7a32ae8162f162c74af1b900baf4",
+    "features/validation.jsonl.gz": "6bafaaedfc43e2af9b3acbc2acd9b16fff8cf86ca07062c17f46cf26249976b2",
+    "fit-device.jsonl.gz": "85c1328ab71987ec80d4b1ad04d7b9b01c53387ff291a1484d24b2c0d9e3c84d",
+    "fit-targets.jsonl.gz": "f5d84471ce302bbd5816c6bd1c62c1a2a7a4404a9af7026900baf42e0ed748be",
+    "guards/fit/clef.jsonl.gz": "894d8dbd9e189a685fb3f28b12b17d2532576d9cc76e77cca884e06813b06e11",
+    "guards/fit/kev.jsonl.gz": "953bba409392098d3debc1ba08b511e3dc3829519b3843403c9d0bae250f9b02",
+    "guards/fit/policylm.jsonl.gz": "5258cfda146a3eb7d1f3048a6aa60490f148db8682dced3e262b550a5a79e352",
+    "guards/fit/shieldstral.jsonl.gz": "a95ae7c683916e9cfcc4ced774c9eb8b591ec68d8147b15dc242fe3a4f30f2fc",
+    "guards/test/clef.jsonl.gz": "fdd6d8e9fd73bd6638be9f3fc2970c77f913f99187ec28f37ac56cbd1c517cbb",
+    "guards/test/kev.jsonl.gz": "f7edd816dea65629b8ebca9a41e56cce4b5e3b67a11e4be51214faba74def24f",
+    "guards/test/policylm.jsonl.gz": "906d0861fe83b4df899dc535e9070aef3a3450da86adde645c199994d6fbde54",
+    "guards/test/shieldstral.jsonl.gz": "c869bf32bcfe3588e9993476ff96ddada61c270ad3b6f215fd3fef05a1c08a85",
+    "guards/validation/clef.jsonl.gz": "4a08e7583241c28dd12ffdfc26244c52acd75b32dd77877d3022ca24e54402fa",
+    "guards/validation/kev.jsonl.gz": "68dfcfab8bc7f650870dd1ce651a4fecd32ce5435705e01894582801a2552dd7",
+    "guards/validation/policylm.jsonl.gz": "ef94a7daf01d42c82f02a09c080945faf9acad9a8cfa8c374b693b265d9583ad",
+    "guards/validation/shieldstral.jsonl.gz": "0861c197e41ab6f7e492cae8686f5044dd1cbccac9dc56b74af3d631ec567d14",
+    "learning-diagnostics.json": "b58e11716b4310f25a5e00b2eb2b477651de4fd62cd3b050db35f41003c7c8fc",
+    "metadata/fit.jsonl.gz": "876092a84b9251b163cdeb4947d68ba57886ea97faf87de63ce263e61057ae62",
+    "metadata/test.jsonl.gz": "fdbaada63e88b33e9daf1c34f36f002729db29a872184e3b634cbc3ab70ecff8",
+    "metadata/validation.jsonl.gz": "035eeeb4afe5367ae3720f63c841650e937b261500882ecf500f889ed6c04125",
+    "pilot_diagnostic-routes.jsonl.gz": "ff8af52a07a10873d302f62f0cc67a3cb0096818e3ce28e7e018186cabe78cb5",
+    "portability-check.json": "536ee4397f953946ba183273b15ba6c2650c0ad1afc63d69a2eb8fabb7521453",
+    "protocol-clarifications.json": "af13c2583b4ee200d957d6471ec81662f5b3e7aeab9437e2b40856b4eeeace24",
+    "readout-summary.json": "b7cc9cd8b263e1a732ae69e259b0fc0dd12f5f9fa3cbf4ffa4a1b14a41a259f6",
+    "registration.json": "07b0c59a73900de12931ef5c274fd7424a6b7c27fb87123f99ebd676fb8c4333",
+    "resources.json": "c4cda2a0f3b173ee96da7e7237efb7eb5c8e3b2a6b8c0e1d8764a15cc0be233b",
+    "results.json": "a60bde104021769ff23edd07ca57cc3664648937da2986d6a198e0123837aed9",
+    "selection-freeze.json": "f3739162745252feac7861cc942daf526536130ef1cd2d20ceb4a7bde6d93cc9",
+    "test-device.jsonl.gz": "5b34db2e61ad04818a2200cfb028cc32cc75b47226b01892a861b2e930deb804",
+    "test-routes.jsonl.gz": "c1c8264564360d840947956f2848fbd7e5ece4913691a4494d201f5b80693f4c",
+    "validation-device.jsonl.gz": "7718fca33480304eef30b2bf8dc62ffdccaf536c3a6f68f49f78d7d03213a5b6",
+    "validation-estimates.jsonl.gz": "b001e970a7026c7cbcb71f5eb3a5996d5bc708d57b6e66410087f002e97a3852",
+    "validation-selection.json": "a8f7f8587f6809742d223c7d450f1bdd15af8ad1b9a252e3a2b4fb967d55e2ce",
+    "view-audit.json": "a13ab59a0e7cef01745814a133debdceca1d101a5aefa30507c602c22ca5342c"
+  },
+  "models": {
+    "clef": {
+      "backend": "native",
+      "model": "Cloudflare/clef-flash",
+      "parameters_billion": 9.0,
+      "revision": "f0b7d3cd65296abfe459e6c228b618f5d8b26d2f"
+    },
+    "kev": {
+      "backend": "native",
+      "base": "Qwen/Qwen3.5-4B-Base",
+      "base_revision": "1001bb4d826a52d1f399e183466143f4da7b741b",
+      "code_revision": "2074cc44256200bb37540103fa4572901faa10f3",
+      "model": "jaredpalmer/kev-4b",
+      "parameters_billion": 4.0,
+      "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52"
+    },
+    "policylm": {
+      "backend": "native",
+      "block_cutoff": 0.335,
+      "model": "musubilabs/policylm-1.7b",
+      "parameters_billion": 1.7,
+      "revision": "b3b2cd408a08a68ab6a30c1fc1e440204e44d57e"
+    },
+    "shieldstral": {
+      "backend": "transformers",
+      "block_cutoff": 0.5,
+      "model": "mistralai/Shieldstral-1.0-3B",
+      "parameters_billion": 3.0,
+      "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5"
+    }
+  },
+  "scope": "Local prompt-free evidence; not published"
+}
