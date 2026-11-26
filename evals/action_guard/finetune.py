@@ -181,12 +181,25 @@ def train(arm, out):
     if traj.exists():  # curriculum stage 5: agent trajectory steps, training split only
         train_rows += [json.loads(l) for l in traj.read_text().splitlines()]
     stages = items(arm, train_rows)
+    # Exclude, never truncate, items over the token cap; count them before any training step.
+    kept_stages, over = [], 0
+    for stage in stages:
+        kept = []
+        for it in stage:
+            ids = t.g.tokenizer.apply_chat_template(it[0], tokenize=True, add_generation_prompt=True)
+            n = len(ids["input_ids"] if hasattr(ids, "keys") else ids)
+            if n > MAX_TOKENS:
+                over += 1
+            else:
+                kept.append(it)
+        kept_stages.append(kept)
+    stages = kept_stages
     val = rows("validation")
     reg = {"arm": arm, "seed": SEED, "lr": LR, "micro": MICRO, "accum": ACCUM, "epochs": EPOCHS, "lora": {"r": 8, "alpha": 16, "targets": "language_model q/k/v/o"},
            "stage_sizes": [len(s) for s in stages], "train_sha256": hashlib.sha256((DATA / "train.jsonl").read_bytes()).hexdigest(),
            "validation_sha256": hashlib.sha256((DATA / "validation.jsonl").read_bytes()).hexdigest(),
            "trajectories_sha256": hashlib.sha256(traj.read_bytes()).hexdigest() if traj.exists() else None,
-           "train_examples": len(train_rows), "test_inference": False}
+           "train_examples": len(train_rows), "items_excluded_over_token_cap": over, "test_inference": False}
 
     def val_fn(trainer, path):
         predict_rows(trainer, val, path / "validation-preds.jsonl")
