@@ -1,6 +1,6 @@
 # CRM judgment curriculum v2: design
 
-Status: **design, 26 November 2026.** Nothing has been generated or trained yet. The owner has settled the decision space (six outcomes), chosen Clef-Flash 9B as the main learner with the goal of beating Jev (Kev 4B is kept as a size check), set the generation budget at $15, and asked for a sector-agnostic curriculum, with generalization across sectors as a test. This document turns the research into a generation procedure, step by step. Once the pilot (step 14) passes, it is frozen as the registered plan.
+Status: **design, 26 November 2026; pilot run 27 November 2026** ([readout](v2-pilot/PILOT.md)). The pilot passed; the changes it calls for are listed in the readout and are folded into the registered plan before scale-up. The owner has settled the decision space (six outcomes), chosen Clef-Flash 9B as the main learner with the goal of beating Jev (Kev 4B is kept as a size check), set the generation budget at $15, and asked for a sector-agnostic curriculum, with generalization across sectors as a test. This document turns the research into a generation procedure, step by step. Once the pilot (step 14) passes, it is frozen as the registered plan.
 
 ## 0. What the curriculum must teach
 
