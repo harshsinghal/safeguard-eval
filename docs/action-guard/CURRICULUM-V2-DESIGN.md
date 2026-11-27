@@ -1,6 +1,6 @@
 # CRM judgment curriculum v2: design
 
-Status: **design, 26 November 2026.** Nothing has been generated or trained yet. The owner has settled the decision space (six outcomes), approved a replication on Kev 4B, and asked for a sector-agnostic curriculum, with generalization across sectors as a test. This document turns the research into a generation procedure, step by step. Once the pilot (step 14) passes, it is frozen as the registered plan.
+Status: **design, 26 November 2026.** Nothing has been generated or trained yet. The owner has settled the decision space (six outcomes), chosen Clef-Flash 9B as the main learner with the goal of beating Jev (Kev 4B is kept as a size check), set the generation budget at $15, and asked for a sector-agnostic curriculum, with generalization across sectors as a test. This document turns the research into a generation procedure, step by step. Once the pilot (step 14) passes, it is frozen as the registered plan.
 
 ## 0. What the curriculum must teach
 
@@ -177,8 +177,9 @@ It has a built-in OpenRouter provider. Programs produce the seed rows. Data Desi
     - Disagreement distributions are kept for P10.
 12. **Mixture.** Shuffled, with the shares from §3. Forms are mixed as decision cases 45%, semantics Q&A 20%, worked cases 15%, passages and FAQ 12%, and policy reading 8%.
 13. **Formats for each learner.**
-    - **Shieldstral 3B:** native yes/no queries, one per decision, one per `missing` item and one per `question` item. Worked cases, passages and FAQ get a language-modelling loss.
-    - **Kev 4B:** its native Choice interface, with options supplied: a 6-way decision, a multi-select `missing` question and a single-choice `question`. Its official training path is used (`kev.train --init_from jaredpalmer/kev-4b`). Kev has no language-modelling head, so forms that need that loss are reworded as Choice questions where possible and recorded as a difference between the two learners.
+    - **Clef-Flash 9B (main learner):** generative. The target is a compact line, `{"decision": …, "missing": […], "source": …, "question": …}`, with loss on the answer tokens only. Worked cases, passages and FAQ get a language-modelling loss. Thinking mode is off, for latency. Confidence for calibration and risk–coverage is read from the probabilities of the six decision tokens at the first answer position; arm E's soft labels are a cross-entropy over those same six tokens. Training is LoRA with Hugging Face PEFT on its Qwen 3.5 architecture (there is no official training script), bf16 on the local RTX 5090 (32 GB) with gradient checkpointing.
+    - **Why not Shieldstral:** it only answers yes or no. v1 got levels by asking one yes/no question per threshold, which works for a severity scale. `SEEK_CONTEXT` and `ASK_HUMAN` are not points on that scale, and the `missing` and `question` fields would need a separate query for every list item. Clef also reads prose policies far better (76.6% frozen against Shieldstral's 34%), and v2 is built on many policies. Shieldstral's v1 results stay as the reference.
+    - **Kev 4B (size check, arm D only):** its native Choice interface, with options supplied: a 6-way decision, a multi-select `missing` question and a single-choice `question`. Its official training path is used (`kev.train --init_from jaredpalmer/kev-4b`). Kev has no language-modelling head, so forms that need that loss are reworded as Choice questions where possible and recorded as a difference between the two learners.
 14. **Pilot before scale.** Run steps 1–9 on 3 principles × 2 renderers × about 150 items. Check:
     - fidelity pass rates;
     - that hidden facts don't leak;
@@ -249,12 +250,21 @@ New measures:
 
 | Arm | Data | Learners |
 |---|---|---|
-| A | v1 data, mapped to the six decisions | Shieldstral |
-| B | v2 decision cases only (many policies, variant families) | Shieldstral |
-| C | B + semantics Q&A + policy reading | Shieldstral |
-| D | C + worked cases, passages and FAQ (**full v2**) | Shieldstral, **Kev 4B** |
-| E | D + soft labels on judgment cases | Shieldstral |
-| F (optional) | D in staged order | Shieldstral |
+| A | v1 data, mapped to the six decisions | Clef |
+| B | v2 decision cases only (many policies, variant families) | Clef |
+| C | B + semantics Q&A + policy reading | Clef |
+| D | C + worked cases, passages and FAQ (**full v2**) | Clef, Kev 4B |
+| E | D + soft labels on judgment cases | Clef |
+| F (optional) | D in staged order | Clef |
+
+**Baselines:** frozen Clef and **Jev 1.14**, both prompted with the same policy text and the six-decision contract (with its fixed `missing` and `question` lists), on every test set.
+
+**Primary comparison (registered): the selected Clef arm against prompted Jev**, paired by item, with 95% bootstrap intervals. Clef "beats Jev" only if all three hold on the v2 held-out test:
+1. macro-F1 over the six decisions is higher;
+2. the critical-miss rate (unsafe actions let through) is no worse, within 1 point;
+3. false-seek plus false-ask is lower.
+
+Live, it must match Jev's harm (0) with no more needless stops. Transfer (held-out policies, renderers, sectors) is reported for both, but is not part of the win condition. On v1, Jev was well ahead statically (96.3% exact against 72.1% for frozen Clef), so the v1 test is reported but is not the bar.
 
 Selection, freezing and amendments follow v1's protocol.
 
@@ -280,10 +290,11 @@ Model families give the data its diversity (P15). Every model here was released 
 | Fidelity checks (extraction, judges) | about 7,000 items | $2 |
 | Worked cases, passages, FAQ | about 2,500 items | $2–3 |
 | Test labelling (2 labelers) | about 900 test items + sector packs | $4–5 |
+| Jev baseline on v2 test and sector packs | about 1,300 items | $1–2 |
 | Live runs | 2 new arms | $2 |
-| **Total** | | **$15–19** |
+| **Total, before scoping** | | **$16–21** |
 
-The remaining v1 budget is about $16. Without a decision, the build is scoped to fit: fewer base specs, and batch pricing where it is offered. The pilot measures the real cost per item before anything is scaled up.
+**Budget: $15 for this phase** (owner, 26 November 2026). Training and local inference cost nothing. To fit, the build is scoped after the pilot measures the real cost per accepted item: fewer base specs first (down to about 1,200), batch pricing where it is offered, and only one of the two live arms if needed. The test labelling and the Jev baseline are not cut, because the comparison depends on them.
 
 ## Sources
 
