@@ -253,9 +253,11 @@ New measures:
 | A | v1 data, mapped to the six decisions | Clef |
 | B | v2 decision cases only (many policies, variant families) | Clef |
 | C | B + semantics Q&A + policy reading | Clef |
-| D | C + worked cases, passages and FAQ (**full v2**) | Clef, Kev 4B |
+| D | C + worked cases, passages and FAQ (**full v2**) | Clef, Kev 4B, Qwen3 0.6B |
 | E | D + soft labels on judgment cases | Clef |
 | F (optional) | D in staged order | Clef |
+
+**Size curve on arm D:** Qwen3 0.6B (Apache-2.0), Kev 4B and Clef 9B, trained on the same data. It asks how much of the judgment survives at each size, slice by slice. The expectation, stated in advance: obvious cases hold up at 0.6B; held-out policies, prose policies and the seek-versus-ask distinction degrade first. The 0.6B model is also tested as a fast first pass that hands its low-confidence items to Clef, scored on accuracy against the share handed on.
 
 **Baselines:** frozen Clef and **Jev 1.14**, both prompted with the same policy text and the six-decision contract (with its fixed `missing` and `question` lists), on every test set.
 
