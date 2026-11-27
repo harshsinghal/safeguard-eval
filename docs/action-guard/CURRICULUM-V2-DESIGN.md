@@ -177,9 +177,21 @@ It has a built-in OpenRouter provider. Programs produce the seed rows. Data Desi
     - Disagreement distributions are kept for P10.
 12. **Mixture.** Shuffled, with the shares from §3. Forms are mixed as decision cases 45%, semantics Q&A 20%, worked cases 15%, passages and FAQ 12%, and policy reading 8%.
 13. **Formats for each learner.**
-    - **Clef-Flash 9B (main learner):** generative. The target is a compact line, `{"decision": …, "missing": […], "source": …, "question": …}`, with loss on the answer tokens only. Worked cases, passages and FAQ get a language-modelling loss. Thinking mode is off, for latency. Confidence for calibration and risk–coverage is read from the probabilities of the six decision tokens at the first answer position; arm E's soft labels are a cross-entropy over those same six tokens. Training is LoRA with Hugging Face PEFT on its Qwen 3.5 architecture (there is no official training script), bf16 on the local RTX 5090 (32 GB) with gradient checkpointing.
+    - **Clef-Flash 9B (main learner):** Clef is a typed decision model, not a text generator. One request holds the state plus several fields, each a `choice`, a yes/no (`noul`) or a `score` question, and its joint head answers them together with a probability per option. Jev takes the same request format, so both systems get byte-identical inputs. Each decision item becomes one request with four fields:
+      - `decision`: a choice over the six decisions;
+      - `missing`: a choice over `none` plus the fixed list;
+      - `source`: a choice over `none`, requester, lookup and dry run;
+      - `question`: a choice over `none` plus the five judgment types.
+
+      The other forms become typed questions as well, because a decision head has no text target:
+      - worked cases become step questions: which clause applies, which facts are decisive (yes/no per fact), and what the decision would be if a named fact changed;
+      - passages and FAQ become comprehension questions, with the passage as state;
+      - semantics and policy reading are already questions.
+
+      Training uses cross-entropy on each field's option probabilities, with LoRA on the backbone and the head left trainable. Clef has no official training script, so the loop is written against its published module (`joint_schema_model.py`, hash-pinned), in bf16 on the local RTX 5090 (32 GB) with gradient checkpointing. Arm E's soft labels are a cross-entropy against the labelers' distribution over `decision`. Confidence for calibration comes straight from the head.
     - **Why not Shieldstral:** it only answers yes or no. v1 got levels by asking one yes/no question per threshold, which works for a severity scale. `SEEK_CONTEXT` and `ASK_HUMAN` are not points on that scale, and the `missing` and `question` fields would need a separate query for every list item. Clef also reads prose policies far better (76.6% frozen against Shieldstral's 34%), and v2 is built on many policies. Shieldstral's v1 results stay as the reference.
-    - **Kev 4B (size check, arm D only):** its native Choice interface, with options supplied: a 6-way decision, a multi-select `missing` question and a single-choice `question`. Its official training path is used (`kev.train --init_from jaredpalmer/kev-4b`). Kev has no language-modelling head, so forms that need that loss are reworded as Choice questions where possible and recorded as a difference between the two learners.
+    - **Kev 4B (size check, arm D only):** its native Choice interface takes the same four fields and the same typed questions as Clef. Its official training path is used (`kev.train --init_from jaredpalmer/kev-4b`).
+    - **Qwen3 0.6B (size check, arm D only):** a plain language model. The same request is serialized as a prompt, each field is answered by scoring its option keys as the next token, and training uses cross-entropy over those keys. Every learner therefore sees the same items and the same fields.
 14. **Pilot before scale.** Run steps 1–9 on 3 principles × 2 renderers × about 150 items. Check:
     - fidelity pass rates;
     - that hidden facts don't leak;
